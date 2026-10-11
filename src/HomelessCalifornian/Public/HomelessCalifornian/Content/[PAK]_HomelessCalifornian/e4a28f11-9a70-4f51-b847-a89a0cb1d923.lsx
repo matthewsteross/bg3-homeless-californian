@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="TextureBank">
+        <node id="TextureBank">
+            <children>
+                <node id="Resource">
+                    <attribute id="ID" type="FixedString" value="e4a28f11-9a70-4f51-b847-a89a0cb1d923"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornianAtlas"/>
+                    <attribute id="SourceFile" type="LSString" value="Public/HomelessCalifornian/Assets/Textures/Icons/HomelessCalifornianAtlas.dds"/>
+                    <attribute id="Template" type="FixedString" value="HomelessCalifornianAtlas"/>
+                    <attribute id="Streaming" type="bool" value="True"/>
+                    <attribute id="Type" type="int32" value="1"/>
+                    <attribute id="SRGB" type="bool" value="False"/>
+                    <attribute id="Width" type="int32" value="512"/>
+                    <attribute id="Height" type="int32" value="512"/>
+                    <attribute id="Depth" type="int32" value="1"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

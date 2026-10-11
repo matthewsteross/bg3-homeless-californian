@@ -147,10 +147,18 @@ def main():
     # 1. Regenerate mod source files
     generate_all()
 
-    # 2. Compile localization
+    # 2. Build icon atlas and GUI/Content resources
+    try:
+        from build_icons import main as build_icons_main
+        build_icons_main()
+    except Exception as e:
+        import subprocess
+        subprocess.run([sys.executable, "build_icons.py"], check=True)
+
+    # 3. Compile localization
     compile_localization()
 
-    # 3. Build .pak
+    # 4. Build .pak
     build_pak()
 
     # 4. Optional install / activate
