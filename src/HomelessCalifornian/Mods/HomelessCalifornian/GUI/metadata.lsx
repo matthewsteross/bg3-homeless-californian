@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="8" revision="0" build="10" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="config">
+		<node id="config">
+			<children>
+				<node id="entries">
+					<children>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/HomelessCalifornian.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/hotbar/HomelessCalifornian.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="140" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="140" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/HomelessCalifornian.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/TenderloinBiohazard.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/hotbar/TenderloinBiohazard.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="140" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="140" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/TenderloinBiohazard.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/VeniceBoardwalkBrawler.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/hotbar/VeniceBoardwalkBrawler.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="140" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="140" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/VeniceBoardwalkBrawler.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/BARTPlatformMenace.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/hotbar/BARTPlatformMenace.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="140" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="140" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/BARTPlatformMenace.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/CC/icons_races/Californian.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="196" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="196" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="AssetsLowRes/CC/icons_races/Californian.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="100" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="100" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/CC/icons_races/Californian_Beachborn.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="196" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="196" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="AssetsLowRes/CC/icons_races/Californian_Beachborn.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="100" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="100" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/CC/icons_races/Californian_Siliconite.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="196" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="196" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="AssetsLowRes/CC/icons_races/Californian_Siliconite.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="100" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="100" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/CC/icons_races/Californian_InlandEmperor.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="196" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="196" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="AssetsLowRes/CC/icons_races/Californian_InlandEmperor.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="100" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="100" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

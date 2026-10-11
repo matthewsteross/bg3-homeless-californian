@@ -4,34 +4,46 @@
     <region id="SpellLists">
         <node id="root">
             <children>
-                <!-- Level 1: Poop, Fentanyl, Fent Lean, Scramble -->
+                <!-- Class Level 1: Poop, Fentanyl, Fent Lean, Scramble -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Projectile_SlingPoop;Projectile_SlingFentanyl;Shout_FentLean;Shout_FentLean_End;Shout_SidewalkScramble"/>
                     <attribute id="UUID" type="guid" value="2a7d6c13-c678-5482-8a03-8396546eb1bf"/>
                 </node>
 
-                <!-- Level 2: Aggressive Panhandling -->
+                <!-- Class Level 2: Aggressive Panhandling -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_AggressivePanhandling"/>
                     <attribute id="UUID" type="guid" value="fd09207f-ec52-5b52-a330-4f9fc3a631eb"/>
                 </node>
 
-                <!-- Level 5: Chunky Poop upgrade -->
+                <!-- Class Level 4: Eviction Notice (Rent Hike) -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_EvictionNotice"/>
+                    <attribute id="UUID" type="guid" value="b7b3eff1-a4d3-5ebf-9e2d-d69c14ddbf1b"/>
+                </node>
+
+                <!-- Class Level 5: Chunky Poop upgrade -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Projectile_SlingPoop_Chunky"/>
                     <attribute id="UUID" type="guid" value="e14b527d-518d-5108-bf2b-65f14371a0b5"/>
                 </node>
 
-                <!-- Level 7: Feral Screech -->
+                <!-- Class Level 7: Feral Screech -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_FeralScreech"/>
                     <attribute id="UUID" type="guid" value="c0780b41-1eba-525b-98a4-55fad8b275b0"/>
                 </node>
 
-                <!-- Level 9: Mass Fentanyl Cloud & Tent Encampment -->
+                <!-- Class Level 9: Mass Fentanyl Cloud & Tent Encampment -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Projectile_SlingFentanyl_Mass;Shout_TentEncampment"/>
                     <attribute id="UUID" type="guid" value="07b780cc-2f36-5392-8fcf-45814d0c76fa"/>
+                </node>
+
+                <!-- Class Level 12: Call 311 (On Hold) -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_Call311"/>
+                    <attribute id="UUID" type="guid" value="a97dca4e-6a54-52e4-b96a-5a236fd5a676"/>
                 </node>
 
                 <!-- Subclass Tenderloin Spells -->
@@ -50,6 +62,24 @@
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_TurnstileHop"/>
                     <attribute id="UUID" type="guid" value="bbe6c063-8f47-5eeb-a952-c76c1db0f2a3"/>
+                </node>
+
+                <!-- Racial Californian Spells: Touch Grass & Avocado Toast -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast"/>
+                    <attribute id="UUID" type="guid" value="51fb8228-c489-56ca-9757-19a03867dccb"/>
+                </node>
+
+                <!-- Racial Beachborn Spells: Hang Ten -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_HangTen"/>
+                    <attribute id="UUID" type="guid" value="1e8aa959-4a02-5115-ae29-e06d7a92a108"/>
+                </node>
+
+                <!-- Racial Siliconite Spells: Vibe Check -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_VibeCheck"/>
+                    <attribute id="UUID" type="guid" value="0259a9da-2913-5f47-9d65-8ee23e4de2da"/>
                 </node>
             </children>
         </node>

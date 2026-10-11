@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="10"/>
+    <region id="ProgressionDescriptions">
+        <node id="root">
+            <children>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hdbc2fb43g45e8g5814g8dc0g5aee2629c9bd" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hef348044g9f2fg5e06gb5b5g97a8c387d18f" version="1"/>
+                    <attribute id="SelectorId" type="FixedString" value="CaliforniaIdentity"/>
+                    <attribute id="UUID" type="guid" value="a572cc11-cd4b-5bdc-9c0d-30064927d02c"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

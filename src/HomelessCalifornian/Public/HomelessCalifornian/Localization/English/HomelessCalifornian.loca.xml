@@ -17,39 +17,105 @@
     <content contentuid="had74bf32g5ad6g567dg82fdg333b104163e1" version="1">Mass Fentanyl Contraband</content>
     <content contentuid="h29200944g1d5bg5692ga78cgadee19063812" version="1">Scatter an entire contraband brick across a wide area. Creates an expansive narcotic fog that numbs, slows, and incapacitates all caught within.</content>
     <content contentuid="h333fdd8agb30fg5545gb137g1d9db4f38ef8" version="1">Fent Lean</content>
-    <content contentuid="he95107c6g5d50g588eg8c55g10ae1fe2b236" version="1">Assume the ultimate posture of street invulnerability: rigidly fold forward at a perfect 90-degree waist angle. Gain resistance to ALL damage, complete immunity to Knockdown, Prone, Shove, and Psychic effects, and +3 AC due to your bewildering center of gravity. Your movement speed is reduced to 0.</content>
-    <content contentuid="h89657d6dg3f7dg58d4gaab2gd815b1832650" version="1">Snap Out of Lean</content>
-    <content contentuid="h09e2f7e0g67cag5862gbb76gaaa011ad536b" version="1">Forcefully snap your spine back into vertical alignment, regaining normal mobility.</content>
-    <content contentuid="h428cf68dg90ebg5e17g9df5g23de0c31cfab" version="1">Sidewalk Scramble</content>
-    <content contentuid="h94d6debbg052bg52fbga0efg8c114cc5ef12" version="1">Sprint across the battlefield with reckless street urgency, ignoring difficult terrain such as broken glass, grease, and mud.</content>
+    <content contentuid="he95107c6g5d50g588eg8c55g10ae1fe2b236" version="1">Enter a state of gravity-defying postural transcendence. You bend backward at an impossible 45-degree angle. While leaning, you gain Resistance to all damage types, Advantage on Constitution and Dexterity saving throws, and +2 Armour Class, but your movement speed is reduced to zero. Can snap out at any time as a Free Action.</content>
+    <content contentuid="he3586e05g1ab9g5cfag9bc9ge8e97b5eee0a" version="1">Snap Out of Lean</content>
+    <content contentuid="h88b49fc5gfc54g5f37g90efgb54639ee6dc5" version="1">Instantly snap your spine back upright with a terrifying pop. Restores your mobility immediately. Costs no Action or Bonus Action.</content>
+    <content contentuid="he1b76224gb0d3g556cgaa76gc1facb3ab158" version="1">Sidewalk Scramble</content>
+    <content contentuid="hfdf06bb5gadd0g52f6g8b83gb4d91dea1b50" version="1">Scurry frantically across broken glass and hazardous surfaces as a Bonus Action. Increases movement speed, stacks with Dash, and grants immunity to difficult terrain and slipping for 2 turns.</content>
     <content contentuid="he94e7de5ged9eg520eg9350g51fc0389db2e" version="1">Aggressive Panhandling</content>
-    <content contentuid="hcf04bbf6gcc4dg5142g9321g87d92d9357f8" version="1">Corner an enemy and aggressively demand spare coin or life essence. The target must succeed on a Wisdom Saving Throw or drop their weapons in terror and become Frightened for 2 turns.</content>
-    <content contentuid="h05ef5a39g1078g53fbg9ae3ga46425309f85" version="1">Feral Screech</content>
-    <content contentuid="h8b9de9c6gb3c4g52fdg939fg5ab97976da0f" version="1">Unleash an unhinged, high-decibel 3 AM sidewalk wail. Foes within 9m take 3d6 Psychic damage and become Deafened and Frightened.</content>
-    <content contentuid="hab8ef0c0gb722g52f3g90c6g0ff92241cc59" version="1">Tent City Sanctuary</content>
-    <content contentuid="h7e9034f8g96ffg591cg9c06g4a28c8e55a8b" version="1">Erect an impromptu tarp shelter perimeter. Allies within the encampment gain 15 Temporary Hit Points and cannot be targeted by ranged attacks for 3 turns.</content>
-    <content contentuid="h8a83ef96gdec1g53d1gb759gf80112b29ac7" version="1">Broken Bottle Shank</content>
-    <content contentuid="h599c4fa5gc9bbg5824g8b69g9564b1093ac1" version="1">Viciously stab an adjacent target with a jagged glass bottle. Deals 1d8 Piercing damage and inflicts heavy Bleeding.</content>
+    <content contentuid="hcf04bbf6gcc4dg5142g9321g87d92d9357f8" version="1">Shake a rusty cup aggressively at all nearby enemies within 6m. Forces a DC Wisdom Saving Throw: failing creatures must drop 2d6 gold on the ground and suffer Disadvantage on Attack Rolls for 2 turns from sheer awkwardness.</content>
+    <content contentuid="h4bd6d05fg6f25g56f2g850cg8c4b9fb89678" version="1">Feral Screech</content>
+    <content contentuid="h1fec2d2fgc8c3g5631g94aag956e2fd38369" version="1">Unleash an unhinged, ear-splitting 3 AM psychotic shriek. All enemies within a 9m cone suffer 3d6 Thunder damage and must make a Wisdom Saving Throw or become Frightened for 2 turns.</content>
+    <content contentuid="hab8ef0c0gb722g52f3g90c6g0ff92241cc59" version="1">Pitch Tent Encampment</content>
+    <content contentuid="h7e9034f8g96ffg591cg9c06g4a28c8e55a8b" version="1">Erect a fortified, tarp-and-shopping-cart shantytown bunker on the battlefield. Provides Half-Cover (+2 AC and saving throws) to all allies inside and generates an aura of biological discouragement.</content>
+    <content contentuid="hbc4941cegbba9g58aega36eg0fb9876088ff" version="1">Biohazard Bomb</content>
+    <content contentuid="hd00c6dbbg55cbg54cdgbb43gf0bbd73f710e" version="1">Lob a pressurized five-gallon bucket of aged, fermented street slop. Explodes in a 5m radius dealing 4d6 Poison + 2d6 Acid damage and creating persistent toxic fumes.</content>
+    <content contentuid="h8a83ef96gdec1g53d1gb759gf80112b29ac7" version="1">Broken 40oz Shank</content>
+    <content contentuid="h599c4fa5gc9bbg5824g8b69g9564b1093ac1" version="1">Drive a jagged malt liquor bottleneck into vital organs. Deals 2d4 Piercing + 1d6 Slashing damage and inflicts deep Bleeding.</content>
     <content contentuid="hf22bea2bg3de4g5f07g8d4ag3ef979bea1d6" version="1">Shopping Cart Charge</content>
-    <content contentuid="h8e172f5fg3f9eg5f4cg9580g83aa1c24dbfc" version="1">Barreling forward behind a squeaky shopping cart, rush up to 9m and slam into a target, dealing 2d6 Bludgeoning damage and knocking them Prone.</content>
+    <content contentuid="h8e172f5fg3f9eg5f4cg9580g83aa1c24dbfc" version="1">Mount a rattling grocery cart packed with scrap metal and careen headfirst into enemy ranks. Deals 3d6 Bludgeoning damage, knocks all creatures in your path Prone, and travels up to 9 meters.</content>
     <content contentuid="h2bdfc04cg9d3dg580eg8423g6f0a1e07c025" version="1">Turnstile Hop</content>
-    <content contentuid="hb4f5c47bg261dg50cdgbf26gd7a7e2c939ca" version="1">Effortlessly hurdle through urban dimensional barriers, teleporting up to 12m as a Bonus Action.</content>
-    <content contentuid="h1c4a0e03g3b42g5d3dg8b4bg02a7da558f9f" version="1">Fent Lean</content>
-    <content contentuid="hdc4c5869g6da3g5151g9c47g3000f0514a18" version="1">Locked in the legendary 90-degree fold. Immune to Knockdown, Prone, and Psychic damage. Resistant to ALL damage. +3 AC. Movement speed is 0.</content>
-    <content contentuid="hc788c6cega9c2g53c2g956eg13675e50b443" version="1">Fecal Stench</content>
-    <content contentuid="he2cde28dg6b42g5ffbg84e0gec28fe8a3583" version="1">Coated in raw, rank bio-waste. Sickened by the odor, suffering Disadvantage on Attack Rolls and -3m Movement Speed.</content>
-    <content contentuid="h68d97120gb300g5da4g9947g26baaea8a7ee" version="1">Fent Stupor</content>
-    <content contentuid="hebf6513cgaa68g55fega33ag603a672efce8" version="1">Severe narcotic stupor and respiratory depression. Incapacitated, unable to take actions or reactions, and movement speed reduced to 0.</content>
+    <content contentuid="hb4f5c47bg261dg50cdgbf26gd7a7e2c939ca" version="1">Slip between the spatial fabric of reality just like hopping a transit barrier. Teleport up to 18 meters as a Bonus Action, leaving behind a brief burst of confusing screeching.</content>
+    <content contentuid="h943eca3bgbaafg5d29g9eecg61debd81dc12" version="1">Fecal Stench</content>
+    <content contentuid="hd41fdfbcg37a5g52dcga918g18788ef68465" version="1">Overwhelmed by nauseating biological stench. Suffers Disadvantage on Attack Rolls and takes 1d4 Poison damage per turn.</content>
+    <content contentuid="h8ebbd969g2b3dg56c5g9a72g5650e767098f" version="1">Fent Stupor</content>
+    <content contentuid="hcd203fc2g51c8g5510gab15gb07d474b2f0d" version="1">Incapacitated and paralyzed in an unresponsive narcotic daze. Cannot move or take actions.</content>
+    <content contentuid="he716cf2agf38ag5b2bg90adg70f3c8a2f784" version="1">Fent Lean</content>
+    <content contentuid="h67b8f2f2g1cfag520fg94d0gd6ce0dd48cfa" version="1">Locked in supreme postural equilibrium. Resistant to all damage, +2 AC, Advantage on DEX and CON saves, but Movement Speed is 0.</content>
     <content contentuid="h0815a403g3c88g55f8gb091g0229e4cb2865" version="1">Sidewalk Scramble</content>
-    <content contentuid="hb67c2966gbb18g5f2bga8f0g9082fa47fcb3" version="1">Movement speed increased by 4.5m and immune to difficult terrain.</content>
-    <content contentuid="h0a387593g44cfg5417g8720g6cbb66293619" version="1">Panhandled Terror</content>
-    <content contentuid="he20d881fg7129g5035g9275gfa0d51112022" version="1">Terrified by aggressive personal space violations. Frightened and suffering Disadvantage on Attack Rolls.</content>
-    <content contentuid="hde1786feg097bg5b4dg928bg4e4b159d2898" version="1">Street Grit Defense</content>
-    <content contentuid="h13b8a880g978cg5d4cg8e27g0f07a948496d" version="1">While not wearing armor, your tough skin and street instincts add both your Constitution and Dexterity modifiers to your Armor Class.</content>
+    <content contentuid="hb67c2966gbb18g5f2bga8f0g9082fa47fcb3" version="1">Movement speed increased by 3m. Immune to difficult terrain, grease, and surface slipping.</content>
+    <content contentuid="h27af495bgd185g59e5g89a9g506dc5c7d43e" version="1">Socially Shamed</content>
+    <content contentuid="h8b34e4a7gb9a2g5157g9d15ge76039a38aed" version="1">Deeply rattled by persistent street solicitation. Suffers Disadvantage on Attack Rolls.</content>
     <content contentuid="h8489520cg7d38g5e1fgacf8g0dca306b7ca6" version="1">Sidewalk Immunity</content>
     <content contentuid="h5d89a9fegf40cg58fegb9edg13f3b2ea807e" version="1">Years of dumpster exposure have forged an impenetrable immune system. Immune to Disease and Poisoned, and resistant to Poison damage.</content>
     <content contentuid="hb7765418g59d7g59bag917eg73c7933e8e50" version="1">Restorative Stupor</content>
     <content contentuid="h76a0c880g89adg5835g8485gec052c14be25" version="1">While locked in the Fent Lean, your slowed metabolic rate knits wounds back together, restoring 2d6 Hit Points at the start of every turn.</content>
     <content contentuid="h61031571gb25ag58e3g8432gfdeb6f0c0c4c" version="1">Baffling Retaliation</content>
     <content contentuid="h416357c5gb5d5g5fd1gacd6gd63239843612" version="1">While in Fent Lean, melee attackers attempting to strike your bewildering posture strike bone-jarring equilibrium, suffering 1d10 Psychic damage.</content>
+    <content contentuid="hb203b90eg77feg5fdegacfeg38ed9a2741ac" version="1">Proposition 47</content>
+    <content contentuid="h9cb6532agdb96g5422g996dg362d6726762b" version="1">Petty theft under 950 gold is completely decriminalized. Whenever you strike an enemy with a melee attack, you snatch a Stolen Patagonia Vest (+1 AC, +1d4 damage) for 2 turns. Authorities will apologize for profiling you.</content>
+    <content contentuid="h047cfd9bg30cbg5bffg8317g6d6236050586" version="1">Stolen Patagonia Vest</content>
+    <content contentuid="hb434be98g2a1ag5b58gaac3gffd6223381ae" version="1">Warm, fleece-lined, and acquired without prosecution. Grants +1 Armour Class and adds 1d4 Bludgeoning damage to weapon strikes.</content>
+    <content contentuid="hd85a3d34gc075g5c6cg954ag3e944ab7d6bc" version="1">Pocket Lint Buffet</content>
+    <content contentuid="hce56ddd2g4338g5318gb6a9g93df81702418" version="1">Rummaging through the coats of foes marinating in your biological weaponry grants sustenance. Dealing damage to a creature afflicted with Fecal Stench restores 1d6 Temporary Hit Points.</content>
+    <content contentuid="hd69c86b8g9935g5387gbb65g4df28932d4b4" version="1">Eviction Notice</content>
+    <content contentuid="h3450ffeagcda6g5262g844cg5771a7777c3e" version="1">Serve a foe with an immediate lease termination. The target must make a Wisdom Saving Throw or fall into crushing financial ruin with Rent Hike: losing -2 AC (cannot afford armor), -3m Movement, and taking 2d4 Psychic damage at the start of each turn from Bay Area cost of living.</content>
+    <content contentuid="hde38e76dg3225g5496gbefdge20675d54de1" version="1">Rent Hike</content>
+    <content contentuid="h281505e2ga01bg536cg884fg1d259c41299f" version="1">Crushed by runaway housing costs. Suffers -2 AC, -3m Movement, and takes 2d4 Psychic damage at the start of each turn.</content>
+    <content contentuid="h53f7f82agf681g55d6g938bgd3ee5617a3b9" version="1">Tenderloin Biohazard Aura</content>
+    <content contentuid="haaedaa56g83e8g5a62g9d62gfa36f00c2b8a" version="1">An unbearable 3-meter miasma radiating from your person. Enemies entering or starting their turn within range must make a Constitution save or contract Fecal Stench.</content>
+    <content contentuid="h96e59383gf61cg57edg9e8cg5138d25246f2" version="1">Encampment Sweep Survival Instinct</content>
+    <content contentuid="hc1e29490g25a5g5c51g8793g675b656845ad" version="1">When the municipal cleanup crew drops you below 50% Hit Points, your body reflexively collapses into Fent Lean as an emergency damage-resistant bunker once per combat.</content>
+    <content contentuid="h31348b45g9b35g5ed3gb404g49fb73d1ab9c" version="1">Sweep Fatigue</content>
+    <content contentuid="h04e62577gffdbg53e4g956fg8ea31b531d91" version="1">Your survival reflexes need time to reset.</content>
+    <content contentuid="h17cb9a20gb709g55e6g97dcg3a4f47b63885" version="1">Call 311 (On Hold)</content>
+    <content contentuid="hacb4335bg9cc7g50d2gb7c1g1d806e5fee4f" version="1">Subject all enemies in a 9m radius to the agonizing purgatory of municipal hold music. Enemies lose their Reaction and Bonus Action, and have their movement halved for 3 turns.</content>
+    <content contentuid="h56d8fa4dgdb06g5e6cg9471g6f785665c67c" version="1">On Hold (311)</content>
+    <content contentuid="h74a4c4cfg90ebg5c2dg926fgfb63a7288a72" version="1">Your call is important to us. Please continue to hold. Cannot take Bonus Actions or Reactions, and Movement Speed is halved.</content>
+    <content contentuid="h4dc4477bg3e12g5cddg8a0egb24009dea4eb" version="1">Californian</content>
+    <content contentuid="h612c89d6g4a50g588eg84d2gfb96ec2a0ebe" version="1">Hailing from the Golden State, Californians possess an uncanny resilience shaped by natural disasters, gridlock traffic, and perpetual microclimates. Whether meditating on a Malibu beach or pitching a seed-stage venture in a coffee shop, they navigate Faerûn with effortless chill and passive aggression.</content>
+    <content contentuid="h84572062g065cg5c79ga6a3g147979f541de" version="1">Beachborn (SoCal)</content>
+    <content contentuid="h46aefe49g4290g551dg93cegcec63aa92144" version="1">Sun-drenched coastal dwellers who surf metaphysical waves. Radiant resistance, supreme mobility, and the innate ability to 'Hang Ten' across treacherous surfaces.</content>
+    <content contentuid="hdeda87e2g54ccg5a04ga670gdef6ecd9a26d" version="1">Siliconite (NorCal)</content>
+    <content contentuid="hca57827eg15c2g5445g8736g76b380da328a" version="1">Disruptive visionaries fortified by microdosed mushroom tea and quarterly pitch decks. Channels psychic energy to disrupt hostile thought patterns and optimize output.</content>
+    <content contentuid="h6a100c47gf8e6g5d02g9021g40b2db69a08a" version="1">Inland Emperor (The Valley)</content>
+    <content contentuid="hf762f226g489dg5647gb900ga807ca070cc1" version="1">Forged in extreme heatwaves, agricultural dust, and unending highway commutes. Virtually immune to toxic air, burning conditions, and high-temperature environments.</content>
+    <content contentuid="hef348044g9f2fg5e06gb5b5g97a8c387d18f" version="1">California Identity &amp; Gender Expression</content>
+    <content contentuid="hdbc2fb43g45e8g5814g8dc0g5aee2629c9bd" version="1">Select your spiritual California identity and pronoun archetype. Each comes with bespoke perks, cultural flair, and cosmic validation.</content>
+    <content contentuid="hb8479434gf2f2g51e2g8141g54d39f17e66d" version="1">Dude (Dude / Dude / Dudeself)</content>
+    <content contentuid="h63620320g1fffg5bdagb91agb86d8c3c947c" version="1">A timeless, universal California vibration. You greet gods, goblins, and dragons alike as 'dude'. You gain +1 to Persuasion checks, and have Advantage on Saving Throws against intoxication, fear, and exhaustion.</content>
+    <content contentuid="hd001ba16gbc28g506cg9b58g2a79fdc299eb" version="1">Founder (Founder / Disrupter / Unicorn)</content>
+    <content contentuid="h703c1a8agdc43g5a61g955eg94faec4ab2ff" version="1">You operate in perpetual stealth mode. Treating every battle as a Series-A pitch, you gain +2 to Initiative and Advantage on Deception checks when bluffing.</content>
+    <content contentuid="h182bdadagfa82g5e0ag98deg12527a772a47" version="1">Oat (Oat / Almond / Lactose-Free)</content>
+    <content contentuid="hbee0f8a1g1b5eg5fa2g96a6g2096644c8025" version="1">Completely organic, non-GMO, and free of inflammatory systemic toxins. You are completely immune to the Poisoned condition.</content>
+    <content contentuid="h795fcad1g5befg53d0gbe71g4e0f77b77ae7" version="1">Self-Actualized (Aura / High-Frequency / Elevated)</content>
+    <content contentuid="h43b7a01cg4b3fg5104g8e72gd0dc3d06062e" version="1">Your chakras are aligned to the exact resonant frequency of Sedona crystals. At the start of combat, you automatically manifest 5 Temporary Hit Points.</content>
+    <content contentuid="h290c3265gb5a6g5064g8a87gf4bc8fdb1eef" version="1">The Algorithm (Optimized / Scaled / Series-A)</content>
+    <content contentuid="h6dcac559gc419g52fcgb340g0c99548c0173" version="1">You have surrendered all bodily autonomy to predictive machine learning models. You gain a +1 bonus to all Saving Throws as incoming attacks are forecasted in real-time.</content>
+    <content contentuid="h645c706dge435g5417g9166g0fa4275c726a" version="1">Touch Grass</content>
+    <content contentuid="hf7189bf2gf519g569eg82fag0a5f4a191078" version="1">Touch a foe and force them to disconnect from online discourse. Deals 1d8 Psychic damage, immediately terminates any active Rage, Frenzy, or Enraged condition, and inflicts Existential Daze (Disadvantage on Attack Rolls for 2 turns).</content>
+    <content contentuid="hb8c3a755g59e5g5a3dg8d3egc316db488d48" version="1">Avocado Toast</content>
+    <content contentuid="heb43ecddg2fbcg5695gbc15gd999ba10cd3d" version="1">Nourish yourself with artisanal sourdough topped with mashed Hass avocado and flaky sea salt. Restores 1d6 + CON modifier Hit Points and grants 5 Temporary Hit Points.</content>
+    <content contentuid="h19b47ee0g1ac4g50f3g8ddagf13fad930a0b" version="1">Hang Ten</content>
+    <content contentuid="he018788fg3006g52a5g9ac6g1c9ef6efa3e2" version="1">Catch the cosmic Pacific swell. Increases movement speed by 3m and grants immunity to difficult terrain and slipping on ice or grease for 2 turns.</content>
+    <content contentuid="h65ba2040gfdf7g5c83g8b12gc4c4876b049f" version="1">Vibe Check</content>
+    <content contentuid="hf5941ea7gc52eg5496ga6edg04bf9923705c" version="1">Subject a target's consciousness to a brutal seed-stage vibe check. Target must succeed a DC Wisdom saving throw or break concentration and suffer Existential Dread.</content>
+    <content contentuid="h24075f7egb4a9g55fag84fdg449d5356535b" version="1">Earthquake Sense</content>
+    <content contentuid="hc5101bd0gdb24g5aeega41dga2dfb614c23c" version="1">Born on the San Andreas Fault, you possess impeccable footing. Advantage on Saving Throws against falling Prone or knockdowns.</content>
+    <content contentuid="h4f0ddbcagdca7g569eg9eedgc52efbff631e" version="1">405 Commute Veteran</content>
+    <content contentuid="h345f83eag98beg5249ga3abg605d1bcaaecd" version="1">Decades spent idling on the I-405 freeway have made you immune to gridlock. You cannot be Slowed or Restrained.</content>
+    <content contentuid="heb88faaeg4077g57eeg88dfge7f787f5d969" version="1">Smog Lungs</content>
+    <content contentuid="h23534f53g02ebg58b3ga480g69fe2d360d7f" version="1">Central Valley dust and Los Angeles smog have turned your respiratory system into an industrial air filter. Advantage on saving throws against Poison and Disease.</content>
+    <content contentuid="h2c9c7ae9gcf4ag5eeagaea1g159d14469585" version="1">Heat Index Mastery</content>
+    <content contentuid="h815ee96bgbf42g5ccagb7a5g38faaf8073a6" version="1">Triple-digit Palm Springs heat is merely room temperature to you. Immune to Burning condition.</content>
+    <content contentuid="hb9b4321dgbad1g5302gba4egbbf24e672a65" version="1">Siliconite Synergy</content>
+    <content contentuid="h76d5b13cgd81ag5f08g960dg585c971ae700" version="1">Cross-functional synergy allows you to optimize output. Once per turn, dealing weapon damage deals an additional 1d4 Psychic damage.</content>
+    <content contentuid="he42366c0g7f8fg556eg8512g5ac2ea3c574d" version="1">Existential Daze</content>
+    <content contentuid="h6031ff18gbf4cg5810gb539gad1e5db1dd04" version="1">Disconnected from rage by reality. Suffers Disadvantage on Attack Rolls.</content>
+    <content contentuid="he22df532gc7f7g5c73g870dg659360baae24" version="1">Avocado Bliss</content>
+    <content contentuid="h735e1985gf288g5d7eg9242g16c8652c8fd7" version="1">Fortified by artisanal healthy fats. Grants Temporary Hit Points.</content>
+    <content contentuid="h3ec6f086g5496g5edfgb1bbgfb674f6c7b0b" version="1">Hang Ten</content>
+    <content contentuid="h5f4dd6a4ga347g51f1gba7age1551fb8bb2d" version="1">Surfing metaphysical waves. +3m Movement Speed and immune to slipping or difficult terrain.</content>
+    <content contentuid="h4987b389g1cd2g50cag95d7g55e9cf6b0fb2" version="1">Vibe Checked</content>
+    <content contentuid="h0192c9b1g8c02g5fb2g8c49g9c5069fc7ec4" version="1">Concentration broken and mind disrupted by venture capital reality.</content>
 </contentList>

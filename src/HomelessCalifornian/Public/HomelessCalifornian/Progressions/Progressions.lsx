@@ -5,18 +5,20 @@
         <node id="root">
             <children>
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Strength);Proficiency(SimpleWeapons);Proficiency(ImprovisedWeapons);Proficiency(Daggers);Proficiency(Clubs);Proficiency(Shields)"/>
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="ls::Guid" value="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Dexterity);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="StreetHardiness;StreetImmunity"/>
+                    <attribute id="PassivesAdded" type="LSString" value="SidewalkImmunity;Proposition47"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells(2a7d6c13-c678-5482-8a03-8396546eb1bf);SelectSkills(43d8bfd5-3503-5d9c-a3c7-55e36065dd23,2);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSkills(43d8bfd5-3503-5d9c-a3c7-55e36065dd23,2);AddSpells(2a7d6c13-c678-5482-8a03-8396546eb1bf)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="9399c502-af64-544e-89e9-f0ddb1f4ce1e"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="2"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PocketLintBuffet"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(fd09207f-ec52-5b52-a330-4f9fc3a631eb)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
@@ -49,6 +51,7 @@
                     <attribute id="Level" type="uint8" value="4"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(b7b3eff1-a4d3-5ebf-9e2d-d69c14ddbf1b)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="760fd853-5ff1-5804-82c1-359d2bee48d0"/>
                 </node>
@@ -96,6 +99,7 @@
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="10"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EncampmentSweepInstinct"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="092ae5d1-23be-5322-8946-7445ab9487ea"/>
@@ -113,33 +117,382 @@
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(a97dca4e-6a54-52e4-b96a-5a236fd5a676)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="c6589f4a-e485-51ec-87b5-01a85b64edeb"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
+                    <attribute id="PassivesAdded" type="LSString" value="BiohazardStench"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(09acfd76-7fbd-5096-98d4-1d8e917c2b75)"/>
                     <attribute id="TableUUID" type="guid" value="a6acaf41-5ffa-5202-a5d3-b4c75e021b45"/>
-                    <attribute id="UUID" type="guid" value="1562ead8-c633-5c5b-99db-69d758ad22ef"/>
+                    <attribute id="UUID" type="guid" value="57c3c99a-2b50-523c-ac91-358f978f48f9"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnarmoredDefense_Barbarian"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(ea51374c-109e-52a1-a827-08441be45afa)"/>
                     <attribute id="TableUUID" type="guid" value="416ea8c3-799d-51ab-8cc1-a2af5eb8d4ec"/>
-                    <attribute id="UUID" type="guid" value="779b6ece-566b-5b4b-b313-8b6fd026416e"/>
+                    <attribute id="UUID" type="guid" value="f53da724-19d4-556b-bacf-507069b36651"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="BARTPlatformMenace"/>
-                    <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="PassivesAdded" type="LSString" value="ReliableTalent"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(bbe6c063-8f47-5eeb-a952-c76c1db0f2a3)"/>
                     <attribute id="TableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
-                    <attribute id="UUID" type="guid" value="375209d2-d21a-58fc-8ed2-81aeb2f33b2d"/>
+                    <attribute id="UUID" type="guid" value="17e39116-d191-58c1-81a5-1c7795a20ec3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="ls::Guid" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(547c13c8-f7c5-50b6-9bab-b22cc6a3f096,1,CaliforniaIdentity);AddSpells(51fb8228-c489-56ca-9757-19a03867dccb,,Charisma,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="c10d0324-e22c-56d5-aa1b-d4ed87a5dbdb"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="69747e8b-2f0e-54e3-9458-764b780f18bd"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="bfce4b89-a078-5e82-8560-9eb60a2888ad"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="b9cf2435-65bf-5a8b-9ce1-b19faff0f862"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="716007fd-d109-59eb-ab40-9668713e6c4e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="570ae844-237b-54ad-930b-bce30bc4369c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="0f1dabd0-9442-52be-ad59-de398f2ac1b1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="d530a21b-6ed9-5863-9601-68281cfe514f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="70a89637-8342-5530-8e8d-21c279fd8d06"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="6fedaca9-90eb-5b2c-ae2f-47f0ff87d22f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="c3c3604d-1927-51e7-a9e8-d3e7bf0e1a27"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="Californian"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
+                    <attribute id="UUID" type="guid" value="1ea19aae-b90c-50b5-b1af-38d6df4112ab"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="ls::Guid" value="Resistance(Radiant,Resistant)"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(1e8aa959-4a02-5115-ae29-e06d7a92a108,,Charisma,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="04ef9b87-5b3d-5e22-82af-deac42d6606f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="a9ebea1b-3cbb-58a0-85a6-04ceb81b3a36"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="210c48f6-670a-546f-91e8-585ea17bcfcf"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="d46ab149-1901-5d5a-afa1-286502d3712d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="d609f35d-a3b5-50f2-8629-ffd4758be606"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="a2278693-0091-535f-a7b1-3ad0f8bb085f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="59bafa5d-4230-5cdd-87f9-9b46a1bc97dc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="3ce13161-e27d-5234-b007-f49ff5008544"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="13b734fc-4624-54cb-a00a-8b1aeb7d3492"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="a9d18fa8-7760-5c2d-9783-0120ce083f89"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="d124f754-0c16-5872-9378-a651fa66d5c3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
+                    <attribute id="UUID" type="guid" value="1b7e6f31-5ba7-52ff-b312-050cc029afb0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Passive_SiliconiteSynergy"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(0259a9da-2913-5f47-9d65-8ee23e4de2da,,Charisma,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="9aefcfc7-84a6-56f0-9210-68f9c194231e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="3f72957e-c89b-5d61-8042-eb1d59ba8758"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="b02a1121-c6ed-5efb-9332-8e5adeb3b097"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="f1341b88-8fd9-5d3d-ae60-9a0be23068d0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="b3501a61-688e-594b-94e6-08d7357dcdda"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="eb9342f0-0d46-5856-8438-1cac37009f2e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="094c99ff-7217-5b05-9d16-d4aa5dbda60b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="c777b083-9d50-54e7-845b-2ddf19945e02"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="9542c6f8-8545-5cf0-bab8-6e65dfd09d93"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="b416773d-e079-5711-be69-5dd82aa378b4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="fd22cf76-1024-5d24-b66d-1162e953161c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
+                    <attribute id="UUID" type="guid" value="428ba14b-a669-52d2-a134-6d09df7b2cef"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="ls::Guid" value="Resistance(Poison,Resistant);Advantage(SavingThrow,Poison)"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Passive_SmogLungs;Passive_HeatIndexMastery"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="4b58ebfe-2a81-59ef-b4b8-93b773525c9c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="bab16d12-e0db-599d-b26f-ac8981b7fa41"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="110e2718-ff51-5d89-94dd-c3d1b76a9937"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="83c25384-0757-524e-96e4-80eaf7ea7013"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="d149a109-8bf5-5c56-a95f-666d6cd2401e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="592514eb-1087-5387-8d6d-b13d45329fc2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="f5b7bff2-d763-5ac5-b86f-84d5376d412a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="a03cd030-0571-5214-b686-12298fd0421d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="24f9e105-e50e-5497-8d69-a9e64e33e3cf"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="334899aa-a607-5900-ba20-2df2d7608f90"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="01fb626b-48a6-5eb6-b409-d455070637da"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
+                    <attribute id="UUID" type="guid" value="f8b76cc9-e0e5-551b-a346-a93749959de1"/>
                 </node>
             </children>
         </node>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="10"/>
+    <region id="PassiveLists">
+        <node id="root">
+            <children>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="California Identity and Gender Expression"/>
+                    <attribute id="Passives" type="LSString" value="CaliforniaIdentity_Dude,CaliforniaIdentity_Founder,CaliforniaIdentity_Oat,CaliforniaIdentity_SelfActualized,CaliforniaIdentity_Algorithm"/>
+                    <attribute id="UUID" type="guid" value="547c13c8-f7c5-50b6-9bab-b22cc6a3f096"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

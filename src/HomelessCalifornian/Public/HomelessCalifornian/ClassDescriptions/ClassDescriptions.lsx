@@ -25,12 +25,6 @@
                     <attribute id="SoundClassType" type="FixedString" value="Barbarian"/>
                     <attribute id="SpellCastingAbility" type="uint8" value="3"/>
                     <attribute id="UUID" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
-                    <children>
-                        <node id="Tags">
-                            <!-- Barbarian class dialogue tag for gritty raw tone -->
-                            <attribute id="Object" type="guid" value="d82370fb-caf8-4da2-bd26-e16180c14b88"/>
-                        </node>
-                    </children>
                 </node>
 
                 <!-- Subclass 1: Tenderloin Biohazard -->
