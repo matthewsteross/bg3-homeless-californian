@@ -54,6 +54,13 @@
                     <attribute id="V2" type="float" value="0.49902344"/>
                 </node>
                 <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BottleShank"/>
+                    <attribute id="U1" type="float" value="0.75097656"/>
+                    <attribute id="U2" type="float" value="0.99902344"/>
+                    <attribute id="V1" type="float" value="0.25097656"/>
+                    <attribute id="V2" type="float" value="0.49902344"/>
+                </node>
+                <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
                     <attribute id="U1" type="float" value="0.25097656"/>
                     <attribute id="U2" type="float" value="0.49902344"/>
