@@ -126,10 +126,10 @@ h_sub_bart_desc = add_loca("sub_bart_desc", "An erratic street phantom who slips
 
 # Spells & Actions - Class
 h_sling_poop_name = add_loca("sling_poop_name", "Sling Poop")
-h_sling_poop_desc = add_loca("sling_poop_desc", "Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.")
+h_sling_poop_desc = add_loca("sling_poop_desc", "Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning (2d10 at level 5, 3d10 at level 10) and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.")
 
 h_sling_poop_chunky_name = add_loca("sling_poop_chunky_name", "Sling Chunky Poop")
-h_sling_poop_chunky_desc = add_loca("sling_poop_chunky_desc", "Hurl a dense, fermented payload with devastating force. On a hit, deals 2d10 + Constitution Bludgeoning and 2d6 Poison damage, leaves a wider puddle of filth, and inflicts Fecal Stench for 3 turns. Can be used as often as you like.")
+h_sling_poop_chunky_desc = add_loca("sling_poop_chunky_desc", "Hurl a dense, fermented payload with devastating force. On a hit, deals an extra 1d10 Bludgeoning on top of Sling Poop (3d10 + Constitution at level 5, 4d10 at level 10) and 2d6 Poison damage, leaves a wider puddle of filth, and inflicts Fecal Stench for 3 turns. Can be used as often as you like.")
 
 h_sling_fent_name = add_loca("sling_fent_name", "Sling Fentanyl")
 h_sling_fent_desc = add_loca("sling_fent_desc", "Flick a concentrated dose at an enemy. Deals 2d6 Psychic damage. On a failed Constitution saving throw the target falls into Fent Stupor for 2 turns. Recharges on a Short Rest.")
@@ -209,7 +209,7 @@ h_status_pocket_lint_name = add_loca("status_pocket_lint_name", "Pocket Lint Sna
 h_status_pocket_lint_desc = add_loca("status_pocket_lint_desc", "Fortified by whatever was in that coat. Grants Temporary Hit Points.")
 
 h_eviction_name = add_loca("eviction_name", "Eviction Notice")
-h_eviction_desc = add_loca("eviction_desc", "Serve a foe with an immediate lease termination. On a failed Wisdom saving throw the target suffers Rent Hike for 3 turns: -2 AC, -3m movement, and 2d6 Psychic damage at the start of each of its turns from Bay Area cost of living. Recharges on a Short Rest.")
+h_eviction_desc = add_loca("eviction_desc", "As a Bonus Action, serve a foe with an immediate lease termination. On a failed Wisdom saving throw the target takes 3d6 Psychic damage and suffers Rent Hike for 3 turns: -2 AC, -3m movement, and 2d6 Psychic damage at the start of each of its turns from Bay Area cost of living. Recharges on a Short Rest.")
 
 h_status_rent_hike_name = add_loca("status_rent_hike_name", "Rent Hike")
 h_status_rent_hike_desc = add_loca("status_rent_hike_desc", "Crushed by runaway housing costs. -2 AC, -3m movement, and takes 2d6 Psychic damage at the start of each turn.")
@@ -227,7 +227,7 @@ h_sweep_cd_name = add_loca("sweep_cd_name", "Sweep Fatigue")
 h_sweep_cd_desc = add_loca("sweep_cd_desc", "Your survival reflexes need time to reset.")
 
 h_call311_name = add_loca("call311_name", "Call 311 (On Hold)")
-h_call311_desc = add_loca("call311_desc", "Subject every enemy within 9m to the purgatory of municipal hold music. On a failed Wisdom saving throw, for 3 turns they cannot take Bonus Actions or Reactions and their movement is halved. Recharges on a Long Rest.")
+h_call311_desc = add_loca("call311_desc", "Subject every enemy within 9m to the purgatory of municipal hold music. On a failed Wisdom saving throw, for 3 turns they cannot take Bonus Actions or Reactions and their movement is halved. Costs only a Bonus Action. Recharges on a Short Rest.")
 
 h_status_hold_music_name = add_loca("status_hold_music_name", "On Hold (311)")
 h_status_hold_music_desc = add_loca("status_hold_music_desc", "Your call is important to us. Please continue to hold. Cannot take Bonus Actions or Reactions, and movement is halved.")
@@ -1242,14 +1242,14 @@ using "Projectile_RayOfSickness"
 data "Level" "0"
 data "SpellSchool" "Transmutation"
 data "SpellRoll" "Attack(AttackType.RangedSpellAttack)"
-data "SpellSuccess" "DealDamage(1d10+ConstitutionModifier,Bludgeoning,Magical);DealDamage(1d6,Poison,Magical);ApplyStatus(FECAL_STENCH,100,2)"
+data "SpellSuccess" "DealDamage(LevelMapValue(D10Cantrip)+ConstitutionModifier,Bludgeoning,Magical);DealDamage(1d6,Poison,Magical);ApplyStatus(FECAL_STENCH,100,2)"
 data "SpellProperties" "GROUND:CreateSurface(1.5,2,Mud)"
 data "TargetConditions" "not Self() and not Dead()"
 data "UseCosts" "ActionPoint:1"
 data "Icon" "Spell_SlingPoop"
 data "DisplayName" "{h_sling_poop_name};1"
 data "Description" "{h_sling_poop_desc};1"
-data "TooltipDamageList" "DealDamage(1d10+ConstitutionModifier,Bludgeoning);DealDamage(1d6,Poison)"
+data "TooltipDamageList" "DealDamage(LevelMapValue(D10Cantrip)+ConstitutionModifier,Bludgeoning);DealDamage(1d6,Poison)"
 data "TooltipAttackSave" "RangedSpellAttack"
 data "TooltipStatusApply" "ApplyStatus(FECAL_STENCH,100,2)"
 data "TooltipUpcastDescription" ""
@@ -1259,11 +1259,11 @@ new entry "Projectile_SlingPoop_Chunky"
 type "SpellData"
 data "SpellType" "Projectile"
 using "Projectile_SlingPoop"
-data "SpellSuccess" "DealDamage(2d10+ConstitutionModifier,Bludgeoning,Magical);DealDamage(2d6,Poison,Magical);ApplyStatus(FECAL_STENCH,100,3)"
+data "SpellSuccess" "DealDamage(LevelMapValue(D10Cantrip)+1d10+ConstitutionModifier,Bludgeoning,Magical);DealDamage(2d6,Poison,Magical);ApplyStatus(FECAL_STENCH,100,3)"
 data "SpellProperties" "GROUND:CreateSurface(2.5,3,Mud)"
 data "DisplayName" "{h_sling_poop_chunky_name};1"
 data "Description" "{h_sling_poop_chunky_desc};1"
-data "TooltipDamageList" "DealDamage(2d10+ConstitutionModifier,Bludgeoning);DealDamage(2d6,Poison)"
+data "TooltipDamageList" "DealDamage(LevelMapValue(D10Cantrip)+1d10+ConstitutionModifier,Bludgeoning);DealDamage(2d6,Poison)"
 data "TooltipStatusApply" "ApplyStatus(FECAL_STENCH,100,3)"
 
 new entry "Projectile_SlingFentanyl"
@@ -1441,13 +1441,13 @@ data "SpellType" "Shout"
 using "Shout_FeyPresence"
 data "Level" "0"
 data "SpellSchool" "Enchantment"
-data "Cooldown" "OncePerRest"
+data "Cooldown" "OncePerShortRest"
 data "AreaRadius" "9"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
 data "SpellSuccess" "ApplyStatus(HOLD_MUSIC_311,100,3)"
 data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
 data "TargetConditions" "not Self() and not Ally() and not Dead()"
-data "UseCosts" "ActionPoint:1"
+data "UseCosts" "BonusActionPoint:1"
 {icon_line("Spell_Call311", "Spell_Panhandling")}
 data "DisplayName" "{h_call311_name};1"
 data "Description" "{h_call311_desc};1"
@@ -1520,7 +1520,7 @@ data "SpellSchool" "Enchantment"
 data "Cooldown" "OncePerShortRest"
 data "TargetRadius" "18"
 data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
-data "SpellSuccess" "ApplyStatus(RENT_HIKE,100,3)"
+data "SpellSuccess" "DealDamage(3d6,Psychic,Magical);ApplyStatus(RENT_HIKE,100,3)"
 data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
 data "TargetConditions" "not Self() and not Dead()"
 {icon_line("Spell_EvictionNotice", "Spell_Panhandling")}
@@ -1530,7 +1530,8 @@ data "TooltipAttackSave" "Wisdom"
 data "TooltipStatusApply" "ApplyStatus(RENT_HIKE,100,3)"
 data "CastSound" "Spell_Cast_Control_CrownOfMadness_L1to3"
 data "TargetSound" "Spell_Impact_Control_CrownOfMadness_L1to3"
-data "UseCosts" "ActionPoint:1"
+data "TooltipDamageList" "DealDamage(3d6,Psychic)"
+data "UseCosts" "BonusActionPoint:1"
 data "SpellAnimation" "{ANIM_CAST}"
 data "VerbalIntent" "Control"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
@@ -1783,6 +1784,7 @@ data "Description" "{h_sweep_cd_desc};1"
 data "Icon" "Skill_Fighter_SecondWind"
 data "StackId" "SWEEP_COOLDOWN"
 data "StackType" "Overwrite"
+data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "DisableOverhead"
 
 new entry "BOARDWALK_HEAL"
@@ -1923,7 +1925,7 @@ data "Icon" "Skill_Fighter_SecondWind"
 data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamaged"
 data "Conditions" "HasHPPercentageLessThan(50) and not HasStatus('SWEEP_COOLDOWN') and not HasStatus('FENT_LEAN')"
-data "StatsFunctors" "ApplyStatus(SELF,FENT_LEAN,100,2);ApplyStatus(SELF,SWEEP_SHELTER,100,-1);ApplyStatus(SELF,SWEEP_COOLDOWN,100,100)"
+data "StatsFunctors" "ApplyStatus(SELF,FENT_LEAN,100,2);ApplyStatus(SELF,SWEEP_SHELTER,100,-1);ApplyStatus(SELF,SWEEP_COOLDOWN,100,-1)"
 
 new entry "LeanDamageReflect"
 type "PassiveData"
@@ -1977,7 +1979,7 @@ data "Icon" "PassiveFeature_ImprovedCritical"
 data "Properties" "Highlighted"
 data "Boosts" "ReduceCriticalAttackThreshold(2)"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "IsMeleeAttack()"
+data "Conditions" "IsMeleeAttack() and Enemy() and Character()"
 data "StatsFunctors" "ApplyStatus(SELF,BOARDWALK_HEAL,100,0)"
 
 new entry "LastTrainPhantom"

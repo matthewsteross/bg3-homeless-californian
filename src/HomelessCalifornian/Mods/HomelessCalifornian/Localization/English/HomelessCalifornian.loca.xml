@@ -9,9 +9,9 @@
     <content contentuid="hce94c9c4g74e7g5b94gb59eg093f3c71383e" version="1">BART Platform Menace</content>
     <content contentuid="hf4758c0bg1320g5783g897bga0499438ce9f" version="1">An erratic street phantom who slips through turnstiles and spatial dimensions, unleashing ear-piercing 3 AM screeches to disorient and terrorize foes.</content>
     <content contentuid="h9603e071ga549g5726gbb4ag2d14032dff4c" version="1">Sling Poop</content>
-    <content contentuid="h0a3da2ebg2d05g5a59gb669gb1cf0e6bffea" version="1">Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.</content>
+    <content contentuid="h0a3da2ebg2d05g5a59gb669gb1cf0e6bffea" version="1">Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning (2d10 at level 5, 3d10 at level 10) and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.</content>
     <content contentuid="had359e51g6f8dg58c4gbf49g6b247ff31b9d" version="1">Sling Chunky Poop</content>
-    <content contentuid="h9c1b338bga468g5aefg90dage03e18d7b3ec" version="1">Hurl a dense, fermented payload with devastating force. On a hit, deals 2d10 + Constitution Bludgeoning and 2d6 Poison damage, leaves a wider puddle of filth, and inflicts Fecal Stench for 3 turns. Can be used as often as you like.</content>
+    <content contentuid="h9c1b338bga468g5aefg90dage03e18d7b3ec" version="1">Hurl a dense, fermented payload with devastating force. On a hit, deals an extra 1d10 Bludgeoning on top of Sling Poop (3d10 + Constitution at level 5, 4d10 at level 10) and 2d6 Poison damage, leaves a wider puddle of filth, and inflicts Fecal Stench for 3 turns. Can be used as often as you like.</content>
     <content contentuid="h955b2138g25f3g5da8g81d1ged0796fa22b6" version="1">Sling Fentanyl</content>
     <content contentuid="h79d07010g3134g5434gb52bgfc9053bcdb3c" version="1">Flick a concentrated dose at an enemy. Deals 2d6 Psychic damage. On a failed Constitution saving throw the target falls into Fent Stupor for 2 turns. Recharges on a Short Rest.</content>
     <content contentuid="had74bf32g5ad6g567dg82fdg333b104163e1" version="1">Mass Fentanyl Contraband</content>
@@ -63,7 +63,7 @@
     <content contentuid="hf5d55c9fgb73fg5d15g8bfega30f783353b7" version="1">Pocket Lint Snack</content>
     <content contentuid="ha7e412efg97bdg53dfg8c9agf96b857ea14c" version="1">Fortified by whatever was in that coat. Grants Temporary Hit Points.</content>
     <content contentuid="hd69c86b8g9935g5387gbb65g4df28932d4b4" version="1">Eviction Notice</content>
-    <content contentuid="h3450ffeagcda6g5262g844cg5771a7777c3e" version="1">Serve a foe with an immediate lease termination. On a failed Wisdom saving throw the target suffers Rent Hike for 3 turns: -2 AC, -3m movement, and 2d6 Psychic damage at the start of each of its turns from Bay Area cost of living. Recharges on a Short Rest.</content>
+    <content contentuid="h3450ffeagcda6g5262g844cg5771a7777c3e" version="1">As a Bonus Action, serve a foe with an immediate lease termination. On a failed Wisdom saving throw the target takes 3d6 Psychic damage and suffers Rent Hike for 3 turns: -2 AC, -3m movement, and 2d6 Psychic damage at the start of each of its turns from Bay Area cost of living. Recharges on a Short Rest.</content>
     <content contentuid="hde38e76dg3225g5496gbefdge20675d54de1" version="1">Rent Hike</content>
     <content contentuid="h281505e2ga01bg536cg884fg1d259c41299f" version="1">Crushed by runaway housing costs. -2 AC, -3m movement, and takes 2d6 Psychic damage at the start of each turn.</content>
     <content contentuid="h53f7f82agf681g55d6g938bgd3ee5617a3b9" version="1">Tenderloin Biohazard Aura</content>
@@ -75,7 +75,7 @@
     <content contentuid="h31348b45g9b35g5ed3gb404g49fb73d1ab9c" version="1">Sweep Fatigue</content>
     <content contentuid="h04e62577gffdbg53e4g956fg8ea31b531d91" version="1">Your survival reflexes need time to reset.</content>
     <content contentuid="h17cb9a20gb709g55e6g97dcg3a4f47b63885" version="1">Call 311 (On Hold)</content>
-    <content contentuid="hacb4335bg9cc7g50d2gb7c1g1d806e5fee4f" version="1">Subject every enemy within 9m to the purgatory of municipal hold music. On a failed Wisdom saving throw, for 3 turns they cannot take Bonus Actions or Reactions and their movement is halved. Recharges on a Long Rest.</content>
+    <content contentuid="hacb4335bg9cc7g50d2gb7c1g1d806e5fee4f" version="1">Subject every enemy within 9m to the purgatory of municipal hold music. On a failed Wisdom saving throw, for 3 turns they cannot take Bonus Actions or Reactions and their movement is halved. Costs only a Bonus Action. Recharges on a Short Rest.</content>
     <content contentuid="h56d8fa4dgdb06g5e6cg9471g6f785665c67c" version="1">On Hold (311)</content>
     <content contentuid="h74a4c4cfg90ebg5c2dg926fgfb63a7288a72" version="1">Your call is important to us. Please continue to hold. Cannot take Bonus Actions or Reactions, and movement is halved.</content>
     <content contentuid="hc0b6af5ag5eccg5d59g8944g8d90ba717bae" version="1">Street Hustle</content>

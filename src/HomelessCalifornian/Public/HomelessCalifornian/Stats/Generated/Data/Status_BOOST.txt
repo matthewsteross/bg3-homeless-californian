@@ -152,6 +152,7 @@ data "Description" "h04e62577gffdbg53e4g956fg8ea31b531d91;1"
 data "Icon" "Skill_Fighter_SecondWind"
 data "StackId" "SWEEP_COOLDOWN"
 data "StackType" "Overwrite"
+data "RemoveEvents" "OnCombatEnded"
 data "StatusPropertyFlags" "DisableOverhead"
 
 new entry "BOARDWALK_HEAL"
