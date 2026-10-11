@@ -47,6 +47,7 @@ SPELLLIST_LVL12 = get_guid("SpellList_Lvl12")
 SPELLLIST_TENDERLOIN_L3 = get_guid("SpellList_Tenderloin_L3")
 SPELLLIST_VENICE_L3 = get_guid("SpellList_Venice_L3")
 SPELLLIST_BART_L3 = get_guid("SpellList_BART_L3")
+SPELLLIST_BART_L10 = get_guid("SpellList_BART_L10")
 
 # Class Presets and Lists
 ABILITY_DISTRIB_UUID = get_guid("AbilityDistrib_Homeless")
@@ -92,6 +93,21 @@ def add_loca(key: str, text: str) -> str:
 def ensure_dir(path: str):
     os.makedirs(path, exist_ok=True)
 
+
+# Custom spell art lives in assets/icons/<MapKey>.png and is packed into the atlas by
+# build_icons.py. Until a piece of art exists, fall back to an existing icon (or, for
+# spells built on a vanilla spell, inherit its icon by omitting the line).
+NEW_SPELL_ICONS = [
+    "Spell_SidewalkScramble", "Spell_FeralScreech", "Spell_EvictionNotice", "Spell_TentEncampment",
+    "Spell_Call311", "Spell_BiohazardBomb", "Spell_BottleShank", "Spell_CartCharge", "Spell_TurnstileHop",
+]
+
+
+def icon_line(map_key: str, fallback: str = "") -> str:
+    if os.path.exists(os.path.join(ASSETS_DIR, "icons", f"{map_key}.png")):
+        return f'data "Icon" "{map_key}"'
+    return f'data "Icon" "{fallback}"' if fallback else ""
+
 # -------------------------------------------------------------
 # 1. Localization Strings Setup
 # -------------------------------------------------------------
@@ -110,102 +126,150 @@ h_sub_bart_desc = add_loca("sub_bart_desc", "An erratic street phantom who slips
 
 # Spells & Actions - Class
 h_sling_poop_name = add_loca("sling_poop_name", "Sling Poop")
-h_sling_poop_desc = add_loca("sling_poop_desc", "Hurl a handful of raw biological waste at a target. Deals 1d6 Bludgeoning + 1d4 Poison damage, coats the ground in a repulsive slick, and inflicts Fecal Stench.")
+h_sling_poop_desc = add_loca("sling_poop_desc", "Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.")
 
 h_sling_poop_chunky_name = add_loca("sling_poop_chunky_name", "Sling Chunky Poop")
-h_sling_poop_chunky_desc = add_loca("sling_poop_chunky_desc", "Hurl a dense, fermented biological projectile with devastating force. Deals 2d6 Bludgeoning + 2d6 Poison damage, spreading an expanded slick and inflicting severe Fecal Stench.")
+h_sling_poop_chunky_desc = add_loca("sling_poop_chunky_desc", "Hurl a dense, fermented payload with devastating force. On a hit, deals 2d10 + Constitution Bludgeoning and 2d6 Poison damage, leaves a wider puddle of filth, and inflicts Fecal Stench for 3 turns. Can be used as often as you like.")
 
 h_sling_fent_name = add_loca("sling_fent_name", "Sling Fentanyl")
-h_sling_fent_desc = add_loca("sling_fent_desc", "Launch a concentrated chemical dose at an enemy. Deals 1d4 Psychic damage, spawns a toxic narcotic haze, and forces a DC Constitution Saving Throw or the target is paralyzed in Fent Stupor.")
+h_sling_fent_desc = add_loca("sling_fent_desc", "Flick a concentrated dose at an enemy. Deals 2d6 Psychic damage. On a failed Constitution saving throw the target falls into Fent Stupor for 2 turns. Recharges on a Short Rest.")
 
 h_sling_fent_cloud_name = add_loca("sling_fent_cloud_name", "Mass Fentanyl Contraband")
-h_sling_fent_cloud_desc = add_loca("sling_fent_cloud_desc", "Scatter an entire contraband brick across a wide area. Creates an expansive narcotic fog that numbs, slows, and incapacitates all caught within.")
+h_sling_fent_cloud_desc = add_loca("sling_fent_cloud_desc", "Scatter an entire contraband brick across a 4m area. Every creature caught takes 5d6 Psychic damage and must make a Constitution saving throw or fall into Fent Stupor until the end of its next turn; on a success, half damage. Recharges on a Short Rest.")
 
 h_fent_lean_name = add_loca("fent_lean_name", "Fent Lean")
-h_fent_lean_desc = add_loca("fent_lean_desc", "Enter a state of gravity-defying postural transcendence. You bend backward at an impossible 45-degree angle. While leaning, you gain Resistance to all damage types, Advantage on Constitution and Dexterity saving throws, and +2 Armour Class, but your movement speed is reduced to zero. Can snap out at any time as a Free Action.")
+h_fent_lean_desc = add_loca("fent_lean_desc", "Fold forward at a perfect, gravity-defying 90-degree angle as a Bonus Action. For 3 turns you have Resistance to all damage, +3 Armour Class, Advantage on Constitution and Dexterity saving throws, and cannot be knocked Prone, but you cannot move. Snap Out of Lean ends it for free. Recharges on a Short Rest.")
 
 h_snap_out_name = add_loca("snap_out_name", "Snap Out of Lean")
-h_snap_out_desc = add_loca("snap_out_desc", "Instantly snap your spine back upright with a terrifying pop. Restores your mobility immediately. Costs no Action or Bonus Action.")
+h_snap_out_desc = add_loca("snap_out_desc", "Snap your spine back upright with a terrifying pop and end Fent Lean. Costs nothing.")
 
 h_scramble_name = add_loca("scramble_name", "Sidewalk Scramble")
-h_scramble_desc = add_loca("scramble_desc", "Scurry frantically across broken glass and hazardous surfaces as a Bonus Action. Increases movement speed, stacks with Dash, and grants immunity to difficult terrain and slipping for 2 turns.")
+h_scramble_desc = add_loca("scramble_desc", "Scurry frantically across broken glass and hazardous surfaces. As a Bonus Action, Dash and gain +3m movement and immunity to difficult terrain and being knocked Prone until the end of your next turn.")
 
 h_panhandling_name = add_loca("panhandling_name", "Aggressive Panhandling")
-h_panhandling_desc = add_loca("panhandling_desc", "Shake a rusty cup aggressively at all nearby enemies within 6m. Forces a DC Wisdom Saving Throw: failing creatures must drop 2d6 gold on the ground and suffer Disadvantage on Attack Rolls for 2 turns from sheer awkwardness.")
+h_panhandling_desc = add_loca("panhandling_desc", "Shake a rusty cup aggressively at every enemy within 6m. Each must make a Wisdom saving throw or become Socially Shamed for 2 turns (Disadvantage on Attack Rolls and they cannot take Reactions). Recharges on a Short Rest.")
 
 h_screech_name = add_loca("screech_name", "Feral Screech")
-h_screech_desc = add_loca("screech_desc", "Unleash an unhinged, ear-splitting 3 AM psychotic shriek. All enemies within a 9m cone suffer 3d6 Thunder damage and must make a Wisdom Saving Throw or become Frightened for 2 turns.")
+h_screech_desc = add_loca("screech_desc", "Unleash an unhinged, ear-splitting 3 AM shriek. Every enemy within 9m takes 6d6 Thunder damage and must make a Wisdom saving throw or become Frightened for 2 turns; on a success, half damage and no fear. Recharges on a Short Rest.")
 
 h_tent_encampment_name = add_loca("tent_encampment_name", "Pitch Tent Encampment")
-h_tent_encampment_desc = add_loca("tent_encampment_desc", "Erect a fortified, tarp-and-shopping-cart shantytown bunker on the battlefield. Provides Half-Cover (+2 AC and saving throws) to all allies inside and generates an aura of biological discouragement.")
+h_tent_encampment_desc = add_loca("tent_encampment_desc", "Throw up a tarp-and-shopping-cart bunker. You and every ally within 5m gain 15 Temporary Hit Points, Resistance to Bludgeoning, Piercing and Slashing damage, and Sanctuary for 1 turn. Recharges on a Long Rest.")
 
 h_biohazard_bomb_name = add_loca("biohazard_bomb_name", "Biohazard Bomb")
-h_biohazard_bomb_desc = add_loca("biohazard_bomb_desc", "Lob a pressurized five-gallon bucket of aged, fermented street slop. Explodes in a 5m radius dealing 4d6 Poison + 2d6 Acid damage and creating persistent toxic fumes.")
+h_biohazard_bomb_desc = add_loca("biohazard_bomb_desc", "Lob a pressurised five-gallon bucket of aged street slop. Explodes in a 4m radius dealing 6d6 Poison and 3d6 Acid damage (half on a successful Dexterity saving throw), inflicts Fecal Stench on anyone who fails, and leaves a lingering poison cloud. Recharges on a Short Rest.")
 
 h_bottle_shank_name = add_loca("bottle_shank_name", "Broken 40oz Shank")
-h_bottle_shank_desc = add_loca("bottle_shank_desc", "Drive a jagged malt liquor bottleneck into vital organs. Deals 2d4 Piercing + 1d6 Slashing damage and inflicts deep Bleeding.")
+h_bottle_shank_desc = add_loca("bottle_shank_desc", "As a Bonus Action, drive a jagged malt liquor bottleneck into a vital organ. Deals 2d6 + Constitution Piercing and 1d6 Slashing damage and inflicts Bleeding for 2 turns.")
 
 h_cart_charge_name = add_loca("cart_charge_name", "Shopping Cart Charge")
-h_cart_charge_desc = add_loca("cart_charge_desc", "Mount a rattling grocery cart packed with scrap metal and careen headfirst into enemy ranks. Deals 3d6 Bludgeoning damage, knocks all creatures in your path Prone, and travels up to 9 meters.")
+h_cart_charge_desc = add_loca("cart_charge_desc", "Shove a rattling grocery cart packed with scrap metal up to 9m into the enemy ranks, hitting the first creature in your path for 4d8 + Constitution Bludgeoning damage. On a failed Strength saving throw, the target is knocked Prone. Recharges on a Short Rest.")
 
 h_turnstile_hop_name = add_loca("turnstile_hop_name", "Turnstile Hop")
-h_turnstile_hop_desc = add_loca("turnstile_hop_desc", "Slip between the spatial fabric of reality just like hopping a transit barrier. Teleport up to 18 meters as a Bonus Action, leaving behind a brief burst of confusing screeching.")
+h_turnstile_hop_desc = add_loca("turnstile_hop_desc", "Slip through the fabric of reality like hopping a transit barrier. Teleport up to 18m as a Bonus Action. Once per turn.")
 
 # Statuses - Class
 h_status_stench_name = add_loca("status_stench_name", "Fecal Stench")
-h_status_stench_desc = add_loca("status_stench_desc", "Overwhelmed by nauseating biological stench. Suffers Disadvantage on Attack Rolls and takes 1d4 Poison damage per turn.")
+h_status_stench_desc = add_loca("status_stench_desc", "Overwhelmed by nauseating biological stench. Disadvantage on Attack Rolls, and takes 1d4 Poison damage at the end of each turn.")
 
 h_status_stupor_name = add_loca("status_stupor_name", "Fent Stupor")
-h_status_stupor_desc = add_loca("status_stupor_desc", "Incapacitated and paralyzed in an unresponsive narcotic daze. Cannot move or take actions.")
+h_status_stupor_desc = add_loca("status_stupor_desc", "Slumped in an unresponsive narcotic daze. Incapacitated: cannot move, act or react. Taking damage does not wake them.")
 
 h_status_lean_name = add_loca("status_lean_name", "Fent Lean")
-h_status_lean_desc = add_loca("status_lean_desc", "Locked in supreme postural equilibrium. Resistant to all damage, +2 AC, Advantage on DEX and CON saves, but Movement Speed is 0.")
+h_status_lean_desc = add_loca("status_lean_desc", "Locked in supreme postural equilibrium. Resistant to all damage, +3 AC, Advantage on Dexterity and Constitution saving throws, immune to Prone, but cannot move.")
 
 h_status_scramble_name = add_loca("status_scramble_name", "Sidewalk Scramble")
-h_status_scramble_desc = add_loca("status_scramble_desc", "Movement speed increased by 3m. Immune to difficult terrain, grease, and surface slipping.")
+h_status_scramble_desc = add_loca("status_scramble_desc", "+3m movement. Immune to difficult terrain and being knocked Prone.")
 
 h_status_panhandling_name = add_loca("status_panhandling_name", "Socially Shamed")
-h_status_panhandling_desc = add_loca("status_panhandling_desc", "Deeply rattled by persistent street solicitation. Suffers Disadvantage on Attack Rolls.")
+h_status_panhandling_desc = add_loca("status_panhandling_desc", "Deeply rattled by persistent street solicitation. Disadvantage on Attack Rolls and cannot take Reactions.")
 
 # Passives - Class
 h_passive_immunity_name = add_loca("passive_immunity_name", "Sidewalk Immunity")
-h_passive_immunity_desc = add_loca("passive_immunity_desc", "Years of dumpster exposure have forged an impenetrable immune system. Immune to Disease and Poisoned, and resistant to Poison damage.")
+h_passive_immunity_desc = add_loca("passive_immunity_desc", "Years of dumpster exposure have forged an impenetrable immune system. Immune to Poisoned and Disease, and Resistant to Poison damage.")
+
+h_street_grit_name = add_loca("street_grit_name", "Street Grit Defence")
+h_street_grit_desc = add_loca("street_grit_desc", "While not wearing armour, your Armour Class equals 10 + Dexterity modifier + Constitution modifier. You can still use a shield.")
 
 h_passive_lean_heal_name = add_loca("passive_lean_heal_name", "Restorative Stupor")
-h_passive_lean_heal_desc = add_loca("passive_lean_heal_desc", "While locked in the Fent Lean, your slowed metabolic rate knits wounds back together, restoring 2d6 Hit Points at the start of every turn.")
+h_passive_lean_heal_desc = add_loca("passive_lean_heal_desc", "While in Fent Lean, your slowed metabolism knits wounds back together, restoring 2d6 + Constitution Hit Points at the start of each of your turns.")
 
 h_passive_lean_reflect_name = add_loca("passive_lean_reflect_name", "Baffling Retaliation")
-h_passive_lean_reflect_desc = add_loca("passive_lean_reflect_desc", "While in Fent Lean, melee attackers attempting to strike your bewildering posture strike bone-jarring equilibrium, suffering 1d10 Psychic damage.")
+h_passive_lean_reflect_desc = add_loca("passive_lean_reflect_desc", "While in Fent Lean, any creature that hits you with a melee attack takes 2d10 Psychic damage from sheer cognitive dissonance.")
 
 h_prop47_name = add_loca("prop47_name", "Proposition 47")
-h_prop47_desc = add_loca("prop47_desc", "Petty theft under 950 gold is completely decriminalized. Whenever you strike an enemy with a melee attack, you snatch a Stolen Patagonia Vest (+1 AC, +1d4 damage) for 2 turns. Authorities will apologize for profiling you.")
+h_prop47_desc = add_loca("prop47_desc", "Petty theft under 950 gold is decriminalised. Whenever you hit an enemy with a melee attack, you snatch a Stolen Patagonia Vest (+1 AC, +1d4 damage on weapon attacks) for 2 turns. Authorities will apologise for profiling you.")
 
 h_status_patagonia_name = add_loca("status_patagonia_name", "Stolen Patagonia Vest")
-h_status_patagonia_desc = add_loca("status_patagonia_desc", "Warm, fleece-lined, and acquired without prosecution. Grants +1 Armour Class and adds 1d4 Bludgeoning damage to weapon strikes.")
+h_status_patagonia_desc = add_loca("status_patagonia_desc", "Warm, fleece-lined, and acquired without prosecution. +1 Armour Class and +1d4 Bludgeoning damage on weapon attacks.")
 
 h_pocket_lint_name = add_loca("pocket_lint_name", "Pocket Lint Buffet")
-h_pocket_lint_desc = add_loca("pocket_lint_desc", "Rummaging through the coats of foes marinating in your biological weaponry grants sustenance. Dealing damage to a creature afflicted with Fecal Stench restores 1d6 Temporary Hit Points.")
+h_pocket_lint_desc = add_loca("pocket_lint_desc", "Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Whenever you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2.")
+
+h_status_pocket_lint_name = add_loca("status_pocket_lint_name", "Pocket Lint Snack")
+h_status_pocket_lint_desc = add_loca("status_pocket_lint_desc", "Fortified by whatever was in that coat. Grants Temporary Hit Points.")
 
 h_eviction_name = add_loca("eviction_name", "Eviction Notice")
-h_eviction_desc = add_loca("eviction_desc", "Serve a foe with an immediate lease termination. The target must make a Wisdom Saving Throw or fall into crushing financial ruin with Rent Hike: losing -2 AC (cannot afford armor), -3m Movement, and taking 2d4 Psychic damage at the start of each turn from Bay Area cost of living.")
+h_eviction_desc = add_loca("eviction_desc", "Serve a foe with an immediate lease termination. On a failed Wisdom saving throw the target suffers Rent Hike for 3 turns: -2 AC, -3m movement, and 2d6 Psychic damage at the start of each of its turns from Bay Area cost of living. Recharges on a Short Rest.")
 
 h_status_rent_hike_name = add_loca("status_rent_hike_name", "Rent Hike")
-h_status_rent_hike_desc = add_loca("status_rent_hike_desc", "Crushed by runaway housing costs. Suffers -2 AC, -3m Movement, and takes 2d4 Psychic damage at the start of each turn.")
+h_status_rent_hike_desc = add_loca("status_rent_hike_desc", "Crushed by runaway housing costs. -2 AC, -3m movement, and takes 2d6 Psychic damage at the start of each turn.")
 
 h_biohazard_aura_name = add_loca("biohazard_aura_name", "Tenderloin Biohazard Aura")
-h_biohazard_aura_desc = add_loca("biohazard_aura_desc", "An unbearable 3-meter miasma radiating from your person. Enemies entering or starting their turn within range must make a Constitution save or contract Fecal Stench.")
+h_biohazard_aura_desc = add_loca("biohazard_aura_desc", "An unbearable 3m miasma radiates from you. Enemies within it reek of Fecal Stench.")
+
+h_status_miasma_name = add_loca("status_miasma_name", "Tenderloin Miasma")
+h_status_miasma_desc = add_loca("status_miasma_desc", "Radiating an unbearable 3m stench. Nearby enemies are afflicted with Fecal Stench.")
 
 h_encampment_sweep_name = add_loca("encampment_sweep_name", "Encampment Sweep Survival Instinct")
-h_encampment_sweep_desc = add_loca("encampment_sweep_desc", "When the municipal cleanup crew drops you below 50% Hit Points, your body reflexively collapses into Fent Lean as an emergency damage-resistant bunker once per combat.")
+h_encampment_sweep_desc = add_loca("encampment_sweep_desc", "The first time each combat that the municipal cleanup crew drops you below half Hit Points, you reflexively collapse into Fent Lean for 2 turns and gain 20 Temporary Hit Points.")
 
 h_sweep_cd_name = add_loca("sweep_cd_name", "Sweep Fatigue")
 h_sweep_cd_desc = add_loca("sweep_cd_desc", "Your survival reflexes need time to reset.")
 
 h_call311_name = add_loca("call311_name", "Call 311 (On Hold)")
-h_call311_desc = add_loca("call311_desc", "Subject all enemies in a 9m radius to the agonizing purgatory of municipal hold music. Enemies lose their Reaction and Bonus Action, and have their movement halved for 3 turns.")
+h_call311_desc = add_loca("call311_desc", "Subject every enemy within 9m to the purgatory of municipal hold music. On a failed Wisdom saving throw, for 3 turns they cannot take Bonus Actions or Reactions and their movement is halved. Recharges on a Long Rest.")
 
 h_status_hold_music_name = add_loca("status_hold_music_name", "On Hold (311)")
-h_status_hold_music_desc = add_loca("status_hold_music_desc", "Your call is important to us. Please continue to hold. Cannot take Bonus Actions or Reactions, and Movement Speed is halved.")
+h_status_hold_music_desc = add_loca("status_hold_music_desc", "Your call is important to us. Please continue to hold. Cannot take Bonus Actions or Reactions, and movement is halved.")
+
+# New features (rebalance)
+h_hustle_name = add_loca("hustle_name", "Street Hustle")
+h_hustle_desc = add_loca("hustle_desc", "Survival on the block keeps you moving. +3m movement and +3 to Initiative.")
+
+h_unkillable_name = add_loca("unkillable_name", "Unkillable Vagrant")
+h_unkillable_desc = add_loca("unkillable_desc", "You have survived things that would kill a dragon. Resistance to Bludgeoning, Piercing and Slashing damage, and Advantage on saving throws against being Frightened or Charmed.")
+
+h_status_boardwalk_heal_name = add_loca("status_boardwalk_heal_name", "Protein Shake")
+h_status_boardwalk_heal_desc = add_loca("status_boardwalk_heal_desc", "Restores Hit Points.")
+
+h_status_selfact_name = add_loca("status_selfact_name", "Aligned Chakras")
+h_status_selfact_desc = add_loca("status_selfact_desc", "Grants Temporary Hit Points.")
+
+h_status_sweep_shelter_name = add_loca("status_sweep_shelter_name", "Emergency Shelter")
+h_status_sweep_shelter_desc = add_loca("status_sweep_shelter_desc", "Your body found a doorway to curl up in. Grants Temporary Hit Points.")
+
+h_status_tent_name = add_loca("status_tent_name", "Tent City")
+h_status_tent_desc = add_loca("status_tent_desc", "Huddled under a tarp bunker. Temporary Hit Points and Resistance to Bludgeoning, Piercing and Slashing damage.")
+
+# Subclass features (levels 6 and 10)
+h_toxic_name = add_loca("toxic_name", "Toxic Adaptation")
+h_toxic_desc = add_loca("toxic_desc", "Your poison damage ignores Resistance, and your weapon attacks deal an extra 1d6 Poison damage.")
+
+h_patient_zero_name = add_loca("patient_zero_name", "Patient Zero")
+h_patient_zero_desc = add_loca("patient_zero_desc", "Your body is a walking public-health emergency. Your weapon attacks deal a further 2d6 Poison damage, and you are immune to Poison damage.")
+
+h_juiced_name = add_loca("juiced_name", "Muscle Beach Juice")
+h_juiced_desc = add_loca("juiced_desc", "Venice gym regulars taught you everything. Your weapon attacks deal an extra 1d8 Bludgeoning damage, and you gain +2 Armour Class.")
+
+h_boardwalk_king_name = add_loca("boardwalk_king_name", "King of the Boardwalk")
+h_boardwalk_king_desc = add_loca("boardwalk_king_desc", "Nothing on the boardwalk scares you anymore. You score critical hits on a roll of 18-20, and you heal 1d8 Hit Points whenever you hit with a melee attack.")
+
+
+h_last_train_name = add_loca("last_train_name", "Last Train Phantom")
+h_last_train_desc = add_loca("last_train_desc", "You are never where they expect. +4.5m movement, immunity to difficult terrain, and you learn Express Hop.")
+
+h_express_hop_name = add_loca("express_hop_name", "Express Hop")
+h_express_hop_desc = add_loca("express_hop_desc", "No fare, no wait, no action. Teleport up to 9m for free. Once per turn.")
 
 # -------------------------------------------------------------
 # Localization Strings - Race & Subraces
@@ -227,7 +291,7 @@ h_prog_desc_identity_name = add_loca("prog_desc_identity_name", "California Iden
 h_prog_desc_identity_desc = add_loca("prog_desc_identity_desc", "Select your spiritual California identity and pronoun archetype. Each comes with bespoke perks, cultural flair, and cosmic validation.")
 
 h_id_dude_name = add_loca("id_dude_name", "Dude (Dude / Dude / Dudeself)")
-h_id_dude_desc = add_loca("id_dude_desc", "A timeless, universal California vibration. You greet gods, goblins, and dragons alike as 'dude'. You gain +1 to Persuasion checks, and have Advantage on Saving Throws against intoxication, fear, and exhaustion.")
+h_id_dude_desc = add_loca("id_dude_desc", "A timeless, universal California vibration. You greet gods, goblins, and dragons alike as 'dude'. You gain +2 to Persuasion checks and Advantage on saving throws against being Frightened.")
 
 h_id_founder_name = add_loca("id_founder_name", "Founder (Founder / Disrupter / Unicorn)")
 h_id_founder_desc = add_loca("id_founder_desc", "You operate in perpetual stealth mode. Treating every battle as a Series-A pitch, you gain +2 to Initiative and Advantage on Deception checks when bluffing.")
@@ -255,13 +319,13 @@ h_vibe_check_name = add_loca("vibe_check_name", "Vibe Check")
 h_vibe_check_desc = add_loca("vibe_check_desc", "Subject a target's consciousness to a brutal seed-stage vibe check. Target must succeed a DC Wisdom saving throw or break concentration and suffer Existential Dread.")
 
 h_earthquake_name = add_loca("earthquake_name", "Earthquake Sense")
-h_earthquake_desc = add_loca("earthquake_desc", "Born on the San Andreas Fault, you possess impeccable footing. Advantage on Saving Throws against falling Prone or knockdowns.")
+h_earthquake_desc = add_loca("earthquake_desc", "Born on the San Andreas Fault, you possess impeccable footing. You cannot be knocked Prone.")
 
 h_veteran405_name = add_loca("veteran405_name", "405 Commute Veteran")
 h_veteran405_desc = add_loca("veteran405_desc", "Decades spent idling on the I-405 freeway have made you immune to gridlock. You cannot be Slowed or Restrained.")
 
 h_smog_lungs_name = add_loca("smog_lungs_name", "Smog Lungs")
-h_smog_lungs_desc = add_loca("smog_lungs_desc", "Central Valley dust and Los Angeles smog have turned your respiratory system into an industrial air filter. Advantage on saving throws against Poison and Disease.")
+h_smog_lungs_desc = add_loca("smog_lungs_desc", "Central Valley dust and Los Angeles smog have turned your respiratory system into an industrial air filter. Advantage on saving throws against being Poisoned, and immune to Disease.")
 
 h_heat_index_name = add_loca("heat_index_name", "Heat Index Mastery")
 h_heat_index_desc = add_loca("heat_index_desc", "Triple-digit Palm Springs heat is merely room temperature to you. Immune to Burning condition.")
@@ -353,7 +417,7 @@ def generate_class_descriptions_lsx():
             <children>
                 <!-- Main Class: Homeless Californian -->
                 <node id="ClassDescription">
-                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="BaseHp" type="int32" value="14"/>
                     <attribute id="CanLearnSpells" type="bool" value="false"/>
                     <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
                     <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
@@ -361,7 +425,7 @@ def generate_class_descriptions_lsx():
                     <attribute id="CommonHotbarColumns" type="int32" value="9"/>
                     <attribute id="Description" type="TranslatedString" handle="{h_class_desc}" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="{h_class_name}" version="1"/>
-                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
                     <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
                     <attribute id="LearningStrategy" type="uint8" value="1"/>
                     <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
@@ -376,7 +440,7 @@ def generate_class_descriptions_lsx():
 
                 <!-- Subclass 1: Tenderloin Biohazard -->
                 <node id="ClassDescription">
-                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="BaseHp" type="int32" value="14"/>
                     <attribute id="CanLearnSpells" type="bool" value="false"/>
                     <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
                     <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
@@ -384,7 +448,7 @@ def generate_class_descriptions_lsx():
                     <attribute id="CommonHotbarColumns" type="int32" value="9"/>
                     <attribute id="Description" type="TranslatedString" handle="{h_sub_tenderloin_desc}" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="{h_sub_tenderloin_name}" version="1"/>
-                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
                     <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
                     <attribute id="LearningStrategy" type="uint8" value="1"/>
                     <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
@@ -399,7 +463,7 @@ def generate_class_descriptions_lsx():
 
                 <!-- Subclass 2: Venice Boardwalk Brawler -->
                 <node id="ClassDescription">
-                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="BaseHp" type="int32" value="14"/>
                     <attribute id="CanLearnSpells" type="bool" value="false"/>
                     <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
                     <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
@@ -407,7 +471,7 @@ def generate_class_descriptions_lsx():
                     <attribute id="CommonHotbarColumns" type="int32" value="9"/>
                     <attribute id="Description" type="TranslatedString" handle="{h_sub_venice_desc}" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="{h_sub_venice_name}" version="1"/>
-                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
                     <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
                     <attribute id="LearningStrategy" type="uint8" value="1"/>
                     <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
@@ -422,7 +486,7 @@ def generate_class_descriptions_lsx():
 
                 <!-- Subclass 3: BART Platform Menace -->
                 <node id="ClassDescription">
-                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="BaseHp" type="int32" value="14"/>
                     <attribute id="CanLearnSpells" type="bool" value="false"/>
                     <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
                     <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
@@ -430,7 +494,7 @@ def generate_class_descriptions_lsx():
                     <attribute id="CommonHotbarColumns" type="int32" value="9"/>
                     <attribute id="Description" type="TranslatedString" handle="{h_sub_bart_desc}" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="{h_sub_bart_name}" version="1"/>
-                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
                     <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
                     <attribute id="LearningStrategy" type="uint8" value="1"/>
                     <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
@@ -515,14 +579,20 @@ def generate_lists_lsx():
 
                 <!-- Subclass Venice Brawler Spells -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_BrokenBottleShank;Shout_ShoppingCartCharge"/>
+                    <attribute id="Spells" type="LSString" value="Target_BrokenBottleShank;Rush_ShoppingCartCharge"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_VENICE_L3}"/>
                 </node>
 
                 <!-- Subclass BART Menace Spells -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Shout_TurnstileHop"/>
+                    <attribute id="Spells" type="LSString" value="Target_TurnstileHop"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_BART_L3}"/>
+                </node>
+
+                <!-- Subclass BART Menace Level 10: Express Hop -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_ExpressHop"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_BART_L10}"/>
                 </node>
 
                 <!-- Racial Californian Spells: Touch Grass & Avocado Toast -->
@@ -605,44 +675,50 @@ def generate_progressions_lsx():
     nodes = []
 
     # --- CLASS PROGRESSIONS (Type 0) ---
-    # Level 1
-    u_l1 = get_guid("Prog_Homeless_Lvl1")
-    nodes.append(f"""
+    # Boosts/Selectors/Passives are plain LSString in vanilla (Shared/Progressions.lsx).
+    def prog(key, name, level, table, ptype=0, boosts="", passives="", passives_removed="",
+             selectors="", improvement=None, multiclass=False, children=""):
+        attrs = []
+        if improvement is not None:
+            attrs.append(f'<attribute id="AllowImprovement" type="bool" value="{str(improvement).lower()}"/>')
+        if boosts:
+            attrs.append(f'<attribute id="Boosts" type="LSString" value="{boosts}"/>')
+        if multiclass:
+            attrs.append('<attribute id="IsMulticlass" type="bool" value="true"/>')
+        attrs.append(f'<attribute id="Level" type="uint8" value="{level}"/>')
+        attrs.append(f'<attribute id="Name" type="LSString" value="{name}"/>')
+        if passives:
+            attrs.append(f'<attribute id="PassivesAdded" type="LSString" value="{passives}"/>')
+        if passives_removed:
+            attrs.append(f'<attribute id="PassivesRemoved" type="LSString" value="{passives_removed}"/>')
+        attrs.append(f'<attribute id="ProgressionType" type="uint8" value="{ptype}"/>')
+        if selectors:
+            attrs.append(f'<attribute id="Selectors" type="LSString" value="{selectors}"/>')
+        attrs.append(f'<attribute id="TableUUID" type="guid" value="{table}"/>')
+        attrs.append(f'<attribute id="UUID" type="guid" value="{get_guid(key)}"/>')
+        body = "\n                    ".join(attrs)
+        kids = f"\n                    <children>{children}\n                    </children>" if children else ""
+        nodes.append(f"""
                 <node id="Progression">
-                    <attribute id="AllowImprovement" type="bool" value="false"/>
-                    <attribute id="Boosts" type="ls::Guid" value="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Dexterity);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"/>
-                    <attribute id="Level" type="uint8" value="1"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="SidewalkImmunity;Proposition47"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSkills({SKILLLIST_UUID},2);AddSpells({SPELLLIST_LVL1})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l1}"/>
+                    {body}{kids}
                 </node>""")
 
-    # Level 2
-    u_l2 = get_guid("Prog_Homeless_Lvl2")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="2"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="PocketLintBuffet"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_LVL2})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l2}"/>
-                </node>""")
+    CLS = "HomelessCalifornian"
+    T = PROG_TABLE_UUID
+    ABILITY_BONUS = "SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)"
+    PROFS = "Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"
+    L1_PASSIVES = "StreetGritDefence;SidewalkImmunity;Proposition47"
 
-    # Level 3 (Subclasses)
-    u_l3 = get_guid("Prog_Homeless_Lvl3")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="3"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l3}"/>
-                    <children>
+    prog("Prog_Homeless_Lvl1", CLS, 1, T, improvement=False,
+         boosts="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Dexterity);" + PROFS,
+         passives=L1_PASSIVES,
+         selectors=f"SelectSkills({SKILLLIST_UUID},3);AddSpells({SPELLLIST_LVL1});{ABILITY_BONUS}")
+    # Multiclassing in: same kit minus saving throws and skills (vanilla pattern)
+    prog("Prog_Homeless_Lvl1_Multiclass", CLS, 1, T, improvement=False, multiclass=True,
+         boosts=PROFS, passives=L1_PASSIVES, selectors=f"AddSpells({SPELLLIST_LVL1})")
+    prog("Prog_Homeless_Lvl2", CLS, 2, T, passives="PocketLintBuffet;StreetHustle",
+         selectors=f"AddSpells({SPELLLIST_LVL2})")
+    prog("Prog_Homeless_Lvl3", CLS, 3, T, children=f"""
                         <node id="SubClasses">
                             <children>
                                 <node id="SubClass">
@@ -655,157 +731,38 @@ def generate_progressions_lsx():
                                     <attribute id="Object" type="guid" value="{SUBCLASS_BART_UUID}"/>
                                 </node>
                             </children>
-                        </node>
-                    </children>
-                </node>""")
+                        </node>""")
+    prog("Prog_Homeless_Lvl4", CLS, 4, T, improvement=True, selectors=f"AddSpells({SPELLLIST_LVL4})")
+    prog("Prog_Homeless_Lvl5", CLS, 5, T, passives="ExtraAttack", selectors=f"AddSpells({SPELLLIST_LVL5})")
+    prog("Prog_Homeless_Lvl6", CLS, 6, T, passives="RestorativeLean;UnkillableVagrant")
+    prog("Prog_Homeless_Lvl7", CLS, 7, T, selectors=f"AddSpells({SPELLLIST_LVL7})")
+    prog("Prog_Homeless_Lvl8", CLS, 8, T, improvement=True)
+    prog("Prog_Homeless_Lvl9", CLS, 9, T, selectors=f"AddSpells({SPELLLIST_LVL9})")
+    prog("Prog_Homeless_Lvl10", CLS, 10, T, passives="EncampmentSweepInstinct")
+    prog("Prog_Homeless_Lvl11", CLS, 11, T, passives="ExtraAttack_2;LeanDamageReflect", passives_removed="ExtraAttack")
+    prog("Prog_Homeless_Lvl12", CLS, 12, T, improvement=True, selectors=f"AddSpells({SPELLLIST_LVL12})")
 
-    # Level 4 (Feat + Eviction Notice)
-    u_l4 = get_guid("Prog_Homeless_Lvl4")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="AllowImprovement" type="bool" value="true"/>
-                    <attribute id="Level" type="uint8" value="4"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_LVL4})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l4}"/>
-                </node>""")
+    # --- SUBCLASS PROGRESSIONS (Type 1) ---
+    prog("Prog_Tenderloin_L3", "TenderloinBiohazard", 3, SUBCLASS_TENDERLOIN_TABLE_UUID, ptype=1,
+         passives="BiohazardStench", selectors=f"AddSpells({SPELLLIST_TENDERLOIN_L3})")
+    prog("Prog_Tenderloin_L6", "TenderloinBiohazard", 6, SUBCLASS_TENDERLOIN_TABLE_UUID, ptype=1,
+         passives="ToxicAdaptation")
+    prog("Prog_Tenderloin_L10", "TenderloinBiohazard", 10, SUBCLASS_TENDERLOIN_TABLE_UUID, ptype=1,
+         passives="PatientZero")
 
-    # Level 5 (Extra Attack + Chunky Poop)
-    u_l5 = get_guid("Prog_Homeless_Lvl5")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="5"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_LVL5})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l5}"/>
-                </node>""")
+    prog("Prog_Venice_L3", "VeniceBoardwalkBrawler", 3, SUBCLASS_VENICE_TABLE_UUID, ptype=1,
+         boosts="Proficiency(HeavyArmor)", selectors=f"AddSpells({SPELLLIST_VENICE_L3})")
+    prog("Prog_Venice_L6", "VeniceBoardwalkBrawler", 6, SUBCLASS_VENICE_TABLE_UUID, ptype=1,
+         passives="MuscleBeachJuice")
+    prog("Prog_Venice_L10", "VeniceBoardwalkBrawler", 10, SUBCLASS_VENICE_TABLE_UUID, ptype=1,
+         passives="KingOfTheBoardwalk")
 
-    # Level 6 (Restorative Stupor in Lean)
-    u_l6 = get_guid("Prog_Homeless_Lvl6")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="6"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="RestorativeLean"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l6}"/>
-                </node>""")
-
-    # Level 7 (Feral Screech)
-    u_l7 = get_guid("Prog_Homeless_Lvl7")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="7"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_LVL7})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l7}"/>
-                </node>""")
-
-    # Level 8 (Feat)
-    u_l8 = get_guid("Prog_Homeless_Lvl8")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="AllowImprovement" type="bool" value="true"/>
-                    <attribute id="Level" type="uint8" value="8"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l8}"/>
-                </node>""")
-
-    # Level 9 (Mass Fent & Tent Encampment)
-    u_l9 = get_guid("Prog_Homeless_Lvl9")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="9"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_LVL9})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l9}"/>
-                </node>""")
-
-    # Level 10 (Encampment Sweep Instinct)
-    u_l10 = get_guid("Prog_Homeless_Lvl10")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="10"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EncampmentSweepInstinct"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l10}"/>
-                </node>""")
-
-    # Level 11 (Retaliation Lean)
-    u_l11 = get_guid("Prog_Homeless_Lvl11")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="11"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="LeanDamageReflect"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l11}"/>
-                </node>""")
-
-    # Level 12 (Feat + Call 311)
-    u_l12 = get_guid("Prog_Homeless_Lvl12")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="AllowImprovement" type="bool" value="true"/>
-                    <attribute id="Level" type="uint8" value="12"/>
-                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_LVL12})"/>
-                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_l12}"/>
-                </node>""")
-
-    # Subclass Progressions (Type 1)
-    u_tend_l3 = get_guid("Prog_Tenderloin_L3")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="3"/>
-                    <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
-                    <attribute id="PassivesAdded" type="LSString" value="BiohazardStench"/>
-                    <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_TENDERLOIN_L3})"/>
-                    <attribute id="TableUUID" type="guid" value="{SUBCLASS_TENDERLOIN_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_tend_l3}"/>
-                </node>""")
-
-    u_ven_l3 = get_guid("Prog_Venice_L3")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="3"/>
-                    <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnarmoredDefense_Barbarian"/>
-                    <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_VENICE_L3})"/>
-                    <attribute id="TableUUID" type="guid" value="{SUBCLASS_VENICE_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_ven_l3}"/>
-                </node>""")
-
-    u_bart_l3 = get_guid("Prog_BART_L3")
-    nodes.append(f"""
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="3"/>
-                    <attribute id="Name" type="LSString" value="BARTPlatformMenace"/>
-                    <attribute id="PassivesAdded" type="LSString" value="ReliableTalent"/>
-                    <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_BART_L3})"/>
-                    <attribute id="TableUUID" type="guid" value="{SUBCLASS_BART_TABLE_UUID}"/>
-                    <attribute id="UUID" type="guid" value="{u_bart_l3}"/>
-                </node>""")
+    prog("Prog_BART_L3", "BARTPlatformMenace", 3, SUBCLASS_BART_TABLE_UUID, ptype=1,
+         passives="ReliableTalent", selectors=f"AddSpells({SPELLLIST_BART_L3})")
+    prog("Prog_BART_L6", "BARTPlatformMenace", 6, SUBCLASS_BART_TABLE_UUID, ptype=1,
+         passives="Evasion;UncannyDodge")
+    prog("Prog_BART_L10", "BARTPlatformMenace", 10, SUBCLASS_BART_TABLE_UUID, ptype=1,
+         passives="LastTrainPhantom", selectors=f"AddSpells({SPELLLIST_BART_L10})")
 
     # --- RACIAL PROGRESSIONS (Type 2) ---
     # Californian Base Race Progression (Levels 1 - 12)
@@ -815,7 +772,7 @@ def generate_progressions_lsx():
             nodes.append(f"""
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="false"/>
-                    <attribute id="Boosts" type="ls::Guid" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Californian"/>
                     <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405"/>
@@ -840,7 +797,7 @@ def generate_progressions_lsx():
         if lvl == 1:
             nodes.append(f"""
                 <node id="Progression">
-                    <attribute id="Boosts" type="ls::Guid" value="Resistance(Radiant,Resistant)"/>
+                    <attribute id="Boosts" type="LSString" value="Resistance(Radiant,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Beachborn"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
@@ -888,7 +845,7 @@ def generate_progressions_lsx():
         if lvl == 1:
             nodes.append(f"""
                 <node id="Progression">
-                    <attribute id="Boosts" type="ls::Guid" value="Resistance(Poison,Resistant);Advantage(SavingThrow,Poison)"/>
+                    <attribute id="Boosts" type="LSString" value="Resistance(Poison,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="InlandEmperor"/>
                     <attribute id="PassivesAdded" type="LSString" value="Passive_SmogLungs;Passive_HeatIndexMastery"/>
@@ -1030,16 +987,66 @@ def generate_presets_lsx():
 # -------------------------------------------------------------
 # 7. Generate Races/Races.lsx
 # -------------------------------------------------------------
+def _hue_class(hex_argb):
+    """'pink', 'blue', 'black' or None for a '#AARRGGBB' colour."""
+    import colorsys
+    h = hex_argb.lstrip("#")[-6:]
+    r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    hue, light, sat = colorsys.rgb_to_hls(r, g, b)
+    hue *= 360
+    if light < 0.12:
+        return "black"
+    if sat < 0.30 or light > 0.92:
+        return None
+    if hue >= 285 or hue < 10:
+        return "pink"
+    if 170 <= hue < 250:
+        return "blue"
+    return None
+
+
+def restrict_californian_look(children_xml: str) -> str:
+    import json
+    colours = json.load(open(os.path.join(ASSETS_DIR, "cc_color_names.json"), encoding="utf-8"))
+    hair_ok = ("HAIR_Color_Pink_", "HAIR_Color_Blue_", "HAIR_Color_Aqua_")
+    makeup_ok = ("Makeup_Pink", "Makeup_Blue", "Makeup_Aqua", "Makeup_Teal", "Makeup_Purple", "Makeup_Black")
+
+    def keep(group, uuid):
+        c = colours.get(uuid)
+        if c is None:
+            return True
+        if group == "HairColors":
+            return c["name"].startswith(hair_ok)
+        if group == "HairHighlightColors":
+            return _hue_class(c["color"]) in ("pink", "blue")
+        if group == "MakeupColors":
+            return c["name"].startswith(makeup_ok)
+        if group == "LipsMakeupColors":
+            return _hue_class(c["color"]) in ("pink", "blue", "black")
+        return True
+
+    root = ET.fromstring(children_xml.split("?>", 1)[-1].strip())
+    for node in list(root):
+        group = node.get("id")
+        if group in ("HairColors", "HairHighlightColors", "MakeupColors", "LipsMakeupColors"):
+            for attr in node.findall("attribute"):
+                if attr.get("id") == "Object" and not keep(group, attr.get("value")):
+                    root.remove(node)
+                    break
+    return ET.tostring(root, encoding="unicode")
+
+
 def generate_races_lsx():
     path = os.path.join(PUBLIC_DIR, "Races", "Races.lsx")
     ensure_dir(os.path.dirname(path))
 
-    # Read extracted human children
+    # Read extracted human children, then restrict the Californian look:
+    # hair/highlights only bright pink, blue or aqua; makeup and lipstick only garish shades.
     human_children_path = os.path.join(ASSETS_DIR, "human_race_children.xml")
     human_children_xml = ""
     if os.path.exists(human_children_path):
         with open(human_children_path, "r", encoding="utf-8") as f:
-            human_children_xml = f.read()
+            human_children_xml = restrict_californian_look(f.read())
 
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <save>
@@ -1216,155 +1223,112 @@ def generate_cc_presets_lsx():
 # 10. Generate Stats/Generated/Data TXT files
 # -------------------------------------------------------------
 def generate_stats_txt():
+    # Syntax notes (checked against vanilla Shared/Gustav stats):
+    #  - save spells roll "not SavingThrow(...)": SpellSuccess = target FAILED the save
+    #  - "ApplyStatus(SELF,X,...)" targets the caster from a passive/spell
+    #  - ActionResourceMultiplier is a percentage (200 = double, 50 = half)
+    #  - spells built on a vanilla spell with `using` inherit its visuals/targeting;
+    #    `using` must come right after `type`
     stats_dir = os.path.join(PUBLIC_DIR, "Stats", "Generated", "Data")
     ensure_dir(stats_dir)
+    ANIM_CAST = "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
+    ANIM_SELF = "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,;,,;,,;,,;,,;,,;,,"
 
     # Spell_Projectile.txt
     proj_content = f"""new entry "Projectile_SlingPoop"
 type "SpellData"
 data "SpellType" "Projectile"
+using "Projectile_RayOfSickness"
 data "Level" "0"
 data "SpellSchool" "Transmutation"
-data "SpellProperties" "GROUND:CreateSurface(1.5,,SurfacePoison);ApplyStatus(FECAL_STENCH,100,2)"
-data "TargetFloor" "-1"
-data "TargetRadius" "18"
 data "SpellRoll" "Attack(AttackType.RangedSpellAttack)"
-data "SpellSuccess" "DealDamage(1d6+CON,Bludgeoning);DealDamage(1d4,Poison);ApplyStatus(FECAL_STENCH,100,2)"
-data "TargetConditions" "not Dead()"
-data "ProjectileCount" "1"
-data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
+data "SpellSuccess" "DealDamage(1d10+ConstitutionModifier,Bludgeoning,Magical);DealDamage(1d6,Poison,Magical);ApplyStatus(FECAL_STENCH,100,2)"
+data "SpellProperties" "GROUND:CreateSurface(1.5,2,Mud)"
+data "TargetConditions" "not Self() and not Dead()"
+data "UseCosts" "ActionPoint:1"
 data "Icon" "Spell_SlingPoop"
 data "DisplayName" "{h_sling_poop_name};1"
 data "Description" "{h_sling_poop_desc};1"
-data "TooltipDamageList" "DealDamage(1d6+CON,Bludgeoning);DealDamage(1d4,Poison)"
+data "TooltipDamageList" "DealDamage(1d10+ConstitutionModifier,Bludgeoning);DealDamage(1d6,Poison)"
 data "TooltipAttackSave" "RangedSpellAttack"
-data "CastSound" "Spell_Cast_Damage_Acid_ChromaticOrbAcid_L1to3"
-data "TargetSound" "Spell_Impact_Damage_Acid_ChromaticOrbAcid_L1to3"
-data "VocalComponentSound" "Vocal_Component_Disadvantage"
-data "PreviewCursor" "Cast"
-data "CastTextEvent" "Cast"
-data "CycleConditions" "Enemy() and not Dead()"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
+data "TooltipStatusApply" "ApplyStatus(FECAL_STENCH,100,2)"
+data "TooltipUpcastDescription" ""
 data "DamageType" "Bludgeoning"
 
 new entry "Projectile_SlingPoop_Chunky"
 type "SpellData"
 data "SpellType" "Projectile"
-data "Level" "0"
-data "SpellSchool" "Transmutation"
-data "SpellProperties" "GROUND:CreateSurface(2.5,,SurfacePoison);ApplyStatus(FECAL_STENCH,100,3)"
-data "TargetFloor" "-1"
-data "TargetRadius" "18"
-data "SpellRoll" "Attack(AttackType.RangedSpellAttack)"
-data "SpellSuccess" "DealDamage(2d6+CON,Bludgeoning);DealDamage(2d4,Poison);ApplyStatus(FECAL_STENCH,100,3)"
-data "TargetConditions" "not Dead()"
-data "ProjectileCount" "1"
-data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
-data "Icon" "Spell_SlingPoop"
+using "Projectile_SlingPoop"
+data "SpellSuccess" "DealDamage(2d10+ConstitutionModifier,Bludgeoning,Magical);DealDamage(2d6,Poison,Magical);ApplyStatus(FECAL_STENCH,100,3)"
+data "SpellProperties" "GROUND:CreateSurface(2.5,3,Mud)"
 data "DisplayName" "{h_sling_poop_chunky_name};1"
 data "Description" "{h_sling_poop_chunky_desc};1"
-data "TooltipDamageList" "DealDamage(2d6+CON,Bludgeoning);DealDamage(2d4,Poison)"
-data "TooltipAttackSave" "RangedSpellAttack"
-data "CastSound" "Spell_Cast_Damage_Acid_ChromaticOrbAcid_L1to3"
-data "TargetSound" "Spell_Impact_Damage_Acid_ChromaticOrbAcid_L1to3"
-data "VocalComponentSound" "Vocal_Component_Disadvantage"
-data "PreviewCursor" "Cast"
-data "CastTextEvent" "Cast"
-data "CycleConditions" "Enemy() and not Dead()"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
-data "VerbalIntent" "Damage"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
-data "DamageType" "Bludgeoning"
+data "TooltipDamageList" "DealDamage(2d10+ConstitutionModifier,Bludgeoning);DealDamage(2d6,Poison)"
+data "TooltipStatusApply" "ApplyStatus(FECAL_STENCH,100,3)"
 
 new entry "Projectile_SlingFentanyl"
 type "SpellData"
 data "SpellType" "Projectile"
+using "Projectile_RayOfSickness"
 data "Level" "0"
 data "SpellSchool" "Enchantment"
-data "SpellProperties" "GROUND:CreateSurface(1.5,,SurfacePoison);ApplyStatus(FENT_STUPOR,100,1)"
-data "TargetFloor" "-1"
-data "TargetRadius" "18"
-data "SpellRoll" "SavingThrow(Ability.Constitution, SourceSpellDC())"
-data "SpellSuccess" "DealDamage(1d4,Psychic);ApplyStatus(FENT_STUPOR,100,1)"
-data "SpellFail" "DealDamage(1d4,Psychic)"
-data "TargetConditions" "Character() and not Dead()"
-data "ProjectileCount" "1"
-data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
+data "Cooldown" "OncePerShortRest"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(2d6,Psychic,Magical);ApplyStatus(FENT_STUPOR,100,2)"
+data "SpellFail" "DealDamage(2d6,Psychic,Magical)"
+data "TargetConditions" "not Self() and not Dead()"
+data "UseCosts" "ActionPoint:1"
 data "Icon" "Spell_SlingFentanyl"
 data "DisplayName" "{h_sling_fent_name};1"
 data "Description" "{h_sling_fent_desc};1"
-data "TooltipDamageList" "DealDamage(1d4,Psychic)"
+data "TooltipDamageList" "DealDamage(2d6,Psychic)"
 data "TooltipAttackSave" "Constitution"
-data "CastSound" "Spell_Cast_Control_Blindness_L1to3"
-data "TargetSound" "Spell_Impact_Control_Blindness_L1to3"
-data "VocalComponentSound" "Vocal_Component_Enchantment"
-data "PreviewCursor" "Cast"
-data "CastTextEvent" "Cast"
-data "CycleConditions" "Enemy() and not Dead()"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
-data "VerbalIntent" "Control"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
+data "TooltipStatusApply" "ApplyStatus(FENT_STUPOR,100,2)"
+data "TooltipUpcastDescription" ""
 data "DamageType" "Psychic"
 
 new entry "Projectile_SlingFentanyl_Mass"
 type "SpellData"
 data "SpellType" "Projectile"
-data "Level" "5"
+using "Projectile_AcidSplash"
+data "Level" "0"
 data "SpellSchool" "Enchantment"
-data "SpellProperties" "GROUND:CreateSurface(4.0,,SurfacePoison);ApplyStatus(FENT_STUPOR,100,2)"
-data "TargetFloor" "-1"
-data "TargetRadius" "18"
-data "SpellRoll" "SavingThrow(Ability.Constitution, SourceSpellDC())"
-data "SpellSuccess" "DealDamage(3d6,Psychic);ApplyStatus(FENT_STUPOR,100,2)"
-data "SpellFail" "DealDamage(3d6/2,Psychic)"
-data "TargetConditions" "Character() and not Dead()"
-data "ProjectileCount" "1"
-data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
+data "Cooldown" "OncePerShortRest"
+data "AreaRadius" "4"
+data "ExplodeRadius" "4"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(5d6,Psychic,Magical);ApplyStatus(FENT_STUPOR,100,1)"
+data "SpellFail" "DealDamage(5d6/2,Psychic,Magical)"
+data "UseCosts" "ActionPoint:1"
 data "Icon" "Spell_SlingFentanyl"
 data "DisplayName" "{h_sling_fent_cloud_name};1"
 data "Description" "{h_sling_fent_cloud_desc};1"
-data "TooltipDamageList" "DealDamage(3d6,Psychic)"
+data "TooltipDamageList" "DealDamage(5d6,Psychic)"
 data "TooltipAttackSave" "Constitution"
-data "CastSound" "Spell_Cast_Control_Blindness_L1to3"
-data "TargetSound" "Spell_Impact_Control_Blindness_L1to3"
-data "VocalComponentSound" "Vocal_Component_Enchantment"
-data "PreviewCursor" "Cast"
-data "CastTextEvent" "Cast"
-data "CycleConditions" "Enemy() and not Dead()"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,,"
-data "VerbalIntent" "Control"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
+data "TooltipStatusApply" "ApplyStatus(FENT_STUPOR,100,1)"
 data "DamageType" "Psychic"
 
 new entry "Projectile_BiohazardBomb"
 type "SpellData"
 data "SpellType" "Projectile"
-data "Level" "3"
+using "Projectile_AcidSplash"
+data "Level" "0"
 data "SpellSchool" "Evocation"
-data "SpellProperties" "GROUND:CreateSurface(5.0,,SurfacePoison);ApplyStatus(FECAL_STENCH,100,3)"
-data "TargetFloor" "-1"
-data "TargetRadius" "18"
-data "SpellRoll" "SavingThrow(Ability.Dexterity, SourceSpellDC())"
-data "SpellSuccess" "DealDamage(4d6,Poison);DealDamage(2d6,Acid)"
-data "SpellFail" "DealDamage(2d6,Poison);DealDamage(1d6,Acid)"
-data "TargetConditions" "not Dead()"
-data "Trajectories" "792ba497-a6ea-46bc-81cb-deb78e4dd9d3"
-data "Icon" "Spell_SlingPoop"
+data "Cooldown" "OncePerShortRest"
+data "AreaRadius" "4"
+data "ExplodeRadius" "4"
+data "SpellRoll" "not SavingThrow(Ability.Dexterity, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(6d6,Poison,Magical);DealDamage(3d6,Acid,Magical);ApplyStatus(FECAL_STENCH,100,3)"
+data "SpellFail" "DealDamage(6d6/2,Poison,Magical);DealDamage(3d6/2,Acid,Magical)"
+data "SpellProperties" "GROUND:CreateSurface(4,3,PoisonCloud)"
+data "UseCosts" "ActionPoint:1"
+{icon_line("Spell_BiohazardBomb", "Spell_SlingPoop")}
 data "DisplayName" "{h_biohazard_bomb_name};1"
 data "Description" "{h_biohazard_bomb_desc};1"
-data "TooltipDamageList" "DealDamage(4d6,Poison);DealDamage(2d6,Acid)"
+data "TooltipDamageList" "DealDamage(6d6,Poison);DealDamage(3d6,Acid)"
 data "TooltipAttackSave" "Dexterity"
-data "CastSound" "Spell_Cast_Damage_Acid_ChromaticOrbAcid_L1to3"
-data "TargetSound" "Spell_Impact_Damage_Acid_ChromaticOrbAcid_L1to3"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "TooltipStatusApply" "ApplyStatus(FECAL_STENCH,100,3)"
+data "DamageType" "Poison"
 """
     with open(os.path.join(stats_dir, "Spell_Projectile.txt"), "w", encoding="utf-8") as f:
         f.write(proj_content)
@@ -1375,148 +1339,120 @@ type "SpellData"
 data "SpellType" "Shout"
 data "Level" "0"
 data "SpellSchool" "Transmutation"
-data "SpellProperties" "ApplyStatus(FENT_LEAN,100,-1)"
+data "Cooldown" "OncePerShortRest"
+data "SpellProperties" "ApplyStatus(FENT_LEAN,100,3)"
 data "TargetConditions" "Self()"
 data "Icon" "Spell_FentLean"
 data "DisplayName" "{h_fent_lean_name};1"
 data "Description" "{h_fent_lean_desc};1"
+data "TooltipStatusApply" "ApplyStatus(FENT_LEAN,100,3)"
 data "CastSound" "Spell_Cast_Buff_Stoneskin_L4to6"
 data "TargetSound" "Spell_Impact_Buff_Stoneskin_L4to6"
-data "VocalComponentSound" "Vocal_Component_Buff"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,;,,;,,;,,;,,;,,;,,"
+data "UseCosts" "BonusActionPoint:1"
+data "SpellAnimation" "{ANIM_SELF}"
 data "VerbalIntent" "Buff"
-data "SpellFlags" "HasSomaticComponent;IsSpell"
+data "SpellFlags" "IgnoreSilence"
 
 new entry "Shout_FentLean_End"
 type "SpellData"
 data "SpellType" "Shout"
-data "Level" "0"
-data "SpellSchool" "Transmutation"
 data "SpellProperties" "RemoveStatus(FENT_LEAN)"
 data "TargetConditions" "Self()"
+data "Requirements" ""
 data "Icon" "Spell_SnapOutLean"
 data "DisplayName" "{h_snap_out_name};1"
 data "Description" "{h_snap_out_desc};1"
-data "CastSound" "Spell_Impact_BodyFall_Stone"
-data "TargetSound" "Spell_Impact_BodyFall_Stone"
-data "SpellAnimation" "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,;,,;,,;,,;,,;,,;,,"
-data "VerbalIntent" "Buff"
-data "SpellFlags" "IsSpell"
+data "SpellAnimation" "d7745165-66e4-41c4-9e42-d09d95a29491,,;,,;fd5e6365-f314-42e8-a39b-a041dc56b0e7,,;721abca5-2d52-4317-82a3-2a2e970a7a16,,;ce773016-6fb4-44fe-84db-e037aaa22041,,;,,;,,;,,;,,"
+data "VerbalIntent" "Utility"
+data "SpellActionType" "Dismiss"
+data "SpellAnimationIntentType" "Peaceful"
+data "SpellFlags" "IgnoreSilence"
 
 new entry "Shout_SidewalkScramble"
 type "SpellData"
 data "SpellType" "Shout"
 using "Shout_Dash_BonusAction"
 data "SpellProperties" "ApplyStatus(SIDEWALK_SCRAMBLE,100,2);IF(HasStatus('DASH_STACKED')):ApplyStatus(DASH_STACKED_2,100,1);IF(not HasStatus('DASH_STACKED_2') and HasStatus('DASH')):ApplyStatus(DASH_STACKED,100,1);IF(not HasStatus('DASH_STACKED_2') and not HasStatus('DASH_STACKED') and not HasStatus('DASH')):ApplyStatus(DASH,100,1)"
-data "TargetConditions" "Self()"
 data "UseCosts" "BonusActionPoint:1"
-data "Icon" "Spell_SnapOutLean"
 data "DisplayName" "{h_scramble_name};1"
 data "Description" "{h_scramble_desc};1"
-data "CastSound" "Action_Sprint"
-data "TargetSound" "Action_Sprint"
+{icon_line("Spell_SidewalkScramble")}
+data "TooltipStatusApply" "ApplyStatus(SIDEWALK_SCRAMBLE,100,2)"
 
 new entry "Shout_AggressivePanhandling"
 type "SpellData"
 data "SpellType" "Shout"
+using "Shout_FeyPresence"
 data "Level" "0"
 data "SpellSchool" "Enchantment"
+data "Cooldown" "OncePerShortRest"
 data "AreaRadius" "6"
-data "SpellRoll" "SavingThrow(Ability.Wisdom, SourceSpellDC())"
-data "SpellSuccess" "ApplyStatus(PANHANDLING_SHAME,100,2);DropGold(2d6)"
-data "SpellFail" "ApplyStatus(PANHANDLING_SHAME,100,1)"
-data "TargetConditions" "Enemy() and not Dead()"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
+data "SpellSuccess" "ApplyStatus(PANHANDLING_SHAME,100,2)"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
+data "TargetConditions" "not Self() and not Ally() and not Dead()"
+data "UseCosts" "ActionPoint:1"
 data "Icon" "Spell_Panhandling"
 data "DisplayName" "{h_panhandling_name};1"
 data "Description" "{h_panhandling_desc};1"
-data "CastSound" "Spell_Cast_Control_DissonantWhispers_L1to3"
-data "TargetSound" "Spell_Impact_Control_DissonantWhispers_L1to3"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "TooltipAttackSave" "Wisdom"
+data "TooltipStatusApply" "ApplyStatus(PANHANDLING_SHAME,100,2)"
 
 new entry "Shout_FeralScreech"
 type "SpellData"
 data "SpellType" "Shout"
-data "Level" "3"
-data "SpellSchool" "Evocation"
+using "Shout_MAG_Thunder_ThunderClap"
+data "Level" "0"
+data "Cooldown" "OncePerShortRest"
 data "AreaRadius" "9"
-data "SpellRoll" "SavingThrow(Ability.Wisdom, SourceSpellDC())"
-data "SpellSuccess" "DealDamage(3d6,Thunder);ApplyStatus(FEARED,100,2)"
-data "SpellFail" "DealDamage(3d6/2,Thunder)"
-data "TargetConditions" "Enemy() and not Dead()"
-data "Icon" "Spell_Panhandling"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(6d6,Thunder,Magical);ApplyStatus(FRIGHTENED,100,2)"
+data "SpellFail" "DealDamage(6d6/2,Thunder,Magical)"
+data "UseCosts" "ActionPoint:1"
 data "DisplayName" "{h_screech_name};1"
 data "Description" "{h_screech_desc};1"
-data "TooltipDamageList" "DealDamage(3d6,Thunder)"
-data "CastSound" "Spell_Cast_Damage_Thunder_Thunderwave_L1to3"
-data "TargetSound" "Spell_Impact_Damage_Thunder_Thunderwave_L1to3"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+{icon_line("Spell_FeralScreech")}
+data "TooltipDamageList" "DealDamage(6d6,Thunder)"
+data "TooltipAttackSave" "Wisdom"
+data "TooltipStatusApply" "ApplyStatus(FRIGHTENED,100,2)"
 
 new entry "Shout_TentEncampment"
 type "SpellData"
 data "SpellType" "Shout"
-data "Level" "4"
+data "Level" "0"
 data "SpellSchool" "Abjuration"
+data "Cooldown" "OncePerRest"
 data "AreaRadius" "5"
-data "SpellProperties" "ApplyStatus(BLADE_WARD,100,3);ApplyStatus(SANCTUARY,100,1)"
-data "TargetConditions" "Ally() and not Dead()"
-data "Icon" "Spell_FentLean"
+data "SpellProperties" "ApplyStatus(TENT_CITY,100,3);ApplyStatus(SANCTUARY,100,1)"
+data "TargetConditions" "(Ally() or Self()) and not Dead()"
+{icon_line("Spell_TentEncampment", "Spell_FentLean")}
 data "DisplayName" "{h_tent_encampment_name};1"
 data "Description" "{h_tent_encampment_desc};1"
+data "TooltipStatusApply" "ApplyStatus(TENT_CITY,100,3)"
 data "CastSound" "Spell_Cast_Buff_Stoneskin_L4to6"
 data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;IsSpell"
-
-new entry "Shout_ShoppingCartCharge"
-type "SpellData"
-data "SpellType" "Shout"
-data "Level" "0"
-data "SpellSchool" "Transmutation"
-data "AreaRadius" "9"
-data "SpellSuccess" "DealDamage(3d6,Bludgeoning);ApplyStatus(PRONE,100,1)"
-data "TargetConditions" "Enemy() and not Dead()"
-data "Icon" "Spell_SnapOutLean"
-data "DisplayName" "{h_cart_charge_name};1"
-data "Description" "{h_cart_charge_desc};1"
-data "UseCosts" "ActionPoint:1;BonusActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;IsSpell;IsHarmful"
-
-new entry "Shout_TurnstileHop"
-type "SpellData"
-data "SpellType" "Shout"
-data "Level" "0"
-data "SpellSchool" "Conjuration"
-data "TargetConditions" "Self()"
-data "Icon" "Spell_SnapOutLean"
-data "DisplayName" "{h_turnstile_hop_name};1"
-data "Description" "{h_turnstile_hop_desc};1"
-data "UseCosts" "BonusActionPoint:1"
-data "SpellProperties" "Teleport(18)"
-data "SpellAnimation" "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;IsSpell"
+data "SpellAnimation" "{ANIM_SELF}"
+data "VerbalIntent" "Buff"
+data "SpellFlags" "IgnoreSilence"
 
 new entry "Shout_Call311"
 type "SpellData"
 data "SpellType" "Shout"
-data "Level" "5"
+using "Shout_FeyPresence"
+data "Level" "0"
 data "SpellSchool" "Enchantment"
+data "Cooldown" "OncePerRest"
 data "AreaRadius" "9"
-data "SpellProperties" "ApplyStatus(HOLD_MUSIC_311,100,3)"
-data "TargetConditions" "Enemy() and not Dead()"
-data "Icon" "Spell_Panhandling"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
+data "SpellSuccess" "ApplyStatus(HOLD_MUSIC_311,100,3)"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
+data "TargetConditions" "not Self() and not Ally() and not Dead()"
+data "UseCosts" "ActionPoint:1"
+{icon_line("Spell_Call311", "Spell_Panhandling")}
 data "DisplayName" "{h_call311_name};1"
 data "Description" "{h_call311_desc};1"
-data "CastSound" "Spell_Cast_Control_Silence_L1to3"
-data "TargetSound" "Spell_Impact_Control_Silence_L1to3"
-data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "TooltipAttackSave" "Wisdom"
+data "TooltipStatusApply" "ApplyStatus(HOLD_MUSIC_311,100,3)"
 
 # Racial Shouts
 new entry "Shout_AvocadoToast"
@@ -1524,16 +1460,16 @@ type "SpellData"
 data "SpellType" "Shout"
 data "Level" "0"
 data "SpellSchool" "Evocation"
-data "SpellProperties" "RegainHitPoints(1d6+CON);ApplyStatus(AVOCADO_BLISS,100,3)"
+data "SpellProperties" "RegainHitPoints(1d6+ConstitutionModifier);ApplyStatus(AVOCADO_BLISS,100,3)"
 data "TargetConditions" "Self()"
 data "Icon" "Spell_AvocadoToast"
 data "DisplayName" "{h_avocado_toast_name};1"
 data "Description" "{h_avocado_toast_desc};1"
 data "Cooldown" "OncePerShortRest"
 data "UseCosts" "BonusActionPoint:1"
-data "SpellAnimation" "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,;,,;,,;,,;,,;,,;,,"
-data "VerbalIntent" "Buff"
-data "SpellFlags" "HasSomaticComponent;IsSpell"
+data "SpellAnimation" "{ANIM_SELF}"
+data "VerbalIntent" "Healing"
+data "SpellFlags" "IgnoreSilence"
 
 new entry "Shout_HangTen"
 type "SpellData"
@@ -1547,9 +1483,9 @@ data "DisplayName" "{h_hang_ten_name};1"
 data "Description" "{h_hang_ten_desc};1"
 data "Cooldown" "OncePerShortRest"
 data "UseCosts" "BonusActionPoint:1"
-data "SpellAnimation" "d0f854a2-113e-43bd-9d41-eeef34b12c8a,,;,,;,,;,,;,,;,,;,,;,,;,,"
+data "SpellAnimation" "{ANIM_SELF}"
 data "VerbalIntent" "Buff"
-data "SpellFlags" "HasSomaticComponent;IsSpell"
+data "SpellFlags" "IgnoreSilence"
 """
     with open(os.path.join(stats_dir, "Spell_Shout.txt"), "w", encoding="utf-8") as f:
         f.write(shout_content)
@@ -1560,37 +1496,66 @@ type "SpellData"
 data "SpellType" "Target"
 data "Level" "0"
 data "SpellSchool" "Transmutation"
-data "TargetFloor" "-1"
-data "TargetRadius" "2"
+data "TargetRadius" "1.5"
 data "SpellRoll" "Attack(AttackType.MeleeWeaponAttack)"
-data "SpellSuccess" "DealDamage(2d4+STR,Piercing);DealDamage(1d6,Slashing);ApplyStatus(BLEEDING,100,2)"
-data "TargetConditions" "Enemy() and not Dead()"
-data "Icon" "Spell_SnapOutLean"
+data "SpellSuccess" "DealDamage(2d6+ConstitutionModifier,Piercing);DealDamage(1d6,Slashing);ApplyStatus(BLEEDING,100,2)"
+data "TargetConditions" "not Self() and not Dead()"
+{icon_line("Spell_BottleShank", "Spell_SnapOutLean")}
 data "DisplayName" "{h_bottle_shank_name};1"
 data "Description" "{h_bottle_shank_desc};1"
-data "TooltipDamageList" "DealDamage(2d4+STR,Piercing);DealDamage(1d6,Slashing)"
-data "UseCosts" "ActionPoint:1"
+data "TooltipDamageList" "DealDamage(2d6+ConstitutionModifier,Piercing);DealDamage(1d6,Slashing)"
+data "TooltipAttackSave" "MeleeWeaponAttack"
+data "TooltipStatusApply" "ApplyStatus(BLEEDING,100,2)"
+data "UseCosts" "BonusActionPoint:1"
 data "SpellAnimation" "7a372138-b0a1-432d-9442-83b631f41756,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;IsSpell;IsHarmful"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "IsHarmful;IsMelee"
+data "DamageType" "Piercing"
 
 new entry "Target_EvictionNotice"
 type "SpellData"
 data "SpellType" "Target"
-data "Level" "2"
+data "Level" "0"
 data "SpellSchool" "Enchantment"
-data "TargetFloor" "-1"
+data "Cooldown" "OncePerShortRest"
 data "TargetRadius" "18"
-data "SpellRoll" "SavingThrow(Ability.Wisdom, SourceSpellDC())"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
 data "SpellSuccess" "ApplyStatus(RENT_HIKE,100,3)"
-data "TargetConditions" "Enemy() and not Dead()"
-data "Icon" "Spell_Panhandling"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
+data "TargetConditions" "not Self() and not Dead()"
+{icon_line("Spell_EvictionNotice", "Spell_Panhandling")}
 data "DisplayName" "{h_eviction_name};1"
 data "Description" "{h_eviction_desc};1"
+data "TooltipAttackSave" "Wisdom"
+data "TooltipStatusApply" "ApplyStatus(RENT_HIKE,100,3)"
 data "CastSound" "Spell_Cast_Control_CrownOfMadness_L1to3"
 data "TargetSound" "Spell_Impact_Control_CrownOfMadness_L1to3"
 data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "SpellAnimation" "{ANIM_CAST}"
+data "VerbalIntent" "Control"
+data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+
+new entry "Target_TurnstileHop"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MistyStep"
+data "Level" "0"
+data "Cooldown" "OncePerTurn"
+data "UseCosts" "BonusActionPoint:1"
+data "DisplayName" "{h_turnstile_hop_name};1"
+data "Description" "{h_turnstile_hop_desc};1"
+{icon_line("Spell_TurnstileHop")}
+data "TooltipUpcastDescription" ""
+data "SpellFlags" "IgnoreSilence;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
+
+new entry "Target_ExpressHop"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_TurnstileHop"
+data "TargetRadius" "9"
+data "UseCosts" ""
+data "DisplayName" "{h_express_hop_name};1"
+data "Description" "{h_express_hop_desc};1"
 
 # Racial Targets
 new entry "Target_TouchGrass"
@@ -1598,47 +1563,70 @@ type "SpellData"
 data "SpellType" "Target"
 data "Level" "0"
 data "SpellSchool" "Enchantment"
-data "TargetFloor" "-1"
-data "TargetRadius" "2"
+data "TargetRadius" "1.5"
 data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
-data "SpellSuccess" "DealDamage(1d8,Psychic);RemoveStatus(RAGE);RemoveStatus(FRENZY);RemoveStatus(BARBARIAN_RAGE);ApplyStatus(EXISTENTIAL_DAZE,100,2)"
-data "TargetConditions" "Character() and not Dead()"
+data "SpellSuccess" "DealDamage(1d8,Psychic,Magical);RemoveStatus(SG_Rage);ApplyStatus(EXISTENTIAL_DAZE,100,2)"
+data "TargetConditions" "Character() and not Self() and not Dead()"
 data "Icon" "Spell_Enchantment_CalmEmotions"
 data "DisplayName" "{h_touch_grass_name};1"
 data "Description" "{h_touch_grass_desc};1"
 data "TooltipDamageList" "DealDamage(1d8,Psychic)"
+data "TooltipAttackSave" "MeleeSpellAttack"
 data "CastSound" "Spell_Cast_Buff_Bless_L1to3"
 data "TargetSound" "Spell_Impact_Buff_Bless_L1to3"
-data "VocalComponentSound" "Vocal_Component_Disadvantage"
-data "PreviewCursor" "Melee"
-data "CastTextEvent" "Cast"
 data "Cooldown" "OncePerShortRest"
 data "UseCosts" "ActionPoint:1"
 data "SpellAnimation" "7a372138-b0a1-432d-9442-83b631f41756,,;,,;,,;,,;,,;,,;,,;,,;,,"
 data "VerbalIntent" "Control"
-data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "SpellFlags" "HasSomaticComponent;IsSpell;IsHarmful"
+data "DamageType" "Psychic"
 
 new entry "Target_VibeCheck"
 type "SpellData"
 data "SpellType" "Target"
 data "Level" "0"
 data "SpellSchool" "Enchantment"
-data "TargetFloor" "-1"
 data "TargetRadius" "18"
-data "SpellRoll" "SavingThrow(Ability.Wisdom, SourceSpellDC())"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
 data "SpellSuccess" "BreakConcentration();ApplyStatus(VIBE_CHECKED,100,1)"
-data "TargetConditions" "Character() and not Dead()"
-data "Icon" "Spell_Enchantment_TashasHideousLaughter"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
+data "TargetConditions" "Character() and not Self() and not Dead()"
+data "Icon" "Spell_Enchantment_Tasha'sHideousLaughter"
 data "DisplayName" "{h_vibe_check_name};1"
 data "Description" "{h_vibe_check_desc};1"
+data "TooltipAttackSave" "Wisdom"
 data "Cooldown" "OncePerShortRest"
 data "UseCosts" "ActionPoint:1"
-data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;,,;,,;,,;,,;,,;,,;,,"
+data "SpellAnimation" "{ANIM_CAST}"
 data "VerbalIntent" "Control"
 data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
 """
     with open(os.path.join(stats_dir, "Spell_Target.txt"), "w", encoding="utf-8") as f:
         f.write(target_content)
+
+    # Spell_Rush.txt
+    rush_content = f"""new entry "Rush_ShoppingCartCharge"
+type "SpellData"
+data "SpellType" "Rush"
+using "Rush_SpringAttack"
+data "Cooldown" "OncePerShortRest"
+data "SpellSuccess" "DealDamage(4d8+ConstitutionModifier,Bludgeoning);IF(Character() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE,100,1)"
+data "TargetConditions" "(Character() and not Ally() and not Dead()) or Item()"
+data "UseCosts" "ActionPoint:1"
+data "RequirementConditions" ""
+data "WeaponTypes" ""
+data "RechargeValues" ""
+data "SpellFlags" "IsHarmful"
+{icon_line("Spell_CartCharge")}
+data "DisplayName" "{h_cart_charge_name};1"
+data "Description" "{h_cart_charge_desc};1"
+data "TooltipDamageList" "DealDamage(4d8+ConstitutionModifier,Bludgeoning)"
+data "TooltipAttackSave" "MeleeWeaponAttack"
+data "TooltipStatusApply" "ApplyStatus(PRONE,100,1)"
+data "DamageType" "Bludgeoning"
+"""
+    with open(os.path.join(stats_dir, "Spell_Rush.txt"), "w", encoding="utf-8") as f:
+        f.write(rush_content)
 
     # Status_BOOST.txt
     status_content = f"""new entry "FECAL_STENCH"
@@ -1647,20 +1635,38 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_stench_name};1"
 data "Description" "{h_status_stench_desc};1"
 data "Icon" "Spell_SlingPoop"
-data "FormatColor" "Red"
+data "StackId" "FECAL_STENCH"
 data "StackType" "Overwrite"
+data "TickType" "EndTurn"
 data "Boosts" "Disadvantage(AttackRoll)"
 data "TickFunctors" "DealDamage(1d4,Poison)"
+data "StatusPropertyFlags" "InitiateCombat"
+
+new entry "FECAL_STENCH_AURA"
+type "StatusData"
+data "StatusType" "BOOST"
+using "FECAL_STENCH"
+data "StackId" "FECAL_STENCH_AURA"
+
+new entry "TENDERLOIN_MIASMA"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_miasma_name};1"
+data "Description" "{h_status_miasma_desc};1"
+data "Icon" "Spell_SlingPoop"
+data "StackId" "TENDERLOIN_MIASMA"
+data "AuraRadius" "3"
+data "AuraStatuses" "TARGET:IF(Character() and Enemy() and not Dead()):ApplyStatus(FECAL_STENCH_AURA)"
+data "StatusPropertyFlags" "IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 new entry "FENT_STUPOR"
 type "StatusData"
-data "StatusType" "BOOST"
+data "StatusType" "INCAPACITATED"
+using "STUNNED"
 data "DisplayName" "{h_status_stupor_name};1"
 data "Description" "{h_status_stupor_desc};1"
 data "Icon" "Spell_SlingFentanyl"
-data "FormatColor" "Red"
-data "StackType" "Overwrite"
-data "Boosts" "BlockRegainBonusAction();BlockRegainReaction();ActionResourceMultiplier(Movement,0,0)"
+data "StackId" "FENT_STUPOR"
 
 new entry "FENT_LEAN"
 type "StatusData"
@@ -1668,19 +1674,22 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_lean_name};1"
 data "Description" "{h_status_lean_desc};1"
 data "Icon" "Spell_FentLean"
-data "FormatColor" "Purple"
+data "StackId" "FENT_LEAN"
 data "StackType" "Overwrite"
-data "Boosts" "AC(2);Resistance(All, Resistant);Advantage(SavingThrow, Constitution);Advantage(SavingThrow, Dexterity);ActionResourceMultiplier(Movement,0,0)"
+data "TickType" "StartTurn"
+data "Boosts" "AC(3);Resistance(All,Resistant);Advantage(SavingThrow,Constitution);Advantage(SavingThrow,Dexterity);StatusImmunity(PRONE);StatusImmunity(SG_Prone);ActionResourceMultiplier(Movement,0,0)"
+data "TickFunctors" "IF(HasPassive('RestorativeLean',context.Source)):RegainHitPoints(2d6+ConstitutionModifier)"
 
 new entry "SIDEWALK_SCRAMBLE"
 type "StatusData"
 data "StatusType" "BOOST"
 data "DisplayName" "{h_status_scramble_name};1"
 data "Description" "{h_status_scramble_desc};1"
-data "Icon" "Spell_SnapOutLean"
-data "FormatColor" "Green"
+data "Icon" "Action_Dash_Bonus"
+data "StackId" "SIDEWALK_SCRAMBLE"
 data "StackType" "Overwrite"
-data "Boosts" "ActionResource(Movement,3,0);StatusImmunity(PRONE);StatusImmunity(SG_DifficultTerrain)"
+data "TickType" "EndTurn"
+data "Boosts" "ActionResource(Movement,3,0);StatusImmunity(SG_DifficultTerrain);StatusImmunity(SG_Prone)"
 
 new entry "PANHANDLING_SHAME"
 type "StatusData"
@@ -1688,19 +1697,35 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_panhandling_name};1"
 data "Description" "{h_status_panhandling_desc};1"
 data "Icon" "Spell_Panhandling"
-data "FormatColor" "Red"
+data "StackId" "PANHANDLING_SHAME"
 data "StackType" "Overwrite"
-data "Boosts" "Disadvantage(AttackRoll)"
+data "TickType" "EndTurn"
+data "Boosts" "Disadvantage(AttackRoll);ActionResourceBlock(ReactionActionPoint)"
+data "StatusPropertyFlags" "InitiateCombat"
 
 new entry "STOLEN_PATAGONIA"
 type "StatusData"
 data "StatusType" "BOOST"
 data "DisplayName" "{h_status_patagonia_name};1"
 data "Description" "{h_status_patagonia_desc};1"
-data "Icon" "Item_ARM_Robes_A"
-data "FormatColor" "Green"
+data "Icon" "PassiveFeature_Tough"
+data "StackId" "STOLEN_PATAGONIA"
 data "StackType" "Overwrite"
-data "Boosts" "AC(1);DamageBonus(1d4, Bludgeoning)"
+data "TickType" "EndTurn"
+data "Boosts" "AC(1);CharacterWeaponDamage(1d4,Bludgeoning)"
+
+new entry "POCKET_LINT_SNACK"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_pocket_lint_name};1"
+data "Description" "{h_status_pocket_lint_desc};1"
+data "Icon" "PassiveFeature_PurityOfBody"
+data "StackId" "POCKET_LINT_SNACK"
+data "StackType" "Overwrite"
+data "Boosts" "TemporaryHP(max(1,ConstitutionModifier)+2)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnStatusApplied"
+data "StatusPropertyFlags" "IgnoreResting"
 
 new entry "RENT_HIKE"
 type "StatusData"
@@ -1708,10 +1733,12 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_rent_hike_name};1"
 data "Description" "{h_status_rent_hike_desc};1"
 data "Icon" "Spell_Evocation_Fireball"
-data "FormatColor" "Red"
+data "StackId" "RENT_HIKE"
 data "StackType" "Overwrite"
+data "TickType" "StartTurn"
 data "Boosts" "AC(-2);ActionResource(Movement,-3,0)"
-data "TickFunctors" "DealDamage(2d4, Psychic)"
+data "TickFunctors" "DealDamage(2d6,Psychic)"
+data "StatusPropertyFlags" "InitiateCombat"
 
 new entry "HOLD_MUSIC_311"
 type "StatusData"
@@ -1719,18 +1746,54 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_hold_music_name};1"
 data "Description" "{h_status_hold_music_desc};1"
 data "Icon" "Spell_Enchantment_Bane"
-data "FormatColor" "Red"
+data "StackId" "HOLD_MUSIC_311"
 data "StackType" "Overwrite"
-data "Boosts" "BlockRegainBonusAction();BlockRegainReaction();ActionResourceMultiplier(Movement,0.5,0)"
+data "TickType" "EndTurn"
+data "Boosts" "ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceMultiplier(Movement,50,0)"
+data "StatusPropertyFlags" "InitiateCombat"
+
+new entry "TENT_CITY"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_tent_name};1"
+data "Description" "{h_status_tent_desc};1"
+data "Icon" "Spell_FentLean"
+data "StackId" "TENT_CITY"
+data "StackType" "Overwrite"
+data "TickType" "EndTurn"
+data "Boosts" "TemporaryHP(15);Resistance(Bludgeoning,Resistant);Resistance(Piercing,Resistant);Resistance(Slashing,Resistant)"
+
+new entry "SWEEP_SHELTER"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_sweep_shelter_name};1"
+data "Description" "{h_status_sweep_shelter_desc};1"
+data "Icon" "Skill_Fighter_SecondWind"
+data "StackId" "SWEEP_SHELTER"
+data "StackType" "Overwrite"
+data "Boosts" "TemporaryHP(20)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnStatusApplied"
 
 new entry "SWEEP_COOLDOWN"
 type "StatusData"
 data "StatusType" "BOOST"
 data "DisplayName" "{h_sweep_cd_name};1"
 data "Description" "{h_sweep_cd_desc};1"
-data "Icon" "PassiveFeature_SecondWind"
-data "FormatColor" "Grey"
+data "Icon" "Skill_Fighter_SecondWind"
+data "StackId" "SWEEP_COOLDOWN"
 data "StackType" "Overwrite"
+data "StatusPropertyFlags" "DisableOverhead"
+
+new entry "BOARDWALK_HEAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_boardwalk_heal_name};1"
+data "Description" "{h_status_boardwalk_heal_desc};1"
+data "Icon" "Skill_Fighter_SecondWind"
+data "StackId" "BOARDWALK_HEAL"
+data "OnApplyFunctors" "RegainHitPoints(1d8)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 
 # Racial Statuses
 new entry "EXISTENTIAL_DAZE"
@@ -1739,8 +1802,9 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_daze_name};1"
 data "Description" "{h_status_daze_desc};1"
 data "Icon" "Spell_Enchantment_CalmEmotions"
-data "FormatColor" "Red"
+data "StackId" "EXISTENTIAL_DAZE"
 data "StackType" "Overwrite"
+data "TickType" "EndTurn"
 data "Boosts" "Disadvantage(AttackRoll)"
 
 new entry "AVOCADO_BLISS"
@@ -1749,9 +1813,23 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_avocado_name};1"
 data "Description" "{h_status_avocado_desc};1"
 data "Icon" "Spell_AvocadoToast"
-data "FormatColor" "Green"
+data "StackId" "AVOCADO_BLISS"
 data "StackType" "Overwrite"
 data "Boosts" "TemporaryHP(5)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnStatusApplied"
+
+new entry "SELF_ACTUALIZED"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_selfact_name};1"
+data "Description" "{h_status_selfact_desc};1"
+data "Icon" "Spell_Abjuration_Aid"
+data "StackId" "SELF_ACTUALIZED"
+data "StackType" "Overwrite"
+data "Boosts" "TemporaryHP(5)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnStatusApplied"
 
 new entry "HANG_TEN"
 type "StatusData"
@@ -1759,128 +1837,198 @@ data "StatusType" "BOOST"
 data "DisplayName" "{h_status_hangten_name};1"
 data "Description" "{h_status_hangten_desc};1"
 data "Icon" "Spell_Transmutation_Longstrider"
-data "FormatColor" "Cyan"
+data "StackId" "HANG_TEN"
 data "StackType" "Overwrite"
-data "Boosts" "ActionResource(Movement,3,0);StatusImmunity(PRONE);StatusImmunity(SG_DifficultTerrain)"
+data "TickType" "EndTurn"
+data "Boosts" "ActionResource(Movement,3,0);StatusImmunity(SG_Prone);StatusImmunity(SG_DifficultTerrain)"
 
 new entry "VIBE_CHECKED"
 type "StatusData"
 data "StatusType" "BOOST"
 data "DisplayName" "{h_status_vibe_name};1"
 data "Description" "{h_status_vibe_desc};1"
-data "Icon" "Spell_Enchantment_TashasHideousLaughter"
-data "FormatColor" "Red"
+data "Icon" "Spell_Enchantment_Tasha'sHideousLaughter"
+data "StackId" "VIBE_CHECKED"
 data "StackType" "Overwrite"
-data "Boosts" "BlockRegainBonusAction();BlockRegainReaction();ActionResourceMultiplier(Movement,0.5,0)"
-
-new entry "SYNERGY_COOLDOWN"
-type "StatusData"
-data "StatusType" "BOOST"
-data "Icon" "Spell_Enchantment_DissonantWhispers"
-data "FormatColor" "Grey"
-data "StackType" "Overwrite"
+data "TickType" "EndTurn"
+data "Boosts" "ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceMultiplier(Movement,50,0)"
 """
     with open(os.path.join(stats_dir, "Status_BOOST.txt"), "w", encoding="utf-8") as f:
         f.write(status_content)
 
     # Passive.txt
-    passive_content = f"""new entry "SidewalkImmunity"
+    passive_content = f"""new entry "StreetGritDefence"
+type "PassiveData"
+using "UnarmouredDefence_Barbarian"
+data "DisplayName" "{h_street_grit_name};1"
+data "Description" "{h_street_grit_desc};1"
+data "ExtraDescription" ""
+
+new entry "SidewalkImmunity"
 type "PassiveData"
 data "DisplayName" "{h_passive_immunity_name};1"
 data "Description" "{h_passive_immunity_desc};1"
 data "Icon" "PassiveFeature_PurityOfBody"
 data "Properties" "Highlighted"
-data "Boosts" "StatusImmunity(POISONED);StatusImmunity(DISEASE);Resistance(Poison, Resistant)"
+data "Boosts" "StatusImmunity(SG_Poisoned);StatusImmunity(SG_Disease);Resistance(Poison,Resistant)"
 
 new entry "Proposition47"
 type "PassiveData"
 data "DisplayName" "{h_prop47_name};1"
 data "Description" "{h_prop47_desc};1"
-data "Icon" "PassiveFeature_SneakAttack"
+data "Icon" "Action_SneakAttack_Melee"
+data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsMeleeAttack()"
-data "StatsFunctors" "SELF:ApplyStatus(STOLEN_PATAGONIA,100,2)"
+data "StatsFunctors" "ApplyStatus(SELF,STOLEN_PATAGONIA,100,2)"
 
 new entry "PocketLintBuffet"
 type "PassiveData"
 data "DisplayName" "{h_pocket_lint_name};1"
 data "Description" "{h_pocket_lint_desc};1"
 data "Icon" "PassiveFeature_PurityOfBody"
+data "Properties" "Highlighted;OncePerTurn"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "HasStatus('FECAL_STENCH',context.Target)"
-data "StatsFunctors" "SELF:RegainTemporaryHitPoints(1d6)"
+data "Conditions" "HasStatus('FECAL_STENCH',context.Target) or HasStatus('FECAL_STENCH_AURA',context.Target)"
+data "StatsFunctors" "ApplyStatus(SELF,POCKET_LINT_SNACK,100,-1)"
+
+new entry "StreetHustle"
+type "PassiveData"
+data "DisplayName" "{h_hustle_name};1"
+data "Description" "{h_hustle_desc};1"
+data "Icon" "PassiveFeature_FastMovement"
+data "Properties" "Highlighted"
+data "Boosts" "ActionResource(Movement,3,0);Initiative(3)"
 
 new entry "RestorativeLean"
 type "PassiveData"
 data "DisplayName" "{h_passive_lean_heal_name};1"
 data "Description" "{h_passive_lean_heal_desc};1"
-data "Icon" "PassiveFeature_SecondWind"
-data "StatsFunctorContext" "OnTurn"
-data "Conditions" "HasStatus('FENT_LEAN')"
-data "StatsFunctors" "RegainHitPoints(2d6)"
-
-new entry "BiohazardStench"
-type "PassiveData"
-data "DisplayName" "{h_biohazard_aura_name};1"
-data "Description" "{h_biohazard_aura_desc};1"
-data "Icon" "Spell_Evocation_CloudOfDaggers"
+data "Icon" "Skill_Fighter_SecondWind"
 data "Properties" "Highlighted"
-data "Boosts" "Aura(FECAL_STENCH,3,Enemy and not Dead(),,Poison)"
+
+new entry "UnkillableVagrant"
+type "PassiveData"
+data "DisplayName" "{h_unkillable_name};1"
+data "Description" "{h_unkillable_desc};1"
+data "Icon" "PassiveFeature_Tough"
+data "Properties" "Highlighted"
+data "Boosts" "Resistance(Bludgeoning,Resistant);Resistance(Piercing,Resistant);Resistance(Slashing,Resistant);Tag(FRIGHTENED_ADV);Tag(CHARMED_ADV)"
 
 new entry "EncampmentSweepInstinct"
 type "PassiveData"
 data "DisplayName" "{h_encampment_sweep_name};1"
 data "Description" "{h_encampment_sweep_desc};1"
-data "Icon" "PassiveFeature_SecondWind"
+data "Icon" "Skill_Fighter_SecondWind"
+data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamaged"
-data "Conditions" "HasHPPercentageLessThan(50) and not HasStatus('FENT_LEAN') and not HasStatus('SWEEP_COOLDOWN')"
-data "StatsFunctors" "SELF:ApplyStatus(FENT_LEAN,100,2);SELF:ApplyStatus(SWEEP_COOLDOWN,100,10)"
+data "Conditions" "HasHPPercentageLessThan(50) and not HasStatus('SWEEP_COOLDOWN') and not HasStatus('FENT_LEAN')"
+data "StatsFunctors" "ApplyStatus(SELF,FENT_LEAN,100,2);ApplyStatus(SELF,SWEEP_SHELTER,100,-1);ApplyStatus(SELF,SWEEP_COOLDOWN,100,100)"
 
 new entry "LeanDamageReflect"
 type "PassiveData"
 data "DisplayName" "{h_passive_lean_reflect_name};1"
 data "Description" "{h_passive_lean_reflect_desc};1"
-data "Icon" "PassiveFeature_Retaliation"
+data "Icon" "Spell_Enchantment_DissonantWhispers"
+data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnAttacked"
-data "Conditions" "HasStatus('FENT_LEAN') and IsMeleeAttack()"
-data "StatsFunctors" "DealDamage(1d10, Psychic)"
+data "Conditions" "IsMeleeAttack() and HasDamageEffectFlag(DamageFlags.Hit) and HasStatus('FENT_LEAN',context.Target)"
+data "StatsFunctors" "DealDamage(SWAP,2d10,Psychic,Magical)"
+
+# Subclass passives
+new entry "BiohazardStench"
+type "PassiveData"
+data "DisplayName" "{h_biohazard_aura_name};1"
+data "Description" "{h_biohazard_aura_desc};1"
+data "Icon" "Spell_Conjuration_StinkingCloud"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnTurn;OnShortRest;OnLongRest"
+data "StatsFunctors" "ApplyStatus(SELF,TENDERLOIN_MIASMA,100,-1)"
+
+new entry "ToxicAdaptation"
+type "PassiveData"
+data "DisplayName" "{h_toxic_name};1"
+data "Description" "{h_toxic_desc};1"
+data "Icon" "PassiveFeature_PurityOfBody"
+data "Properties" "Highlighted"
+data "Boosts" "IgnoreResistance(Poison,Resistant);CharacterWeaponDamage(1d6,Poison)"
+
+new entry "PatientZero"
+type "PassiveData"
+data "DisplayName" "{h_patient_zero_name};1"
+data "Description" "{h_patient_zero_desc};1"
+data "Icon" "Spell_Conjuration_StinkingCloud"
+data "Properties" "Highlighted"
+data "Boosts" "CharacterWeaponDamage(2d6,Poison);Resistance(Poison,Immune)"
+
+new entry "MuscleBeachJuice"
+type "PassiveData"
+data "DisplayName" "{h_juiced_name};1"
+data "Description" "{h_juiced_desc};1"
+data "Icon" "PassiveFeature_Tough"
+data "Properties" "Highlighted"
+data "Boosts" "CharacterWeaponDamage(1d8,Bludgeoning);AC(2)"
+
+new entry "KingOfTheBoardwalk"
+type "PassiveData"
+data "DisplayName" "{h_boardwalk_king_name};1"
+data "Description" "{h_boardwalk_king_desc};1"
+data "Icon" "PassiveFeature_ImprovedCritical"
+data "Properties" "Highlighted"
+data "Boosts" "ReduceCriticalAttackThreshold(2)"
+data "StatsFunctorContext" "OnDamage"
+data "Conditions" "IsMeleeAttack()"
+data "StatsFunctors" "ApplyStatus(SELF,BOARDWALK_HEAL,100,0)"
+
+new entry "LastTrainPhantom"
+type "PassiveData"
+data "DisplayName" "{h_last_train_name};1"
+data "Description" "{h_last_train_desc};1"
+data "Icon" "PassiveFeature_FastMovement"
+data "Properties" "Highlighted"
+data "Boosts" "ActionResource(Movement,4.5,0);StatusImmunity(SG_DifficultTerrain)"
 
 # Racial Passives
 new entry "EarthquakeSense"
 type "PassiveData"
 data "DisplayName" "{h_earthquake_name};1"
 data "Description" "{h_earthquake_desc};1"
-data "Icon" "PassiveFeature_SureFooted"
-data "Boosts" "Advantage(SavingThrow, KnockedDown)"
+data "Icon" "PassiveFeature_Mobile_DashAcrossDifficultTerrain"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SG_Prone)"
 
 new entry "Veteran405"
 type "PassiveData"
 data "DisplayName" "{h_veteran405_name};1"
 data "Description" "{h_veteran405_desc};1"
-data "Icon" "PassiveFeature_FreedomOfMovement"
-data "Boosts" "StatusImmunity(SG_Slowed);StatusImmunity(SG_Restrained)"
+data "Icon" "Spell_Abjuration_FreedomOfMovement"
+data "Properties" "Highlighted"
+data "Boosts" "StatusImmunity(SLOW);StatusImmunity(SG_Restrained)"
 
 new entry "Passive_SiliconiteSynergy"
 type "PassiveData"
 data "DisplayName" "{h_synergy_name};1"
 data "Description" "{h_synergy_desc};1"
 data "Icon" "Spell_Enchantment_DissonantWhispers"
+data "Properties" "Highlighted;OncePerTurn"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "IsWeaponAttack() and not HasStatus('SYNERGY_COOLDOWN')"
-data "StatsFunctors" "DealDamage(1d4, Psychic);SELF:ApplyStatus(SYNERGY_COOLDOWN,100,1)"
+data "Conditions" "IsWeaponAttack()"
+data "StatsFunctors" "DealDamage(1d4,Psychic)"
 
 new entry "Passive_SmogLungs"
 type "PassiveData"
 data "DisplayName" "{h_smog_lungs_name};1"
 data "Description" "{h_smog_lungs_desc};1"
 data "Icon" "PassiveFeature_PurityOfBody"
-data "Boosts" "Advantage(SavingThrow, Poison);Advantage(SavingThrow, Disease)"
+data "Properties" "Highlighted"
+data "Boosts" "Tag(POISONED_ADV);StatusImmunity(SG_Disease)"
 
 new entry "Passive_HeatIndexMastery"
 type "PassiveData"
 data "DisplayName" "{h_heat_index_name};1"
 data "Description" "{h_heat_index_desc};1"
-data "Icon" "PassiveFeature_FireResistance"
+data "Icon" "Item_CONS_Potion_Fire_Resistance_2"
+data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(BURNING)"
 
 # 3rd Gender / California Identity Passives
@@ -1888,21 +2036,24 @@ new entry "CaliforniaIdentity_Dude"
 type "PassiveData"
 data "DisplayName" "{h_id_dude_name};1"
 data "Description" "{h_id_dude_desc};1"
-data "Icon" "PassiveFeature_Actor"
-data "Boosts" "Skill(Persuasion, 1);Advantage(SavingThrow, Fear);Advantage(SavingThrow, Exhaustion)"
+data "Icon" "Spell_Enchantment_CalmEmotions"
+data "Properties" "Highlighted"
+data "Boosts" "Skill(Persuasion,2);Tag(FRIGHTENED_ADV)"
 
 new entry "CaliforniaIdentity_Founder"
 type "PassiveData"
 data "DisplayName" "{h_id_founder_name};1"
 data "Description" "{h_id_founder_desc};1"
-data "Icon" "PassiveFeature_Alert"
-data "Boosts" "Initiative(2);Advantage(Skill, Deception)"
+data "Icon" "PassiveFeature_FastMovement"
+data "Properties" "Highlighted"
+data "Boosts" "Initiative(2);Advantage(Skill,Deception)"
 
 new entry "CaliforniaIdentity_Oat"
 type "PassiveData"
 data "DisplayName" "{h_id_oat_name};1"
 data "Description" "{h_id_oat_desc};1"
 data "Icon" "PassiveFeature_PurityOfBody"
+data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(SG_Poisoned)"
 
 new entry "CaliforniaIdentity_SelfActualized"
@@ -1910,15 +2061,17 @@ type "PassiveData"
 data "DisplayName" "{h_id_self_name};1"
 data "Description" "{h_id_self_desc};1"
 data "Icon" "Spell_Abjuration_Aid"
-data "StatsFunctorContext" "OnCombatEntered"
-data "StatsFunctors" "SELF:RegainTemporaryHitPoints(5)"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnCombatStarted"
+data "StatsFunctors" "ApplyStatus(SELF,SELF_ACTUALIZED,100,-1)"
 
 new entry "CaliforniaIdentity_Algorithm"
 type "PassiveData"
 data "DisplayName" "{h_id_algo_name};1"
 data "Description" "{h_id_algo_desc};1"
 data "Icon" "PassiveFeature_ReliableTalent"
-data "Boosts" "SavingThrow(All, 1)"
+data "Properties" "Highlighted"
+data "Boosts" "RollBonus(SavingThrow,1)"
 """
     with open(os.path.join(stats_dir, "Passive.txt"), "w", encoding="utf-8") as f:
         f.write(passive_content)

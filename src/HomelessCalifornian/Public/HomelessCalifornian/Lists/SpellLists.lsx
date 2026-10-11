@@ -54,14 +54,20 @@
 
                 <!-- Subclass Venice Brawler Spells -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_BrokenBottleShank;Shout_ShoppingCartCharge"/>
+                    <attribute id="Spells" type="LSString" value="Target_BrokenBottleShank;Rush_ShoppingCartCharge"/>
                     <attribute id="UUID" type="guid" value="ea51374c-109e-52a1-a827-08441be45afa"/>
                 </node>
 
                 <!-- Subclass BART Menace Spells -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Shout_TurnstileHop"/>
+                    <attribute id="Spells" type="LSString" value="Target_TurnstileHop"/>
                     <attribute id="UUID" type="guid" value="bbe6c063-8f47-5eeb-a952-c76c1db0f2a3"/>
+                </node>
+
+                <!-- Subclass BART Menace Level 10: Express Hop -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_ExpressHop"/>
+                    <attribute id="UUID" type="guid" value="9a28b292-45e3-5c8f-afd1-96464f50db33"/>
                 </node>
 
                 <!-- Racial Californian Spells: Touch Grass & Avocado Toast -->

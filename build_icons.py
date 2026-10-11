@@ -119,6 +119,40 @@ def make_white_silhouette(in_path, size):
     return res.resize(size, Image.Resampling.LANCZOS)
 
 
+def save_dds_dxt5(im, path):
+    """Write a BC3/DXT5 DDS with a full mip chain - the format working class mods
+    (e.g. MindWeaver) ship for ClassIcons. Returns the mip count."""
+    import struct
+    im = im.convert("RGBA")
+    w, h = im.size
+    levels, data = [], b""
+    lw, lh = w, h
+    while True:
+        lvl = im if (lw, lh) == (w, h) else im.resize((lw, lh), Image.Resampling.LANCZOS)
+        # BC3 works on 4x4 blocks; pad tiny mips up to a whole block
+        pw, ph = max(4, (lw + 3) // 4 * 4), max(4, (lh + 3) // 4 * 4)
+        if (pw, ph) != (lw, lh):
+            padded = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+            padded.paste(lvl, (0, 0))
+            lvl = padded
+        data += lvl.tobytes("bcn", 3)
+        levels.append((lw, lh))
+        if lw == 1 and lh == 1:
+            break
+        lw, lh = max(1, lw // 2), max(1, lh // 2)
+    mips = len(levels)
+    linear = max(1, (w + 3) // 4) * max(1, (h + 3) // 4) * 16
+    # DDSD_CAPS|HEIGHT|WIDTH|PIXELFORMAT|MIPMAPCOUNT|LINEARSIZE
+    flags = 0x1 | 0x2 | 0x4 | 0x1000 | 0x20000 | 0x80000
+    header = struct.pack("<4sIIIIIII44x", b"DDS ", 124, flags, h, w, linear, 0, mips)
+    header += struct.pack("<II4s20x", 32, 0x4, b"DXT5")          # pixel format: FourCC DXT5
+    header += struct.pack("<II12x", 0x1000 | 0x8 | 0x400000, 0)     # caps: TEXTURE|COMPLEX|MIPMAP
+    assert len(header) == 128
+    with open(path, "wb") as f:
+        f.write(header + data)
+    return mips
+
+
 def save_image_variants(im, dir_list, base_name):
     """Save an image in DDS (uppercase), dds (lowercase), and png formats across specified directories."""
     for directory in dir_list:
@@ -143,6 +177,13 @@ raw_icons = {
     "Class_HomelessCalifornian": ("icon_class_crest", "HomelessCalifornianCrest.png"),
     "Spell_AvocadoToast": ("AvocadoToast", "AvocadoToast.png")
 }
+
+# Optional spell art: picked up from assets/icons/<MapKey>.png when present
+# (generate_mod.icon_line() falls back to an existing icon otherwise).
+OPTIONAL_ICONS = [
+    "Spell_SidewalkScramble", "Spell_FeralScreech", "Spell_EvictionNotice", "Spell_TentEncampment",
+    "Spell_Call311", "Spell_BiohazardBomb", "Spell_BottleShank", "Spell_CartCharge", "Spell_TurnstileHop",
+]
 
 CLASS_IDENTIFIERS = [
     "HomelessCalifornian",
@@ -175,12 +216,20 @@ def main():
         "Spell_AvocadoToast": (2, 1)
     }
 
+    # Fill the remaining 4x4 atlas cells with any optional art that exists
+    free_cells = [(c, r) for r in range(4) for c in range(4) if (c, r) not in positions.values()]
+    icon_sources = dict(raw_icons)
+    for key in OPTIONAL_ICONS:
+        if os.path.exists(os.path.join(ASSETS_DIR, f"{key}.png")) and free_cells:
+            icon_sources[key] = (None, f"{key}.png")
+            positions[key] = free_cells.pop(0)
+
     uv_map = {}
     crest_img = None
     loaded_imgs = {}
 
-    for map_key, (pattern, fallback_name) in raw_icons.items():
-        src_path = find_img(pattern, fallback_name)
+    for map_key, (pattern, fallback_name) in icon_sources.items():
+        src_path = find_img(pattern, fallback_name) if pattern else os.path.join(ASSETS_DIR, fallback_name)
         img = Image.open(src_path).convert("RGBA")
         loaded_imgs[map_key] = img
 
@@ -333,23 +382,42 @@ def main():
     # -------------------------------------------------------------
     # 3. Class Icons (Fixes "Black Box" in CC)
     # -------------------------------------------------------------
+    # Matches working class mods on disk (MindWeaver): only
+    #   Mods/<Folder>/GUI/Assets/ClassIcons/<ClassName>.DDS         300x300 DXT5 + mips
+    #   Mods/<Folder>/GUI/Assets/ClassIcons/hotbar/<ClassName>.DDS  112x112 DXT5 + mips
+    # with upper-case .DDS and matching GUI/metadata.lsf entries (keys use .png).
+    # Earlier builds scattered uncompressed, lower-case .dds copies; remove them.
     print("Generating Character Creation Class icons...")
-    if crest_img is not None:
-        img_300 = crest_img.resize((300, 300), Image.Resampling.LANCZOS)
-        img_152 = crest_img.resize((152, 152), Image.Resampling.LANCZOS)
-        img_140 = crest_img.resize((140, 140), Image.Resampling.LANCZOS)
-        img_72 = crest_img.resize((72, 72), Image.Resampling.LANCZOS)
-
+    for d in [GAME_CLASS_ICONS_DIR, GAME_HOTBAR_DIR, GAME_LOWRES_CLASS_DIR, GAME_LOWRES_HOTBAR_DIR,
+              PUB_CLASS_ICONS_DIR, PUB_HOTBAR_DIR, PUB_LOWRES_CLASS_DIR, PUB_LOWRES_HOTBAR_DIR,
+              MODS_CLASS_ICONS_DIR, MODS_HOTBAR_DIR, MODS_LOWRES_CLASS_DIR, MODS_LOWRES_HOTBAR_DIR,
+              MODS_ASSETS_DIR, MODS_LOWRES_DIR]:
         for c_id in CLASS_IDENTIFIERS:
-            # 300x300 HighRes CC button
-            save_image_variants(img_300, [GAME_CLASS_ICONS_DIR, PUB_CLASS_ICONS_DIR, MODS_CLASS_ICONS_DIR, MODS_ASSETS_DIR], c_id)
-            # 152x152 LowRes CC button
-            save_image_variants(img_152, [GAME_LOWRES_CLASS_DIR, PUB_LOWRES_CLASS_DIR, MODS_LOWRES_CLASS_DIR, MODS_LOWRES_DIR], c_id)
-            # 140x140 Hotbar HighRes
-            save_image_variants(img_140, [GAME_HOTBAR_DIR, PUB_HOTBAR_DIR, MODS_HOTBAR_DIR], c_id)
-            # 72x72 Hotbar LowRes
-            save_image_variants(img_72, [GAME_LOWRES_HOTBAR_DIR, PUB_LOWRES_HOTBAR_DIR, MODS_LOWRES_HOTBAR_DIR], c_id)
-            print(f"  [OK] Generated class icons for {c_id}")
+            for ext in (".DDS", ".dds", ".png"):
+                stale = os.path.join(d, c_id + ext)
+                if os.path.exists(stale):
+                    os.remove(stale)
+    for d in [GAME_CLASS_ICONS_DIR, GAME_HOTBAR_DIR, GAME_LOWRES_CLASS_DIR, GAME_LOWRES_HOTBAR_DIR,
+              PUB_CLASS_ICONS_DIR, PUB_HOTBAR_DIR, PUB_LOWRES_CLASS_DIR, PUB_LOWRES_HOTBAR_DIR,
+              MODS_LOWRES_CLASS_DIR, MODS_LOWRES_HOTBAR_DIR]:
+        try:
+            os.removedirs(d)  # only removes now-empty folders
+        except OSError:
+            pass
+    os.makedirs(MODS_HOTBAR_DIR, exist_ok=True)
+
+    class_mips = {}
+    for c_id in CLASS_IDENTIFIERS:
+        art_path = os.path.join(ASSETS_DIR, f"Class_{c_id}.png")
+        art = Image.open(art_path).convert("RGBA") if os.path.exists(art_path) else crest_img
+        if art is None:
+            continue
+        m_big = save_dds_dxt5(art.resize((300, 300), Image.Resampling.LANCZOS),
+                              os.path.join(MODS_CLASS_ICONS_DIR, f"{c_id}.DDS"))
+        m_bar = save_dds_dxt5(art.resize((112, 112), Image.Resampling.LANCZOS),
+                              os.path.join(MODS_HOTBAR_DIR, f"{c_id}.DDS"))
+        class_mips[c_id] = (m_big, m_bar)
+        print(f"  [OK] Class icon for {c_id} ({'own art' if art is not crest_img else 'class crest'})")
 
     # -------------------------------------------------------------
     # 4. Patch 7 Metadata
@@ -357,18 +425,17 @@ def main():
     print("Generating Patch 7 metadata.lsx and metadata.lsf...")
     metadata_objects = []
 
-    for c_id in CLASS_IDENTIFIERS:
-        for key, w, h in [
-            (f"Assets/ClassIcons/{c_id}.png", 300, 300),
-            (f"Assets/ClassIcons/hotbar/{c_id}.png", 140, 140),
-            (f"Assets/{c_id}.png", 300, 300)
+    for c_id, (m_big, m_bar) in class_mips.items():
+        for key, w, h, mips in [
+            (f"Assets/ClassIcons/{c_id}.png", 300, 300, m_big),
+            (f"Assets/ClassIcons/hotbar/{c_id}.png", 112, 112, m_bar),
         ]:
             metadata_objects.append(f"""						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="{key}" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="{h}" />
-									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="mipcount" type="int8" value="{mips}" />
 									<attribute id="w" type="int16" value="{w}" />
 								</node>
 							</children>

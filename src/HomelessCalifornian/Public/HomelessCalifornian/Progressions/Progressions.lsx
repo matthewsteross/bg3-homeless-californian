@@ -6,19 +6,31 @@
             <children>
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="false"/>
-                    <attribute id="Boosts" type="ls::Guid" value="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Dexterity);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"/>
+                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Dexterity);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="SidewalkImmunity;Proposition47"/>
+                    <attribute id="PassivesAdded" type="LSString" value="StreetGritDefence;SidewalkImmunity;Proposition47"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSkills(43d8bfd5-3503-5d9c-a3c7-55e36065dd23,2);AddSpells(2a7d6c13-c678-5482-8a03-8396546eb1bf)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSkills(43d8bfd5-3503-5d9c-a3c7-55e36065dd23,3);AddSpells(2a7d6c13-c678-5482-8a03-8396546eb1bf);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="9399c502-af64-544e-89e9-f0ddb1f4ce1e"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(SimpleWeapons);Proficiency(MartialWeapons)"/>
+                    <attribute id="IsMulticlass" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="StreetGritDefence;SidewalkImmunity;Proposition47"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(2a7d6c13-c678-5482-8a03-8396546eb1bf)"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="fb5daa6f-6f3d-5ae1-98fd-8d92653c18f9"/>
+                </node>
+                <node id="Progression">
                     <attribute id="Level" type="uint8" value="2"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="PocketLintBuffet"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PocketLintBuffet;StreetHustle"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(fd09207f-ec52-5b52-a330-4f9fc3a631eb)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
@@ -67,7 +79,7 @@
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="6"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="RestorativeLean"/>
+                    <attribute id="PassivesAdded" type="LSString" value="RestorativeLean;UnkillableVagrant"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="f8a9baee-54e4-54d5-9fff-9b6116ff02df"/>
@@ -107,7 +119,8 @@
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="11"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="LeanDamageReflect"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack_2;LeanDamageReflect"/>
+                    <attribute id="PassivesRemoved" type="LSString" value="ExtraAttack"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="b084824e-fb81-53b4-89e1-6d91e902f458"/>
@@ -131,13 +144,45 @@
                     <attribute id="UUID" type="guid" value="57c3c99a-2b50-523c-ac91-358f978f48f9"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ToxicAdaptation"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="a6acaf41-5ffa-5202-a5d3-b4c75e021b45"/>
+                    <attribute id="UUID" type="guid" value="5e9247e3-3e0d-5463-beb1-f1ae7659be26"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PatientZero"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="a6acaf41-5ffa-5202-a5d3-b4c75e021b45"/>
+                    <attribute id="UUID" type="guid" value="317ac18e-b8e1-5f78-99f0-6656c86cd495"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="Proficiency(HeavyArmor)"/>
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnarmoredDefense_Barbarian"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(ea51374c-109e-52a1-a827-08441be45afa)"/>
                     <attribute id="TableUUID" type="guid" value="416ea8c3-799d-51ab-8cc1-a2af5eb8d4ec"/>
                     <attribute id="UUID" type="guid" value="f53da724-19d4-556b-bacf-507069b36651"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
+                    <attribute id="PassivesAdded" type="LSString" value="MuscleBeachJuice"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="416ea8c3-799d-51ab-8cc1-a2af5eb8d4ec"/>
+                    <attribute id="UUID" type="guid" value="f139d976-7dfc-5de0-9ed8-ae79081af2b0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
+                    <attribute id="PassivesAdded" type="LSString" value="KingOfTheBoardwalk"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="416ea8c3-799d-51ab-8cc1-a2af5eb8d4ec"/>
+                    <attribute id="UUID" type="guid" value="f6a44855-9eae-5df7-8fca-946c29ca9a9c"/>
                 </node>
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="3"/>
@@ -149,8 +194,25 @@
                     <attribute id="UUID" type="guid" value="17e39116-d191-58c1-81a5-1c7795a20ec3"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="BARTPlatformMenace"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Evasion;UncannyDodge"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
+                    <attribute id="UUID" type="guid" value="e6c5c752-78d5-56cc-b982-7d9ef67e892f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="BARTPlatformMenace"/>
+                    <attribute id="PassivesAdded" type="LSString" value="LastTrainPhantom"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(9a28b292-45e3-5c8f-afd1-96464f50db33)"/>
+                    <attribute id="TableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
+                    <attribute id="UUID" type="guid" value="e4d2f7c2-a679-54c0-9132-c42efbb24f58"/>
+                </node>
+                <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="false"/>
-                    <attribute id="Boosts" type="ls::Guid" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Californian"/>
                     <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405"/>
@@ -237,7 +299,7 @@
                     <attribute id="UUID" type="guid" value="1ea19aae-b90c-50b5-b1af-38d6df4112ab"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Boosts" type="ls::Guid" value="Resistance(Radiant,Resistant)"/>
+                    <attribute id="Boosts" type="LSString" value="Resistance(Radiant,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Beachborn"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
@@ -409,7 +471,7 @@
                     <attribute id="UUID" type="guid" value="428ba14b-a669-52d2-a134-6d09df7b2cef"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Boosts" type="ls::Guid" value="Resistance(Poison,Resistant);Advantage(SavingThrow,Poison)"/>
+                    <attribute id="Boosts" type="LSString" value="Resistance(Poison,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="InlandEmperor"/>
                     <attribute id="PassivesAdded" type="LSString" value="Passive_SmogLungs;Passive_HeatIndexMastery"/>
