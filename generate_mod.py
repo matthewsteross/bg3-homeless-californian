@@ -138,10 +138,10 @@ h_sling_fent_cloud_name = add_loca("sling_fent_cloud_name", "Mass Fentanyl Contr
 h_sling_fent_cloud_desc = add_loca("sling_fent_cloud_desc", "Scatter an entire contraband brick across a 4m area. Every creature caught takes 5d6 Psychic damage and must make a Constitution saving throw or fall into Fent Stupor until the end of its next turn; on a success, half damage. Recharges on a Short Rest.")
 
 h_fent_lean_name = add_loca("fent_lean_name", "Fent Lean")
-h_fent_lean_desc = add_loca("fent_lean_desc", "Fold forward at a perfect, gravity-defying 90-degree angle as a Bonus Action. For 3 turns you have Resistance to all damage, +3 Armour Class, Advantage on Constitution and Dexterity saving throws, and cannot be knocked Prone, but you cannot move. Snap Out of Lean ends it for free. Recharges on a Short Rest.")
+h_fent_lean_desc = add_loca("fent_lean_desc", "Fold forward at a perfect, gravity-defying 90-degree angle as a Bonus Action. For 3 turns you have Resistance to all damage, +3 Armour Class, Advantage on Constitution and Dexterity saving throws, and cannot be knocked Prone, but you cannot move. Narcan ends it for free. Recharges on a Short Rest.")
 
-h_snap_out_name = add_loca("snap_out_name", "Snap Out of Lean")
-h_snap_out_desc = add_loca("snap_out_desc", "Snap your spine back upright with a terrifying pop and end Fent Lean. Costs nothing.")
+h_snap_out_name = add_loca("snap_out_name", "Narcan")
+h_snap_out_desc = add_loca("snap_out_desc", "Jam a dose of Narcan up your nose and snap your spine back upright with a terrifying pop, ending Fent Lean. Costs nothing.")
 
 h_scramble_name = add_loca("scramble_name", "Sidewalk Scramble")
 h_scramble_desc = add_loca("scramble_desc", "Scurry frantically across broken glass and hazardous surfaces. As a Bonus Action, Dash and gain +3m movement and immunity to difficult terrain and being knocked Prone until the end of your next turn.")

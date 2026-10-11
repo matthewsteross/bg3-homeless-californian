@@ -17,9 +17,9 @@
     <content contentuid="had74bf32g5ad6g567dg82fdg333b104163e1" version="1">Mass Fentanyl Contraband</content>
     <content contentuid="h29200944g1d5bg5692ga78cgadee19063812" version="1">Scatter an entire contraband brick across a 4m area. Every creature caught takes 5d6 Psychic damage and must make a Constitution saving throw or fall into Fent Stupor until the end of its next turn; on a success, half damage. Recharges on a Short Rest.</content>
     <content contentuid="h333fdd8agb30fg5545gb137g1d9db4f38ef8" version="1">Fent Lean</content>
-    <content contentuid="he95107c6g5d50g588eg8c55g10ae1fe2b236" version="1">Fold forward at a perfect, gravity-defying 90-degree angle as a Bonus Action. For 3 turns you have Resistance to all damage, +3 Armour Class, Advantage on Constitution and Dexterity saving throws, and cannot be knocked Prone, but you cannot move. Snap Out of Lean ends it for free. Recharges on a Short Rest.</content>
-    <content contentuid="he3586e05g1ab9g5cfag9bc9ge8e97b5eee0a" version="1">Snap Out of Lean</content>
-    <content contentuid="h88b49fc5gfc54g5f37g90efgb54639ee6dc5" version="1">Snap your spine back upright with a terrifying pop and end Fent Lean. Costs nothing.</content>
+    <content contentuid="he95107c6g5d50g588eg8c55g10ae1fe2b236" version="1">Fold forward at a perfect, gravity-defying 90-degree angle as a Bonus Action. For 3 turns you have Resistance to all damage, +3 Armour Class, Advantage on Constitution and Dexterity saving throws, and cannot be knocked Prone, but you cannot move. Narcan ends it for free. Recharges on a Short Rest.</content>
+    <content contentuid="he3586e05g1ab9g5cfag9bc9ge8e97b5eee0a" version="1">Narcan</content>
+    <content contentuid="h88b49fc5gfc54g5f37g90efgb54639ee6dc5" version="1">Jam a dose of Narcan up your nose and snap your spine back upright with a terrifying pop, ending Fent Lean. Costs nothing.</content>
     <content contentuid="he1b76224gb0d3g556cgaa76gc1facb3ab158" version="1">Sidewalk Scramble</content>
     <content contentuid="hfdf06bb5gadd0g52f6g8b83gb4d91dea1b50" version="1">Scurry frantically across broken glass and hazardous surfaces. As a Bonus Action, Dash and gain +3m movement and immunity to difficult terrain and being knocked Prone until the end of your next turn.</content>
     <content contentuid="he94e7de5ged9eg520eg9350g51fc0389db2e" version="1">Aggressive Panhandling</content>
