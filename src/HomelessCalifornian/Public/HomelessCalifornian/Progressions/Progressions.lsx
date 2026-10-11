@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="10"/>
+    <region id="Progressions">
+        <node id="root">
+            <children>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Constitution);ProficiencyBonus(SavingThrow,Strength);Proficiency(SimpleWeapons);Proficiency(ImprovisedWeapons);Proficiency(Daggers);Proficiency(Clubs);Proficiency(Shields)"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="StreetHardiness;StreetImmunity"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(2a7d6c13-c678-5482-8a03-8396546eb1bf);SelectSkills(43d8bfd5-3503-5d9c-a3c7-55e36065dd23,2);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="9399c502-af64-544e-89e9-f0ddb1f4ce1e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(fd09207f-ec52-5b52-a330-4f9fc3a631eb)"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="e3cb484b-d868-5ef8-98f1-3901fe66673c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="95a9b0da-cafb-506a-a5b9-0e6af86f9054"/>
+                    <children>
+                        <node id="SubClasses">
+                            <children>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="c810fd06-ce7e-5271-b9c0-501b45c050d1"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="240f3979-4381-5448-b44a-224b928e1aae"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="d93153e9-72b5-58cf-88cf-6e9d53a9e9c5"/>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="760fd853-5ff1-5804-82c1-359d2bee48d0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e14b527d-518d-5108-bf2b-65f14371a0b5)"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="25280c4b-c012-53d3-8950-7d3144502993"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="RestorativeLean"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="f8a9baee-54e4-54d5-9fff-9b6116ff02df"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(c0780b41-1eba-525b-98a4-55fad8b275b0)"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="bca4cd77-ae36-5121-96af-1783ca075f37"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="608828f2-7291-56d9-b309-b970bbf5e86c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(07b780cc-2f36-5392-8fcf-45814d0c76fa)"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="4062a86c-f412-543a-b01d-171c1651a9d4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="092ae5d1-23be-5322-8946-7445ab9487ea"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="PassivesAdded" type="LSString" value="LeanDamageReflect"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="b084824e-fb81-53b4-89e1-6d91e902f458"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="UUID" type="guid" value="c6589f4a-e485-51ec-87b5-01a85b64edeb"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(09acfd76-7fbd-5096-98d4-1d8e917c2b75)"/>
+                    <attribute id="TableUUID" type="guid" value="a6acaf41-5ffa-5202-a5d3-b4c75e021b45"/>
+                    <attribute id="UUID" type="guid" value="1562ead8-c633-5c5b-99db-69d758ad22ef"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(ea51374c-109e-52a1-a827-08441be45afa)"/>
+                    <attribute id="TableUUID" type="guid" value="416ea8c3-799d-51ab-8cc1-a2af5eb8d4ec"/>
+                    <attribute id="UUID" type="guid" value="779b6ece-566b-5b4b-b313-8b6fd026416e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="BARTPlatformMenace"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ReliableTalent"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(bbe6c063-8f47-5eeb-a952-c76c1db0f2a3)"/>
+                    <attribute id="TableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
+                    <attribute id="UUID" type="guid" value="375209d2-d21a-58fc-8ed2-81aeb2f33b2d"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="10"/>
+    <region id="SpellLists">
+        <node id="root">
+            <children>
+                <!-- Level 1: Poop, Fentanyl, Fent Lean, Scramble -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Projectile_SlingPoop;Projectile_SlingFentanyl;Shout_FentLean;Shout_FentLean_End;Shout_SidewalkScramble"/>
+                    <attribute id="UUID" type="guid" value="2a7d6c13-c678-5482-8a03-8396546eb1bf"/>
+                </node>
+
+                <!-- Level 2: Aggressive Panhandling -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_AggressivePanhandling"/>
+                    <attribute id="UUID" type="guid" value="fd09207f-ec52-5b52-a330-4f9fc3a631eb"/>
+                </node>
+
+                <!-- Level 5: Chunky Poop upgrade -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Projectile_SlingPoop_Chunky"/>
+                    <attribute id="UUID" type="guid" value="e14b527d-518d-5108-bf2b-65f14371a0b5"/>
+                </node>
+
+                <!-- Level 7: Feral Screech -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_FeralScreech"/>
+                    <attribute id="UUID" type="guid" value="c0780b41-1eba-525b-98a4-55fad8b275b0"/>
+                </node>
+
+                <!-- Level 9: Mass Fentanyl Cloud & Tent Encampment -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Projectile_SlingFentanyl_Mass;Shout_TentEncampment"/>
+                    <attribute id="UUID" type="guid" value="07b780cc-2f36-5392-8fcf-45814d0c76fa"/>
+                </node>
+
+                <!-- Subclass Tenderloin Spells -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Projectile_BiohazardBomb"/>
+                    <attribute id="UUID" type="guid" value="09acfd76-7fbd-5096-98d4-1d8e917c2b75"/>
+                </node>
+
+                <!-- Subclass Venice Brawler Spells -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_BrokenBottleShank;Shout_ShoppingCartCharge"/>
+                    <attribute id="UUID" type="guid" value="ea51374c-109e-52a1-a827-08441be45afa"/>
+                </node>
+
+                <!-- Subclass BART Menace Spells -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_TurnstileHop"/>
+                    <attribute id="UUID" type="guid" value="bbe6c063-8f47-5eeb-a952-c76c1db0f2a3"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

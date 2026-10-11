@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="10"/>
+    <region id="ClassDescriptions">
+        <node id="root">
+            <children>
+                <!-- Main Class: Homeless Californian -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="CanLearnSpells" type="bool" value="false"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="hc0752560g25acg587agaf4cg4df4dea28c20" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h0b7e5e2eg425fg5059g8d16ge0809b136535" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="HomelessCalifornian"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Barbarian"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="3"/>
+                    <attribute id="UUID" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
+                    <children>
+                        <node id="Tags">
+                            <!-- Barbarian class dialogue tag for gritty raw tone -->
+                            <attribute id="Object" type="guid" value="d82370fb-caf8-4da2-bd26-e16180c14b88"/>
+                        </node>
+                    </children>
+                </node>
+
+                <!-- Subclass 1: Tenderloin Biohazard -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="CanLearnSpells" type="bool" value="false"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h1040dd11g2398g5229g9955gb3765f7007b1" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="heea9f4a0g0dc7g5cffg9af4g8b25a686b4a4" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="TenderloinBiohazard"/>
+                    <attribute id="ParentGuid" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="a6acaf41-5ffa-5202-a5d3-b4c75e021b45"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="3"/>
+                    <attribute id="UUID" type="guid" value="c810fd06-ce7e-5271-b9c0-501b45c050d1"/>
+                </node>
+
+                <!-- Subclass 2: Venice Boardwalk Brawler -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="CanLearnSpells" type="bool" value="false"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h6c56a0e5g0556g5744ga807g5ac9630a88ca" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha852e5b7g4df9g501ag92e6gdcedf0378a4a" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="VeniceBoardwalkBrawler"/>
+                    <attribute id="ParentGuid" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="416ea8c3-799d-51ab-8cc1-a2af5eb8d4ec"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="3"/>
+                    <attribute id="UUID" type="guid" value="240f3979-4381-5448-b44a-224b928e1aae"/>
+                </node>
+
+                <!-- Subclass 3: BART Platform Menace -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="CanLearnSpells" type="bool" value="false"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="hf4758c0bg1320g5783g897bga0499438ce9f" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hce94c9c4g74e7g5b94gb59eg093f3c71383e" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="7"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="BARTPlatformMenace"/>
+                    <attribute id="ParentGuid" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="3"/>
+                    <attribute id="UUID" type="guid" value="d93153e9-72b5-58cf-88cf-6e9d53a9e9c5"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

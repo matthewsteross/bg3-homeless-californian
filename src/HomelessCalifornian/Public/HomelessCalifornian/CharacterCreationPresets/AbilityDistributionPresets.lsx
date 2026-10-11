@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="10"/>
+    <region id="AbilityDistributionPresets">
+        <node id="root">
+            <children>
+                <node id="AbilityDistributionPreset">
+                    <attribute id="Charisma" type="int32" value="10"/>
+                    <attribute id="ClassUUID" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
+                    <attribute id="Constitution" type="int32" value="15"/>
+                    <attribute id="Dexterity" type="int32" value="14"/>
+                    <attribute id="Intelligence" type="int32" value="8"/>
+                    <attribute id="Strength" type="int32" value="13"/>
+                    <attribute id="UUID" type="guid" value="bd525fe9-3656-5b03-b636-f220be06b67b"/>
+                    <attribute id="Wisdom" type="int32" value="12"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
