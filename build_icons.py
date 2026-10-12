@@ -8,6 +8,7 @@ import glob
 import subprocess
 import numpy as np
 from PIL import Image
+from hc_icon_keys import SPELL_ICON_KEYS
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(ROOT_DIR, "src", "HomelessCalifornian")
@@ -184,6 +185,7 @@ OPTIONAL_ICONS = [
     "Spell_SidewalkScramble", "Spell_FeralScreech", "Spell_EvictionNotice", "Spell_TentEncampment",
     "Spell_Call311", "Spell_BiohazardBomb", "Spell_BottleShank", "Spell_CartCharge", "Spell_TurnstileHop",
 ]
+OPTIONAL_ICONS += list(SPELL_ICON_KEYS.values())
 
 CLASS_IDENTIFIERS = [
     "HomelessCalifornian",
@@ -202,9 +204,7 @@ RACE_IDENTIFIERS = {
 
 def main():
     print("=== Processing Mod Icons and Texture Atlas ===")
-    atlas_size = 512
     tile_size = 128
-    atlas_img = Image.new("RGBA", (atlas_size, atlas_size), (0, 0, 0, 0))
 
     positions = {
         "Spell_FentLean": (0, 0),
@@ -216,12 +216,22 @@ def main():
         "Spell_AvocadoToast": (2, 1)
     }
 
-    # Fill the remaining 4x4 atlas cells with any optional art that exists
-    free_cells = [(c, r) for r in range(4) for c in range(4) if (c, r) not in positions.values()]
     icon_sources = dict(raw_icons)
     for key in OPTIONAL_ICONS:
-        if os.path.exists(os.path.join(ASSETS_DIR, f"{key}.png")) and free_cells:
+        if os.path.exists(os.path.join(ASSETS_DIR, f"{key}.png")):
             icon_sources[key] = (None, f"{key}.png")
+
+    # Grow the atlas instead of silently dropping art beyond the original 16
+    # slots. Keep legacy cell positions and regenerate all UVs for this size.
+    columns = 4
+    while columns * columns < len(icon_sources):
+        columns *= 2
+    atlas_size = columns * tile_size
+    atlas_img = Image.new("RGBA", (atlas_size, atlas_size), (0, 0, 0, 0))
+    free_cells = [(c, r) for r in range(columns) for c in range(columns)
+                  if (c, r) not in positions.values()]
+    for key in icon_sources:
+        if key not in positions:
             positions[key] = free_cells.pop(0)
 
     uv_map = {}

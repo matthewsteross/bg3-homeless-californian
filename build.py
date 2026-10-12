@@ -61,17 +61,59 @@ def compile_localization():
 def build_pak():
     os.makedirs(DIST_DIR, exist_ok=True)
     print(f"Packaging mod into {PAK_PATH}...")
-    run_cmd([DIVINE_EXE, "-g", "bg3", "-a", "create-package", "-s", SRC_DIR, "-d", PAK_PATH])
+    import tempfile
+    staging_root = os.path.join(ROOT_DIR, 'work', 'pak-staging')
+    os.makedirs(staging_root, exist_ok=True)
+    # Match the shared packer's convention: .lsf.lsx is authoring input;
+    # the game receives its freshly compiled .lsf counterpart.
+    with tempfile.TemporaryDirectory(prefix='hc-build-', dir=staging_root) as staging:
+        shutil.copytree(SRC_DIR, staging, dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns('*.lsf.lsx'))
+        run_cmd([DIVINE_EXE, "-g", "bg3", "-a", "create-package", "-s", staging, "-d", PAK_PATH])
     size = os.path.getsize(PAK_PATH)
     print(f"  [OK] Built {PAK_NAME} ({size:,} bytes)")
 
 
-def install_pak():
+def compile_resources():
+    """Compile added root-template authoring XML before packing."""
+    from pathlib import Path
+    for authoring in Path(SRC_DIR).rglob('*.lsf.lsx'):
+        run_cmd([DIVINE_EXE, '-g', 'bg3', '-a', 'convert-resource',
+                 '-s', str(authoring), '-d', str(authoring.with_suffix(''))])
+
+
+def verify_candidate():
+    run_cmd([sys.executable, os.path.join(ROOT_DIR, 'validation', 'validate.py'),
+             '--pak', PAK_PATH])
+    print('  [OK] Source and package checks passed (file level only)')
+
+
+def install_pak(allow_running_game=False):
+    from datetime import datetime
+    running = subprocess.run(['tasklist'], capture_output=True, text=True, check=True).stdout.lower()
+    if not allow_running_game and ('bg3.exe' in running or 'bg3_dx11.exe' in running):
+        raise RuntimeError('Close Baldur\'s Gate 3 before installing this build.')
     if not os.path.exists(BG3_LOCAL_MODS):
         print(f"Error: BG3 Mods directory not found at {BG3_LOCAL_MODS}")
         return False
     dest = os.path.join(BG3_LOCAL_MODS, PAK_NAME)
-    shutil.copy2(PAK_PATH, dest)
+    if os.path.exists(dest):
+        backups = os.path.join(ROOT_DIR, 'work', 'installed-backups')
+        os.makedirs(backups, exist_ok=True)
+        stamp = datetime.now().strftime('%Y%m%d-%H%M%S')
+        shutil.copy2(dest, os.path.join(backups, f'HomelessCalifornian-{stamp}.pak'))
+    # Stage beside the destination so readers never see a partial package.
+    # Windows may still reject replacement if the game holds a blocking handle.
+    import tempfile
+    with tempfile.NamedTemporaryFile(prefix='hc-install-', suffix='.pending',
+                                     dir=BG3_LOCAL_MODS, delete=False) as staged:
+        staged_path = staged.name
+    try:
+        shutil.copy2(PAK_PATH, staged_path)
+        os.replace(staged_path, dest)
+    finally:
+        if os.path.exists(staged_path):
+            os.remove(staged_path)
     print(f"  [OK] Installed {PAK_NAME} -> {dest}")
     return True
 
@@ -81,11 +123,6 @@ def activate_in_modsettings():
         print(f"Notice: modsettings.lsx not found at {BG3_MODSETTINGS}")
         return False
 
-    backup_path = BG3_MODSETTINGS + ".bak"
-    if not os.path.exists(backup_path):
-        shutil.copy2(BG3_MODSETTINGS, backup_path)
-        print(f"  [OK] Created backup at {backup_path}")
-
     # Read modsettings XML
     with open(BG3_MODSETTINGS, "r", encoding="utf-8") as f:
         content = f.read()
@@ -93,6 +130,11 @@ def activate_in_modsettings():
     if MOD_UUID in content:
         print(f"  [INFO] {MOD_NAME} is already active in modsettings.lsx")
         return True
+
+    from datetime import datetime
+    backup_path = BG3_MODSETTINGS + '.bak-' + datetime.now().strftime('%Y%m%d-%H%M%S')
+    shutil.copy2(BG3_MODSETTINGS, backup_path)
+    print(f'  [OK] Created backup at {backup_path}')
 
     # Parse XML and insert entry into <children> under <node id="Mods">
     tree = ET.parse(BG3_MODSETTINGS)
@@ -157,13 +199,16 @@ def main():
 
     # 3. Compile localization
     compile_localization()
+    compile_resources()
 
     # 4. Build .pak
     build_pak()
+    verify_candidate()
 
     # 4. Optional install / activate
     if "--install" in args or "--activate" in args:
-        install_pak()
+        if not install_pak(allow_running_game='--allow-running-game' in args):
+            sys.exit('Installation failed; game configuration was not changed.')
 
     if "--activate" in args:
         activate_in_modsettings()

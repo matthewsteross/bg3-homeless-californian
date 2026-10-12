@@ -1,0 +1,10 @@
+*.pak binary
+*.dds binary
+*.DDS binary
+*.loca binary
+*.lsf binary
+*.png binary
+*.jpg binary
+
+# Generated source must retain the exact bytes used by the package builder.
+src/** -text

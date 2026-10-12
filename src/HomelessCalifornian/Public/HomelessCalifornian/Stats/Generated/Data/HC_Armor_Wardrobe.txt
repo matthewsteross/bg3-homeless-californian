@@ -1,0 +1,13 @@
+new entry "HC_ARM_MunicipallyApprovedLayers"
+type "Armor"
+using "ARM_Robe_Destroyed"
+data "RootTemplate" "caa09f50-bc44-5b59-839f-d3b214c22a37"
+data "Rarity" "Common"
+data "ValueOverride" "0"
+
+new entry "HC_ARM_LoadBearingTarp"
+type "Armor"
+using "ARM_Cloak"
+data "RootTemplate" "86b620d5-4260-5f41-b7c8-dab7a84e99c4"
+data "Rarity" "Common"
+data "ValueOverride" "0"

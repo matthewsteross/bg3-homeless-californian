@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="8" revision="0" build="10" />
+    <region id="ActionResourceDefinitions">
+        <node id="root">
+            <children>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h87f7aa59g7884g54c1gb826g0d211b779f92" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h1fc7fab1gfbd3g5b7cga689gf4553aa45c69" version="1" />
+                    <attribute id="Error" type="TranslatedString" handle="h3f21cff6gd67dg54fag98edg2a1143638a4b" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="HC_Junk" />
+                    <attribute id="ReplenishType" type="FixedString" value="ShortRest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
+                    <attribute id="UUID" type="guid" value="0fab7158-54e7-59ad-8ea2-59b0964105bb" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

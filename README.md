@@ -1,5 +1,52 @@
 # Baldur's Gate 3 - Homeless Californian Class Mod
 
+## October 12 Codex expansion — gameplay review in progress
+
+This build keeps the original class, race, UUID, and existing abilities, and adds a
+scavenged **Junk** supply shared by a new toolkit. File checks are required
+before installation; this section is not an in-game success claim.
+
+| Unlock | Addition | Intended behavior |
+|---|---|---|
+| Class 1 | Junk | 3 charges, replenished on short rest; 5 at class level 5, 7 at 9 |
+| Class 1 | Emotional Support Brick | Action + 1 Junk; ranged attack, 2d6 + CON Bludgeoning; failed CON save causes Dazed for 1 turn |
+| Class 1 | Bag of Other Bags | Action + 1 Junk; 2.5 m Web surface for 3 turns, concentration; affects allies too |
+| Class 1 | Load-Bearing Lawn Chair | Bonus action + 1 Junk; +2 AC, advantage on STR saves, Prone immunity for 2 turns |
+| Class 1 | Unclaimed Wardrobe | Action, once per long rest; optional ruined robe and cloak placed in inventory |
+| Class 2 | Dumpster Dive | Action outside combat, once per short rest; restores 2 Junk, up to capacity |
+| Tenderloin 3 | Pigeon Witness Protection | Action + 1 Junk, once per short rest; summons a vanilla raven familiar |
+| Venice 3 | Heirloom Furniture | Action + 1 Junk; melee hit for 3d6 + CON Bludgeoning, failed STR save knocks Prone; hit prepares a follow-up shiv |
+| Venice follow-up | Chair-Leg Shiv | Bonus-action melee attack for 2d6 + CON Piercing; consumes the temporary unlock |
+| BART 6 | Wrong Platform | Action + 1 Junk, once per short rest; failed WIS save swaps your position with an enemy |
+| Class 7 | Moving Day | While leaning: free, once per short rest; ends Lean, +6 m movement and difficult-terrain immunity for 1 turn |
+
+All ten local expansion abilities now have custom Gemini-generated icons,
+including matching icons for the Chair, Moving Day, and ready-Shiv statuses.
+The atlas grows automatically as new art is added. The abilities still use
+existing animations. The chair
+abilities do not display a new chair mesh. The "pigeon" is visibly a raven, and
+the wardrobe uses existing robe/cloak visuals, not a custom safety vest or
+blue tarp model. Guns and custom meshes are future work. The level-12
+Squatter's Rights capstone and Phase 2 class-depth choices remain design drafts;
+they are not included in this package.
+
+**Honest status:** source and package checks and 14 validation tests pass.
+Matthew began playtesting, but no individual new mechanic has been confirmed
+working in-game in the handover conversation. Wrong Platform's enemy swap is
+the most experimental addition. The installed/published icon build is
+14,932,869 bytes, SHA256
+`552ae557a794eb7a0a9799dfb2ca37421548f58bf5587533f7853d93263d63fc`.
+
+For existing characters, respec into the class or start a new test character
+to receive new progression grants. Confirm the UI and grants in-game; do not
+assume updating a package retroactively reapplies already-earned levels.
+
+Build-only: `python build.py`. The build now runs the local validator before
+an optional install. Run `py -3 -m unittest discover -s validation -p
+test_validate.py -v` for the deliberate-corruption checks. The saved original
+package can restore the previous build with BG3 closed. Keep the candidate
+out of co-op until both players intentionally use the same package.
+
 A custom class and race mod for **Baldur's Gate 3** introducing the **Homeless Californian** class (levels 1-12, three subclasses) and the **Californian** race (three subraces, a California identity / gender selector, and a restricted garish look).
 
 ---

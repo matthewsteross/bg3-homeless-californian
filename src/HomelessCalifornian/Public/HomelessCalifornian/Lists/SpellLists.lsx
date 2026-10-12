@@ -87,6 +87,30 @@
                     <attribute id="Spells" type="LSString" value="Target_VibeCheck"/>
                     <attribute id="UUID" type="guid" value="0259a9da-2913-5f47-9d65-8ee23e4de2da"/>
                 </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_EmotionalSupportBrick;HC_Target_BagOfOtherBags;HC_Shout_LoadBearingChair;HC_Shout_ClaimUnclaimedWardrobe"/>
+                    <attribute id="UUID" type="guid" value="938537ab-8cb8-558c-bacc-239e7818459c"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive"/>
+                    <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay"/>
+                    <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_PigeonWitnessProtection"/>
+                    <attribute id="UUID" type="guid" value="67548cfb-08e4-5dd5-9771-3583c635d527"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_HeirloomFurniture"/>
+                    <attribute id="UUID" type="guid" value="9787d8e8-23ff-5a42-a73d-0bc24d880c7a"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform"/>
+                    <attribute id="UUID" type="guid" value="7fb6225f-36e6-5040-b0bf-9b3fbee73264"/>
+                </node>
             </children>
         </node>
     </region>

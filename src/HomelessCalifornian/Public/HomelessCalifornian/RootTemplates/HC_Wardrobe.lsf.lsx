@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="0" revision="9" build="0" />
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="caa09f50-bc44-5b59-839f-d3b214c22a37" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_MunicipallyApprovedLayers" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="14c13bc9-ab35-4cab-a220-23a61cd43845" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_MunicipallyApprovedLayers" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_ARM_Robe_Destroyed_Crash" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hdf373687g3a73g5ef2gae4eg234a87811e37" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h859dc044ge244g5cb3gab16gb795a44f47bf" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="86b620d5-4260-5f41-b7c8-dab7a84e99c4" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_LoadBearingTarp" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="a1978b4d-3d93-49ec-9a8b-d19171ed35d5" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_LoadBearingTarp" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Generated_ARM_Cloak" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="he3fcda25g6853g59e5gba1ege20479673c2e" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h3730222cg0613g568bgad83g3eb56bd3419c" version="1" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
