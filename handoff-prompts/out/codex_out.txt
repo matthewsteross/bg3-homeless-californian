@@ -1,0 +1,34 @@
+OpenAI Codex v0.162.1
+--------
+workdir: C:\Users\matth\Documents\Baldurs Gate 3 Homeless Californian Class
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: none
+reasoning summaries: none
+session id: 01a13043-7493-77a1-9784-846e01a0c1c4
+--------
+user
+CONTEXT: Baldur's Gate 3 mod "Homeless Californian" (class + Californian race). Source of truth is the generator C:\Users\matth\Documents\Baldurs Gate 3 Homeless Californian Class\generate_mod.py; its output is under src\HomelessCalifornian\ (Public\HomelessCalifornian\Stats\Generated\Data\*.txt, Progressions, Races, Lists, CharacterCreation*, DefaultValues, Localization). Vanilla game data for comparison is extracted at C:\Users\matth\Documents\Baldurs Gate 3 Homeless Californian Class\temp_race\Public\Shared and \SharedDev (Stats\Generated\Data, Progressions, Races, Backgrounds, DefaultValues, CharacterCreationPresets...). A second, unrelated mod (PatriotClass, by another person) is installed alongside it; its unpacked source is at C:\Users\matth\Documents\bg3-meme-mods\mods\PatriotClass\source. READ-ONLY job: change nothing, create nothing, run no builds. Never suggest edits to PatriotClass; if you find something on its side, mention it once as 'Patriot-side note' only.
+RULES: verify every claim against the vanilla files before reporting it (an earlier reviewer flagged things vanilla does not actually do, so cite a vanilla file:line or say 'not verifiable'). Report at most 12 bullets, worst first, each: 'file:line - problem - evidence - one-line fix'. Say NONE if nothing real. No preamble.
+
+YOUR TASK (mechanics): audit every SpellData, PassiveData and StatusData in HomelessCalifornian's Stats\Generated\Data for things that load but silently do nothing or misbehave: boost/functor/condition names or argument shapes vanilla never uses (e.g. Advantage(Ability,<Skill>), attack types in damage-type slots), wrong context.Source/context.Target in OnAttacked/OnDamaged, unknown animation or effect UUIDs, missing CastTextEvent, inherited 'using' donors whose UseCosts/SpellFlags/tooltips leak through, statuses applied but undefined or defined but never applied, SpellSuccess/SpellFail used the wrong way round for saves, tooltips that promise things the functors do not do, and spells granted in Progressions or SpellLists that do not exist. Also list any entry that exists in Stats but is never granted or applied.
+
+exec
+"C:\\Users\\matth\\AppData\\Local\\Microsoft\\WindowsApps\\pwsh.exe" -Command "rg --files -g AGENTS.md -g generate_mod.py -g '*.txt' -g '*Progressions*' -g '*SpellLists*'" in C:\Users\matth\Documents\Baldurs Gate 3 Homeless Californian Class
+ exited -1 in 0ms:
+Failed to create unified exec process: helper_unknown_error: setup refresh had errors
+2026-10-12T13:18:18.022190Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"Failed to create unified exec process: helper_unknown_error: setup refresh had errors\")" }
+codex
+The read-only shell failed to start. I’m checking whether another available tool can read the files.
+exec
+"C:\\Users\\matth\\AppData\\Local\\Microsoft\\WindowsApps\\pwsh.exe" -NoProfile -Command "Get-Content -LiteralPath 'generate_mod.py' -TotalCount 5" in C:\Users\matth\Documents\Baldurs Gate 3 Homeless Californian Class
+ exited -1 in 0ms:
+Failed to create unified exec process: helper_unknown_error: setup refresh had errors
+2026-10-12T13:19:33.276644Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"Failed to create unified exec process: helper_unknown_error: setup refresh had errors\")" }
+codex
+- `generate_mod.py:line unavailable` - audit blocked; no findings verifiable - read-only shell failed twice with `helper_unknown_error: setup refresh had errors`, preventing access to mod and vanilla files - restore workspace read access and rerun the audit.
+tokens used
+10,022
+- `generate_mod.py:line unavailable` - audit blocked; no findings verifiable - read-only shell failed twice with `helper_unknown_error: setup refresh had errors`, preventing access to mod and vanilla files - restore workspace read access and rerun the audit.

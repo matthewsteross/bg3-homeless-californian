@@ -1,0 +1,50 @@
+### Bland, Confusing, or Weak Names/Descriptions and Their Punchier Replacements:
+
+1. **Homeless Californian**
+   - **New Name:** **"Concrete Jungle Survivor"**
+   - **New Description:** Master of makeshift biological warfare, erratic street fury, and the gravity-defying equilibrium of the legendary Fent Lean.
+
+2. **Venice Boardwalk Brawler**
+   - **New Name:** **"Boardwalk Bashmaster"**
+   - **New Description:** A ferocious close-quarters pugilist specializing in improvised shivs, reckless flurries, and chaotic shopping cart charges.
+
+3. **Aggressive Panhandling**
+   - **New Name:** **"Rust Bucket Rattler"**
+   - **New Description:** Shake a rusty cup aggressively at every enemy within 6m. Each must make a Wisdom saving throw or become Socially Shamed for 2 turns.
+
+4. **Turnstile Hop**
+   - **New Name:** **"BART Ghost"
+   - **New Description:** Slip through the fabric of reality like hopping a transit barrier. Teleport up to 18m as a Bonus Action. Once per turn.
+
+5. **Pocket Lint Buffet**
+   - **New Name:** **"Coat Marinating"**
+   - **New Description:** Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2 (minimum 3).
+
+6. **Biohazard Bomb**
+   - **New Name:** **"Street Slop Bomb"**
+   - **New Description:** Lob a pressurised five-gallon bucket of aged street slop. Explodes in a 4m radius dealing 6d6 Poison and 3d6 Acid damage (half on a successful Dexterity saving throw), inflicts Fecal Stench on anyone who fails, and leaves a lingering poison cloud.
+
+7. **Shopping Cart Charge**
+   - **New Name:** **"Rattling Rumble"**
+   - **New Description:** Shove a rattling grocery cart packed with scrap metal up to 9m into the enemy ranks, hitting the first creature in your path for 4d8 + Constitution Bludgeoning damage. On a failed Strength saving throw, the target is knocked Prone.
+
+8. **Encampment Sweep Survival Instinct**
+   - **New Name:** **"Cleanup Reflex"**
+   - **New Description:** The first time each combat that the municipal cleanup crew drops you below half Hit Points, you reflexively collapse into Fent Lean for 2 turns and gain 20 Temporary Hit Points.
+
+### Flavor Ideas:
+
+1. **"Sloppy Joe's Defence"**
+   - **Description:** Your combat tactics are as messy as a San Francisco street corner. Whenever you take damage, you can immediately use a reaction to gain 1d6 Temporary Hit Points.
+
+2. **"Bay Area Zen"**
+   - **Description:** Channel the laid-back vibe of the Bay Area. You gain Advantage on saving throws against being Charmed or Frightened.
+
+3. **"The Great Outdoors"**
+   - **Description:** Embody the spirit of outdoor living. You gain +2 to Constitution saving throws and resistances to Poison and Disease.
+
+4. **"420 Vision"**
+   - **Description:** Your mind is as clear as the air after a rain. You gain Advantage on Wisdom saving throws and can cast Detect Thoughts once per day.
+
+5. **"Surfer's Instinct"**
+   - **Description:** You move with the grace of a surfer. You gain +2 to Dexterity saving throws and can Dash as a Bonus Action without expending a move action.
