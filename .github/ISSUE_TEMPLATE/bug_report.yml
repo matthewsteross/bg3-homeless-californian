@@ -1,0 +1,61 @@
+name: Playtest bug report
+description: Report something broken in the Homeless Californian playtest.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing! This class is intentionally overpowered. Please report broken mechanics, crashes, missing abilities/icons, and compatibility problems. Balance feedback is welcome too; label it clearly.
+  - type: input
+    id: release
+    attributes:
+      label: Mod release
+      placeholder: playtest-2026-10-12
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: BG3 patch/build and platform
+      placeholder: Game build number, Windows / other
+    validations:
+      required: true
+  - type: input
+    id: character
+    attributes:
+      label: Class level, subclass, race and multiclass levels
+      placeholder: HC 6 / BART / Californian / no multiclass
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include location and ability names. Number the steps if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods and load order
+      description: Include ImprovedUI, Script Extender, level-cap mods, and other class/race mods if installed.
+    validations:
+      required: true
+  - type: textarea
+    id: save
+    attributes:
+      label: Save and reload details
+      description: New character, existing character, or respec? Does it happen again after reloading? Single-player or co-op?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or additional details
+      description: Optional. Do not include passwords, personal information, or account tokens.

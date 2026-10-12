@@ -1,5 +1,20 @@
 # Baldur's Gate 3 - Homeless Californian Class Mod
 
+## Public playtest
+
+[Download the playtest](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
+
+Intentionally overpowered: this is a ridiculous class with actions, saves,
+Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
+The starting-area test confirmed icons after a reload and castability of
+available spells. Full effect, progression and compatibility testing continues.
+The human directs the design; Claude, Gemini and Codex helped with code, and
+the custom icons were generated with Gemini.
+
+This download is the manual PC package. It is not yet a mod.io/in-game or
+console release. Use a separate test save; respec or start a new character if
+new progression grants are missing. Keep the mod installed on saves that use it.
+
 ## October 12 Codex expansion — gameplay review in progress
 
 This build keeps the original class, race, UUID, and existing abilities, and adds a
