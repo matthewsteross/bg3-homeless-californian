@@ -1907,7 +1907,7 @@ data "Description" "{h_prop47_desc};1"
 data "Icon" "Action_SneakAttack_Melee"
 data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "IsMeleeAttack()"
+data "Conditions" "IsMeleeAttack() and Enemy(context.Target)"
 data "StatsFunctors" "ApplyStatus(SELF,STOLEN_PATAGONIA,100,2)"
 
 new entry "PocketLintBuffet"
