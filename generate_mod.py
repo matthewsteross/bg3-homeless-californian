@@ -116,13 +116,13 @@ h_class_name = add_loca("class_name", "Homeless Californian")
 h_class_desc = add_loca("class_desc", "Hardened by the concrete jungles of San Francisco and Los Angeles, the Homeless Californian channels makeshift biological warfare, erratic street fury, and the gravity-defying equilibrium of the legendary Fent Lean.")
 
 h_sub_tenderloin_name = add_loca("sub_tenderloin_name", "Tenderloin Biohazard")
-h_sub_tenderloin_desc = add_loca("sub_tenderloin_desc", "Master of chemical concoctions and sidewalk biohazards. Amplifies the potency of toxic clouds, explosive biological payloads, and turns environmental hazards into personal restoration.")
+h_sub_tenderloin_desc = add_loca("sub_tenderloin_desc", "Master of chemical concoctions and sidewalk biohazards. Amplifies the potency of toxic clouds and explosive biological payloads, until every strike drips with poison.")
 
 h_sub_venice_name = add_loca("sub_venice_name", "Venice Boardwalk Brawler")
 h_sub_venice_desc = add_loca("sub_venice_desc", "A ferocious close-quarters pugilist specializing in improvised shivs, reckless flurries, and chaotic shopping cart charges.")
 
 h_sub_bart_name = add_loca("sub_bart_name", "BART Platform Menace")
-h_sub_bart_desc = add_loca("sub_bart_desc", "An erratic street phantom who slips through turnstiles and spatial dimensions, unleashing ear-piercing 3 AM screeches to disorient and terrorize foes.")
+h_sub_bart_desc = add_loca("sub_bart_desc", "An erratic street phantom who slips through turnstiles and spatial dimensions, never quite where the enemy expects.")
 
 # Spells & Actions - Class
 h_sling_poop_name = add_loca("sling_poop_name", "Sling Poop")
@@ -153,7 +153,7 @@ h_screech_name = add_loca("screech_name", "Feral Screech")
 h_screech_desc = add_loca("screech_desc", "Unleash an unhinged, ear-splitting 3 AM shriek. Every enemy within 9m takes 6d6 Thunder damage and must make a Wisdom saving throw or become Frightened for 2 turns; on a success, half damage and no fear. Recharges on a Short Rest.")
 
 h_tent_encampment_name = add_loca("tent_encampment_name", "Pitch Tent Encampment")
-h_tent_encampment_desc = add_loca("tent_encampment_desc", "Throw up a tarp-and-shopping-cart bunker. You and every ally within 5m gain 15 Temporary Hit Points, Resistance to Bludgeoning, Piercing and Slashing damage, and Sanctuary for 1 turn. Recharges on a Long Rest.")
+h_tent_encampment_desc = add_loca("tent_encampment_desc", "Throw up a tarp-and-shopping-cart bunker. You and every ally within 5m gain 15 Temporary Hit Points, Resistance to Bludgeoning, Piercing and Slashing damage for 3 turns, and Sanctuary for 1 turn. Recharges on a Long Rest.")
 
 h_biohazard_bomb_name = add_loca("biohazard_bomb_name", "Biohazard Bomb")
 h_biohazard_bomb_desc = add_loca("biohazard_bomb_desc", "Lob a pressurised five-gallon bucket of aged street slop. Explodes in a 4m radius dealing 6d6 Poison and 3d6 Acid damage (half on a successful Dexterity saving throw), inflicts Fecal Stench on anyone who fails, and leaves a lingering poison cloud. Recharges on a Short Rest.")
@@ -203,7 +203,7 @@ h_status_patagonia_name = add_loca("status_patagonia_name", "Stolen Patagonia Ve
 h_status_patagonia_desc = add_loca("status_patagonia_desc", "Warm, fleece-lined, and acquired without prosecution. +1 Armour Class and +1d4 Bludgeoning damage on weapon attacks.")
 
 h_pocket_lint_name = add_loca("pocket_lint_name", "Pocket Lint Buffet")
-h_pocket_lint_desc = add_loca("pocket_lint_desc", "Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Whenever you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2.")
+h_pocket_lint_desc = add_loca("pocket_lint_desc", "Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2 (minimum 3).")
 
 h_status_pocket_lint_name = add_loca("status_pocket_lint_name", "Pocket Lint Snack")
 h_status_pocket_lint_desc = add_loca("status_pocket_lint_desc", "Fortified by whatever was in that coat. Grants Temporary Hit Points.")
@@ -969,7 +969,7 @@ def generate_presets_lsx():
         <node id="root">
             <children>
                 <node id="DefaultValue">
-                    <attribute id="Add" type="LSString" value="Survival;Athletics"/>
+                    <attribute id="Add" type="LSString" value="Survival;Athletics;Stealth;Intimidation;Acrobatics"/>
                     <attribute id="Level" type="int32" value="1"/>
                     <attribute id="TableUUID" type="guid" value="{PROG_TABLE_UUID}"/>
                     <attribute id="UUID" type="guid" value="{DEFAULT_SKILL_UUID}"/>
@@ -1043,10 +1043,9 @@ def generate_races_lsx():
     # Read extracted human children, then restrict the Californian look:
     # hair/highlights only bright pink, blue or aqua; makeup and lipstick only garish shades.
     human_children_path = os.path.join(ASSETS_DIR, "human_race_children.xml")
-    human_children_xml = ""
-    if os.path.exists(human_children_path):
-        with open(human_children_path, "r", encoding="utf-8") as f:
-            human_children_xml = restrict_californian_look(f.read())
+    # Fail loudly: without this file the race silently ships with no hair/skin/eye options
+    with open(human_children_path, "r", encoding="utf-8") as f:
+        human_children_xml = restrict_californian_look(f.read())
 
     content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <save>
@@ -1951,7 +1950,7 @@ data "Description" "{h_encampment_sweep_desc};1"
 data "Icon" "Skill_Fighter_SecondWind"
 data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnDamaged"
-data "Conditions" "HasHPPercentageLessThan(50) and not HasStatus('SWEEP_COOLDOWN') and not HasStatus('FENT_LEAN')"
+data "Conditions" "Combat() and HasHPPercentageLessThan(50) and not HasStatus('SWEEP_COOLDOWN') and not HasStatus('FENT_LEAN')"
 data "StatsFunctors" "ApplyStatus(SELF,FENT_LEAN,100,2);ApplyStatus(SELF,SWEEP_SHELTER,100,-1);ApplyStatus(SELF,SWEEP_COOLDOWN,100,-1)"
 
 new entry "LeanDamageReflect"

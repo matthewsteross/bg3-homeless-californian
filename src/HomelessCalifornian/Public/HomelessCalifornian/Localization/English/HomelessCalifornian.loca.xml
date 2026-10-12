@@ -3,11 +3,11 @@
     <content contentuid="h0b7e5e2eg425fg5059g8d16ge0809b136535" version="1">Homeless Californian</content>
     <content contentuid="hc0752560g25acg587agaf4cg4df4dea28c20" version="1">Hardened by the concrete jungles of San Francisco and Los Angeles, the Homeless Californian channels makeshift biological warfare, erratic street fury, and the gravity-defying equilibrium of the legendary Fent Lean.</content>
     <content contentuid="heea9f4a0g0dc7g5cffg9af4g8b25a686b4a4" version="1">Tenderloin Biohazard</content>
-    <content contentuid="h1040dd11g2398g5229g9955gb3765f7007b1" version="1">Master of chemical concoctions and sidewalk biohazards. Amplifies the potency of toxic clouds, explosive biological payloads, and turns environmental hazards into personal restoration.</content>
+    <content contentuid="h1040dd11g2398g5229g9955gb3765f7007b1" version="1">Master of chemical concoctions and sidewalk biohazards. Amplifies the potency of toxic clouds and explosive biological payloads, until every strike drips with poison.</content>
     <content contentuid="ha852e5b7g4df9g501ag92e6gdcedf0378a4a" version="1">Venice Boardwalk Brawler</content>
     <content contentuid="h6c56a0e5g0556g5744ga807g5ac9630a88ca" version="1">A ferocious close-quarters pugilist specializing in improvised shivs, reckless flurries, and chaotic shopping cart charges.</content>
     <content contentuid="hce94c9c4g74e7g5b94gb59eg093f3c71383e" version="1">BART Platform Menace</content>
-    <content contentuid="hf4758c0bg1320g5783g897bga0499438ce9f" version="1">An erratic street phantom who slips through turnstiles and spatial dimensions, unleashing ear-piercing 3 AM screeches to disorient and terrorize foes.</content>
+    <content contentuid="hf4758c0bg1320g5783g897bga0499438ce9f" version="1">An erratic street phantom who slips through turnstiles and spatial dimensions, never quite where the enemy expects.</content>
     <content contentuid="h9603e071ga549g5726gbb4ag2d14032dff4c" version="1">Sling Poop</content>
     <content contentuid="h0a3da2ebg2d05g5a59gb669gb1cf0e6bffea" version="1">Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning (2d10 at level 5, 3d10 at level 10) and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.</content>
     <content contentuid="had359e51g6f8dg58c4gbf49g6b247ff31b9d" version="1">Sling Chunky Poop</content>
@@ -27,7 +27,7 @@
     <content contentuid="h4bd6d05fg6f25g56f2g850cg8c4b9fb89678" version="1">Feral Screech</content>
     <content contentuid="h1fec2d2fgc8c3g5631g94aag956e2fd38369" version="1">Unleash an unhinged, ear-splitting 3 AM shriek. Every enemy within 9m takes 6d6 Thunder damage and must make a Wisdom saving throw or become Frightened for 2 turns; on a success, half damage and no fear. Recharges on a Short Rest.</content>
     <content contentuid="hab8ef0c0gb722g52f3g90c6g0ff92241cc59" version="1">Pitch Tent Encampment</content>
-    <content contentuid="h7e9034f8g96ffg591cg9c06g4a28c8e55a8b" version="1">Throw up a tarp-and-shopping-cart bunker. You and every ally within 5m gain 15 Temporary Hit Points, Resistance to Bludgeoning, Piercing and Slashing damage, and Sanctuary for 1 turn. Recharges on a Long Rest.</content>
+    <content contentuid="h7e9034f8g96ffg591cg9c06g4a28c8e55a8b" version="1">Throw up a tarp-and-shopping-cart bunker. You and every ally within 5m gain 15 Temporary Hit Points, Resistance to Bludgeoning, Piercing and Slashing damage for 3 turns, and Sanctuary for 1 turn. Recharges on a Long Rest.</content>
     <content contentuid="hbc4941cegbba9g58aega36eg0fb9876088ff" version="1">Biohazard Bomb</content>
     <content contentuid="hd00c6dbbg55cbg54cdgbb43gf0bbd73f710e" version="1">Lob a pressurised five-gallon bucket of aged street slop. Explodes in a 4m radius dealing 6d6 Poison and 3d6 Acid damage (half on a successful Dexterity saving throw), inflicts Fecal Stench on anyone who fails, and leaves a lingering poison cloud. Recharges on a Short Rest.</content>
     <content contentuid="h8a83ef96gdec1g53d1gb759gf80112b29ac7" version="1">Broken 40oz Shank</content>
@@ -59,7 +59,7 @@
     <content contentuid="h047cfd9bg30cbg5bffg8317g6d6236050586" version="1">Stolen Patagonia Vest</content>
     <content contentuid="hb434be98g2a1ag5b58gaac3gffd6223381ae" version="1">Warm, fleece-lined, and acquired without prosecution. +1 Armour Class and +1d4 Bludgeoning damage on weapon attacks.</content>
     <content contentuid="hd85a3d34gc075g5c6cg954ag3e944ab7d6bc" version="1">Pocket Lint Buffet</content>
-    <content contentuid="hce56ddd2g4338g5318gb6a9g93df81702418" version="1">Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Whenever you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2.</content>
+    <content contentuid="hce56ddd2g4338g5318gb6a9g93df81702418" version="1">Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2 (minimum 3).</content>
     <content contentuid="hf5d55c9fgb73fg5d15g8bfega30f783353b7" version="1">Pocket Lint Snack</content>
     <content contentuid="ha7e412efg97bdg53dfg8c9agf96b857ea14c" version="1">Fortified by whatever was in that coat. Grants Temporary Hit Points.</content>
     <content contentuid="hd69c86b8g9935g5387gbb65g4df28932d4b4" version="1">Eviction Notice</content>
