@@ -316,7 +316,7 @@ h_hang_ten_name = add_loca("hang_ten_name", "Hang Ten")
 h_hang_ten_desc = add_loca("hang_ten_desc", "Catch the cosmic Pacific swell. Increases movement speed by 3m and grants immunity to difficult terrain and slipping on ice or grease for 2 turns.")
 
 h_vibe_check_name = add_loca("vibe_check_name", "Vibe Check")
-h_vibe_check_desc = add_loca("vibe_check_desc", "Subject a target's consciousness to a brutal seed-stage vibe check. Target must succeed a DC Wisdom saving throw or break concentration and suffer Existential Dread.")
+h_vibe_check_desc = add_loca("vibe_check_desc", "Subject a target's consciousness to a brutal seed-stage vibe check. Target must succeed a DC Wisdom saving throw or break concentration and become Vibe Checked.")
 
 h_earthquake_name = add_loca("earthquake_name", "Earthquake Sense")
 h_earthquake_desc = add_loca("earthquake_desc", "Born on the San Andreas Fault, you possess impeccable footing. You cannot be knocked Prone.")
