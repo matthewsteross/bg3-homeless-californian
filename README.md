@@ -11,7 +11,7 @@ subclasses: Tenderloin poison, Venice furniture melee, and BART repositioning.
 Try one subclass for ten minutes and tell us one thing that broke—or one thing
 that worked. [Start the short tester checklist](TESTING.md).
 
-The downloadable build is the October 13 playtest build (v0.2.0); the older
+The downloadable build is the October 13 playtest build (v0.2.1); the older
 October 12 build is still available on its own release page. Use the release ZIP
 for playtesting. The Toolkit upload is pending account resolution and publication;
 it is not confirmed available in the in-game menu.
@@ -20,8 +20,7 @@ Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
 available spells. Full effect, progression and compatibility testing continues.
-The human directs the design; Claude, Gemini and Codex helped with code, and
-the custom icons were generated with Gemini.
+The human directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, and ideation, and all custom icons and banners were generated with Gemini.
 
 This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
@@ -33,7 +32,7 @@ The repository source and `dist/HomelessCalifornian.pak` now contain a much larg
 playtest ZIP: the level-12 **Squatter's Rights** capstone, a **Street Trade** selector, **Junk Doctrines**, and the
 **Hustle kit** (Guilt Trip, Beg, Public Scene, Trapped in the Invisible Box, Bucket Drum Solo, Compassion Burnout,
 Punctured Lithium Cell, Sublet, Everybody Knows This Guy, plus the Homeless Fatigue and Breadcrumbed statuses).
-**Honest status:** file-level checks and 14 validation tests pass. In game, only "a character can reach level 12
+**Honest status:** file-level checks and 25 validation tests pass. In game, only "a character can reach level 12
 without a catastrophic failure" has been confirmed; individual abilities have not been tested, and **Beg** (gold from
 non-hostile NPCs) is the most experimental. Use a new character or a respec for new grants. Test routes for the new
 abilities are at the bottom of [TESTING.md](TESTING.md).
@@ -259,3 +258,14 @@ Baldurs Gate 3 Homeless Californian Class/
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.
+
+---
+
+## 👥 Contributors & AI Pair Programming Team
+
+- **Matthew (@themadhattermsr)** — Creator, Project Director, Gameplay Design & Live In-Game Playtester.
+- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA.
+- **Codex (OpenAI)** — BG3 Mechanics Audits, Engine Functors, Subclass Balance & Donor Specialist.
+- **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (all custom spell icons, class crests, status art, and Nexus banners).
+- **Local Model (Qwen / Ollama)** — Offline Flavor Text Ideation, Creative Brainstorming & Dialogue Concepts.
+

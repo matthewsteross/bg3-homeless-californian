@@ -186,6 +186,7 @@
                     <attribute id="UUID" type="guid" value="f139d976-7dfc-5de0-9ed8-ae79081af2b0"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(536189bc-d4a4-55b8-b808-b941621a6bbc)"/>
                     <attribute id="Level" type="uint8" value="10"/>
                     <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
                     <attribute id="PassivesAdded" type="LSString" value="KingOfTheBoardwalk"/>

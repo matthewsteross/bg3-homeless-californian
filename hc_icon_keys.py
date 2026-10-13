@@ -27,6 +27,8 @@ SPELL_ICON_KEYS = {
     'HC_Shout_CardboardInsulation': 'Spell_CardboardInsulation',
     'HC_Target_CurbsideClinic': 'Spell_CurbsideClinic',
     'HC_Target_BoardwalkDisarm': 'Spell_BoardwalkDisarm',
+    'HC_Target_FareInspection': 'Spell_FareInspection',
+    'HC_Target_ChairCheck': 'Spell_ChairCheck',
 }
 
 def icon_for_spell(spell, fallback):

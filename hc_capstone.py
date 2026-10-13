@@ -165,11 +165,11 @@ def generate_capstone(public_dir, add_loca, get_guid):
         'HC_Shout_SquattersRights_Tenderloin',
         'Shout_SecondWind',
         "Squatter's Rights: Condemned Block",
-        "Bonus Action: Claim this territory as a declared biohazard zone for 3 turns, and restore 7 Junk. Radiates Fecal Stench to all enemies within 6 m, protects concentration, and unlocks Condemn. Once per Long Rest. Possession is nine-tenths of the law. You have been possessing since Tuesday.",
+        "Bonus Action: Claim this territory as a declared biohazard zone for 3 turns, and restore all Junk. Radiates Fecal Stench to all enemies within 6 m, protects concentration, and unlocks Condemn. Once per Long Rest. Possession is nine-tenths of the law. You have been possessing since Tuesday.",
         UseCosts='BonusActionPoint:1',
         Cooldown='OncePerRest',
         Icon='Spell_SlingPoop',
-        SpellProperties='ApplyStatus(HC_SQUATTERS_TENDERLOIN,100,3);RestoreResource(HC_Junk,7,0)',
+        SpellProperties='ApplyStatus(HC_SQUATTERS_TENDERLOIN,100,3);RestoreResource(HC_Junk,100%,0)',
         TooltipStatusApply='ApplyStatus(HC_SQUATTERS_TENDERLOIN,100,3)'
     )
 
@@ -207,11 +207,11 @@ def generate_capstone(public_dir, add_loca, get_guid):
         'HC_Shout_SquattersRights_Venice',
         'Shout_SecondWind',
         "Squatter's Rights: Eviction Defense",
-        "Bonus Action: Surge into total territorial defense. Gain an immediate additional Action this turn (Action Surge), 3 turns of Eviction Defense (advantage on attack rolls, bonus-action Chair-Leg Shiv once per turn), and restore 7 Junk. Once per Long Rest. Some assembly was required. None will be accepted from the landlord.",
+        "Bonus Action: Surge into total territorial defense. Gain an immediate additional Action this turn (Action Surge), 3 turns of Eviction Defense (advantage on attack rolls, bonus-action Chair-Leg Shiv once per turn), and restore all Junk. Once per Long Rest. Some assembly was required. None will be accepted from the landlord.",
         UseCosts='BonusActionPoint:1',
         Cooldown='OncePerRest',
         Icon='Skill_Fighter_ActionSurge',
-        SpellProperties='ApplyStatus(ACTION_SURGE,100,1);ApplyStatus(HC_SQUATTERS_VENICE,100,3);RestoreResource(HC_Junk,7,0)',
+        SpellProperties='ApplyStatus(ACTION_SURGE,100,1);ApplyStatus(HC_SQUATTERS_VENICE,100,3);RestoreResource(HC_Junk,100%,0)',
         TooltipStatusApply='ApplyStatus(ACTION_SURGE,100,1);ApplyStatus(HC_SQUATTERS_VENICE,100,3)'
     )
 
@@ -241,11 +241,11 @@ def generate_capstone(public_dir, add_loca, get_guid):
         'HC_Shout_SquattersRights_BART',
         'Shout_SecondWind',
         "Squatter's Rights: Last Train Out",
-        "Bonus Action: Establish undisputed control of the transit hub for 3 turns, and restore 7 Junk. Gain +1 Reaction, +4.5 m movement speed, and unlock Platform Rescue (allied position swap) and Wrong Platform Express (bonus-action enemy position swap). Once per Long Rest. Stand clear of the closing doors.",
+        "Bonus Action: Establish undisputed control of the transit hub for 3 turns, and restore all Junk. Gain +1 Reaction, +4.5 m movement speed, and unlock Platform Rescue (allied position swap) and Wrong Platform Express (bonus-action enemy position swap). Once per Long Rest. Stand clear of the closing doors.",
         UseCosts='BonusActionPoint:1',
         Cooldown='OncePerRest',
         Icon='Action_BenignTransposition',
-        SpellProperties='ApplyStatus(HC_SQUATTERS_BART,100,3);RestoreResource(HC_Junk,7,0)',
+        SpellProperties='ApplyStatus(HC_SQUATTERS_BART,100,3);RestoreResource(HC_Junk,100%,0)',
         TooltipStatusApply='ApplyStatus(HC_SQUATTERS_BART,100,3)'
     )
 

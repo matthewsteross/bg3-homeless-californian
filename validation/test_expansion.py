@@ -34,7 +34,7 @@ class ExpansionGenerationTests(unittest.TestCase):
                 attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}
                 if 'HC_' in attrs['Spells']:
                     new_lists[attrs['UUID']] = attrs['Spells'].split(';')
-            self.assertEqual(len(new_lists), 19)
+            self.assertEqual(len(new_lists), 20)
             progressions = ET.parse(public / 'Progressions/Progressions.lsx')
             selectors = ';'.join(a.get('value', '') for a in progressions.findall('.//attribute[@id="Selectors"]'))
             for uid in new_lists:
@@ -48,7 +48,9 @@ class ExpansionGenerationTests(unittest.TestCase):
                         ('HomelessCalifornian', '10'): 'HC_Target_CompassionBurnout',
                         ('HomelessCalifornian', '11'): 'HC_Projectile_PuncturedLithiumCell',
                         ('VeniceBoardwalkBrawler', '6'): 'HC_Target_Sublet',
-                        ('TenderloinBiohazard', '10'): 'HC_Target_EverybodyKnowsThisGuy'}
+                        ('VeniceBoardwalkBrawler', '10'): 'HC_Target_ChairCheck',
+                        ('TenderloinBiohazard', '10'): 'HC_Target_EverybodyKnowsThisGuy',
+                        ('BARTPlatformMenace', '6'): 'HC_Target_FareInspection'}
             for node in progressions.findall('.//node[@id="Progression"]'):
                 attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}
                 spell = expected.get((attrs.get('Name'), attrs.get('Level')))
@@ -61,7 +63,7 @@ class ExpansionGenerationTests(unittest.TestCase):
             trade_nodes = lists = ET.parse(public / 'Lists/PassiveLists.lsx')
             options = next(n for n in trade_nodes.findall('.//node[@id="PassiveList"]')
                            if n.find('attribute[@id="UUID"]').get('value') == trade_list)
-            self.assertEqual(len(options.find('attribute[@id="Passives"]').get('value').split(',')), 3)
+            self.assertEqual(len(options.find('attribute[@id="Passives"]').get('value').split(',')), 4)
             self.assertEqual(selectors.count(f'SelectPassives({trade_list},1,HCStreetTrade)'), 1)
             doctrine_list = generator.get_guid('HC_JunkDoctrine_List')
             self.assertEqual(selectors.count(f'SelectPassives({doctrine_list},1,HCJunkDoctrine)'), 1)

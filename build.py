@@ -156,7 +156,7 @@ def activate_in_modsettings():
     ET.SubElement(new_node, "attribute", id="Name", type="LSString", value="Homeless Californian Class")
     ET.SubElement(new_node, "attribute", id="PublishHandle", type="uint64", value="0")
     ET.SubElement(new_node, "attribute", id="UUID", type="guid", value=MOD_UUID)
-    ET.SubElement(new_node, "attribute", id="Version64", type="int64", value="36028797018963968")
+    ET.SubElement(new_node, "attribute", id="Version64", type="int64", value="36028797018963969")
 
     tree.write(BG3_MODSETTINGS, encoding="utf-8", xml_declaration=True)
     print("  [OK] Added Homeless Californian to modsettings.lsx")

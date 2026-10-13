@@ -387,10 +387,10 @@ def generate_meta_lsx():
                     <attribute id="PublishHandle" type="uint64" value="6448585"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="{MOD_UUID}"/>
-                    <attribute id="Version64" type="int64" value="36028797018963968"/>
+                    <attribute id="Version64" type="int64" value="36028797018963969"/>
                     <children>
                         <node id="PublishVersion">
-                            <attribute id="Version64" type="int64" value="36028797018963968"/>
+                            <attribute id="Version64" type="int64" value="36028797018963969"/>
                         </node>
                     </children>
                 </node>
@@ -1016,7 +1016,8 @@ def _hue_class(hex_argb):
 
 def restrict_californian_look(children_xml: str) -> str:
     import json
-    colours = json.load(open(os.path.join(ASSETS_DIR, "cc_color_names.json"), encoding="utf-8"))
+    with open(os.path.join(ASSETS_DIR, "cc_color_names.json"), encoding="utf-8") as f:
+        colours = json.load(f)
     hair_ok = ("HAIR_Color_Pink_", "HAIR_Color_Blue_", "HAIR_Color_Aqua_")
     makeup_ok = ("Makeup_Pink", "Makeup_Blue", "Makeup_Aqua", "Makeup_Teal", "Makeup_Purple", "Makeup_Black")
 
@@ -1758,9 +1759,9 @@ data "Description" "{h_status_pocket_lint_desc};1"
 data "Icon" "PassiveFeature_PurityOfBody"
 data "StackId" "POCKET_LINT_SNACK"
 data "StackType" "Overwrite"
-data "Boosts" "TemporaryHP(max(1,ConstitutionModifier)+2)"
+data "Boosts" "IF(ConstitutionModifierGreaterThan(0)):TemporaryHP(ConstitutionModifier+2);IF(not ConstitutionModifierGreaterThan(0)):TemporaryHP(3)"
 data "RemoveConditions" "not HasTemporaryHP()"
-data "RemoveEvents" "OnStatusApplied"
+data "RemoveEvents" "OnDamage;OnStatusApplied"
 data "StatusPropertyFlags" "IgnoreResting"
 
 new entry "RENT_HIKE"
@@ -1809,7 +1810,7 @@ data "StackId" "SWEEP_SHELTER"
 data "StackType" "Overwrite"
 data "Boosts" "TemporaryHP(20)"
 data "RemoveConditions" "not HasTemporaryHP()"
-data "RemoveEvents" "OnStatusApplied"
+data "RemoveEvents" "OnDamage;OnStatusApplied"
 
 new entry "SWEEP_COOLDOWN"
 type "StatusData"
@@ -1854,7 +1855,7 @@ data "StackId" "AVOCADO_BLISS"
 data "StackType" "Overwrite"
 data "Boosts" "TemporaryHP(5)"
 data "RemoveConditions" "not HasTemporaryHP()"
-data "RemoveEvents" "OnStatusApplied"
+data "RemoveEvents" "OnDamage;OnStatusApplied"
 
 new entry "SELF_ACTUALIZED"
 type "StatusData"
@@ -1866,7 +1867,7 @@ data "StackId" "SELF_ACTUALIZED"
 data "StackType" "Overwrite"
 data "Boosts" "TemporaryHP(5)"
 data "RemoveConditions" "not HasTemporaryHP()"
-data "RemoveEvents" "OnStatusApplied"
+data "RemoveEvents" "OnDamage;OnStatusApplied"
 
 new entry "HANG_TEN"
 type "StatusData"

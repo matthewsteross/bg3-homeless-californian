@@ -156,7 +156,11 @@
                     <attribute id="UUID" type="guid" value="a7ab479a-303f-5b4e-af01-735240385d9f"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_ChairCheck"/>
+                    <attribute id="UUID" type="guid" value="536189bc-d4a4-55b8-b808-b941621a6bbc"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform;HC_Target_FareInspection"/>
                     <attribute id="UUID" type="guid" value="7fb6225f-36e6-5040-b0bf-9b3fbee73264"/>
                 </node>
                 <node id="SpellList">

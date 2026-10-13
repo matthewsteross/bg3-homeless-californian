@@ -184,6 +184,7 @@ raw_icons = {
 OPTIONAL_ICONS = [
     "Spell_SidewalkScramble", "Spell_FeralScreech", "Spell_EvictionNotice", "Spell_TentEncampment",
     "Spell_Call311", "Spell_BiohazardBomb", "Spell_BottleShank", "Spell_CartCharge", "Spell_TurnstileHop",
+    "Status_HomelessFatigue",
 ]
 OPTIONAL_ICONS += list(SPELL_ICON_KEYS.values())
 

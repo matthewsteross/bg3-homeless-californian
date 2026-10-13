@@ -40,7 +40,7 @@ data "Boosts" "{boost}"
         attrs = {a.get('id'): a.get('value') for a in ET.fromstring(block).findall('attribute')}
         if attrs.get('Name') == 'HomelessCalifornian' and attrs.get('Level') == '4':
             addition = f';SelectPassives({uid},1,HCJunkDoctrine)'
-            block = re.sub(r'(<attribute id="Selectors"[^>]*value=")([^"]*)("/>)', lambda m: m[1] + m[2] + addition + m[3], block, count=1)
+            block = re.sub(r'(<attribute id="Selectors"[^>]*value=")([^"]*)("\s*/>)', lambda m: m[1] + m[2] + addition + m[3], block, count=1)
             attached += 1
         return block
     updated = re.sub(r'<node id="Progression">(?:(?!<node).)*?</node>', attach, path.read_text(encoding='utf-8'), flags=re.S)
