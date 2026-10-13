@@ -2,7 +2,7 @@
 
 ## Public playtest
 
-[Download the playtest](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
+[Download the playtest (Oct 13 build)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-13) · [Nexus Mods page](https://www.nexusmods.com/baldursgate3/mods/25761) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
 
 **Throw bricks. Weaponise furniture. Make public transit everybody else's problem.**
 
@@ -11,9 +11,9 @@ subclasses: Tenderloin poison, Venice furniture melee, and BART repositioning.
 Try one subclass for ten minutes and tell us one thing that broke—or one thing
 that worked. [Start the short tester checklist](TESTING.md).
 
-The downloadable October 12 build is frozen while the next candidate develops.
-Repository source may contain newer, unreleased work; use the release ZIP for
-playtesting. The Toolkit upload is pending account resolution and publication;
+The downloadable build is the October 13 playtest build (v0.2.0); the older
+October 12 build is still available on its own release page. Use the release ZIP
+for playtesting. The Toolkit upload is pending account resolution and publication;
 it is not confirmed available in the in-game menu.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
