@@ -27,6 +27,17 @@ This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
 new progression grants are missing. Keep the mod installed on saves that use it.
 
+## October 13 build - capstone, Street Trade, Doctrines and the Hustle kit (NOT yet play-tested)
+
+The repository source and `dist/HomelessCalifornian.pak` now contain a much larger build than the October 12
+playtest ZIP: the level-12 **Squatter's Rights** capstone, a **Street Trade** selector, **Junk Doctrines**, and the
+**Hustle kit** (Guilt Trip, Beg, Public Scene, Trapped in the Invisible Box, Bucket Drum Solo, Compassion Burnout,
+Punctured Lithium Cell, Sublet, Everybody Knows This Guy, plus the Homeless Fatigue and Breadcrumbed statuses).
+**Honest status:** file-level checks and 14 validation tests pass. In game, only "a character can reach level 12
+without a catastrophic failure" has been confirmed; individual abilities have not been tested, and **Beg** (gold from
+non-hostile NPCs) is the most experimental. Use a new character or a respec for new grants. Test routes for the new
+abilities are at the bottom of [TESTING.md](TESTING.md).
+
 ## October 12 Codex expansion — gameplay review in progress
 
 This build keeps the original class, race, UUID, and existing abilities, and adds a

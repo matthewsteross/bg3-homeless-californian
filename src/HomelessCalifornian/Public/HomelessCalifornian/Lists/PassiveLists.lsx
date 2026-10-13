@@ -9,6 +9,8 @@
                     <attribute id="Passives" type="LSString" value="CaliforniaIdentity_Dude,CaliforniaIdentity_Founder,CaliforniaIdentity_Oat,CaliforniaIdentity_SelfActualized,CaliforniaIdentity_Algorithm"/>
                     <attribute id="UUID" type="guid" value="547c13c8-f7c5-50b6-9bab-b22cc6a3f096"/>
                 </node>
+                <node id="PassiveList"><attribute id="Name" type="FixedString" value="Street Trade" /><attribute id="Passives" type="LSString" value="HC_StreetTrade_Scrounger,HC_StreetTrade_Fixer,HC_StreetTrade_Lookout" /><attribute id="UUID" type="guid" value="99b4800f-9800-58ec-9330-ea7e91344f4c" /></node>
+                <node id="PassiveList"><attribute id="Name" type="FixedString" value="Junk Doctrine" /><attribute id="Passives" type="LSString" value="HC_JunkDoctrine_Hoarder,HC_JunkDoctrine_Fortifier,HC_JunkDoctrine_Runner" /><attribute id="UUID" type="guid" value="e126c785-20b5-5ddb-a6a5-d8c529b092b4" /></node>
             </children>
         </node>
     </region>

@@ -181,4 +181,68 @@
     <content contentuid="h3730222cg0613g568bgad83g3eb56bd3419c" version="1">A cloak promoted to roof, blanket, and legal address. Structurally sound until asked.</content>
     <content contentuid="h326aa4c0g2de3g5cb8g98d6g78938e4aa890" version="1">Unclaimed Wardrobe</content>
     <content contentuid="h10119b4cgb193g5205ga07bg53a47745f1d0" version="1">Find a set of Municipally Approved Layers and a Load-Bearing Tarp. Added to your inventory; equip them yourself. Ownership investigations are ongoing.</content>
+    <content contentuid="h5eb76735g7448g5e22g9100g61b35fbb7cb6" version="1">Coat-Hanger Slim Jim</content>
+    <content contentuid="h7dd3a1c0g6822g59a2g8663g8a89cd17bc1f" version="1">Unlock a door or container within 1.5 m. Costs an action and 1 Junk. Cannot open magical locks. Every lock is a suggestion with paperwork.</content>
+    <content contentuid="h04334570g2132g58c5gaf55g4dca7e030875" version="1">Curbside Needle Exchange</content>
+    <content contentuid="h545d4d9eg9f66g5789gb25ag80980574e844" version="1">Cure Poisoned, Diseased, Blinded and Paralysed on a living ally within 1.5 m, and restore 2d6 + Constitution modifier Hit Points. Costs an action and 1 Junk; once per short rest. The clinic has no address. It has standards.</content>
+    <content contentuid="h42db84c4g1ec7g58cdgbdc5g3bfb4e2d8107" version="1">Squatter's Rights: Condemned Block</content>
+    <content contentuid="h2ef3c36cg910fg5d58g8f77gc14f815aea60" version="1">Declared a municipal biohazard condemnation zone for 3 turns. Enemies within 6 m suffer Fecal Stench (disadvantage on attack rolls and turn-based poison damage). You gain advantage on Concentration checks and can cast Condemn.</content>
+    <content contentuid="hbb778f06geff5g509fg9ec9gcda5d16d7e21" version="1">Squatter's Rights: Eviction Defense</content>
+    <content contentuid="h209cb897gc3c0g5292g90a6g08baacb9d90d" version="1">Holding the property by force for 3 turns. You gain advantage on attack rolls, and can strike with an Emergency Chair-Leg Shiv using a Bonus Action once per turn without preparing furniture first.</content>
+    <content contentuid="h69b86776gedb2g5a70ga0c8ge932df6fc671" version="1">Squatter's Rights: Last Train Out</content>
+    <content contentuid="he732c457gdbf9g52fcg8a0dg2cee25483387" version="1">You command the transit interchange for 3 turns. Gain +1 Reaction and +4.5 m movement speed. Unlocks Platform Rescue to swap positions with willing allies, and Wrong Platform Express to swap enemies using a Bonus Action.</content>
+    <content contentuid="h66a6e30bga3bbg5c67gab86g56e75e94fc9c" version="1">Squatter's Rights: Condemned Block</content>
+    <content contentuid="h7102aeedgd025g5c14g8813gbaa1dd64a513" version="1">Bonus Action: Claim this territory as a declared biohazard zone for 3 turns, and restore 7 Junk. Radiates Fecal Stench to all enemies within 6 m, protects concentration, and unlocks Condemn. Once per Long Rest. Possession is nine-tenths of the law. You have been possessing since Tuesday.</content>
+    <content contentuid="hadfba5bdg07e9g57f8gb962g68df718093d8" version="1">Condemn Block</content>
+    <content contentuid="h5e5a0f9eg4f76g5536g827bgc866f7ae9f46" version="1">Hurl concentrated biohazard waste at an enemy: 3d8 Poison damage on a failed Constitution save (half damage on save), and inflicts Fecal Stench for 3 turns. Costs 1 Action and 2 Junk. Once per turn while Condemned Block is active.</content>
+    <content contentuid="he560fe23g9307g573bgb9a1g911ef8f3d2b7" version="1">Squatter's Rights: Eviction Defense</content>
+    <content contentuid="h7522ca89g7c47g5efdg839agf052988a5077" version="1">Bonus Action: Surge into total territorial defense. Gain an immediate additional Action this turn (Action Surge), 3 turns of Eviction Defense (advantage on attack rolls, bonus-action Chair-Leg Shiv once per turn), and restore 7 Junk. Once per Long Rest. Some assembly was required. None will be accepted from the landlord.</content>
+    <content contentuid="h9c071cbfg843cg5c85ga72bgea0070897448" version="1">Emergency Chair-Leg Shiv</content>
+    <content contentuid="hab93e76eg66cag5a96ga0edg87efd8e324a7" version="1">Bonus Action melee weapon attack: 2d6 + Constitution modifier Piercing damage. Ready-to-use splinter weapon usable once per turn while Eviction Defense is active without needing to smash furniture first.</content>
+    <content contentuid="hf34f08ebgfc3dg5392g83e6gdc004520c1ce" version="1">Squatter's Rights: Last Train Out</content>
+    <content contentuid="h2a658dbfgc19cg5b0bga83cgb9b9fbd4146e" version="1">Bonus Action: Establish undisputed control of the transit hub for 3 turns, and restore 7 Junk. Gain +1 Reaction, +4.5 m movement speed, and unlock Platform Rescue (allied position swap) and Wrong Platform Express (bonus-action enemy position swap). Once per Long Rest. Stand clear of the closing doors.</content>
+    <content contentuid="hc9c990abgb146g528agbd2bg58dd298bb701" version="1">Platform Rescue</content>
+    <content contentuid="ha86ea2edgf10eg5f10gb010ge9d834ef1c08" version="1">Bonus Action: Swap positions with a willing ally within 12 m. Costs 1 Bonus Action and 1 Junk. Pull an overextended partner back to safety or slingshot them into position.</content>
+    <content contentuid="h10fc7b1fgc8e5g51ddg956dg4a62eb5bfd3e" version="1">Wrong Platform Express</content>
+    <content contentuid="ha36a2582g2e72g5737g8818gf3f811c3ef40" version="1">Bonus Action: Target an enemy within 9 m. On a failed Wisdom saving throw, instantly swap positions with it. Costs 1 Bonus Action and 1 Junk; once per turn while Last Train Out is active.</content>
+    <content contentuid="hce74994cgc915g577egafd8g80586b3d206d" version="1">Homeless Fatigue</content>
+    <content contentuid="h17e29a56g0935g53f8g8545g2ac5ede20b3f" version="1">They have stopped seeing you, and honestly everything else too. Attack rolls against them have advantage.</content>
+    <content contentuid="h00639e31g7accg532fg9ed8g8ef33dad4fc5" version="1">Trapped in the Invisible Box</content>
+    <content contentuid="ha79c9e24g8b81g512cgb147g579aa02af233" version="1">Pressing hands against a wall that is not there. Cannot move.</content>
+    <content contentuid="hd268a5a5gbd9cg562fgac6cgdbf8d1581525" version="1">Breadcrumbed</content>
+    <content contentuid="hfaa0f8eag7736g571ag9775gfd969046952c" version="1">A flock has taken an interest. Attack rolls against the target have advantage, and its own attack rolls have disadvantage.</content>
+    <content contentuid="h83ee164cg56bdg5498g9a68g6005959bc036" version="1">Guilt Trip</content>
+    <content contentuid="h7c7909d3g9e3cg50f9g9455gd298a2ac99a1" version="1">Make it land. Costs a bonus action and 1 Junk. A Socially Shamed target takes 2d6 + Constitution modifier Psychic damage and the shame is spent. Do you have any idea what groceries cost?</content>
+    <content contentuid="h3a141187g86ddg548cga9eeg46e62266b24e" version="1">Public Scene</content>
+    <content contentuid="hc6a43fecg7e2fg52acg926ag6fc34112530a" version="1">Escalate. Costs an action and 1 Junk. A Socially Shamed target makes a Wisdom saving throw or becomes Frightened for 2 turns. Everyone is looking. Everyone.</content>
+    <content contentuid="h021765ddg86acg5755g99e4g79f7454784a8" version="1">Trapped in the Invisible Box</content>
+    <content contentuid="h9189a0b7g24bag5aeegb8c2g79bd05e99264" version="1">An invisible box appears. It is extremely real to the target. Costs an action and 1 Junk; once per short rest. The target makes a Wisdom saving throw or cannot move for 1 turn.</content>
+    <content contentuid="ha839e08cg4616g5440ga934gd3a705ffb872" version="1">Compassion Burnout</content>
+    <content contentuid="hf46dfeadg9961g5bb7gb3dbg9cae5c4a3bbb" version="1">Their patience snaps. Costs a bonus action and 1 Junk. A target with Homeless Fatigue takes 3d6 Psychic damage and the fatigue ends.</content>
+    <content contentuid="h73dfa25ag22b5g58c7g9848gdfa43d838484" version="1">Beg</content>
+    <content contentuid="h717ec604g685ag589cgb2b4g855819d999f4" version="1">Ask a non-hostile stranger for spare change. Costs an action; once per short rest. The target makes a Wisdom saving throw. On a failure they hand over 5 gold. Either way they gain Homeless Fatigue and will not be swayed again.</content>
+    <content contentuid="h77355bbegb7fag5963g8d23g8534c069e4eb" version="1">Bucket Drum Solo</content>
+    <content contentuid="h281daf00gda8eg55acgb47dg4cc5ec0417d5" version="1">Play the five-gallon bucket like it owes you money. Costs an action and 1 Junk. Creatures in the cone make a Constitution saving throw, taking 2d6 Thunder damage and being pushed back on a failure, or half damage on a success. Failures gain Homeless Fatigue for 3 turns.</content>
+    <content contentuid="hba63d615ga8d4g543dg9979g1edc27d8b84d" version="1">Sublet</content>
+    <content contentuid="hb67eb237gabe3g5302g8940gfe3202b7a8f2" version="1">Rent out your doorway. Costs an action and 1 Junk. An ally within 9 m gets the Lawn Chair treatment for 2 turns: +2 AC, advantage on Strength saving throws and immunity to being knocked Prone. You do not get it. Rent is due.</content>
+    <content contentuid="h9c879ddfga681g5b9fg8522g3c76f0c293bd" version="1">Everybody Knows This Guy</content>
+    <content contentuid="h28195bf7gb687g5ed2g8c41g1c3ee3837600" version="1">The flock knows who owes them lunch. Costs an action and 1 Junk. The target makes a Wisdom saving throw or becomes Breadcrumbed for 2 turns: attack rolls against it have advantage, and its own attack rolls have disadvantage.</content>
+    <content contentuid="he53d7119g311eg5830g9e58ge0f5bae7841a" version="1">Punctured Lithium Cell</content>
+    <content contentuid="h7476ab46gbe37g5fa2g8da3g20b03a190598" version="1">Hurl a swollen scooter battery. Costs an action and 1 Junk. Ranged spell attack for 2d6 Lightning plus 2d6 Fire damage, and it sets the ground alight. Indoors, mind your friends.</content>
+    <content contentuid="h2978a6a4g747cg5c3fg8986g79a0712a4d95" version="1">Scrounger</content>
+    <content contentuid="h1564b50bg20ddg52e9g9531g0da91a4844f5" version="1">Advantage on Investigation and Survival ability checks. You know what is useful, what is edible, and which one matters today.</content>
+    <content contentuid="h4c710478gc888g55d6g8aa6g30da3e15fb3c" version="1">Fixer</content>
+    <content contentuid="h8d166d93g4045g5417gb8cdgd04e4e586e38" version="1">Advantage on Persuasion and Deception ability checks. The paperwork is missing. The confidence is not.</content>
+    <content contentuid="h445a96d8g6f98g5485g89c5g60ef4dfb77ec" version="1">Lookout</content>
+    <content contentuid="h1d59e65dg9183g5f5eg90ccg15e507d645a9" version="1">Advantage on Perception and Stealth ability checks. Notice the trouble before it notices your address.</content>
+    <content contentuid="hd3a698f9g518ag55fbga575g96c5ef775d10" version="1">Street Trade</content>
+    <content contentuid="hd5246a57g61d2g510aga1b6g8cbd5045430a" version="1">Choose one exploration trade. Each grants advantage on two ability checks. Respec to change your choice.</content>
+    <content contentuid="h14e560a0gd206g59abga4a9g11bca1568e08" version="1">Hoarder</content>
+    <content contentuid="h7e015711g5dbfg528cgae96gfdf63b6bb616" version="1">Maximum Junk increased by 2. Your pockets have annexed the neighbouring pockets.</content>
+    <content contentuid="hd36fd9a6g0541g5492ga3e9gd7ba5e93ce8f" version="1">Fortifier</content>
+    <content contentuid="h298a2bd6g6085g5a95gb740g4e4ac98193ce" version="1">+1 Armour Class. Every layer of rubbish is another layer of plausible protection.</content>
+    <content contentuid="h089821ddg55dag5b10g8884g49b07e7ee9e3" version="1">Runner</content>
+    <content contentuid="h1f1c734cga30fg50b0gb0c1g39999aa08826" version="1">+3 m movement speed. You have never missed a train you were already chasing.</content>
+    <content contentuid="hb488f482ge77bg51d1g85cdgacfdcba0b537" version="1">Junk Doctrine</content>
+    <content contentuid="h44544886gad82g5325gaa5dga57c0370747d" version="1">Choose more Junk, better protection or faster movement. Respec to change your doctrine.</content>
 </contentList>

@@ -10,6 +10,8 @@
                     <attribute id="SelectorId" type="FixedString" value="CaliforniaIdentity"/>
                     <attribute id="UUID" type="guid" value="a572cc11-cd4b-5bdc-9c0d-30064927d02c"/>
                 </node>
+                <node id="ProgressionDescription"><attribute id="DisplayName" type="TranslatedString" handle="hd3a698f9g518ag55fbga575g96c5ef775d10" version="1" /><attribute id="Description" type="TranslatedString" handle="hd5246a57g61d2g510aga1b6g8cbd5045430a" version="1" /><attribute id="SelectorId" type="FixedString" value="HCStreetTrade" /><attribute id="UUID" type="guid" value="15d5007a-4ec6-5e1f-82c4-3eff4edf157f" /></node>
+                <node id="ProgressionDescription"><attribute id="DisplayName" type="TranslatedString" handle="hb488f482ge77bg51d1g85cdgacfdcba0b537" version="1" /><attribute id="Description" type="TranslatedString" handle="h44544886gad82g5325gaa5dga57c0370747d" version="1" /><attribute id="SelectorId" type="FixedString" value="HCJunkDoctrine" /><attribute id="UUID" type="guid" value="5b22d0b1-d3ba-556e-a734-c4ea81c42d48" /></node>
             </children>
         </node>
     </region>

@@ -5,6 +5,7 @@ for both the Homeless Californian Class and the Californian Race.
 """
 
 import os
+import shutil
 import uuid
 import xml.etree.ElementTree as ET
 
@@ -383,7 +384,7 @@ def generate_meta_lsx():
                     <attribute id="Name" type="LSString" value="Homeless Californian Class"/>
                     <attribute id="NumPlayers" type="uint8" value="4"/>
                     <attribute id="PhotoBooth" type="FixedString" value=""/>
-                    <attribute id="PublishHandle" type="uint64" value="0"/>
+                    <attribute id="PublishHandle" type="uint64" value="6448585"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="{MOD_UUID}"/>
                     <attribute id="Version64" type="int64" value="36028797018963968"/>
@@ -400,6 +401,10 @@ def generate_meta_lsx():
 """
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
+    # The in-game installed-mod list reads the module's publish preview.
+    # 16:9 banner (the square crest rendered blank in the mod list).
+    shutil.copy2(os.path.join(ASSETS_DIR, 'icons', 'HomelessCalifornianModLogo.png'),
+                 os.path.join(MODS_DIR, 'mod_publish_logo.png'))
     print(f"Generated: {path}")
 
 
@@ -763,6 +768,10 @@ def generate_progressions_lsx():
          passives="Evasion;UncannyDodge")
     prog("Prog_BART_L10", "BARTPlatformMenace", 10, SUBCLASS_BART_TABLE_UUID, ptype=1,
          passives="LastTrainPhantom", selectors=f"AddSpells({SPELLLIST_BART_L10})")
+    for category, table in [('TenderloinBiohazard', SUBCLASS_TENDERLOIN_TABLE_UUID),
+                            ('VeniceBoardwalkBrawler', SUBCLASS_VENICE_TABLE_UUID),
+                            ('BARTPlatformMenace', SUBCLASS_BART_TABLE_UUID)]:
+        prog(f'Prog_{category}_Lvl12', category, 12, table, ptype=1)
 
     # --- RACIAL PROGRESSIONS (Type 2) ---
     # Californian Base Race Progression (Levels 1 - 12)
@@ -2138,10 +2147,31 @@ def generate_local_expansion():
     from xml.sax.saxutils import escape
     from hc_expansion import generate_expansion
     from hc_outfit import generate_outfit
+    from hc_utility import generate_utility
+    from hc_choices import generate_choices
+    from hc_capstone import generate_capstone
+    from hc_doctrines import generate_doctrines
 
     grants = generate_expansion(PUBLIC_DIR, add_loca, get_guid)
     wardrobe = generate_outfit(PUBLIC_DIR, add_loca, get_guid)
     grants['base'].setdefault(1, []).append(wardrobe)
+    utility = generate_utility(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in utility['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    for category, levels in utility['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    capstone = generate_capstone(PUBLIC_DIR, add_loca, get_guid)
+    for category, levels in capstone['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_hustle import generate_hustle
+    hustle = generate_hustle(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in hustle['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    for category, levels in hustle['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}
@@ -2197,6 +2227,8 @@ def generate_local_expansion():
         raise ValueError(f'Expansion grants lack progression nodes: {sorted(missing)}')
     with open(prog_path, 'w', encoding='utf-8') as f:
         f.write(text)
+    generate_choices(PUBLIC_DIR, add_loca, get_guid)
+    generate_doctrines(PUBLIC_DIR, add_loca, get_guid)
 
 
 def main():

@@ -1,3 +1,5 @@
+> **SUPERSEDED 2026-10-13: read `HANDOFF-2026-10-13.md` first.** The repo is now public and the mod is on Nexus; the "all pushed, installed, clean" status below is out of date.
+
 # HANDOFF for a fresh Claude instance (written 2026-10-12 by Sonnet 5.5 for Matt)
 
 ## Goal now

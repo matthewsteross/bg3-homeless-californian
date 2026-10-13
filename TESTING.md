@@ -45,3 +45,24 @@ Share the release link with players who enjoy absurd custom classes. One clear
 example of what happened in-game is more useful than repeated promotional posts.
 The design is directed by Matthew; Claude, Gemini and Codex assist with code,
 and Gemini generated custom icon art. Follow each community's posting rules.
+
+
+## October 13 build - new abilities to try (all untested in game)
+
+Pick one or two; ten minutes is plenty. New grants need a new character or a respec. Reach the listed class level
+(a fast way: level up in a test save).
+
+| Class level | Try | What to report |
+|---|---|---|
+| 2 then 5 | Aggressive Panhandling an enemy, then **Guilt Trip** it | Damage dealt AND Socially Shamed removed? Un-castable on an un-shamed target? |
+| 6 | **Public Scene** on a shamed enemy | Frightened on a failed save? |
+| 8 | **Trapped in the Invisible Box** | Enemy cannot move for a turn? Short rest resets it? |
+| 9 | **Bucket Drum Solo** into a group | Damage, push, Homeless Fatigue icon, advantage against fatigued targets? |
+| 10 | **Compassion Burnout** on a fatigued target | Damage and fatigue removed? |
+| 11 | **Punctured Lithium Cell** | Both damage types, fire on the ground, friendly-fire indoors? |
+| Venice 6 | **Sublet** on an ally | Ally gets +2 AC / STR-save advantage / Prone immunity, you do not? |
+| Tenderloin 10 | **Everybody Knows This Guy** | Breadcrumbed status, advantage against, disadvantage on its attacks? |
+| 5 | **Beg** on a friendly NPC (trader, townsperson) | Did gold arrive in YOUR inventory? Did the NPC turn hostile or cause a crime? Did Homeless Fatigue stay on them? |
+| 12 | Subclass **Squatter's Rights** capstone | Does it activate, grant its effects, and expire as described? |
+
+Please say which build you used (the Nexus file is version 0.2.0, the 2026-10-13 build).
