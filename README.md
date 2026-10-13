@@ -4,6 +4,18 @@
 
 [Download the playtest](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
 
+**Throw bricks. Weaponise furniture. Make public transit everybody else's problem.**
+
+Looking for PC testers for a ridiculous Constitution-based class with three
+subclasses: Tenderloin poison, Venice furniture melee, and BART repositioning.
+Try one subclass for ten minutes and tell us one thing that broke—or one thing
+that worked. [Start the short tester checklist](TESTING.md).
+
+The downloadable October 12 build is frozen while the next candidate develops.
+Repository source may contain newer, unreleased work; use the release ZIP for
+playtesting. The Toolkit upload is pending account resolution and publication;
+it is not confirmed available in the in-game menu.
+
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
@@ -46,8 +58,8 @@ Squatter's Rights capstone and Phase 2 class-depth choices remain design drafts;
 they are not included in this package.
 
 **Honest status:** source and package checks and 14 validation tests pass.
-Matthew began playtesting, but no individual new mechanic has been confirmed
-working in-game in the handover conversation. Wrong Platform's enemy swap is
+Matthew confirmed starting-area icons after reload and castability of available
+spells; individual effects still need testing. Wrong Platform's enemy swap is
 the most experimental addition. The installed/published icon build is
 14,932,869 bytes, SHA256
 `552ae557a794eb7a0a9799dfb2ca37421548f58bf5587533f7853d93263d63fc`.
