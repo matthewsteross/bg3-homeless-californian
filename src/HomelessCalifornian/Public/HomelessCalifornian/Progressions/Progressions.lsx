@@ -250,7 +250,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Californian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405;RunyonCanyonGlutes"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
                     <attribute id="Selectors" type="LSString" value="SelectPassives(547c13c8-f7c5-50b6-9bab-b22cc6a3f096,1,CaliforniaIdentity);AddSpells(51fb8228-c489-56ca-9757-19a03867dccb,,Charisma,,AlwaysPrepared)"/>
                     <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>
@@ -353,6 +353,7 @@
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="Beachborn"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(77b6c7c1-0ee7-5660-8307-a3d0ca90cf8f,,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
                     <attribute id="UUID" type="guid" value="210c48f6-670a-546f-91e8-585ea17bcfcf"/>
                 </node>
@@ -367,6 +368,7 @@
                     <attribute id="Level" type="uint8" value="5"/>
                     <attribute id="Name" type="LSString" value="Beachborn"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e6df496d-9dcd-5474-8d09-2d29b63d6cfe,,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="1386388d-29d2-5d2f-9574-03ea1a7a7c6a"/>
                     <attribute id="UUID" type="guid" value="d609f35d-a3b5-50f2-8629-ffd4758be606"/>
                 </node>
@@ -439,6 +441,7 @@
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="Siliconite"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(5c6cf44b-e981-5544-8fc6-66b5eb9ae5c9,,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
                     <attribute id="UUID" type="guid" value="b02a1121-c6ed-5efb-9332-8e5adeb3b097"/>
                 </node>
@@ -453,6 +456,7 @@
                     <attribute id="Level" type="uint8" value="5"/>
                     <attribute id="Name" type="LSString" value="Siliconite"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(4d0c15ce-6278-5b24-a321-a8d2a91592d7,,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
                     <attribute id="UUID" type="guid" value="b3501a61-688e-594b-94e6-08d7357dcdda"/>
                 </node>
@@ -511,6 +515,7 @@
                     <attribute id="Name" type="LSString" value="InlandEmperor"/>
                     <attribute id="PassivesAdded" type="LSString" value="Passive_SmogLungs;Passive_HeatIndexMastery"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(37a7f600-db05-51cf-afd9-97edc9991df0,,Charisma,,AlwaysPrepared)"/>
                     <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
                     <attribute id="UUID" type="guid" value="4b58ebfe-2a81-59ef-b4b8-93b773525c9c"/>
                 </node>
@@ -525,6 +530,7 @@
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="InlandEmperor"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(71f3e612-736a-5a6a-958e-1d5bc104d5fe,,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
                     <attribute id="UUID" type="guid" value="110e2718-ff51-5d89-94dd-c3d1b76a9937"/>
                 </node>
@@ -539,6 +545,7 @@
                     <attribute id="Level" type="uint8" value="5"/>
                     <attribute id="Name" type="LSString" value="InlandEmperor"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(1fe386e6-76d4-5f9c-8474-70fb43be7248,,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="24cab329-aa8f-54ab-8943-fdf6ca43d414"/>
                     <attribute id="UUID" type="guid" value="d149a109-8bf5-5c56-a95f-666d6cd2401e"/>
                 </node>

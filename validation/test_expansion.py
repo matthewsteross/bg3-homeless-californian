@@ -43,6 +43,7 @@ class ExpansionGenerationTests(unittest.TestCase):
                         ('TenderloinBiohazard', '6'): 'HC_Target_CurbsideClinic',
                         ('HomelessCalifornian', '5'): 'HC_Target_GuiltTrip',
                         ('HomelessCalifornian', '6'): 'HC_Target_PublicScene',
+                        ('HomelessCalifornian', '7'): 'HC_Shout_IWasHereFirst',
                         ('HomelessCalifornian', '8'): 'HC_Target_TrappedInTheInvisibleBox',
                         ('HomelessCalifornian', '9'): 'HC_Zone_BucketDrumSolo',
                         ('HomelessCalifornian', '10'): 'HC_Target_CompassionBurnout',
@@ -63,9 +64,12 @@ class ExpansionGenerationTests(unittest.TestCase):
             trade_nodes = lists = ET.parse(public / 'Lists/PassiveLists.lsx')
             options = next(n for n in trade_nodes.findall('.//node[@id="PassiveList"]')
                            if n.find('attribute[@id="UUID"]').get('value') == trade_list)
-            self.assertEqual(len(options.find('attribute[@id="Passives"]').get('value').split(',')), 4)
+            self.assertEqual(len(options.find('attribute[@id="Passives"]').get('value').split(',')), 5)
             self.assertEqual(selectors.count(f'SelectPassives({trade_list},1,HCStreetTrade)'), 1)
             doctrine_list = generator.get_guid('HC_JunkDoctrine_List')
+            doctrine_options = next(n for n in trade_nodes.findall('.//node[@id="PassiveList"]')
+                                    if n.find('attribute[@id="UUID"]').get('value') == doctrine_list)
+            self.assertEqual(len(doctrine_options.find('attribute[@id="Passives"]').get('value').split(',')), 4)
             self.assertEqual(selectors.count(f'SelectPassives({doctrine_list},1,HCJunkDoctrine)'), 1)
             for node in progressions.findall('.//node[@id="Progression"]'):
                 attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}
@@ -91,6 +95,60 @@ class ExpansionGenerationTests(unittest.TestCase):
             self.assertEqual(resource_names, ['HC_Junk'])
             roots = ET.parse(public / 'RootTemplates/HC_Wardrobe.lsf.lsx')
             self.assertEqual(len(roots.findall('.//node[@id="GameObjects"]')), 2)
+
+    def test_californian_racial_progression_wiring(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory)
+            public = source / 'Public/HomelessCalifornian'
+            with patch.object(generator, 'PUBLIC_DIR', str(public)), \
+                 patch.object(generator, 'MODS_DIR', str(source / 'Mods/HomelessCalifornian')), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                generator.main()
+
+            lists = ET.parse(public / 'Lists/SpellLists.lsx')
+            spell_lists = {}
+            for node in lists.findall('.//node[@id="SpellList"]'):
+                attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}
+                spell_lists[attrs['UUID']] = attrs['Spells'].split(';')
+
+            self.assertIn('Target_RipCurrent', spell_lists[generator.SPELLLIST_BEACHBORN_L3])
+            self.assertIn('Shout_GoldenHour', spell_lists[generator.SPELLLIST_BEACHBORN_L5])
+            self.assertIn('Target_DisruptivePivot', spell_lists[generator.SPELLLIST_SILICONITE_L3])
+            self.assertIn('Target_NonDisclosureAgreement', spell_lists[generator.SPELLLIST_SILICONITE_L5])
+            self.assertIn('Shout_DustDevil', spell_lists[generator.SPELLLIST_INLANDEMPEROR_L1])
+            self.assertIn('Zone_OverpassExhaust', spell_lists[generator.SPELLLIST_INLANDEMPEROR_L3])
+            self.assertIn('Target_Heatstroke', spell_lists[generator.SPELLLIST_INLANDEMPEROR_L5])
+
+            progressions = ET.parse(public / 'Progressions/Progressions.lsx')
+            prog_map = {}
+            for node in progressions.findall('.//node[@id="Progression"]'):
+                attrs = {a.get('id'): a.get('value', '') for a in node.findall('attribute')}
+                key = (attrs.get('Name'), attrs.get('Level'))
+                prog_map[key] = attrs
+
+            calif_l1 = prog_map[('Californian', '1')]
+            self.assertIn('RunyonCanyonGlutes', calif_l1['PassivesAdded'])
+            self.assertIn('EarthquakeSense', calif_l1['PassivesAdded'])
+            self.assertIn('Veteran405', calif_l1['PassivesAdded'])
+            self.assertIn(f'AddSpells({generator.SPELLLIST_CALIFORNIAN_L1}', calif_l1['Selectors'])
+
+            beach_l3 = prog_map[('Beachborn', '3')]
+            self.assertIn(f'AddSpells({generator.SPELLLIST_BEACHBORN_L3}', beach_l3['Selectors'])
+            beach_l5 = prog_map[('Beachborn', '5')]
+            self.assertIn(f'AddSpells({generator.SPELLLIST_BEACHBORN_L5}', beach_l5['Selectors'])
+
+            silicon_l3 = prog_map[('Siliconite', '3')]
+            self.assertIn(f'AddSpells({generator.SPELLLIST_SILICONITE_L3}', silicon_l3['Selectors'])
+            silicon_l5 = prog_map[('Siliconite', '5')]
+            self.assertIn(f'AddSpells({generator.SPELLLIST_SILICONITE_L5}', silicon_l5['Selectors'])
+
+            inland_l1 = prog_map[('InlandEmperor', '1')]
+            self.assertIn('Passive_SmogLungs', inland_l1['PassivesAdded'])
+            self.assertIn(f'AddSpells({generator.SPELLLIST_INLANDEMPEROR_L1}', inland_l1['Selectors'])
+            inland_l3 = prog_map[('InlandEmperor', '3')]
+            self.assertIn(f'AddSpells({generator.SPELLLIST_INLANDEMPEROR_L3}', inland_l3['Selectors'])
+            inland_l5 = prog_map[('InlandEmperor', '5')]
+            self.assertIn(f'AddSpells({generator.SPELLLIST_INLANDEMPEROR_L5}', inland_l5['Selectors'])
 
     def test_missing_progression_fails_instead_of_orphaning_spell(self):
         with tempfile.TemporaryDirectory() as directory:

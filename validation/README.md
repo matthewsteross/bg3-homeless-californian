@@ -3,9 +3,11 @@
 Run from the Homeless Californian project directory:
 
 ```powershell
-py -3 -m unittest discover -s validation -p test_validate.py -v
+python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
+
+The suite (39 tests) lives in `test_validate.py`, `test_cart.py`, `test_expansion.py` and `test_spell_rules.py`.
 
 The validator returns exit code **1** on a finding. It does not install, regenerate,
 edit source, modify game configuration, or contact GitHub. `--pak` extracts into a
@@ -46,3 +48,9 @@ not equate those formats or prove the conversion is semantically current. It
 checks compiled localization files exist and match the package bytes, but does
 not decode them to compare text to authoring XML. Human playtesting remains the
 release gate.
+
+## Live in-game testing
+
+A Script Extender (BG3SE v33) harness exists for dev-only test builds. The harness is never shipped
+in the released package. See `HANDOFF-2026-10-14.md`. Anything it touches stays "not yet verified in game"
+until Matthew confirms it by playing.

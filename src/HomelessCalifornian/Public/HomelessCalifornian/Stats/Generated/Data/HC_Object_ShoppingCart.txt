@@ -1,0 +1,7 @@
+new entry "HC_OBJ_ShoppingCart"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "b1a0148a-cd4d-591d-91e9-1ad73012b4b1"
+data "Weight" "15"
+data "GameSize" "Large"
+data "Vitality" "-1"

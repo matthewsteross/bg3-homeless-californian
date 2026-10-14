@@ -70,22 +70,52 @@
                     <attribute id="UUID" type="guid" value="9a28b292-45e3-5c8f-afd1-96464f50db33"/>
                 </node>
 
-                <!-- Racial Californian Spells: Touch Grass & Avocado Toast -->
+                <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast"/>
+                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask"/>
                     <attribute id="UUID" type="guid" value="51fb8228-c489-56ca-9757-19a03867dccb"/>
                 </node>
 
-                <!-- Racial Beachborn Spells: Hang Ten -->
+                <!-- Racial Beachborn Spells: Hang Ten (L1), Rip Current (L3), Golden Hour (L5) -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_HangTen"/>
                     <attribute id="UUID" type="guid" value="1e8aa959-4a02-5115-ae29-e06d7a92a108"/>
                 </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_RipCurrent"/>
+                    <attribute id="UUID" type="guid" value="77b6c7c1-0ee7-5660-8307-a3d0ca90cf8f"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_GoldenHour"/>
+                    <attribute id="UUID" type="guid" value="e6df496d-9dcd-5474-8d09-2d29b63d6cfe"/>
+                </node>
 
-                <!-- Racial Siliconite Spells: Vibe Check -->
+                <!-- Racial Siliconite Spells: Vibe Check (L1), Disruptive Pivot (L3), NDA (L5) -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Target_VibeCheck"/>
                     <attribute id="UUID" type="guid" value="0259a9da-2913-5f47-9d65-8ee23e4de2da"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_DisruptivePivot"/>
+                    <attribute id="UUID" type="guid" value="5c6cf44b-e981-5544-8fc6-66b5eb9ae5c9"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_NonDisclosureAgreement"/>
+                    <attribute id="UUID" type="guid" value="4d0c15ce-6278-5b24-a321-a8d2a91592d7"/>
+                </node>
+
+                <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust (L3), Heatstroke (L5) -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_DustDevil"/>
+                    <attribute id="UUID" type="guid" value="37a7f600-db05-51cf-afd9-97edc9991df0"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust"/>
+                    <attribute id="UUID" type="guid" value="71f3e612-736a-5a6a-958e-1d5bc104d5fe"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_Heatstroke"/>
+                    <attribute id="UUID" type="guid" value="1fe386e6-76d4-5f9c-8474-70fb43be7248"/>
                 </node>
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="HC_Projectile_EmotionalSupportBrick;HC_Target_BagOfOtherBags;HC_Shout_LoadBearingChair;HC_Shout_ClaimUnclaimedWardrobe"/>
@@ -96,7 +126,7 @@
                     <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst"/>
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">
@@ -144,7 +174,7 @@
                     <attribute id="UUID" type="guid" value="88921194-9a20-513e-a24c-f9dbcb5c4889"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_HeirloomFurniture"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_HeirloomFurniture;HC_Target_AbandonedCart"/>
                     <attribute id="UUID" type="guid" value="9787d8e8-23ff-5a42-a73d-0bc24d880c7a"/>
                 </node>
                 <node id="SpellList">

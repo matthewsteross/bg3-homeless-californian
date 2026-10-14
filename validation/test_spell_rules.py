@@ -139,6 +139,106 @@ class SpellRuleTests(unittest.TestCase):
                     if seg.startswith('IF(') and 'SavingThrow' in seg and re.match(r'(ApplyStatus|Force)\((?!SELF)', nxt):
                         self.fail(f'{name}.{field}: ungated functor after a save-gated IF: {nxt}')
 
+    def test_dumpster_dive_yields_cheese_and_eaten_apple(self):
+        props = self.spells['HC_Shout_DumpsterDive']['data']['SpellProperties']
+        self.assertIn('SummonInInventory(06474f97-0dd0-45e6-8db8-5f75009bf336', props)
+        self.assertIn('SummonInInventory(2ca3cb11-2271-461a-9096-c425c0bd3b12', props)
+
+    def test_moving_day_and_i_was_here_first_create_rubbish_hazard(self):
+        for name in ('HC_Shout_MovingDay', 'HC_Shout_IWasHereFirst'):
+            props = self.spells[name]['data']['SpellProperties']
+            self.assertIn('CreateSurface(2.5,2,Mud)', props)
+        self.assertEqual(self.spells['HC_Shout_IWasHereFirst']['data']['UseCosts'], 'ActionPoint:1;HC_Junk:1')
+
+    def test_pigeon_witness_protection_wires_lunch_rush(self):
+        summon_props = self.spells['HC_Target_PigeonWitnessProtection']['data']['SpellProperties']
+        self.assertIn('HC_PIGEON_WITNESS', summon_props)
+        self.assertIn('UnlockSpell(HC_Shout_PigeonLunchRush)', self.statuses['HC_PIGEON_WITNESS']['data']['Boosts'])
+        rush = self.spells['HC_Shout_PigeonLunchRush']['data']
+        self.assertEqual(rush['AreaRadius'], '4')
+        self.assertIn('SavingThrow(Ability.Dexterity', rush['SpellRoll'])
+        self.assertIn('ApplyStatus(HC_DISTRACTED_BY_PIGEONS,100,1)', rush['SpellSuccess'])
+
+    def test_californian_racial_glutes_and_hydroflask(self):
+        glutes = self.statuses['RunyonCanyonGlutes']['data']['Boosts']
+        self.assertIn('JumpMaxDistanceMultiplier(1.5)', glutes)
+        self.assertIn('CarryCapacityMultiplier(1.25)', glutes)
+
+        flask = self.statuses['Shout_EmotionalSupportHydroflask']['data']
+        self.assertEqual(flask['Cooldown'], 'OncePerShortRest')
+        self.assertEqual(flask['UseCosts'], 'BonusActionPoint:1')
+        props = flask['SpellProperties']
+        self.assertIn('RegainHitPoints(1d8+ConstitutionModifier)', props)
+        self.assertIn('RemoveStatus(SG_Poisoned)', props)
+        self.assertIn('GROUND:CreateSurface(1.5,1,Water)', props)
+
+    def test_beachborn_racial_spells(self):
+        rip = self.statuses['Target_RipCurrent']['data']
+        self.assertEqual(rip['Cooldown'], 'OncePerShortRest')
+        self.assertIn('DealDamage(2d6,Cold', rip['SpellSuccess'])
+        self.assertIn('Force(-4.5, OriginToEntity', rip['SpellSuccess'])
+        self.assertIn('ApplyStatus(PRONE,100,1)', rip['SpellSuccess'])
+        self.assertIn('CreateSurface(1.5,1,Water)', rip['SpellSuccess'])
+
+        golden = self.statuses['Shout_GoldenHour']['data']
+        self.assertEqual(golden['Cooldown'], 'OncePerRest')
+        self.assertEqual(golden['AreaRadius'], '6')
+        self.assertIn('SavingThrow(Ability.Constitution', golden['SpellRoll'])
+        self.assertIn('ApplyStatus(BLINDED,100,2)', golden['SpellSuccess'])
+        self.assertIn('ApplyStatus(SELF,GOLDEN_HOUR_GLOW,100,2)', golden['SpellProperties'])
+
+        glow = self.statuses['GOLDEN_HOUR_GLOW']['data']['Boosts']
+        self.assertIn('ActionResource(Movement,3,0)', glow)
+        self.assertIn('CharacterWeaponDamage(1d4,Radiant)', glow)
+
+    def test_siliconite_racial_spells(self):
+        pivot_entry = self.statuses['Target_DisruptivePivot']
+        pivot = pivot_entry['data']
+        self.assertEqual(pivot_entry['using'], 'Target_MistyStep')
+        self.assertEqual(pivot['Cooldown'], 'OncePerRest')
+        self.assertEqual(pivot['TargetRadius'], '9')
+        self.assertEqual(pivot['UseCosts'], 'BonusActionPoint:1')
+        self.assertIn('GROUND:ApplyStatus(SELF,DISRUPTIVE_PIVOT_ADV,100,1)', pivot['SpellProperties'])
+
+        adv = self.statuses['DISRUPTIVE_PIVOT_ADV']['data']
+        self.assertIn('Advantage(AttackRoll)', adv['Boosts'])
+        self.assertIn('OnAttack', adv['RemoveEvents'])
+
+        nda = self.statuses['Target_NonDisclosureAgreement']['data']
+        self.assertEqual(nda['Cooldown'], 'OncePerRest')
+        self.assertIn('SavingThrow(Ability.Wisdom', nda['SpellRoll'])
+        self.assertIn('DealDamage(2d8,Psychic', nda['SpellSuccess'])
+        self.assertIn('ApplyStatus(SILENCED,100,2)', nda['SpellSuccess'])
+
+    def test_inland_emperor_racial_spells(self):
+        dust = self.statuses['Shout_DustDevil']['data']
+        self.assertEqual(dust['Cooldown'], 'OncePerShortRest')
+        self.assertEqual(dust['AreaRadius'], '3')
+        self.assertEqual(dust['UseCosts'], 'BonusActionPoint:1')
+        self.assertIn('ApplyStatus(SELF,BLUR,100,1)', dust['SpellProperties'])
+        self.assertIn('ApplyStatus(BLINDED,100,1)', dust['SpellSuccess'])
+
+        exhaust_entry = self.statuses['Zone_OverpassExhaust']
+        exhaust = exhaust_entry['data']
+        self.assertEqual(exhaust_entry['using'], 'Zone_BurningHands')
+        self.assertEqual(exhaust['Cooldown'], 'OncePerRest')
+        self.assertEqual(exhaust['Range'], '6')
+        self.assertIn('DealDamage(2d8,Poison', exhaust['SpellSuccess'])
+        self.assertIn('DealDamage(1d8,Fire', exhaust['SpellSuccess'])
+
+        heat = self.statuses['Target_Heatstroke']['data']
+        self.assertEqual(heat['Cooldown'], 'OncePerRest')
+        self.assertIn('SavingThrow(Ability.Constitution', heat['SpellRoll'])
+        self.assertIn('DealDamage(3d8,Fire', heat['SpellSuccess'])
+        self.assertIn('ApplyStatus(HEATSTROKE,100,2)', heat['SpellSuccess'])
+
+        stroke = self.statuses['HEATSTROKE']['data']['Boosts']
+        self.assertIn('ActionResourceMultiplier(Movement,50,0)', stroke)
+        self.assertIn('Disadvantage(AttackRoll)', stroke)
+        self.assertIn('Disadvantage(SavingThrow,Strength)', stroke)
+        self.assertIn('Disadvantage(SavingThrow,Dexterity)', stroke)
+
 
 if __name__ == '__main__':
     unittest.main()
+

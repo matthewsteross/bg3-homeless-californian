@@ -59,7 +59,7 @@
     <content contentuid="h047cfd9bg30cbg5bffg8317g6d6236050586" version="1">Stolen Patagonia Vest</content>
     <content contentuid="hb434be98g2a1ag5b58gaac3gffd6223381ae" version="1">Warm, fleece-lined, and acquired without prosecution. +1 Armour Class and +1d4 Bludgeoning damage on weapon attacks.</content>
     <content contentuid="hd85a3d34gc075g5c6cg954ag3e944ab7d6bc" version="1">Pocket Lint Buffet</content>
-    <content contentuid="hce56ddd2g4338g5318gb6a9g93df81702418" version="1">Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2 (minimum 3).</content>
+    <content contentuid="hce56ddd2g4338g5318gb6a9g93df81702418" version="1">Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2.</content>
     <content contentuid="hf5d55c9fgb73fg5d15g8bfega30f783353b7" version="1">Pocket Lint Snack</content>
     <content contentuid="ha7e412efg97bdg53dfg8c9agf96b857ea14c" version="1">Fortified by whatever was in that coat. Grants Temporary Hit Points.</content>
     <content contentuid="hd69c86b8g9935g5387gbb65g4df28932d4b4" version="1">Eviction Notice</content>
@@ -148,6 +148,30 @@
     <content contentuid="h5f4dd6a4ga347g51f1gba7age1551fb8bb2d" version="1">Surfing metaphysical waves. +3m Movement Speed and immune to slipping or difficult terrain.</content>
     <content contentuid="h4987b389g1cd2g50cag95d7g55e9cf6b0fb2" version="1">Vibe Checked</content>
     <content contentuid="h0192c9b1g8c02g5fb2g8c49g9c5069fc7ec4" version="1">Concentration broken and mind disrupted by venture capital reality.</content>
+    <content contentuid="h24fb4d38g571cg5a2ag9133g776ebb4e3005" version="1">Runyon Canyon Glutes</content>
+    <content contentuid="he41cc457g5e8bg5a94g8e96gc3ad17c0323c" version="1">From a lifetime of mandatory uphill power-walking in high-end activewear and hauling organic groceries, your jump distance is increased by 50% and your carrying capacity is increased by 25%.</content>
+    <content contentuid="hb73c48c0g38c0g585eg9047gf3219075f92a" version="1">Emotional Support Hydro Flask</content>
+    <content contentuid="h80778766g0758g56b6g84b2ge2cb590f84a4" version="1">Take a soothing sip from your dented 40-oz vacuum-insulated flask. Restores 1d8 + Constitution modifier Hit Points, cures Poisoned, and quenches any burning surface beneath you with pure cold water. Once per short rest.</content>
+    <content contentuid="h7bfa4a81ge78bg5a4aga29dg350953e116a4" version="1">Rip Current</content>
+    <content contentuid="h2d1d9d23g6b60g5ea8ga1bbg37a60594c1e3" version="1">Whip a foe with the treacherous undertow of the Pacific. Make a melee spell attack: on a hit it deals 2d6 Cold damage, pulls the target 4.5 m toward you, knocks them Prone on a failed Strength save, and creates a puddle of seawater. Once per short rest.</content>
+    <content contentuid="h2991afaeg64feg5335g84abgd171a06b0d58" version="1">Golden Hour</content>
+    <content contentuid="h4cca9818ga907g5b3dga7cdgf0841fc44c2b" version="1">Radiate the blinding, intensely flattering light of a Malibu sunset. Enemies in a 6 m radius make a Constitution saving throw or are Blinded for 2 turns. You gain +3 m movement and deal +1d4 Radiant damage on weapon attacks for 2 turns. Once per long rest.</content>
+    <content contentuid="hbf1faa00g0c60g5abeg8e30g7c1decf47c9f" version="1">Golden Hour Glow</content>
+    <content contentuid="h9ecb217eg4f13g5aa6g833bge136f714605b" version="1">Bathed in ethereal coastal sunlight. Movement speed increased by 3 m and weapon attacks deal an extra 1d4 Radiant damage.</content>
+    <content contentuid="hdf385f7fg103fg5e56ga6c6g2f00151f0139" version="1">Disruptive Pivot</content>
+    <content contentuid="h5169c5edg3d36g570eg95c2g63f2b536f27d" version="1">Pivot away from current market conditions. Teleport up to 9 m to an unoccupied space. You gain Advantage on your next attack roll as enemies struggle to parse your new roadmap. Once per long rest.</content>
+    <content contentuid="h59f049a9gf148g5d17gacbfg1e6a1b34e672" version="1">Pivoting Momentum</content>
+    <content contentuid="h1174f042g6f80g526eg8bc2gc1dfbb2091e6" version="1">Capitalizing on recent market disruption. Advantage on your next attack roll.</content>
+    <content contentuid="hceb998fag7d64g56a2g9c22gb00c1d2e4db9" version="1">Non-Disclosure Agreement</content>
+    <content contentuid="h45686e81g8f31g5acbgad32g5c6a50c546f0" version="1">Enforce aggressive legal silence on a target. Deals 2d8 Psychic damage (half on a successful Wisdom save). On a failed Wisdom save, the target is Silenced for 2 turns. The terms of this combat are strictly confidential. Once per long rest.</content>
+    <content contentuid="hb35aaf8ag531cg5e41g852dg3f8341ec8a08" version="1">Dust Devil</content>
+    <content contentuid="h1ea38525g0830g5df1gb96cga06771c1ad64" version="1">Kick up an abrasive whirlwind of Mojave dust and alkaline gravel. You gain Blur for 1 turn, and enemies in a 3 m radius make a Constitution save or are Blinded for 1 turn. Once per short rest.</content>
+    <content contentuid="h9072c6c5ga3e6g55f8gab7ag4a2b4f939c07" version="1">Overpass Exhaust</content>
+    <content contentuid="h54ffa443g3a51g5018ga952g0e07f4e9adc9" version="1">Spew a 6 m cone of lifted-truck diesel exhaust and superheated valley smog. Deals 2d8 Poison and 1d8 Fire damage (Constitution save for half damage). Once per long rest.</content>
+    <content contentuid="hbef595a3gc26cg5314gad60gd7c7f836946a" version="1">Heatstroke</content>
+    <content contentuid="h11499999g7fbbg5b21g8bc3g6e3c2d6f41fe" version="1">Subject an enemy to the brutal 115-degree Bakersfield midday sun. Deals 3d8 Fire damage (half on a successful Constitution save). On a failed save, the target suffers Heatstroke for 2 turns (movement halved, disadvantage on attack rolls and Strength and Dexterity saves). Once per long rest.</content>
+    <content contentuid="h6ba859c4g3854g519ag8e3dg817829f78766" version="1">Heatstroke</content>
+    <content contentuid="h8093b3a3g3e98g5158g8fe9g0e4ecaf22ecd" version="1">Overcome by blistering valley heat. Movement speed is halved; Disadvantage on attack rolls and Strength and Dexterity saving throws.</content>
     <content contentuid="h87f7aa59g7884g54c1gb826g0d211b779f92" version="1">Junk</content>
     <content contentuid="h1fc7fab1gfbd3g5b7cga689gf4553aa45c69" version="1">A small collection of things you will definitely need. Fuels your junk toolkit; replenished on short rest.</content>
     <content contentuid="h3f21cff6gd67dg54fag98edg2a1143638a4b" version="1">Not enough Junk. The good rubbish has already been spoken for.</content>
@@ -157,6 +181,12 @@
     <content contentuid="hf78cc6dbg8762g5cacg8891g8faeacb20b3a" version="1">+6 m movement and immunity to difficult terrain. The property line is wherever you stop next.</content>
     <content contentuid="h51518ad2g2dbdg5d20gb219gc40398f14164" version="1">Heirloom Splinter</content>
     <content contentuid="h86967fb4g17beg5f12ga1ffg8f234079503e" version="1">Unlocks Chair-Leg Shiv. This chair has been in the family since Tuesday.</content>
+    <content contentuid="ha7285384g9687g5a8bgb1c2gbc53d29da058" version="1">I Was Here First</content>
+    <content contentuid="h8d624a26g4effg5f27gbf41gcddef7c20a9c" version="1">+2 AC, advantage on Constitution saves, and immunity to Prone and difficult terrain. You have established residency on this sidewalk.</content>
+    <content contentuid="h2548ef5ag4ae0g5019g9c01gcc89a295ec07" version="1">Pigeon Witness Protection</content>
+    <content contentuid="h2bedc211g154ag5595g894ag93074a1161cf" version="1">Paperwork asserts this is an ordinary municipal pigeon. Unlocks Pigeon Lunch Rush.</content>
+    <content contentuid="h491ef3c1g3049g52f6g8b95g05d5e12dedb2" version="1">Lunch Rush Distraction</content>
+    <content contentuid="h909553dcg18c3g51c0gbda4ga95e4f4e19b8" version="1">Mobbed by aggressive pigeons squabbling over sidewalk crumbs. Disadvantage on attack rolls and Dexterity saving throws.</content>
     <content contentuid="hca7374cag27b1g5620gbd7dg4fb2c2871d64" version="1">Emotional Support Brick</content>
     <content contentuid="h76b33854g0ce3g5f06g983egc517e2b4a0cf" version="1">Hurl a beloved brick: 2d6 + Constitution modifier Bludgeoning on a ranged spell hit. A failed Constitution save causes Dazed for 1 turn. You cannot throw this away. You might need it.</content>
     <content contentuid="ha8eb9baag187cg5e2dgac5cgf37ee5187281" version="1">Bag of Other Bags</content>
@@ -164,11 +194,15 @@
     <content contentuid="h7df9d8acg4fc7g5346gb1a0gee6ccb9a43c9" version="1">Load-Bearing Lawn Chair</content>
     <content contentuid="h7d67572eg167dg5187gae25gaed1148be439" version="1">Gain +2 AC, advantage on Strength saves, and immunity to Prone for 2 turns. This folding chair is the only stable institution left.</content>
     <content contentuid="hc0d57b98g6bdeg569dga39cge761144e8905" version="1">Dumpster Dive</content>
-    <content contentuid="he0468a82g4c81g54fdgb9c9g96bbe704ea9b" version="1">Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations. Once per short rest. Ownership is a theory you are willing to discuss later.</content>
+    <content contentuid="he0468a82g4c81g54fdgb9c9g96bbe704ea9b" version="1">Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple). Once per short rest. Ownership is a theory you are willing to discuss later.</content>
     <content contentuid="h316a0c68g6549g5d3bg9b83g495596bf9030" version="1">Moving Day</content>
-    <content contentuid="h9ac5d90egdc6eg5e07g9e48g2656bb69770b" version="1">While in Fent Lean, end it for free and gain +6 m movement and difficult-terrain immunity for 1 turn. Once per short rest. Your forwarding address is already incorrect.</content>
+    <content contentuid="h9ac5d90egdc6eg5e07g9e48g2656bb69770b" version="1">While in Fent Lean, end it for free, gain +6 m movement and difficult-terrain immunity for 1 turn, and scatter a 2.5 m perimeter of discarded rubbish (difficult terrain) for 2 turns where you stood. Once per short rest. Your forwarding address is already incorrect.</content>
+    <content contentuid="hc5634452g19c0g5d91g8e9dg0c9a6f011f9e" version="1">I Was Here First</content>
+    <content contentuid="h6878deffga24dg5f79g95c2g36524fa0c43d" version="1">Stake your claim on this patch of ground for 2 turns. Costs an action and 1 Junk; once per short rest. Gain +2 AC, advantage on Constitution saves, and immunity to Prone, while scattering a 2.5 m perimeter of protective rubbish (difficult terrain) for 2 turns around you. You have lived here for fifteen minutes. That is legal precedence.</content>
     <content contentuid="hf3ae9226gd123g5d01gbf75gb0be63049e61" version="1">Pigeon Witness Protection</content>
-    <content contentuid="hb8ee91f5g10c5g5ffag9c2cg485842e5b727" version="1">Summon a raven familiar that can scout and use its normal familiar abilities. Replaces your existing familiar. Once per short rest. It is visibly a raven; the pigeon paperwork is airtight.</content>
+    <content contentuid="hb8ee91f5g10c5g5ffag9c2cg485842e5b727" version="1">Summon a raven familiar that can scout, use its normal familiar abilities, and command a Pigeon Lunch Rush to distract enemies. Replaces your existing familiar. Once per short rest. It is visibly a raven; the pigeon paperwork is airtight.</content>
+    <content contentuid="h33dd652fg3233g5c8aga759g3444b37e7cbf" version="1">Pigeon Lunch Rush</content>
+    <content contentuid="h6336333bg8cfbg5281g8815g4aa203ac2929" version="1">The pigeon creates a chaotic flap of oily wings and dropped French fries in a 4 m radius. Enemies who fail a Dexterity saving throw suffer Disadvantage on attack rolls and Dexterity saves for 1 turn. Once per short rest. Someone dropped half a croissant. It is serious.</content>
     <content contentuid="hdda9b894g0c6eg5e4aga886g0a39c29c99c7" version="1">Heirloom Furniture</content>
     <content contentuid="h07592900g8844g5340g8708ga00b00566bb7" version="1">Melee weapon attack: 3d6 + Constitution modifier Bludgeoning. A failed Strength save knocks Prone for 1 turn. A hit readies Chair-Leg Shiv for 2 turns. This chair has been in the family since Tuesday.</content>
     <content contentuid="h9a3deb00g030bg52eag8748gd18504ba5439" version="1">Chair-Leg Shiv</content>
@@ -181,6 +215,10 @@
     <content contentuid="h3730222cg0613g568bgad83g3eb56bd3419c" version="1">A cloak promoted to roof, blanket, and legal address. Structurally sound until asked.</content>
     <content contentuid="h326aa4c0g2de3g5cb8g98d6g78938e4aa890" version="1">Unclaimed Wardrobe</content>
     <content contentuid="h10119b4cgb193g5205ga07bg53a47745f1d0" version="1">Find a set of Municipally Approved Layers and a Load-Bearing Tarp. Added to your inventory; equip them yourself. Ownership investigations are ongoing.</content>
+    <content contentuid="hd5f1d237g2040g5d72ga315gd858d76da73e" version="1">Abandoned Cart</content>
+    <content contentuid="h9307a853g3f6ag57eaga2d2gd8d860730911" version="1">A shopping cart of unknown origin, three owners deep and one wheel short of a plan. It holds the whole supply chain: you, your things, and a squeak that announces you to every shift supervisor in the county. Property of nobody, which is nearly the same as yours.</content>
+    <content contentuid="he03228f2gcc60g52fag8b17gdaa4aa45587b" version="1">Abandoned Cart</content>
+    <content contentuid="hce10f07bg6205g53e9gb7b8g6799762c6bb2" version="1">Produce an abandoned shopping cart on the ground within 6 m. Costs a bonus action and 1 Junk; once per short rest. It is decoration with opinions: a wire-basket monument to everything somebody could not carry home. Nobody saw where it came from. Nobody ever does.</content>
     <content contentuid="h5eb76735g7448g5e22g9100g61b35fbb7cb6" version="1">Coat-Hanger Slim Jim</content>
     <content contentuid="h7dd3a1c0g6822g59a2g8663g8a89cd17bc1f" version="1">Unlock a door or container within 1.5 m. Costs an action and 1 Junk. Cannot open magical locks. Every lock is a suggestion with paperwork.</content>
     <content contentuid="h04334570g2132g58c5gaf55g4dca7e030875" version="1">Curbside Needle Exchange</content>
@@ -243,6 +281,8 @@
     <content contentuid="h1d59e65dg9183g5f5eg90ccg15e507d645a9" version="1">Advantage on Perception and Stealth ability checks. Notice the trouble before it notices your address.</content>
     <content contentuid="h0a95d8cbg4c4fg5bcbg8466g48d688f9eba9" version="1">Can Collector</content>
     <content contentuid="hfbb9dfc8ge5f7g5c3dg9c00gc5111f024a5a" version="1">Advantage on Athletics and SleightOfHand ability checks. Every piece of crushed aluminum is cash if you carry enough bags of it.</content>
+    <content contentuid="h6292e568gb227g558cg8c2cg9e0fc2e8b143" version="1">Busker</content>
+    <content contentuid="h42ffe058g3cb9g5c0cgbfb6ga51f0f45f4a5" version="1">Advantage on Performance and Insight ability checks. You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.</content>
     <content contentuid="hd3a698f9g518ag55fbga575g96c5ef775d10" version="1">Street Trade</content>
     <content contentuid="hd5246a57g61d2g510aga1b6g8cbd5045430a" version="1">Choose one exploration trade. Each grants advantage on two ability checks. Respec to change your choice.</content>
     <content contentuid="h14e560a0gd206g59abga4a9g11bca1568e08" version="1">Hoarder</content>
@@ -251,6 +291,8 @@
     <content contentuid="h298a2bd6g6085g5a95gb740g4e4ac98193ce" version="1">+1 Armour Class. Every layer of rubbish is another layer of plausible protection.</content>
     <content contentuid="h089821ddg55dag5b10g8884g49b07e7ee9e3" version="1">Runner</content>
     <content contentuid="h1f1c734cga30fg50b0gb0c1g39999aa08826" version="1">+3 m movement speed. You have never missed a train you were already chasing.</content>
+    <content contentuid="hdd475da6g4826g53adgb697g3263ac0a967d" version="1">Twitchy</content>
+    <content contentuid="h8d070839gd16ag5657gbd9dg2d7eb34e2bad" version="1">+3 bonus to Initiative. You have spent years sleeping with one eye open. Nobody catches you flat-footed.</content>
     <content contentuid="hb488f482ge77bg51d1g85cdgacfdcba0b537" version="1">Junk Doctrine</content>
     <content contentuid="h44544886gad82g5325gaa5dga57c0370747d" version="1">Choose more Junk, better protection or faster movement. Respec to change your doctrine.</content>
 </contentList>

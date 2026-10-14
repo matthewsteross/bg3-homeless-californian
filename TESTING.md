@@ -2,8 +2,9 @@
 
 Playtest the Homeless Californian class for Baldur's Gate 3 on PC.
 
-[Download the October 12 ZIP](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12)
-and import HomelessCalifornian.pak using your usual BG3 mod manager. Enable it
+[Download the current release (October 13, v0.2.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-13)
+(the older [October 12 ZIP](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12)
+is still available) and import HomelessCalifornian.pak using your usual BG3 mod manager. Enable it
 and export your load order where your manager requires it. Do not install a
 second copy. Use a separate test save, and create a new character or respec.
 The public package is intentionally overpowered. Windows installation has
@@ -27,7 +28,7 @@ on the same character. Junk capacity should be 3 at class level 1, 5 at 5 and
 Save and reload once. Note missing icons, lost grants, or changed resource
 behavior. Actual effects are not comprehensively gameplay-tested yet.
 The familiar uses a raven model; furniture and clothes use existing visuals.
-There is no custom chair model, gun, voice pack or new capstone in this release.
+There is no custom chair model, gun or voice pack; the only custom mesh is the Abandoned Cart. The level-12 Squatter's Rights capstone is in the October 13 build.
 
 ## Tell us what happened
 
@@ -44,21 +45,21 @@ you used. Source/package checks do not prove gameplay or save compatibility.
 Share the release link with players who enjoy absurd custom classes. One clear
 example of what happened in-game is more useful than repeated promotional posts.
 The design is directed by Matthew; Claude, Gemini and Codex assist with code,
-and Gemini generated custom icon art. Follow each community's posting rules.
+and Gemini generated custom icon art, and the shopping cart model is AI-generated too. Follow each community's posting rules.
 
 
-## October 13 build - new abilities to try (all untested in game)
+## October 13 build (v0.2.0) - new abilities to try (all untested in game)
 
 Pick one or two; ten minutes is plenty. New grants need a new character or a respec. Reach the listed class level
 (a fast way: level up in a test save).
 
 | Class level | Try | What to report |
 |---|---|---|
-| 2 then 5 | Aggressive Panhandling an enemy, then **Guilt Trip** it | Damage dealt AND Socially Shamed removed? Un-castable on an un-shamed target? |
-| 6 | **Public Scene** on a shamed enemy | Frightened on a failed save? |
+| 5 | **Guilt Trip** on any enemy, then again after Aggressive Panhandling (class 2) | Castable on an un-shamed enemy? Extra damage and Socially Shamed removed when shamed? (The v0.2.0 download may show Invalid Target; fixed in newer source, not yet released.) |
+| 6 | **Public Scene** on an enemy, shamed and un-shamed | Frightened on a failed save? Longer if shamed? (Same Invalid Target caveat on v0.2.0.) |
 | 8 | **Trapped in the Invisible Box** | Enemy cannot move for a turn? Short rest resets it? |
 | 9 | **Bucket Drum Solo** into a group | Damage, push, Homeless Fatigue icon, advantage against fatigued targets? |
-| 10 | **Compassion Burnout** on a fatigued target | Damage and fatigue removed? |
+| 10 | **Compassion Burnout** on a normal and on a fatigued target | Castable on both? Extra damage and fatigue removed when fatigued? (Same caveat on v0.2.0.) |
 | 11 | **Punctured Lithium Cell** | Both damage types, fire on the ground, friendly-fire indoors? |
 | Venice 6 | **Sublet** on an ally | Ally gets +2 AC / STR-save advantage / Prone immunity, you do not? |
 | Tenderloin 10 | **Everybody Knows This Guy** | Breadcrumbed status, advantage against, disadvantage on its attacks? |
@@ -66,3 +67,25 @@ Pick one or two; ten minutes is plenty. New grants need a new character or a res
 | 12 | Subclass **Squatter's Rights** capstone | Does it activate, grant its effects, and expire as described? |
 
 Please say which build you used (the Nexus file is version 0.2.0, the 2026-10-13 build).
+
+## Newest additions - repository source only, NOT yet released (untested in game)
+
+These are not in the v0.2.0 download. If you are testing a local build from the repository, a new character or respec
+is needed for race and class grants.
+
+| Level / source | Try | What to report |
+|---|---|---|
+| Californian race | **Runyon Canyon Glutes** (passive), **Emotional Support Hydroflask** | Longer jumps and more carry weight? Hydroflask heals, cures Poisoned, once per short rest? |
+| Beachborn 1 / 3 / 5 | **Hang Ten**, **Rip Current**, **Golden Hour** | Hang Ten speed and Prone immunity? Rip Current pulls the target and can knock Prone? Golden Hour blinds nearby enemies and gives you the glow? |
+| Siliconite 1 / 3 / 5 | **Vibe Check** + Siliconite Synergy, **Disruptive Pivot**, **Non-Disclosure Agreement** | Extra 1d4 Psychic on weapon hits? Pivot teleports and gives advantage on the next attack? NDA silences on a failed save? |
+| Inland Emperor 1 / 3 / 5 | **Dust Devil**, **Overpass Exhaust**, **Heatstroke** (plus Smog Lungs, Heat Index Mastery) | Dust Devil blinds and gives Blur? Exhaust cone hits as a cone for Poison and Fire? Heatstroke applies and slows? |
+| Class 2 | **Dumpster Dive**, then check inventory | 2 Junk restored plus cheese and an apple in the inventory? |
+| Class 2 (Street Trade) | Pick **Busker** or **Can Collector** | Option listed? Advantage on the named skill checks? |
+| Class 4 (Junk Doctrine) | Pick **Twitchy** | Initiative +3? |
+| Class 7 | **I Was Here First**, and **Moving Day** out of Fent Lean | Buffs for 2 turns and a rubbish ring appears? Does the ring slow enemies without trapping you? |
+| Tenderloin 3 | **Pigeon Witness Protection**, then **Pigeon Lunch Rush** from the raven | Does the raven get the ability? Enemies in 4 m get disadvantage on a failed Dexterity save? |
+| BART 6 | **Fare Evasion Audit** | Fined status, slower movement, no reactions on a failed Wisdom save? |
+| Venice 3 | **Abandoned Cart** | Exactly one cart appears? Faces sensibly, blocks movement, Junk spent on a real character, looks good in daylight? (Partly verified live 2026-10-14: cart spawns, is visible, one per cast.) |
+| Class 4 | **Coat-Hanger Slim Jim** on a locked door or chest | Unlocks within 1.5 m, spends 1 Junk? |
+| Tenderloin 6 | **Curbside Needle Exchange** on an adjacent ally | Cures Poisoned/Disease/Blinded/Paralysed, heals 2d6+CON, once per short rest? |
+| Venice 10 | **Chair Check** | Weapon damage plus 2d8; Prone only on a failed Strength save? Junk spent? |

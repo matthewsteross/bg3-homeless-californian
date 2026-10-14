@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="0" revision="9" build="0" />
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+                <node id="GameObjects">
+                    <attribute id="CanBeMoved" type="bool" value="False" />
+                    <attribute id="CanBePickedUp" type="bool" value="False" />
+                    <attribute id="Flag" type="int32" value="0" />
+                    <attribute id="LevelName" type="FixedString" value="" />
+                    <attribute id="MapKey" type="FixedString" value="b1a0148a-cd4d-591d-91e9-1ad73012b4b1" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_ShoppingCart" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+                    <attribute id="ReadinessFlags" type="uint32" value="144" />
+                    <attribute id="RecieveDecal" type="bool" value="False" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_ShoppingCart" />
+                    <attribute id="Tooltip" type="uint8" value="2" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="VisualTemplate" type="FixedString" value="9e9d2b52-0c13-597e-99f4-84a7c7d3f0d2" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd5f1d237g2040g5d72ga315gd858d76da73e" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h9307a853g3f6ag57eaga2d2gd8d860730911" version="1" />
+                    <children>
+                        <node id="Bounds">
+                            <children>
+                                <node id="Bound">
+                                    <attribute id="Height" type="float" value="0.994" />
+                                    <attribute id="Max" type="fvec3" value="0.27 0.994 0.464" />
+                                    <attribute id="Min" type="fvec3" value="-0.27 0 -0.504" />
+                                    <attribute id="Radius" type="float" value="0.5" />
+                                    <attribute id="Shape" type="uint8" value="1" />
+                                    <attribute id="Type" type="uint8" value="1" />
+                                </node>
+                                <node id="Bound">
+                                    <attribute id="Height" type="float" value="0.994" />
+                                    <attribute id="Max" type="fvec3" value="0.27 0.994 0.464" />
+                                    <attribute id="Min" type="fvec3" value="-0.27 0 -0.504" />
+                                    <attribute id="Radius" type="float" value="0.5" />
+                                    <attribute id="Shape" type="uint8" value="1" />
+                                    <attribute id="Type" type="uint8" value="2" />
+                                </node>
+                                <node id="Bound">
+                                    <attribute id="Height" type="float" value="0.994" />
+                                    <attribute id="Max" type="fvec3" value="0.19 0.994 0.33" />
+                                    <attribute id="Min" type="fvec3" value="-0.19 0 -0.35" />
+                                    <attribute id="Radius" type="float" value="0.35" />
+                                    <attribute id="Shape" type="uint8" value="1" />
+                                    <attribute id="Type" type="uint8" value="0" />
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

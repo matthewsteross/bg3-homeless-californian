@@ -11,6 +11,7 @@ def generate_choices(public_dir, add_loca, get_guid):
         ('HC_StreetTrade_Fixer', 'Fixer', 'Persuasion', 'Deception', 'The paperwork is missing. The confidence is not.'),
         ('HC_StreetTrade_Lookout', 'Lookout', 'Perception', 'Stealth', 'Notice the trouble before it notices your address.'),
         ('HC_StreetTrade_CanCollector', 'Can Collector', 'Athletics', 'SleightOfHand', 'Every piece of crushed aluminum is cash if you carry enough bags of it.'),
+        ('HC_StreetTrade_Busker', 'Busker', 'Performance', 'Insight', 'You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.'),
     ]
     blocks = []
     for key, name, first, second, flavor in options:

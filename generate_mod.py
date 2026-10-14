@@ -74,7 +74,14 @@ PROG_DESC_CALIFORNIA_IDENTITY = get_guid("ProgDesc_CaliforniaIdentity")
 
 SPELLLIST_CALIFORNIAN_L1 = get_guid("SpellList_Californian_L1")
 SPELLLIST_BEACHBORN_L1 = get_guid("SpellList_Beachborn_L1")
+SPELLLIST_BEACHBORN_L3 = get_guid("SpellList_Beachborn_L3")
+SPELLLIST_BEACHBORN_L5 = get_guid("SpellList_Beachborn_L5")
 SPELLLIST_SILICONITE_L1 = get_guid("SpellList_Siliconite_L1")
+SPELLLIST_SILICONITE_L3 = get_guid("SpellList_Siliconite_L3")
+SPELLLIST_SILICONITE_L5 = get_guid("SpellList_Siliconite_L5")
+SPELLLIST_INLANDEMPEROR_L1 = get_guid("SpellList_InlandEmperor_L1")
+SPELLLIST_INLANDEMPEROR_L3 = get_guid("SpellList_InlandEmperor_L3")
+SPELLLIST_INLANDEMPEROR_L5 = get_guid("SpellList_InlandEmperor_L5")
 
 # Base directories
 MOD_NAME = "HomelessCalifornian"
@@ -204,7 +211,7 @@ h_status_patagonia_name = add_loca("status_patagonia_name", "Stolen Patagonia Ve
 h_status_patagonia_desc = add_loca("status_patagonia_desc", "Warm, fleece-lined, and acquired without prosecution. +1 Armour Class and +1d4 Bludgeoning damage on weapon attacks.")
 
 h_pocket_lint_name = add_loca("pocket_lint_name", "Pocket Lint Buffet")
-h_pocket_lint_desc = add_loca("pocket_lint_desc", "Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2 (minimum 3).")
+h_pocket_lint_desc = add_loca("pocket_lint_desc", "Rummaging through the coats of foes marinating in your biological weaponry is sustenance. Once per turn, when you damage a creature that has Fecal Stench, you gain Temporary Hit Points equal to your Constitution modifier + 2.")
 
 h_status_pocket_lint_name = add_loca("status_pocket_lint_name", "Pocket Lint Snack")
 h_status_pocket_lint_desc = add_loca("status_pocket_lint_desc", "Fortified by whatever was in that coat. Grants Temporary Hit Points.")
@@ -345,6 +352,40 @@ h_status_hangten_desc = add_loca("status_hangten_desc", "Surfing metaphysical wa
 
 h_status_vibe_name = add_loca("status_vibe_name", "Vibe Checked")
 h_status_vibe_desc = add_loca("status_vibe_desc", "Concentration broken and mind disrupted by venture capital reality.")
+
+# Expanded Racial Features Loca
+h_runyon_glutes_name = add_loca("runyon_glutes_name", "Runyon Canyon Glutes")
+h_runyon_glutes_desc = add_loca("runyon_glutes_desc", "From a lifetime of mandatory uphill power-walking in high-end activewear and hauling organic groceries, your jump distance is increased by 50% and your carrying capacity is increased by 25%.")
+
+h_hydroflask_name = add_loca("hydroflask_name", "Emotional Support Hydro Flask")
+h_hydroflask_desc = add_loca("hydroflask_desc", "Take a soothing sip from your dented 40-oz vacuum-insulated flask. Restores 1d8 + Constitution modifier Hit Points, cures Poisoned, and quenches any burning surface beneath you with pure cold water. Once per short rest.")
+
+h_rip_current_name = add_loca("rip_current_name", "Rip Current")
+h_rip_current_desc = add_loca("rip_current_desc", "Whip a foe with the treacherous undertow of the Pacific. Make a melee spell attack: on a hit it deals 2d6 Cold damage, pulls the target 4.5 m toward you, knocks them Prone on a failed Strength save, and creates a puddle of seawater. Once per short rest.")
+
+h_golden_hour_name = add_loca("golden_hour_name", "Golden Hour")
+h_golden_hour_desc = add_loca("golden_hour_desc", "Radiate the blinding, intensely flattering light of a Malibu sunset. Enemies in a 6 m radius make a Constitution saving throw or are Blinded for 2 turns. You gain +3 m movement and deal +1d4 Radiant damage on weapon attacks for 2 turns. Once per long rest.")
+h_status_golden_hour_name = add_loca("status_golden_hour_name", "Golden Hour Glow")
+h_status_golden_hour_desc = add_loca("status_golden_hour_desc", "Bathed in ethereal coastal sunlight. Movement speed increased by 3 m and weapon attacks deal an extra 1d4 Radiant damage.")
+
+h_disruptive_pivot_name = add_loca("disruptive_pivot_name", "Disruptive Pivot")
+h_disruptive_pivot_desc = add_loca("disruptive_pivot_desc", "Pivot away from current market conditions. Teleport up to 9 m to an unoccupied space. You gain Advantage on your next attack roll as enemies struggle to parse your new roadmap. Once per long rest.")
+h_status_pivot_adv_name = add_loca("status_pivot_adv_name", "Pivoting Momentum")
+h_status_pivot_adv_desc = add_loca("status_pivot_adv_desc", "Capitalizing on recent market disruption. Advantage on your next attack roll.")
+
+h_nda_name = add_loca("nda_name", "Non-Disclosure Agreement")
+h_nda_desc = add_loca("nda_desc", "Enforce aggressive legal silence on a target. Deals 2d8 Psychic damage (half on a successful Wisdom save). On a failed Wisdom save, the target is Silenced for 2 turns. The terms of this combat are strictly confidential. Once per long rest.")
+
+h_dust_devil_name = add_loca("dust_devil_name", "Dust Devil")
+h_dust_devil_desc = add_loca("dust_devil_desc", "Kick up an abrasive whirlwind of Mojave dust and alkaline gravel. You gain Blur for 1 turn, and enemies in a 3 m radius make a Constitution save or are Blinded for 1 turn. Once per short rest.")
+
+h_overpass_exhaust_name = add_loca("overpass_exhaust_name", "Overpass Exhaust")
+h_overpass_exhaust_desc = add_loca("overpass_exhaust_desc", "Spew a 6 m cone of lifted-truck diesel exhaust and superheated valley smog. Deals 2d8 Poison and 1d8 Fire damage (Constitution save for half damage). Once per long rest.")
+
+h_heatstroke_name = add_loca("heatstroke_name", "Heatstroke")
+h_heatstroke_desc = add_loca("heatstroke_desc", "Subject an enemy to the brutal 115-degree Bakersfield midday sun. Deals 3d8 Fire damage (half on a successful Constitution save). On a failed save, the target suffers Heatstroke for 2 turns (movement halved, disadvantage on attack rolls and Strength and Dexterity saves). Once per long rest.")
+h_status_heatstroke_name = add_loca("status_heatstroke_name", "Heatstroke")
+h_status_heatstroke_desc = add_loca("status_heatstroke_desc", "Overcome by blistering valley heat. Movement speed is halved; Disadvantage on attack rolls and Strength and Dexterity saving throws.")
 
 
 # -------------------------------------------------------------
@@ -600,22 +641,52 @@ def generate_lists_lsx():
                     <attribute id="UUID" type="guid" value="{SPELLLIST_BART_L10}"/>
                 </node>
 
-                <!-- Racial Californian Spells: Touch Grass & Avocado Toast -->
+                <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast"/>
+                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_CALIFORNIAN_L1}"/>
                 </node>
 
-                <!-- Racial Beachborn Spells: Hang Ten -->
+                <!-- Racial Beachborn Spells: Hang Ten (L1), Rip Current (L3), Golden Hour (L5) -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_HangTen"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_BEACHBORN_L1}"/>
                 </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_RipCurrent"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_BEACHBORN_L3}"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_GoldenHour"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_BEACHBORN_L5}"/>
+                </node>
 
-                <!-- Racial Siliconite Spells: Vibe Check -->
+                <!-- Racial Siliconite Spells: Vibe Check (L1), Disruptive Pivot (L3), NDA (L5) -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Target_VibeCheck"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_SILICONITE_L1}"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_DisruptivePivot"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_SILICONITE_L3}"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_NonDisclosureAgreement"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_SILICONITE_L5}"/>
+                </node>
+
+                <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust (L3), Heatstroke (L5) -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Shout_DustDevil"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_INLANDEMPEROR_L1}"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_INLANDEMPEROR_L3}"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="Target_Heatstroke"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_INLANDEMPEROR_L5}"/>
                 </node>
             </children>
         </node>
@@ -784,7 +855,7 @@ def generate_progressions_lsx():
                     <attribute id="Boosts" type="LSString" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Californian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405;RunyonCanyonGlutes"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
                     <attribute id="Selectors" type="LSString" value="SelectPassives({PASSIVELIST_CALIFORNIA_IDENTITY},1,CaliforniaIdentity);AddSpells({SPELLLIST_CALIFORNIAN_L1},,Charisma,,AlwaysPrepared)"/>
                     <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_CALIFORNIAN}"/>
@@ -814,6 +885,26 @@ def generate_progressions_lsx():
                     <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_BEACHBORN}"/>
                     <attribute id="UUID" type="guid" value="{u_beach}"/>
                 </node>""")
+        elif lvl == 3:
+            nodes.append(f"""
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_BEACHBORN_L3},,Charisma,,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_BEACHBORN}"/>
+                    <attribute id="UUID" type="guid" value="{u_beach}"/>
+                </node>""")
+        elif lvl == 5:
+            nodes.append(f"""
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="Beachborn"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_BEACHBORN_L5},,Charisma,,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_BEACHBORN}"/>
+                    <attribute id="UUID" type="guid" value="{u_beach}"/>
+                </node>""")
         else:
             nodes.append(f"""
                 <node id="Progression">
@@ -838,6 +929,26 @@ def generate_progressions_lsx():
                     <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_SILICONITE}"/>
                     <attribute id="UUID" type="guid" value="{u_silicon}"/>
                 </node>""")
+        elif lvl == 3:
+            nodes.append(f"""
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_SILICONITE_L3},,Charisma,,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_SILICONITE}"/>
+                    <attribute id="UUID" type="guid" value="{u_silicon}"/>
+                </node>""")
+        elif lvl == 5:
+            nodes.append(f"""
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="Siliconite"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_SILICONITE_L5},,Charisma,,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_SILICONITE}"/>
+                    <attribute id="UUID" type="guid" value="{u_silicon}"/>
+                </node>""")
         else:
             nodes.append(f"""
                 <node id="Progression">
@@ -859,6 +970,27 @@ def generate_progressions_lsx():
                     <attribute id="Name" type="LSString" value="InlandEmperor"/>
                     <attribute id="PassivesAdded" type="LSString" value="Passive_SmogLungs;Passive_HeatIndexMastery"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_INLANDEMPEROR_L1},,Charisma,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_INLANDEMPEROR}"/>
+                    <attribute id="UUID" type="guid" value="{u_inland}"/>
+                </node>""")
+        elif lvl == 3:
+            nodes.append(f"""
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_INLANDEMPEROR_L3},,Charisma,,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_INLANDEMPEROR}"/>
+                    <attribute id="UUID" type="guid" value="{u_inland}"/>
+                </node>""")
+        elif lvl == 5:
+            nodes.append(f"""
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="InlandEmperor"/>
+                    <attribute id="ProgressionType" type="uint8" value="2"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells({SPELLLIST_INLANDEMPEROR_L5},,Charisma,,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_INLANDEMPEROR}"/>
                     <attribute id="UUID" type="guid" value="{u_inland}"/>
                 </node>""")
@@ -1510,6 +1642,70 @@ data "SpellAnimation" "{ANIM_SELF}"
 data "CastTextEvent" "Cast"
 data "VerbalIntent" "Buff"
 data "SpellFlags" "IgnoreSilence"
+
+new entry "Shout_EmotionalSupportHydroflask"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SecondWind"
+data "Level" "0"
+data "Cooldown" "OncePerShortRest"
+data "UseCosts" "BonusActionPoint:1"
+data "SpellProperties" "RegainHitPoints(1d8+ConstitutionModifier);RemoveStatus(SG_Poisoned);GROUND:SurfaceChange(Douse);GROUND:CreateSurface(1.5,1,Water)"
+data "TargetConditions" "Self()"
+data "Icon" "Spell_Transmutation_CreateWater"
+data "DisplayName" "{h_hydroflask_name};1"
+data "Description" "{h_hydroflask_desc};1"
+data "TooltipDamageList" "RegainHitPoints(1d8+ConstitutionModifier)"
+data "CastTextEvent" "Cast"
+data "VerbalIntent" "Healing"
+
+new entry "Shout_GoldenHour"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_ArmsOfHadar"
+data "Level" "0"
+data "Cooldown" "OncePerRest"
+data "AreaRadius" "6"
+data "UseCosts" "ActionPoint:1"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "ApplyStatus(BLINDED,100,2)"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL,100,0)"
+data "SpellProperties" "ApplyStatus(SELF,GOLDEN_HOUR_GLOW,100,2)"
+data "TargetConditions" "Character() and Enemy() and not Dead()"
+data "Icon" "Spell_Evocation_Daylight"
+data "DisplayName" "{h_golden_hour_name};1"
+data "Description" "{h_golden_hour_desc};1"
+data "TooltipStatusApply" "ApplyStatus(BLINDED,100,2);ApplyStatus(GOLDEN_HOUR_GLOW,100,2)"
+data "TooltipDamageList" ""
+data "TooltipUpcastDescription" ""
+data "TooltipUpcastDescriptionParams" ""
+data "TooltipOnSave" ""
+data "TooltipAttackSave" "Constitution"
+data "CastTextEvent" "Cast"
+
+new entry "Shout_DustDevil"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_ArmsOfHadar"
+data "Level" "0"
+data "Cooldown" "OncePerShortRest"
+data "AreaRadius" "3"
+data "UseCosts" "BonusActionPoint:1"
+data "SpellProperties" "ApplyStatus(SELF,BLUR,100,1)"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "ApplyStatus(BLINDED,100,1)"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL,100,0)"
+data "TargetConditions" "Character() and Enemy() and not Dead()"
+data "Icon" "Spell_Transmutation_GaseousForm"
+data "DisplayName" "{h_dust_devil_name};1"
+data "Description" "{h_dust_devil_desc};1"
+data "TooltipStatusApply" "ApplyStatus(BLINDED,100,1);ApplyStatus(BLUR,100,1)"
+data "TooltipDamageList" ""
+data "TooltipUpcastDescription" ""
+data "TooltipUpcastDescriptionParams" ""
+data "TooltipOnSave" ""
+data "TooltipAttackSave" "Constitution"
+data "CastTextEvent" "Cast"
 """
     with open(os.path.join(stats_dir, "Spell_Shout.txt"), "w", encoding="utf-8") as f:
         f.write(shout_content)
@@ -1635,6 +1831,96 @@ data "SpellAnimation" "{ANIM_CAST}"
 data "CastTextEvent" "Cast"
 data "VerbalIntent" "Control"
 data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+
+new entry "Target_RipCurrent"
+type "SpellData"
+data "SpellType" "Target"
+data "Level" "0"
+data "SpellSchool" "Transmutation"
+data "Cooldown" "OncePerShortRest"
+data "TargetRadius" "9"
+data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
+data "SpellSuccess" "TARGET:IF(not Grounded() and TargetSizeEqualOrSmaller(Size.Large)):Force(-4.5, OriginToEntity, Neutral, false, true);DealDamage(2d6,Cold,Magical);TARGET:IF(Character() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE,100,1);GROUND:CreateSurface(1.5,1,Water)"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL,100,0)"
+data "TargetConditions" "Character() and not Self() and not Dead()"
+data "Icon" "Spell_Transmutation_CreateWater"
+data "DisplayName" "{h_rip_current_name};1"
+data "Description" "{h_rip_current_desc};1"
+data "TooltipDamageList" "DealDamage(2d6,Cold)"
+data "TooltipAttackSave" "MeleeSpellAttack;Strength"
+data "TooltipStatusApply" "ApplyStatus(PRONE,100,1)"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "{ANIM_CAST}"
+data "CastTextEvent" "Cast"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;AddFallDamageOnLand"
+data "DamageType" "Cold"
+
+new entry "Target_DisruptivePivot"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MistyStep"
+data "Level" "0"
+data "Cooldown" "OncePerRest"
+data "TargetRadius" "9"
+data "UseCosts" "BonusActionPoint:1"
+data "SpellProperties" "GROUND:TeleportSource();GROUND:ApplyStatus(SELF,DISRUPTIVE_PIVOT_ADV,100,1)"
+data "DisplayName" "{h_disruptive_pivot_name};1"
+data "Description" "{h_disruptive_pivot_desc};1"
+data "Icon" "Spell_Conjuration_MistyStep"
+data "TooltipStatusApply" "ApplyStatus(DISRUPTIVE_PIVOT_ADV,100,1)"
+data "TooltipUpcastDescription" ""
+data "SpellFlags" "IgnoreSilence;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold"
+
+new entry "Target_NonDisclosureAgreement"
+type "SpellData"
+data "SpellType" "Target"
+data "Level" "0"
+data "SpellSchool" "Enchantment"
+data "Cooldown" "OncePerRest"
+data "TargetRadius" "9"
+data "UseCosts" "ActionPoint:1"
+data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(2d8,Psychic,Magical);ApplyStatus(SILENCED,100,2)"
+data "SpellFail" "DealDamage((2d8)/2,Psychic,Magical);ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL,100,0)"
+data "TargetConditions" "Character() and not Self() and not Dead()"
+data "Icon" "Spell_Illusion_Silence"
+data "DisplayName" "{h_nda_name};1"
+data "Description" "{h_nda_desc};1"
+data "TooltipDamageList" "DealDamage(2d8,Psychic)"
+data "TooltipAttackSave" "Wisdom"
+data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
+data "TooltipStatusApply" "ApplyStatus(SILENCED,100,2)"
+data "SpellAnimation" "{ANIM_CAST}"
+data "CastTextEvent" "Cast"
+data "VerbalIntent" "Control"
+data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "DamageType" "Psychic"
+
+new entry "Target_Heatstroke"
+type "SpellData"
+data "SpellType" "Target"
+data "Level" "0"
+data "SpellSchool" "Evocation"
+data "Cooldown" "OncePerRest"
+data "TargetRadius" "9"
+data "UseCosts" "ActionPoint:1"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(3d8,Fire,Magical);ApplyStatus(HEATSTROKE,100,2)"
+data "SpellFail" "DealDamage((3d8)/2,Fire,Magical);ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL,100,0)"
+data "TargetConditions" "Character() and not Self() and not Dead()"
+data "Icon" "Spell_Evocation_Fireball"
+data "DisplayName" "{h_heatstroke_name};1"
+data "Description" "{h_heatstroke_desc};1"
+data "TooltipDamageList" "DealDamage(3d8,Fire)"
+data "TooltipAttackSave" "Constitution"
+data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
+data "TooltipStatusApply" "ApplyStatus(HEATSTROKE,100,2)"
+data "SpellAnimation" "{ANIM_CAST}"
+data "CastTextEvent" "Cast"
+data "VerbalIntent" "Damage"
+data "SpellFlags" "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful"
+data "DamageType" "Fire"
 """
     with open(os.path.join(stats_dir, "Spell_Target.txt"), "w", encoding="utf-8") as f:
         f.write(target_content)
@@ -1662,6 +1948,34 @@ data "DamageType" "Bludgeoning"
 """
     with open(os.path.join(stats_dir, "Spell_Rush.txt"), "w", encoding="utf-8") as f:
         f.write(rush_content)
+
+    # Spell_Zone.txt
+    zone_content = f"""new entry "Zone_OverpassExhaust"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_BurningHands"
+data "Level" "0"
+data "Cooldown" "OncePerRest"
+data "Range" "6"
+data "UseCosts" "ActionPoint:1"
+data "SpellProperties" ""
+data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(2d8,Poison,Magical);DealDamage(1d8,Fire,Magical)"
+data "SpellFail" "DealDamage((2d8)/2,Poison,Magical);DealDamage((1d8)/2,Fire,Magical);ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL,100,0)"
+data "TargetConditions" "Character() and not Ally() and not Dead()"
+data "Icon" "Spell_Evocation_BurningHands"
+data "DisplayName" "{h_overpass_exhaust_name};1"
+data "Description" "{h_overpass_exhaust_desc};1"
+data "TooltipDamageList" "DealDamage(2d8,Poison);DealDamage(1d8,Fire)"
+data "DescriptionParams" ""
+data "TooltipUpcastDescription" ""
+data "TooltipUpcastDescriptionParams" ""
+data "TooltipAttackSave" "Constitution"
+data "CastTextEvent" "Cast"
+data "DamageType" "Poison"
+"""
+    with open(os.path.join(stats_dir, "Spell_Zone.txt"), "w", encoding="utf-8") as f:
+        f.write(zone_content)
 
     # Status_BOOST.txt
     status_content = f"""new entry "FECAL_STENCH"
@@ -1890,6 +2204,41 @@ data "StackId" "VIBE_CHECKED"
 data "StackType" "Overwrite"
 data "TickType" "EndTurn"
 data "Boosts" "ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceMultiplier(Movement,50,0)"
+
+new entry "GOLDEN_HOUR_GLOW"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_golden_hour_name};1"
+data "Description" "{h_status_golden_hour_desc};1"
+data "Icon" "Spell_Evocation_Daylight"
+data "StackId" "GOLDEN_HOUR_GLOW"
+data "StackType" "Overwrite"
+data "TickType" "EndTurn"
+data "Boosts" "ActionResource(Movement,3,0);CharacterWeaponDamage(1d4,Radiant)"
+
+new entry "DISRUPTIVE_PIVOT_ADV"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_pivot_adv_name};1"
+data "Description" "{h_status_pivot_adv_desc};1"
+data "Icon" "Spell_Conjuration_MistyStep"
+data "StackId" "DISRUPTIVE_PIVOT_ADV"
+data "StackType" "Overwrite"
+data "TickType" "EndTurn"
+data "Boosts" "Advantage(AttackRoll)"
+data "RemoveEvents" "OnAttack"
+
+new entry "HEATSTROKE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "{h_status_heatstroke_name};1"
+data "Description" "{h_status_heatstroke_desc};1"
+data "Icon" "Spell_Evocation_Fireball"
+data "StackId" "HEATSTROKE"
+data "StackType" "Overwrite"
+data "TickType" "EndTurn"
+data "Boosts" "ActionResourceMultiplier(Movement,50,0);Disadvantage(AttackRoll);Disadvantage(SavingThrow,Strength);Disadvantage(SavingThrow,Dexterity)"
+data "StatusPropertyFlags" "InitiateCombat"
 """
     with open(os.path.join(stats_dir, "Status_BOOST.txt"), "w", encoding="utf-8") as f:
         f.write(status_content)
@@ -2110,6 +2459,14 @@ data "Description" "{h_id_algo_desc};1"
 data "Icon" "PassiveFeature_ReliableTalent"
 data "Properties" "Highlighted"
 data "Boosts" "RollBonus(SavingThrow,1)"
+
+new entry "RunyonCanyonGlutes"
+type "PassiveData"
+data "DisplayName" "{h_runyon_glutes_name};1"
+data "Description" "{h_runyon_glutes_desc};1"
+data "Icon" "PassiveFeature_FastMovement"
+data "Properties" "Highlighted"
+data "Boosts" "JumpMaxDistanceMultiplier(1.5);CarryCapacityMultiplier(1.25)"
 """
     with open(os.path.join(stats_dir, "Passive.txt"), "w", encoding="utf-8") as f:
         f.write(passive_content)
@@ -2148,6 +2505,7 @@ def generate_local_expansion():
     from xml.sax.saxutils import escape
     from hc_expansion import generate_expansion
     from hc_outfit import generate_outfit
+    from hc_cart import generate_cart
     from hc_utility import generate_utility
     from hc_choices import generate_choices
     from hc_capstone import generate_capstone
@@ -2156,6 +2514,10 @@ def generate_local_expansion():
     grants = generate_expansion(PUBLIC_DIR, add_loca, get_guid)
     wardrobe = generate_outfit(PUBLIC_DIR, add_loca, get_guid)
     grants['base'].setdefault(1, []).append(wardrobe)
+    cart = generate_cart(PUBLIC_DIR, add_loca, get_guid)
+    for category, levels in cart['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     utility = generate_utility(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in utility['base'].items():
         grants['base'].setdefault(level, []).extend(spells)

@@ -29,6 +29,8 @@ SPELL_ICON_KEYS = {
     'HC_Target_BoardwalkDisarm': 'Spell_BoardwalkDisarm',
     'HC_Target_FareInspection': 'Spell_FareInspection',
     'HC_Target_ChairCheck': 'Spell_ChairCheck',
+    'HC_Shout_IWasHereFirst': 'Spell_IWasHereFirst',
+    'HC_Shout_PigeonLunchRush': 'Spell_PigeonLunchRush',
 }
 
 def icon_for_spell(spell, fallback):

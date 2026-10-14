@@ -10,6 +10,7 @@ def generate_doctrines(public_dir, add_loca, get_guid):
         ('HC_JunkDoctrine_Hoarder', 'Hoarder', 'Maximum Junk increased by 2. Your pockets have annexed the neighbouring pockets.', 'ActionResource(HC_Junk,2,0)'),
         ('HC_JunkDoctrine_Fortifier', 'Fortifier', '+1 Armour Class. Every layer of rubbish is another layer of plausible protection.', 'AC(1)'),
         ('HC_JunkDoctrine_Runner', 'Runner', '+3 m movement speed. You have never missed a train you were already chasing.', 'ActionResource(Movement,3,0)'),
+        ('HC_JunkDoctrine_Twitchy', 'Twitchy', '+3 bonus to Initiative. You have spent years sleeping with one eye open. Nobody catches you flat-footed.', 'Initiative(3)'),
     ]
     blocks = []
     for key, name, description, boost in options:
