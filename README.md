@@ -2,7 +2,7 @@
 
 ## Public playtest
 
-[Download the playtest (Oct 13 build)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-13) · [Nexus Mods page](https://www.nexusmods.com/baldursgate3/mods/25761) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
+[Download the playtest (Oct 15 build, v0.3.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15) · [Nexus Mods page](https://www.nexusmods.com/baldursgate3/mods/25761) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
 
 **Throw bricks. Weaponise furniture. Make public transit everybody else's problem.**
 
