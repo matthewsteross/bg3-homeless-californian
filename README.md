@@ -11,12 +11,12 @@ subclasses: Tenderloin poison, Venice furniture melee, and BART repositioning.
 Try one subclass for ten minutes and tell us one thing that broke—or one thing
 that worked. [Start the short tester checklist](TESTING.md).
 
-**Which version is which:** the public download (release `playtest-2026-10-13`, also the Nexus file) is
-**v0.2.0 (untested in game)**. The source in this repository is newer: it is v0.2.1 plus later additions
-(race abilities, I Was Here First, Pigeon Lunch Rush and more, listed below). Those fixes and additions are **not
-released yet** and have **not been tested in game**. The older October 12 build is still on its own release page.
-Use the release ZIP for playtesting. The Nexus page is live; the in-game (mod.io) listing is still pending
-approval, so the mod is not yet confirmed in the in-game mod menu.
+**Which version is which:** the public download (release `playtest-2026-10-15`, also the Nexus file) is
+**v0.3.0**: v0.2.1 plus the Californian race overhaul, the shopping cart prop and Abandoned Cart spell, Territory Claim,
+Pigeon Lunch Rush and more (listed below). **Honest status:** file-level checks pass, and an in-game data check confirmed that
+every spell, status and passive loads. Playing it is still mostly untested: only level 12 and the cart have been confirmed by
+hand. The older October 12 and 13 builds are still on their own release pages. The Nexus page is live; the in-game (mod.io)
+listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
@@ -28,17 +28,16 @@ This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
 new progression grants are missing. Keep the mod installed on saves that use it.
 
-## Capstone, Street Trade, Doctrines and the Hustle kit (in v0.2.0; NOT yet play-tested)
+## Capstone, Street Trade, Doctrines and the Hustle kit (v0.2.0 and later; mostly NOT yet play-tested)
 
-The October 13 build (v0.2.0) contains a much larger build than the October 12
+The October 13 build (v0.2.0) and later builds contain a much larger kit than the October 12
 playtest ZIP: the level-12 **Squatter's Rights** capstone, a **Street Trade** selector, **Junk Doctrines**, and the
 **Hustle kit** (Guilt Trip, Beg, Public Scene, Trapped in the Invisible Box, Bucket Drum Solo, Compassion Burnout,
 Punctured Lithium Cell, Sublet, Everybody Knows This Guy, plus the Homeless Fatigue and Breadcrumbed statuses).
-**Honest status:** file-level checks and 39 validation tests pass (on the current repository source, which is newer
-than the downloadable v0.2.0). In game, only "a character can reach level 12 without a catastrophic failure" has been
+**Honest status:** file-level checks and 39 validation tests pass (on the current source, which is what v0.3.0 ships). In game, only "a character can reach level 12 without a catastrophic failure" has been
 confirmed; individual abilities have not been tested, and **Beg** (gold from non-hostile NPCs) is the most experimental.
 Guilt Trip, Public Scene and Compassion Burnout now work on any enemy and add a bonus when the target is Socially
-Shamed or Homeless Fatigued (repository source only; the v0.2.0 download requires the status and can show "Invalid Target"). Use a new character or a respec for new grants. Test routes for the new
+Shamed or Homeless Fatigued (fixed since v0.2.1; the old v0.2.0 download requires the status and can show "Invalid Target"). Use a new character or a respec for new grants. Test routes for the new
 abilities are at the bottom of [TESTING.md](TESTING.md).
 
 ## October 12 Codex expansion — gameplay review in progress
@@ -68,7 +67,7 @@ existing animations. The chair
 abilities do not display a new chair mesh. The "pigeon" is visibly a raven, and
 the wardrobe uses existing robe/cloak visuals, not a custom safety vest or
 blue tarp model. Guns are future work. There is now exactly one custom mesh, the
-Abandoned Cart (see the unreleased additions below); the chair, tarp, guns and pigeon are still not custom. The level-12
+Abandoned Cart (see the v0.3.0 additions below); the chair, tarp, guns and pigeon are still not custom. The level-12
 Squatter's Rights capstone, Street Trade and Junk Doctrines are described in the
 section above.
 
@@ -94,9 +93,9 @@ A custom class and race mod for **Baldur's Gate 3** introducing the **Homeless C
 
 ---
 
-## Unreleased repository additions (after v0.2.0; NOT yet verified in game)
+## Additions in v0.3.0 (after v0.2.0; NOT yet verified in game)
 
-These exist in the source and a locally built pak only. They are not in the public v0.2.0 download. Everything
+These are in the public v0.3.0 download but not in the older v0.2.0 download. Everything
 below is **not yet verified in game**; numbers are copied from the generated game data.
 
 | Unlock | Addition | Intended behavior |
@@ -242,7 +241,7 @@ Phase 4 abilities; all but Beg cost 1 Junk. The Junk toolkit above is documented
 - **L10 - King of the Boardwalk**: Critical hits on 18-20; heal `1d8` HP whenever you hit with a melee attack.
 - **L3 - Heirloom Furniture** *(not yet verified in game)*: Action + 1 Junk; melee hit for `3d6 + CON Bludgeoning`, failed Strength save knocks Prone; a hit prepares a Chair-Leg Shiv.
 - **L3 - Chair-Leg Shiv** *(not yet verified in game)*: Bonus-action melee attack for `2d6 + CON Piercing`; consumes the temporary unlock.
-- **L3 - Abandoned Cart**: Bonus action + 1 Junk, once per short rest, 6 m; spawns a shopping-cart prop. Partly verified live on 2026-10-14 (see unreleased additions above); facing, collision, Junk cost and look are not verified.
+- **L3 - Abandoned Cart**: Bonus action + 1 Junk, once per short rest, 6 m; spawns a shopping-cart prop. Partly verified live on 2026-10-14 (see the v0.3.0 additions above); facing, collision, Junk cost and look are not verified.
 - **L6 - Sublet** *(not yet verified in game)*: Action + 1 Junk; an ally within 9 m gets the Lawn Chair buff (+2 AC, advantage on Strength saves, Prone immunity) for 2 turns.
 - **L10 - Chair Check** *(not yet verified in game)*: Action + 1 Junk, once per short rest; weapon attack for weapon damage plus `2d8 Bludgeoning`, failed Strength save knocks Prone.
 - **L12 - Squatter's Rights: Eviction Defense** *(not yet verified in game)*: Bonus Action, once per long rest; restores all Junk and lasts 3 turns. Action Surge, advantage on attack rolls, and an Emergency Chair-Leg Shiv.
@@ -275,7 +274,7 @@ Hailing from the Golden State, **Californians** are a human-bodied race (standar
 - Racial spells use Charisma as their spellcasting ability.
 
 ### Subraces
-Each subrace gets abilities at race levels 1, 3 and 5 (character level). **None of the subrace abilities below are verified in game yet.** Levels 3 and 5 are new in the unreleased repository source.
+Each subrace gets abilities at race levels 1, 3 and 5 (character level). **None of the subrace abilities below are verified in game yet.** Levels 3 and 5 are new in v0.3.0.
 
 | Subrace | Level 1 | Level 3 | Level 5 |
 |---------|---------|---------|---------|

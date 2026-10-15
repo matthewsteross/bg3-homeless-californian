@@ -2,7 +2,7 @@
 
 Playtest the Homeless Californian class for Baldur's Gate 3 on PC.
 
-[Download the current release (October 13, v0.2.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-13)
+[Download the current release (October 15, v0.3.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15)
 (the older [October 12 ZIP](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12)
 is still available) and import HomelessCalifornian.pak using your usual BG3 mod manager. Enable it
 and export your load order where your manager requires it. Do not install a
@@ -55,7 +55,7 @@ Pick one or two; ten minutes is plenty. New grants need a new character or a res
 
 | Class level | Try | What to report |
 |---|---|---|
-| 5 | **Guilt Trip** on any enemy, then again after Aggressive Panhandling (class 2) | Castable on an un-shamed enemy? Extra damage and Socially Shamed removed when shamed? (The v0.2.0 download may show Invalid Target; fixed in newer source, not yet released.) |
+| 5 | **Guilt Trip** on any enemy, then again after Aggressive Panhandling (class 2) | Castable on an un-shamed enemy? Extra damage and Socially Shamed removed when shamed? (The v0.2.0 download may show Invalid Target; fixed in v0.3.0.) |
 | 6 | **Public Scene** on an enemy, shamed and un-shamed | Frightened on a failed save? Longer if shamed? (Same Invalid Target caveat on v0.2.0.) |
 | 8 | **Trapped in the Invisible Box** | Enemy cannot move for a turn? Short rest resets it? |
 | 9 | **Bucket Drum Solo** into a group | Damage, push, Homeless Fatigue icon, advantage against fatigued targets? |
@@ -66,11 +66,11 @@ Pick one or two; ten minutes is plenty. New grants need a new character or a res
 | 5 | **Beg** on a friendly NPC (trader, townsperson) | Did gold arrive in YOUR inventory? Did the NPC turn hostile or cause a crime? Did Homeless Fatigue stay on them? |
 | 12 | Subclass **Squatter's Rights** capstone | Does it activate, grant its effects, and expire as described? |
 
-Please say which build you used (the Nexus file is version 0.2.0, the 2026-10-13 build).
+Please say which build you used (the Nexus file is now version 0.3.0, the 2026-10-15 build).
 
-## Newest additions - repository source only, NOT yet released (untested in game)
+## Newest additions in v0.3.0 (untested in game)
 
-These are not in the v0.2.0 download. If you are testing a local build from the repository, a new character or respec
+These are new in v0.3.0 (not in the older v0.2.0 download). If you are testing a local build from the repository, a new character or respec
 is needed for race and class grants.
 
 | Level / source | Try | What to report |
