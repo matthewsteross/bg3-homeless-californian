@@ -61,5 +61,5 @@ release gate.
 ## Live in-game testing
 
 A Script Extender (BG3SE v33) harness exists for dev-only test builds. The harness is never shipped
-in the released package. See `HANDOFF-2026-10-14.md`. On 2026-10-15 it was used for an in-game data check of the v0.4.0 content (everything loads, Curb Alert grants its items, the tarp spawns, four ground effects appear); it does not test damage, saves or balance. Anything it touches stays "not yet verified in game"
+in the released package. See `HANDOFF.md`. On 2026-10-15 it was used for an in-game data check of the v0.4.0 content (everything loads, Curb Alert grants its items, the tarp spawns, four ground effects appear); it does not test damage, saves or balance. Anything it touches stays "not yet verified in game"
 until Matthew confirms it by playing.
