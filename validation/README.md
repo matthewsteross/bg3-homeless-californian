@@ -7,7 +7,7 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite (89 tests on the current source) lives in `test_validate.py` (12), `test_cart.py` (6), `test_expansion.py` (3),
+The suite (92 tests on the current source) lives in `test_validate.py` (12), `test_cart.py` (6), `test_expansion.py` (3),
 `test_spell_rules.py` (18), `test_overpass.py` (18), `test_kit_additions.py` (11) and `test_round2.py` (21). The first four files held
 39 tests at the v0.3.0 release. `test_overpass.py` covers the source-only Overpass Riverbed Dweller subclass, `test_kit_additions.py`
 covers the source-only Squeegee Technician, Cardboard Insulator and NIMBY Zoning Defense, and `test_round2.py` covers the source-only

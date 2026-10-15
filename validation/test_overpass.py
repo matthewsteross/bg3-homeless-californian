@@ -22,11 +22,13 @@ from test_spell_rules import parse_entries
 
 SUBCLASS = 'OverpassRiverbedDweller'
 NEW_SPELLS = ['HC_Zone_StormDrainFlashFlood', 'HC_Shout_BlueTarpLeanTo', 'HC_Target_CulvertSiphon',
-              'HC_Shout_SquattersRights_Overpass']
+              'HC_Shout_SquattersRights_Overpass', 'HC_Target_DrainageDitchDigIn']
 NEW_STATUSES = ['HC_TARP_COVER', 'HC_SPILLWAY_SOVEREIGN']
 NEW_PASSIVES = ['HC_ConcreteBankTraction', 'HC_UnderpassClimateControl', 'HC_RebarAnchor']
 LEVEL_GRANTS = {'3': (['HC_Zone_StormDrainFlashFlood', 'HC_Shout_BlueTarpLeanTo'], 'HC_ConcreteBankTraction'),
                 '6': (['HC_Target_CulvertSiphon'], 'HC_UnderpassClimateControl'),
+                # Level 10's spell comes from the hand-written SpellList_Overpass_L10 (BART L10 style), not
+                # from an expansion list, so it is asserted in test_level_ten_spell_list_is_wired.
                 '10': ([], 'HC_RebarAnchor'),
                 '12': (['HC_Shout_SquattersRights_Overpass'], None)}
 
@@ -122,12 +124,29 @@ class OverpassSubclassTests(unittest.TestCase):
                 uid = generator.get_guid(f'HC_ExpansionList_{SUBCLASS}_{level}')
                 self.assertEqual(self.spell_lists[uid], spells)
                 self.assertIn(f'AddSpells({uid})', a['Selectors'])
-            else:
+            elif level != '10':
                 self.assertNotIn('AddSpells', a.get('Selectors', ''))
             if passive:
                 self.assertEqual(a['PassivesAdded'], passive)
             else:
                 self.assertNotIn('PassivesAdded', a)
+
+    def test_level_ten_spell_list_is_wired(self):
+        uid = generator.SPELLLIST_OVERPASS_L10
+        self.assertEqual(uid, generator.get_guid('SpellList_Overpass_L10'))
+        self.assertNotEqual(uid, generator.SPELLLIST_BART_L10)
+        self.assertEqual(self.spell_lists[uid], ['HC_Target_DrainageDitchDigIn'])
+        a = self.overpass_progressions()['10']
+        self.assertEqual(a['Selectors'], f'AddSpells({uid})')
+        self.assertEqual(a['PassivesAdded'], 'HC_RebarAnchor')
+        # Granted exactly once: not also through an expansion list, and not at any other level.
+        for level, other in self.overpass_progressions().items():
+            if level == '10':
+                continue
+            for list_id in re.findall(r'AddSpells\(([^)]+)\)', other.get('Selectors', '')):
+                self.assertNotIn('HC_Target_DrainageDitchDigIn', self.spell_lists[list_id], f'level {level}')
+        occurrences = sum(spells.count('HC_Target_DrainageDitchDigIn') for spells in self.spell_lists.values())
+        self.assertEqual(occurrences, 1)
 
     def test_every_new_stat_is_defined(self):
         self.assertEqual(sorted(self.spells.keys() & set(NEW_SPELLS)), sorted(NEW_SPELLS))
@@ -223,6 +242,40 @@ class OverpassSubclassTests(unittest.TestCase):
             self.assertIn(functor, d['SpellProperties'])
         self.assertNotIn('IsMelee', d['SpellFlags'])
         self.assertNotIn('SpellCastingAbilityModifier', d['TooltipDamageList'])
+
+    def test_drainage_ditch_dig_in(self):
+        e = self.spells['HC_Target_DrainageDitchDigIn']
+        d = e['data']
+        self.assertEqual(e['using'], 'Target_CreateWater')
+        self.assertEqual(d['UseCosts'], 'ActionPoint:1;HC_Junk:1')
+        self.assertEqual(d['Cooldown'], 'OncePerShortRest')
+        self.assertEqual(d['TargetRadius'], '9')
+        self.assertEqual(d['SpellContainerID'], '')
+        self.assertEqual(d['SpellProperties'], 'GROUND:CreateSurface(3,3,Mud)')
+        # The surface radius and the targeting area match, and the donor's Wet/Water effects are gone.
+        self.assertEqual(d['AreaRadius'], '3')
+        self.assertNotIn('WET', d['SpellProperties'])
+        self.assertNotIn('Water', d['SpellProperties'])
+        self.assertEqual(d['TooltipStatusApply'], '')
+        # Icon falls back to a vanilla icon that exists in the extracted vanilla spell data.
+        self.assertEqual(d['Icon'], 'Spell_Conjuration_Grease')
+        vanilla_targets = (ROOT / 'temp_race/Public/Shared/Stats/Generated/Data/Spell_Target.txt').read_text(encoding='utf-8')
+        self.assertIn('data "Icon" "Spell_Conjuration_Grease"', vanilla_targets)
+        # Every name the spell leans on exists in the vanilla reference.
+        self.assertIn('CreateSurface(2,2,Mud)', vanilla_targets)
+        self.assertIn('new entry "DIFFICULT_TERRAIN_MUD"',
+                      (ROOT / 'temp_race/Public/Shared/Stats/Generated/Data/Status_BOOST.txt').read_text(encoding='utf-8'))
+
+    def test_drainage_ditch_text_and_immunity_interaction(self):
+        text = self.loca[self.spells['HC_Target_DrainageDitchDigIn']['data']['Description'].split(';')[0]]
+        for fact in ('an action and 1 Junk', 'once per short rest', '9 m', '3 m radius', 'difficult terrain', '3 turns',
+                     'Concrete Bank Traction'):
+            self.assertIn(fact, text)
+        self.assertTrue(text.endswith('Technically a flood-control project.'))
+        self.assertEqual(self.loca[self.spells['HC_Target_DrainageDitchDigIn']['data']['DisplayName'].split(';')[0]],
+                         'Drainage Ditch Dig-In')
+        # The subclass passive that makes the caster ignore the mud is the one granted at level 3.
+        self.assertIn('StatusImmunity(DIFFICULT_TERRAIN_MUD)', self.passives['HC_ConcreteBankTraction']['data']['Boosts'])
 
     def test_overpass_capstone_matches_the_sibling_capstones(self):
         d = self.spells['HC_Shout_SquattersRights_Overpass']['data']

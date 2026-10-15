@@ -247,6 +247,7 @@
                     <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_RebarAnchor"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(5179cd1f-5f03-5dc9-9c69-2c4573757073)"/>
                     <attribute id="TableUUID" type="guid" value="7fd23ac1-acdc-5d0a-ae6c-3dd2967b447e"/>
                     <attribute id="UUID" type="guid" value="6fd87e09-70a9-52bc-9134-4b885fcb52ab"/>
                 </node>

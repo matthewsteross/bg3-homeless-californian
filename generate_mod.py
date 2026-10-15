@@ -53,6 +53,7 @@ SPELLLIST_TENDERLOIN_L3 = get_guid("SpellList_Tenderloin_L3")
 SPELLLIST_VENICE_L3 = get_guid("SpellList_Venice_L3")
 SPELLLIST_BART_L3 = get_guid("SpellList_BART_L3")
 SPELLLIST_BART_L10 = get_guid("SpellList_BART_L10")
+SPELLLIST_OVERPASS_L10 = get_guid("SpellList_Overpass_L10")
 
 # Class Presets and Lists
 ABILITY_DISTRIB_UUID = get_guid("AbilityDistrib_Homeless")
@@ -674,6 +675,12 @@ def generate_lists_lsx():
                     <attribute id="UUID" type="guid" value="{SPELLLIST_BART_L10}"/>
                 </node>
 
+                <!-- Subclass Overpass Riverbed Dweller Level 10: Drainage Ditch Dig-In -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_DrainageDitchDigIn"/>
+                    <attribute id="UUID" type="guid" value="{SPELLLIST_OVERPASS_L10}"/>
+                </node>
+
                 <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask"/>
@@ -881,7 +888,7 @@ def generate_progressions_lsx():
     prog("Prog_Overpass_L6", "OverpassRiverbedDweller", 6, SUBCLASS_OVERPASS_TABLE_UUID, ptype=1,
          passives="HC_UnderpassClimateControl")
     prog("Prog_Overpass_L10", "OverpassRiverbedDweller", 10, SUBCLASS_OVERPASS_TABLE_UUID, ptype=1,
-         passives="HC_RebarAnchor")
+         passives="HC_RebarAnchor", selectors=f"AddSpells({SPELLLIST_OVERPASS_L10})")
     for category, table in [('TenderloinBiohazard', SUBCLASS_TENDERLOIN_TABLE_UUID),
                             ('VeniceBoardwalkBrawler', SUBCLASS_VENICE_TABLE_UUID),
                             ('BARTPlatformMenace', SUBCLASS_BART_TABLE_UUID),

@@ -70,6 +70,12 @@
                     <attribute id="UUID" type="guid" value="9a28b292-45e3-5c8f-afd1-96464f50db33"/>
                 </node>
 
+                <!-- Subclass Overpass Riverbed Dweller Level 10: Drainage Ditch Dig-In -->
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_DrainageDitchDigIn"/>
+                    <attribute id="UUID" type="guid" value="5179cd1f-5f03-5dc9-9c69-2c4573757073"/>
+                </node>
+
                 <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask"/>

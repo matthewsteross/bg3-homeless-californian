@@ -115,6 +115,19 @@ def generate_overpass(public_dir, add_loca, get_guid):
               TargetConditions="Character() and (Ally() or Self()) and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')",
               SpellProperties='RegainHitPoints(2d6+ConstitutionModifier);RemoveStatus(BURNING);GROUND:SurfaceChange(Douse)',
               TooltipDamageList='RegainHitPoints(2d6+ConstitutionModifier)')),
+        # Level 10 spell. Clone of Target_CreateWater (Spell_Target.txt:7237) the same way as
+        # HC_Target_SprinklerViolation in hc_round2.py; the Mud surface shape GROUND:CreateSurface(r,turns,Mud)
+        # is evidenced at Spell_Target.txt:10506 and Spell_Projectile.txt:4126, DIFFICULT_TERRAIN_MUD at
+        # Status_BOOST.txt:781, Spell_Conjuration_Grease at Spell_Target.txt:7719. Granted through the
+        # hand-written SpellList_Overpass_L10 in generate_mod.py, so it is not returned in the grants below.
+        ('HC_Target_DrainageDitchDigIn', 'Target_CreateWater', 'Drainage Ditch Dig-In',
+         'Dig a trench where the pavement used to be and let the rain finish the job. Costs an action and 1 Junk; once per short rest. '
+         'Choose a point within 9 m: the ground in a 3 m radius turns to mud (difficult terrain) for 3 turns, '
+         'slowing everything that tries to cross it. Concrete Bank Traction means you ignore it. '
+         'Technically a flood-control project.',
+         dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerShortRest', TargetRadius='9', AreaRadius='3',
+              SpellContainerID='', Icon='Spell_Conjuration_Grease',
+              SpellProperties='GROUND:CreateSurface(3,3,Mud)')),
     ]
     blocks = []
     for name, donor, title, description, overrides in specs:

@@ -37,7 +37,7 @@ The October 13 build (v0.2.0) and later builds contain a much larger kit than th
 playtest ZIP: the level-12 **Squatter's Rights** capstone, a **Street Trade** selector, **Junk Doctrines**, and the
 **Hustle kit** (Guilt Trip, Beg, Public Scene, Trapped in the Invisible Box, Bucket Drum Solo, Compassion Burnout,
 Punctured Lithium Cell, Sublet, Everybody Knows This Guy, plus the Homeless Fatigue and Breadcrumbed statuses).
-**Honest status:** file-level checks and 39 validation tests passed at the v0.3.0 release (the current source has 89, see the source-only section). In game, only "a character can reach level 12 without a catastrophic failure" has been
+**Honest status:** file-level checks and 39 validation tests passed at the v0.3.0 release (the current source has 92, see the source-only section). In game, only "a character can reach level 12 without a catastrophic failure" has been
 confirmed; individual abilities have not been tested, and **Beg** (gold from non-hostile NPCs) is the most experimental.
 Guilt Trip, Public Scene and Compassion Burnout now work on any enemy and add a bonus when the target is Socially
 Shamed or Homeless Fatigued (fixed since v0.2.1; the old v0.2.0 download requires the status and can show "Invalid Target"). Use a new character or a respec for new grants. Test routes for the new
@@ -88,7 +88,7 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(89 tests on the current source, including the deliberate-corruption checks; 39 at the v0.3.0 release). The saved original
+(92 tests on the current source, including the deliberate-corruption checks; 39 at the v0.3.0 release). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
@@ -123,14 +123,14 @@ localization resolve, the cart spawns and is visible, and casting it spawns exac
 collision, the Junk cost on a real Homeless Californian character, and how it looks in good light.
 
 The Californian race also gained racial progression (levels 1, 3 and 5); see [the race section](#-californian-race).
-At the v0.3.0 release the repository had 39 passing validation tests (file-level checks only); the current source has 89 (see below).
+At the v0.3.0 release the repository had 39 passing validation tests (file-level checks only); the current source has 92 (see below).
 
 ---
 
 ## Source-only additions after v0.3.0 (NOT in the public download, NOT verified in game)
 
 Everything in this section is in the repository source (commits after the `playtest-2026-10-15` release) and is **not** in the
-public v0.3.0 download or the Nexus file. It has only passed file-level checks (89 validation tests on the current source, 39 of
+public v0.3.0 download or the Nexus file. It has only passed file-level checks (92 validation tests on the current source, 39 of
 them from before these additions). Nothing here has been played in game. Numbers are copied from the generated game data and
 the localization text. A local build from the repository, and a new character or respec, are needed to try it.
 
@@ -144,6 +144,7 @@ the localization text. A local build from the repository, and a new character or
 | Overpass 6 | Culvert Siphon | Action + 1 Junk, once per short rest, 9 m; you or an ally (not undead or construct) regain `2d6 + CON` HP and stop Burning, and the ground is doused |
 | Overpass 6 | Underpass Climate Control | Passive: Resistance to Lightning and Cold damage |
 | Overpass 10 | Rebar Anchor | Passive: +1 AC and advantage on Strength saving throws |
+| Overpass 10 | Drainage Ditch Dig-In | Action + 1 Junk, once per short rest, 9 m, 3 m radius: turns the ground into Mud for 3 turns (difficult terrain for everyone but you, thanks to Concrete Bank Traction) |
 | Overpass 12 | Squatter's Rights: Spillway Sovereignty | Bonus action, once per long rest; restores all Junk; lasts 3 turns: +2 AC and +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns |
 
 **New choices and a racial passive** (also source-only):
@@ -319,6 +320,7 @@ Three subclasses are in the public v0.3.0 download. A fourth, Overpass Riverbed 
 - **L6 - Culvert Siphon**: Action + 1 Junk, once per short rest, 9 m; you or an ally regain `2d6 + CON` HP and stop Burning, and the ground is doused.
 - **L6 - Underpass Climate Control**: Resistance to Lightning and Cold damage.
 - **L10 - Rebar Anchor**: +1 AC and advantage on Strength saving throws.
+- **L10 - Drainage Ditch Dig-In**: Action + 1 Junk, once per short rest, 9 m range, 3 m radius; creates Mud for 3 turns. Technically a flood-control project.
 - **L12 - Squatter's Rights: Spillway Sovereignty**: Bonus Action, once per long rest; restores all Junk and lasts 3 turns. +2 AC, +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns.
 
 ---
@@ -403,7 +405,7 @@ Baldurs Gate 3 Homeless Californian Class/
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (89 tests on the current source).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (92 tests on the current source).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.

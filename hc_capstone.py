@@ -1,6 +1,7 @@
 """Homeless Californian Level 12 Signature Capstone: Squatter's Rights.
 
 Local development candidate, adapted from the Solo Gemini draft; not gameplay-tested.
+Integrated into generate_mod.py for all four subclasses (Tenderloin, Venice, BART, Overpass).
 Requires 12 Homeless Californian class levels via subclass progression tables (ptype=1).
 Preserves existing base-class Level 12 feat/ASI (AllowImprovement=true) and Call 311 (Shout_Call311).
 All mechanics use evidenced vanilla BG3 syntax; unproven/unsafe ideas are excluded.
@@ -9,7 +10,7 @@ UNVERIFIED STATUS NOTE:
 Citing field existence and syntax in shipped game data is not proof of in-game engine
 behavior, AI combat interaction, or boss encounter stability. Position swaps (SwapPlaces()),
 aura propagation (AuraStatuses), and turn-boundary resource timing remain unverified in
-live gameplay until tested in an active game session. This module remains an unintegrated draft.
+live gameplay until tested in an active game session. The module is integrated but not gameplay-tested.
 """
 from pathlib import Path
 import sys
@@ -342,26 +343,13 @@ def generate_capstone(public_dir, add_loca, get_guid):
 
 
 # -----------------------------------------------------------------------------
-# Root Integration Mapping & Instructions
-# -----------------------------------------------------------------------------
-# When root integrates this draft into production:
-# 1. In generate_mod.py:
-#    In generate_progressions_lsx(), add the 3 subclass level 12 progression nodes:
-#
-#    prog("Prog_Tenderloin_L12", "TenderloinBiohazard", 12, SUBCLASS_TENDERLOIN_TABLE_UUID, ptype=1)
-#    prog("Prog_Venice_L12", "VeniceBoardwalkBrawler", 12, SUBCLASS_VENICE_TABLE_UUID, ptype=1)
-#    prog("Prog_BART_L12", "BARTPlatformMenace", 12, SUBCLASS_BART_TABLE_UUID, ptype=1)
-#
-# 2. In generate_local_expansion() (or equivalent root aggregator):
-#    Import generate_capstone and merge its grants:
-#
-#    from hc_capstone_draft import generate_capstone
-#    capstone_grants = generate_capstone(PUBLIC_DIR, add_loca, get_guid)
-#    for category, levels in capstone_grants['subclasses'].items():
-#        for level, spells in levels.items():
-#            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
-#
-# 3. The existing attach() logic in generate_local_expansion() will automatically
-#    create SpellList nodes (e.g. HC_ExpansionList_TenderloinBiohazard_12) and
-#    attach AddSpells(...) to each subclass's Level 12 Progression node.
+# Integration (done)
+# generate_mod.py wires this module in as follows:
+# 1. Subclass level 12 progression nodes for all four subclasses are created in the loop that calls
+#    prog(f'Prog_{category}_Lvl12', category, 12, table, ptype=1) (Tenderloin, Venice, BART, Overpass).
+# 2. generate_local_expansion() imports generate_capstone from this module and merges its grants into
+#    grants['subclasses'], the same way as the cart, utility and Overpass modules.
+# 3. The attach() logic in generate_local_expansion() creates the SpellList nodes
+#    (e.g. HC_ExpansionList_TenderloinBiohazard_12) and appends AddSpells(...) to each subclass's
+#    Level 12 Progression node.
 # -----------------------------------------------------------------------------
