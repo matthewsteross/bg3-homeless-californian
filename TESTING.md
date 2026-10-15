@@ -28,7 +28,7 @@ on the same character. Junk capacity should be 3 at class level 1, 5 at 5 and
 Save and reload once. Note missing icons, lost grants, or changed resource
 behavior. Actual effects are not comprehensively gameplay-tested yet.
 The familiar uses a raven model; furniture and clothes use existing visuals.
-There is no custom chair model, gun or voice pack; the only custom mesh is the Abandoned Cart. The level-12 Squatter's Rights capstone is in the October 13 build.
+There is no custom chair model, gun or voice pack; the only custom mesh in the download is the Abandoned Cart (the source has a second, the blue tarp lean-to, see the source-only routes below). The level-12 Squatter's Rights capstone is in the October 13 build.
 A fourth subclass (Overpass Riverbed Dweller) and a few new choices exist in the source only; their test routes are at the bottom of this page.
 
 ## Tell us what happened
@@ -46,7 +46,7 @@ you used. Source/package checks do not prove gameplay or save compatibility.
 Share the release link with players who enjoy absurd custom classes. One clear
 example of what happened in-game is more useful than repeated promotional posts.
 The design is directed by Matthew; Claude, Gemini and Codex assist with code,
-and Gemini generated custom icon art, and the shopping cart model is AI-generated too. Follow each community's posting rules.
+and Gemini generated custom icon art, and the shopping cart model (and, in the source only, the blue tarp model) is AI-generated too. Follow each community's posting rules.
 
 
 ## October 13 build (v0.2.0) - new abilities to try (all untested in game)
@@ -102,6 +102,7 @@ checks have passed.
 | Overpass Riverbed Dweller 3 | Pick the subclass; check **Concrete Bank Traction** | Subclass listed with its name and icon? Mud, webs and other difficult terrain do not slow you? |
 | Overpass 3 | **Storm Drain Flash Flood** into a group | 9 m line shape sensible? Strength save for `2d8 + CON` Bludgeoning, Prone only on a failed save, half on a success? Standing water left for 2 turns? Junk spent, once per short rest? |
 | Overpass 3 | **Blue Tarp Lean-To** with allies nearby, ideally with fire on the ground | You and allies within 3 m get +1 AC and Dexterity-save advantage for 2 turns? Fire on the ground doused? |
+| Overpass 3 | Same cast: look for the **blue tarp prop** (custom AI-generated mesh, second after the cart) | Does a blue tarp lean-to appear at all, and where (under you, or elsewhere)? Which way does it face, can you walk through it, is the size sensible (about 2.5 m wide, 1.4 m tall), does the texture look like a tarp? Exactly one prop per cast, even with several allies in range? |
 | Overpass 6 | **Culvert Siphon** on an ally and on yourself, ideally while Burning | Castable at 9 m (not touch range)? Heals `2d6 + CON`, ends Burning, douses the ground, spends 1 Junk? |
 | Overpass 6 / 10 | **Underpass Climate Control**, **Rebar Anchor** | Lightning and Cold resistance shown? +1 AC and Strength-save advantage shown? |
 | Overpass 10 | **Drainage Ditch Dig-In** on an enemy group | 3 m Mud for 3 turns? Enemies slowed in it, you not slowed? |
@@ -112,5 +113,8 @@ checks have passed.
 | Class 2 | **Sprinkler Violation** at a group, ideally near fire or a lightning source | Castable at 9 m for a bonus action and 1 Junk, once per short rest? 2 m water puddle for 2 turns; creatures inside become Wet for 3 turns? Does anything just outside the puddle get Wet? |
 | Class 4 | **Catalytic Converter Sawzall** on an adjacent enemy | Melee spell attack within 1.5 m for `3d8` Slashing; a hit leaves Decatted Exhaust for 2 turns (-2 AC, no reactions)? Junk spent, once per short rest? Which cast and hit effects play (it borrows Inflict Wounds)? |
 | Class 8 | **One-Star Citation** on enemies that pass and fail the Wisdom save | `2d8` Psychic damage at 9 m? Bane for 2 turns only on a failed save? Does damage land on a successful save too? Junk spent, no cooldown? |
+| Class 6 | **Curb Alert** (base class level 6, so it needs a Homeless Californian character at level 6 or higher; new character or respec) | One action, no Junk, once per long rest? Four items appear in the inventory (Caltrans Detour Sign, Duct-Taped High-Tops, Lukewarm Gas Station Kombucha, Tin-Foil Sun Visor), with names, descriptions and icons? A second cast before a long rest refused? |
+| Class 6 | Equip the **Caltrans Detour Sign**, **Duct-Taped High-Tops** and **Tin-Foil Sun Visor** | Sign is a working two-handed Greatclub, nothing extra? High-Tops add 1.5 m movement? Visor gives advantage on Wisdom saves (try a Wisdom save spell from an enemy) and shows as Uncommon? Any proficiency or armour oddities from the donor items? |
+| Class 6 | Drink the **Lukewarm Gas Station Kombucha**, in and out of combat | Heals `2d4 + 2` HP and applies Kombucha Buzz (+3 m movement) for 2 turns? Consumed on use? Works in combat as well as outside it? |
 | Class 11 | **HOV Lane** to a spot you can see, then to a spot you cannot | Teleport up to 12 m for a bonus action and 1 Junk, once per short rest? Invalid or blocked locations refused? (It leaves no mud behind: that part was left out.) |
 | Californian Inland Emperor 3 | **Bakersfield Tule Fog** (new character or respec) | Appears beside Overpass Exhaust? One action, no Junk, once per short rest? 4 m fog cloud at 9 m for 2 turns? Does casting it break an existing concentration spell (it should not)? |
