@@ -7,14 +7,14 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite (110 tests on the current source) lives in `test_validate.py` (12), `test_cart.py` (6), `test_expansion.py` (3),
+The suite (110 tests, as shipped in v0.4.0) lives in `test_validate.py` (12), `test_cart.py` (6), `test_expansion.py` (3),
 `test_spell_rules.py` (18), `test_overpass.py` (21), `test_kit_additions.py` (11), `test_round2.py` (21), `test_tarp.py` (8) and
 `test_junk_items.py` (10). The first four files held
-39 tests at the v0.3.0 release. `test_overpass.py` covers the source-only Overpass Riverbed Dweller subclass, `test_kit_additions.py`
-covers the source-only Squeegee Technician, Cardboard Insulator and NIMBY Zoning Defense, and `test_round2.py` covers the source-only
+39 tests at the v0.3.0 release; the other five cover the additions in v0.4.0. `test_overpass.py` covers the Overpass Riverbed Dweller subclass, `test_kit_additions.py`
+covers the Squeegee Technician, Cardboard Insulator and NIMBY Zoning Defense, and `test_round2.py` covers the
 round 2 additions (Sprinkler Violation, Catalytic Converter Sawzall, One-Star Citation, HOV Lane, Bakersfield Tule Fog, the Decatted
-Exhaust status, the Notary Street Trade and the Tinfoil Deflector Junk Doctrine), `test_tarp.py` covers the source-only blue tarp lean-to
-prop (its assets, visual resource, root template and Object stat), and `test_junk_items.py` covers the source-only Curb Alert spell and the four junk
+Exhaust status, the Notary Street Trade and the Tinfoil Deflector Junk Doctrine), `test_tarp.py` covers the blue tarp lean-to
+prop (its assets, visual resource, root template and Object stat), and `test_junk_items.py` covers the Curb Alert spell and the four junk
 items it grants (Caltrans Detour Sign, Duct-Taped High-Tops, Lukewarm Gas Station Kombucha and Tin-Foil Sun Visor). Like everything else here, these are file-level
 checks: they do not show that any of it works in game.
 
@@ -61,5 +61,5 @@ release gate.
 ## Live in-game testing
 
 A Script Extender (BG3SE v33) harness exists for dev-only test builds. The harness is never shipped
-in the released package. See `HANDOFF-2026-10-14.md`. Anything it touches stays "not yet verified in game"
+in the released package. See `HANDOFF-2026-10-14.md`. On 2026-10-15 it was used for an in-game data check of the v0.4.0 content (everything loads, Curb Alert grants its items, the tarp spawns, four ground effects appear); it does not test damage, saves or balance. Anything it touches stays "not yet verified in game"
 until Matthew confirms it by playing.

@@ -2,9 +2,10 @@
 
 Playtest the Homeless Californian class for Baldur's Gate 3 on PC.
 
-[Download the current release (October 15, v0.3.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15)
-(the older [October 12 ZIP](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12)
-is still available) and import HomelessCalifornian.pak using your usual BG3 mod manager. Enable it
+[Download the current release (October 15 build, v0.4.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15-v0.4.0)
+(the older [v0.3.0](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15) and
+[October 12](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-12) ZIPs
+are still available) and import HomelessCalifornian.pak using your usual BG3 mod manager. Enable it
 and export your load order where your manager requires it. Do not install a
 second copy. Use a separate test save, and create a new character or respec.
 The public package is intentionally overpowered. Windows installation has
@@ -28,8 +29,8 @@ on the same character. Junk capacity should be 3 at class level 1, 5 at 5 and
 Save and reload once. Note missing icons, lost grants, or changed resource
 behavior. Actual effects are not comprehensively gameplay-tested yet.
 The familiar uses a raven model; furniture and clothes use existing visuals.
-There is no custom chair model, gun or voice pack; the only custom mesh in the download is the Abandoned Cart (the source has a second, the blue tarp lean-to, see the source-only routes below). The level-12 Squatter's Rights capstone is in the October 13 build.
-A fourth subclass (Overpass Riverbed Dweller) and a few new choices exist in the source only; their test routes are at the bottom of this page.
+There is no custom chair model, gun or voice pack; there are two custom meshes, the Abandoned Cart and the blue tarp lean-to (new in v0.4.0, see the v0.4.0 routes below). The level-12 Squatter's Rights capstone is in the October 13 build.
+v0.4.0 adds a fourth subclass (Overpass Riverbed Dweller) and a few new choices; their test routes are at the bottom of this page.
 
 ## Tell us what happened
 
@@ -46,7 +47,7 @@ you used. Source/package checks do not prove gameplay or save compatibility.
 Share the release link with players who enjoy absurd custom classes. One clear
 example of what happened in-game is more useful than repeated promotional posts.
 The design is directed by Matthew; Claude, Gemini and Codex assist with code,
-and Gemini generated custom icon art, and the shopping cart model (and, in the source only, the blue tarp model) is AI-generated too. Follow each community's posting rules.
+and Gemini generated custom icon art, and the shopping cart model (and the blue tarp model) is AI-generated too. Follow each community's posting rules.
 
 
 ## October 13 build (v0.2.0) - new abilities to try (all untested in game)
@@ -67,11 +68,11 @@ Pick one or two; ten minutes is plenty. New grants need a new character or a res
 | 5 | **Beg** on a friendly NPC (trader, townsperson) | Did gold arrive in YOUR inventory? Did the NPC turn hostile or cause a crime? Did Homeless Fatigue stay on them? |
 | 12 | Subclass **Squatter's Rights** capstone | Does it activate, grant its effects, and expire as described? |
 
-Please say which build you used (the Nexus file is now version 0.3.0, the 2026-10-15 build).
+Please say which build you used (the Nexus file is now version 0.4.0, the 2026-10-15 build).
 
 ## Newest additions in v0.3.0 (untested in game)
 
-These are new in v0.3.0 (not in the older v0.2.0 download). If you are testing a local build from the repository, a new character or respec
+These were new in v0.3.0 (not in the older v0.2.0 download) and are still in v0.4.0. A new character or respec
 is needed for race and class grants.
 
 | Level / source | Try | What to report |
@@ -91,11 +92,13 @@ is needed for race and class grants.
 | Tenderloin 6 | **Curbside Needle Exchange** on an adjacent ally | Cures Poisoned/Disease/Blinded/Paralysed, heals 2d6+CON, once per short rest? |
 | Venice 10 | **Chair Check** | Weapon damage plus 2d8; Prone only on a failed Strength save? Junk spent? |
 
-## Source-only additions after v0.3.0 (NOT in the public download, NOT verified in game)
+## Additions in v0.4.0 (NOT yet play-tested)
 
-The public v0.3.0 download does **not** contain anything below. These routes only apply if you build the mod yourself from the
-repository source (a new character or respec is needed for the grants). Nothing here has been played in game; only file-level
-checks have passed.
+Everything below is new in the public v0.4.0 download (a new character or respec is needed for the grants). No one has played it;
+file-level checks (110 tests) and an in-game data check on 2026-10-15 have passed. That check confirmed everything loads, Curb Alert grants
+its four items, Blue Tarp Lean-To spawns one tarp at the caster's feet, and Storm Drain Flash Flood, Sprinkler Violation, Drainage Ditch
+Dig-In and Bakersfield Tule Fog create their ground effects. Damage, saves, Junk costs, level-up grants on a real character, tarp
+facing and collision, the Kombucha override and balance still need your testing.
 
 | Level / source | Try | What to report |
 |---|---|---|

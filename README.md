@@ -2,30 +2,34 @@
 
 ## Public playtest
 
-[Download the playtest (Oct 15 build, v0.3.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15) · [Nexus Mods page](https://www.nexusmods.com/baldursgate3/mods/25761) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
+[Download the playtest (October 15 build, v0.4.0)](https://github.com/matthewsteross/bg3-homeless-californian/releases/tag/playtest-2026-10-15-v0.4.0) · [Nexus Mods page](https://www.nexusmods.com/baldursgate3/mods/25761) · [Report a bug](https://github.com/matthewsteross/bg3-homeless-californian/issues/new/choose)
 
 **Throw bricks. Weaponise furniture. Make public transit everybody else's problem.**
 
-Looking for PC testers for a ridiculous Constitution-based class with three
-subclasses in the public download: Tenderloin poison, Venice furniture melee, and BART repositioning.
-(A fourth subclass, Overpass Riverbed Dweller, exists in the source only; see
-[the source-only section](#source-only-additions-after-v030-not-in-the-public-download-not-verified-in-game).)
+Looking for PC testers for a ridiculous Constitution-based class with four
+subclasses: Tenderloin poison, Venice furniture melee, BART repositioning, and Overpass Riverbed Dweller flood control
+(the Overpass subclass is new in v0.4.0; see
+[the v0.4.0 section](#additions-in-v040-not-yet-play-tested)).
 Try one subclass for ten minutes and tell us one thing that broke—or one thing
 that worked. [Start the short tester checklist](TESTING.md).
 
-**Which version is which:** the public download (release `playtest-2026-10-15`, also the Nexus file) is
-**v0.3.0**: v0.2.1 plus the Californian race overhaul, the shopping cart prop and Abandoned Cart spell, Territory Claim,
-Pigeon Lunch Rush and more (listed below). **Honest status:** file-level checks pass, and an in-game data check confirmed that
-every spell, status and passive loads. Playing it is still mostly untested: only level 12 and the cart have been confirmed by
-hand. The older October 12 and 13 builds are still on their own release pages. Work added after v0.3.0 is in the repository source
-only, is not in this download, and has not been played in game (see the source-only section below). The Nexus page is live; the in-game (mod.io)
+**Which version is which:** the public download (release `playtest-2026-10-15-v0.4.0`, also the Nexus file, version 0.4.0) is
+**v0.4.0**: v0.3.0 plus the Overpass Riverbed Dweller subclass, round 2 spells, new Street Trade and Junk Doctrine options,
+NIMBY Zoning Defense, Bakersfield Tule Fog, a blue tarp prop, Curb Alert with four junk items, and more custom icons (listed in
+[the v0.4.0 section](#additions-in-v040-not-yet-play-tested)). v0.3.0 (release `playtest-2026-10-15`) and the older October 12 and 13 builds
+remain on their own release pages. **Honest status:** file-level checks pass (110 validation tests, validator PASS), and an in-game
+data check on 2026-10-15 confirmed that every spell, status and passive loads, the new items and props resolve, Curb Alert grants its
+four items, Blue Tarp Lean-To spawns one tarp at the caster's feet, and Storm Drain Flash Flood, Sprinkler Violation, Drainage Ditch
+Dig-In and Bakersfield Tule Fog create their ground effects. Playing it is still mostly untested: damage, saves, Junk costs, level-up
+grants on a real Homeless Californian character, tarp facing and collision, the Kombucha override and balance have not been checked.
+Only level 12 and the cart had been confirmed by hand earlier. The Nexus page is live; the in-game (mod.io)
 listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
 available spells. Full effect, progression and compatibility testing continues.
-The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the source-only blue tarp model is too; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
+The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
 
 This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
@@ -37,7 +41,7 @@ The October 13 build (v0.2.0) and later builds contain a much larger kit than th
 playtest ZIP: the level-12 **Squatter's Rights** capstone, a **Street Trade** selector, **Junk Doctrines**, and the
 **Hustle kit** (Guilt Trip, Beg, Public Scene, Trapped in the Invisible Box, Bucket Drum Solo, Compassion Burnout,
 Punctured Lithium Cell, Sublet, Everybody Knows This Guy, plus the Homeless Fatigue and Breadcrumbed statuses).
-**Honest status:** file-level checks and 39 validation tests passed at the v0.3.0 release (the current source has 110, see the source-only section). In game, only "a character can reach level 12 without a catastrophic failure" has been
+**Honest status:** file-level checks and 39 validation tests passed at the v0.3.0 release (v0.4.0 has 110, see the v0.4.0 section). In game, only "a character can reach level 12 without a catastrophic failure" has been
 confirmed; individual abilities have not been tested, and **Beg** (gold from non-hostile NPCs) is the most experimental.
 Guilt Trip, Public Scene and Compassion Burnout now work on any enemy and add a bonus when the target is Socially
 Shamed or Homeless Fatigued (fixed since v0.2.1; the old v0.2.0 download requires the status and can show "Invalid Target"). Use a new character or a respec for new grants. Test routes for the new
@@ -68,8 +72,8 @@ including matching icons for the Chair, Moving Day, and ready-Shiv statuses.
 The atlas grows automatically as new art is added. The abilities still use
 existing animations. The chair
 abilities do not display a new chair mesh. The "pigeon" is visibly a raven, and
-the wardrobe uses existing robe/cloak visuals, not a custom safety vest. Guns are future work. There are now exactly two custom meshes: the
-Abandoned Cart (in the public v0.3.0 download, see the v0.3.0 additions below) and the blue tarp lean-to (source-only, not in the download, never seen in game; see the source-only section below). The chair, guns, pigeon and junk items are still not custom meshes. The level-12
+the wardrobe uses existing robe/cloak visuals, not a custom safety vest. Guns are future work. There are exactly two custom meshes: the
+Abandoned Cart (added in v0.3.0, see the v0.3.0 additions below) and the blue tarp lean-to (added in v0.4.0; it spawns in game but its look has not been checked; see the v0.4.0 section below). The chair, guns, pigeon and junk items are still not custom meshes. The level-12
 Squatter's Rights capstone, Street Trade and Junk Doctrines are described in the
 section above.
 
@@ -87,11 +91,11 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(110 tests on the current source, including the deliberate-corruption checks; 39 at the v0.3.0 release). The saved original
+(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
-A custom class and race mod for **Baldur's Gate 3** introducing the **Homeless Californian** class (levels 1-12; three subclasses in the v0.3.0 download, four in the current source) and the **Californian** race (three subraces, a California identity / gender selector, and a restricted garish look).
+A custom class and race mod for **Baldur's Gate 3** introducing the **Homeless Californian** class (levels 1-12; four subclasses) and the **Californian** race (three subraces, a California identity / gender selector, and a restricted garish look).
 
 ---
 
@@ -117,21 +121,25 @@ below is **not yet verified in game**; numbers are copied from the generated gam
 
 **Abandoned Cart** (`HC_Target_AbandonedCart`): the cart model is an AI-generated asset. A Claude Sonnet agent wrote procedural Python
 geometry scripts (`assets/models/HC_ShoppingCart/`; Blender is used only for previews), and the result was converted with LSLib Divine.
-It is the only custom mesh in the public download (the repository source has a second, the blue tarp, which is not in the download; see below). What was verified live in game on 2026-10-14, and only this: the stat, template and
+It was the only custom mesh in v0.3.0 (v0.4.0 adds a second, the blue tarp; see below). What was verified live in game on 2026-10-14, and only this: the stat, template and
 localization resolve, the cart spawns and is visible, and casting it spawns exactly one cart. **Not verified:** facing,
 collision, the Junk cost on a real Homeless Californian character, and how it looks in good light.
 
 The Californian race also gained racial progression (levels 1, 3 and 5); see [the race section](#-californian-race).
-At the v0.3.0 release the repository had 39 passing validation tests (file-level checks only); the current source has 110 (see below).
+At the v0.3.0 release the repository had 39 passing validation tests (file-level checks only); v0.4.0 has 110 (see below).
 
 ---
 
-## Source-only additions after v0.3.0 (NOT in the public download, NOT verified in game)
+## Additions in v0.4.0 (NOT yet play-tested)
 
-Everything in this section is in the repository source (commits after the `playtest-2026-10-15` release) and is **not** in the
-public v0.3.0 download or the Nexus file. It has only passed file-level checks (110 validation tests on the current source, 39 of
-them from before these additions). Nothing here has been played in game. Numbers are copied from the generated game data and
-the localization text. A local build from the repository, and a new character or respec, are needed to try it.
+Everything in this section is new in the public v0.4.0 download (and the Nexus file), and was not in v0.3.0. It has passed file-level
+checks (110 validation tests, 39 of them from before these additions, validator PASS) and an in-game **data** check on 2026-10-15,
+which confirmed that all spells, statuses and passives load with their text, that the new items and the blue tarp prop resolve, that
+Curb Alert grants its four items, that Blue Tarp Lean-To spawns one tarp at the caster's feet, and that Storm Drain Flash Flood,
+Sprinkler Violation, Drainage Ditch Dig-In and Bakersfield Tule Fog create their ground effects. Nobody has played it: damage and save
+outcomes, Junk costs, level-up grants on a real Homeless Californian character, tarp facing, collision and look, the Kombucha heal
+override, item equip and visuals, and balance are all untested. Numbers are copied from the generated game data and the
+localization text. A new character or respec is needed to receive the grants.
 
 **Fourth subclass: Overpass Riverbed Dweller** (internal name `OverpassRiverbedDweller`). The level 12 capstone is included.
 
@@ -146,7 +154,7 @@ the localization text. A local build from the repository, and a new character or
 | Overpass 10 | Drainage Ditch Dig-In | Action + 1 Junk, once per short rest, 9 m, 3 m radius: turns the ground into Mud for 3 turns (difficult terrain for everyone but you, thanks to Concrete Bank Traction) |
 | Overpass 12 | Squatter's Rights: Spillway Sovereignty | Bonus action, once per long rest; restores all Junk; lasts 3 turns: +2 AC and +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns |
 
-**New choices and a racial passive** (also source-only):
+**New choices and a racial passive:**
 
 | Unlock | Addition | Intended behavior |
 |---|---|---|
@@ -156,7 +164,7 @@ the localization text. A local build from the repository, and a new character or
 | Junk Doctrine (class 4) | Tinfoil Deflector | Resistance to Psychic damage (a sixth option; Junk Doctrines now number 6 in source) |
 | Californian race 1 | NIMBY Zoning Defense | Passive: advantage on saving throws against being Charmed (granted through the `CHARMED_ADV` tag; the tag's in-game behavior is not verified) |
 
-**Round 2: five spells and one status** (also source-only, generated by `hc_round2.py`). Numbers are copied from
+**Round 2: five spells and one status** (generated by `hc_round2.py`). Numbers are copied from
 `HC_Spells_Round2.txt`, `HC_Status_Round2.txt` and the localization text. Four are base-class spells (at most one new spell per
 class level); Bakersfield Tule Fog is a racial spell. All of them have custom Gemini-generated icons.
 
@@ -169,20 +177,18 @@ class level); Bakersfield Tule Fog is a racial spell. All of them have custom Ge
 | Californian race, Inland Emperor 3 | Bakersfield Tule Fog | Action (no Junk), once per short rest, 9 m; a 4.5 m radius fog cloud lasts up to 10 turns and needs concentration (same mechanics as vanilla Fog Cloud; an earlier 2-turn, no-concentration version showed no fog in game). Donor: Fog Cloud |
 | Status (from Sawzall) | Decatted Exhaust | -2 AC and no Reactions for 2 turns as applied by Sawzall; flagged to initiate combat |
 
-**Round 3: a custom blue tarp prop and four junk items** (also source-only, generated by `hc_tarp.py` and `hc_junk_items.py`). Nothing
-below is in the public download, and none of it has been seen in game.
+**Round 3: a custom blue tarp prop and four junk items** (generated by `hc_tarp.py` and `hc_junk_items.py`). The tarp spawn and the
+item grant were confirmed by the 2026-10-15 data check; how they look and behave has not been seen.
 
 **Blue tarp lean-to prop** (`HC_OBJ_BlueTarp`, spawned by Blue Tarp Lean-To): a blue plastic tarp over a ridge pole on two rebar uprights, with
 grommets, rope guy lines, stakes and bricks, about 2.46 m wide and 1.4 m tall (2,544 triangles, 512 px base colour texture). It is the second custom
 mesh in the mod after the cart, and, like the cart, it is an AI-generated asset: a Claude agent wrote the procedural Python geometry and the procedural
 texture painting (`assets/models/HC_BlueTarp/`; Blender is used only for previews), and the result was converted with LSLib Divine and conformed to a
-vanilla skeleton. It reuses the cart's pipeline (visual resource, root template, Object stat, and a `GROUND:Spawn` on a spell), which is the part verified in
-game on 2026-10-14 for the cart only. The tarp is a static prop that cannot be moved or picked up. The cart's spell is a ground-target spell, whereas this one
-is a self-centred Shout, so **everything about the tarp is unverified:** whether the prop spawns at all, where it lands (the caster's feet are the guess),
-its facing, its collision bounds, its scale and how the texture looks.
+vanilla skeleton. It reuses the cart's pipeline (visual resource, root template, Object stat, and a `GROUND:Spawn` on a spell). The tarp is a static prop that cannot be moved or picked up.
+The cart's spell is a ground-target spell, whereas this one is a self-centred Shout. The 2026-10-15 data check confirmed that casting it spawns
+exactly one tarp prop, at the caster's feet, and applies Blue Tarp Cover. **Still unverified:** its facing, its collision bounds, its scale and how the texture looks.
 
-**Curb Alert and four junk items:** Curb Alert (`HC_Shout_CurbAlert`) is a base-class spell granted at class level 6, alongside Public Scene (it is the only new spell added at that level in the source-only
-build). Action, once per long rest, no Junk cost, self only; it puts one each of the four items below into your
+**Curb Alert and four junk items:** Curb Alert (`HC_Shout_CurbAlert`) is a base-class spell granted at class level 6, alongside Public Scene (it is the only new spell added at that level in v0.4.0). Action, once per long rest, no Junk cost, self only; it puts one each of the four items below into your
 inventory, and you equip or use them yourself. It has a custom Gemini-generated icon. Each item is an HC-only stat that inherits a vanilla stat and
 vanilla root template, so meshes and textures are borrowed from the donor and no custom art is involved. All four have a gold value of 0.
 
@@ -193,11 +199,11 @@ vanilla root template, so meshes and textures are borrowed from the donor and no
 | Lukewarm Gas Station Kombucha | Potion of Healing | Common | Drink to heal `2d4 + 2` HP and gain Kombucha Buzz (+3 m movement) for 2 turns |
 | Tin-Foil Sun Visor | Leather Helmet | Uncommon | Advantage on Wisdom saving throws while worn |
 
-What is least certain about the items: whether the Kombucha's replacement of the donor potion's use action works (the template restates that one action so the potion applies
-its own status), whether the items appear in the inventory and equip correctly, and whether the donors' icons, names and tooltips show up as intended. The boots and
+The 2026-10-15 data check confirmed that the four items resolve and that Curb Alert puts all four in the caster's inventory. What is least certain about the items: whether the Kombucha's replacement of the donor potion's use action works (the template restates that one action so the potion applies
+its own status), whether the items equip correctly, and whether the donors' icons, names and tooltips show up as intended. The boots and
 visor are donor armour, so their armour class and proficiency requirements are inherited and were not checked in game.
 
-**What is least certain:** the shape of the Storm Drain Flash Flood zone and where its water surface lands along the line;
+**What is least certain:** the damage and Prone outcome of the Storm Drain Flash Flood zone (its water surface was seen along the whole 2-8 m line in the data check);
 whether the Mud surface from Spillway Sovereignty slows enemies without trapping you; and the NIMBY tag. The Culvert Siphon
 borrows the cast animation of vanilla Healing Word so a 9 m cast is not a touch spell, which is also untested in game.
 Of the round 2 additions, the donors' animations and sound/visual effects are inherited unchanged: Sawzall keeps Inflict Wounds' necrotic cast and hit effects, and whether Sprinkler Violation's Wet reaches only creatures inside the 2 m radius is untested. The four new Overpass spells (Storm Drain Flash Flood, Blue Tarp Lean-To, Culvert Siphon and the Spillway Sovereignty capstone) have custom Gemini-generated icons; the Overpass subclass reuses the shared class crest, the Cardboard Insulator reuses the Cardboard Insulation icon, and the other new passives use vanilla icons. Drainage Ditch Dig-In, Curb Alert and the round 2 spells also have custom Gemini-generated icons; the junk items use their donors' vanilla icons.
@@ -225,17 +231,17 @@ Hardened by the concrete jungles of San Francisco and Los Angeles, the **Homeles
 | Level | Class features gained |
 |------:|-----------------------|
 | 1 | Street Grit Defence, Sidewalk Immunity, Proposition 47, Sling Poop, Sling Fentanyl, Fent Lean, Narcan, Sidewalk Scramble, Junk, Emotional Support Brick, Bag of Other Bags, Load-Bearing Lawn Chair, Unclaimed Wardrobe, 3 skills, +2/+1 ability bonus |
-| 2 | Aggressive Panhandling, Pocket Lint Buffet, Street Hustle, Dumpster Dive, Street Trade choice (Scrounger / Fixer / Lookout / Can Collector / Busker; Squeegee Technician and Notary are source-only), Sprinkler Violation (source-only) |
-| 3 | **Subclass choice** (subclass features below; Overpass Riverbed Dweller is source-only) |
-| 4 | Eviction Notice, Coat-Hanger Slim Jim, Junk Doctrine choice (Hoarder / Fortifier / Runner / Twitchy; Cardboard Insulator and Tinfoil Deflector are source-only), Catalytic Converter Sawzall (source-only), Ability Improvement |
+| 2 | Aggressive Panhandling, Pocket Lint Buffet, Street Hustle, Dumpster Dive, Street Trade choice (Scrounger / Fixer / Lookout / Can Collector / Busker; Squeegee Technician and Notary are new in v0.4.0), Sprinkler Violation (new in v0.4.0) |
+| 3 | **Subclass choice** (subclass features below; Overpass Riverbed Dweller is new in v0.4.0) |
+| 4 | Eviction Notice, Coat-Hanger Slim Jim, Junk Doctrine choice (Hoarder / Fortifier / Runner / Twitchy; Cardboard Insulator and Tinfoil Deflector are new in v0.4.0), Catalytic Converter Sawzall (new in v0.4.0), Ability Improvement |
 | 5 | Extra Attack, Sling Chunky Poop; Sling Poop damage steps up; Guilt Trip, Beg |
-| 6 | Restorative Stupor, Unkillable Vagrant; Public Scene; Curb Alert (source-only); subclass feature |
+| 6 | Restorative Stupor, Unkillable Vagrant; Public Scene; Curb Alert (new in v0.4.0); subclass feature |
 | 7 | Feral Screech, Moving Day, I Was Here First |
-| 8 | Ability Improvement, Trapped in the Invisible Box, One-Star Citation (source-only) |
+| 8 | Ability Improvement, Trapped in the Invisible Box, One-Star Citation (new in v0.4.0) |
 | 9 | Mass Fentanyl Contraband, Pitch Tent Encampment, Bucket Drum Solo |
 | 10 | Encampment Sweep Survival Instinct; subclass feature; Sling Poop damage steps up; Compassion Burnout |
-| 11 | Extra Attack (2 extra attacks), Baffling Retaliation, Punctured Lithium Cell, HOV Lane (source-only) |
-| 12 | Call 311 (On Hold), Ability Improvement, subclass Squatter's Rights capstone (details in the subclass sections; the Overpass version is source-only) |
+| 11 | Extra Attack (2 extra attacks), Baffling Retaliation, Punctured Lithium Cell, HOV Lane (new in v0.4.0) |
+| 12 | Call 311 (On Hold), Ability Improvement, subclass Squatter's Rights capstone (details in the subclass sections; the Overpass version is new in v0.4.0) |
 
 ---
 
@@ -300,7 +306,7 @@ Phase 4 abilities; all but Beg cost 1 Junk. The Junk toolkit above is documented
 
 ## 🏙️ Subclasses (Level 3)
 
-Three subclasses are in the public v0.3.0 download. A fourth, Overpass Riverbed Dweller, is source-only (last entry below).
+Four subclasses are in the public v0.4.0 download. The fourth, Overpass Riverbed Dweller, is new in v0.4.0 (last entry below).
 
 ### Tenderloin Biohazard
 *Master of chemical concoctions and sidewalk biohazards.*
@@ -339,11 +345,11 @@ Three subclasses are in the public v0.3.0 download. A fourth, Overpass Riverbed 
 - **L6 - Fare Evasion Audit** *(not yet verified in game)*: Action + 1 Junk, once per short rest, 9 m; failed Wisdom save leaves the target Fined for 2 turns (-3 m movement, no Reactions).
 - **L12 - Squatter's Rights: Last Train Out** *(not yet verified in game)*: Bonus Action, once per long rest; restores all Junk and lasts 3 turns. +1 Reaction, +4.5 m movement, and unlocks Platform Rescue and Wrong Platform Express.
 
-### Overpass Riverbed Dweller *(source-only: NOT in the public download, NOT verified in game)*
+### Overpass Riverbed Dweller *(new in v0.4.0; NOT yet play-tested)*
 *A survivalist who keeps house in concrete flood channels and under freeway overpasses. The ground is always doing something. You are used to it.*
 - **L3 - Concrete Bank Traction**: Immune to difficult terrain (mud, webs, vines).
 - **L3 - Storm Drain Flash Flood**: Action + 1 Junk, once per short rest; 9 m line. Strength save: `2d8 + CON Bludgeoning` and Prone for 1 turn on a failure, half damage on a success; leaves standing water for 2 turns.
-- **L3 - Blue Tarp Lean-To**: Bonus Action + 1 Junk, once per short rest, 3 m radius; you and allies get +1 AC and advantage on Dexterity saves for 2 turns, and fire on the ground is doused. It also spawns a custom blue tarp lean-to prop on the ground (AI-generated model, source-only, never seen in game).
+- **L3 - Blue Tarp Lean-To**: Bonus Action + 1 Junk, once per short rest, 3 m radius; you and allies get +1 AC and advantage on Dexterity saves for 2 turns, and fire on the ground is doused. It also spawns a custom blue tarp lean-to prop on the ground (AI-generated model; the data check confirmed one spawns at your feet, but its look and collision are unchecked).
 - **L6 - Culvert Siphon**: Action + 1 Junk, once per short rest, 9 m; you or an ally regain `2d6 + CON` HP and stop Burning, and the ground is doused.
 - **L6 - Underpass Climate Control**: Resistance to Lightning and Cold damage.
 - **L10 - Rebar Anchor**: +1 AC and advantage on Strength saving throws.
@@ -363,12 +369,12 @@ Hailing from the Golden State, **Californians** are a human-bodied race (standar
 - **Touch Grass**: Action, Short Rest. Melee spell attack for `1d8 Psychic`, ends Rage, and inflicts Existential Daze (Disadvantage on attack rolls) for 2 turns.
 - **Avocado Toast**: Bonus Action, Short Rest. Regain `1d6 + CON` HP and gain 5 Temporary HP.
 - **Runyon Canyon Glutes** (new, not yet verified in game): +50% jump distance and +25% carrying capacity.
-- **NIMBY Zoning Defense** (source-only: not in the public download, not verified in game): advantage on saving throws against being Charmed.
+- **NIMBY Zoning Defense** (new in v0.4.0, not yet play-tested): advantage on saving throws against being Charmed.
 - **Emotional Support Hydroflask** (new, not yet verified in game): Bonus Action, Short Rest. Regain `1d8 + CON` HP, remove Poisoned, douse the surface beneath you and leave a puddle of clean water.
 - Racial spells use Charisma as their spellcasting ability.
 
 ### Subraces
-Each subrace gets abilities at race levels 1, 3 and 5 (character level). **None of the subrace abilities below are verified in game yet.** Levels 3 and 5 are new in v0.3.0.
+Each subrace gets abilities at race levels 1, 3 and 5 (character level). **None of the subrace abilities below are verified in game yet.** Levels 3 and 5 are new in v0.3.0 (Bakersfield Tule Fog is new in v0.4.0).
 
 | Subrace | Level 1 | Level 3 | Level 5 |
 |---------|---------|---------|---------|
@@ -399,16 +405,16 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── generate_mod.py              # Generates all LSX, XML, and txt data with deterministic GUIDs
 ├── build.py                     # Pipeline: generate, build icons, compile loca, pack .pak, install & activate
 ├── build_icons.py               # Packs icons into the texture atlas and builds Content/GUI + race icon resources
-├── hc_choices.py                # Street Trade selector (includes Squeegee Technician and Notary, source-only)
-├── hc_doctrines.py              # Junk Doctrine passives (includes Cardboard Insulator and Tinfoil Deflector, source-only)
+├── hc_choices.py                # Street Trade selector (includes Squeegee Technician and Notary, new in v0.4.0)
+├── hc_doctrines.py              # Junk Doctrine passives (includes Cardboard Insulator and Tinfoil Deflector, new in v0.4.0)
 ├── hc_expansion.py              # Junk toolkit, race progression and other expansion abilities
 ├── hc_hustle.py                 # Hustle kit (Guilt Trip, Beg, Sublet, ...)
 ├── hc_capstone.py               # Squatter's Rights level-12 capstones (all four subclasses)
 ├── hc_utility.py                # Coat-Hanger Slim Jim, Curbside Needle Exchange
-├── hc_overpass.py               # Overpass Riverbed Dweller subclass (source-only, after v0.3.0)
-├── hc_round2.py                 # Round 2 spells and Decatted Exhaust status (source-only, after v0.3.0)
-├── hc_tarp.py                   # Blue tarp lean-to prop: visual resource, template and Object stat (source-only, after v0.3.0)
-├── hc_junk_items.py             # Curb Alert and its four junk items, Kombucha statuses (source-only, after v0.3.0)
+├── hc_overpass.py               # Overpass Riverbed Dweller subclass (new in v0.4.0)
+├── hc_round2.py                 # Round 2 spells and Decatted Exhaust status (new in v0.4.0)
+├── hc_tarp.py                   # Blue tarp lean-to prop: visual resource, template and Object stat (new in v0.4.0)
+├── hc_junk_items.py             # Curb Alert and its four junk items, Kombucha statuses (new in v0.4.0)
 ├── hc_cart.py                   # Abandoned Cart spell and template
 ├── hc_outfit.py                 # Outfit / wardrobe items
 ├── hc_icon_keys.py              # Maps spells to icon keys
@@ -417,8 +423,8 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── assets/
 │   ├── icons/                   # Custom spell/class/race art (<MapKey>.png) picked up by build_icons.py
 │   ├── models/                  # AI-generated model scripts and converted files
-│   │   ├── HC_ShoppingCart/     # Shopping cart (in the v0.3.0 download)
-│   │   └── HC_BlueTarp/         # Blue tarp lean-to (source-only, after v0.3.0)
+│   │   ├── HC_ShoppingCart/     # Shopping cart (added in v0.3.0)
+│   │   └── HC_BlueTarp/         # Blue tarp lean-to (added in v0.4.0)
 │   ├── human_race_children.xml  # Human race appearance data reused (and look-restricted) for the Californian race
 │   ├── human_cc_appearance_visuals.xml  # Human character creation visuals cloned for the Californian race
 │   └── cc_color_names.json      # Colour names used to enforce the Californian look lock
@@ -436,7 +442,7 @@ Baldurs Gate 3 Homeless Californian Class/
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests on the current source).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.
@@ -446,7 +452,7 @@ Baldurs Gate 3 Homeless Californian Class/
 ## 👥 Contributors & AI Pair Programming Team
 
 - **Matthew (@themadhattermsr)** — Creator, Project Director, Gameplay Design & Live In-Game Playtester.
-- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and, in the source only, the blue tarp lean-to (Claude agents wrote the procedural model scripts).
+- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and the blue tarp lean-to (Claude agents wrote the procedural model scripts).
 - **Codex (OpenAI)** — BG3 Mechanics Audits, Engine Functors, Subclass Balance & Donor Specialist.
 - **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (custom spell icons, class crests, status art, and Nexus banners). The shopping cart and blue tarp models are AI-generated, not made by Gemini or a human artist.
 - **Local Model (Qwen / Ollama)** — Offline Flavor Text Ideation, Creative Brainstorming & Dialogue Concepts.
