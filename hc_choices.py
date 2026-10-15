@@ -1,5 +1,6 @@
 """Level-two exploration trade choice, using vanilla passive selectors."""
 from pathlib import Path
+from hc_icon_keys import icon_for_spell
 import xml.etree.ElementTree as ET
 import re
 
@@ -12,6 +13,7 @@ def generate_choices(public_dir, add_loca, get_guid):
         ('HC_StreetTrade_Lookout', 'Lookout', 'Perception', 'Stealth', 'Notice the trouble before it notices your address.'),
         ('HC_StreetTrade_CanCollector', 'Can Collector', 'Athletics', 'SleightOfHand', 'Every piece of crushed aluminum is cash if you carry enough bags of it.'),
         ('HC_StreetTrade_Busker', 'Busker', 'Performance', 'Insight', 'You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.'),
+        ('HC_StreetTrade_SqueegeeTechnician', 'Squeegee Technician', 'Intimidation', 'Insight', 'You wipe the windshield first and discuss the fee afterwards. A single look says you know what the driver is thinking about, and what they will pay.'),
     ]
     blocks = []
     for key, name, first, second, flavor in options:
@@ -21,7 +23,7 @@ def generate_choices(public_dir, add_loca, get_guid):
 type "PassiveData"
 data "DisplayName" "{title};1"
 data "Description" "{description};1"
-data "Icon" "PassiveFeature_ReliableTalent"
+data "Icon" "{icon_for_spell(key, 'PassiveFeature_ReliableTalent')}"
 data "Properties" "Highlighted"
 data "Boosts" "Advantage(Skill,{first});Advantage(Skill,{second})"
 ''')

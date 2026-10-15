@@ -2,6 +2,7 @@
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
+from hc_icon_keys import icon_for_spell
 
 
 def generate_doctrines(public_dir, add_loca, get_guid):
@@ -11,14 +12,17 @@ def generate_doctrines(public_dir, add_loca, get_guid):
         ('HC_JunkDoctrine_Fortifier', 'Fortifier', '+1 Armour Class. Every layer of rubbish is another layer of plausible protection.', 'AC(1)'),
         ('HC_JunkDoctrine_Runner', 'Runner', '+3 m movement speed. You have never missed a train you were already chasing.', 'ActionResource(Movement,3,0)'),
         ('HC_JunkDoctrine_Twitchy', 'Twitchy', '+3 bonus to Initiative. You have spent years sleeping with one eye open. Nobody catches you flat-footed.', 'Initiative(3)'),
+        ('HC_JunkDoctrine_CardboardInsulator', 'Cardboard Insulator', 'Resistance to Cold damage. Three layers of flattened boxes is a building code if you squint.', 'Resistance(Cold,Resistant)'),
     ]
     blocks = []
+    icon_spells = {'HC_JunkDoctrine_CardboardInsulator': ('HC_Shout_CardboardInsulation', 'Spell_Abjuration_ProtectionFromEnergy_Cold')}
     for key, name, description, boost in options:
+        icon = icon_for_spell(*icon_spells.get(key, (key, 'PassiveFeature_ReliableTalent')))
         blocks.append(f'''new entry "{key}"
 type "PassiveData"
 data "DisplayName" "{add_loca(key + '_Name', name)};1"
 data "Description" "{add_loca(key + '_Description', description)};1"
-data "Icon" "PassiveFeature_ReliableTalent"
+data "Icon" "{icon}"
 data "Properties" "Highlighted"
 data "Boosts" "{boost}"
 ''')

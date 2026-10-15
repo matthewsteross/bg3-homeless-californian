@@ -287,7 +287,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Californian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405;RunyonCanyonGlutes"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405;RunyonCanyonGlutes;HC_NimbyZoningDefense"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
                     <attribute id="Selectors" type="LSString" value="SelectPassives(547c13c8-f7c5-50b6-9bab-b22cc6a3f096,1,CaliforniaIdentity);AddSpells(51fb8228-c489-56ca-9757-19a03867dccb,,Charisma,,AlwaysPrepared)"/>
                     <attribute id="TableUUID" type="guid" value="98dce003-1617-5977-8191-b3e0b055cf1c"/>

@@ -8,6 +8,7 @@ import os
 import shutil
 import uuid
 import xml.etree.ElementTree as ET
+from hc_icon_keys import icon_for_spell
 
 # Deterministic namespace for reproducible GUIDs
 NAMESPACE = uuid.UUID("3fa85f64-5717-4562-b3fc-2c963f66afa6")
@@ -337,6 +338,9 @@ h_earthquake_desc = add_loca("earthquake_desc", "Born on the San Andreas Fault, 
 
 h_veteran405_name = add_loca("veteran405_name", "405 Commute Veteran")
 h_veteran405_desc = add_loca("veteran405_desc", "Decades spent idling on the I-405 freeway have made you immune to gridlock. You cannot be Slowed or Restrained.")
+
+h_nimby_name = add_loca("nimby_zoning_defense_name", "NIMBY Zoning Defense")
+h_nimby_desc = add_loca("nimby_zoning_defense_desc", "Advantage on saving throws against being Charmed. Any attempt to rezone your opinions requires a twelve-month public comment period, and you will be attending every hearing.")
 
 h_smog_lungs_name = add_loca("smog_lungs_name", "Smog Lungs")
 h_smog_lungs_desc = add_loca("smog_lungs_desc", "Central Valley dust and Los Angeles smog have turned your respiratory system into an industrial air filter. Advantage on saving throws against being Poisoned, and immune to Disease.")
@@ -895,7 +899,7 @@ def generate_progressions_lsx():
                     <attribute id="Boosts" type="LSString" value="ActionResource(Movement,9,0);Resistance(Fire,Resistant)"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Californian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405;RunyonCanyonGlutes"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EarthquakeSense;Veteran405;RunyonCanyonGlutes;HC_NimbyZoningDefense"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
                     <attribute id="Selectors" type="LSString" value="SelectPassives({PASSIVELIST_CALIFORNIA_IDENTITY},1,CaliforniaIdentity);AddSpells({SPELLLIST_CALIFORNIAN_L1},,Charisma,,AlwaysPrepared)"/>
                     <attribute id="TableUUID" type="guid" value="{PROG_TABLE_RACE_CALIFORNIAN}"/>
@@ -2507,6 +2511,14 @@ data "Description" "{h_runyon_glutes_desc};1"
 data "Icon" "PassiveFeature_FastMovement"
 data "Properties" "Highlighted"
 data "Boosts" "JumpMaxDistanceMultiplier(1.5);CarryCapacityMultiplier(1.25)"
+
+new entry "HC_NimbyZoningDefense"
+type "PassiveData"
+data "DisplayName" "{h_nimby_name};1"
+data "Description" "{h_nimby_desc};1"
+data "Icon" "{icon_for_spell('HC_Passive_NIMBYZoningDefense', 'Spell_Abjuration_Sanctuary')}"
+data "Properties" "Highlighted"
+data "Boosts" "Tag(CHARMED_ADV)"
 """
     with open(os.path.join(stats_dir, "Passive.txt"), "w", encoding="utf-8") as f:
         f.write(passive_content)

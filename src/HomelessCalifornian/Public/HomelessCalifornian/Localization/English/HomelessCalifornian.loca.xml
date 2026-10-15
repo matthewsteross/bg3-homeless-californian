@@ -136,6 +136,8 @@
     <content contentuid="hc5101bd0gdb24g5aeega41dga2dfb614c23c" version="1">Born on the San Andreas Fault, you possess impeccable footing. You cannot be knocked Prone.</content>
     <content contentuid="h4f0ddbcagdca7g569eg9eedgc52efbff631e" version="1">405 Commute Veteran</content>
     <content contentuid="h345f83eag98beg5249ga3abg605d1bcaaecd" version="1">Decades spent idling on the I-405 freeway have made you immune to gridlock. You cannot be Slowed or Restrained.</content>
+    <content contentuid="hcf852c38g931bg5587g8147g59df60edf2fc" version="1">NIMBY Zoning Defense</content>
+    <content contentuid="hab1b50c8g376fg5231g8763g9167a1bc4094" version="1">Advantage on saving throws against being Charmed. Any attempt to rezone your opinions requires a twelve-month public comment period, and you will be attending every hearing.</content>
     <content contentuid="heb88faaeg4077g57eeg88dfge7f787f5d969" version="1">Smog Lungs</content>
     <content contentuid="h23534f53g02ebg58b3ga480g69fe2d360d7f" version="1">Central Valley dust and Los Angeles smog have turned your respiratory system into an industrial air filter. Advantage on saving throws against being Poisoned, and immune to Disease.</content>
     <content contentuid="h2c9c7ae9gcf4ag5eeagaea1g159d14469585" version="1">Heat Index Mastery</content>
@@ -303,6 +305,8 @@
     <content contentuid="hfbb9dfc8ge5f7g5c3dg9c00gc5111f024a5a" version="1">Advantage on Athletics and SleightOfHand ability checks. Every piece of crushed aluminum is cash if you carry enough bags of it.</content>
     <content contentuid="h6292e568gb227g558cg8c2cg9e0fc2e8b143" version="1">Busker</content>
     <content contentuid="h42ffe058g3cb9g5c0cgbfb6ga51f0f45f4a5" version="1">Advantage on Performance and Insight ability checks. You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.</content>
+    <content contentuid="h70e24206g2369g53dbga4fag12aebaee3600" version="1">Squeegee Technician</content>
+    <content contentuid="h2157f7cag061dg5435g9000g02168ee34f31" version="1">Advantage on Intimidation and Insight ability checks. You wipe the windshield first and discuss the fee afterwards. A single look says you know what the driver is thinking about, and what they will pay.</content>
     <content contentuid="hd3a698f9g518ag55fbga575g96c5ef775d10" version="1">Street Trade</content>
     <content contentuid="hd5246a57g61d2g510aga1b6g8cbd5045430a" version="1">Choose one exploration trade. Each grants advantage on two ability checks. Respec to change your choice.</content>
     <content contentuid="h14e560a0gd206g59abga4a9g11bca1568e08" version="1">Hoarder</content>
@@ -313,6 +317,8 @@
     <content contentuid="h1f1c734cga30fg50b0gb0c1g39999aa08826" version="1">+3 m movement speed. You have never missed a train you were already chasing.</content>
     <content contentuid="hdd475da6g4826g53adgb697g3263ac0a967d" version="1">Twitchy</content>
     <content contentuid="h8d070839gd16ag5657gbd9dg2d7eb34e2bad" version="1">+3 bonus to Initiative. You have spent years sleeping with one eye open. Nobody catches you flat-footed.</content>
+    <content contentuid="h42eab610g897fg57d6gaedag6dd535894a2c" version="1">Cardboard Insulator</content>
+    <content contentuid="h2310581dg5556g5101gae60g3979e11666a9" version="1">Resistance to Cold damage. Three layers of flattened boxes is a building code if you squint.</content>
     <content contentuid="hb488f482ge77bg51d1g85cdgacfdcba0b537" version="1">Junk Doctrine</content>
     <content contentuid="h44544886gad82g5325gaa5dga57c0370747d" version="1">Choose more Junk, better protection or faster movement. Respec to change your doctrine.</content>
 </contentList>
