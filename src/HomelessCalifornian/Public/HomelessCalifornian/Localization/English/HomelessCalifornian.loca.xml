@@ -219,10 +219,26 @@
     <content contentuid="h3730222cg0613g568bgad83g3eb56bd3419c" version="1">A cloak promoted to roof, blanket, and legal address. Structurally sound until asked.</content>
     <content contentuid="h326aa4c0g2de3g5cb8g98d6g78938e4aa890" version="1">Unclaimed Wardrobe</content>
     <content contentuid="h10119b4cgb193g5205ga07bg53a47745f1d0" version="1">Find a set of Municipally Approved Layers and a Load-Bearing Tarp. Added to your inventory; equip them yourself. Ownership investigations are ongoing.</content>
+    <content contentuid="he5ef0a21g2ce4g57e6gb2dagcec7a72e5a24" version="1">Caltrans Detour Sign</content>
+    <content contentuid="h6b8cf5cfg3478g5b6eg9d23gd3210f8a1b83" version="1">A two-handed road sign of unknown jurisdiction. It detours your enemies, mostly into the ground.</content>
+    <content contentuid="h26b46e0agae0cg5e8cgad35g164001d4e2c5" version="1">Duct-Taped High-Tops</content>
+    <content contentuid="hdb368ec8gf506g5573g8286g41286fd5c776" version="1">Held together by tape and conviction. Slightly faster, mostly out of fear of the sole detaching.</content>
+    <content contentuid="h923e2d46g079cg5a8bgb88fg18df34221e4e" version="1">Lukewarm Gas Station Kombucha</content>
+    <content contentuid="h4bc54b17gc681g55a5g92c6g5c4f046769a2" version="1">Fermented near a hot pump. Restores hit points, then leaves you buzzing and unable to sit still.</content>
+    <content contentuid="h3187edc5g1f98g5c71g8cf9g9f16a065479c" version="1">Restores 2d4+2 hit points and grants 3 m of extra movement for 2 turns.</content>
+    <content contentuid="h50cce3dbg3f84g58c5g8322g479cfb55b7d1" version="1">Tin-Foil Sun Visor</content>
+    <content contentuid="h01a1fc99g7ccfg5e2bg9a56gf1f690bb79e2" version="1">Blocks the sun, the signals, and most of what people say to you. You have advantage on Wisdom saving throws.</content>
+    <content contentuid="hf820a292g0837g57ccg97afgc97f0844ec9f" version="1">Lukewarm Gas Station Kombucha</content>
+    <content contentuid="ha96d239dg3049g5c8ag8ae5gc5891647c0d1" version="1">Kombucha Buzz</content>
+    <content contentuid="hdeaffb6agccc2g5c73gbe6eg6fc933d11927" version="1">Fermentation is a journey. Your movement speed increases by 3 m.</content>
+    <content contentuid="h93d659fdg5209g5ae9gbf6egdf3c2722c594" version="1">Curb Alert</content>
+    <content contentuid="h2a34f2adg40aag57f2gb1a5gfde4b890cc3c" version="1">Put a sign that says FREE on a pile of someone's stuff. Find a Caltrans Detour Sign, Duct-Taped High-Tops, a Lukewarm Gas Station Kombucha and a Tin-Foil Sun Visor. Added to your inventory; equip them yourself.</content>
     <content contentuid="hd5f1d237g2040g5d72ga315gd858d76da73e" version="1">Abandoned Cart</content>
     <content contentuid="h9307a853g3f6ag57eaga2d2gd8d860730911" version="1">A shopping cart of unknown origin, three owners deep and one wheel short of a plan. It holds the whole supply chain: you, your things, and a squeak that announces you to every shift supervisor in the county. Property of nobody, which is nearly the same as yours.</content>
     <content contentuid="he03228f2gcc60g52fag8b17gdaa4aa45587b" version="1">Abandoned Cart</content>
     <content contentuid="hce10f07bg6205g53e9gb7b8g6799762c6bb2" version="1">Produce an abandoned shopping cart on the ground within 6 m. Costs a bonus action and 1 Junk; once per short rest. It is decoration with opinions: a wire-basket monument to everything somebody could not carry home. Nobody saw where it came from. Nobody ever does.</content>
+    <content contentuid="hb4a2058ega805g5eb4g8d82gd1d47b089258" version="1">Blue Tarp Lean-To</content>
+    <content contentuid="heac17e47g2ddbg53a2gaf7fg0e3089945d28" version="1">A blue tarp, two pieces of rebar and a great deal of optimism. It sheds rain, wind and questions from the city, in roughly that order. The rope is knotted with the confidence of someone who has watched one video about it.</content>
     <content contentuid="h5eb76735g7448g5e22g9100g61b35fbb7cb6" version="1">Coat-Hanger Slim Jim</content>
     <content contentuid="h7dd3a1c0g6822g59a2g8663g8a89cd17bc1f" version="1">Unlock a door or container within 1.5 m. Costs an action and 1 Junk. Cannot open magical locks. Every lock is a suggestion with paperwork.</content>
     <content contentuid="h04334570g2132g58c5gaf55g4dca7e030875" version="1">Curbside Needle Exchange</content>
@@ -262,7 +278,7 @@
     <content contentuid="h655b4a0bgdbfbg5519g81a7ge02edcd16ca7" version="1">Storm Drain Flash Flood</content>
     <content contentuid="hae759a76g80fcg51b6g8cb2g7c7419b76b24" version="1">Open the storm drain and let the municipality explain itself. Costs an action and 1 Junk; once per short rest. Creatures in a 9 m line make a Strength saving throw, taking 2d8 + Constitution modifier Bludgeoning damage and falling Prone on a failure, or half damage on a success. Leaves standing water for 2 turns. The sign said do not enter during rain. You were already in the channel.</content>
     <content contentuid="hfa7e620dg7604g592cg8e94g97b4641464c9" version="1">Blue Tarp Lean-To</content>
-    <content contentuid="h4575ef08ga102g575fga36dg160015f14ab4" version="1">Rig a blue tarp over everyone within 3 m. Costs a bonus action and 1 Junk; once per short rest. You and your allies gain +1 AC and advantage on Dexterity saving throws for 2 turns, and fire on the ground is doused. It has held up through three storms and one very determined raccoon.</content>
+    <content contentuid="h4575ef08ga102g575fga36dg160015f14ab4" version="1">Rig a blue tarp over everyone within 3 m. Costs a bonus action and 1 Junk; once per short rest. You and your allies gain +1 AC and advantage on Dexterity saving throws for 2 turns, and fire on the ground is doused. A blue tarp lean-to is left standing where you stood. It has held up through three storms and one very determined raccoon.</content>
     <content contentuid="hc8088c17gb719g5a90gbb73gd1fc32ac84a0" version="1">Culvert Siphon</content>
     <content contentuid="he1e1142bg78e2g5740g877ag8b0e6401c68c" version="1">Draw clean runoff from the culvert and pour it over a friend. Costs an action and 1 Junk; once per short rest. An ally or yourself within 9 m regains 2d6 + Constitution modifier Hit Points, stops Burning, and the ground is doused. It is mostly water. Mostly.</content>
     <content contentuid="h147e2acagd6b2g5c20gaaa4g49c79955e829" version="1">Drainage Ditch Dig-In</content>

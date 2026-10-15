@@ -19,6 +19,7 @@ UNVERIFIED IN GAME: where the Flash Flood GROUND: surface lands along the line, 
 """
 from pathlib import Path
 from hc_icon_keys import icon_for_spell
+from hc_tarp import TEMPLATE_KEY as TARP_TEMPLATE_KEY
 
 SUBCLASS = 'OverpassRiverbedDweller'
 
@@ -96,11 +97,14 @@ def generate_overpass(public_dir, add_loca, get_guid):
         ('HC_Shout_BlueTarpLeanTo', 'Shout_SecondWind', 'Blue Tarp Lean-To',
          'Rig a blue tarp over everyone within 3 m. Costs a bonus action and 1 Junk; once per short rest. '
          'You and your allies gain +1 AC and advantage on Dexterity saving throws for 2 turns, and fire on the ground is doused. '
-         'It has held up through three storms and one very determined raccoon.',
+         'A blue tarp lean-to is left standing where you stood. It has held up through three storms and one very determined raccoon.',
          dict(UseCosts='BonusActionPoint:1;HC_Junk:1', Cooldown='OncePerShortRest', AreaRadius='3',
               Icon='Spell_Abjuration_MageArmor',
               TargetConditions='Character() and (Ally() or Self()) and not Dead()',
-              SpellProperties='ApplyStatus(HC_TARP_COVER,100,2);GROUND:SurfaceChange(Douse)',
+              # GROUND:Spawn(<root template>) is the exact functor of HC_Target_AbandonedCart (hc_cart.py), verified
+              # in game for a ground-target spell. UNVERIFIED for a self-centred Shout: it should resolve once at the
+              # caster's feet (like GROUND:SurfaceChange(Douse) beside it) and not once per target.
+              SpellProperties='ApplyStatus(HC_TARP_COVER,100,2);GROUND:SurfaceChange(Douse);GROUND:Spawn(' + get_guid(TARP_TEMPLATE_KEY) + ')',
               TooltipStatusApply='ApplyStatus(HC_TARP_COVER,100,2)')),
         ('HC_Target_CulvertSiphon', 'Target_CureWounds', 'Culvert Siphon',
          'Draw clean runoff from the culvert and pour it over a friend. Costs an action and 1 Junk; once per short rest. '

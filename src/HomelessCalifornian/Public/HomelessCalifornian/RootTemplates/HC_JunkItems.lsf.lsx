@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="0" revision="9" build="0" />
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="d98feb98-7894-5f49-8861-8bf372d8eb2b" />
+                    <attribute id="Name" type="LSString" value="HC_WPN_CaltransDetourSign" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="19ce6720-03b6-4d22-bf35-4963b510d1da" />
+                    <attribute id="Stats" type="FixedString" value="HC_WPN_CaltransDetourSign" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_WPN_HUM_Greatclub_A_0" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="he5ef0a21g2ce4g57e6gb2dagcec7a72e5a24" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h6b8cf5cfg3478g5b6eg9d23gd3210f8a1b83" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="3da3413e-5b86-5fdb-a29f-522b5651cf78" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_DuctTapedHighTops" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="969bab00-b269-46a5-a7e9-dd4887814719" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_DuctTapedHighTops" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_ARM_Boots_Leather_2" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h26b46e0agae0cg5e8cgad35g164001d4e2c5" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="hdb368ec8gf506g5573g8286g41286fd5c776" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="ecba0782-69b4-5129-870e-ebc1530eef49" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_LukewarmKombucha" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="d47006e9-8a51-453d-b200-9e0d42e9bbab" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_LukewarmKombucha" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_CONS_Potion_Healing_A" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h923e2d46g079cg5a8bgb88fg18df34221e4e" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h4bc54b17gc681g55a5g92c6g5c4f046769a2" version="1" />
+                    <attribute id="TechnicalDescription" type="TranslatedString" handle="h3187edc5g1f98g5c71g8cf9g9f16a065479c" version="1" />
+                    <children>
+                        <node id="OnUsePeaceActions">
+                            <children>
+                                <node id="Action">
+                                    <attribute id="ActionType" type="int32" value="7" />
+                                    <children>
+                                        <node id="Attributes">
+                                            <attribute id="Animation" type="FixedString" value="895ce382-397d-4b9a-9e8f-6ee3b1ff3a13" />
+                                            <attribute id="Conditions" type="LSString" value="" />
+                                            <attribute id="Consume" type="bool" value="True" />
+                                            <attribute id="StatsId" type="FixedString" value="HC_POTION_KOMBUCHA" />
+                                            <attribute id="StatusDuration" type="int32" value="0" />
+                                        </node>
+                                    </children>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="122ebf9b-dd24-5ab4-a372-a6fed69b8785" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_TinfoilSunVisor" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="c58a1f91-ec1b-49c8-96ab-d94d4be4b584" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_TinfoilSunVisor" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_ARM_Helmet_Leather" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h50cce3dbg3f84g58c5g8322g479cfb55b7d1" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h01a1fc99g7ccfg5e2bg9a56gf1f690bb79e2" version="1" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,7 @@
+new entry "HC_OBJ_BlueTarp"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "d83d85f6-5917-5644-89ec-b2a644cefe8b"
+data "Weight" "20"
+data "GameSize" "Large"
+data "Vitality" "-1"

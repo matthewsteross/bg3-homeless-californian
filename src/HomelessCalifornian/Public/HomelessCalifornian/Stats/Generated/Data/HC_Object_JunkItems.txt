@@ -1,0 +1,6 @@
+new entry "HC_OBJ_LukewarmKombucha"
+type "Object"
+using "OBJ_Potion_Healing"
+data "RootTemplate" "ecba0782-69b4-5129-870e-ebc1530eef49"
+data "Rarity" "Common"
+data "ValueOverride" "0"

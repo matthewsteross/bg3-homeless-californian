@@ -2573,7 +2573,12 @@ def generate_local_expansion():
     grants = generate_expansion(PUBLIC_DIR, add_loca, get_guid)
     wardrobe = generate_outfit(PUBLIC_DIR, add_loca, get_guid)
     grants['base'].setdefault(1, []).append(wardrobe)
-    cart = generate_cart(PUBLIC_DIR, add_loca, get_guid)
+    from hc_junk_items import generate_junk_items, GRANT_LEVEL as CURB_ALERT_LEVEL
+    curb_alert = generate_junk_items(PUBLIC_DIR, add_loca, get_guid)
+    grants['base'].setdefault(CURB_ALERT_LEVEL, []).append(curb_alert)
+    cart =generate_cart(PUBLIC_DIR, add_loca, get_guid)
+    from hc_tarp import generate_tarp
+    generate_tarp(PUBLIC_DIR, add_loca, get_guid)   # prop only; the Overpass shout spawns it
     for category, levels in cart['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)

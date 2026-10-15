@@ -1,0 +1,6 @@
+new entry "HC_WPN_CaltransDetourSign"
+type "Weapon"
+using "WPN_Greatclub"
+data "RootTemplate" "d98feb98-7894-5f49-8861-8bf372d8eb2b"
+data "Rarity" "Common"
+data "ValueOverride" "0"
