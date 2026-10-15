@@ -181,8 +181,8 @@ game on 2026-10-14 for the cart only. The tarp is a static prop that cannot be m
 is a self-centred Shout, so **everything about the tarp is unverified:** whether the prop spawns at all, where it lands (the caster's feet are the guess),
 its facing, its collision bounds, its scale and how the texture looks.
 
-**Curb Alert and four junk items:** Curb Alert (`HC_Shout_CurbAlert`) is a base-class spell granted at class level 6 (one of the base levels
-with only a single Homeless Californian spell grant). Action, once per long rest, no Junk cost, self only; it puts one each of the four items below into your
+**Curb Alert and four junk items:** Curb Alert (`HC_Shout_CurbAlert`) is a base-class spell granted at class level 6, alongside Public Scene (it is the only new spell added at that level in the source-only
+build). Action, once per long rest, no Junk cost, self only; it puts one each of the four items below into your
 inventory, and you equip or use them yourself. It reuses the vanilla Goodberry icon. Each item is an HC-only stat that inherits a vanilla stat and
 vanilla root template, so meshes and textures are borrowed from the donor and no custom art is involved. All four have a gold value of 0.
 
