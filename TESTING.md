@@ -29,6 +29,7 @@ Save and reload once. Note missing icons, lost grants, or changed resource
 behavior. Actual effects are not comprehensively gameplay-tested yet.
 The familiar uses a raven model; furniture and clothes use existing visuals.
 There is no custom chair model, gun or voice pack; the only custom mesh is the Abandoned Cart. The level-12 Squatter's Rights capstone is in the October 13 build.
+A fourth subclass (Overpass Riverbed Dweller) and a few new choices exist in the source only; their test routes are at the bottom of this page.
 
 ## Tell us what happened
 
@@ -89,3 +90,21 @@ is needed for race and class grants.
 | Class 4 | **Coat-Hanger Slim Jim** on a locked door or chest | Unlocks within 1.5 m, spends 1 Junk? |
 | Tenderloin 6 | **Curbside Needle Exchange** on an adjacent ally | Cures Poisoned/Disease/Blinded/Paralysed, heals 2d6+CON, once per short rest? |
 | Venice 10 | **Chair Check** | Weapon damage plus 2d8; Prone only on a failed Strength save? Junk spent? |
+
+## Source-only additions after v0.3.0 (NOT in the public download, NOT verified in game)
+
+The public v0.3.0 download does **not** contain anything below. These routes only apply if you build the mod yourself from the
+repository source (a new character or respec is needed for the grants). Nothing here has been played in game; only file-level
+checks have passed.
+
+| Level / source | Try | What to report |
+|---|---|---|
+| Overpass Riverbed Dweller 3 | Pick the subclass; check **Concrete Bank Traction** | Subclass listed with its name and icon? Prone and difficult terrain cannot affect you? |
+| Overpass 3 | **Storm Drain Flash Flood** into a group | 9 m line shape sensible? Strength save for `2d8 + CON` Bludgeoning, Prone only on a failed save, half on a success? Standing water left for 2 turns? Junk spent, once per short rest? |
+| Overpass 3 | **Blue Tarp Lean-To** with allies nearby, ideally with fire on the ground | You and allies within 3 m get +2 AC and Dexterity-save advantage for 2 turns? Fire on the ground doused? |
+| Overpass 6 | **Culvert Siphon** on an ally and on yourself, ideally while Burning | Castable at 9 m (not touch range)? Heals `2d6 + CON`, ends Burning, douses the ground, spends 1 Junk? |
+| Overpass 6 / 10 | **Underpass Climate Control**, **Rebar Anchor** | Fire and Cold resistance shown? +1 AC and Strength-save advantage shown? |
+| Overpass 12 | **Squatter's Rights: Spillway Sovereignty** | Restores all Junk, +2 AC and +3 m movement for 3 turns? Mud around you within 4 m: does it slow enemies without trapping you? |
+| Class 2 (Street Trade) | Pick **Squeegee Technician** | Option listed? Advantage on Intimidation and Insight checks? |
+| Class 4 (Junk Doctrine) | Pick **Cardboard Insulator** | Option listed with its icon? Cold damage resisted? |
+| Californian race 1 | **NIMBY Zoning Defense** (passive) | Listed on the character sheet? Advantage on saves against Charmed (try a charm spell from an enemy)? |

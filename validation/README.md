@@ -7,7 +7,11 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite (39 tests) lives in `test_validate.py`, `test_cart.py`, `test_expansion.py` and `test_spell_rules.py`.
+The suite (68 tests on the current source) lives in `test_validate.py` (12), `test_cart.py` (6), `test_expansion.py` (3),
+`test_spell_rules.py` (18), `test_overpass.py` (18) and `test_kit_additions.py` (11). The first four files held 39 tests at the
+v0.3.0 release. `test_overpass.py` covers the source-only Overpass Riverbed Dweller subclass and `test_kit_additions.py` covers the
+source-only Squeegee Technician, Cardboard Insulator and NIMBY Zoning Defense. Like everything else here, these are file-level
+checks: they do not show that any of it works in game.
 
 The validator returns exit code **1** on a finding. It does not install, regenerate,
 edit source, modify game configuration, or contact GitHub. `--pak` extracts into a

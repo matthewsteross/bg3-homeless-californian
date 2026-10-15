@@ -7,7 +7,9 @@
 **Throw bricks. Weaponise furniture. Make public transit everybody else's problem.**
 
 Looking for PC testers for a ridiculous Constitution-based class with three
-subclasses: Tenderloin poison, Venice furniture melee, and BART repositioning.
+subclasses in the public download: Tenderloin poison, Venice furniture melee, and BART repositioning.
+(A fourth subclass, Overpass Riverbed Dweller, exists in the source only; see
+[the source-only section](#source-only-additions-after-v030-not-in-the-public-download-not-verified-in-game).)
 Try one subclass for ten minutes and tell us one thing that broke—or one thing
 that worked. [Start the short tester checklist](TESTING.md).
 
@@ -15,7 +17,8 @@ that worked. [Start the short tester checklist](TESTING.md).
 **v0.3.0**: v0.2.1 plus the Californian race overhaul, the shopping cart prop and Abandoned Cart spell, Territory Claim,
 Pigeon Lunch Rush and more (listed below). **Honest status:** file-level checks pass, and an in-game data check confirmed that
 every spell, status and passive loads. Playing it is still mostly untested: only level 12 and the cart have been confirmed by
-hand. The older October 12 and 13 builds are still on their own release pages. The Nexus page is live; the in-game (mod.io)
+hand. The older October 12 and 13 builds are still on their own release pages. Work added after v0.3.0 is in the repository source
+only, is not in this download, and has not been played in game (see the source-only section below). The Nexus page is live; the in-game (mod.io)
 listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
@@ -34,7 +37,7 @@ The October 13 build (v0.2.0) and later builds contain a much larger kit than th
 playtest ZIP: the level-12 **Squatter's Rights** capstone, a **Street Trade** selector, **Junk Doctrines**, and the
 **Hustle kit** (Guilt Trip, Beg, Public Scene, Trapped in the Invisible Box, Bucket Drum Solo, Compassion Burnout,
 Punctured Lithium Cell, Sublet, Everybody Knows This Guy, plus the Homeless Fatigue and Breadcrumbed statuses).
-**Honest status:** file-level checks and 39 validation tests pass (on the current source, which is what v0.3.0 ships). In game, only "a character can reach level 12 without a catastrophic failure" has been
+**Honest status:** file-level checks and 39 validation tests passed at the v0.3.0 release (the current source has 68, see the source-only section). In game, only "a character can reach level 12 without a catastrophic failure" has been
 confirmed; individual abilities have not been tested, and **Beg** (gold from non-hostile NPCs) is the most experimental.
 Guilt Trip, Public Scene and Compassion Burnout now work on any enemy and add a bonus when the target is Socially
 Shamed or Homeless Fatigued (fixed since v0.2.1; the old v0.2.0 download requires the status and can show "Invalid Target"). Use a new character or a respec for new grants. Test routes for the new
@@ -85,11 +88,11 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(39 tests, including the deliberate-corruption checks). The saved original
+(68 tests on the current source, including the deliberate-corruption checks; 39 at the v0.3.0 release). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
-A custom class and race mod for **Baldur's Gate 3** introducing the **Homeless Californian** class (levels 1-12, three subclasses) and the **Californian** race (three subraces, a California identity / gender selector, and a restricted garish look).
+A custom class and race mod for **Baldur's Gate 3** introducing the **Homeless Californian** class (levels 1-12; three subclasses in the v0.3.0 download, four in the current source) and the **Californian** race (three subraces, a California identity / gender selector, and a restricted garish look).
 
 ---
 
@@ -120,7 +123,41 @@ localization resolve, the cart spawns and is visible, and casting it spawns exac
 collision, the Junk cost on a real Homeless Californian character, and how it looks in good light.
 
 The Californian race also gained racial progression (levels 1, 3 and 5); see [the race section](#-californian-race).
-The repository has 39 passing validation tests (file-level checks only).
+At the v0.3.0 release the repository had 39 passing validation tests (file-level checks only); the current source has 68 (see below).
+
+---
+
+## Source-only additions after v0.3.0 (NOT in the public download, NOT verified in game)
+
+Everything in this section is in the repository source (commits after the `playtest-2026-10-15` release) and is **not** in the
+public v0.3.0 download or the Nexus file. It has only passed file-level checks (68 validation tests on the current source, 39 of
+them from before these additions). Nothing here has been played in game. Numbers are copied from the generated game data and
+the localization text. A local build from the repository, and a new character or respec, are needed to try it.
+
+**Fourth subclass: Overpass Riverbed Dweller** (internal name `OverpassRiverbedDweller`). The level 12 capstone is included.
+
+| Unlock | Addition | Intended behavior |
+|---|---|---|
+| Overpass 3 | Concrete Bank Traction | Passive: immune to being knocked Prone and to difficult terrain |
+| Overpass 3 | Storm Drain Flash Flood | Action + 1 Junk, once per short rest, 9 m line; creatures that are not allies make a Strength save, taking `2d8 + CON` Bludgeoning and falling Prone for 1 turn on a failure, or half damage on a success; leaves standing water for 2 turns. The line shape is borrowed from Thunderwave and is not verified |
+| Overpass 3 | Blue Tarp Lean-To | Bonus action + 1 Junk, once per short rest, 3 m radius; you and allies get Blue Tarp Cover (+2 AC, advantage on Dexterity saves) for 2 turns, and fire on the ground is doused |
+| Overpass 6 | Culvert Siphon | Action + 1 Junk, once per short rest, 9 m; you or an ally (not undead or construct) regain `2d6 + CON` HP and stop Burning, and the ground is doused |
+| Overpass 6 | Underpass Climate Control | Passive: Resistance to Fire and Cold damage |
+| Overpass 10 | Rebar Anchor | Passive: +1 AC and advantage on Strength saving throws |
+| Overpass 12 | Squatter's Rights: Spillway Sovereignty | Bonus action, once per long rest; restores all Junk; lasts 3 turns: +2 AC and +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns |
+
+**New choices and a racial passive** (also source-only):
+
+| Unlock | Addition | Intended behavior |
+|---|---|---|
+| Street Trade (class 2) | Squeegee Technician | Advantage on Intimidation and Insight ability checks (a sixth option beside Scrounger, Fixer, Lookout, Can Collector, Busker) |
+| Junk Doctrine (class 4) | Cardboard Insulator | Resistance to Cold damage (a fifth option beside Hoarder, Fortifier, Runner, Twitchy) |
+| Californian race 1 | NIMBY Zoning Defense | Passive: advantage on saving throws against being Charmed (granted through the `CHARMED_ADV` tag; the tag's in-game behavior is not verified) |
+
+**What is least certain:** the shape of the Storm Drain Flash Flood zone and where its water surface lands along the line;
+whether the Mud surface from Spillway Sovereignty slows enemies without trapping you; and the NIMBY tag. The Culvert Siphon
+borrows the cast animation of vanilla Healing Word so a 9 m cast is not a touch spell, which is also untested in game.
+The Overpass subclass reuses the shared class crest and the Cardboard Insulator reuses the existing Cardboard Insulation icon; the other new spells and passives use vanilla icons. Custom art for them is not made yet.
 
 ---
 
@@ -145,9 +182,9 @@ Hardened by the concrete jungles of San Francisco and Los Angeles, the **Homeles
 | Level | Class features gained |
 |------:|-----------------------|
 | 1 | Street Grit Defence, Sidewalk Immunity, Proposition 47, Sling Poop, Sling Fentanyl, Fent Lean, Narcan, Sidewalk Scramble, Junk, Emotional Support Brick, Bag of Other Bags, Load-Bearing Lawn Chair, Unclaimed Wardrobe, 3 skills, +2/+1 ability bonus |
-| 2 | Aggressive Panhandling, Pocket Lint Buffet, Street Hustle, Dumpster Dive, Street Trade choice (Scrounger / Fixer / Lookout / Can Collector / Busker) |
-| 3 | **Subclass choice** (subclass features below) |
-| 4 | Eviction Notice, Coat-Hanger Slim Jim, Junk Doctrine choice (Hoarder / Fortifier / Runner / Twitchy), Ability Improvement |
+| 2 | Aggressive Panhandling, Pocket Lint Buffet, Street Hustle, Dumpster Dive, Street Trade choice (Scrounger / Fixer / Lookout / Can Collector / Busker; Squeegee Technician is source-only) |
+| 3 | **Subclass choice** (subclass features below; Overpass Riverbed Dweller is source-only) |
+| 4 | Eviction Notice, Coat-Hanger Slim Jim, Junk Doctrine choice (Hoarder / Fortifier / Runner / Twitchy; Cardboard Insulator is source-only), Ability Improvement |
 | 5 | Extra Attack, Sling Chunky Poop; Sling Poop damage steps up; Guilt Trip, Beg |
 | 6 | Restorative Stupor, Unkillable Vagrant; Public Scene; subclass feature |
 | 7 | Feral Screech, Moving Day, I Was Here First |
@@ -155,7 +192,7 @@ Hardened by the concrete jungles of San Francisco and Los Angeles, the **Homeles
 | 9 | Mass Fentanyl Contraband, Pitch Tent Encampment, Bucket Drum Solo |
 | 10 | Encampment Sweep Survival Instinct; subclass feature; Sling Poop damage steps up; Compassion Burnout |
 | 11 | Extra Attack (2 extra attacks), Baffling Retaliation, Punctured Lithium Cell |
-| 12 | Call 311 (On Hold), Ability Improvement, subclass Squatter's Rights capstone (details in the subclass sections) |
+| 12 | Call 311 (On Hold), Ability Improvement, subclass Squatter's Rights capstone (details in the subclass sections; the Overpass version is source-only) |
 
 ---
 
@@ -220,6 +257,8 @@ Phase 4 abilities; all but Beg cost 1 Junk. The Junk toolkit above is documented
 
 ## 🏙️ Subclasses (Level 3)
 
+Three subclasses are in the public v0.3.0 download. A fourth, Overpass Riverbed Dweller, is source-only (last entry below).
+
 ### Tenderloin Biohazard
 *Master of chemical concoctions and sidewalk biohazards.*
 - **L3 - Tenderloin Biohazard Aura**: 3m miasma that afflicts nearby enemies with Fecal Stench.
@@ -257,6 +296,16 @@ Phase 4 abilities; all but Beg cost 1 Junk. The Junk toolkit above is documented
 - **L6 - Fare Evasion Audit** *(not yet verified in game)*: Action + 1 Junk, once per short rest, 9 m; failed Wisdom save leaves the target Fined for 2 turns (-3 m movement, no Reactions).
 - **L12 - Squatter's Rights: Last Train Out** *(not yet verified in game)*: Bonus Action, once per long rest; restores all Junk and lasts 3 turns. +1 Reaction, +4.5 m movement, and unlocks Platform Rescue and Wrong Platform Express.
 
+### Overpass Riverbed Dweller *(source-only: NOT in the public download, NOT verified in game)*
+*A survivalist who keeps house in concrete flood channels and under freeway overpasses. The ground is always doing something. You are used to it.*
+- **L3 - Concrete Bank Traction**: Immune to being knocked Prone and to difficult terrain.
+- **L3 - Storm Drain Flash Flood**: Action + 1 Junk, once per short rest; 9 m line. Strength save: `2d8 + CON Bludgeoning` and Prone for 1 turn on a failure, half damage on a success; leaves standing water for 2 turns.
+- **L3 - Blue Tarp Lean-To**: Bonus Action + 1 Junk, once per short rest, 3 m radius; you and allies get +2 AC and advantage on Dexterity saves for 2 turns, and fire on the ground is doused.
+- **L6 - Culvert Siphon**: Action + 1 Junk, once per short rest, 9 m; you or an ally regain `2d6 + CON` HP and stop Burning, and the ground is doused.
+- **L6 - Underpass Climate Control**: Resistance to Fire and Cold damage.
+- **L10 - Rebar Anchor**: +1 AC and advantage on Strength saving throws.
+- **L12 - Squatter's Rights: Spillway Sovereignty**: Bonus Action, once per long rest; restores all Junk and lasts 3 turns. +2 AC, +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns.
+
 ---
 
 ## 🌴 Californian Race
@@ -270,6 +319,7 @@ Hailing from the Golden State, **Californians** are a human-bodied race (standar
 - **Touch Grass**: Action, Short Rest. Melee spell attack for `1d8 Psychic`, ends Rage, and inflicts Existential Daze (Disadvantage on attack rolls) for 2 turns.
 - **Avocado Toast**: Bonus Action, Short Rest. Regain `1d6 + CON` HP and gain 5 Temporary HP.
 - **Runyon Canyon Glutes** (new, not yet verified in game): +50% jump distance and +25% carrying capacity.
+- **NIMBY Zoning Defense** (source-only: not in the public download, not verified in game): advantage on saving throws against being Charmed.
 - **Emotional Support Hydroflask** (new, not yet verified in game): Bonus Action, Short Rest. Regain `1d8 + CON` HP, remove Poisoned, douse the surface beneath you and leave a puddle of clean water.
 - Racial spells use Charisma as their spellcasting ability.
 
@@ -305,12 +355,13 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── generate_mod.py              # Generates all LSX, XML, and txt data with deterministic GUIDs
 ├── build.py                     # Pipeline: generate, build icons, compile loca, pack .pak, install & activate
 ├── build_icons.py               # Packs icons into the texture atlas and builds Content/GUI + race icon resources
-├── hc_choices.py                # Street Trade and Junk Doctrine selectors
-├── hc_doctrines.py              # Junk Doctrine passives
+├── hc_choices.py                # Street Trade selector (includes Squeegee Technician, source-only)
+├── hc_doctrines.py              # Junk Doctrine passives (includes Cardboard Insulator, source-only)
 ├── hc_expansion.py              # Junk toolkit, race progression and other expansion abilities
 ├── hc_hustle.py                 # Hustle kit (Guilt Trip, Beg, Sublet, ...)
-├── hc_capstone.py               # Squatter's Rights level-12 capstone
+├── hc_capstone.py               # Squatter's Rights level-12 capstones (all four subclasses)
 ├── hc_utility.py                # Coat-Hanger Slim Jim, Curbside Needle Exchange
+├── hc_overpass.py               # Overpass Riverbed Dweller subclass (source-only, after v0.3.0)
 ├── hc_cart.py                   # Abandoned Cart spell and template
 ├── hc_outfit.py                 # Outfit / wardrobe items
 ├── hc_icon_keys.py              # Maps spells to icon keys
@@ -336,7 +387,7 @@ Baldurs Gate 3 Homeless Californian Class/
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (39 tests).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (68 tests on the current source).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.
