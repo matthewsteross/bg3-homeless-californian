@@ -99,11 +99,11 @@ checks have passed.
 
 | Level / source | Try | What to report |
 |---|---|---|
-| Overpass Riverbed Dweller 3 | Pick the subclass; check **Concrete Bank Traction** | Subclass listed with its name and icon? Prone and difficult terrain cannot affect you? |
+| Overpass Riverbed Dweller 3 | Pick the subclass; check **Concrete Bank Traction** | Subclass listed with its name and icon? Mud, webs and other difficult terrain do not slow you? |
 | Overpass 3 | **Storm Drain Flash Flood** into a group | 9 m line shape sensible? Strength save for `2d8 + CON` Bludgeoning, Prone only on a failed save, half on a success? Standing water left for 2 turns? Junk spent, once per short rest? |
-| Overpass 3 | **Blue Tarp Lean-To** with allies nearby, ideally with fire on the ground | You and allies within 3 m get +2 AC and Dexterity-save advantage for 2 turns? Fire on the ground doused? |
+| Overpass 3 | **Blue Tarp Lean-To** with allies nearby, ideally with fire on the ground | You and allies within 3 m get +1 AC and Dexterity-save advantage for 2 turns? Fire on the ground doused? |
 | Overpass 6 | **Culvert Siphon** on an ally and on yourself, ideally while Burning | Castable at 9 m (not touch range)? Heals `2d6 + CON`, ends Burning, douses the ground, spends 1 Junk? |
-| Overpass 6 / 10 | **Underpass Climate Control**, **Rebar Anchor** | Fire and Cold resistance shown? +1 AC and Strength-save advantage shown? |
+| Overpass 6 / 10 | **Underpass Climate Control**, **Rebar Anchor** | Lightning and Cold resistance shown? +1 AC and Strength-save advantage shown? |
 | Overpass 12 | **Squatter's Rights: Spillway Sovereignty** | Restores all Junk, +2 AC and +3 m movement for 3 turns? Mud around you within 4 m: does it slow enemies without trapping you? |
 | Class 2 (Street Trade) | Pick **Squeegee Technician**, or **Notary** on another character | Both listed (7 options in total)? Squeegee: advantage on Intimidation and Insight. Notary: advantage on Investigation and Persuasion? |
 | Class 4 (Junk Doctrine) | Pick **Cardboard Insulator**, or **Tinfoil Deflector** on another character | Both listed (6 options in total)? Cardboard Insulator: Cold damage resisted. Tinfoil Deflector: Psychic damage resisted (try One-Star Citation or Vicious Mockery from an enemy)? |

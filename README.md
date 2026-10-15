@@ -138,11 +138,11 @@ the localization text. A local build from the repository, and a new character or
 
 | Unlock | Addition | Intended behavior |
 |---|---|---|
-| Overpass 3 | Concrete Bank Traction | Passive: immune to being knocked Prone and to difficult terrain |
+| Overpass 3 | Concrete Bank Traction | Passive: immune to difficult terrain (mud, webs, vines) |
 | Overpass 3 | Storm Drain Flash Flood | Action + 1 Junk, once per short rest, 9 m line; creatures that are not allies make a Strength save, taking `2d8 + CON` Bludgeoning and falling Prone for 1 turn on a failure, or half damage on a success; leaves standing water for 2 turns. The line shape is borrowed from Thunderwave and is not verified |
-| Overpass 3 | Blue Tarp Lean-To | Bonus action + 1 Junk, once per short rest, 3 m radius; you and allies get Blue Tarp Cover (+2 AC, advantage on Dexterity saves) for 2 turns, and fire on the ground is doused |
+| Overpass 3 | Blue Tarp Lean-To | Bonus action + 1 Junk, once per short rest, 3 m radius; you and allies get Blue Tarp Cover (+1 AC, advantage on Dexterity saves) for 2 turns, and fire on the ground is doused |
 | Overpass 6 | Culvert Siphon | Action + 1 Junk, once per short rest, 9 m; you or an ally (not undead or construct) regain `2d6 + CON` HP and stop Burning, and the ground is doused |
-| Overpass 6 | Underpass Climate Control | Passive: Resistance to Fire and Cold damage |
+| Overpass 6 | Underpass Climate Control | Passive: Resistance to Lightning and Cold damage |
 | Overpass 10 | Rebar Anchor | Passive: +1 AC and advantage on Strength saving throws |
 | Overpass 12 | Squatter's Rights: Spillway Sovereignty | Bonus action, once per long rest; restores all Junk; lasts 3 turns: +2 AC and +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns |
 
@@ -313,11 +313,11 @@ Three subclasses are in the public v0.3.0 download. A fourth, Overpass Riverbed 
 
 ### Overpass Riverbed Dweller *(source-only: NOT in the public download, NOT verified in game)*
 *A survivalist who keeps house in concrete flood channels and under freeway overpasses. The ground is always doing something. You are used to it.*
-- **L3 - Concrete Bank Traction**: Immune to being knocked Prone and to difficult terrain.
+- **L3 - Concrete Bank Traction**: Immune to difficult terrain (mud, webs, vines).
 - **L3 - Storm Drain Flash Flood**: Action + 1 Junk, once per short rest; 9 m line. Strength save: `2d8 + CON Bludgeoning` and Prone for 1 turn on a failure, half damage on a success; leaves standing water for 2 turns.
-- **L3 - Blue Tarp Lean-To**: Bonus Action + 1 Junk, once per short rest, 3 m radius; you and allies get +2 AC and advantage on Dexterity saves for 2 turns, and fire on the ground is doused.
+- **L3 - Blue Tarp Lean-To**: Bonus Action + 1 Junk, once per short rest, 3 m radius; you and allies get +1 AC and advantage on Dexterity saves for 2 turns, and fire on the ground is doused.
 - **L6 - Culvert Siphon**: Action + 1 Junk, once per short rest, 9 m; you or an ally regain `2d6 + CON` HP and stop Burning, and the ground is doused.
-- **L6 - Underpass Climate Control**: Resistance to Fire and Cold damage.
+- **L6 - Underpass Climate Control**: Resistance to Lightning and Cold damage.
 - **L10 - Rebar Anchor**: +1 AC and advantage on Strength saving throws.
 - **L12 - Squatter's Rights: Spillway Sovereignty**: Bonus Action, once per long rest; restores all Junk and lasts 3 turns. +2 AC, +3 m movement, and the ground within 4 m turns to mud (difficult terrain) for 3 turns.
 

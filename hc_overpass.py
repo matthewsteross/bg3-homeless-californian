@@ -36,11 +36,11 @@ def generate_overpass(public_dir, add_loca, get_guid):
     # ---------------------------------------------------------------- passives
     passives = [
         ('HC_ConcreteBankTraction', 'Concrete Bank Traction',
-         'Immune to being knocked Prone and to difficult terrain. Standing on a 40-degree slab of wet concrete is a skill, and you have the certificate.',
-         'StatusImmunity(SG_Prone);StatusImmunity(SG_DifficultTerrain)', 'PassiveFeature_UnarmoredMovement'),
+         'Mud, webs, vines and other difficult terrain no longer slow you down. Standing on a 40-degree slab of wet concrete is a skill, and you have the certificate.',
+         'StatusImmunity(DIFFICULT_TERRAIN);StatusImmunity(DIFFICULT_TERRAIN_MUD);StatusImmunity(DIFFICULT_TERRAIN_WEB);StatusImmunity(DIFFICULT_TERRAIN_VINES)', 'PassiveFeature_UnarmoredMovement'),
         ('HC_UnderpassClimateControl', 'Underpass Climate Control',
-         'Resistance to Fire and Cold damage. The underpass is eleven degrees cooler in summer and eleven degrees warmer in winter. Nobody knows why.',
-         'Resistance(Fire,Resistant);Resistance(Cold,Resistant)', 'Spell_Abjuration_ProtectionFromEnergy'),
+         'Resistance to Lightning and Cold damage. The underpass is eleven degrees cooler in summer and eleven degrees warmer in winter. Nobody knows why.',
+         'Resistance(Lightning,Resistant);Resistance(Cold,Resistant)', 'Spell_Abjuration_ProtectionFromEnergy'),
         ('HC_RebarAnchor', 'Rebar Anchor',
          '+1 Armour Class and advantage on Strength saving throws. They tried to move you along. The rebar disagreed.',
          'AC(1);Advantage(SavingThrow,Strength)', 'PassiveFeature_Resilient'),
@@ -60,11 +60,11 @@ def generate_overpass(public_dir, add_loca, get_guid):
     status_name = 'HC_TARP_COVER'
     status_fields = dict(
         StatusType='BOOST', StackId=status_name, StackType='Overwrite', TickType='EndTurn',
-        Icon='Spell_Abjuration_MageArmor', Boosts='AC(2);Advantage(SavingThrow,Dexterity)')
+        Icon='Spell_Abjuration_MageArmor', Boosts='AC(1);Advantage(SavingThrow,Dexterity)')
     status_fields['DisplayName'] = add_loca(status_name + '_Name', 'Blue Tarp Cover') + ';1'
     status_fields['Description'] = add_loca(
         status_name + '_Description',
-        '+2 Armour Class and advantage on Dexterity saving throws. It is waterproof in the way that matters.') + ';1'
+        '+1 Armour Class and advantage on Dexterity saving throws. It is waterproof in the way that matters.') + ';1'
     check(status_name, status_fields)
     lines = [f'new entry "{status_name}"', 'type "StatusData"']
     lines += [f'data "{k}" "{v}"' for k, v in status_fields.items()]
@@ -88,18 +88,18 @@ def generate_overpass(public_dir, add_loca, get_guid):
               DamageType='Bludgeoning', Icon='Spell_Evocation_GustOfWind',
               TargetConditions='Character() and not Ally() and not Dead()',
               SpellRoll='not SavingThrow(Ability.Strength, SourceSpellDC())',
-              SpellProperties='GROUND:CreateSurface(3,2,Water)',
+              SpellProperties='', SurfaceType='Water', SurfaceLifetime='2', SurfaceGrowStep='5', SurfaceGrowInterval='10', TooltipOnSave='f762efbb-f8f1-493e-b248-2de1567b4bd2',
               SpellSuccess='DealDamage(2d8+ConstitutionModifier,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)',
               SpellFail='DealDamage((2d8+ConstitutionModifier)/2,Bludgeoning,Magical)',
               TooltipDamageList='DealDamage(2d8+ConstitutionModifier,Bludgeoning)',
               TooltipAttackSave='Strength', TooltipStatusApply='ApplyStatus(PRONE,100,1)')),
         ('HC_Shout_BlueTarpLeanTo', 'Shout_SecondWind', 'Blue Tarp Lean-To',
          'Rig a blue tarp over everyone within 3 m. Costs a bonus action and 1 Junk; once per short rest. '
-         'You and your allies gain +2 AC and advantage on Dexterity saving throws for 2 turns, and fire on the ground is doused. '
+         'You and your allies gain +1 AC and advantage on Dexterity saving throws for 2 turns, and fire on the ground is doused. '
          'It has held up through three storms and one very determined raccoon.',
          dict(UseCosts='BonusActionPoint:1;HC_Junk:1', Cooldown='OncePerShortRest', AreaRadius='3',
               Icon='Spell_Abjuration_MageArmor',
-              TargetConditions='(Ally() or Self()) and not Dead()',
+              TargetConditions='Character() and (Ally() or Self()) and not Dead()',
               SpellProperties='ApplyStatus(HC_TARP_COVER,100,2);GROUND:SurfaceChange(Douse)',
               TooltipStatusApply='ApplyStatus(HC_TARP_COVER,100,2)')),
         ('HC_Target_CulvertSiphon', 'Target_CureWounds', 'Culvert Siphon',

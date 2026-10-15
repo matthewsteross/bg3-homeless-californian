@@ -127,7 +127,7 @@ data "DisplayName" "h820f79aegc689g5decg88b7g8bc530783ec9;1"
 data "Description" "h7dd6cc75ga10dg58fag8fbfg711f3de6e6c9;1"
 data "Icon" "PassiveFeature_FastMovement"
 data "Properties" "Highlighted"
-data "Boosts" "ActionResource(Movement,4.5,0);StatusImmunity(SG_DifficultTerrain)"
+data "Boosts" "ActionResource(Movement,4.5,0);StatusImmunity(DIFFICULT_TERRAIN);StatusImmunity(DIFFICULT_TERRAIN_MUD);StatusImmunity(DIFFICULT_TERRAIN_WEB);StatusImmunity(DIFFICULT_TERRAIN_VINES)"
 
 # Racial Passives
 new entry "EarthquakeSense"

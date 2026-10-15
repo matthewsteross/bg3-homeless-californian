@@ -162,16 +162,16 @@ class OverpassSubclassTests(unittest.TestCase):
     # ------------------------------------------------------------------ passives / statuses
     def test_passive_boosts(self):
         self.assertEqual(self.passives['HC_ConcreteBankTraction']['data']['Boosts'],
-                         'StatusImmunity(SG_Prone);StatusImmunity(SG_DifficultTerrain)')
+                         'StatusImmunity(DIFFICULT_TERRAIN);StatusImmunity(DIFFICULT_TERRAIN_MUD);StatusImmunity(DIFFICULT_TERRAIN_WEB);StatusImmunity(DIFFICULT_TERRAIN_VINES)')
         self.assertEqual(self.passives['HC_UnderpassClimateControl']['data']['Boosts'],
-                         'Resistance(Fire,Resistant);Resistance(Cold,Resistant)')
+                         'Resistance(Lightning,Resistant);Resistance(Cold,Resistant)')
         rebar = self.passives['HC_RebarAnchor']['data']['Boosts'].split(';')
         self.assertCountEqual(rebar, ['AC(1)', 'Advantage(SavingThrow,Strength)'])
 
     def test_status_boosts_and_no_auras(self):
         tarp = self.statuses['HC_TARP_COVER']['data']
         self.assertEqual(tarp['StatusType'], 'BOOST')
-        self.assertCountEqual(tarp['Boosts'].split(';'), ['AC(2)', 'Advantage(SavingThrow,Dexterity)'])
+        self.assertCountEqual(tarp['Boosts'].split(';'), ['AC(1)', 'Advantage(SavingThrow,Dexterity)'])
         sov = self.statuses['HC_SPILLWAY_SOVEREIGN']['data']
         self.assertCountEqual(sov['Boosts'].split(';'), ['AC(2)', 'ActionResource(Movement,3,0)'])
         for name in NEW_STATUSES:
@@ -191,7 +191,8 @@ class OverpassSubclassTests(unittest.TestCase):
         self.assertIn('ApplyStatus(PRONE,100,1)', d['SpellSuccess'])
         self.assertIn('DealDamage((2d8+ConstitutionModifier)/2,Bludgeoning', d['SpellFail'])
         self.assertNotIn('PRONE', d['SpellFail'])
-        self.assertRegex(d['SpellProperties'], r'GROUND:CreateSurface\([0-9.]+,2,Water\)')
+        self.assertEqual(d['SpellProperties'], '')
+        self.assertEqual((d['SurfaceType'], d['SurfaceLifetime']), ('Water', '2'))
         # Inherited Thunderwave facts must be gone.
         self.assertNotIn('Thunder', d['TooltipDamageList'])
         self.assertNotIn('Force(', d['SpellSuccess'])
