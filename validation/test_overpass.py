@@ -258,7 +258,7 @@ class OverpassSubclassTests(unittest.TestCase):
         self.assertNotIn('Water', d['SpellProperties'])
         self.assertEqual(d['TooltipStatusApply'], '')
         # Icon falls back to a vanilla icon that exists in the extracted vanilla spell data.
-        self.assertEqual(d['Icon'], 'Spell_Conjuration_Grease')
+        self.assertEqual(d['Icon'], 'Spell_DrainageDitchDigIn')
         vanilla_targets = (ROOT / 'temp_race/Public/Shared/Stats/Generated/Data/Spell_Target.txt').read_text(encoding='utf-8')
         self.assertIn('data "Icon" "Spell_Conjuration_Grease"', vanilla_targets)
         # Every name the spell leans on exists in the vanilla reference.

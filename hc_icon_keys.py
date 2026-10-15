@@ -36,6 +36,14 @@ SPELL_ICON_KEYS = {
     'HC_Shout_BlueTarpLeanTo': 'Spell_BlueTarpLeanTo',
     'HC_Target_CulvertSiphon': 'Spell_CulvertSiphon',
     'HC_Shout_SquattersRights_Overpass': 'Spell_SquattersRightsOverpass',
+    # Round 2 + Overpass L10 + Curb Alert (Gemini Flash art, 2026-10-15)
+    'HC_Target_CatalyticConverterSawzall': 'Spell_CatalyticConverterSawzall',
+    'HC_Target_SprinklerViolation': 'Spell_SprinklerViolation',
+    'HC_Target_HOVLane': 'Spell_HOVLane',
+    'HC_Target_OneStarCitation': 'Spell_OneStarCitation',
+    'HC_Target_TuleFog': 'Spell_BakersfieldTuleFog',
+    'HC_Target_DrainageDitchDigIn': 'Spell_DrainageDitchDigIn',
+    'HC_Shout_CurbAlert': 'Spell_CurbAlert',
 }
 
 def icon_for_spell(spell, fallback):
