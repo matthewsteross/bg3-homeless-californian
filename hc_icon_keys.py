@@ -31,6 +31,11 @@ SPELL_ICON_KEYS = {
     'HC_Target_ChairCheck': 'Spell_ChairCheck',
     'HC_Shout_IWasHereFirst': 'Spell_IWasHereFirst',
     'HC_Shout_PigeonLunchRush': 'Spell_PigeonLunchRush',
+    # Overpass Riverbed Dweller (Gemini Flash art, 2026-10-15)
+    'HC_Zone_StormDrainFlashFlood': 'Spell_StormDrainFlashFlood',
+    'HC_Shout_BlueTarpLeanTo': 'Spell_BlueTarpLeanTo',
+    'HC_Target_CulvertSiphon': 'Spell_CulvertSiphon',
+    'HC_Shout_SquattersRights_Overpass': 'Spell_SquattersRightsOverpass',
 }
 
 def icon_for_spell(spell, fallback):

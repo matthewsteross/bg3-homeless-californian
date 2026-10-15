@@ -151,7 +151,7 @@ data "SpellSuccess" ""
 data "SpellFail" ""
 data "CastTextEvent" "Cast"
 data "UseCosts" "BonusActionPoint:1"
-data "Icon" "Spell_Abjuration_Stoneskin"
+data "Icon" "Spell_SquattersRightsOverpass"
 data "DisplayName" "hbabdec34g163ag5810gbb78gef381ecba628;1"
 data "Description" "h0fe1058egfb27g5b21g9a82g2766c0d11853;1"
 

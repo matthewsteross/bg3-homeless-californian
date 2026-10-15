@@ -229,6 +229,34 @@
                     <attribute id="V2" type="float" value="0.49951172"/>
                 </node>
                 <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_StormDrainFlashFlood"/>
+                    <attribute id="U1" type="float" value="0.00048828"/>
+                    <attribute id="U2" type="float" value="0.12451172"/>
+                    <attribute id="V1" type="float" value="0.50048828"/>
+                    <attribute id="V2" type="float" value="0.62451172"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BlueTarpLeanTo"/>
+                    <attribute id="U1" type="float" value="0.12548828"/>
+                    <attribute id="U2" type="float" value="0.24951172"/>
+                    <attribute id="V1" type="float" value="0.50048828"/>
+                    <attribute id="V2" type="float" value="0.62451172"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_CulvertSiphon"/>
+                    <attribute id="U1" type="float" value="0.25048828"/>
+                    <attribute id="U2" type="float" value="0.37451172"/>
+                    <attribute id="V1" type="float" value="0.50048828"/>
+                    <attribute id="V2" type="float" value="0.62451172"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SquattersRightsOverpass"/>
+                    <attribute id="U1" type="float" value="0.37548828"/>
+                    <attribute id="U2" type="float" value="0.49951172"/>
+                    <attribute id="V1" type="float" value="0.50048828"/>
+                    <attribute id="V2" type="float" value="0.62451172"/>
+                </node>
+                <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
                     <attribute id="U1" type="float" value="0.12548828"/>
                     <attribute id="U2" type="float" value="0.24951172"/>

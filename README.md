@@ -157,7 +157,7 @@ the localization text. A local build from the repository, and a new character or
 **What is least certain:** the shape of the Storm Drain Flash Flood zone and where its water surface lands along the line;
 whether the Mud surface from Spillway Sovereignty slows enemies without trapping you; and the NIMBY tag. The Culvert Siphon
 borrows the cast animation of vanilla Healing Word so a 9 m cast is not a touch spell, which is also untested in game.
-The Overpass subclass reuses the shared class crest and the Cardboard Insulator reuses the existing Cardboard Insulation icon; the other new spells and passives use vanilla icons. Custom art for them is not made yet.
+The four new Overpass spells (Storm Drain Flash Flood, Blue Tarp Lean-To, Culvert Siphon and the Spillway Sovereignty capstone) have custom Gemini-generated icons; the Overpass subclass reuses the shared class crest, the Cardboard Insulator reuses the Cardboard Insulation icon, and the other new passives use vanilla icons.
 
 ---
 
