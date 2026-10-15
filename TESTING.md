@@ -105,6 +105,11 @@ checks have passed.
 | Overpass 6 | **Culvert Siphon** on an ally and on yourself, ideally while Burning | Castable at 9 m (not touch range)? Heals `2d6 + CON`, ends Burning, douses the ground, spends 1 Junk? |
 | Overpass 6 / 10 | **Underpass Climate Control**, **Rebar Anchor** | Fire and Cold resistance shown? +1 AC and Strength-save advantage shown? |
 | Overpass 12 | **Squatter's Rights: Spillway Sovereignty** | Restores all Junk, +2 AC and +3 m movement for 3 turns? Mud around you within 4 m: does it slow enemies without trapping you? |
-| Class 2 (Street Trade) | Pick **Squeegee Technician** | Option listed? Advantage on Intimidation and Insight checks? |
-| Class 4 (Junk Doctrine) | Pick **Cardboard Insulator** | Option listed with its icon? Cold damage resisted? |
+| Class 2 (Street Trade) | Pick **Squeegee Technician**, or **Notary** on another character | Both listed (7 options in total)? Squeegee: advantage on Intimidation and Insight. Notary: advantage on Investigation and Persuasion? |
+| Class 4 (Junk Doctrine) | Pick **Cardboard Insulator**, or **Tinfoil Deflector** on another character | Both listed (6 options in total)? Cardboard Insulator: Cold damage resisted. Tinfoil Deflector: Psychic damage resisted (try One-Star Citation or Vicious Mockery from an enemy)? |
 | Californian race 1 | **NIMBY Zoning Defense** (passive) | Listed on the character sheet? Advantage on saves against Charmed (try a charm spell from an enemy)? |
+| Class 2 | **Sprinkler Violation** at a group, ideally near fire or a lightning source | Castable at 9 m for a bonus action and 1 Junk, once per short rest? 2 m water puddle for 2 turns; creatures inside become Wet for 3 turns? Does anything just outside the puddle get Wet? |
+| Class 4 | **Catalytic Converter Sawzall** on an adjacent enemy | Melee spell attack within 1.5 m for `3d8` Slashing; a hit leaves Decatted Exhaust for 2 turns (-2 AC, no reactions)? Junk spent, once per short rest? Which cast and hit effects play (it borrows Inflict Wounds)? |
+| Class 8 | **One-Star Citation** on enemies that pass and fail the Wisdom save | `2d8` Psychic damage at 9 m? Bane for 2 turns only on a failed save? Does damage land on a successful save too? Junk spent, no cooldown? |
+| Class 11 | **HOV Lane** to a spot you can see, then to a spot you cannot | Teleport up to 12 m for a bonus action and 1 Junk, once per short rest? Invalid or blocked locations refused? (It leaves no mud behind: that part was left out.) |
+| Californian Inland Emperor 3 | **Bakersfield Tule Fog** (new character or respec) | Appears beside Overpass Exhaust? One action, no Junk, once per short rest? 4 m fog cloud at 9 m for 2 turns? Does casting it break an existing concentration spell (it should not)? |
