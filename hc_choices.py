@@ -14,6 +14,7 @@ def generate_choices(public_dir, add_loca, get_guid):
         ('HC_StreetTrade_CanCollector', 'Can Collector', 'Athletics', 'SleightOfHand', 'Every piece of crushed aluminum is cash if you carry enough bags of it.'),
         ('HC_StreetTrade_Busker', 'Busker', 'Performance', 'Insight', 'You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.'),
         ('HC_StreetTrade_SqueegeeTechnician', 'Squeegee Technician', 'Intimidation', 'Insight', 'You wipe the windshield first and discuss the fee afterwards. A single look says you know what the driver is thinking about, and what they will pay.'),
+        ('HC_StreetTrade_Notary', 'Notary', 'Investigation', 'Persuasion', 'Every document looks official with a stamp, and you have found a stamp. Nobody has asked what it says.'),
     ]
     blocks = []
     for key, name, first, second, flavor in options:

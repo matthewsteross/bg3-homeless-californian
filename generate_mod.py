@@ -708,13 +708,13 @@ def generate_lists_lsx():
                     <attribute id="UUID" type="guid" value="{SPELLLIST_SILICONITE_L5}"/>
                 </node>
 
-                <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust (L3), Heatstroke (L5) -->
+                <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust + Bakersfield Tule Fog (L3), Heatstroke (L5) -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_DustDevil"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_INLANDEMPEROR_L1}"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust"/>
+                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust;HC_Target_TuleFog"/>
                     <attribute id="UUID" type="guid" value="{SPELLLIST_INLANDEMPEROR_L3}"/>
                 </node>
                 <node id="SpellList">
@@ -2592,6 +2592,10 @@ def generate_local_expansion():
     for category, levels in hustle['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_round2 import generate_round2
+    round2 = generate_round2(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round2['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}

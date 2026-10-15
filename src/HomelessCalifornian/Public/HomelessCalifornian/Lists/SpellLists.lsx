@@ -104,13 +104,13 @@
                     <attribute id="UUID" type="guid" value="4d0c15ce-6278-5b24-a321-a8d2a91592d7"/>
                 </node>
 
-                <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust (L3), Heatstroke (L5) -->
+                <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust + Bakersfield Tule Fog (L3), Heatstroke (L5) -->
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="Shout_DustDevil"/>
                     <attribute id="UUID" type="guid" value="37a7f600-db05-51cf-afd9-97edc9991df0"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust"/>
+                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust;HC_Target_TuleFog"/>
                     <attribute id="UUID" type="guid" value="71f3e612-736a-5a6a-958e-1d5bc104d5fe"/>
                 </node>
                 <node id="SpellList">
@@ -122,7 +122,7 @@
                     <attribute id="UUID" type="guid" value="938537ab-8cb8-558c-bacc-239e7818459c"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive;HC_Target_SprinklerViolation"/>
                     <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
                 </node>
                 <node id="SpellList">
@@ -130,7 +130,7 @@
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CoatHangerSlimJim"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CoatHangerSlimJim;HC_Target_CatalyticConverterSawzall"/>
                     <attribute id="UUID" type="guid" value="ddce9474-2ca9-51d0-849b-f113d3c96d78"/>
                 </node>
                 <node id="SpellList">
@@ -142,7 +142,7 @@
                     <attribute id="UUID" type="guid" value="43874101-0a25-537d-a720-49a411e9f321"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation"/>
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
@@ -154,7 +154,7 @@
                     <attribute id="UUID" type="guid" value="9c43433e-1fde-563a-9dea-57398062a490"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell"/>
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane"/>
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">

@@ -295,6 +295,18 @@
     <content contentuid="hb5505c7agfec8g5c53gae03g3ab684f6aaa1" version="1">The inspector has arrived. Your paperwork has not. Costs an action and 1 Junk; once per short rest. The target makes a Wisdom saving throw. On a failure, it is Fined for 2 turns (-3 m movement speed, cannot take reactions).</content>
     <content contentuid="hcd5eff60gea24g5b58gbb3cg0c261590be55" version="1">Chair Check</content>
     <content contentuid="h594c8e9bg63d8g52bbg8abcgd00c8a1353b0" version="1">Smash a heavy folding lawn chair into the target with the full weight of the boardwalk behind it. Costs an action and 1 Junk; once per short rest. Melee weapon attack that deals weapon damage plus 2d8 Bludgeoning damage. On a failed Strength saving throw, the target is knocked Prone.</content>
+    <content contentuid="h6481c0b2g3ce7g5d6cg9f62g87450b340a64" version="1">Decatted Exhaust</content>
+    <content contentuid="he1a38311g462fg5428gb85ag5bb0a9561229" version="1">-2 Armour Class and cannot take reactions. Everyone within three blocks has noticed.</content>
+    <content contentuid="h22fb200eg682dg5d39gbf33g6dee6b30e119" version="1">Catalytic Converter Sawzall</content>
+    <content contentuid="h1ec393f5g8abcg5829gaaeagd4c240990e32" version="1">Take the exhaust system off something that was not yours to begin with. Costs an action and 1 Junk; once per short rest. Melee spell attack within 1.5 m: 3d8 Slashing damage. On a hit the target is Decatted for 2 turns: -2 AC and no reactions. The car will start. It will also be audible from the next county.</content>
+    <content contentuid="h83e4b3c2g1d6eg5ee4g9858gb9adc0a25d3b" version="1">Sprinkler Violation</content>
+    <content contentuid="h49b7e63egb955g5637gbb01gfc45782d4ee8" version="1">Hold the test valve open until the ceiling does the rest. Costs a bonus action and 1 Junk; once per short rest. Choose a point within 9 m: a 2 m radius puddle of water lasts 2 turns, and creatures in that area become Wet for 3 turns (resistant to Fire, vulnerable to Cold and Lightning). The tag said do not touch. The tag was hopeful.</content>
+    <content contentuid="heac41d3fg6c1ag5dc5gb8c8g0844df963cd2" version="1">HOV Lane</content>
+    <content contentuid="ha940db15g7681g58c3g99bfg864304a3318b" version="1">Slip into the carpool lane with a mannequin in the passenger seat. Costs a bonus action and 1 Junk; once per short rest. Teleport up to 12 m to an unoccupied place you can see. Traffic is, for once, moving at the speed of the sign.</content>
+    <content contentuid="h7c0510b6gaaccg5ef6gb076ga81eadd45e3b" version="1">One-Star Citation</content>
+    <content contentuid="h04d20e7dg49a0g5ddagb792g8a3732e914bf" version="1">File a review so specific it reads like a summons. Costs an action and 1 Junk. A target within 9 m takes 2d8 Psychic damage and makes a Wisdom saving throw; on a failure it is Baned for 2 turns (subtracts 1d4 from attack rolls and saving throws). The food was fine. The atmosphere was a lot. The photo is attached.</content>
+    <content contentuid="h638cbc59gcabfg5350gb967g1c729c4efb4a" version="1">Bakersfield Tule Fog</content>
+    <content contentuid="h61e67dd0g1d22g51bfg80d3g00b3ed953832" version="1">Let the Central Valley exhale. Costs an action; once per short rest. Choose a point within 9 m: a 4 m radius cloud of fog heavily obscures the area for 2 turns. Visibility is one car length, and everyone is still doing seventy-five.</content>
     <content contentuid="h2978a6a4g747cg5c3fg8986g79a0712a4d95" version="1">Scrounger</content>
     <content contentuid="h1564b50bg20ddg52e9g9531g0da91a4844f5" version="1">Advantage on Investigation and Survival ability checks. You know what is useful, what is edible, and which one matters today.</content>
     <content contentuid="h4c710478gc888g55d6g8aa6g30da3e15fb3c" version="1">Fixer</content>
@@ -307,6 +319,8 @@
     <content contentuid="h42ffe058g3cb9g5c0cgbfb6ga51f0f45f4a5" version="1">Advantage on Performance and Insight ability checks. You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.</content>
     <content contentuid="h70e24206g2369g53dbga4fag12aebaee3600" version="1">Squeegee Technician</content>
     <content contentuid="h2157f7cag061dg5435g9000g02168ee34f31" version="1">Advantage on Intimidation and Insight ability checks. You wipe the windshield first and discuss the fee afterwards. A single look says you know what the driver is thinking about, and what they will pay.</content>
+    <content contentuid="h6f3e1c25g426cg5e92g8aa4gca715db6d6a8" version="1">Notary</content>
+    <content contentuid="h91dccff1g1e6bg5904g873cgca2fd50753ad" version="1">Advantage on Investigation and Persuasion ability checks. Every document looks official with a stamp, and you have found a stamp. Nobody has asked what it says.</content>
     <content contentuid="hd3a698f9g518ag55fbga575g96c5ef775d10" version="1">Street Trade</content>
     <content contentuid="hd5246a57g61d2g510aga1b6g8cbd5045430a" version="1">Choose one exploration trade. Each grants advantage on two ability checks. Respec to change your choice.</content>
     <content contentuid="h14e560a0gd206g59abga4a9g11bca1568e08" version="1">Hoarder</content>
@@ -319,6 +333,8 @@
     <content contentuid="h8d070839gd16ag5657gbd9dg2d7eb34e2bad" version="1">+3 bonus to Initiative. You have spent years sleeping with one eye open. Nobody catches you flat-footed.</content>
     <content contentuid="h42eab610g897fg57d6gaedag6dd535894a2c" version="1">Cardboard Insulator</content>
     <content contentuid="h2310581dg5556g5101gae60g3979e11666a9" version="1">Resistance to Cold damage. Three layers of flattened boxes is a building code if you squint.</content>
+    <content contentuid="h3c8a2fe6gece5g5037g8357g4ec0aa23fa73" version="1">Tinfoil Deflector</content>
+    <content contentuid="hf7b73ee9g295cg5ce2g8bb9g24c95027fd45" version="1">Resistance to Psychic damage. Three layers of foil under a ball cap. The signals are still out there, but they arrive politely now.</content>
     <content contentuid="hb488f482ge77bg51d1g85cdgacfdcba0b537" version="1">Junk Doctrine</content>
     <content contentuid="h44544886gad82g5325gaa5dga57c0370747d" version="1">Choose more Junk, better protection or faster movement. Respec to change your doctrine.</content>
 </contentList>

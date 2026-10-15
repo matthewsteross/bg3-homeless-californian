@@ -13,6 +13,7 @@ def generate_doctrines(public_dir, add_loca, get_guid):
         ('HC_JunkDoctrine_Runner', 'Runner', '+3 m movement speed. You have never missed a train you were already chasing.', 'ActionResource(Movement,3,0)'),
         ('HC_JunkDoctrine_Twitchy', 'Twitchy', '+3 bonus to Initiative. You have spent years sleeping with one eye open. Nobody catches you flat-footed.', 'Initiative(3)'),
         ('HC_JunkDoctrine_CardboardInsulator', 'Cardboard Insulator', 'Resistance to Cold damage. Three layers of flattened boxes is a building code if you squint.', 'Resistance(Cold,Resistant)'),
+        ('HC_JunkDoctrine_TinfoilDeflector', 'Tinfoil Deflector', 'Resistance to Psychic damage. Three layers of foil under a ball cap. The signals are still out there, but they arrive politely now.', 'Resistance(Psychic,Resistant)'),
     ]
     blocks = []
     icon_spells = {'HC_JunkDoctrine_CardboardInsulator': ('HC_Shout_CardboardInsulation', 'Spell_Abjuration_ProtectionFromEnergy_Cold')}
