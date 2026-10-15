@@ -108,13 +108,13 @@ def generate_round2(public_dir, add_loca, get_guid):
               TooltipStatusApply='ApplyStatus(BANE,100,2)')),
         (TULE_FOG, 'Target_FogCloud', 'Bakersfield Tule Fog',
          'Let the Central Valley exhale. Costs an action; once per short rest. '
-         'Choose a point within 9 m: a 4 m radius cloud of fog heavily obscures the area for 2 turns. '
+         'Choose a point within 9 m: a 4.5 m radius cloud of fog heavily obscures the area for up to 10 turns. Requires concentration. '
          'Visibility is one car length, and everyone is still doing seventy-five.',
          dict(UseCosts='ActionPoint:1', Cooldown='OncePerShortRest', TargetRadius='9', AreaRadius='4',
               Icon='Spell_Conjuration_FogCloud',
-              # Donor flags minus IsConcentration: a 2-turn racial cloud should not eat the caster's concentration.
-              SpellFlags='IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold',
-              SpellProperties='GROUND:CreateSurface(4,2,FogCloud)')),
+              # Same mechanics as vanilla Fog Cloud (confirmed in game 2026-10-15: the 2-turn non-concentration version produced no visible fog).
+              SpellFlags='IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold',
+              SpellProperties='GROUND:CreateSurface(4.5,10,FogCloud,true)')),
     ]
     blocks = []
     for name, donor, title, description, overrides in specs:

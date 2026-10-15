@@ -200,12 +200,12 @@ class RoundTwoTests(unittest.TestCase):
         self.assertEqual(d['SpellSuccess'], 'ApplyStatus(BANE,100,2)')
         self.assertIn('BANE', self.vanilla_stats)
 
-    def test_tule_fog_is_a_two_turn_four_metre_cloud_without_concentration(self):
+    def test_tule_fog_matches_vanilla_fog_cloud_mechanics(self):
         d = self.spells['HC_Target_TuleFog']['data']
         self.assertEqual(d['TargetRadius'], '9')
         self.assertEqual(d['AreaRadius'], '4')
-        self.assertEqual(d['SpellProperties'], 'GROUND:CreateSurface(4,2,FogCloud)')
-        self.assertNotIn('IsConcentration', d['SpellFlags'].split(';'))
+        self.assertEqual(d['SpellProperties'], 'GROUND:CreateSurface(4.5,10,FogCloud,true)')
+        self.assertIn('IsConcentration', d['SpellFlags'].split(';'))
 
     def test_no_script_model_reaction_or_junk_refund_features(self):
         for name in SPELLS + ['HC_DECAT_EXHAUST', NOTARY, TINFOIL]:
@@ -244,7 +244,7 @@ class RoundTwoTests(unittest.TestCase):
                    'HC_Target_SprinklerViolation': ['9 m', '2 m', '2 turns', '3 turns', '1 Junk'],
                    'HC_Target_HOVLane': ['12 m', '1 Junk'],
                    'HC_Target_OneStarCitation': ['2d8 Psychic', '9 m', '2 turns', '1d4', '1 Junk'],
-                   'HC_Target_TuleFog': ['9 m', '4 m', '2 turns']}
+                   'HC_Target_TuleFog': ['9 m', '4.5 m', '10 turns']}
         for name, parts in numbers.items():
             text = self.description(self.spells[name])
             for part in parts:
