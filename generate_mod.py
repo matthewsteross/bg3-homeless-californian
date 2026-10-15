@@ -36,6 +36,9 @@ SUBCLASS_VENICE_TABLE_UUID = get_guid("Subclass_Venice_Table")
 SUBCLASS_BART_UUID = get_guid("Subclass_BART")
 SUBCLASS_BART_TABLE_UUID = get_guid("Subclass_BART_Table")
 
+SUBCLASS_OVERPASS_UUID = get_guid("Subclass_Overpass")
+SUBCLASS_OVERPASS_TABLE_UUID = get_guid("Subclass_Overpass_Table")
+
 # Class Spell Lists
 SPELLLIST_LVL1 = get_guid("SpellList_Lvl1")
 SPELLLIST_LVL2 = get_guid("SpellList_Lvl2")
@@ -131,6 +134,9 @@ h_sub_venice_desc = add_loca("sub_venice_desc", "A ferocious close-quarters pugi
 
 h_sub_bart_name = add_loca("sub_bart_name", "BART Platform Menace")
 h_sub_bart_desc = add_loca("sub_bart_desc", "An erratic street phantom who slips through turnstiles and spatial dimensions, never quite where the enemy expects.")
+
+h_sub_overpass_name = add_loca("sub_overpass_name", "Overpass Riverbed Dweller")
+h_sub_overpass_desc = add_loca("sub_overpass_desc", "A survivalist who keeps house in concrete flood channels and under freeway overpasses. The ground is always doing something. You are used to it.")
 
 # Spells & Actions - Class
 h_sling_poop_name = add_loca("sling_poop_name", "Sling Poop")
@@ -552,6 +558,29 @@ def generate_class_descriptions_lsx():
                     <attribute id="SpellCastingAbility" type="uint8" value="3"/>
                     <attribute id="UUID" type="guid" value="{SUBCLASS_BART_UUID}"/>
                 </node>
+
+                <!-- Subclass 4: Overpass Riverbed Dweller -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="14"/>
+                    <attribute id="CanLearnSpells" type="bool" value="false"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="{h_sub_overpass_desc}" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="{h_sub_overpass_name}" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="OverpassRiverbedDweller"/>
+                    <attribute id="ParentGuid" type="guid" value="{CLASS_UUID}"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="{SUBCLASS_OVERPASS_TABLE_UUID}"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="3"/>
+                    <attribute id="UUID" type="guid" value="{SUBCLASS_OVERPASS_UUID}"/>
+                </node>
             </children>
         </node>
     </region>
@@ -806,6 +835,9 @@ def generate_progressions_lsx():
                                 <node id="SubClass">
                                     <attribute id="Object" type="guid" value="{SUBCLASS_BART_UUID}"/>
                                 </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="{SUBCLASS_OVERPASS_UUID}"/>
+                                </node>
                             </children>
                         </node>""")
     prog("Prog_Homeless_Lvl4", CLS, 4, T, improvement=True, selectors=f"AddSpells({SPELLLIST_LVL4})")
@@ -839,9 +871,17 @@ def generate_progressions_lsx():
          passives="Evasion;UncannyDodge")
     prog("Prog_BART_L10", "BARTPlatformMenace", 10, SUBCLASS_BART_TABLE_UUID, ptype=1,
          passives="LastTrainPhantom", selectors=f"AddSpells({SPELLLIST_BART_L10})")
+
+    prog("Prog_Overpass_L3", "OverpassRiverbedDweller", 3, SUBCLASS_OVERPASS_TABLE_UUID, ptype=1,
+         passives="HC_ConcreteBankTraction")
+    prog("Prog_Overpass_L6", "OverpassRiverbedDweller", 6, SUBCLASS_OVERPASS_TABLE_UUID, ptype=1,
+         passives="HC_UnderpassClimateControl")
+    prog("Prog_Overpass_L10", "OverpassRiverbedDweller", 10, SUBCLASS_OVERPASS_TABLE_UUID, ptype=1,
+         passives="HC_RebarAnchor")
     for category, table in [('TenderloinBiohazard', SUBCLASS_TENDERLOIN_TABLE_UUID),
                             ('VeniceBoardwalkBrawler', SUBCLASS_VENICE_TABLE_UUID),
-                            ('BARTPlatformMenace', SUBCLASS_BART_TABLE_UUID)]:
+                            ('BARTPlatformMenace', SUBCLASS_BART_TABLE_UUID),
+                            ('OverpassRiverbedDweller', SUBCLASS_OVERPASS_TABLE_UUID)]:
         prog(f'Prog_{category}_Lvl12', category, 12, table, ptype=1)
 
     # --- RACIAL PROGRESSIONS (Type 2) ---
@@ -2526,6 +2566,11 @@ def generate_local_expansion():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     capstone = generate_capstone(PUBLIC_DIR, add_loca, get_guid)
     for category, levels in capstone['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_overpass import generate_overpass
+    overpass = generate_overpass(PUBLIC_DIR, add_loca, get_guid)
+    for category, levels in overpass['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     from hc_hustle import generate_hustle

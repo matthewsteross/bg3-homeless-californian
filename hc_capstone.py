@@ -38,6 +38,7 @@ def generate_capstone(public_dir, add_loca, get_guid):
             'TenderloinBiohazard': {12: ['HC_Shout_SquattersRights_Tenderloin']},
             'VeniceBoardwalkBrawler': {12: ['HC_Shout_SquattersRights_Venice']},
             'BARTPlatformMenace': {12: ['HC_Shout_SquattersRights_BART']},
+            'OverpassRiverbedDweller': {12: ['HC_Shout_SquattersRights_Overpass']},
         },
         'resource_increases': {}
     }
@@ -133,6 +134,24 @@ def generate_capstone(public_dir, add_loca, get_guid):
         'You command the transit interchange for 3 turns. Gain +1 Reaction and +4.5 m movement speed. Unlocks Platform Rescue to swap positions with willing allies, and Wrong Platform Express to swap enemies using a Bonus Action.'
     ))
     status_blocks.append(emit('HC_SQUATTERS_BART', 'StatusData', fields_bt))
+
+    # Overpass Status: Spillway Sovereignty (3 turns)
+    # Deliberately simple: plain AC and Movement boosts only, NO AuraStatuses. The mud is laid by the
+    # activation shout's GROUND:CreateSurface, not by this status.
+    fields_ov = dict(
+        StatusType='BOOST',
+        StackId='HC_SPILLWAY_SOVEREIGN',
+        StackType='Overwrite',
+        TickType='EndTurn',
+        Icon='Spell_Abjuration_Stoneskin',
+        Boosts='AC(2);ActionResource(Movement,3,0)'
+    )
+    fields_ov.update(loca(
+        'HC_SPILLWAY_SOVEREIGN',
+        "Squatter's Rights: Spillway Sovereignty",
+        'You hold the spillway for 3 turns. +2 Armour Class and +3 m movement speed.'
+    ))
+    status_blocks.append(emit('HC_SPILLWAY_SOVEREIGN', 'StatusData', fields_ov))
 
     (stats_dir / 'HC_Status_Capstone.txt').write_text('\n'.join(status_blocks), encoding='utf-8')
 
@@ -249,6 +268,21 @@ def generate_capstone(public_dir, add_loca, get_guid):
         TooltipStatusApply='ApplyStatus(HC_SQUATTERS_BART,100,3)'
     )
 
+    # Overpass Activation Shout
+    # Same shape as the three above: Shout_SecondWind donor, Bonus Action, OncePerRest, full Junk restore.
+    # Mud is laid with the same GROUND:CreateSurface precedent as I Was Here First / Moving Day.
+    spell(
+        'HC_Shout_SquattersRights_Overpass',
+        'Shout_SecondWind',
+        "Squatter's Rights: Spillway Sovereignty",
+        "Bonus Action: Declare the spillway yours for 3 turns, and restore all Junk. Gain +2 AC and +3 m movement speed, and the ground within 4 m turns to mud (difficult terrain) for 3 turns. Once per Long Rest. The water rises, the water falls, and you are still here.",
+        UseCosts='BonusActionPoint:1',
+        Cooldown='OncePerRest',
+        Icon='Spell_Abjuration_Stoneskin',
+        SpellProperties='ApplyStatus(HC_SPILLWAY_SOVEREIGN,100,3);RestoreResource(HC_Junk,100%,0);GROUND:CreateSurface(4,3,Mud)',
+        TooltipStatusApply='ApplyStatus(HC_SPILLWAY_SOVEREIGN,100,3)'
+    )
+
     # BART Rescue Tool: Platform Rescue
     # Consensual swap with a willing ally within 12 m.
     # HasHighGroundRangeExtension removed to enforce exact 12 m boundary.
@@ -301,6 +335,7 @@ def generate_capstone(public_dir, add_loca, get_guid):
             'TenderloinBiohazard': {12: ['HC_Shout_SquattersRights_Tenderloin']},
             'VeniceBoardwalkBrawler': {12: ['HC_Shout_SquattersRights_Venice']},
             'BARTPlatformMenace': {12: ['HC_Shout_SquattersRights_BART']},
+            'OverpassRiverbedDweller': {12: ['HC_Shout_SquattersRights_Overpass']},
         },
         'resource_increases': {}
     }

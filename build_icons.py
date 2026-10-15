@@ -192,7 +192,8 @@ CLASS_IDENTIFIERS = [
     "HomelessCalifornian",
     "TenderloinBiohazard",
     "VeniceBoardwalkBrawler",
-    "BARTPlatformMenace"
+    "BARTPlatformMenace",
+    "OverpassRiverbedDweller"
 ]
 
 RACE_IDENTIFIERS = {

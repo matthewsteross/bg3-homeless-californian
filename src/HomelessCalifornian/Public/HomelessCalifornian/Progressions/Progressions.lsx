@@ -54,6 +54,9 @@
                                 <node id="SubClass">
                                     <attribute id="Object" type="guid" value="d93153e9-72b5-58cf-88cf-6e9d53a9e9c5"/>
                                 </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="ca8a78ce-4da6-59c7-9f6b-a839e06e4840"/>
+                                </node>
                             </children>
                         </node>
                     </children>
@@ -222,6 +225,32 @@
                     <attribute id="UUID" type="guid" value="e4d2f7c2-a679-54c0-9132-c42efbb24f58"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(416267bb-fc15-5cfb-acb2-c5c7457c5dcb)"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>
+                    <attribute id="PassivesAdded" type="LSString" value="HC_ConcreteBankTraction"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="7fd23ac1-acdc-5d0a-ae6c-3dd2967b447e"/>
+                    <attribute id="UUID" type="guid" value="4f17b84a-4eba-5112-ac6c-f235e7ea66c0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(a904b84f-e0a7-56e1-bd77-6111e34c1c26)"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>
+                    <attribute id="PassivesAdded" type="LSString" value="HC_UnderpassClimateControl"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="7fd23ac1-acdc-5d0a-ae6c-3dd2967b447e"/>
+                    <attribute id="UUID" type="guid" value="10f9f8d2-5a0b-5ba9-9b3a-8470e1efc82e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>
+                    <attribute id="PassivesAdded" type="LSString" value="HC_RebarAnchor"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="7fd23ac1-acdc-5d0a-ae6c-3dd2967b447e"/>
+                    <attribute id="UUID" type="guid" value="6fd87e09-70a9-52bc-9134-4b885fcb52ab"/>
+                </node>
+                <node id="Progression">
                     <attribute id="Selectors" type="LSString" value="AddSpells(ad40ad38-2e82-59f1-8899-1a37b2d4be7d)"/>
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
@@ -244,6 +273,14 @@
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="TableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
                     <attribute id="UUID" type="guid" value="95f665c6-ae2a-568c-8be3-106bee2d359d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(64194ab6-067a-53c3-aa17-9868a33d4afb)"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="7fd23ac1-acdc-5d0a-ae6c-3dd2967b447e"/>
+                    <attribute id="UUID" type="guid" value="f62859a8-d9e4-5b71-a125-8cb1a8821ba6"/>
                 </node>
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="false"/>

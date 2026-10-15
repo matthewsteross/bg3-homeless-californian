@@ -87,6 +87,26 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/OverpassRiverbedDweller.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="300" />
+									<attribute id="mipcount" type="int8" value="9" />
+									<attribute id="w" type="int16" value="300" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ClassIcons/hotbar/OverpassRiverbedDweller.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="112" />
+									<attribute id="mipcount" type="int8" value="7" />
+									<attribute id="w" type="int16" value="112" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/CC/icons_races/Californian.png" />
 							<children>
 								<node id="entries">

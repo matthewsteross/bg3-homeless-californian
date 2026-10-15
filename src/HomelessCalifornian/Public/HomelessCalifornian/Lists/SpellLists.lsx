@@ -197,6 +197,18 @@
                     <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_BART"/>
                     <attribute id="UUID" type="guid" value="7dac62a1-cbb9-5258-9fc7-5fde5d8a8c44"/>
                 </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Overpass"/>
+                    <attribute id="UUID" type="guid" value="64194ab6-067a-53c3-aa17-9868a33d4afb"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Zone_StormDrainFlashFlood;HC_Shout_BlueTarpLeanTo"/>
+                    <attribute id="UUID" type="guid" value="416267bb-fc15-5cfb-acb2-c5c7457c5dcb"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_CulvertSiphon"/>
+                    <attribute id="UUID" type="guid" value="a904b84f-e0a7-56e1-bd77-6111e34c1c26"/>
+                </node>
             </children>
         </node>
     </region>

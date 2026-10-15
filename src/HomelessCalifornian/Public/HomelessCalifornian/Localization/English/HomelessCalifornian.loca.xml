@@ -8,6 +8,8 @@
     <content contentuid="h6c56a0e5g0556g5744ga807g5ac9630a88ca" version="1">A ferocious close-quarters pugilist specializing in improvised shivs, reckless flurries, and chaotic shopping cart charges.</content>
     <content contentuid="hce94c9c4g74e7g5b94gb59eg093f3c71383e" version="1">BART Platform Menace</content>
     <content contentuid="hf4758c0bg1320g5783g897bga0499438ce9f" version="1">An erratic street phantom who slips through turnstiles and spatial dimensions, never quite where the enemy expects.</content>
+    <content contentuid="hb3b3ed13gad36g58d7g9136gbfa13843c0e9" version="1">Overpass Riverbed Dweller</content>
+    <content contentuid="h3333b0c5g764dg5e0egb437gcd4cd4648480" version="1">A survivalist who keeps house in concrete flood channels and under freeway overpasses. The ground is always doing something. You are used to it.</content>
     <content contentuid="h9603e071ga549g5726gbb4ag2d14032dff4c" version="1">Sling Poop</content>
     <content contentuid="h0a3da2ebg2d05g5a59gb669gb1cf0e6bffea" version="1">Hurl a handful of raw biological waste at a target. On a hit, deals 1d10 + Constitution Bludgeoning (2d10 at level 5, 3d10 at level 10) and 1d6 Poison damage, leaves a puddle of filth, and inflicts Fecal Stench for 2 turns. Can be used as often as you like.</content>
     <content contentuid="had359e51g6f8dg58c4gbf49g6b247ff31b9d" version="1">Sling Chunky Poop</content>
@@ -229,6 +231,8 @@
     <content contentuid="h209cb897gc3c0g5292g90a6g08baacb9d90d" version="1">Holding the property by force for 3 turns. You gain advantage on attack rolls, and can strike with an Emergency Chair-Leg Shiv using a Bonus Action once per turn without preparing furniture first.</content>
     <content contentuid="h69b86776gedb2g5a70ga0c8ge932df6fc671" version="1">Squatter's Rights: Last Train Out</content>
     <content contentuid="he732c457gdbf9g52fcg8a0dg2cee25483387" version="1">You command the transit interchange for 3 turns. Gain +1 Reaction and +4.5 m movement speed. Unlocks Platform Rescue to swap positions with willing allies, and Wrong Platform Express to swap enemies using a Bonus Action.</content>
+    <content contentuid="hf020e968g2132g5629ga73cg43471860805f" version="1">Squatter's Rights: Spillway Sovereignty</content>
+    <content contentuid="h9bc93b98g682eg5a68g958fg75fdbb5291c9" version="1">You hold the spillway for 3 turns. +2 Armour Class and +3 m movement speed.</content>
     <content contentuid="h66a6e30bga3bbg5c67gab86g56e75e94fc9c" version="1">Squatter's Rights: Condemned Block</content>
     <content contentuid="h7102aeedgd025g5c14g8813gbaa1dd64a513" version="1">Bonus Action: Claim this territory as a declared biohazard zone for 3 turns, and restore all Junk. Radiates Fecal Stench to all enemies within 6 m, protects concentration, and unlocks Condemn. Once per Long Rest. Possession is nine-tenths of the law. You have been possessing since Tuesday.</content>
     <content contentuid="hadfba5bdg07e9g57f8gb962g68df718093d8" version="1">Condemn Block</content>
@@ -239,10 +243,26 @@
     <content contentuid="hab93e76eg66cag5a96ga0edg87efd8e324a7" version="1">Bonus Action melee weapon attack: 2d6 + Constitution modifier Piercing damage. Ready-to-use splinter weapon usable once per turn while Eviction Defense is active without needing to smash furniture first.</content>
     <content contentuid="hf34f08ebgfc3dg5392g83e6gdc004520c1ce" version="1">Squatter's Rights: Last Train Out</content>
     <content contentuid="h2a658dbfgc19cg5b0bga83cgb9b9fbd4146e" version="1">Bonus Action: Establish undisputed control of the transit hub for 3 turns, and restore all Junk. Gain +1 Reaction, +4.5 m movement speed, and unlock Platform Rescue (allied position swap) and Wrong Platform Express (bonus-action enemy position swap). Once per Long Rest. Stand clear of the closing doors.</content>
+    <content contentuid="hbabdec34g163ag5810gbb78gef381ecba628" version="1">Squatter's Rights: Spillway Sovereignty</content>
+    <content contentuid="h0fe1058egfb27g5b21g9a82g2766c0d11853" version="1">Bonus Action: Declare the spillway yours for 3 turns, and restore all Junk. Gain +2 AC and +3 m movement speed, and the ground within 4 m turns to mud (difficult terrain) for 3 turns. Once per Long Rest. The water rises, the water falls, and you are still here.</content>
     <content contentuid="hc9c990abgb146g528agbd2bg58dd298bb701" version="1">Platform Rescue</content>
     <content contentuid="ha86ea2edgf10eg5f10gb010ge9d834ef1c08" version="1">Bonus Action: Swap positions with a willing ally within 12 m. Costs 1 Bonus Action and 1 Junk. Pull an overextended partner back to safety or slingshot them into position.</content>
     <content contentuid="h10fc7b1fgc8e5g51ddg956dg4a62eb5bfd3e" version="1">Wrong Platform Express</content>
     <content contentuid="ha36a2582g2e72g5737g8818gf3f811c3ef40" version="1">Bonus Action: Target an enemy within 9 m. On a failed Wisdom saving throw, instantly swap positions with it. Costs 1 Bonus Action and 1 Junk; once per turn while Last Train Out is active.</content>
+    <content contentuid="h8999ac50g1bbfg508cgb49egf3438c1dd93f" version="1">Concrete Bank Traction</content>
+    <content contentuid="hc5b0401dg775fg546cg8240gd4855a2e4a16" version="1">Immune to being knocked Prone and to difficult terrain. Standing on a 40-degree slab of wet concrete is a skill, and you have the certificate.</content>
+    <content contentuid="hfd1a99e2g8a0ag507dga6c4g661b9dab3732" version="1">Underpass Climate Control</content>
+    <content contentuid="hb2150e32ga45dg531fg8815g675a6c2a1aac" version="1">Resistance to Fire and Cold damage. The underpass is eleven degrees cooler in summer and eleven degrees warmer in winter. Nobody knows why.</content>
+    <content contentuid="h37b3e6e4gcf87g53bfgaa5cg7cbc0b9a0b0f" version="1">Rebar Anchor</content>
+    <content contentuid="hb0930b3egc1a5g5523g970eg54bdfa18c6c4" version="1">+1 Armour Class and advantage on Strength saving throws. They tried to move you along. The rebar disagreed.</content>
+    <content contentuid="hbfcc4620gd093g5dc2g8f6fgd6cda529a973" version="1">Blue Tarp Cover</content>
+    <content contentuid="h22d18b8bgfdf8g5885g93a9g20651ac4e81b" version="1">+2 Armour Class and advantage on Dexterity saving throws. It is waterproof in the way that matters.</content>
+    <content contentuid="h655b4a0bgdbfbg5519g81a7ge02edcd16ca7" version="1">Storm Drain Flash Flood</content>
+    <content contentuid="hae759a76g80fcg51b6g8cb2g7c7419b76b24" version="1">Open the storm drain and let the municipality explain itself. Costs an action and 1 Junk; once per short rest. Creatures in a 9 m line make a Strength saving throw, taking 2d8 + Constitution modifier Bludgeoning damage and falling Prone on a failure, or half damage on a success. Leaves standing water for 2 turns. The sign said do not enter during rain. You were already in the channel.</content>
+    <content contentuid="hfa7e620dg7604g592cg8e94g97b4641464c9" version="1">Blue Tarp Lean-To</content>
+    <content contentuid="h4575ef08ga102g575fga36dg160015f14ab4" version="1">Rig a blue tarp over everyone within 3 m. Costs a bonus action and 1 Junk; once per short rest. You and your allies gain +2 AC and advantage on Dexterity saving throws for 2 turns, and fire on the ground is doused. It has held up through three storms and one very determined raccoon.</content>
+    <content contentuid="hc8088c17gb719g5a90gbb73gd1fc32ac84a0" version="1">Culvert Siphon</content>
+    <content contentuid="he1e1142bg78e2g5740g877ag8b0e6401c68c" version="1">Draw clean runoff from the culvert and pour it over a friend. Costs an action and 1 Junk; once per short rest. An ally or yourself within 9 m regains 2d6 + Constitution modifier Hit Points, stops Burning, and the ground is doused. It is mostly water. Mostly.</content>
     <content contentuid="hce74994cgc915g577egafd8g80586b3d206d" version="1">Homeless Fatigue</content>
     <content contentuid="h17e29a56g0935g53f8g8545g2ac5ede20b3f" version="1">They have stopped seeing you, and honestly everything else too. Attack rolls against them have advantage.</content>
     <content contentuid="h00639e31g7accg532fg9ed8g8ef33dad4fc5" version="1">Trapped in the Invisible Box</content>

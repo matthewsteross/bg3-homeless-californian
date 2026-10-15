@@ -95,6 +95,29 @@
                     <attribute id="SpellCastingAbility" type="uint8" value="3"/>
                     <attribute id="UUID" type="guid" value="d93153e9-72b5-58cf-88cf-6e9d53a9e9c5"/>
                 </node>
+
+                <!-- Subclass 4: Overpass Riverbed Dweller -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="14"/>
+                    <attribute id="CanLearnSpells" type="bool" value="false"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Barbarian"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h3333b0c5g764dg5e0egb437gcd4cd4648480" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hb3b3ed13gad36g58d7g9136gbfa13843c0e9" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MulticlassSpellcasterModifier" type="double" value="0"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="OverpassRiverbedDweller"/>
+                    <attribute id="ParentGuid" type="guid" value="c7d85950-3f60-5d6f-bd71-4fc37705a24d"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="7fd23ac1-acdc-5d0a-ae6c-3dd2967b447e"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="3"/>
+                    <attribute id="UUID" type="guid" value="ca8a78ce-4da6-59c7-9f6b-a839e06e4840"/>
+                </node>
             </children>
         </node>
     </region>
