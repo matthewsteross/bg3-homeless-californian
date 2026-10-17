@@ -104,6 +104,20 @@ SPELL_ICON_KEYS = {
     'HC_Target_SeriesBOffsiteTrustFall': 'Spell_SeriesBOffsiteTrustFall',
     'HC_Target_HOABeigePaintDenial': 'Spell_HOABeigePaintDenial',
     'HC_Shout_NextdoorLostCoyoteThread': 'Spell_NextdoorLostCoyoteThread',
+    # Round 10 (art pending; vanilla fallbacks until the PNGs exist)
+    'HC_Target_HostileArchitectureBench': 'Spell_HostileArchitectureBench',
+    'HC_Target_SparkingUtilityPole': 'Spell_SparkingUtilityPole',
+    'HC_Target_EvictedSpinBike': 'Spell_EvictedSpinBike',
+    'HC_Target_SidewalkCoolerBonfire': 'Spell_SidewalkCoolerBonfire',
+    'HC_Target_CaltransConeLabyrinth': 'Spell_CaltransConeLabyrinth',
+    'HC_Shout_InNOutAnimalStyleArgument': 'Spell_InNOutAnimalStyle',
+    'HC_Target_CaltrainHornGradeCrossing': 'Spell_CaltrainHorn',
+    'HC_Target_SixtyDayRentIncrease': 'Spell_SixtyDayRentIncrease',
+    'HC_Shout_CaltransVestRequisition': 'Spell_CaltransVest',
+    'HC_Target_StreetSweepCitation': 'Spell_StreetSweepCitation',
+    'HC_Target_LaminatedPoolHoursSign': 'Spell_PoolHoursSign',
+    'HC_Target_FarmersMarketPeachDenial': 'Spell_PeachParkingDenial',
+    'HC_Target_OatMilkLineTaqueria': 'Spell_OatMilkLine',
 }
 
 def icon_for_spell(spell, fallback):

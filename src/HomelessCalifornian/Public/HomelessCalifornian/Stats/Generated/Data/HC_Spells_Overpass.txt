@@ -31,6 +31,8 @@ data "SurfaceGrowStep" "5"
 data "SurfaceGrowInterval" "10"
 data "DisplayName" "h655b4a0bgdbfbg5519g81a7ge02edcd16ca7;1"
 data "Description" "hae759a76g80fcg51b6g8cb2g7c7419b76b24;1"
+data "CastSound" "CrSpell_Cast_Djinni_Inhale"
+data "TargetSound" "CrSpell_Impact_Myrmidon_Earth_MudSlap"
 
 new entry "HC_Shout_BlueTarpLeanTo"
 type "SpellData"
@@ -89,6 +91,7 @@ data "SpellAnimation" "414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-4
 data "TargetConditions" "Character() and (Ally() or Self()) and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')"
 data "DisplayName" "hc8088c17gb719g5a90gbb73gd1fc32ac84a0;1"
 data "Description" "he1e1142bg78e2g5740g877ag8b0e6401c68c;1"
+data "TargetSound" "Spell_Impact_Healing_HealerKitHeal_L4to5"
 
 new entry "HC_Target_DrainageDitchDigIn"
 type "SpellData"

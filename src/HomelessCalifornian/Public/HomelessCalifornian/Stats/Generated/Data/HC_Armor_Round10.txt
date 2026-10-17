@@ -1,0 +1,8 @@
+new entry "HC_ARM_CaltransSafetyVest"
+type "Armor"
+using "ARM_StuddedLeather_Body"
+data "RootTemplate" "16856da6-b490-53cb-afee-a82592d6e9ec"
+data "Rarity" "Rare"
+data "ValueOverride" "0"
+data "Boosts" "Skill(Deception,1)"
+data "PassivesOnEquip" "HC_HiVisAuthority"

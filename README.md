@@ -25,17 +25,17 @@ grants on a real Homeless Californian character, tarp facing and collision, the 
 Only level 12 and the cart had been confirmed by hand earlier. The Nexus page is live; the in-game (mod.io)
 listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
-**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4 to 9 (50 spells, 2 Street Trades, 2 Junk Doctrines,
-4 contraband items and a pile of statuses), plus five more custom 3D props (a Caltrans "Lane Closed Ahead" barricade, a Pop-Up Encampment Tent, a Dockless Scooter Graveyard,
-a Broken-Down Robotaxi and a Tipped-Over Festival Porta-Potty, each with its own spell), are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
-play-tested**. They are listed in [their own section](#source-only-rounds-4-9-not-in-the-v040-download-not-play-tested). Nothing in the
+**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4 to 10 (50 spells in rounds 4 to 9, 2 Street Trades, 2 Junk Doctrines,
+4 contraband items and a pile of statuses; round 10 adds 9 spells, a rare armour item and a passive), plus nine custom 3D props (a Caltrans "Lane Closed Ahead" barricade, a Pop-Up Encampment Tent, a Dockless Scooter Graveyard,
+a Broken-Down Robotaxi, a Tipped-Over Festival Porta-Potty, and four round 10 props: a Hostile Architecture Spike Bench, a Sparking Utility Pole, an Evicted Studio Spin Bike and a Sidewalk Cooler Bonfire, each with its own spell), are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
+play-tested**. They are listed in [their own section](#source-only-rounds-4-10-not-in-the-v040-download-not-play-tested). Nothing in the
 public download or on Nexus has changed.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
 available spells. Full effect, progression and compatibility testing continues.
-The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too, and so are the five source-only props, the barricade, the tent, the scooter graveyard, the robotaxi and the porta-potty; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
+The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too, and so are the five older source-only props, the barricade, the tent, the scooter graveyard, the robotaxi and the porta-potty (the four round 10 props are Blender-built); see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
 
 This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
@@ -97,7 +97,7 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 240 on the current source, which includes the source-only rounds 4-9 and the five source-only props). The saved original
+(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 322 on the current source, which includes the source-only rounds 4-10 and the nine source-only props). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
@@ -216,15 +216,15 @@ Of the round 2 additions, the donors' animations and sound/visual effects are in
 
 ---
 
-## Source-only rounds 4-9 (not in the v0.4.0 download, not play-tested)
+## Source-only rounds 4-10 (not in the v0.4.0 download, not play-tested)
 
 **Read this first:** everything in this section is in the repository and in the locally built `dist/HomelessCalifornian.pak`, and it is
 **not** in the public v0.4.0 download or the Nexus file. You cannot get it by downloading the release. **Nobody has played any of it.**
-The only checking so far is file-level: 240 unit tests and the pak validator pass on the current source, which proves the
+The only checking so far is file-level: 322 unit tests and the pak validator pass on the current source, which proves the
 files agree with each other and with vanilla data, not that a single spell does what it says. Numbers are copied from the generated game
 data and the localization text.
 
-Two honesty notes. First, the 28 spells from rounds 5, 6 and 7, the 10 round 8 spells, the 10 round 9 spells and the five prop spells (barricade, tent, scooters, robotaxi and porta-potty) currently use **placeholder vanilla icons** (the Gemini art for them has not
+Two honesty notes. First, the 28 spells from rounds 5, 6 and 7, the 10 round 8 spells, the 10 round 9 spells, the nine round 10 spells, the four round 10 prop spells and the five earlier prop spells (barricade, tent, scooters, robotaxi and porta-potty) currently use **placeholder vanilla icons** (the Gemini art for them has not
 been generated yet; the icon keys are registered, so the art will be picked up when it exists); only Freeway Directions and Permit Pending from round 4 have custom icons. Second, most of these are written as
 "failed save = full damage plus the nasty status, successful save = half damage", and the status duration, surface and Prone behaviour is
 untested. Expect a few to be wrong the first time they meet an actual goblin.
@@ -232,7 +232,7 @@ untested. Expect a few to be wrong the first time they meet an actual goblin.
 Most need a **new character or a respec** to receive the grants. All are once per short rest unless the table says otherwise, and "1 Junk" is
 the class resource.
 
-### Spells (50 in rounds 4-9, plus the five prop spells below)
+### Spells (50 in rounds 4-9, plus nine in round 10; the prop spells are in the props section below)
 
 | Spell | Where granted | Intended behaviour |
 |---|---|---|
@@ -293,6 +293,17 @@ the class resource.
 | Series-B Offsite Trust Fall Onto Asphalt | Siliconite 3 | Action (no Junk), melee spell attack at 1.5 m: `2d8` Bludgeoning and Prone. You get Offsite Bounce-Back (advantage on attack rolls) for 2 turns; it is written as a cast-time effect on you, so it may apply even if the attack misses (unchecked) |
 | HOA Architectural Committee Beige-Paint Denial | Inland Emperor 3 | Action (no Junk), 9 m. Wisdom save or `2d8` Psychic and Frightened for 2 turns; half damage on a success |
 | Nextdoor Lost-Coyote Thread, 214 Comments Deep | Beachborn 1 | Action (no Junk), 6 m radius around you, enemies only. Wisdom save or `2d8` Psychic and Frightened for 1 turn; half damage on a success |
+| **Round 10** | | |
+| In-N-Out Animal-Style Argument | Class 5 | Bonus action + 1 Junk, once per short rest. Regain `1d8 + CON` HP and gain Animal-Style Energy (advantage on attack rolls) for 2 turns |
+| Caltrans Cone Labyrinth | Class 9 | Action + 1 Junk, once per short rest, 9 m. Dexterity save or `2d8` Bludgeoning and Prone for 1 turn (half on a success); you gain Detour Dash (+3 m movement) for 1 turn either way |
+| Caltrain Horn at the Grade Crossing | Class 10 | Action + 1 Junk, **once per long rest**, 12 m. Constitution save or `3d8` Thunder and Dazed for 1 turn (half on a success) |
+| Caltrans Truck-Bed Vest Requisition | Class 11 | Action (no Junk), **once per long rest**. Places a Caltrans Safety Vest in your inventory: rare light armour (AC 12 plus Dexterity, +1 Deception) that gives Hi-Vis Authority when worn (advantage on Intimidation, disadvantage on Stealth) |
+| Sixty-Day Rent Increase Notice | Class 12 | Action + 1 Junk, **once per long rest**, 9 m. Wisdom save or `3d8` Psychic and Frightened for 2 turns (half on a success) |
+| Rent-Stabilized Grit (passive) | Class 9 | Below 50% HP: +2 AC, immunity to being knocked Prone, and advantage on Strength saving throws |
+| Laminated Pool-Hours Sign | Venice Boardwalk Brawler 6 | Action + 1 Junk, once per short rest, 9 m. Wisdom save or `2d6` Psychic and Dazed for 1 turn (half on a success) |
+| Street-Sweep Citation at 2:01 | BART Platform Menace 10 | Action + 1 Junk, once per short rest. Melee spell attack within 1.5 m: `1d6` Slashing and `2d8` Psychic on a hit, and Citation Filed (disadvantage on Dexterity saves) for 2 turns |
+| Farmers' Market Peach Parking Denial | Beachborn 3 | Bonus action (no Junk), once per short rest, 9 m. Dexterity save or `2d6` Bludgeoning and Prone for 1 turn (half on a success); you gain Validation Sprint (+3 m movement) for 1 turn either way |
+| Seven-Dollar Oat-Milk Line | Siliconite 1 | Action (no Junk), once per short rest, 6 m. Wisdom save or `2d8` Psychic and Stuck in the Oat-Milk Line (disadvantage on attack rolls) for 2 turns (half on a success) |
 
 The three fear spells in round 9 (Raccoon Tribunal, HOA Beige-Paint Denial and Nextdoor Lost-Coyote Thread) now use the vanilla fear-advantage tags (`AdvantageOnFrightened` and
 `DisadvantageOnFrightened`) on their saves. Round 9 cooldowns: once per short rest for Costco, DMV, Self-Checkout, Tech Shuttle, Trust Fall, HOA and Nextdoor; once per long rest for Prop 13, Raccoon Tribunal and PurpleAir.
@@ -316,14 +327,16 @@ source, not in game.
 
 The four Flea Market items borrow their donors' meshes and icons, so they look like a mace, a robe, shoes and a healing potion.
 
-### Five custom props (barricade, tent, scooter graveyard, robotaxi and porta-potty)
+### Nine custom props (barricade, tent, scooter graveyard, robotaxi, porta-potty and four round 10 props)
 
-All five are 3D props like the shopping cart and the blue tarp: **AI-generated procedural meshes**. A Claude agent wrote the Python geometry and the
+The first five are 3D props like the shopping cart and the blue tarp: **AI-generated procedural meshes**. A Claude agent wrote the Python geometry and the
 procedural texture painting; Blender is used only for previews. The GR2 files were converted with LSLib Divine and conformed to a vanilla
 skeleton, using the same pipeline as the cart and tarp (visual resource, root template, Object stat, and a `GROUND:Spawn` on a spell). Each is a static
 prop that cannot be moved or picked up. None has ever been spawned in game, so facing, collision, scale and how the texture looks are all unchecked, and the
 spell icons are placeholders. The three newest spells (scooters, robotaxi, porta-potty) also add a self status next to the ground spawn on the same projectile-type donor, and
 whether that extra self status still applies alongside `GROUND:Spawn` is unverified, as with the barricade. None of the three has an emissive map, so glowing parts are only bright colours.
+
+The four round 10 props (`hc_bench.py`, `hc_utilitypole.py`, `hc_spinbike.py` and `hc_coolerfire.py`) are Blender-built, use the same `GROUND:Spawn` pattern with a 9 m ground target, and give their buff for 3 turns. None has been spawned in game.
 
 | Spell | Where granted | Intended behaviour |
 |---|---|---|
@@ -332,6 +345,10 @@ whether that extra self status still applies alongside `GROUND:Spawn` is unverif
 | Dockless Scooter Graveyard (Please Do Not Block the Sidewalk) (`HC_Target_ScooterGraveyard`; model in `assets/models/HC_ScooterGraveyard/`, code in `hc_scooters.py`) | Beachborn 5 | Action, **no Junk cost**, once per long rest, ground target within 9 m. Spawns a heap of six abandoned rental e-scooters (lime, cyan and white) against a chain-link panel with a stray traffic cone on top, and gives you Static Charge From the Pile for 3 turns: `+1d8` Lightning weapon damage and +3 m movement |
 | Autonomous Robotaxi Has Seen a Traffic Cone (`HC_Target_RobotaxiBreakdown`; model in `assets/models/HC_Robotaxi/`, code in `hc_robotaxi.py`) | Siliconite 5 | Action, **no Junk cost**, once per long rest, ground target within 9 m. Spawns a white driverless crossover with a LiDAR dome, hazard lamps, a flat tyre and one cone wedged under the bumper, and gives you Your Driver Is Arriving In 0 Minutes for 3 turns: +3 m movement and advantage on Dexterity saving throws |
 | Caltrans Festival Honey Bucket Tip-Over (`HC_Target_PortaPottyTipOver`; model in `assets/models/HC_PortaPotty/`, code in `hc_portapotty.py`) | Inland Emperor 5 | Action, **no Junk cost**, once per long rest, ground target within 9 m. Spawns a turquoise porta-potty lying on its side with a glowing puddle, loose toilet paper and an out-of-order sign, and gives you Nothing Left to Fear for 3 turns: immunity to Poisoned and `+1d4` to saving throws |
+| Hostile Architecture Spike Bench (`HC_Target_HostileArchitectureBench`; `hc_bench.py`) | Base class 10 | Action (no Junk), once per long rest, ground target within 9 m. Spawns the spike bench prop and gives you Certified Bench Sleeper for 3 turns: Piercing and Bludgeoning resistance and immunity to being knocked Prone |
+| Deferred Maintenance Pole Drop (`HC_Target_SparkingUtilityPole`; `hc_utilitypole.py`) | Base class 11 | Action + **2 Junk**, once per long rest, ground target within 9 m. Spawns the sparking utility pole prop (made-up utility: Pacific Grid & Excuse) and gives you Grid Safety Fee for 3 turns: Lightning resistance, +1 to attack rolls and +1 to your spell save DC |
+| Studio Cycle Eviction Notice (`HC_Target_EvictedSpinBike`; `hc_spinbike.py`) | Base class 6 | Action + 1 Junk, once per long rest, ground target within 9 m. Spawns the evicted spin bike prop (made-up brand: SoulCyclone) and gives you Motivational Energy for 3 turns: advantage on Athletics and Intimidation checks and on Constitution saves |
+| Illegal Sidewalk Cookout (`HC_Target_SidewalkCoolerBonfire`; `hc_coolerfire.py`) | Base class 4 | Action + 1 Junk, once per short rest, ground target within 9 m. Spawns the sidewalk cooler bonfire prop and gives you Parking Lot Warmth for 3 turns: Cold resistance and `+1d4` Fire weapon damage |
 
 ### Shared +2 AC stack
 
@@ -342,8 +359,8 @@ Other +2 AC buffs (for example the Zoom layoff shield, the Seismic Retrofit and 
 ### Statuses
 
 Round 4 adds 11 statuses (Freeway Directions, the three Weather Complaint lines with their cooldown locks, the three Permit
-Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status), round 7 adds 8, round 8 adds 9 and round 9 adds 4 (Cube-Denied, Unexpected Item Lockout, Grandfathered In, Offsite Bounce-Back);
-the barricade (Cones of Untouchable Authority), the tent (Illegally Cozy), the scooters (Static Charge From the Pile), the robotaxi (Your Driver Is Arriving In 0 Minutes) and the porta-potty (Nothing Left to Fear) add one each. They are the
+Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status), round 7 adds 8, round 8 adds 9 and round 9 adds 4 (Cube-Denied, Unexpected Item Lockout, Grandfathered In, Offsite Bounce-Back), round 10 adds 5 (Detour Dash, Animal-Style Energy, Citation Filed at 2:01, Validation Sprint, Stuck in the Oat-Milk Line);
+the barricade (Cones of Untouchable Authority), the tent (Illegally Cozy), the scooters (Static Charge From the Pile), the robotaxi (Your Driver Is Arriving In 0 Minutes) and the porta-potty (Nothing Left to Fear) add one each, and the four round 10 props add one each (Certified Bench Sleeper, Grid Safety Fee, Motivational Energy, Parking Lot Warmth). They are the
 conditions the spells above apply, such as Stripped Copper & Live Sparks, Cancelled & Tone-Policed, Impacted by Macroeconomic Headwinds,
 Involuntary Sidewalk Nod, Speaker Forty-One of Forty-Four and Red-Tagged: Unpermitted Everything.
 
@@ -352,9 +369,9 @@ Involuntary Sidewalk Nod, Speaker Forty-One of Forty-Four and Red-Tagged: Unperm
 - **Checked at file level:** every stat starts with `HC_`, every donor exists in the vanilla extraction and is not overridden in Honour, the spell
   lists and progressions grant each spell at the level shown above, mechanics tokens and surfaces appear in vanilla data, and the localization
   and icon registrations resolve. See [validation/README.md](validation/README.md) for the per-file breakdown.
-- **Current numbers:** the validator reports 288 stat entries, 89 icons and 601 localization handles; 240 unit tests (counted per file with `def test_`,
+- **Current numbers:** the validator reports 317 stat entries, 94 icons and 659 localization handles; 322 unit tests (counted per file with `def test_`,
   and passing per `HANDOFF.md`), and `validate.py --pak` passing per `HANDOFF.md`.
-- **Not checked:** everything about play. Nothing from rounds 4-9 or the five props has been played, and none of the props has been spawned in game: damage, saves, Junk costs, durations, the Permit Pending
+- **Not checked:** everything about play. Nothing from rounds 4-10 or the nine source-only props has been played, and none of the props has been spawned in game: damage, saves, Junk costs, durations, the Permit Pending
   stack countdown, the Weather Complaint triggers, surface effects, the Flea Market item grants and the Rhino shot's use action, level-up
   grants on a real character, and balance.
 
@@ -576,6 +593,11 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── hc_scooters.py               # Dockless Scooter Graveyard prop and spell (source-only)
 ├── hc_robotaxi.py               # Broken-Down Robotaxi prop and spell (source-only)
 ├── hc_portapotty.py             # Tipped-Over Festival Porta-Potty prop and spell (source-only)
+├── hc_round10.py                # Round 10: 9 spells, Caltrans Safety Vest and Rent-Stabilized Grit passive (source-only)
+├── hc_bench.py                  # Hostile Architecture Spike Bench prop and spell (source-only)
+├── hc_utilitypole.py            # Sparking Utility Pole prop and spell (source-only)
+├── hc_spinbike.py               # Evicted Studio Spin Bike prop and spell (source-only)
+├── hc_coolerfire.py             # Sidewalk Cooler Bonfire prop and spell (source-only)
 ├── hc_cart.py                   # Abandoned Cart spell and template
 ├── hc_outfit.py                 # Outfit / wardrobe items
 ├── hc_icon_keys.py              # Maps spells to icon keys
@@ -602,13 +624,13 @@ Baldurs Gate 3 Homeless Californian Class/
 └── tools/Packed/Tools/Divine.exe # LSLib Divine (NOT in git)
 ```
 
-`tools/` is not in git. Supply `Divine.exe` and `granny2.dll` yourself (see the LSLib ExportTool); they are needed for packing, localization and the cart, tarp, barricade, tent, scooter graveyard, robotaxi and porta-potty model conversion.
+`tools/` is not in git. Supply `Divine.exe` and `granny2.dll` yourself (see the LSLib ExportTool); they are needed for packing, localization and the cart, tarp, barricade, tent, scooter graveyard, robotaxi, porta-potty and round 10 prop model conversion.
 
 ### CLI Commands:
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 240 on the current source).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 322 on the current source).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.
@@ -618,7 +640,7 @@ Baldurs Gate 3 Homeless Californian Class/
 ## 👥 Contributors & AI Pair Programming Team
 
 - **Matthew (@themadhattermsr)** — Creator, Project Director, Gameplay Design & Live In-Game Playtester.
-- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and blue tarp lean-to, and the source-only barricade, tent, scooter graveyard, robotaxi and porta-potty (Claude agents wrote the procedural model scripts; Blender was used only for previews).
+- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and blue tarp lean-to, and the source-only barricade, tent, scooter graveyard, robotaxi and porta-potty (Claude agents wrote the procedural model scripts; Blender was used only for previews), and the four round 10 props (spike bench, utility pole, spin bike, cooler bonfire) are Blender-built.
 - **Codex (OpenAI)** — BG3 Mechanics Audits, Engine Functors, Subclass Balance & Donor Specialist.
 - **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (custom spell icons, class crests, status art, and Nexus banners). The shopping cart, blue tarp, barricade, tent, scooter graveyard, robotaxi and porta-potty models are AI-generated, not made by Gemini or a human artist.
 - **Local Model (Qwen / Ollama)** — Offline Flavor Text Ideation, Creative Brainstorming & Dialogue Concepts.

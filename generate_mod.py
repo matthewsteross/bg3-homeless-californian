@@ -2661,6 +2661,29 @@ def generate_local_expansion():
     for category, levels in round9['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_bench import generate_bench
+    bench = generate_bench(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in bench['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    from hc_spinbike import generate_spinbike
+    spinbike = generate_spinbike(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in spinbike['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    from hc_utilitypole import generate_utilitypole
+    utilitypole = generate_utilitypole(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in utilitypole['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    from hc_coolerfire import generate_coolerfire
+    coolerfire = generate_coolerfire(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in coolerfire['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    from hc_round10 import generate_round10
+    round10 = generate_round10(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round10['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    for category, levels in round10['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}
@@ -2680,8 +2703,10 @@ def generate_local_expansion():
     racial_list_map = {
         SPELLLIST_CALIFORNIAN_L1: [round4['racial_spell'], *round5['racial_spells'],
                                    round8['existing_list_spells']['Californian_L1']],
-        SPELLLIST_SILICONITE_L1: [round8['existing_list_spells']['Siliconite_L1']],
-        SPELLLIST_BEACHBORN_L3: [round6['subrace_spells']['Beachborn_L3']],
+        SPELLLIST_SILICONITE_L1: [round8['existing_list_spells']['Siliconite_L1'],
+                                  round10['existing_list_spells']['Siliconite_L1']],
+        SPELLLIST_BEACHBORN_L3: [round6['subrace_spells']['Beachborn_L3'],
+                                 round10['existing_list_spells']['Beachborn_L3']],
         SPELLLIST_SILICONITE_L3: [round6['subrace_spells']['Siliconite_L3'],
                                   round9['existing_list_spells']['Siliconite_L3']],
         SPELLLIST_INLANDEMPEROR_L3: [round9['existing_list_spells']['InlandEmperor_L3']],
@@ -2721,6 +2746,14 @@ def generate_local_expansion():
         if category == 'Californian' and level == 1:
             old_passives = attrs.get('PassivesAdded', '')
             new_passives = ';'.join(filter(None, [old_passives, *round4['racial_passives']]))
+            line = f'<attribute id="PassivesAdded" type="LSString" value="{escape(new_passives)}"/>'
+            if 'PassivesAdded' in attrs:
+                block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)
+            else:
+                block = block.replace('<attribute id="Level"', line + '\n                    <attribute id="Level"', 1)
+        if category == 'HomelessCalifornian' and level in round10['base_passives']:
+            old_passives = attrs.get('PassivesAdded', '')
+            new_passives = ';'.join(filter(None, [old_passives, *round10['base_passives'][level]]))
             line = f'<attribute id="PassivesAdded" type="LSString" value="{escape(new_passives)}"/>'
             if 'PassivesAdded' in attrs:
                 block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)
@@ -2768,6 +2801,8 @@ def main():
     generate_cc_presets_lsx()
     generate_stats_txt()
     generate_local_expansion()
+    from hc_sounds import apply_sounds
+    print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()
     print("Mod source files generated successfully!")
 

@@ -1,0 +1,7 @@
+new entry "HC_OBJ_UtilityPole"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "1f9928be-1ea2-5d45-9f17-912ad3b1e790"
+data "Weight" "400"
+data "GameSize" "Large"
+data "Vitality" "-1"

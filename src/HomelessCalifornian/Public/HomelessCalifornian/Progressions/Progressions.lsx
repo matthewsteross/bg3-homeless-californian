@@ -107,6 +107,7 @@
                     <attribute id="UUID" type="guid" value="608828f2-7291-56d9-b309-b970bbf5e86c"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="HC_RentStabilizedGrit"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(HC_Junk,2,0)"/>
                     <attribute id="Level" type="uint8" value="9"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
@@ -220,7 +221,7 @@
                     <attribute id="Name" type="LSString" value="BARTPlatformMenace"/>
                     <attribute id="PassivesAdded" type="LSString" value="LastTrainPhantom"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells(9a28b292-45e3-5c8f-afd1-96464f50db33)"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(9a28b292-45e3-5c8f-afd1-96464f50db33);AddSpells(2187b8a2-72e7-53fc-99fa-c1e9a7ae6971)"/>
                     <attribute id="TableUUID" type="guid" value="4ad35052-388d-5e21-b2dd-a17be4d04862"/>
                     <attribute id="UUID" type="guid" value="e4d2f7c2-a679-54c0-9132-c42efbb24f58"/>
                 </node>

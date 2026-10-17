@@ -26,6 +26,8 @@ data "DamageType" "Slashing"
 data "TargetConditions" "Character() and not Ally() and not Dead()"
 data "DisplayName" "h22fb200eg682dg5d39gbf33g6dee6b30e119;1"
 data "Description" "h1ec393f5g8abcg5829gaaeagd4c240990e32;1"
+data "CastSound" "Spell_Cast_Damage_Thunder_Shatter_L1to3"
+data "TargetSound" "Spell_Impact_Damage_Thunder_Shatter_L1to3"
 
 new entry "HC_Target_SprinklerViolation"
 type "SpellData"

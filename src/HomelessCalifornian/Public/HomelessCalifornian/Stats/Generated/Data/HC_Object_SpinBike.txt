@@ -1,0 +1,7 @@
+new entry "HC_OBJ_SpinBike"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "04a4a352-02d2-549a-b709-867c76f7d382"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

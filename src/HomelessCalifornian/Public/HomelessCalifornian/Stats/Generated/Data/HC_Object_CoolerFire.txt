@@ -1,0 +1,7 @@
+new entry "HC_OBJ_CoolerFire"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "05807e8e-c082-5897-85b8-d030c743d16a"
+data "Weight" "12"
+data "GameSize" "Large"
+data "Vitality" "-1"

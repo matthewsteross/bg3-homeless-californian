@@ -7,9 +7,9 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite has **240 tests** in 20 files (counted by `def test_` per file; 110 of them were the suite shipped in v0.4.0, and the other 130 are
-the source-only rounds 4-9 and the five source-only props: barricade, tent, scooter graveyard, robotaxi and porta-potty). The first four files held 39 tests at the v0.3.0 release; the next five cover the additions in v0.4.0; the last
-eleven cover the source-only additions and are **not part of the public v0.4.0 download**. The list-count and level-grant assertions in `test_expansion.py`, `test_overpass.py` and `test_junk_items.py` were adjusted for rounds 8 and 9 (their test counts did not change).
+The suite has **322 tests** in 26 files (counted by `def test_` per file; 110 of them were the suite shipped in v0.4.0, and the other 207 are
+the source-only rounds 4-10 and the nine source-only props: barricade, tent, scooter graveyard, robotaxi, porta-potty, and the four round 10 props: spike bench, utility pole, spin bike and cooler bonfire). The first four files held 39 tests at the v0.3.0 release; the next five cover the additions in v0.4.0; the last
+sixteen cover the source-only additions and are **not part of the public v0.4.0 download**. The list-count and level-grant assertions in `test_expansion.py`, `test_overpass.py` and `test_junk_items.py` were adjusted for rounds 8 and 9 (their test counts did not change).
 
 | File | Tests | Covers |
 |---|---:|---|
@@ -33,9 +33,15 @@ eleven cover the source-only additions and are **not part of the public v0.4.0 d
 | `test_scooters.py` | 12 | Source-only. The Dockless Scooter Graveyard prop and spell (model round trip through Divine, 1024 px texture, visual resource, root template and Object stat, spawn spell and costs, the Lightning-damage and movement status, Beachborn level-5 grant, GUID uniqueness) |
 | `test_robotaxi.py` | 12 | Source-only. The Broken-Down Robotaxi prop and spell (same model, template and spawn-spell checks, the movement and Dexterity-save-advantage status, Siliconite level-5 grant, GUID uniqueness) |
 | `test_portapotty.py` | 12 | Source-only. The Tipped-Over Festival Porta-Potty prop and spell (same model, template and spawn-spell checks, the Poisoned-immunity and +1d4 saves status, Inland Emperor level-5 grant, GUID uniqueness) |
-| **Total** | **240** | |
+| `test_round10.py` | 24 | Source-only. The 9 round 10 spells, the Caltrans Safety Vest (rare light armour, inherited AC and Dexterity, Hi-Vis Authority equip passive), the Rent-Stabilized Grit passive (HP-gated boost passive at base level 9) and 5 statuses: unique `HC_` names, donors (none overridden in Honour), grant levels, costs and cooldowns, enemy-only targeting, failed-save-only enemy effects, vanilla precedent for every boost and functor, localization and a check for foreign-mod references in generated text |
+| `test_bench.py` | 13 | Source-only. The Hostile Architecture Spike Bench prop and spell (model round trip through Divine, 1024 px texture, visual resource, root template and Object stat, spawn spell and costs, the resistance and Prone-immunity status, base level-10 grant, GUID uniqueness) |
+| `test_utilitypole.py` | 13 | Source-only. The Sparking Utility Pole prop and spell (same model, template and spawn-spell checks, the Lightning-resistance and small flat-bonus status, base level-11 grant, GUID uniqueness) |
+| `test_spinbike.py` | 14 | Source-only. The Evicted Studio Spin Bike prop and spell (same model, template and spawn-spell checks, the Athletics, Intimidation and Constitution advantage status, base level-6 grant, GUID uniqueness) |
+| `test_coolerfire.py` | 13 | Source-only. The Sidewalk Cooler Bonfire prop and spell (same model, template and spawn-spell checks, the Cold-resistance and +1d4 Fire status, base level-4 grant, GUID uniqueness) |
+| `test_sounds.py` | 5 | Source-only. The meme-sound map `hc_sound_map.json`: every event name is a real vanilla CastSound/TargetSound/PrepareSound value, only HC spells are touched, applying twice gives the same result |
+| **Total** | **322** | |
 
-Like everything else here, these are file-level checks: they do not show that any of it works in game. In particular, none of the round 4-9 or five-prop
+Like everything else here, these are file-level checks: they do not show that any of it works in game. In particular, none of the round 4-10 or nine-prop
 tests play a spell; `test_round4.py` says in its own test name that its status chain check is "smoke only, not engine execution".
 
 The validator returns exit code **1** on a finding. It does not install, regenerate,
@@ -82,4 +88,4 @@ release gate.
 
 A Script Extender (BG3SE v33) harness exists for dev-only test builds. The harness is never shipped
 in the released package. See `HANDOFF.md`. On 2026-10-15 it was used for an in-game data check of the v0.4.0 content (everything loads, Curb Alert grants its items, the tarp spawns, four ground effects appear); it does not test damage, saves or balance. Anything it touches stays "not yet verified in game"
-until Matthew confirms it by playing. That check predates rounds 4-9 and the five props (barricade, tent, scooter graveyard, robotaxi and porta-potty), so nothing from them has been seen in game.
+until Matthew confirms it by playing. That check predates rounds 4-10 and the nine source-only props (barricade, tent, scooter graveyard, robotaxi, porta-potty and the four round 10 props), so nothing from them has been seen in game.

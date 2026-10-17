@@ -1,0 +1,7 @@
+new entry "HC_OBJ_HostileBench"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "d7c50c07-a705-5b89-a39a-f809fe4b7cf6"
+data "Weight" "400"
+data "GameSize" "Large"
+data "Vitality" "-1"
