@@ -10,6 +10,7 @@
 
 - **Added since the section below was written (local commits, not pushed):** Round 8 (`hc_round8.py`: 10 spells + 9 statuses; Pothole Ankle-Breaker, NIMBY Public Comment Period, Department of Unfinished Business, Municipal Budget Hearing, Sidewalk Chiropractic Adjustment, PG&E Public Safety Blackout, Emergency Boardwalk Sunglasses, Hayward Fault Seismic Retrofit, Whole Foods Hot Bar Heist, Meeting Could Have Been a Scroll) and the **Caltrans "Lane Closed Ahead" barricade** (`hc_barricade.py`, `assets/models/HC_Barricade/`, base class level 9; the second Blender-built prop after the cart and tarp). 186 unit tests and `validate.py --pak` pass; the pak is installed in the local `Mods` folder (old one backed up in `work/installed-backups/`).
 - **Also done (later 2026-10-17):** the Pop-Up Encampment Tent prop (`hc_tent.py`, `assets/models/HC_PopUpTent/`, base L7, 8 temp HP for 3 turns) and the Codex balance pass (186 unit tests; README/TESTING/`validation/README.md` updated to match).
+- **Also done (latest 2026-10-17):** Round 9 (`hc_round9.py`: 10 spells + 4 statuses), the Dockless Scooter Graveyard (`hc_scooters.py`, Beachborn L5), Broken-Down Robotaxi (`hc_robotaxi.py`, Siliconite L5) and Tipped-Over Porta-Potty (`hc_portapotty.py`, Inland Emperor L5) props and spells, and the Codex round-9 audit fixes are done; 240 tests. Docs (README, TESTING, `validation/README.md`) updated to match.
 - **Codex audits:** `work/codex-audit-rounds5-7-2026-10-17.md` found no load-breaking problems in rounds 5-7; its text/filter fixes are applied (hostile-area shouts use `Enemy()`; Scooter and Propane wording corrected). Round 8 + barricade audit: `work/codex-audit-round8-barricade-2026-10-17.md`.
 - **Docs:** README, TESTING and `validation/README.md` now document rounds 4-7 as source-only with true test counts.
 - **Nexus:** Matthew asked for the latest build to go to Nexus. A v0.5.0 ZIP is staged (`work/public-playtest/HomelessCalifornian-Playtest-2026-10-17-v0.5.0.zip`, built before Round 8, so it does NOT contain Round 8 or the barricade) but the harness blocked the final upload step. Matthew can upload it by hand, or approve a retry. Rebuild the ZIP first if the Round 8 pak should ship.
@@ -25,10 +26,10 @@
 - **Round 7 (`hc_round7.py`)**: 11 spells + 8 statuses across Subclasses L3/L10 (`HC_Target_UsedFoilBlowback` Tenderloin L3, `HC_Target_ExtensionCordTap` Overpass L3, `HC_Shout_MuscleBeachRoidRage` Venice L10, `HC_Shout_TurnstileEmergencyGate` BART L10), Subraces L1/L5 (`HC_Target_BotoxFillerParalyze` Beachborn L5, `HC_Shout_PolyculeGoogleCalendar` Siliconite L5, `HC_Target_CatalyticStraightPipeRev` Inland Emperor L1), and Base Class (`HC_Target_GasStationSqueegee` L1, `HC_Shout_FakeServiceVest` L2, `HC_Projectile_PissJugCatapult` L7, `HC_Shout_GovernorGavinPhotoOp` L12 Capstone).
 
 **Current Metrics:**
-- **265** stats (validator count)
-- **86** icons (validator count)
-- **555** localization handles (`HomelessCalifornian.loca.xml`)
-- **186 / 186** unit tests PASS (`python -m unittest discover -s validation -q`)
+- **288** stats (validator count)
+- **89** icons (validator count)
+- **601** localization handles (`HomelessCalifornian.loca.xml`)
+- **240 / 240** unit tests PASS (`python -m unittest discover -s validation -q`)
 - `python validation/validate.py --pak dist/HomelessCalifornian.pak` PASS
 
 ---

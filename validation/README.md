@@ -7,9 +7,9 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite has **186 tests** in 16 files (counted by `def test_` per file; 110 of them were the suite shipped in v0.4.0, and the other 76 are
-the source-only rounds 4-8, the barricade and the tent). The first four files held 39 tests at the v0.3.0 release; the next five cover the additions in v0.4.0; the last
-seven cover the source-only additions and are **not part of the public v0.4.0 download**. The list-count and level-grant assertions in `test_expansion.py`, `test_overpass.py` and `test_junk_items.py` were adjusted for round 8 (their test counts did not change).
+The suite has **240 tests** in 20 files (counted by `def test_` per file; 110 of them were the suite shipped in v0.4.0, and the other 130 are
+the source-only rounds 4-9 and the five source-only props: barricade, tent, scooter graveyard, robotaxi and porta-potty). The first four files held 39 tests at the v0.3.0 release; the next five cover the additions in v0.4.0; the last
+eleven cover the source-only additions and are **not part of the public v0.4.0 download**. The list-count and level-grant assertions in `test_expansion.py`, `test_overpass.py` and `test_junk_items.py` were adjusted for rounds 8 and 9 (their test counts did not change).
 
 | File | Tests | Covers |
 |---|---:|---|
@@ -29,10 +29,14 @@ seven cover the source-only additions and are **not part of the public v0.4.0 do
 | `test_round8.py` | 15 | Source-only. The 10 round 8 spells and 9 statuses: unique `HC_` names, donors, base/subclass/racial grants, mechanics and surfaces, failed-save-only enemy effects, vanilla precedent for every boost and functor, localization and icon registration |
 | `test_barricade.py` | 10 | Source-only. The Caltrans 'Lane Closed Ahead' barricade prop and spell (model round trip through Divine, visual resource, root template and Object stat, spawn spell and costs, the +2 AC status, grant level, GUID uniqueness) |
 | `test_tent.py` | 12 | Source-only. The Pop-Up Encampment Tent prop and spell (model round trip through Divine, 1024 px texture, visual resource, root template and Object stat, spawn spell and costs, the 8 temporary hit points status, grant level, GUID uniqueness) |
-| **Total** | **186** | |
+| `test_round9.py` | 18 | Source-only. The 10 round 9 spells and 4 statuses: unique `HC_` names that do not override vanilla, donors (none overridden in Honour), grant levels, costs and cooldowns (racial spells cost no Junk, class spells at most one), enemy-only targeting and failed-save-only enemy effects, the status and spell mechanics, exact vanilla precedent for every boost, functor and damage form, localization and descriptions |
+| `test_scooters.py` | 12 | Source-only. The Dockless Scooter Graveyard prop and spell (model round trip through Divine, 1024 px texture, visual resource, root template and Object stat, spawn spell and costs, the Lightning-damage and movement status, Beachborn level-5 grant, GUID uniqueness) |
+| `test_robotaxi.py` | 12 | Source-only. The Broken-Down Robotaxi prop and spell (same model, template and spawn-spell checks, the movement and Dexterity-save-advantage status, Siliconite level-5 grant, GUID uniqueness) |
+| `test_portapotty.py` | 12 | Source-only. The Tipped-Over Festival Porta-Potty prop and spell (same model, template and spawn-spell checks, the Poisoned-immunity and +1d4 saves status, Inland Emperor level-5 grant, GUID uniqueness) |
+| **Total** | **240** | |
 
-Like everything else here, these are file-level checks: they do not show that any of it works in game. In particular, none of the round 4-8, barricade
-and tent tests play a spell; `test_round4.py` says in its own test name that its status chain check is "smoke only, not engine execution".
+Like everything else here, these are file-level checks: they do not show that any of it works in game. In particular, none of the round 4-9 or five-prop
+tests play a spell; `test_round4.py` says in its own test name that its status chain check is "smoke only, not engine execution".
 
 The validator returns exit code **1** on a finding. It does not install, regenerate,
 edit source, modify game configuration, or contact GitHub. `--pak` extracts into a
@@ -78,4 +82,4 @@ release gate.
 
 A Script Extender (BG3SE v33) harness exists for dev-only test builds. The harness is never shipped
 in the released package. See `HANDOFF.md`. On 2026-10-15 it was used for an in-game data check of the v0.4.0 content (everything loads, Curb Alert grants its items, the tarp spawns, four ground effects appear); it does not test damage, saves or balance. Anything it touches stays "not yet verified in game"
-until Matthew confirms it by playing. That check predates rounds 4-8, the barricade and the tent, so nothing from them has been seen in game.
+until Matthew confirms it by playing. That check predates rounds 4-9 and the five props (barricade, tent, scooter graveyard, robotaxi and porta-potty), so nothing from them has been seen in game.

@@ -29,7 +29,7 @@ on the same character. Junk capacity should be 3 at class level 1, 5 at 5 and
 Save and reload once. Note missing icons, lost grants, or changed resource
 behavior. Actual effects are not comprehensively gameplay-tested yet.
 The familiar uses a raven model; furniture and clothes use existing visuals.
-There is no custom chair model, gun or voice pack; there are two custom meshes, the Abandoned Cart and the blue tarp lean-to (new in v0.4.0, see the v0.4.0 routes below); the source-only repository adds two more, a Caltrans barricade and a pop-up tent (see the last section). The level-12 Squatter's Rights capstone is in the October 13 build.
+There is no custom chair model, gun or voice pack; there are two custom meshes, the Abandoned Cart and the blue tarp lean-to (new in v0.4.0, see the v0.4.0 routes below); the source-only repository adds five more: a Caltrans barricade, a pop-up tent, a dockless scooter graveyard, a broken-down robotaxi and a tipped-over porta-potty (see the last section). The level-12 Squatter's Rights capstone is in the October 13 build.
 v0.4.0 adds a fourth subclass (Overpass Riverbed Dweller) and a few new choices; their test routes are at the bottom of this page.
 
 ## Tell us what happened
@@ -122,15 +122,15 @@ facing and collision, the Kombucha override and balance still need your testing.
 | Class 11 | **HOV Lane** to a spot you can see, then to a spot you cannot | Teleport up to 12 m for a bonus action and 1 Junk, once per short rest? Invalid or blocked locations refused? (It leaves no mud behind: that part was left out.) |
 | Californian Inland Emperor 3 | **Bakersfield Tule Fog** (new character or respec) | Appears beside Overpass Exhaust? One action, no Junk, once per short rest? 4.5 m fog cloud at 9 m, up to 10 turns, needs concentration? Does casting it break an existing concentration spell (it should not)? |
 
-## Source-only rounds 4-8, barricade and tent: what to try first (NOT in the v0.4.0 download)
+## Source-only rounds 4-9 and the five props: what to try first (NOT in the v0.4.0 download)
 
-This part is for testers who build the mod from the repository (or for Matthew's own test runs). **Rounds 4, 5, 6, 7 and 8, the Caltrans barricade and the pop-up tent are not in the public
-v0.4.0 download or on Nexus, so you cannot try them from the release.** Nobody has played any of it: 186 file-level tests and the pak validator pass,
+This part is for testers who build the mod from the repository (or for Matthew's own test runs). **Rounds 4 to 9 and the five custom props (Caltrans barricade, pop-up tent, scooter graveyard, robotaxi and porta-potty) are not in the public
+v0.4.0 download or on Nexus, so you cannot try them from the release.** Nobody has played any of it: 240 file-level tests and the pak validator pass,
 and that is all. The full list with numbers is in the
-[README section](README.md#source-only-rounds-4-8-not-in-the-v040-download-not-play-tested). Use a separate test save and a new character or a respec.
-The 28 spells from rounds 5-7, the 10 round 8 spells and the barricade and tent spells show placeholder vanilla icons for now, so a wrong-looking icon is expected; a missing spell or a broken tooltip is a bug.
+[README section](README.md#source-only-rounds-4-9-not-in-the-v040-download-not-play-tested). Use a separate test save and a new character or a respec.
+The 28 spells from rounds 5-7, the 10 round 8 spells, the 10 round 9 spells and the five prop spells show placeholder vanilla icons for now, so a wrong-looking icon is expected; a missing spell or a broken tooltip is a bug.
 
-Sixteen things worth ten minutes, in rough order of "most likely to be broken":
+Eighteen things worth ten minutes, in rough order of "most likely to be broken":
 
 | # | Where | Try | What to report |
 |---|---|---|---|
@@ -149,7 +149,9 @@ Sixteen things worth ten minutes, in rough order of "most likely to be broken":
 | 13 | Class 4 / 6 / 10 / 11 | **Unrepaired Pothole Since 2014 Ankle-Breaker** (4), **NIMBY Three-Minute Public Comment Period** (6), **Department of Unfinished Business Red-Tag Notice** (10), **Municipal Budget Hearing** (11) | Pothole drops the target Prone and slows it? NIMBY costs 2 Junk, once per long rest, and freezes enemies for a turn on a failed save? Red-Tag makes attacks against the target easier? Budget Hearing gives the small bonus to attacks, saves and AC for 3 turns? |
 | 14 | Tenderloin 10, Overpass 10, Venice 12, BART 12 | **Sidewalk Chiropractic Adjustment** on an ally, **PG&E Blackout**, **Boardwalk Sunglasses**, **Hayward Fault Seismic Retrofit** | Chiropractic heals the ally but knocks it Prone? Blackout hurts and blinds a group and leaves darkness for a few turns? Sunglasses costs no Junk and makes you immune to Blinded? Retrofit knocks enemies Prone while you stay on your feet? |
 | 15 | Californian race 1, Siliconite 1 | **Whole Foods Hot Bar Heist**, **This Meeting Could Have Been a Scroll** | Hot Bar heals you and slows you a little? Meeting buff lands on an ally within 9 m and on yourself? |
-| 16 | Class 7 and class 9 | **Pop-Up Tent City Encampment** (7), **Caltrans 'Lane Closed Ahead' Barricade** (9) | Exactly one tent appears at your feet, you get 8 temporary hit points for 3 turns, and Junk is spent once per long rest? Barricade appears where you aim it (9 m), +2 AC for 2 turns? For both props: which way do they face, can you walk through them, is the size sensible, and does the texture look right? |
+| 16 | Class 7 and class 9 | **Pop-Up Tent City Encampment** (7), **Caltrans 'Lane Closed Ahead' Barricade** (9) | Exactly one tent appears at your feet, you get 8 temporary hit points for 3 turns (they do not stack with other temporary HP), and Junk is spent once per long rest? Barricade appears where you aim it (9 m), +2 AC for 2 turns? For both props: which way do they face, can you walk through them, is the size sensible, and does the texture look right? |
+| 17 | Class 8 / 12, BART 3, Tenderloin 12, Overpass 12, Siliconite 3, Inland Emperor 3, Beachborn 1 | Round 9: **Costco Sample Cart**, **DMV Ticket B047**, **Self-Checkout: Unexpected Item** (class 8), **Prop 13 Smirk** (class 12), **Double-Decker Tech Shuttle** (BART 3), **Raccoon Tribunal** (Tenderloin 12), **PurpleAir Wildfire Refresh** (Overpass 12), **Series-B Trust Fall** (Siliconite 3), **HOA Beige-Paint Denial** (Inland Emperor 3), **Nextdoor Lost-Coyote Thread** (Beachborn 1) | Each castable at its level with the right cost (Trust Fall, HOA and Nextdoor cost no Junk)? Costco slows the target, DMV Dazes, Self-Checkout stops its bonus actions and gives it disadvantage on attacks (and does not Daze)? Prop 13 heals and gives +2 AC, and replaces (not adds to) another braced +2 AC buff? Tech Shuttle hits only enemies in a line and knocks them Prone? Raccoon, HOA and Nextdoor Frighten on a failed save? PurpleAir blinds for a turn? Trust Fall knocks the target Prone and gives you advantage on attacks? |
+| 18 | Beachborn 5, Siliconite 5, Inland Emperor 5 | **Dockless Scooter Graveyard**, **Broken-Down Robotaxi** ("Autonomous Robotaxi Has Seen a Traffic Cone"), **Tipped-Over Festival Porta-Potty** ("Caltrans Festival Honey Bucket Tip-Over"), each once per long rest, no Junk | Exactly one prop appears where you aim (9 m) and you get the self buff for 3 turns? Scooters: extra Lightning weapon damage and +3 m movement. Robotaxi: +3 m movement and advantage on Dexterity saves. Porta-potty: immune to Poisoned (try a stench or poison source) and a small bonus on saving throws. For all three: does the buff still apply when the prop spawns, which way does the prop face, can you walk through it, is the size sensible, and does the texture look right? |
 
 Also worth a look if you have a spare character: pick the new Street Trades (**Bankruptcy Mattress Sign Spinner**, **Unleashed 'Service Pitbull' Handler**; nine in
 total) and Junk Doctrines (**Prop 65 Carcinogen Tolerance**, **Locked-Wheel Cart Drift**; eight in total) and check they are listed.

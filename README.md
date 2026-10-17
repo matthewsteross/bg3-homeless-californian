@@ -25,17 +25,17 @@ grants on a real Homeless Californian character, tarp facing and collision, the 
 Only level 12 and the cart had been confirmed by hand earlier. The Nexus page is live; the in-game (mod.io)
 listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
-**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4, 5, 6, 7 and 8 (40 spells, 2 Street Trades, 2 Junk Doctrines,
-4 contraband items and a pile of statuses), plus two more custom 3D props (a Caltrans "Lane Closed Ahead" barricade and a Pop-Up Encampment Tent, each
-with its own spell), are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
-play-tested**. They are listed in [their own section](#source-only-rounds-4-8-not-in-the-v040-download-not-play-tested). Nothing in the
+**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4 to 9 (50 spells, 2 Street Trades, 2 Junk Doctrines,
+4 contraband items and a pile of statuses), plus five more custom 3D props (a Caltrans "Lane Closed Ahead" barricade, a Pop-Up Encampment Tent, a Dockless Scooter Graveyard,
+a Broken-Down Robotaxi and a Tipped-Over Festival Porta-Potty, each with its own spell), are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
+play-tested**. They are listed in [their own section](#source-only-rounds-4-9-not-in-the-v040-download-not-play-tested). Nothing in the
 public download or on Nexus has changed.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
 available spells. Full effect, progression and compatibility testing continues.
-The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too, and so are the two source-only props, the barricade and the tent; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
+The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too, and so are the five source-only props, the barricade, the tent, the scooter graveyard, the robotaxi and the porta-potty; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
 
 This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
@@ -97,7 +97,7 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 186 on the current source, which includes the source-only rounds 4-8, the barricade and the tent). The saved original
+(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 240 on the current source, which includes the source-only rounds 4-9 and the five source-only props). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
@@ -216,15 +216,15 @@ Of the round 2 additions, the donors' animations and sound/visual effects are in
 
 ---
 
-## Source-only rounds 4-8 (not in the v0.4.0 download, not play-tested)
+## Source-only rounds 4-9 (not in the v0.4.0 download, not play-tested)
 
 **Read this first:** everything in this section is in the repository and in the locally built `dist/HomelessCalifornian.pak`, and it is
 **not** in the public v0.4.0 download or the Nexus file. You cannot get it by downloading the release. **Nobody has played any of it.**
-The only checking so far is file-level: 186 unit tests and the pak validator pass on the current source, which proves the
+The only checking so far is file-level: 240 unit tests and the pak validator pass on the current source, which proves the
 files agree with each other and with vanilla data, not that a single spell does what it says. Numbers are copied from the generated game
 data and the localization text.
 
-Two honesty notes. First, the 28 spells from rounds 5, 6 and 7, the 10 round 8 spells and the two prop spells (barricade and tent) currently use **placeholder vanilla icons** (the Gemini art for them has not
+Two honesty notes. First, the 28 spells from rounds 5, 6 and 7, the 10 round 8 spells, the 10 round 9 spells and the five prop spells (barricade, tent, scooters, robotaxi and porta-potty) currently use **placeholder vanilla icons** (the Gemini art for them has not
 been generated yet; the icon keys are registered, so the art will be picked up when it exists); only Freeway Directions and Permit Pending from round 4 have custom icons. Second, most of these are written as
 "failed save = full damage plus the nasty status, successful save = half damage", and the status duration, surface and Prone behaviour is
 untested. Expect a few to be wrong the first time they meet an actual goblin.
@@ -232,7 +232,7 @@ untested. Expect a few to be wrong the first time they meet an actual goblin.
 Most need a **new character or a respec** to receive the grants. All are once per short rest unless the table says otherwise, and "1 Junk" is
 the class resource.
 
-### Spells (40 in rounds 4-8, plus the two prop spells below)
+### Spells (50 in rounds 4-9, plus the five prop spells below)
 
 | Spell | Where granted | Intended behaviour |
 |---|---|---|
@@ -282,6 +282,20 @@ the class resource.
 | Hayward Fault Transbay Seismic Retrofit (Delayed Until 2041) | BART 12 | Action + 1 Junk, **once per long rest**, 6 m radius. Enemies make a Dexterity save or take `4d8` Bludgeoning and fall Prone (half damage on a success); you get +2 AC and Prone immunity for 2 turns |
 | Whole Foods Pay-By-Weight Hot Bar Heist | Californian race, level 1 | Bonus action (no Junk). Regain `1d8 +` Constitution modifier HP and advantage on Constitution saves for 2 turns, at -3 m movement |
 | This Meeting Could Have Been a Scroll | Siliconite 1 | Bonus action (no Junk), 9 m. You or an ally get `+1d4` to attack rolls and `+1d4` to ability checks for 2 turns |
+| **Round 9** | | |
+| Costco Sample Cart Parked Sideways in the Aisle | Class 8 | Action + 1 Junk, 6 m. Strength save or `2d6` Bludgeoning and Cube-Denied (-3 m movement) for 2 turns; half damage on a success |
+| DMV Ticket B047 Called at the Far Window | Class 8 | Action + 1 Junk, 12 m. Wisdom save or `2d8` Psychic and Dazed for 1 turn; half damage on a success |
+| Self-Checkout: Unexpected Item in the Bagging Area | Class 8 | Action + 1 Junk, 9 m. Wisdom save or `2d8` Psychic and Unexpected Item Lockout for 2 turns (no Bonus Actions, disadvantage on attack rolls); half damage on a success. This no longer applies Dazed |
+| Prop 13 Grandfathered Assessment Smirk | Class 12 | Bonus action + 1 Junk, **once per long rest**. Regain `1d8 + CON` HP and gain Grandfathered In (+2 AC) for 2 turns. It shares the `HC_CHAIR_BRACED` stack group, so it replaces (does not add to) the other braced +2 AC buffs |
+| Double-Decker Tech Shuttle Idling in the Bike Lane | BART 3 | Action + 1 Junk, 9 m rectangle ahead of you (3 m wide), enemies only. Dexterity save or `3d8` Bludgeoning and Prone; half damage on a success |
+| Raccoon Tribunal Behind the Green Compost Bins | Tenderloin 12 | Action + 1 Junk, **once per long rest**, 3 m. Constitution save or `2d6` Piercing + `1d8` Poison and Frightened for 1 turn; half damage on a success |
+| PurpleAir Wildfire Refresh at 2:14 PM | Overpass 12 | Action + 1 Junk, **once per long rest**, 6 m. Constitution save or `2d6` Poison and Blinded for 1 turn; half damage on a success |
+| Series-B Offsite Trust Fall Onto Asphalt | Siliconite 3 | Action (no Junk), melee spell attack at 1.5 m: `2d8` Bludgeoning and Prone. You get Offsite Bounce-Back (advantage on attack rolls) for 2 turns; it is written as a cast-time effect on you, so it may apply even if the attack misses (unchecked) |
+| HOA Architectural Committee Beige-Paint Denial | Inland Emperor 3 | Action (no Junk), 9 m. Wisdom save or `2d8` Psychic and Frightened for 2 turns; half damage on a success |
+| Nextdoor Lost-Coyote Thread, 214 Comments Deep | Beachborn 1 | Action (no Junk), 6 m radius around you, enemies only. Wisdom save or `2d8` Psychic and Frightened for 1 turn; half damage on a success |
+
+The three fear spells in round 9 (Raccoon Tribunal, HOA Beige-Paint Denial and Nextdoor Lost-Coyote Thread) now use the vanilla fear-advantage tags (`AdvantageOnFrightened` and
+`DisadvantageOnFrightened`) on their saves. Round 9 cooldowns: once per short rest for Costco, DMV, Self-Checkout, Tech Shuttle, Trust Fall, HOA and Nextdoor; once per long rest for Prop 13, Raccoon Tribunal and PurpleAir.
 
 "Class N" means Homeless Californian class level N. "Beachborn / Siliconite / Inland Emperor N" is the subrace spell list at that character level,
 the same way the v0.3.0 subrace abilities work. Every grant level above was checked against the generated spell lists and progressions in the
@@ -302,30 +316,34 @@ source, not in game.
 
 The four Flea Market items borrow their donors' meshes and icons, so they look like a mace, a robe, shoes and a healing potion.
 
-### Two more custom props (barricade and tent)
+### Five custom props (barricade, tent, scooter graveyard, robotaxi and porta-potty)
 
-Both are 3D props like the shopping cart and the blue tarp: **AI-generated procedural meshes**. A Claude agent wrote the Python geometry and the
+All five are 3D props like the shopping cart and the blue tarp: **AI-generated procedural meshes**. A Claude agent wrote the Python geometry and the
 procedural texture painting; Blender is used only for previews. The GR2 files were converted with LSLib Divine and conformed to a vanilla
 skeleton, using the same pipeline as the cart and tarp (visual resource, root template, Object stat, and a `GROUND:Spawn` on a spell). Each is a static
-prop that cannot be moved or picked up. Neither has ever been spawned in game, so facing, collision, scale and how the texture looks are all unchecked, and the
-spell icons are placeholders.
+prop that cannot be moved or picked up. None has ever been spawned in game, so facing, collision, scale and how the texture looks are all unchecked, and the
+spell icons are placeholders. The three newest spells (scooters, robotaxi, porta-potty) also add a self status next to the ground spawn on the same projectile-type donor, and
+whether that extra self status still applies alongside `GROUND:Spawn` is unverified, as with the barricade. None of the three has an emissive map, so glowing parts are only bright colours.
 
 | Spell | Where granted | Intended behaviour |
 |---|---|---|
 | Caltrans 'Lane Closed Ahead' Barricade (`HC_Target_CaltransLaneClosure`; model in `assets/models/HC_Barricade/`, code in `hc_barricade.py`) | Class 9 | Bonus action + 1 Junk, once per short rest, ground target within 9 m. Spawns an orange-and-white barricade with two reflective cones, sandbags and an amber lamp, and gives you Cones of Untouchable Authority (+2 AC) for 2 turns. Open question: whether the AC status still applies next to the prop spawn on this projectile-type donor |
-| Pop-Up Tent City Encampment (Permit Pending) (`HC_Shout_PopUpTentEncampment`; model in `assets/models/HC_PopUpTent/`, code in `hc_tent.py`) | Class 7 | Action + 1 Junk, once per long rest, self-centred. Spawns a two-person dome tent (teal and orange, with duct tape, string lights, a milk-crate side table and a pigeon in sunglasses) at your feet and gives you Illegally Cozy: 8 temporary hit points for 3 turns. Open question: whether the spawn resolves once at the caster's feet for a self-centred shout (the same open question the blue tarp had before the 2026-10-15 data check) |
+| Pop-Up Tent City Encampment (Permit Pending) (`HC_Shout_PopUpTentEncampment`; model in `assets/models/HC_PopUpTent/`, code in `hc_tent.py`) | Class 7 | Action + 1 Junk, once per long rest, self-centred. Spawns a two-person dome tent (teal and orange, with duct tape, string lights, a milk-crate side table and a pigeon in sunglasses) at your feet and gives you Illegally Cozy: 8 temporary hit points for 3 turns. It uses vanilla's shared `TEMPORARY_HP` stack, so it does not stack with other temporary HP (Rally, for example). Open question: whether the spawn resolves once at the caster's feet for a self-centred shout (the same open question the blue tarp had before the 2026-10-15 data check) |
+| Dockless Scooter Graveyard (Please Do Not Block the Sidewalk) (`HC_Target_ScooterGraveyard`; model in `assets/models/HC_ScooterGraveyard/`, code in `hc_scooters.py`) | Beachborn 5 | Action, **no Junk cost**, once per long rest, ground target within 9 m. Spawns a heap of six abandoned rental e-scooters (lime, cyan and white) against a chain-link panel with a stray traffic cone on top, and gives you Static Charge From the Pile for 3 turns: `+1d8` Lightning weapon damage and +3 m movement |
+| Autonomous Robotaxi Has Seen a Traffic Cone (`HC_Target_RobotaxiBreakdown`; model in `assets/models/HC_Robotaxi/`, code in `hc_robotaxi.py`) | Siliconite 5 | Action, **no Junk cost**, once per long rest, ground target within 9 m. Spawns a white driverless crossover with a LiDAR dome, hazard lamps, a flat tyre and one cone wedged under the bumper, and gives you Your Driver Is Arriving In 0 Minutes for 3 turns: +3 m movement and advantage on Dexterity saving throws |
+| Caltrans Festival Honey Bucket Tip-Over (`HC_Target_PortaPottyTipOver`; model in `assets/models/HC_PortaPotty/`, code in `hc_portapotty.py`) | Inland Emperor 5 | Action, **no Junk cost**, once per long rest, ground target within 9 m. Spawns a turquoise porta-potty lying on its side with a glowing puddle, loose toilet paper and an out-of-order sign, and gives you Nothing Left to Fear for 3 turns: immunity to Poisoned and `+1d4` to saving throws |
 
 ### Shared +2 AC stack
 
-Three of the new buffs share one stacking group, `HC_CHAIR_BRACED`, which is also the group used by the Chair-Braced status: 3 AM Tweaker Hyperfocus (from 3 AM Sidewalk Lawnmower Disassembly),
-the Six-Foot CVS Receipt Ward and the Amazon Fake Service-Animal Vest. They **overwrite each other**, so using a second one while the first is running replaces it rather than stacking to +4 AC.
+Four of the new buffs share one stacking group, `HC_CHAIR_BRACED`, which is also the group used by the Chair-Braced status: 3 AM Tweaker Hyperfocus (from 3 AM Sidewalk Lawnmower Disassembly),
+the Six-Foot CVS Receipt Ward, the Amazon Fake Service-Animal Vest and Grandfathered In (from Prop 13 Grandfathered Assessment Smirk). They **overwrite each other**, so using a second one while the first is running replaces it rather than stacking to +4 AC.
 Other +2 AC buffs (for example the Zoom layoff shield, the Seismic Retrofit and the barricade's cones) have their own groups. This is intended, not yet checked in game.
 
 ### Statuses
 
 Round 4 adds 11 statuses (Freeway Directions, the three Weather Complaint lines with their cooldown locks, the three Permit
-Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status), round 7 adds 8 and round 8 adds 9;
-the barricade (Cones of Untouchable Authority) and the tent (Illegally Cozy) add one each. They are the
+Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status), round 7 adds 8, round 8 adds 9 and round 9 adds 4 (Cube-Denied, Unexpected Item Lockout, Grandfathered In, Offsite Bounce-Back);
+the barricade (Cones of Untouchable Authority), the tent (Illegally Cozy), the scooters (Static Charge From the Pile), the robotaxi (Your Driver Is Arriving In 0 Minutes) and the porta-potty (Nothing Left to Fear) add one each. They are the
 conditions the spells above apply, such as Stripped Copper & Live Sparks, Cancelled & Tone-Policed, Impacted by Macroeconomic Headwinds,
 Involuntary Sidewalk Nod, Speaker Forty-One of Forty-Four and Red-Tagged: Unpermitted Everything.
 
@@ -334,9 +352,9 @@ Involuntary Sidewalk Nod, Speaker Forty-One of Forty-Four and Red-Tagged: Unperm
 - **Checked at file level:** every stat starts with `HC_`, every donor exists in the vanilla extraction and is not overridden in Honour, the spell
   lists and progressions grant each spell at the level shown above, mechanics tokens and surfaces appear in vanilla data, and the localization
   and icon registrations resolve. See [validation/README.md](validation/README.md) for the per-file breakdown.
-- **Current numbers:** the validator reports 265 stat entries, 86 icons and 555 localization handles; 186 unit tests (counted per file with `def test_`,
+- **Current numbers:** the validator reports 288 stat entries, 89 icons and 601 localization handles; 240 unit tests (counted per file with `def test_`,
   and passing per `HANDOFF.md`), and `validate.py --pak` passing per `HANDOFF.md`.
-- **Not checked:** everything about play. Nothing from rounds 4-8 or the barricade and tent has been played, and neither prop has been spawned in game: damage, saves, Junk costs, durations, the Permit Pending
+- **Not checked:** everything about play. Nothing from rounds 4-9 or the five props has been played, and none of the props has been spawned in game: damage, saves, Junk costs, durations, the Permit Pending
   stack countdown, the Weather Complaint triggers, surface effects, the Flea Market item grants and the Rhino shot's use action, level-up
   grants on a real character, and balance.
 
@@ -554,6 +572,10 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── hc_round8.py                 # Round 8: 10 bureaucracy/infrastructure/wellness spells and 9 statuses (source-only)
 ├── hc_barricade.py              # Caltrans 'Lane Closed Ahead' barricade prop and spell (source-only)
 ├── hc_tent.py                   # Pop-Up Encampment Tent prop and spell (source-only)
+├── hc_round9.py                 # Round 9: 10 grocery/DMV/HOA/tech comedy spells and 4 statuses (source-only)
+├── hc_scooters.py               # Dockless Scooter Graveyard prop and spell (source-only)
+├── hc_robotaxi.py               # Broken-Down Robotaxi prop and spell (source-only)
+├── hc_portapotty.py             # Tipped-Over Festival Porta-Potty prop and spell (source-only)
 ├── hc_cart.py                   # Abandoned Cart spell and template
 ├── hc_outfit.py                 # Outfit / wardrobe items
 ├── hc_icon_keys.py              # Maps spells to icon keys
@@ -565,7 +587,10 @@ Baldurs Gate 3 Homeless Californian Class/
 │   │   ├── HC_ShoppingCart/     # Shopping cart (added in v0.3.0)
 │   │   ├── HC_BlueTarp/         # Blue tarp lean-to (added in v0.4.0)
 │   │   ├── HC_Barricade/        # Caltrans barricade (source-only; AI-generated, Blender for previews)
-│   │   └── HC_PopUpTent/        # Pop-up encampment tent (source-only; AI-generated, Blender for previews)
+│   │   ├── HC_PopUpTent/        # Pop-up encampment tent (source-only; AI-generated, Blender for previews)
+│   ├── HC_ScooterGraveyard/ # Dockless scooter graveyard (source-only; AI-generated, Blender for previews)
+│   ├── HC_Robotaxi/         # Broken-down robotaxi (source-only; AI-generated, Blender for previews)
+│   └── HC_PortaPotty/       # Tipped-over festival porta-potty (source-only; AI-generated, Blender for previews)
 │   ├── human_race_children.xml  # Human race appearance data reused (and look-restricted) for the Californian race
 │   ├── human_cc_appearance_visuals.xml  # Human character creation visuals cloned for the Californian race
 │   └── cc_color_names.json      # Colour names used to enforce the Californian look lock
@@ -577,13 +602,13 @@ Baldurs Gate 3 Homeless Californian Class/
 └── tools/Packed/Tools/Divine.exe # LSLib Divine (NOT in git)
 ```
 
-`tools/` is not in git. Supply `Divine.exe` and `granny2.dll` yourself (see the LSLib ExportTool); they are needed for packing, localization and the cart, tarp, barricade and tent model conversion.
+`tools/` is not in git. Supply `Divine.exe` and `granny2.dll` yourself (see the LSLib ExportTool); they are needed for packing, localization and the cart, tarp, barricade, tent, scooter graveyard, robotaxi and porta-potty model conversion.
 
 ### CLI Commands:
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 186 on the current source).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 240 on the current source).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.
@@ -593,8 +618,8 @@ Baldurs Gate 3 Homeless Californian Class/
 ## 👥 Contributors & AI Pair Programming Team
 
 - **Matthew (@themadhattermsr)** — Creator, Project Director, Gameplay Design & Live In-Game Playtester.
-- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and blue tarp lean-to, and the source-only barricade and tent (Claude agents wrote the procedural model scripts; Blender was used only for previews).
+- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and blue tarp lean-to, and the source-only barricade, tent, scooter graveyard, robotaxi and porta-potty (Claude agents wrote the procedural model scripts; Blender was used only for previews).
 - **Codex (OpenAI)** — BG3 Mechanics Audits, Engine Functors, Subclass Balance & Donor Specialist.
-- **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (custom spell icons, class crests, status art, and Nexus banners). The shopping cart, blue tarp, barricade and tent models are AI-generated, not made by Gemini or a human artist.
+- **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (custom spell icons, class crests, status art, and Nexus banners). The shopping cart, blue tarp, barricade, tent, scooter graveyard, robotaxi and porta-potty models are AI-generated, not made by Gemini or a human artist.
 - **Local Model (Qwen / Ollama)** — Offline Flavor Text Ideation, Creative Brainstorming & Dialogue Concepts.
 
