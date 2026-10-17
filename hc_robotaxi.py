@@ -193,8 +193,8 @@ def generate_robotaxi(public_dir, add_loca, get_guid):
     # 3. Root template (static prop: no physics, cannot be moved or picked up). Own file, as for the cart and tarp.
     template_id = get_guid(TEMPLATE_KEY)
     title = "Broken-Down Robotaxi"
-    item_desc = ("A glossy white driverless crossover that saw a single traffic cone and gave up on life. The LiDAR dome keeps "
-                 "spinning at nobody, one tyre is flat, the hazards are on, and a parking ticket is stuck to a windshield with no "
+    item_desc = ("A glossy white driverless crossover that saw a single traffic cone and gave up on life. The LiDAR dome sits "
+                 "motionless and judging nobody, one tyre is flat, the hazard lamps are painted on, and a parking ticket is stuck to a windshield with no "
                  "one behind it. The rider rating is one and a half stars, and the balloon on the mirror is the last passenger.")
     title_handle = add_loca(OBJECT_STAT + "_Name", title)
     desc_handle = add_loca(OBJECT_STAT + "_Description", item_desc)

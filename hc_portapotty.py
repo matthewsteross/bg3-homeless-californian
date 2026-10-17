@@ -270,7 +270,7 @@ data "Description" "{status_desc};1"
                           "Costs an action and no Junk; once per long rest. "
                           "You gain Nothing Left to Fear for 3 turns: immunity to being Poisoned and +1d4 to saving throws. "
                           "The cabin lands with its door hanging off, a ribbon of toilet paper trailing out and a glowing puddle of something nobody will name. "
-                          "You are no longer afraid of anything, and you are still not touching that puddle.")
+                          "Your fear of poison is gone, but you are still not touching that puddle.")
     (stats / "HC_Spells_PortaPotty.txt").write_text(f'''new entry "{SPELL}"
 type "SpellData"
 using "{DONOR}"
