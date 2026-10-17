@@ -25,16 +25,17 @@ grants on a real Homeless Californian character, tarp facing and collision, the 
 Only level 12 and the cart had been confirmed by hand earlier. The Nexus page is live; the in-game (mod.io)
 listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
-**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4, 5, 6 and 7 (30 spells, 2 Street Trades, 2 Junk Doctrines,
-4 contraband items and a pile of statuses) are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
-play-tested**. They are listed in [their own section](#source-only-rounds-4-7-not-in-the-v040-download-not-play-tested). Nothing in the
+**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4, 5, 6, 7 and 8 (40 spells, 2 Street Trades, 2 Junk Doctrines,
+4 contraband items and a pile of statuses), plus two more custom 3D props (a Caltrans "Lane Closed Ahead" barricade and a Pop-Up Encampment Tent, each
+with its own spell), are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
+play-tested**. They are listed in [their own section](#source-only-rounds-4-8-not-in-the-v040-download-not-play-tested). Nothing in the
 public download or on Nexus has changed.
 
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
 available spells. Full effect, progression and compatibility testing continues.
-The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
+The human (Matthew, @themadhattermsr) directs the design; Claude, Codex, Antigravity/Gemini, and the local model (Qwen) assisted with code, architecture, testing and ideation. Gemini generated the custom icons and banners, and the shopping cart model is also AI-generated (the blue tarp model is too, and so are the two source-only props, the barricade and the tent; see [Contributors](#-contributors--ai-pair-programming-team)). Nothing here is hand-made by a human artist.
 
 This download is the manual PC package. It is not yet a mod.io/in-game or
 console release. Use a separate test save; respec or start a new character if
@@ -96,7 +97,7 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 149 on the current source, which includes the source-only rounds 4-7). The saved original
+(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 186 on the current source, which includes the source-only rounds 4-8, the barricade and the tent). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
@@ -215,23 +216,23 @@ Of the round 2 additions, the donors' animations and sound/visual effects are in
 
 ---
 
-## Source-only rounds 4-7 (not in the v0.4.0 download, not play-tested)
+## Source-only rounds 4-8 (not in the v0.4.0 download, not play-tested)
 
 **Read this first:** everything in this section is in the repository and in the locally built `dist/HomelessCalifornian.pak`, and it is
 **not** in the public v0.4.0 download or the Nexus file. You cannot get it by downloading the release. **Nobody has played any of it.**
-The only checking so far is file-level: 149 unit tests and the pak validator pass on the current source, which proves the
+The only checking so far is file-level: 186 unit tests and the pak validator pass on the current source, which proves the
 files agree with each other and with vanilla data, not that a single spell does what it says. Numbers are copied from the generated game
 data and the localization text.
 
-Two honesty notes. First, the 28 spells from rounds 5, 6 and 7 currently use **placeholder vanilla icons** (the Gemini art for them has not
-been generated yet); only Freeway Directions and Permit Pending from round 4 have custom icons. Second, most of these are written as
+Two honesty notes. First, the 28 spells from rounds 5, 6 and 7, the 10 round 8 spells and the two prop spells (barricade and tent) currently use **placeholder vanilla icons** (the Gemini art for them has not
+been generated yet; the icon keys are registered, so the art will be picked up when it exists); only Freeway Directions and Permit Pending from round 4 have custom icons. Second, most of these are written as
 "failed save = full damage plus the nasty status, successful save = half damage", and the status duration, surface and Prone behaviour is
 untested. Expect a few to be wrong the first time they meet an actual goblin.
 
 Most need a **new character or a respec** to receive the grants. All are once per short rest unless the table says otherwise, and "1 Junk" is
 the class resource.
 
-### Spells (30 in total)
+### Spells (40 in rounds 4-8, plus the two prop spells below)
 
 | Spell | Where granted | Intended behaviour |
 |---|---|---|
@@ -244,7 +245,7 @@ the class resource.
 | Live Copper Wire Harvest | Class 7 | Action + 1 Junk. Melee spell attack at 1.5 m: `3d8` Lightning + `1d8` Slashing, -2 AC and no Reactions for 2 turns, electrified puddle |
 | Prop 47 '$949' Calculator | Class 9 | Action + 1 Junk, 9 m. You pocket 5 gold and get +3 m movement and Prone immunity for 1 turn; target makes a Wisdom save or takes `3d8` Psychic and is Dazed for 2 turns (half on a success) |
 | Jailbroken E-Scooter Hit-and-Run | Class 10 | Action + 1 Junk, 9 m by 3 m rectangle ahead of you. You get +3 m movement for 1 turn; Dexterity save or `3d8 + CON` Bludgeoning + `1d8` Thunder and Prone (half on a success) |
-| Tin-Foil Bus Shelter Hotbox | Tenderloin 6 | Action + 1 Junk, 3 m radius. Constitution save or `3d8` Poison + `2d6` Psychic and Fent Stupor for 1 turn (half on a success); leaves fog for 2 turns |
+| Tin-Foil Bus Shelter Hotbox | Tenderloin 6 | Action + **2 Junk**, 3 m radius. Constitution save or `3d8` Poison + `2d6` Psychic and Fent Stupor for 1 turn (half on a success); leaves fog for 2 turns |
 | Aggressive Mixtape & Sunset Bongos | Venice 6 | Action + 1 Junk, 9 m. Wisdom save or `2d8` Thunder + `2d8` Psychic and Socially Shamed for 2 turns, and you collect 5 gold (half on a success) |
 | Damp Cloth BART Seat Mystery Stain | BART 6 | Action + 1 Junk, 9 m. Constitution save or `3d8` Poison + `1d8` Acid and Fecal Stench for 2 turns (half on a success) |
 | Stolen Propane Tank Overpass Cookout | Overpass 6 | Bonus action + 1 Junk. Regain `1d8 + CON` HP; 2 turns of Cold resistance and `+1d6` Fire weapon damage; a 2 m patch of fire around you for 2 turns (you stand in it too) |
@@ -256,13 +257,13 @@ the class resource.
 | Six-Foot CVS Receipt Ward | Class 11 | Bonus action + 1 Junk. 2 turns of +2 AC and resistance to Slashing and Piercing |
 | 3 AM Oakland Intersection Sideshow | BART 6 | Action + 1 Junk, 9 m. Dexterity save or `3d8` Bludgeoning + `1d8` Fire and Prone (half on a success); 2.5 m tire-smoke cloud for 2 turns |
 | Malibu Trust-Fund Surfboard Localism | Beachborn 3 | Action, melee spell attack at 1.5 m: `2d8` Bludgeoning + `1d6` Cold, shoves the target 4 m, disadvantage on its attack rolls for 2 turns |
-| 9 AM Zoom All-Hands 15% Layoff | Siliconite 3 | Action, 6 m. You get +2 AC and advantage on Wisdom saves for 2 turns; enemies make a Wisdom save or take `2d8` Psychic and lose 3 m movement and Reactions for 2 turns (half on a success) |
+| 9 AM Zoom All-Hands 15% Layoff | Siliconite 3 | Action, **once per long rest**, 6 m. You get +2 AC and advantage on Wisdom saves for 2 turns; enemies make a Wisdom save or take `2d8` Psychic and lose 3 m movement and Reactions for 2 turns (half on a success) |
 | Hemet Garage 2-Liter Shake-and-Bake Rupture | Inland Emperor 5 | Action, **once per long rest**, 3 m radius. Dexterity save or `3d8` Fire + `2d8` Poison and Burning for 2 turns (half on a success); fire on the ground |
 | **Round 7** | | |
 | Unsolicited Red-Light Dirty Squeegee | Class 1 | Action + 1 Junk. Melee spell attack at 1.5 m: `2d6` Acid + `1d6` Bludgeoning and Blinded for 1 turn. "That will be five dollars, cash or Venmo." |
 | Amazon Fake Service-Animal Vest | Class 2 | Bonus action + 1 Junk. 2 turns of +2 AC and advantage on Deception and Intimidation |
 | Fermented Trucker 'Way of the Road' Gallon Jug | Class 7 | Action + 1 Junk, 3 m radius. Constitution save or `3d8` Acid + `2d6` Poison and Fecal Stench for 2 turns (half on a success); Acid surface |
-| Election-Year VIP Street-Sweep Photo Op | Class 12 | Bonus action, **once per long rest**, 6 m. Restores 2 Junk and gives you +2 AC and +3 m movement for 2 turns; enemies make a Wisdom save or take `4d8` Psychic and are Socially Shamed for 2 turns (half on a success) |
+| Election-Year VIP Street-Sweep Photo Op | Class 12 | Bonus action (costs nothing and no longer restores Junk), **once per long rest**, 6 m. You get +2 AC and +3 m movement for 2 turns; enemies make a Wisdom save or take `4d8` Psychic and are Socially Shamed for 2 turns (half on a success) |
 | Secondhand Foil-Trail Exhale | Tenderloin 3 | Action + 1 Junk, 3 m. Constitution save or `2d8` Poison + `2d8` Psychic, halved movement and disadvantage on attack rolls for 2 turns (half on a success) |
 | Bootleg Streetlight 220V Power Tap | Overpass 3 | Action + 1 Junk, 9 m. Dexterity save or `3d8` Lightning + `1d8` Fire, no Reactions and disadvantage on Dexterity saves for 2 turns (half on a success); electrified puddle |
 | Expired Trenbolone & Raw Liver Tantrum | Venice 10 | Bonus action + 1 Junk. 2 turns of `+1d8` Force weapon damage, +3 m movement and advantage on attack rolls |
@@ -270,6 +271,17 @@ the class resource.
 | Beverly Hills Emergency Botox & Lip-Filler Freeze | Beachborn 5 | Action, **once per long rest**, 9 m. Constitution save or `3d8` Poison, no Bonus Actions or Reactions and disadvantage on Constitution saves for 2 turns (half on a success) |
 | Bay Area 9-Person Polycule Google Calendar Invite | Siliconite 5 | Action, **once per long rest**, 6 m. Wisdom save or `3d8` Psychic, halved movement and disadvantage on attack rolls for 2 turns (half on a success) |
 | 2 AM Straight-Piped Nissan Altima Rev | Inland Emperor 1 | Action, 9 m. Constitution save or `2d8` Thunder, -2 AC and disadvantage on Wisdom saves for 2 turns (half on a success) |
+| **Round 8** | | |
+| Unrepaired Pothole Since 2014 Ankle-Breaker | Class 4 | Action + 1 Junk, 9 m. Dexterity save or `2d8` Bludgeoning, Prone, and Class-Action Metatarsal Fracture (halved movement, disadvantage on Dexterity saves) for 2 turns (half damage on a success) |
+| NIMBY Three-Minute Public Comment Period | Class 6 | Action + **2 Junk**, **once per long rest**, 6 m radius. Enemies make a Wisdom save or take `2d6` Psychic and cannot move or take actions, bonus actions or reactions for 1 turn (Speaker Forty-One of Forty-Four); half damage on a success |
+| Department of Unfinished Business Red-Tag Notice | Class 10 | Action + 1 Junk, 12 m. Wisdom save or `3d10` Force and Red-Tagged for 2 turns (attack rolls against it have advantage, disadvantage on its Wisdom saves); half damage on a success |
+| Municipal Budget Hearing & Consent Calendar | Class 11 | Bonus action + 1 Junk, **once per long rest**. 3 turns of `+1d4` to attack rolls, `+1d4` to saving throws and +1 AC |
+| Unlicensed Sidewalk Chiropractic Cervical Adjustment | Tenderloin 10 | Action + 1 Junk, ally within 1.5 m. Heals `4d8` and gives advantage on Strength and Dexterity saves for 3 turns, but knocks the ally Prone for 1 turn |
+| PG&E Public Safety Power Shutoff Rolling Blackout | Overpass 10 | Action + 1 Junk, **once per long rest**, 4 m radius. Dexterity save or `3d8` Lightning and Blinded for 1 turn (half damage on a success); a 4 m darkness cloud for 3 turns |
+| Emergency Ten-Dollar Boardwalk Sunglasses | Venice 12 | Bonus action (**no Junk cost**), **once per long rest**. 3 turns of immunity to Blinded, `+1d4` to attack rolls and advantage on Intimidation |
+| Hayward Fault Transbay Seismic Retrofit (Delayed Until 2041) | BART 12 | Action + 1 Junk, **once per long rest**, 6 m radius. Enemies make a Dexterity save or take `4d8` Bludgeoning and fall Prone (half damage on a success); you get +2 AC and Prone immunity for 2 turns |
+| Whole Foods Pay-By-Weight Hot Bar Heist | Californian race, level 1 | Bonus action (no Junk). Regain `1d8 +` Constitution modifier HP and advantage on Constitution saves for 2 turns, at -3 m movement |
+| This Meeting Could Have Been a Scroll | Siliconite 1 | Bonus action (no Junk), 9 m. You or an ally get `+1d4` to attack rolls and `+1d4` to ability checks for 2 turns |
 
 "Class N" means Homeless Californian class level N. "Beachborn / Siliconite / Inland Emperor N" is the subrace spell list at that character level,
 the same way the v0.3.0 subrace abilities work. Every grant level above was checked against the generated spell lists and progressions in the
@@ -290,21 +302,41 @@ source, not in game.
 
 The four Flea Market items borrow their donors' meshes and icons, so they look like a mace, a robe, shoes and a healing potion.
 
+### Two more custom props (barricade and tent)
+
+Both are 3D props like the shopping cart and the blue tarp: **AI-generated procedural meshes**. A Claude agent wrote the Python geometry and the
+procedural texture painting; Blender is used only for previews. The GR2 files were converted with LSLib Divine and conformed to a vanilla
+skeleton, using the same pipeline as the cart and tarp (visual resource, root template, Object stat, and a `GROUND:Spawn` on a spell). Each is a static
+prop that cannot be moved or picked up. Neither has ever been spawned in game, so facing, collision, scale and how the texture looks are all unchecked, and the
+spell icons are placeholders.
+
+| Spell | Where granted | Intended behaviour |
+|---|---|---|
+| Caltrans 'Lane Closed Ahead' Barricade (`HC_Target_CaltransLaneClosure`; model in `assets/models/HC_Barricade/`, code in `hc_barricade.py`) | Class 9 | Bonus action + 1 Junk, once per short rest, ground target within 9 m. Spawns an orange-and-white barricade with two reflective cones, sandbags and an amber lamp, and gives you Cones of Untouchable Authority (+2 AC) for 2 turns. Open question: whether the AC status still applies next to the prop spawn on this projectile-type donor |
+| Pop-Up Tent City Encampment (Permit Pending) (`HC_Shout_PopUpTentEncampment`; model in `assets/models/HC_PopUpTent/`, code in `hc_tent.py`) | Class 7 | Action + 1 Junk, once per long rest, self-centred. Spawns a two-person dome tent (teal and orange, with duct tape, string lights, a milk-crate side table and a pigeon in sunglasses) at your feet and gives you Illegally Cozy: 8 temporary hit points for 3 turns. Open question: whether the spawn resolves once at the caster's feet for a self-centred shout (the same open question the blue tarp had before the 2026-10-15 data check) |
+
+### Shared +2 AC stack
+
+Three of the new buffs share one stacking group, `HC_CHAIR_BRACED`, which is also the group used by the Chair-Braced status: 3 AM Tweaker Hyperfocus (from 3 AM Sidewalk Lawnmower Disassembly),
+the Six-Foot CVS Receipt Ward and the Amazon Fake Service-Animal Vest. They **overwrite each other**, so using a second one while the first is running replaces it rather than stacking to +4 AC.
+Other +2 AC buffs (for example the Zoom layoff shield, the Seismic Retrofit and the barricade's cones) have their own groups. This is intended, not yet checked in game.
+
 ### Statuses
 
 Round 4 adds 11 statuses (Freeway Directions, the three Weather Complaint lines with their cooldown locks, the three Permit
-Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status) and round 7 adds 8. They are the
-conditions the spells above apply, such as Stripped Copper & Live Sparks, Cancelled & Tone-Policed, Impacted by Macroeconomic Headwinds and
-Involuntary Sidewalk Nod.
+Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status), round 7 adds 8 and round 8 adds 9;
+the barricade (Cones of Untouchable Authority) and the tent (Illegally Cozy) add one each. They are the
+conditions the spells above apply, such as Stripped Copper & Live Sparks, Cancelled & Tone-Policed, Impacted by Macroeconomic Headwinds,
+Involuntary Sidewalk Nod, Speaker Forty-One of Forty-Four and Red-Tagged: Unpermitted Everything.
 
 ### What is checked, and what is not
 
 - **Checked at file level:** every stat starts with `HC_`, every donor exists in the vanilla extraction and is not overridden in Honour, the spell
   lists and progressions grant each spell at the level shown above, mechanics tokens and surfaces appear in vanilla data, and the localization
   and icon registrations resolve. See [validation/README.md](validation/README.md) for the per-file breakdown.
-- **Current numbers:** 240 locally defined stat entries (162 of them with an `HC_` prefix) and 505 localization handles, counted from the generated
-  source; 149 unit tests (counted per file, passing per `HANDOFF.md`), and `validate.py --pak` passing per `HANDOFF.md`.
-- **Not checked:** everything about play. Nothing from rounds 4-7 has been played: damage, saves, Junk costs, durations, the Permit Pending
+- **Current numbers:** the validator reports 265 stat entries, 86 icons and 555 localization handles; 186 unit tests (counted per file with `def test_`,
+  and passing per `HANDOFF.md`), and `validate.py --pak` passing per `HANDOFF.md`.
+- **Not checked:** everything about play. Nothing from rounds 4-8 or the barricade and tent has been played, and neither prop has been spawned in game: damage, saves, Junk costs, durations, the Permit Pending
   stack countdown, the Weather Complaint triggers, surface effects, the Flea Market item grants and the Rhino shot's use action, level-up
   grants on a real character, and balance.
 
@@ -519,6 +551,9 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── hc_round5.py                 # Round 5: 10 stereotype/street comedy spells and 7 statuses (source-only)
 ├── hc_round6.py                 # Round 6: Oakland Flea Market items and 6 more spells (source-only; also adds trades/doctrines via the two files above)
 ├── hc_round7.py                 # Round 7: 11 spells and 8 statuses (source-only)
+├── hc_round8.py                 # Round 8: 10 bureaucracy/infrastructure/wellness spells and 9 statuses (source-only)
+├── hc_barricade.py              # Caltrans 'Lane Closed Ahead' barricade prop and spell (source-only)
+├── hc_tent.py                   # Pop-Up Encampment Tent prop and spell (source-only)
 ├── hc_cart.py                   # Abandoned Cart spell and template
 ├── hc_outfit.py                 # Outfit / wardrobe items
 ├── hc_icon_keys.py              # Maps spells to icon keys
@@ -528,7 +563,9 @@ Baldurs Gate 3 Homeless Californian Class/
 │   ├── icons/                   # Custom spell/class/race art (<MapKey>.png) picked up by build_icons.py
 │   ├── models/                  # AI-generated model scripts and converted files
 │   │   ├── HC_ShoppingCart/     # Shopping cart (added in v0.3.0)
-│   │   └── HC_BlueTarp/         # Blue tarp lean-to (added in v0.4.0)
+│   │   ├── HC_BlueTarp/         # Blue tarp lean-to (added in v0.4.0)
+│   │   ├── HC_Barricade/        # Caltrans barricade (source-only; AI-generated, Blender for previews)
+│   │   └── HC_PopUpTent/        # Pop-up encampment tent (source-only; AI-generated, Blender for previews)
 │   ├── human_race_children.xml  # Human race appearance data reused (and look-restricted) for the Californian race
 │   ├── human_cc_appearance_visuals.xml  # Human character creation visuals cloned for the Californian race
 │   └── cc_color_names.json      # Colour names used to enforce the Californian look lock
@@ -540,13 +577,13 @@ Baldurs Gate 3 Homeless Californian Class/
 └── tools/Packed/Tools/Divine.exe # LSLib Divine (NOT in git)
 ```
 
-`tools/` is not in git. Supply `Divine.exe` and `granny2.dll` yourself (see the LSLib ExportTool); they are needed for packing, localization and the cart and tarp model conversion.
+`tools/` is not in git. Supply `Divine.exe` and `granny2.dll` yourself (see the LSLib ExportTool); they are needed for packing, localization and the cart, tarp, barricade and tent model conversion.
 
 ### CLI Commands:
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 149 on the current source).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 186 on the current source).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.
@@ -556,8 +593,8 @@ Baldurs Gate 3 Homeless Californian Class/
 ## 👥 Contributors & AI Pair Programming Team
 
 - **Matthew (@themadhattermsr)** — Creator, Project Director, Gameplay Design & Live In-Game Playtester.
-- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and the blue tarp lean-to (Claude agents wrote the procedural model scripts).
+- **Claude (Anthropic)** — Initial Architecture, Handoff Lead, Generator Engineering & Lore QA, and directing and testing the AI-generated shopping cart and blue tarp lean-to, and the source-only barricade and tent (Claude agents wrote the procedural model scripts; Blender was used only for previews).
 - **Codex (OpenAI)** — BG3 Mechanics Audits, Engine Functors, Subclass Balance & Donor Specialist.
-- **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (custom spell icons, class crests, status art, and Nexus banners). The shopping cart and blue tarp models are AI-generated, not made by Gemini or a human artist.
+- **Antigravity / Gemini (Google DeepMind)** — Lead Orchestrator, Generator Pipeline, Test Suite & Validation, and Visual Artist (custom spell icons, class crests, status art, and Nexus banners). The shopping cart, blue tarp, barricade and tent models are AI-generated, not made by Gemini or a human artist.
 - **Local Model (Qwen / Ollama)** — Offline Flavor Text Ideation, Creative Brainstorming & Dialogue Concepts.
 
