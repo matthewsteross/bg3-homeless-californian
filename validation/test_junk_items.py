@@ -192,7 +192,7 @@ class JunkItemTests(unittest.TestCase):
                         if a.get('Name') == 'HomelessCalifornian' and a.get('Level') == GRANT_LEVEL
                         for uid in re.findall(r'AddSpells\(([0-9a-f-]{36})', a.get('Selectors', ''))
                         for s in self.spell_lists[uid] if s.startswith('HC_')]
-        self.assertEqual(len(new_at_level), 2)  # Public Scene plus Curb Alert
+        self.assertEqual(len(new_at_level), 3)  # Public Scene, Curb Alert, and 3 AM Sidewalk Lawnmower Disassembly
 
     def test_icons_exist_in_vanilla_or_hc_assets(self):
         vanilla_icons = (VANILLA_TEMPLATES.read_bytes() + b''.join(

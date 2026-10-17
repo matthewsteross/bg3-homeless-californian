@@ -46,6 +46,17 @@ SPELL_ICON_KEYS = {
     'HC_Target_TuleFog': 'Spell_BakersfieldTuleFog',
     'HC_Target_DrainageDitchDigIn': 'Spell_DrainageDitchDigIn',
     'HC_Shout_CurbAlert': 'Spell_CurbAlert',
+    # Round 5 (stereotype & street expansion)
+    'HC_Shout_3AMLawnmowerDisassembly': 'Spell_3AMLawnmowerDisassembly',
+    'HC_Target_CopperWireStrip': 'Spell_CopperWireStrip',
+    'HC_Target_Prop47Calculator': 'Spell_Prop47Calculator',
+    'HC_Zone_LimeScooterHitAndRun': 'Spell_LimeScooterHitAndRun',
+    'HC_Projectile_FoilFentHotbox': 'Spell_FoilFentHotbox',
+    'HC_Target_VeniceDrumCircle': 'Spell_VeniceDrumCircle',
+    'HC_Target_BARTFabricSeatBiohazard': 'Spell_BARTFabricSeatBiohazard',
+    'HC_Shout_PropaneTankSidewalkBBQ': 'Spell_PropaneTankSidewalkBBQ',
+    'HC_Target_UnhousedLecture': 'Spell_UnhousedLecture',
+    'HC_Shout_ErewhonSmoothie': 'Spell_ErewhonSmoothie',
 }
 
 def icon_for_spell(spell, fallback):

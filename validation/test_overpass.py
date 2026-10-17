@@ -26,7 +26,7 @@ NEW_SPELLS = ['HC_Zone_StormDrainFlashFlood', 'HC_Shout_BlueTarpLeanTo', 'HC_Tar
 NEW_STATUSES = ['HC_TARP_COVER', 'HC_SPILLWAY_SOVEREIGN']
 NEW_PASSIVES = ['HC_ConcreteBankTraction', 'HC_UnderpassClimateControl', 'HC_RebarAnchor']
 LEVEL_GRANTS = {'3': (['HC_Zone_StormDrainFlashFlood', 'HC_Shout_BlueTarpLeanTo'], 'HC_ConcreteBankTraction'),
-                '6': (['HC_Target_CulvertSiphon'], 'HC_UnderpassClimateControl'),
+                '6': (['HC_Target_CulvertSiphon', 'HC_Shout_PropaneTankSidewalkBBQ'], 'HC_UnderpassClimateControl'),
                 # Level 10's spell comes from the hand-written SpellList_Overpass_L10 (BART L10 style), not
                 # from an expansion list, so it is asserted in test_level_ten_spell_list_is_wired.
                 '10': ([], 'HC_RebarAnchor'),
@@ -50,6 +50,7 @@ class OverpassSubclassTests(unittest.TestCase):
         data = cls.public / 'Stats/Generated/Data'
         cls.spells = parse_entries((data / 'HC_Spells_Overpass.txt').read_text(encoding='utf-8'))
         cls.spells.update(parse_entries((data / 'HC_Spells_Capstone.txt').read_text(encoding='utf-8')))
+        cls.spells.update(parse_entries((data / 'HC_Spells_Round5.txt').read_text(encoding='utf-8')))
         cls.statuses = parse_entries((data / 'HC_Status_Overpass.txt').read_text(encoding='utf-8'))
         cls.statuses.update(parse_entries((data / 'HC_Status_Capstone.txt').read_text(encoding='utf-8')))
         cls.passives = parse_entries((data / 'HC_Passives_Overpass.txt').read_text(encoding='utf-8'))

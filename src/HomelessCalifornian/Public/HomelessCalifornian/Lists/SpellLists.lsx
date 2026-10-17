@@ -78,7 +78,7 @@
 
                 <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask;HC_Target_FreewayDirections"/>
+                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask;HC_Target_FreewayDirections;HC_Target_UnhousedLecture;HC_Shout_ErewhonSmoothie"/>
                     <attribute id="UUID" type="guid" value="51fb8228-c489-56ca-9757-19a03867dccb"/>
                 </node>
 
@@ -132,11 +132,11 @@
                     <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip"/>
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_CurbAlert;HC_Target_PublicScene"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_CurbAlert;HC_Target_PublicScene;HC_Shout_3AMLawnmowerDisassembly"/>
                     <attribute id="UUID" type="guid" value="43874101-0a25-537d-a720-49a411e9f321"/>
                 </node>
                 <node id="SpellList">
@@ -152,11 +152,11 @@
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator"/>
                     <attribute id="UUID" type="guid" value="fb6e0d6b-a655-58a2-9609-32e2f64bc0dd"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CompassionBurnout"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CompassionBurnout;HC_Zone_LimeScooterHitAndRun"/>
                     <attribute id="UUID" type="guid" value="9c43433e-1fde-563a-9dea-57398062a490"/>
                 </node>
                 <node id="SpellList">
@@ -168,7 +168,7 @@
                     <attribute id="UUID" type="guid" value="67548cfb-08e4-5dd5-9771-3583c635d527"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CurbsideClinic"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CurbsideClinic;HC_Projectile_FoilFentHotbox"/>
                     <attribute id="UUID" type="guid" value="eb9b2699-07bb-5140-9ee3-126e46dc80ee"/>
                 </node>
                 <node id="SpellList">
@@ -188,7 +188,7 @@
                     <attribute id="UUID" type="guid" value="a0f5463f-77fb-5159-896a-3e168c35848e"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_Sublet"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_Sublet;HC_Target_VeniceDrumCircle"/>
                     <attribute id="UUID" type="guid" value="a7ab479a-303f-5b4e-af01-735240385d9f"/>
                 </node>
                 <node id="SpellList">
@@ -196,7 +196,7 @@
                     <attribute id="UUID" type="guid" value="536189bc-d4a4-55b8-b808-b941621a6bbc"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform;HC_Target_FareInspection"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform;HC_Target_FareInspection;HC_Target_BARTFabricSeatBiohazard"/>
                     <attribute id="UUID" type="guid" value="7fb6225f-36e6-5040-b0bf-9b3fbee73264"/>
                 </node>
                 <node id="SpellList">
@@ -212,7 +212,7 @@
                     <attribute id="UUID" type="guid" value="416267bb-fc15-5cfb-acb2-c5c7457c5dcb"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CulvertSiphon"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CulvertSiphon;HC_Shout_PropaneTankSidewalkBBQ"/>
                     <attribute id="UUID" type="guid" value="a904b84f-e0a7-56e1-bd77-6111e34c1c26"/>
                 </node>
             </children>

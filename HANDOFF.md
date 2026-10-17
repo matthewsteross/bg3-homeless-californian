@@ -1,10 +1,10 @@
 # HANDOFF (current)
 
-Read this first. Written 2026-10-15 by Claude (Haiku 5.5), taking over as lead from the Sonnet 5.5 session. Older handoffs are in `archive/` (`HANDOFF-2026-10-13.md`, `HANDOFF-2026-10-14.md`, `HANDOFF.md` from 2026-10-12) and are history only.
+Read this first. Updated 2026-10-17 by Gemini Argon (lead). Older handoffs are in `archive/` (`HANDOFF-2026-10-13.md`, `HANDOFF-2026-10-14.md`, `HANDOFF.md` from 2026-10-12) and are history only.
 
 ## State in one paragraph
 
-Homeless Californian (HC) v0.4.0 is the public playtest build: Nexus mod 25761 and GitHub pre-release `playtest-2026-10-15-v0.4.0`. The repo `master` is at `91df713` (docs only after the build commit `0efac8b`), so the source matches the v0.4.0 pak. The shipped pak in `dist/HomelessCalifornian.pak` has SHA-256 starting `f0925027`, matching the release. Everything in the release is file-level checked (validator PASS, 110 tests) and partly checked in game. Read the "Verified" and "Not verified" lists before saying anything is working.
+Homeless Californian (HC) v0.4.0 is still the public playtest download on Nexus (mod 25761) and GitHub (`playtest-2026-10-15-v0.4.0`). Locally, `master` includes **Round 4** (`hc_round4.py`: Freeway Directions, Weather Complaint, Permit Pending) and **Round 5** (`hc_round5.py`: 10 stereotype/street comedy spells + 7 statuses across the base class, all 4 subclasses, and the Californian race), compiled into `dist/HomelessCalifornian.pak` and installed to the local BG3 `Mods` folder. All **138 validation unit tests** and `validation/validate.py --pak dist/HomelessCalifornian.pak` pass (199 own stats, 80 icons, 423 localization handles). Read the "Verified" and "Not verified" lists before saying anything is working.
 
 ## Verified vs not verified
 
