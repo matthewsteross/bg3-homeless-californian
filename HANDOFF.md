@@ -6,6 +6,15 @@
 
 ---
 
+## 0. Update 2026-10-17 evening (Claude Sonnet 5.5, lead)
+
+- **Added since the section below was written (local commits, not pushed):** Round 8 (`hc_round8.py`: 10 spells + 9 statuses; Pothole Ankle-Breaker, NIMBY Public Comment Period, Department of Unfinished Business, Municipal Budget Hearing, Sidewalk Chiropractic Adjustment, PG&E Public Safety Blackout, Emergency Boardwalk Sunglasses, Hayward Fault Seismic Retrofit, Whole Foods Hot Bar Heist, Meeting Could Have Been a Scroll) and the **Caltrans "Lane Closed Ahead" barricade** (`hc_barricade.py`, `assets/models/HC_Barricade/`, base class level 9; the second Blender-built prop after the cart and tarp). 174 unit tests and `validate.py --pak` pass; the pak is installed in the local `Mods` folder (old one backed up in `work/installed-backups/`).
+- **Codex audits:** `work/codex-audit-rounds5-7-2026-10-17.md` found no load-breaking problems in rounds 5-7; its text/filter fixes are applied (hostile-area shouts use `Enemy()`; Scooter and Propane wording corrected). Round 8 + barricade audit: `work/codex-audit-round8-barricade-2026-10-17.md`.
+- **Docs:** README, TESTING and `validation/README.md` now document rounds 4-7 as source-only with true test counts.
+- **Nexus:** Matthew asked for the latest build to go to Nexus. A v0.5.0 ZIP is staged (`work/public-playtest/HomelessCalifornian-Playtest-2026-10-17-v0.5.0.zip`, built before Round 8, so it does NOT contain Round 8 or the barricade) but the harness blocked the final upload step. Matthew can upload it by hand, or approve a retry. Rebuild the ZIP first if the Round 8 pak should ship.
+- **Art:** Gemini image quota is exhausted (429), so 26 Round 5-7 icons plus all Round 8 and barricade icons still use vanilla placeholders. Art model rule: Gemini Flash only.
+- Test-count tweaks made for Round 8: `test_expansion.py` list count is now 36, `test_overpass.py` accepts a second L10 list, `test_junk_items.py` expects 4 new base L6 spells.
+
 ## 1. Current State in One Paragraph
 
 `master` has been built, validated, installed to the local BG3 `Mods` folder, and pushed to GitHub (`origin/master`). Since v0.4.0 (`playtest-2026-10-15-v0.4.0`, Nexus mod 25761), we have built and packaged four expansion rounds into `dist/HomelessCalifornian.pak`:
