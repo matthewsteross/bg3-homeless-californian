@@ -84,7 +84,7 @@
 
                 <!-- Racial Beachborn Spells: Hang Ten (L1), Rip Current (L3), Golden Hour (L5) -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Shout_HangTen"/>
+                    <attribute id="Spells" type="LSString" value="Shout_HangTen;HC_Shout_NextdoorLostCoyoteThread"/>
                     <attribute id="UUID" type="guid" value="1e8aa959-4a02-5115-ae29-e06d7a92a108"/>
                 </node>
                 <node id="SpellList">
@@ -102,7 +102,7 @@
                     <attribute id="UUID" type="guid" value="0259a9da-2913-5f47-9d65-8ee23e4de2da"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_DisruptivePivot;HC_Shout_ZoomMassLayoff"/>
+                    <attribute id="Spells" type="LSString" value="Target_DisruptivePivot;HC_Shout_ZoomMassLayoff;HC_Target_SeriesBOffsiteTrustFall"/>
                     <attribute id="UUID" type="guid" value="5c6cf44b-e981-5544-8fc6-66b5eb9ae5c9"/>
                 </node>
                 <node id="SpellList">
@@ -116,7 +116,7 @@
                     <attribute id="UUID" type="guid" value="37a7f600-db05-51cf-afd9-97edc9991df0"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust;HC_Target_TuleFog"/>
+                    <attribute id="Spells" type="LSString" value="Zone_OverpassExhaust;HC_Target_TuleFog;HC_Target_HOABeigePaintDenial"/>
                     <attribute id="UUID" type="guid" value="71f3e612-736a-5a6a-958e-1d5bc104d5fe"/>
                 </node>
                 <node id="SpellList">
@@ -148,7 +148,7 @@
                     <attribute id="UUID" type="guid" value="e80ad412-fdf2-5d49-a4fb-4c72445fd8ab"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation;HC_Shout_OaklandFleaMarket"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation;HC_Shout_OaklandFleaMarket;HC_Target_CostcoSampleCartSideways;HC_Target_DMVTicketB047FarWindow;HC_Target_SelfCheckoutUnexpectedItem"/>
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
@@ -164,7 +164,7 @@
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_GovernorGavinPhotoOp"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_GovernorGavinPhotoOp;HC_Shout_Prop13GrandfatheredSmirk"/>
                     <attribute id="UUID" type="guid" value="4ba423d9-2b2d-5102-a737-782b98445a15"/>
                 </node>
                 <node id="SpellList">
@@ -176,7 +176,7 @@
                     <attribute id="UUID" type="guid" value="eb9b2699-07bb-5140-9ee3-126e46dc80ee"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Tenderloin"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Tenderloin;HC_Target_RaccoonTribunalCompostBins"/>
                     <attribute id="UUID" type="guid" value="ad40ad38-2e82-59f1-8899-1a37b2d4be7d"/>
                 </node>
                 <node id="SpellList">
@@ -208,7 +208,11 @@
                     <attribute id="UUID" type="guid" value="7dac62a1-cbb9-5258-9fc7-5fde5d8a8c44"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Overpass"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_DoubleDeckerTechShuttleBikeLane"/>
+                    <attribute id="UUID" type="guid" value="81876f94-3511-5d34-aabc-7ee73a78abcd"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Overpass;HC_Target_PurpleAirWildfireRefresh"/>
                     <attribute id="UUID" type="guid" value="64194ab6-067a-53c3-aa17-9868a33d4afb"/>
                 </node>
                 <node id="SpellList">

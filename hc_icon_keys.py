@@ -90,6 +90,17 @@ SPELL_ICON_KEYS = {
     'HC_Target_MeetingCouldHaveBeenAScroll': 'Spell_MeetingCouldHaveBeenAScroll',
     'HC_Target_CaltransLaneClosure': 'Spell_CaltransLaneClosure',
     'HC_Shout_PopUpTentEncampment': 'Spell_PopUpTentEncampment',
+    # Round 9 (art pending; vanilla fallbacks until the PNGs exist)
+    'HC_Target_CostcoSampleCartSideways': 'Spell_CostcoSampleCartSideways',
+    'HC_Target_DMVTicketB047FarWindow': 'Spell_DMVTicketB047FarWindow',
+    'HC_Target_SelfCheckoutUnexpectedItem': 'Spell_SelfCheckoutUnexpectedItem',
+    'HC_Shout_Prop13GrandfatheredSmirk': 'Spell_Prop13GrandfatheredSmirk',
+    'HC_Zone_DoubleDeckerTechShuttleBikeLane': 'Spell_TechShuttleBikeLane',
+    'HC_Target_RaccoonTribunalCompostBins': 'Spell_RaccoonTribunalCompostBins',
+    'HC_Target_PurpleAirWildfireRefresh': 'Spell_PurpleAirWildfireRefresh',
+    'HC_Target_SeriesBOffsiteTrustFall': 'Spell_SeriesBOffsiteTrustFall',
+    'HC_Target_HOABeigePaintDenial': 'Spell_HOABeigePaintDenial',
+    'HC_Shout_NextdoorLostCoyoteThread': 'Spell_NextdoorLostCoyoteThread',
 }
 
 def icon_for_spell(spell, fallback):

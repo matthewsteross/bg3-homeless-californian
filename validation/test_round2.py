@@ -136,7 +136,7 @@ class RoundTwoTests(unittest.TestCase):
     def test_tule_fog_is_inland_emperor_level_three_only(self):
         level3 = self.progression('InlandEmperor', '3')
         self.assertIn('AddSpells(' + generator.SPELLLIST_INLANDEMPEROR_L3, level3['Selectors'])
-        self.assertEqual(self.spell_lists[generator.SPELLLIST_INLANDEMPEROR_L3], ['Zone_OverpassExhaust', 'HC_Target_TuleFog'])
+        self.assertEqual(self.spell_lists[generator.SPELLLIST_INLANDEMPEROR_L3], ['Zone_OverpassExhaust', 'HC_Target_TuleFog', 'HC_Target_HOABeigePaintDenial'])
         for a in self.progressions:
             if a is not level3:
                 self.assertNotIn('HC_Target_TuleFog', self.granted_spells(a))

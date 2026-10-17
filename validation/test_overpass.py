@@ -30,7 +30,7 @@ LEVEL_GRANTS = {'3': (['HC_Zone_StormDrainFlashFlood', 'HC_Shout_BlueTarpLeanTo'
                 # Level 10's spell comes from the hand-written SpellList_Overpass_L10 (BART L10 style), not
                 # from an expansion list, so it is asserted in test_level_ten_spell_list_is_wired.
                 '10': ([], 'HC_RebarAnchor'),
-                '12': (['HC_Shout_SquattersRights_Overpass'], None)}
+                '12': (['HC_Shout_SquattersRights_Overpass', 'HC_Target_PurpleAirWildfireRefresh'], None)}
 
 
 def attrs_of(node):
@@ -52,6 +52,7 @@ class OverpassSubclassTests(unittest.TestCase):
         cls.spells.update(parse_entries((data / 'HC_Spells_Capstone.txt').read_text(encoding='utf-8')))
         cls.spells.update(parse_entries((data / 'HC_Spells_Round5.txt').read_text(encoding='utf-8')))
         cls.spells.update(parse_entries((data / 'HC_Spells_Round7.txt').read_text(encoding='utf-8')))
+        cls.spells.update(parse_entries((data / 'HC_Spells_Round9.txt').read_text(encoding='utf-8')))
         cls.statuses = parse_entries((data / 'HC_Status_Overpass.txt').read_text(encoding='utf-8'))
         cls.statuses.update(parse_entries((data / 'HC_Status_Capstone.txt').read_text(encoding='utf-8')))
         cls.passives = parse_entries((data / 'HC_Passives_Overpass.txt').read_text(encoding='utf-8'))
