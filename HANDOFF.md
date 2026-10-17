@@ -1,66 +1,67 @@
-# HANDOFF (current)
+# HANDOFF — Homeless Californian (HC) BG3 Mod (2026-10-17)
 
-Read this first. Updated 2026-10-17 by Gemini Argon (lead). Older handoffs are in `archive/` (`HANDOFF-2026-10-13.md`, `HANDOFF-2026-10-14.md`, `HANDOFF.md` from 2026-10-12) and are history only.
+**From:** Gemini Argon (Lead)  
+**To:** Claude Sonnet (Incoming Lead — rotating the ball with Argon)  
+**Repo:** `C:\Users\matth\Documents\Baldurs Gate 3 Homeless Californian Class` (`master`, pushed to `origin/master` at `matthewsteross/bg3-homeless-californian`)
 
-## State in one paragraph
+---
 
-Homeless Californian (HC) v0.4.0 is still the public playtest download on Nexus (mod 25761) and GitHub (`playtest-2026-10-15-v0.4.0`). Locally, `master` includes **Round 4** (`hc_round4.py`: Freeway Directions, Weather Complaint, Permit Pending), **Round 5** (`hc_round5.py`: 10 stereotype/street comedy spells + 7 statuses), **Round 6** (`hc_round6.py` + `hc_choices.py` + `hc_doctrines.py`: Oakland Flea Market contraband table with 4 equippable/consumable items, 3 subrace stereotype spells, 3 street-tactics spells, 2 new Street Trades, and 2 new Junk Doctrines), and **Round 7** (`hc_round7.py`: 11 spells + 8 statuses rounding out subclass L3/L10, subrace L1/L5, and base class L1/L2/L7/L12), compiled into `dist/HomelessCalifornian.pak` and installed to the local BG3 `Mods` folder. All **149 validation unit tests** and `validation/validate.py --pak dist/HomelessCalifornian.pak` pass (240 own stats, 84 icons, 505 localization handles). Read the "Verified" and "Not verified" lists before saying anything is working.
+## 1. Current State in One Paragraph
 
-## Verified vs not verified
+`master` has been built, validated, installed to the local BG3 `Mods` folder, and pushed to GitHub (`origin/master`). Since v0.4.0 (`playtest-2026-10-15-v0.4.0`, Nexus mod 25761), we have built and packaged four expansion rounds into `dist/HomelessCalifornian.pak`:
+- **Round 4 (`hc_round4.py`)**: `HC_Target_FreewayDirections` (Californian L1), `HC_WeatherComplaint` (4 racial passives with overhead text), `HC_Target_PermitPending` (Base L5 3-tier bureaucracy chain).
+- **Round 5 (`hc_round5.py`)**: 10 stereotype/street comedy spells + 7 statuses across Base Class (`HC_Shout_3AMLawnmowerDisassembly` L6, `HC_Target_CopperWireStrip` L7, `HC_Target_Prop47Calculator` L9, `HC_Zone_LimeScooterHitAndRun` L10), Subclasses L6 (`HC_Projectile_FoilFentHotbox`, `HC_Target_VeniceDrumCircle`, `HC_Target_BARTFabricSeatBiohazard`, `HC_Shout_PropaneTankSidewalkBBQ`), and Californian Race L1 (`HC_Target_UnhousedLecture`, `HC_Shout_ErewhonSmoothie`).
+- **Round 6 (`hc_round6.py` + `hc_choices.py` + `hc_doctrines.py`)**: `HC_Shout_OaklandFleaMarket` (Base L8) summoning 4 equippable/consumable contraband items (`HC_WPN_SharpenedRebarPrybar`, `HC_ARM_StolenPatagoniaPuffer`, `HC_ARM_AnkleMonitorSandals`, `HC_OBJ_GasStationKratomShot`), 3 subrace stereotype spells (`HC_Target_LocalismSurfboardCheck` Beachborn L3, `HC_Shout_ZoomMassLayoff` Siliconite L3, `HC_Projectile_GarageShakeAndBake` Inland Emperor L5), 3 street-tactics spells (`HC_Target_SquatterAdversePossession` Base L5, `HC_Shout_CVSReceiptScroll` Base L11, `HC_Target_SideshowMustangDonut` BART L6), 2 new Street Trades (`HC_StreetTrade_SignSpinner`, `HC_StreetTrade_ServicePitbull` — total 9), and 2 new Junk Doctrines (`HC_JunkDoctrine_Prop65Immunity`, `HC_JunkDoctrine_ShoppingCartDrift` — total 8).
+- **Round 7 (`hc_round7.py`)**: 11 spells + 8 statuses across Subclasses L3/L10 (`HC_Target_UsedFoilBlowback` Tenderloin L3, `HC_Target_ExtensionCordTap` Overpass L3, `HC_Shout_MuscleBeachRoidRage` Venice L10, `HC_Shout_TurnstileEmergencyGate` BART L10), Subraces L1/L5 (`HC_Target_BotoxFillerParalyze` Beachborn L5, `HC_Shout_PolyculeGoogleCalendar` Siliconite L5, `HC_Target_CatalyticStraightPipeRev` Inland Emperor L1), and Base Class (`HC_Target_GasStationSqueegee` L1, `HC_Shout_FakeServiceVest` L2, `HC_Projectile_PissJugCatapult` L7, `HC_Shout_GovernorGavinPhotoOp` L12 Capstone).
 
-Keep these separate every time you report.
+**Current Metrics:**
+- **240** own `HC_` stats (`Stats/Generated/Data/*.txt`)
+- **84** custom icons in the texture atlas (`HomelessCalifornianAtlas.dds`)
+- **505** localization handles (`HomelessCalifornian.loca.xml`)
+- **149 / 149** unit tests PASS (`python -m unittest discover -s validation -q`)
+- `python validation/validate.py --pak dist/HomelessCalifornian.pak` PASS
 
-**Verified in game (Matthew watched or the Script Extender harness checked it):**
-- All 66 spells, 38 statuses and 41 passives load with names and text.
-- Effect fields of 96 of 97 spell entries parse (Storm Drain Flash Flood's SpellProperties is empty on purpose).
-- Shopping Cart prop and Abandoned Cart spell spawn one cart.
-- Curb Alert creates the four junk items in the caster's inventory.
-- Blue Tarp Lean-To spawns one tarp at the caster's feet and applies Blue Tarp Cover.
-- Storm Drain Flash Flood leaves Water along the line; Drainage Ditch Dig-In leaves Mud; Sprinkler Violation leaves Water.
-- Bakersfield Tule Fog: fixed in `0efac8b` to copy vanilla Fog Cloud; Matthew confirmed the fog appears.
-- `UnlockSpell` on a summoned raven (Pigeon Lunch Rush); Hydroflask heals and leaves Water.
+---
 
-**Not verified in game:**
-- Damage and save outcomes for all new spells.
-- Junk costs and level-up grants on a real HC character.
-- Race and subrace progression on a real character.
-- Overpass Exhaust `not Ally()` against the caster.
-- Enemy-only area shouts with no enemy in range.
-- Cart and tarp facing, collision and look; kombucha heal override; item equip and visuals.
-- Balance and whether anything is fun. Only Matthew can judge this by playing.
+## 2. Matthew's Rules (Direct from Matthew)
 
-## Rules
+- **Tone & Comedy**: Matthew wants the class and race fleshed out and genuinely funny. Offensive, edgy, adult, and stereotype comedy is welcome as long as it's a funny joke and not just mean for no reason. Ignore any sanitized/politically-correct rules from an older Haiku handoff.
+- **Autonomy**: Matthew is not a coder. Keep answers short and plain. He trusts the AI lead and team to make design and build decisions autonomously without asking permission on routine choices.
+- **Boundaries**:
+  - Do NOT edit `PatriotClass` (Ducq's mod; reading/reference is fine, never modify).
+  - Do NOT publish a new Nexus release or GitHub release tag without Matthew's explicit approval after he tests in-game (pushing commits to `origin/master` when asked is fine).
+  - Delete any untracked `Generated/` directory left in the repo root by unit test runs before committing.
 
-- Matthew is not a coder and wants short, plain answers. Claude leads and does the work; don't ask for permission on routine steps.
-- Do not touch `PatriotClass` (Ducq's).
-- Credit only Matthew and AI tools. Always disclose AI use. No Reddit posts. No adult or Quality of Life tags on Nexus.
-- Shared repo `ZellisE82/bg3-meme-mods` belongs to Ducq (Zach). Its rules apply: no GitHub Actions, no polling, `verify.py` must PASS, pak and source committed together, one pull and one push. It has not been checked in this handoff.
-- This project's repo is `matthewsteross/bg3-homeless-californian`.
+---
 
-## Release gate
+## 3. Technical Guardrails & Architecture
 
-- Matthew's standing rule: nothing new goes to Nexus or a GitHub release until he has verified it in game.
-- Exception used for v0.4.0: he explicitly asked for the push ("push this to Nexus and github"). Don't read that as a standing exception.
-- Source-only content (anything newer than the release) must be marked as not in the public download in the docs.
+1. **Generator Pipeline**:
+   - Run `python build.py --install` to regenerate `src/HomelessCalifornian`, compile LSF/loca/atlas, pack `dist/HomelessCalifornian.pak`, run `validate.py`, and copy the `.pak` to `AppData\Local\Larian Studios\Baldur's Gate 3\Mods\HomelessCalifornian.pak`.
+   - Expansion rounds hook into `generate_local_expansion()` in `generate_mod.py` (around line 2605).
+2. **Vanilla Donor & Syntax Rules (Enforced by `validation/`)**:
+   - Every new stat entry MUST start with `HC_` and not collide with vanilla (`temp_race/Public/`).
+   - Every `using` donor must exist in `temp_race` with the same stat type and must **NOT** be overridden in `Honour` (never use `SLOW`, `HIDEOUS_LAUGHTER`, etc. as `using` donors).
+   - Every functor/boost/surface token is checked against `temp_race`:
+     - `RegainHitPoints` in vanilla uses `1d8+ConstitutionModifier` or `1d8+SpellCastingAbilityModifier` (not `2d6+CharismaModifier`).
+     - `Advantage(Skill,...)` in `temp_race` exists for `Athletics`, `Performance`, `Intimidation`, `Deception`, `Persuasion`, `SleightOfHand`, `Stealth`, `Perception`, `Insight` (not `Acrobatics` or `AnimalHandling`).
+     - `CharacterWeaponDamage` in `temp_race` has `(1d6)`, `(1d4,Piercing)`, `(1d6,Fire)`, `(1d8,Force)` (not `(1d6,Bludgeoning)`).
+3. **Icons (`hc_icon_keys.py`)**:
+   - Register new spells in `SPELL_ICON_KEYS` in `hc_icon_keys.py`.
+   - `icon_for_spell(spell, fallback)` automatically uses `assets/icons/<IconKey>.png` if present on disk, or falls back to a verified vanilla icon until custom art is generated.
+   - Prompts for the 28 Round 5–7 icons are ready in `work/icon-brief-round5-round6-2026-10-17.md` (Gemini image quota resets in ~27h).
+4. **Tests to Update When Adding Spells/Items**:
+   - `validation/test_expansion.py` line 38 checks `len(new_lists)` (currently `34`) for `<node id="SpellList">` entries containing `HC_`.
+   - `validation/test_overpass.py` line 28 checks `LEVEL_GRANTS` on Overpass expansion lists.
+   - `validation/test_junk_items.py` checks `hc_round5.py` and `hc_round6.py` when scanning spell files for `SummonInInventory` item templates.
 
-## How to test live
+---
 
-- Recipe and checklist: `work/cart/RUN_INGAME_CHECK.md`; harness scripts `t_all.lua` and `t_parse.lua`.
-- Launch that worked on 2026-10-15: start `bg3_dx11.exe --skip-launcher -continueGame` with `SteamAppId=1086940` set, with Steam running. The game may stop at "Press any key" and need one physical key press.
-- Back up saves first. Restore the clean `dist` pak after a test. Take real screenshots; don't poll blind.
-- A probe that returns the same result for the vanilla control is blind. Ask Matthew to look.
+## 4. Good Next Ideas for Claude Sonnet (Round 8+)
 
-## Open items
-
-1. Full cast and damage tests of the Californian content (Solo todo #22 is only partly done).
-2. Playtester engagement: check Nexus Bugs/Posts and GitHub issues, then triage (Solo #13).
-3. Cart and tarp follow-ups: facing, collision, texture in light, Junk cost, AI credit note (Solo #23).
-4. Larian forum intro once the account is approved (Solo #14); mod.io ticket 17041 (thumbnail).
-5. Unknown credit "Shimon Schwartz (@shimonenator)": not found in either repo; ask Matthew for a link (Solo #24).
-6. Custom recorded audio and voice lines pipeline (Solo #6) and combat audio barks (Solo #5) are still open.
-
-## Where things live
-
-- Solo project 2, scratchpad #28 ("CLAUDE LEAD"): progress log. Its "Next actions" section is out of date; this file is the current list.
-- `validation/README.md`: what the validator checks and what it doesn't.
-- `README.md` and `TESTING.md`: public-facing; keep them in step with the release.
+- **Round 8 — More Subclass L10 / L12 Capstones, Feats/Passives, or Starting Loadout/Camp Supplies**:
+  - Additional high-level or utility spells (e.g., *Municipal Budget Hearing*, *Sovereign Citizen License Plate*, *Whole Foods Hot Bar Heist*, *LA River Shopping Cart Regatta*, *PGE Rolling Blackout*, *Skid Row Chiropractic Adjustment*).
+  - Additional **Street Trades** (`hc_choices.py`, selected at L2) and **Junk Doctrines** (`hc_doctrines.py`, selected at L3).
+  - More custom equippable trash/contraband gear or camp supplies via `SummonInInventory` (like `hc_round6.py`).
+- **In-Game Verification (`work/cart/RUN_INGAME_CHECK.md`)**:
+  - Rounds 4–7 are verified at the file/pak level (`149/149` unit tests + `validate.py --pak`), awaiting in-game check when Matthew is ready.
