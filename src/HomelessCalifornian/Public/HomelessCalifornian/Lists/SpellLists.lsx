@@ -78,7 +78,7 @@
 
                 <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask;HC_Target_FreewayDirections;HC_Target_UnhousedLecture;HC_Shout_ErewhonSmoothie"/>
+                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask;HC_Target_FreewayDirections;HC_Target_UnhousedLecture;HC_Shout_ErewhonSmoothie;HC_Shout_WholeFoodsHotBarHeist"/>
                     <attribute id="UUID" type="guid" value="51fb8228-c489-56ca-9757-19a03867dccb"/>
                 </node>
 
@@ -98,7 +98,7 @@
 
                 <!-- Racial Siliconite Spells: Vibe Check (L1), Disruptive Pivot (L3), NDA (L5) -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_VibeCheck"/>
+                    <attribute id="Spells" type="LSString" value="Target_VibeCheck;HC_Target_MeetingCouldHaveBeenAScroll"/>
                     <attribute id="UUID" type="guid" value="0259a9da-2913-5f47-9d65-8ee23e4de2da"/>
                 </node>
                 <node id="SpellList">
@@ -136,11 +136,11 @@
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_CurbAlert;HC_Target_PublicScene;HC_Shout_3AMLawnmowerDisassembly"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_CurbAlert;HC_Target_PublicScene;HC_Shout_3AMLawnmowerDisassembly;HC_Shout_NIMBYPublicCommentPeriod"/>
                     <attribute id="UUID" type="guid" value="43874101-0a25-537d-a720-49a411e9f321"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CoatHangerSlimJim;HC_Target_CatalyticConverterSawzall"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CoatHangerSlimJim;HC_Target_CatalyticConverterSawzall;HC_Target_PotholeAnkleBreaker"/>
                     <attribute id="UUID" type="guid" value="ddce9474-2ca9-51d0-849b-f113d3c96d78"/>
                 </node>
                 <node id="SpellList">
@@ -152,15 +152,15 @@
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator;HC_Target_CaltransLaneClosure"/>
                     <attribute id="UUID" type="guid" value="fb6e0d6b-a655-58a2-9609-32e2f64bc0dd"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CompassionBurnout;HC_Zone_LimeScooterHitAndRun"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CompassionBurnout;HC_Zone_LimeScooterHitAndRun;HC_Target_DepartmentUnfinishedBusiness"/>
                     <attribute id="UUID" type="guid" value="9c43433e-1fde-563a-9dea-57398062a490"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll"/>
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll;HC_Shout_MunicipalBudgetHearing"/>
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">
@@ -180,7 +180,7 @@
                     <attribute id="UUID" type="guid" value="ad40ad38-2e82-59f1-8899-1a37b2d4be7d"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_EverybodyKnowsThisGuy"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_EverybodyKnowsThisGuy;HC_Target_SidewalkChiropracticAdjustment"/>
                     <attribute id="UUID" type="guid" value="88921194-9a20-513e-a24c-f9dbcb5c4889"/>
                 </node>
                 <node id="SpellList">
@@ -188,7 +188,7 @@
                     <attribute id="UUID" type="guid" value="9787d8e8-23ff-5a42-a73d-0bc24d880c7a"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Venice"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_Venice;HC_Shout_EmergencyBoardwalkSunglasses"/>
                     <attribute id="UUID" type="guid" value="a0f5463f-77fb-5159-896a-3e168c35848e"/>
                 </node>
                 <node id="SpellList">
@@ -204,7 +204,7 @@
                     <attribute id="UUID" type="guid" value="7fb6225f-36e6-5040-b0bf-9b3fbee73264"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_BART"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_SquattersRights_BART;HC_Shout_HaywardFaultSeismicRetrofit"/>
                     <attribute id="UUID" type="guid" value="7dac62a1-cbb9-5258-9fc7-5fde5d8a8c44"/>
                 </node>
                 <node id="SpellList">
@@ -218,6 +218,10 @@
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="HC_Target_CulvertSiphon;HC_Shout_PropaneTankSidewalkBBQ"/>
                     <attribute id="UUID" type="guid" value="a904b84f-e0a7-56e1-bd77-6111e34c1c26"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_PGEPublicSafetyBlackout"/>
+                    <attribute id="UUID" type="guid" value="5718324e-31bd-58cd-b437-f36f7420cc25"/>
                 </node>
             </children>
         </node>

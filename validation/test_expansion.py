@@ -35,7 +35,8 @@ class ExpansionGenerationTests(unittest.TestCase):
                 if 'HC_' in attrs['Spells']:
                     new_lists[attrs['UUID']] = attrs['Spells'].split(';')
             # 25 expansion lists (including Base L12), Overpass L10, BART L10, base racial list, and 6 subrace lists.
-            self.assertEqual(len(new_lists), 34)
+            # Round 8 (with the barricade spell) adds two more spell lists that contain HC_ spells.
+            self.assertEqual(len(new_lists), 36)
             progressions = ET.parse(public / 'Progressions/Progressions.lsx')
             selectors = ';'.join(a.get('value', '') for a in progressions.findall('.//attribute[@id="Selectors"]'))
             for uid in new_lists:

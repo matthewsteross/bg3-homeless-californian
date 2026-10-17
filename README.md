@@ -25,6 +25,11 @@ grants on a real Homeless Californian character, tarp facing and collision, the 
 Only level 12 and the cart had been confirmed by hand earlier. The Nexus page is live; the in-game (mod.io)
 listing is still pending approval, so the mod is not yet confirmed in the in-game mod menu.
 
+**Newer than the download:** the repository is ahead of v0.4.0. Rounds 4, 5, 6 and 7 (30 spells, 2 Street Trades, 2 Junk Doctrines,
+4 contraband items and a pile of statuses) are **source-only: in the repo and the local pak, not in the v0.4.0 download, and not
+play-tested**. They are listed in [their own section](#source-only-rounds-4-7-not-in-the-v040-download-not-play-tested). Nothing in the
+public download or on Nexus has changed.
+
 Intentionally overpowered: this is a ridiculous class with actions, saves,
 Junk costs and rest cooldowns, rather than an attempt at vanilla balance.
 The starting-area test confirmed icons after a reload and castability of
@@ -91,7 +96,7 @@ assume updating a package retroactively reapplies already-earned levels.
 
 Build-only: `python build.py`. The build now runs the local validator before
 an optional install. Run the full suite with `python -m unittest discover -s validation -q`
-(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release). The saved original
+(110 tests in v0.4.0, including the deliberate-corruption checks; 39 at the v0.3.0 release; 149 on the current source, which includes the source-only rounds 4-7). The saved original
 package can restore the previous build with BG3 closed. Keep the candidate
 out of co-op until both players intentionally use the same package.
 
@@ -207,6 +212,101 @@ visor are donor armour, so their armour class and proficiency requirements are i
 whether the Mud surface from Spillway Sovereignty slows enemies without trapping you; and the NIMBY tag. The Culvert Siphon
 borrows the cast animation of vanilla Healing Word so a 9 m cast is not a touch spell, which is also untested in game.
 Of the round 2 additions, the donors' animations and sound/visual effects are inherited unchanged: Sawzall keeps Inflict Wounds' necrotic cast and hit effects, and whether Sprinkler Violation's Wet reaches only creatures inside the 2 m radius is untested. The four new Overpass spells (Storm Drain Flash Flood, Blue Tarp Lean-To, Culvert Siphon and the Spillway Sovereignty capstone) have custom Gemini-generated icons; the Overpass subclass reuses the shared class crest, the Cardboard Insulator reuses the Cardboard Insulation icon, and the other new passives use vanilla icons. Drainage Ditch Dig-In, Curb Alert and the round 2 spells also have custom Gemini-generated icons; the junk items use their donors' vanilla icons.
+
+---
+
+## Source-only rounds 4-7 (not in the v0.4.0 download, not play-tested)
+
+**Read this first:** everything in this section is in the repository and in the locally built `dist/HomelessCalifornian.pak`, and it is
+**not** in the public v0.4.0 download or the Nexus file. You cannot get it by downloading the release. **Nobody has played any of it.**
+The only checking so far is file-level: 149 unit tests and the pak validator pass on the current source, which proves the
+files agree with each other and with vanilla data, not that a single spell does what it says. Numbers are copied from the generated game
+data and the localization text.
+
+Two honesty notes. First, the 28 spells from rounds 5, 6 and 7 currently use **placeholder vanilla icons** (the Gemini art for them has not
+been generated yet); only Freeway Directions and Permit Pending from round 4 have custom icons. Second, most of these are written as
+"failed save = full damage plus the nasty status, successful save = half damage", and the status duration, surface and Prone behaviour is
+untested. Expect a few to be wrong the first time they meet an actual goblin.
+
+Most need a **new character or a respec** to receive the grants. All are once per short rest unless the table says otherwise, and "1 Junk" is
+the class resource.
+
+### Spells (30 in total)
+
+| Spell | Where granted | Intended behaviour |
+|---|---|---|
+| **Round 4** | | |
+| Freeway Directions | Californian race, level 1 | Action, 9 m. Wisdom save or Incapacitated for 1 turn, without Prone. "Trust the 101. There is no 101 at this hour." |
+| Permit Pending | Class 5 | Action + 1 Junk, 18 m. Wisdom save or a 3-stack countdown (no Bonus Action, -3 m movement); each successful end-of-turn save removes a stack and the last gives 1 turn of Slow. Targets above 100 current HP have advantage on the saves |
+| Weather Complaint (passive) | Californian race, level 1 | Purely cosmetic: when you become Wet, Chilled, or step on ice, you complain overhead ("Is this a storm??", "It's literally 60 degrees.", "I didn't bring a jacket."), once per weather type per rest |
+| **Round 5** | | |
+| 3 AM Sidewalk Lawnmower Disassembly | Class 6 | Bonus action + 1 Junk. 2 turns of +4.5 m movement, +2 AC, advantage on Dexterity saves and Sleight of Hand, Sleep immunity |
+| Live Copper Wire Harvest | Class 7 | Action + 1 Junk. Melee spell attack at 1.5 m: `3d8` Lightning + `1d8` Slashing, -2 AC and no Reactions for 2 turns, electrified puddle |
+| Prop 47 '$949' Calculator | Class 9 | Action + 1 Junk, 9 m. You pocket 5 gold and get +3 m movement and Prone immunity for 1 turn; target makes a Wisdom save or takes `3d8` Psychic and is Dazed for 2 turns (half on a success) |
+| Jailbroken E-Scooter Hit-and-Run | Class 10 | Action + 1 Junk, 9 m line. You get +3 m movement for 1 turn; Dexterity save or `3d8 + CON` Bludgeoning + `1d8` Thunder and Prone (half on a success) |
+| Tin-Foil Bus Shelter Hotbox | Tenderloin 6 | Action + 1 Junk, 3 m radius. Constitution save or `3d8` Poison + `2d6` Psychic and Fent Stupor for 1 turn (half on a success); leaves fog for 2 turns |
+| Aggressive Mixtape & Sunset Bongos | Venice 6 | Action + 1 Junk, 9 m. Wisdom save or `2d8` Thunder + `2d8` Psychic and Socially Shamed for 2 turns, and you collect 5 gold (half on a success) |
+| Damp Cloth BART Seat Mystery Stain | BART 6 | Action + 1 Junk, 9 m. Constitution save or `3d8` Poison + `1d8` Acid and Fecal Stench for 2 turns (half on a success) |
+| Stolen Propane Tank Overpass Cookout | Overpass 6 | Bonus action + 1 Junk. Regain `1d8 + CON` HP; 2 turns of Cold resistance and `+1d6` Fire weapon damage; a 2 m ring of fire for 2 turns |
+| 'Actually, The Term Is Unhoused Neighbor' | Californian race, level 1 | Action (no Junk), 9 m. Wisdom save or `2d6` Psychic and Cancelled for 2 turns (disadvantage on attack rolls, no Reactions); `1d6` on a success |
+| $24 Erewhon Sea-Moss & Ozempic Glaze | Californian race, level 1 | Bonus action (no Junk), **once per long rest**. Regain `1d8 +` spellcasting modifier HP; 2 turns of +2 AC, +3 m movement and advantage on Constitution saves |
+| **Round 6** | | |
+| Fake Lease & Sovereign Citizen Lien | Class 5 | Action + 1 Junk, 9 m. Wisdom save or `2d8` Psychic and cannot move, with disadvantage on attack rolls, for 2 turns (half on a success) |
+| Oakland Flea Market Stolen Tool Table | Class 8 | Action (no Junk), **once per long rest**. Puts four items in your inventory (below) |
+| Six-Foot CVS Receipt Ward | Class 11 | Bonus action + 1 Junk. 2 turns of +2 AC and resistance to Slashing and Piercing |
+| 3 AM Oakland Intersection Sideshow | BART 6 | Action + 1 Junk, 9 m. Dexterity save or `3d8` Bludgeoning + `1d8` Fire and Prone (half on a success); 2.5 m tire-smoke cloud for 2 turns |
+| Malibu Trust-Fund Surfboard Localism | Beachborn 3 | Action, melee spell attack at 1.5 m: `2d8` Bludgeoning + `1d6` Cold, shoves the target 4 m, disadvantage on its attack rolls for 2 turns |
+| 9 AM Zoom All-Hands 15% Layoff | Siliconite 3 | Action, 6 m. You get +2 AC and advantage on Wisdom saves for 2 turns; enemies make a Wisdom save or take `2d8` Psychic and lose 3 m movement and Reactions for 2 turns (half on a success) |
+| Hemet Garage 2-Liter Shake-and-Bake Rupture | Inland Emperor 5 | Action, **once per long rest**, 3 m radius. Dexterity save or `3d8` Fire + `2d8` Poison and Burning for 2 turns (half on a success); fire on the ground |
+| **Round 7** | | |
+| Unsolicited Red-Light Dirty Squeegee | Class 1 | Action + 1 Junk. Melee spell attack at 1.5 m: `2d6` Acid + `1d6` Bludgeoning and Blinded for 1 turn. "That will be five dollars, cash or Venmo." |
+| Amazon Fake Service-Animal Vest | Class 2 | Bonus action + 1 Junk. 2 turns of +2 AC and advantage on Deception and Intimidation |
+| Fermented Trucker 'Way of the Road' Gallon Jug | Class 7 | Action + 1 Junk, 3 m radius. Constitution save or `3d8` Acid + `2d6` Poison and Fecal Stench for 2 turns (half on a success); Acid surface |
+| Election-Year VIP Street-Sweep Photo Op | Class 12 | Bonus action, **once per long rest**, 6 m. Restores 2 Junk and gives you +2 AC and +3 m movement for 2 turns; enemies make a Wisdom save or take `4d8` Psychic and are Socially Shamed for 2 turns (half on a success) |
+| Secondhand Foil-Trail Exhale | Tenderloin 3 | Action + 1 Junk, 3 m. Constitution save or `2d8` Poison + `2d8` Psychic, halved movement and disadvantage on attack rolls for 2 turns (half on a success) |
+| Bootleg Streetlight 220V Power Tap | Overpass 3 | Action + 1 Junk, 9 m. Dexterity save or `3d8` Lightning + `1d8` Fire, no Reactions and disadvantage on Dexterity saves for 2 turns (half on a success); electrified puddle |
+| Expired Trenbolone & Raw Liver Tantrum | Venice 10 | Bonus action + 1 Junk. 2 turns of `+1d8` Force weapon damage, +3 m movement and advantage on attack rolls |
+| Emergency Exit Gate Alarm & JBL Speaker | BART 10 | Action + 1 Junk, 6 m. You get +3 m movement for 1 turn; enemies make a Constitution save or take `3d8` Thunder + `1d8` Psychic and are Dazed for 2 turns (half on a success) |
+| Beverly Hills Emergency Botox & Lip-Filler Freeze | Beachborn 5 | Action, **once per long rest**, 9 m. Constitution save or `3d8` Poison, no Bonus Actions or Reactions and disadvantage on Constitution saves for 2 turns (half on a success) |
+| Bay Area 9-Person Polycule Google Calendar Invite | Siliconite 5 | Action, **once per long rest**, 6 m. Wisdom save or `3d8` Psychic, halved movement and disadvantage on attack rolls for 2 turns (half on a success) |
+| 2 AM Straight-Piped Nissan Altima Rev | Inland Emperor 1 | Action, 9 m. Constitution save or `2d8` Thunder, -2 AC and disadvantage on Wisdom saves for 2 turns (half on a success) |
+
+"Class N" means Homeless Californian class level N. "Beachborn / Siliconite / Inland Emperor N" is the subrace spell list at that character level,
+the same way the v0.3.0 subrace abilities work. Every grant level above was checked against the generated spell lists and progressions in the
+source, not in game.
+
+### New Street Trades, Junk Doctrines and contraband items (round 6)
+
+| Addition | Where granted | Intended behaviour |
+|---|---|---|
+| Bankruptcy Mattress Sign Spinner (Street Trade) | Class 2 choice | Advantage on Athletics and Performance checks (ninth Street Trade) |
+| Unleashed 'Service Pitbull' Handler (Street Trade) | Class 2 choice | Advantage on Intimidation and Deception checks (the pitbull is called Princess) |
+| Prop 65 Carcinogen Tolerance (Junk Doctrine) | Class 4 choice | Resistance to Acid damage (eighth Junk Doctrine) |
+| Locked-Wheel Cart Drift (Junk Doctrine) | Class 4 choice | Advantage on Dexterity saving throws |
+| Sharpened Interstate-880 Rebar (Uncommon, donor: Mace) | Oakland Flea Market | Weapon attacks deal an extra `1d4` Piercing |
+| Shoplifted Finance-Bro Patagonia Vest (Uncommon, donor: Destroyed Robe) | Oakland Flea Market | +1 AC and advantage on Persuasion checks |
+| Foil-Wrapped GPS Ankle Monitor & Jail Slides (Uncommon, donor: Shoes) | Oakland Flea Market | +1 to saving throws and Prone immunity |
+| Bodega Counter 'Rhino 69K & Kratom' Shot (Uncommon, donor: Healing Potion) | Oakland Flea Market | Drink to heal `2d4 + 2` HP and gain Gas Station Rhino Rush (`+1d6` weapon damage, advantage on Strength checks and saves) for 2 turns. Like the v0.4.0 Kombucha, whether the drink action works is unverified |
+
+The four Flea Market items borrow their donors' meshes and icons, so they look like a mace, a robe, shoes and a healing potion.
+
+### Statuses
+
+Round 4 adds 11 statuses (Freeway Directions, the three Weather Complaint lines with their cooldown locks, the three Permit
+Pending stages and the one-turn "Approved, pending review." Slow), round 5 adds 7, round 6 adds 7 (including the Rhino shot's drink status) and round 7 adds 8. They are the
+conditions the spells above apply, such as Stripped Copper & Live Sparks, Cancelled & Tone-Policed, Impacted by Macroeconomic Headwinds and
+Involuntary Sidewalk Nod.
+
+### What is checked, and what is not
+
+- **Checked at file level:** every stat starts with `HC_`, every donor exists in the vanilla extraction and is not overridden in Honour, the spell
+  lists and progressions grant each spell at the level shown above, mechanics tokens and surfaces appear in vanilla data, and the localization
+  and icon registrations resolve. See [validation/README.md](validation/README.md) for the per-file breakdown.
+- **Current numbers:** 240 locally defined stat entries (162 of them with an `HC_` prefix) and 505 localization handles, counted from the generated
+  source; 149 unit tests (counted per file, passing per `HANDOFF.md`), and `validate.py --pak` passing per `HANDOFF.md`.
+- **Not checked:** everything about play. Nothing from rounds 4-7 has been played: damage, saves, Junk costs, durations, the Permit Pending
+  stack countdown, the Weather Complaint triggers, surface effects, the Flea Market item grants and the Rhino shot's use action, level-up
+  grants on a real character, and balance.
 
 ---
 
@@ -415,6 +515,10 @@ Baldurs Gate 3 Homeless Californian Class/
 ├── hc_round2.py                 # Round 2 spells and Decatted Exhaust status (new in v0.4.0)
 ├── hc_tarp.py                   # Blue tarp lean-to prop: visual resource, template and Object stat (new in v0.4.0)
 ├── hc_junk_items.py             # Curb Alert and its four junk items, Kombucha statuses (new in v0.4.0)
+├── hc_round4.py                 # Round 4: Freeway Directions, Weather Complaint, Permit Pending (source-only)
+├── hc_round5.py                 # Round 5: 10 stereotype/street comedy spells and 7 statuses (source-only)
+├── hc_round6.py                 # Round 6: Oakland Flea Market items and 6 more spells (source-only; also adds trades/doctrines via the two files above)
+├── hc_round7.py                 # Round 7: 11 spells and 8 statuses (source-only)
 ├── hc_cart.py                   # Abandoned Cart spell and template
 ├── hc_outfit.py                 # Outfit / wardrobe items
 ├── hc_icon_keys.py              # Maps spells to icon keys
@@ -442,7 +546,7 @@ Baldurs Gate 3 Homeless Californian Class/
 - `python build.py` - Regenerates the source tree, builds icons, recompiles localization and generates `dist/HomelessCalifornian.pak`.
 - `python build.py --install` - Also copies the `.pak` into your BG3 Mods folder.
 - `python build.py --activate` - Also installs and activates the mod in `modsettings.lsx`.
-- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0).
+- `python -m unittest discover -s validation -q` - Runs the full validation suite (110 tests in v0.4.0; 149 on the current source).
 - `python build.py --status` - Verifies current mod installation and load order status.
 - `python generate_mod.py` - Regenerates only the source tree (no icons or packing).
 - `python build_icons.py` - Rebuilds only the icon atlas and GUI resources.

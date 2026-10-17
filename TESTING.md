@@ -121,3 +121,33 @@ facing and collision, the Kombucha override and balance still need your testing.
 | Class 6 | Drink the **Lukewarm Gas Station Kombucha**, in and out of combat | Heals `2d4 + 2` HP and applies Kombucha Buzz (+3 m movement) for 2 turns? Consumed on use? Works in combat as well as outside it? |
 | Class 11 | **HOV Lane** to a spot you can see, then to a spot you cannot | Teleport up to 12 m for a bonus action and 1 Junk, once per short rest? Invalid or blocked locations refused? (It leaves no mud behind: that part was left out.) |
 | Californian Inland Emperor 3 | **Bakersfield Tule Fog** (new character or respec) | Appears beside Overpass Exhaust? One action, no Junk, once per short rest? 4.5 m fog cloud at 9 m, up to 10 turns, needs concentration? Does casting it break an existing concentration spell (it should not)? |
+
+## Source-only rounds 4-7: what to try first (NOT in the v0.4.0 download)
+
+This part is for testers who build the mod from the repository (or for Matthew's own test runs). **Rounds 4, 5, 6 and 7 are not in the public
+v0.4.0 download or on Nexus, so you cannot try them from the release.** Nobody has played any of it: 149 file-level tests and the pak validator pass,
+and that is all. The full list with numbers is in the
+[README section](README.md#source-only-rounds-4-7-not-in-the-v040-download-not-play-tested). Use a separate test save and a new character or a respec.
+The 28 spells from rounds 5-7 show placeholder vanilla icons for now, so a wrong-looking icon is expected; a missing spell or a broken tooltip is a bug.
+
+Twelve things worth ten minutes, in rough order of "most likely to be broken":
+
+| # | Where | Try | What to report |
+|---|---|---|---|
+| 1 | Californian race 1 | **Freeway Directions** on an enemy | Wisdom save or Incapacitated for 1 turn, and the target does not fall Prone? |
+| 2 | Californian race 1 | Get Wet (a puddle or Sprinkler Violation), then get Chilled or step on ice | **Weather Complaint** shows a joke line overhead, once per weather type until a rest? |
+| 3 | Class 5 | **Permit Pending** on an enemy, then watch it across several turns | Three stacks that tick down one per successful end-of-turn save, then one turn of Slow? Does a target above 100 HP resist more? |
+| 4 | Class 1 / 2 | **Unsolicited Red-Light Dirty Squeegee** (1), **Amazon Fake Service-Animal Vest** (2) | Squeegee blinds on a hit and spends 1 Junk? Vest gives +2 AC for 2 turns? |
+| 5 | Class 8 | **Oakland Flea Market Stolen Tool Table** | All four items arrive in the inventory with names and icons? Equip the Rebar, the Patagonia Vest and the Ankle Monitor; drink the Rhino shot (heals, then a damage and Strength buff)? A second cast before a long rest refused? |
+| 6 | Class 6 / 7 / 9 / 10 | **3 AM Lawnmower Disassembly**, **Live Copper Wire Harvest**, **Prop 47 Calculator**, **E-Scooter Hit-and-Run** | Each spends the right Junk? Copper Wire leaves a shocking puddle? Prop 47 gives 5 gold? Scooter line knocks Prone on a failed save? |
+| 7 | Class 5 / 11 / 12 | **Fake Lease & Sovereign Citizen Lien**, **CVS Receipt Ward**, **Governor Photo Op** | Lien stops the target moving? CVS gives resistance? Photo Op restores 2 Junk and shames enemies, once per long rest? |
+| 8 | Californian race 1 | **'Actually, The Term Is Unhoused Neighbor'** and **$24 Erewhon Sea-Moss & Ozempic Glaze** | Lecture removes the target's reactions? Erewhon heals and gives the 2-turn buff, once per long rest? |
+| 9 | Beachborn 3 / 5 | **Malibu Surfboard Localism**, **Beverly Hills Botox Freeze** | Localism shoves the target 4 m? Botox removes bonus actions and reactions? |
+| 10 | Siliconite 3 / 5, Inland Emperor 1 / 5 | **Zoom All-Hands Layoff**, **Polycule Calendar Invite**, **Altima Rev**, **Shake-and-Bake Rupture** | Each castable at its level? Shake-and-Bake burns the group and lights the ground? Altima gives -2 AC? |
+| 11 | Tenderloin 3 / 6, Venice 6 / 10 | **Foil-Trail Exhale**, **Foil Hotbox**, **Mixtape & Sunset Bongos**, **Trenbolone Tantrum** | Exhale halves movement? Hotbox leaves fog and Fent Stupor on a failed save? Bongos pays you 5 gold? Tantrum gives the Force damage and advantage? |
+| 12 | BART 6 / 10, Overpass 3 / 6, class 7 | **BART Seat Stain**, **Sideshow**, **Emergency Exit Gate Alarm**, **Streetlight Power Tap**, **Propane Cookout**, **Gallon Jug** | Seat Stain gives Fecal Stench? Sideshow knocks Prone in a smoke cloud? Gate Alarm Dazes? Power Tap electrifies the puddle (mind your friends)? Cookout heals and ignites a ring? Jug leaves an Acid surface? |
+
+Also worth a look if you have a spare character: pick the new Street Trades (**Bankruptcy Mattress Sign Spinner**, **Unleashed 'Service Pitbull' Handler**; nine in
+total) and Junk Doctrines (**Prop 65 Carcinogen Tolerance**, **Locked-Wheel Cart Drift**; eight in total) and check they are listed.
+
+Save and reload once after learning a few. Report anything that disappears, any spell that spends the wrong resource, and any status that never ends.

@@ -2633,6 +2633,17 @@ def generate_local_expansion():
     for category, levels in round7['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_barricade import generate_barricade
+    barricade = generate_barricade(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in barricade['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    from hc_round8 import generate_round8
+    round8 = generate_round8(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round8['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    for category, levels in round8['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}
@@ -2650,7 +2661,9 @@ def generate_local_expansion():
         text = f.read()
     # Attach racial, subrace, and BART L10 spells to their existing lists.
     racial_list_map = {
-        SPELLLIST_CALIFORNIAN_L1: [round4['racial_spell'], *round5['racial_spells']],
+        SPELLLIST_CALIFORNIAN_L1: [round4['racial_spell'], *round5['racial_spells'],
+                                   round8['existing_list_spells']['Californian_L1']],
+        SPELLLIST_SILICONITE_L1: [round8['existing_list_spells']['Siliconite_L1']],
         SPELLLIST_BEACHBORN_L3: [round6['subrace_spells']['Beachborn_L3']],
         SPELLLIST_SILICONITE_L3: [round6['subrace_spells']['Siliconite_L3']],
         SPELLLIST_INLANDEMPEROR_L5: [round6['subrace_spells']['InlandEmperor_L5']],

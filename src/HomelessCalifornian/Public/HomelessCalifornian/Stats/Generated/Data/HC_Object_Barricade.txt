@@ -1,0 +1,7 @@
+new entry "HC_OBJ_Barricade"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "03088c6b-248d-529b-9360-2ee514a7c3a9"
+data "Weight" "40"
+data "GameSize" "Large"
+data "Vitality" "-1"

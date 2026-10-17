@@ -139,7 +139,8 @@ class OverpassSubclassTests(unittest.TestCase):
         self.assertNotEqual(uid, generator.SPELLLIST_BART_L10)
         self.assertEqual(self.spell_lists[uid], ['HC_Target_DrainageDitchDigIn'])
         a = self.overpass_progressions()['10']
-        self.assertEqual(a['Selectors'], f'AddSpells({uid})')
+        # Round 8 adds a second Overpass L10 list (PG&E Public Safety Blackout) after this one.
+        self.assertTrue(a['Selectors'].startswith(f'AddSpells({uid})'))
         self.assertEqual(a['PassivesAdded'], 'HC_RebarAnchor')
         # Granted exactly once: not also through an expansion list, and not at any other level.
         for level, other in self.overpass_progressions().items():
