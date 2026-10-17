@@ -59,7 +59,7 @@ STATUS_SPECS = [
     ('HC_ADA_LAWSUIT_SHIELD', SERVICE_VEST, 'Spell_Abjuration_MageArmor',
      'Prime-Shipped Service Vest Immunity',
      '+2 Armour Class and advantage on Deception and Intimidation checks. Store management is far too terrified of a federal lawsuit to ask any follow-up questions.',
-     dict(Boosts='AC(2);Advantage(Skill,Deception);Advantage(Skill,Intimidation)')),
+     dict(Boosts='AC(2);Advantage(Skill,Deception);Advantage(Skill,Intimidation)', StackId='HC_CHAIR_BRACED')),
     ('HC_NAPA_FUNDRAISER_BUFF', GOVERNOR_PHOTO_OP, 'Skill_Fighter_SecondWind',
      'Gubernatorial Campaign B-Roll Glow',
      '+2 Armour Class and +3 m movement speed. The news vans have already packed up and left for a fifteen-thousand-dollar-a-plate vineyard dinner in Napa.',
@@ -254,12 +254,12 @@ def generate_round7(public_dir, add_loca, get_guid):
         (GOVERNOR_PHOTO_OP, 'Shout_FeyPresence', 'Skill_Fighter_SecondWind',
          'Election-Year VIP Street-Sweep Photo Op',
          'Summon a fourteen-camera press pool and a politician in rolled-up dress-shirt sleeves for twelve minutes before a foreign head of state visits. '
-         'Costs a bonus action; once per long rest. Restore 2 Junk and gain +2 AC and +3 m movement for 2 turns, while enemies within 6 m make a '
+         'Costs a bonus action; once per long rest. Gain +2 AC and +3 m movement for 2 turns, while enemies within 6 m make a '
          'Wisdom saving throw: on a failure they take 4d8 Psychic damage and become Socially Shamed for 2 turns, or take half damage on a success. '
          'Mission accomplished; the barriers come down as soon as the motorcade leaves.',
          dict(UseCosts='BonusActionPoint:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
               TargetConditions='Enemy()',
-              SpellProperties='SELF:RestoreResource(HC_Junk,2,0);ApplyStatus(SELF,HC_NAPA_FUNDRAISER_BUFF,100,2)',
+              SpellProperties='ApplyStatus(SELF,HC_NAPA_FUNDRAISER_BUFF,100,2)',
               SpellRoll=wis_save,
               SpellSuccess='DealDamage(4d8,Psychic,Magical);ApplyStatus(PANHANDLING_SHAME,100,2)',
               SpellFail='DealDamage((4d8)/2,Psychic,Magical)',

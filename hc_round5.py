@@ -34,7 +34,7 @@ STATUS_SPECS = [
     ('HC_TWEAKER_HYPERFOCUS', LAWNMOWER, 'Spell_Transmutation_Haste',
      '3 AM Tweaker Hyperfocus',
      '+4.5 m movement speed, +2 AC, advantage on Dexterity saving throws and Sleight of Hand checks, and immunity to Sleep. Everything makes sense if you take enough screws out.',
-     dict(Boosts='ActionResource(Movement,4.5,0);AC(2);Advantage(SavingThrow,Dexterity);Advantage(Skill,SleightOfHand);StatusImmunity(SG_Sleeping)')),
+     dict(Boosts='ActionResource(Movement,4.5,0);AC(2);Advantage(SavingThrow,Dexterity);Advantage(Skill,SleightOfHand);StatusImmunity(SG_Sleeping)', StackId='HC_CHAIR_BRACED')),
     ('HC_STRIPPED_WIRING', COPPER_STRIP, 'Spell_Evocation_ShockingGrasp',
      'Stripped Copper & Live Sparks',
      '-2 Armour Class and cannot take reactions. Somebody yanked your ground wire right out of the drywall.',
@@ -169,10 +169,10 @@ def generate_round5(public_dir, add_loca, get_guid):
         (FOIL_HOTBOX, 'Projectile_AcidSplash', 'Spell_Conjuration_AcidSplash',
          'Tin-Foil Bus Shelter Hotbox',
          'Cook mystery blue tablets on a square of foil until the entire block fails a contact toxicology screen. '
-         'Costs an action and 1 Junk; once per short rest. Fills a 3 m radius with fog for 2 turns while creatures inside '
+         'Costs an action and 2 Junk; once per short rest. Fills a 3 m radius with fog for 2 turns while creatures inside '
          'make a Constitution saving throw, taking 3d8 Poison plus 2d6 Psychic damage and falling into Fent Stupor for 1 turn '
          'on a failure, or half damage on a success. Three commuters upwind just failed their CDL physical.',
-         dict(UseCosts='ActionPoint:1;HC_Junk:1', AreaRadius='3', ExplodeRadius='3', DamageType='Poison',
+         dict(UseCosts='ActionPoint:1;HC_Junk:2', AreaRadius='3', ExplodeRadius='3', DamageType='Poison',
               SpellProperties='GROUND:CreateSurface(3,2,FogCloud)',
               SpellRoll=con_save,
               SpellSuccess='DealDamage(3d8,Poison,Magical);DealDamage(2d6,Psychic,Magical);ApplyStatus(FENT_STUPOR,100,1)',

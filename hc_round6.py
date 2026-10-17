@@ -76,7 +76,7 @@ STATUS_SPECS = [
     ('HC_CVS_COUPON_ARMOR', CVS_RECEIPT, 'Spell_Abjuration_MageArmor',
      'Six-Foot CVS Thermal-Paper Ward',
      '+2 Armour Class and resistance to Slashing and Piercing damage. Wrapped head-to-toe in four expired ExtraBucks offers for toothpaste.',
-     dict(Boosts='AC(2);Resistance(Slashing,Resistant);Resistance(Piercing,Resistant)')),
+     dict(Boosts='AC(2);Resistance(Slashing,Resistant);Resistance(Piercing,Resistant)', StackId='HC_CHAIR_BRACED')),
 ]
 
 
@@ -223,10 +223,10 @@ data "ApplyEffect" "89f2d0ac-9295-4657-bfa6-fb6d61adf59c"''']
         (ZOOM_LAYOFF, 'Shout_FeyPresence', 'Spell_Enchantment_Bane',
          '9 AM Zoom All-Hands 15% Layoff',
          'Put on a five-hundred-dollar cashmere hoodie, shed one rehearsed tear into the webcam, and take full responsibility for '
-         'firing everyone around you. Costs an action; once per short rest. Gain +2 AC and advantage on Wisdom saving throws for 2 turns, '
+         'firing everyone around you. Costs an action; once per long rest. Gain +2 AC and advantage on Wisdom saving throws for 2 turns, '
          'while enemies within 6 m make a Wisdom saving throw: on a failure they take 2d8 Psychic damage and lose 3 m movement and '
          'reactions for 2 turns, or take half damage on a success. Your Slack access has been revoked.',
-         dict(UseCosts='ActionPoint:1', AreaRadius='6', SpellContainerID='',
+         dict(UseCosts='ActionPoint:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
               TargetConditions='Enemy()',
               SpellProperties='ApplyStatus(SELF,HC_STOCK_BUYBACK_SHIELD,100,2)',
               SpellRoll=wis_save,

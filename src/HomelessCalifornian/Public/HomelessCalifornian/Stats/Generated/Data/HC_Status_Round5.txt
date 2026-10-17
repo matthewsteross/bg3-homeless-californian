@@ -1,7 +1,7 @@
 new entry "HC_TWEAKER_HYPERFOCUS"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "HC_TWEAKER_HYPERFOCUS"
+data "StackId" "HC_CHAIR_BRACED"
 data "StackType" "Overwrite"
 data "TickType" "EndTurn"
 data "Icon" "Spell_Transmutation_Haste"

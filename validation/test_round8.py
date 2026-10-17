@@ -157,7 +157,7 @@ class RoundEightTests(unittest.TestCase):
             self.assertTrue({t[0] for t in tokens} <= ALLOWED_RESOURCES, name)
             for resource, *amount in tokens:
                 if resource == 'HC_Junk':
-                    self.assertEqual(amount, ['1'], name)
+                    self.assertEqual(amount, ['2'] if name == round8.NIMBY_COMMENT else ['1'], name)
             if 'HC_Junk' in f['UseCosts'] and f.get('RitualCosts'):
                 self.assertIn('HC_Junk', f['RitualCosts'], name)
 
@@ -196,11 +196,11 @@ class RoundEightTests(unittest.TestCase):
         self.assertIn('ApplyStatus(HC_PUBLIC_COMMENT_TRANCE,100,1)', f(round8.NIMBY_COMMENT)['SpellSuccess'])
         self.assertEqual(f(round8.NIMBY_COMMENT)['AreaRadius'], '6')
         self.assertEqual(f(round8.NIMBY_COMMENT)['Cooldown'], 'OncePerRest')
-        self.assertIn('DealDamage(2d8,Force,Magical)', f(round8.UNFINISHED_BUSINESS)['SpellSuccess'])
+        self.assertIn('DealDamage(3d10,Force,Magical)', f(round8.UNFINISHED_BUSINESS)['SpellSuccess'])
         self.assertIn('ApplyStatus(HC_RED_TAGGED,100,2)', f(round8.UNFINISHED_BUSINESS)['SpellSuccess'])
         self.assertIn('ApplyStatus(SELF,HC_LINE_ITEM_APPROVED,100,3)', f(round8.BUDGET_HEARING)['SpellProperties'])
         props = f(round8.CHIROPRACTIC)['SpellProperties']
-        self.assertIn('RegainHitPoints(2d8)', props)
+        self.assertIn('RegainHitPoints(4d8)', props)
         self.assertIn('ApplyStatus(PRONE,100,1)', props)
         self.assertIn('ApplyStatus(HC_CERVICAL_REALIGNMENT,100,3)', props)
         self.assertNotIn('Self()', f(round8.CHIROPRACTIC)['TargetConditions'].replace('not Self()', ''))

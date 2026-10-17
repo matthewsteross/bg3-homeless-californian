@@ -144,10 +144,10 @@ def generate_round8(public_dir, add_loca, get_guid):
         (NIMBY_COMMENT, 'Shout_FeyPresence', 'Spell_Enchantment_Bane',
          'NIMBY Three-Minute Public Comment Period',
          'Stand at the lectern and begin reading a forty-one-page objection to a bicycle rack. '
-         'Costs an action and 1 Junk; once per long rest. Enemies within 6 m make a Wisdom saving throw: on a failure they take '
+         'Costs an action and 2 Junk; once per long rest. Enemies within 6 m make a Wisdom saving throw: on a failure they take '
          '2d6 Psychic damage and cannot move or take actions, bonus actions, or reactions for 1 turn, or take half damage on a success. '
          'The planning commission would like to table this item until the next meeting, which is in March.',
-         dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
+         dict(UseCosts='ActionPoint:1;HC_Junk:2', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
               TargetConditions='Enemy()',
               SpellRoll=wis_save,
               SpellSuccess='DealDamage(2d6,Psychic,Magical);ApplyStatus(HC_PUBLIC_COMMENT_TRANCE,100,1)',
@@ -160,14 +160,14 @@ def generate_round8(public_dir, add_loca, get_guid):
          'Department of Unfinished Business Red-Tag Notice',
          'Staple a neon orange Notice of Violation onto something the target has never been permitted to own, including its own sword. '
          'Costs an action and 1 Junk; once per short rest. A target within 12 m makes a Wisdom saving throw: on a failure it takes '
-         '2d8 Force damage and is Red-Tagged for 2 turns (attack rolls against it have advantage and it has disadvantage on Wisdom saving throws), '
+         '3d10 Force damage and is Red-Tagged for 2 turns (attack rolls against it have advantage and it has disadvantage on Wisdom saving throws), '
          'or takes half damage on a success. The fine is waived if it can produce a 1987 grading permit, which nobody can.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', TargetRadius='12', DamageType='Force',
               TargetConditions='Character() and not Ally() and not Dead()',
               SpellRoll=wis_save,
-              SpellSuccess='DealDamage(2d8,Force,Magical);ApplyStatus(HC_RED_TAGGED,100,2)',
-              SpellFail='DealDamage((2d8)/2,Force,Magical)',
-              TooltipDamageList='DealDamage(2d8,Force)',
+              SpellSuccess='DealDamage(3d10,Force,Magical);ApplyStatus(HC_RED_TAGGED,100,2)',
+              SpellFail='DealDamage((3d10)/2,Force,Magical)',
+              TooltipDamageList='DealDamage(3d10,Force)',
               TooltipAttackSave='Wisdom',
               TooltipStatusApply='ApplyStatus(HC_RED_TAGGED,100,2)')),
 
@@ -184,13 +184,13 @@ def generate_round8(public_dir, add_loca, get_guid):
         (CHIROPRACTIC, 'Target_CureWounds', 'Skill_Fighter_SecondWind',
          'Unlicensed Sidewalk Chiropractic Cervical Adjustment',
          'Grab an ally by the skull and give it a firm, cash-only twist behind a bus shelter. '
-         'Costs an action and 1 Junk; once per short rest. An ally within 1.5 m regains 2d8 Hit Points and gains advantage on Strength and '
+         'Costs an action and 1 Junk; once per short rest. An ally within 1.5 m regains 4d8 Hit Points and gains advantage on Strength and '
          'Dexterity saving throws for 3 turns, but is knocked Prone by the pop. '
          'Your clinic accepts Venmo, hugs, and no questions about the diploma.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', TargetRadius='1.5',
               TargetConditions=healable,
-              SpellProperties='RegainHitPoints(2d8);ApplyStatus(PRONE,100,1);ApplyStatus(HC_CERVICAL_REALIGNMENT,100,3)',
-              TooltipDamageList='RegainHitPoints(2d8)',
+              SpellProperties='RegainHitPoints(4d8);ApplyStatus(PRONE,100,1);ApplyStatus(HC_CERVICAL_REALIGNMENT,100,3)',
+              TooltipDamageList='RegainHitPoints(4d8)',
               TooltipStatusApply='ApplyStatus(HC_CERVICAL_REALIGNMENT,100,3)')),
 
         (BLACKOUT, 'Projectile_AcidSplash', 'Spell_Evocation_ShockingGrasp',
@@ -211,9 +211,9 @@ def generate_round8(public_dir, add_loca, get_guid):
         (SUNGLASSES, 'Shout_SecondWind', 'Spell_Abjuration_MageArmor',
          'Emergency Ten-Dollar Boardwalk Sunglasses',
          'Slap on a pair of wraparound shades bought from a folding table between a henna tent and a man selling crystals. '
-         'Costs a bonus action and 1 Junk; once per long rest. For 3 turns, you cannot be Blinded and gain +1d4 to attack rolls and advantage on Intimidation checks. '
+         'Costs a bonus action; once per long rest. For 3 turns, you cannot be Blinded and gain +1d4 to attack rolls and advantage on Intimidation checks. '
          'The lenses are certified for neither sunlight nor eclipses, and you look incredible.',
-         dict(UseCosts='BonusActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', TargetConditions='Self()',
+         dict(UseCosts='BonusActionPoint:1', Cooldown='OncePerRest', TargetConditions='Self()',
               SpellProperties='ApplyStatus(SELF,HC_TEN_DOLLAR_SHADES,100,3)',
               TooltipStatusApply='ApplyStatus(HC_TEN_DOLLAR_SHADES,100,3)')),
 
@@ -221,15 +221,15 @@ def generate_round8(public_dir, add_loca, get_guid):
          'Hayward Fault Transbay Seismic Retrofit (Delayed Until 2041)',
          'Stomp the platform and invoke a retrofit contract that has been under review longer than most marriages. '
          'Costs an action and 1 Junk; once per long rest. Enemies within 6 m make a Dexterity saving throw: on a failure they take '
-         '3d6 Bludgeoning damage and fall Prone, or take half damage on a success. '
+         '4d8 Bludgeoning damage and fall Prone, or take half damage on a success. '
          'You gain +2 Armour Class and immunity to being knocked Prone for 2 turns, because only you read the engineering report.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
               TargetConditions='Enemy()',
               SpellProperties='ApplyStatus(SELF,HC_RETROFIT_PENDING,100,2)',
               SpellRoll=dex_save,
-              SpellSuccess='DealDamage(3d6,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)',
-              SpellFail='DealDamage((3d6)/2,Bludgeoning,Magical)',
-              TooltipDamageList='DealDamage(3d6,Bludgeoning)',
+              SpellSuccess='DealDamage(4d8,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)',
+              SpellFail='DealDamage((4d8)/2,Bludgeoning,Magical)',
+              TooltipDamageList='DealDamage(4d8,Bludgeoning)',
               TooltipAttackSave='Dexterity',
               TooltipStatusApply='ApplyStatus(HC_RETROFIT_PENDING,100,2)')),
 
