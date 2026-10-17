@@ -1,0 +1,6 @@
+new entry "HC_OBJ_GasStationKratomShot"
+type "Object"
+using "OBJ_Potion_Healing"
+data "RootTemplate" "ab1d2210-470f-52a6-b47e-850ddb4f49a7"
+data "Rarity" "Uncommon"
+data "ValueOverride" "0"

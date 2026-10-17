@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="0" revision="9" build="0" />
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="301bcff1-cc26-5824-aa51-60aecd037816" />
+                    <attribute id="Name" type="LSString" value="HC_WPN_SharpenedRebarPrybar" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="3186796d-3ab3-4d49-bfc2-cba1aff0cf5a" />
+                    <attribute id="Stats" type="FixedString" value="HC_WPN_SharpenedRebarPrybar" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_WPN_HUM_Mace_A_0" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h2b2640a1g7b57g5178gbf3eg8811751c2afb" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h2468592bg7a81g5793g901ega0b84ecba45a" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="9acee905-9356-57fd-887c-19a59053077b" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_StolenPatagoniaPuffer" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="14c13bc9-ab35-4cab-a220-23a61cd43845" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_StolenPatagoniaPuffer" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_ARM_Robe_Destroyed_Crash" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h94d189cagf321g5249ga6c2gc3b975a82ee4" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h8c3c6fb5g7609g55bag910dg8efc4a85d9f2" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="bd72bd40-6227-57de-b9c9-d9cd276f3df6" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_AnkleMonitorSandals" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="97f37571-35e8-4cc8-8b0d-ff92d20ae0bb" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_AnkleMonitorSandals" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_ARM_Shoes" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h8745cc63g6af6g5139g94f1g4b2c36566fc3" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h1d910764g9834g54dbg9c37gad2de70f3f64" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="ab1d2210-470f-52a6-b47e-850ddb4f49a7" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_GasStationKratomShot" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="d47006e9-8a51-453d-b200-9e0d42e9bbab" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_GasStationKratomShot" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_CONS_Potion_Healing_A" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h99f581c9g063dg55eega40ag3ad0ddd84db1" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h186a850dg5682g5d64ga777gafcaa1a04cc2" version="1" />
+                    <attribute id="TechnicalDescription" type="TranslatedString" handle="hbf663f00g0477g5f26gbcd8g3da6255089b1" version="1" />
+                    <children>
+                        <node id="OnUsePeaceActions">
+                            <children>
+                                <node id="Action">
+                                    <attribute id="ActionType" type="int32" value="7" />
+                                    <children>
+                                        <node id="Attributes">
+                                            <attribute id="Animation" type="FixedString" value="895ce382-397d-4b9a-9e8f-6ee3b1ff3a13" />
+                                            <attribute id="Conditions" type="LSString" value="" />
+                                            <attribute id="Consume" type="bool" value="True" />
+                                            <attribute id="StatsId" type="FixedString" value="HC_POTION_RHINO_SHOT" />
+                                            <attribute id="StatusDuration" type="int32" value="0" />
+                                        </node>
+                                    </children>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

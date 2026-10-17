@@ -1,0 +1,7 @@
+new entry "HC_WPN_SharpenedRebarPrybar"
+type "Weapon"
+using "WPN_Mace"
+data "RootTemplate" "301bcff1-cc26-5824-aa51-60aecd037816"
+data "Rarity" "Uncommon"
+data "ValueOverride" "0"
+data "Boosts" "CharacterWeaponDamage(1d4,Piercing)"

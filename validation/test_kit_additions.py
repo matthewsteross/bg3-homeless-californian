@@ -107,7 +107,7 @@ class KitAdditionTests(unittest.TestCase):
     def test_street_trade_selector_wiring(self):
         uid = generator.get_guid('HC_StreetTrade_List')
         options = self.passive_lists[uid]
-        self.assertEqual(len(options), 7)
+        self.assertEqual(len(options), 9)
         self.assertEqual(options.count(TRADE), 1)
         self.assertEqual(options[:5], ['HC_StreetTrade_Scrounger', 'HC_StreetTrade_Fixer', 'HC_StreetTrade_Lookout',
                                        'HC_StreetTrade_CanCollector', 'HC_StreetTrade_Busker'])
@@ -119,7 +119,7 @@ class KitAdditionTests(unittest.TestCase):
     def test_junk_doctrine_selector_wiring(self):
         uid = generator.get_guid('HC_JunkDoctrine_List')
         options = self.passive_lists[uid]
-        self.assertEqual(len(options), 6)
+        self.assertEqual(len(options), 8)
         self.assertEqual(options.count(DOCTRINE), 1)
         self.assertEqual(options[:4], ['HC_JunkDoctrine_Hoarder', 'HC_JunkDoctrine_Fortifier',
                                        'HC_JunkDoctrine_Runner', 'HC_JunkDoctrine_Twitchy'])

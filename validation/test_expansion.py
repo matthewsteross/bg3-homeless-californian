@@ -34,8 +34,8 @@ class ExpansionGenerationTests(unittest.TestCase):
                 attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}
                 if 'HC_' in attrs['Spells']:
                     new_lists[attrs['UUID']] = attrs['Spells'].split(';')
-            # 24 expansion lists, Overpass L10, and the base racial list (round 4).
-            self.assertEqual(len(new_lists), 26)
+            # 24 expansion lists, Overpass L10, base racial list (round 4), and 3 subrace lists (round 6).
+            self.assertEqual(len(new_lists), 29)
             progressions = ET.parse(public / 'Progressions/Progressions.lsx')
             selectors = ';'.join(a.get('value', '') for a in progressions.findall('.//attribute[@id="Selectors"]'))
             for uid in new_lists:
@@ -65,12 +65,12 @@ class ExpansionGenerationTests(unittest.TestCase):
             trade_nodes = lists = ET.parse(public / 'Lists/PassiveLists.lsx')
             options = next(n for n in trade_nodes.findall('.//node[@id="PassiveList"]')
                            if n.find('attribute[@id="UUID"]').get('value') == trade_list)
-            self.assertEqual(len(options.find('attribute[@id="Passives"]').get('value').split(',')), 7)
+            self.assertEqual(len(options.find('attribute[@id="Passives"]').get('value').split(',')), 9)
             self.assertEqual(selectors.count(f'SelectPassives({trade_list},1,HCStreetTrade)'), 1)
             doctrine_list = generator.get_guid('HC_JunkDoctrine_List')
             doctrine_options = next(n for n in trade_nodes.findall('.//node[@id="PassiveList"]')
                                     if n.find('attribute[@id="UUID"]').get('value') == doctrine_list)
-            self.assertEqual(len(doctrine_options.find('attribute[@id="Passives"]').get('value').split(',')), 6)
+            self.assertEqual(len(doctrine_options.find('attribute[@id="Passives"]').get('value').split(',')), 8)
             self.assertEqual(selectors.count(f'SelectPassives({doctrine_list},1,HCJunkDoctrine)'), 1)
             for node in progressions.findall('.//node[@id="Progression"]'):
                 attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}

@@ -57,6 +57,14 @@ SPELL_ICON_KEYS = {
     'HC_Shout_PropaneTankSidewalkBBQ': 'Spell_PropaneTankSidewalkBBQ',
     'HC_Target_UnhousedLecture': 'Spell_UnhousedLecture',
     'HC_Shout_ErewhonSmoothie': 'Spell_ErewhonSmoothie',
+    # Round 6 (contraband swap meet, subrace stereotypes, and street tactics)
+    'HC_Shout_OaklandFleaMarket': 'Spell_OaklandFleaMarket',
+    'HC_Target_LocalismSurfboardCheck': 'Spell_LocalismSurfboardCheck',
+    'HC_Shout_ZoomMassLayoff': 'Spell_ZoomMassLayoff',
+    'HC_Projectile_GarageShakeAndBake': 'Spell_GarageShakeAndBake',
+    'HC_Target_SquatterAdversePossession': 'Spell_SquatterAdversePossession',
+    'HC_Shout_CVSReceiptScroll': 'Spell_CVSReceiptScroll',
+    'HC_Target_SideshowMustangDonut': 'Spell_SideshowMustangDonut',
 }
 
 def icon_for_spell(spell, fallback):

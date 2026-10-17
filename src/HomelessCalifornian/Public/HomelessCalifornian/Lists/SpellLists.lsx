@@ -88,7 +88,7 @@
                     <attribute id="UUID" type="guid" value="1e8aa959-4a02-5115-ae29-e06d7a92a108"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_RipCurrent"/>
+                    <attribute id="Spells" type="LSString" value="Target_RipCurrent;HC_Target_LocalismSurfboardCheck"/>
                     <attribute id="UUID" type="guid" value="77b6c7c1-0ee7-5660-8307-a3d0ca90cf8f"/>
                 </node>
                 <node id="SpellList">
@@ -102,7 +102,7 @@
                     <attribute id="UUID" type="guid" value="0259a9da-2913-5f47-9d65-8ee23e4de2da"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_DisruptivePivot"/>
+                    <attribute id="Spells" type="LSString" value="Target_DisruptivePivot;HC_Shout_ZoomMassLayoff"/>
                     <attribute id="UUID" type="guid" value="5c6cf44b-e981-5544-8fc6-66b5eb9ae5c9"/>
                 </node>
                 <node id="SpellList">
@@ -120,7 +120,7 @@
                     <attribute id="UUID" type="guid" value="71f3e612-736a-5a6a-958e-1d5bc104d5fe"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_Heatstroke"/>
+                    <attribute id="Spells" type="LSString" value="Target_Heatstroke;HC_Projectile_GarageShakeAndBake"/>
                     <attribute id="UUID" type="guid" value="1fe386e6-76d4-5f9c-8474-70fb43be7248"/>
                 </node>
                 <node id="SpellList">
@@ -144,11 +144,11 @@
                     <attribute id="UUID" type="guid" value="ddce9474-2ca9-51d0-849b-f113d3c96d78"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending;HC_Target_SquatterAdversePossession"/>
                     <attribute id="UUID" type="guid" value="e80ad412-fdf2-5d49-a4fb-4c72445fd8ab"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation;HC_Shout_OaklandFleaMarket"/>
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
@@ -160,7 +160,7 @@
                     <attribute id="UUID" type="guid" value="9c43433e-1fde-563a-9dea-57398062a490"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane"/>
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll"/>
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">
@@ -196,7 +196,7 @@
                     <attribute id="UUID" type="guid" value="536189bc-d4a4-55b8-b808-b941621a6bbc"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform;HC_Target_FareInspection;HC_Target_BARTFabricSeatBiohazard"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_WrongPlatform;HC_Target_FareInspection;HC_Target_BARTFabricSeatBiohazard;HC_Target_SideshowMustangDonut"/>
                     <attribute id="UUID" type="guid" value="7fb6225f-36e6-5040-b0bf-9b3fbee73264"/>
                 </node>
                 <node id="SpellList">

@@ -15,6 +15,8 @@ def generate_choices(public_dir, add_loca, get_guid):
         ('HC_StreetTrade_Busker', 'Busker', 'Performance', 'Insight', 'You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.'),
         ('HC_StreetTrade_SqueegeeTechnician', 'Squeegee Technician', 'Intimidation', 'Insight', 'You wipe the windshield first and discuss the fee afterwards. A single look says you know what the driver is thinking about, and what they will pay.'),
         ('HC_StreetTrade_Notary', 'Notary', 'Investigation', 'Persuasion', 'Every document looks official with a stamp, and you have found a stamp. Nobody has asked what it says.'),
+        ('HC_StreetTrade_SignSpinner', 'Bankruptcy Mattress Sign Spinner', 'Athletics', 'Performance', 'You can flip a six-foot foam arrow in ninety-degree heat while maintaining aggressive eye contact with stalled traffic.'),
+        ('HC_StreetTrade_ServicePitbull', "Unleashed 'Service Pitbull' Handler", 'Intimidation', 'Deception', 'The vest says EMOTIONAL SUPPORT ANIMAL in crooked Sharpie. His name is Princess and he has never seen a leash.'),
     ]
     blocks = []
     for key, name, first, second, flavor in options:

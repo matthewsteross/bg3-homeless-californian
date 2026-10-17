@@ -2619,6 +2619,13 @@ def generate_local_expansion():
     for category, levels in round5['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_round6 import generate_round6
+    round6 = generate_round6(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round6['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    for category, levels in round6['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}
@@ -2634,14 +2641,20 @@ def generate_local_expansion():
                 </node>''')
     with open(lists_path, encoding='utf-8') as f:
         text = f.read()
-    # Attach racial spells to the existing base-race list, never a class list.
-    racial_additions = [round4['racial_spell'], *round5['racial_spells']]
+    # Attach racial and subrace spells to their existing race/subrace lists, never a class list.
+    racial_list_map = {
+        SPELLLIST_CALIFORNIAN_L1: [round4['racial_spell'], *round5['racial_spells']],
+        SPELLLIST_BEACHBORN_L3: [round6['subrace_spells']['Beachborn_L3']],
+        SPELLLIST_SILICONITE_L3: [round6['subrace_spells']['Siliconite_L3']],
+        SPELLLIST_INLANDEMPEROR_L5: [round6['subrace_spells']['InlandEmperor_L5']],
+    }
     def attach_racial_spell(match):
         block = match.group(0)
         attrs = {a.get('id'): a.get('value') for a in ET.fromstring(block).findall('attribute')}
-        if attrs.get('UUID') == SPELLLIST_CALIFORNIAN_L1:
+        additions = racial_list_map.get(attrs.get('UUID'))
+        if additions:
             old = attrs['Spells']
-            block = block.replace(f'value="{old}"', f'value="{old};{";".join(racial_additions)}"', 1)
+            block = block.replace(f'value="{old}"', f'value="{old};{";".join(additions)}"', 1)
         return block
     text = re.sub(r'<node id="SpellList">(?:(?!<node).)*?</node>', attach_racial_spell, text, flags=re.S)
     text = text.replace('            </children>', '\n'.join(list_nodes) + '\n            </children>', 1)
