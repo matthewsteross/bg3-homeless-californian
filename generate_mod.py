@@ -2637,6 +2637,10 @@ def generate_local_expansion():
     barricade = generate_barricade(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in barricade['base'].items():
         grants['base'].setdefault(level, []).extend(spells)
+    from hc_tent import generate_tent
+    tent = generate_tent(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in tent['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
     from hc_round8 import generate_round8
     round8 = generate_round8(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in round8['base'].items():

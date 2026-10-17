@@ -132,7 +132,7 @@
                     <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip;HC_Projectile_PissJugCatapult"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip;HC_Projectile_PissJugCatapult;HC_Shout_PopUpTentEncampment"/>
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">

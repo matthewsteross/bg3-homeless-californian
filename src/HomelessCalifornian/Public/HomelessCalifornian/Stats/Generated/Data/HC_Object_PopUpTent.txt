@@ -1,0 +1,7 @@
+new entry "HC_OBJ_PopUpTent"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "cc99c0e4-00c9-576e-af34-28076db094cb"
+data "Weight" "60"
+data "GameSize" "Large"
+data "Vitality" "-1"

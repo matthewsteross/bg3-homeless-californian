@@ -89,6 +89,7 @@ SPELL_ICON_KEYS = {
     'HC_Shout_WholeFoodsHotBarHeist': 'Spell_WholeFoodsHotBarHeist',
     'HC_Target_MeetingCouldHaveBeenAScroll': 'Spell_MeetingCouldHaveBeenAScroll',
     'HC_Target_CaltransLaneClosure': 'Spell_CaltransLaneClosure',
+    'HC_Shout_PopUpTentEncampment': 'Spell_PopUpTentEncampment',
 }
 
 def icon_for_spell(spell, fallback):
