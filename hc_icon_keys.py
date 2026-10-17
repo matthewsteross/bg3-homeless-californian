@@ -77,6 +77,18 @@ SPELL_ICON_KEYS = {
     'HC_Shout_FakeServiceVest': 'Spell_FakeServiceVest',
     'HC_Projectile_PissJugCatapult': 'Spell_PissJugCatapult',
     'HC_Shout_GovernorGavinPhotoOp': 'Spell_GovernorGavinPhotoOp',
+    # Round 8 + Caltrans barricade (art pending; falls back to vanilla icons until the PNGs exist)
+    'HC_Target_PotholeAnkleBreaker': 'Spell_PotholeAnkleBreaker',
+    'HC_Shout_NIMBYPublicCommentPeriod': 'Spell_NIMBYPublicCommentPeriod',
+    'HC_Target_DepartmentUnfinishedBusiness': 'Spell_DepartmentUnfinishedBusiness',
+    'HC_Shout_MunicipalBudgetHearing': 'Spell_MunicipalBudgetHearing',
+    'HC_Target_SidewalkChiropracticAdjustment': 'Spell_SidewalkChiropracticAdjustment',
+    'HC_Projectile_PGEPublicSafetyBlackout': 'Spell_PGEPublicSafetyBlackout',
+    'HC_Shout_EmergencyBoardwalkSunglasses': 'Spell_EmergencyBoardwalkSunglasses',
+    'HC_Shout_HaywardFaultSeismicRetrofit': 'Spell_HaywardFaultSeismicRetrofit',
+    'HC_Shout_WholeFoodsHotBarHeist': 'Spell_WholeFoodsHotBarHeist',
+    'HC_Target_MeetingCouldHaveBeenAScroll': 'Spell_MeetingCouldHaveBeenAScroll',
+    'HC_Target_CaltransLaneClosure': 'Spell_CaltransLaneClosure',
 }
 
 def icon_for_spell(spell, fallback):
