@@ -139,7 +139,7 @@
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells(a97dca4e-6a54-52e4-b96a-5a236fd5a676)"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(a97dca4e-6a54-52e4-b96a-5a236fd5a676);AddSpells(4ba423d9-2b2d-5102-a737-782b98445a15)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="c6589f4a-e485-51ec-87b5-01a85b64edeb"/>
                 </node>

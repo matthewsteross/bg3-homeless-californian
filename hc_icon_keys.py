@@ -65,6 +65,18 @@ SPELL_ICON_KEYS = {
     'HC_Target_SquatterAdversePossession': 'Spell_SquatterAdversePossession',
     'HC_Shout_CVSReceiptScroll': 'Spell_CVSReceiptScroll',
     'HC_Target_SideshowMustangDonut': 'Spell_SideshowMustangDonut',
+    # Round 7 (subclass signatures, subrace capstones, and high-octane street comedy)
+    'HC_Target_UsedFoilBlowback': 'Spell_UsedFoilBlowback',
+    'HC_Shout_MuscleBeachRoidRage': 'Spell_MuscleBeachRoidRage',
+    'HC_Shout_TurnstileEmergencyGate': 'Spell_TurnstileEmergencyGate',
+    'HC_Target_ExtensionCordTap': 'Spell_ExtensionCordTap',
+    'HC_Target_BotoxFillerParalyze': 'Spell_BotoxFillerParalyze',
+    'HC_Shout_PolyculeGoogleCalendar': 'Spell_PolyculeGoogleCalendar',
+    'HC_Target_CatalyticStraightPipeRev': 'Spell_CatalyticStraightPipeRev',
+    'HC_Target_GasStationSqueegee': 'Spell_GasStationSqueegee',
+    'HC_Shout_FakeServiceVest': 'Spell_FakeServiceVest',
+    'HC_Projectile_PissJugCatapult': 'Spell_PissJugCatapult',
+    'HC_Shout_GovernorGavinPhotoOp': 'Spell_GovernorGavinPhotoOp',
 }
 
 def icon_for_spell(spell, fallback):

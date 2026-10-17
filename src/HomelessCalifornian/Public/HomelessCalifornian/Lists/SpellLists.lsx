@@ -66,7 +66,7 @@
 
                 <!-- Subclass BART Menace Level 10: Express Hop -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_ExpressHop"/>
+                    <attribute id="Spells" type="LSString" value="Target_ExpressHop;HC_Shout_TurnstileEmergencyGate"/>
                     <attribute id="UUID" type="guid" value="9a28b292-45e3-5c8f-afd1-96464f50db33"/>
                 </node>
 
@@ -92,7 +92,7 @@
                     <attribute id="UUID" type="guid" value="77b6c7c1-0ee7-5660-8307-a3d0ca90cf8f"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Shout_GoldenHour"/>
+                    <attribute id="Spells" type="LSString" value="Shout_GoldenHour;HC_Target_BotoxFillerParalyze"/>
                     <attribute id="UUID" type="guid" value="e6df496d-9dcd-5474-8d09-2d29b63d6cfe"/>
                 </node>
 
@@ -106,13 +106,13 @@
                     <attribute id="UUID" type="guid" value="5c6cf44b-e981-5544-8fc6-66b5eb9ae5c9"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_NonDisclosureAgreement"/>
+                    <attribute id="Spells" type="LSString" value="Target_NonDisclosureAgreement;HC_Shout_PolyculeGoogleCalendar"/>
                     <attribute id="UUID" type="guid" value="4d0c15ce-6278-5b24-a321-a8d2a91592d7"/>
                 </node>
 
                 <!-- Racial Inland Emperor Spells: Dust Devil (L1), Overpass Exhaust + Bakersfield Tule Fog (L3), Heatstroke (L5) -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Shout_DustDevil"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DustDevil;HC_Target_CatalyticStraightPipeRev"/>
                     <attribute id="UUID" type="guid" value="37a7f600-db05-51cf-afd9-97edc9991df0"/>
                 </node>
                 <node id="SpellList">
@@ -124,15 +124,15 @@
                     <attribute id="UUID" type="guid" value="1fe386e6-76d4-5f9c-8474-70fb43be7248"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Projectile_EmotionalSupportBrick;HC_Target_BagOfOtherBags;HC_Shout_LoadBearingChair;HC_Shout_ClaimUnclaimedWardrobe"/>
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_EmotionalSupportBrick;HC_Target_BagOfOtherBags;HC_Shout_LoadBearingChair;HC_Shout_ClaimUnclaimedWardrobe;HC_Target_GasStationSqueegee"/>
                     <attribute id="UUID" type="guid" value="938537ab-8cb8-558c-bacc-239e7818459c"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive;HC_Target_SprinklerViolation"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive;HC_Target_SprinklerViolation;HC_Shout_FakeServiceVest"/>
                     <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip;HC_Projectile_PissJugCatapult"/>
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">
@@ -164,7 +164,11 @@
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_PigeonWitnessProtection"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_GovernorGavinPhotoOp"/>
+                    <attribute id="UUID" type="guid" value="4ba423d9-2b2d-5102-a737-782b98445a15"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Target_PigeonWitnessProtection;HC_Target_UsedFoilBlowback"/>
                     <attribute id="UUID" type="guid" value="67548cfb-08e4-5dd5-9771-3583c635d527"/>
                 </node>
                 <node id="SpellList">
@@ -192,7 +196,7 @@
                     <attribute id="UUID" type="guid" value="a7ab479a-303f-5b4e-af01-735240385d9f"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_ChairCheck"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_ChairCheck;HC_Shout_MuscleBeachRoidRage"/>
                     <attribute id="UUID" type="guid" value="536189bc-d4a4-55b8-b808-b941621a6bbc"/>
                 </node>
                 <node id="SpellList">
@@ -208,7 +212,7 @@
                     <attribute id="UUID" type="guid" value="64194ab6-067a-53c3-aa17-9868a33d4afb"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_StormDrainFlashFlood;HC_Shout_BlueTarpLeanTo"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_StormDrainFlashFlood;HC_Shout_BlueTarpLeanTo;HC_Target_ExtensionCordTap"/>
                     <attribute id="UUID" type="guid" value="416267bb-fc15-5cfb-acb2-c5c7457c5dcb"/>
                 </node>
                 <node id="SpellList">

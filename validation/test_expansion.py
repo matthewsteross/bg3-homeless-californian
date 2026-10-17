@@ -34,8 +34,8 @@ class ExpansionGenerationTests(unittest.TestCase):
                 attrs = {a.get('id'): a.get('value') for a in node.findall('attribute')}
                 if 'HC_' in attrs['Spells']:
                     new_lists[attrs['UUID']] = attrs['Spells'].split(';')
-            # 24 expansion lists, Overpass L10, base racial list (round 4), and 3 subrace lists (round 6).
-            self.assertEqual(len(new_lists), 29)
+            # 25 expansion lists (including Base L12), Overpass L10, BART L10, base racial list, and 6 subrace lists.
+            self.assertEqual(len(new_lists), 34)
             progressions = ET.parse(public / 'Progressions/Progressions.lsx')
             selectors = ';'.join(a.get('value', '') for a in progressions.findall('.//attribute[@id="Selectors"]'))
             for uid in new_lists:
