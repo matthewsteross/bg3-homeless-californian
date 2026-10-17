@@ -227,7 +227,7 @@ data "ApplyEffect" "89f2d0ac-9295-4657-bfa6-fb6d61adf59c"''']
          'while enemies within 6 m make a Wisdom saving throw: on a failure they take 2d8 Psychic damage and lose 3 m movement and '
          'reactions for 2 turns, or take half damage on a success. Your Slack access has been revoked.',
          dict(UseCosts='ActionPoint:1', AreaRadius='6', SpellContainerID='',
-              TargetConditions='Character() and not Self() and not Ally() and not Dead()',
+              TargetConditions='Enemy()',
               SpellProperties='ApplyStatus(SELF,HC_STOCK_BUYBACK_SHIELD,100,2)',
               SpellRoll=wis_save,
               SpellSuccess='DealDamage(2d8,Psychic,Magical);ApplyStatus(HC_RESTRUCTURED_OUT,100,2)',

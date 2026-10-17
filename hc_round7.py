@@ -144,7 +144,7 @@ def generate_round7(public_dir, add_loca, get_guid):
          'on a failure they take 3d8 Thunder plus 1d8 Psychic damage and are Dazed for 2 turns, or take half damage on a success. '
          'The alarm will sound for the next forty-five minutes.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', AreaRadius='6', SpellContainerID='',
-              TargetConditions='Character() and not Self() and not Ally() and not Dead()',
+              TargetConditions='Enemy()',
               SpellProperties='ApplyStatus(SELF,HC_SCOOTER_GETAWAY,100,1)',
               SpellRoll=con_save,
               SpellSuccess='DealDamage(3d8,Thunder,Magical);DealDamage(1d8,Psychic,Magical);ApplyStatus(DAZED,100,2)',
@@ -191,7 +191,7 @@ def generate_round7(public_dir, add_loca, get_guid):
          'their movement halved and attack rolls given disadvantage for 2 turns, or take half damage on a success. '
          'Your metamour has requested a forty-minute emotional check-in before initiative continues.',
          dict(UseCosts='ActionPoint:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
-              TargetConditions='Character() and not Self() and not Ally() and not Dead()',
+              TargetConditions='Enemy()',
               SpellRoll=wis_save,
               SpellSuccess='DealDamage(3d8,Psychic,Magical);ApplyStatus(HC_POLYCULE_EXHAUSTION,100,2)',
               SpellFail='DealDamage((3d8)/2,Psychic,Magical)',
@@ -258,7 +258,7 @@ def generate_round7(public_dir, add_loca, get_guid):
          'Wisdom saving throw: on a failure they take 4d8 Psychic damage and become Socially Shamed for 2 turns, or take half damage on a success. '
          'Mission accomplished; the barriers come down as soon as the motorcade leaves.',
          dict(UseCosts='BonusActionPoint:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
-              TargetConditions='Character() and not Self() and not Ally() and not Dead()',
+              TargetConditions='Enemy()',
               SpellProperties='SELF:RestoreResource(HC_Junk,2,0);ApplyStatus(SELF,HC_NAPA_FUNDRAISER_BUFF,100,2)',
               SpellRoll=wis_save,
               SpellSuccess='DealDamage(4d8,Psychic,Magical);ApplyStatus(PANHANDLING_SHAME,100,2)',

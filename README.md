@@ -243,11 +243,11 @@ the class resource.
 | 3 AM Sidewalk Lawnmower Disassembly | Class 6 | Bonus action + 1 Junk. 2 turns of +4.5 m movement, +2 AC, advantage on Dexterity saves and Sleight of Hand, Sleep immunity |
 | Live Copper Wire Harvest | Class 7 | Action + 1 Junk. Melee spell attack at 1.5 m: `3d8` Lightning + `1d8` Slashing, -2 AC and no Reactions for 2 turns, electrified puddle |
 | Prop 47 '$949' Calculator | Class 9 | Action + 1 Junk, 9 m. You pocket 5 gold and get +3 m movement and Prone immunity for 1 turn; target makes a Wisdom save or takes `3d8` Psychic and is Dazed for 2 turns (half on a success) |
-| Jailbroken E-Scooter Hit-and-Run | Class 10 | Action + 1 Junk, 9 m line. You get +3 m movement for 1 turn; Dexterity save or `3d8 + CON` Bludgeoning + `1d8` Thunder and Prone (half on a success) |
+| Jailbroken E-Scooter Hit-and-Run | Class 10 | Action + 1 Junk, 9 m by 3 m rectangle ahead of you. You get +3 m movement for 1 turn; Dexterity save or `3d8 + CON` Bludgeoning + `1d8` Thunder and Prone (half on a success) |
 | Tin-Foil Bus Shelter Hotbox | Tenderloin 6 | Action + 1 Junk, 3 m radius. Constitution save or `3d8` Poison + `2d6` Psychic and Fent Stupor for 1 turn (half on a success); leaves fog for 2 turns |
 | Aggressive Mixtape & Sunset Bongos | Venice 6 | Action + 1 Junk, 9 m. Wisdom save or `2d8` Thunder + `2d8` Psychic and Socially Shamed for 2 turns, and you collect 5 gold (half on a success) |
 | Damp Cloth BART Seat Mystery Stain | BART 6 | Action + 1 Junk, 9 m. Constitution save or `3d8` Poison + `1d8` Acid and Fecal Stench for 2 turns (half on a success) |
-| Stolen Propane Tank Overpass Cookout | Overpass 6 | Bonus action + 1 Junk. Regain `1d8 + CON` HP; 2 turns of Cold resistance and `+1d6` Fire weapon damage; a 2 m ring of fire for 2 turns |
+| Stolen Propane Tank Overpass Cookout | Overpass 6 | Bonus action + 1 Junk. Regain `1d8 + CON` HP; 2 turns of Cold resistance and `+1d6` Fire weapon damage; a 2 m patch of fire around you for 2 turns (you stand in it too) |
 | 'Actually, The Term Is Unhoused Neighbor' | Californian race, level 1 | Action (no Junk), 9 m. Wisdom save or `2d6` Psychic and Cancelled for 2 turns (disadvantage on attack rolls, no Reactions); `1d6` on a success |
 | $24 Erewhon Sea-Moss & Ozempic Glaze | Californian race, level 1 | Bonus action (no Junk), **once per long rest**. Regain `1d8 +` spellcasting modifier HP; 2 turns of +2 AC, +3 m movement and advantage on Constitution saves |
 | **Round 6** | | |

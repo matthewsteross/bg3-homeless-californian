@@ -153,7 +153,7 @@ def generate_round5(public_dir, add_loca, get_guid):
         (SCOOTER_HIT, 'Zone_Thunderwave', 'Spell_Evocation_Thunderwave',
          'Jailbroken E-Scooter Hit-and-Run',
          'Blast down the pavement on a hotwired rental e-scooter while its GPS speaker shrieks at maximum volume. '
-         'Costs an action and 1 Junk; once per short rest. Gain +3 m movement for 1 turn while creatures in a 9 m line '
+         'Costs an action and 1 Junk; once per short rest. Gain +3 m movement for 1 turn while creatures in a 9 m by 3 m rectangle ahead of you '
          'make a Dexterity saving throw, taking 3d8 + Constitution modifier Bludgeoning plus 1d8 Thunder damage and falling '
          'Prone for 1 turn on a failure, or half damage on a success. The app thinks this scooter is at the bottom of a canal.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Range='9', Base='3', DamageType='Bludgeoning',
@@ -215,7 +215,7 @@ def generate_round5(public_dir, add_loca, get_guid):
          'Stolen Propane Tank Overpass Cookout',
          'Fire up a dented twenty-pound propane cylinder with a taped regulator under the freeway. '
          'Costs a bonus action and 1 Junk; once per short rest. Regain 1d8 + Constitution modifier Hit Points, gain Cold resistance '
-         'and +1d6 Fire weapon damage for 2 turns, and ignite a 2 m ring of fire for 2 turns. '
+         'and +1d6 Fire weapon damage for 2 turns, and ignite a 2 m patch of fire around you for 2 turns (careful, you are standing in it). '
          'Dinner is hot and so is the retaining wall.',
          dict(UseCosts='BonusActionPoint:1;HC_Junk:1', TargetConditions='Self()',
               SpellProperties='RegainHitPoints(1d8+ConstitutionModifier);ApplyStatus(SELF,HC_PROPANE_WARMTH,100,2);GROUND:CreateSurface(2,2,Fire)',
