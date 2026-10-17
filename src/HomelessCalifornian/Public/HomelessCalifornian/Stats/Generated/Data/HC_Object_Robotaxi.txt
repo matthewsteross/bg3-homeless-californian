@@ -1,0 +1,7 @@
+new entry "HC_OBJ_Robotaxi"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "becb872a-631c-5f4a-b4a8-ba4843a86359"
+data "Weight" "800"
+data "GameSize" "Large"
+data "Vitality" "-1"

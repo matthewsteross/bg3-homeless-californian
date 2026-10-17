@@ -106,7 +106,7 @@
                     <attribute id="UUID" type="guid" value="5c6cf44b-e981-5544-8fc6-66b5eb9ae5c9"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_NonDisclosureAgreement;HC_Shout_PolyculeGoogleCalendar"/>
+                    <attribute id="Spells" type="LSString" value="Target_NonDisclosureAgreement;HC_Shout_PolyculeGoogleCalendar;HC_Target_RobotaxiBreakdown"/>
                     <attribute id="UUID" type="guid" value="4d0c15ce-6278-5b24-a321-a8d2a91592d7"/>
                 </node>
 
@@ -120,7 +120,7 @@
                     <attribute id="UUID" type="guid" value="71f3e612-736a-5a6a-958e-1d5bc104d5fe"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_Heatstroke;HC_Projectile_GarageShakeAndBake"/>
+                    <attribute id="Spells" type="LSString" value="Target_Heatstroke;HC_Projectile_GarageShakeAndBake;HC_Target_PortaPottyTipOver"/>
                     <attribute id="UUID" type="guid" value="1fe386e6-76d4-5f9c-8474-70fb43be7248"/>
                 </node>
                 <node id="SpellList">

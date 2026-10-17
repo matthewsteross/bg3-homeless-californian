@@ -199,7 +199,7 @@ class PopUpTentTests(unittest.TestCase):
         self.assertIn('type "StatusData"', text)
         self.assertEqual(f['StatusType'], 'BOOST')
         self.assertEqual(f['Boosts'], 'TemporaryHP(8)')
-        self.assertEqual(f['StackId'], ht.STATUS)
+        self.assertEqual(f['StackId'], 'TEMPORARY_HP')
         self.assertTrue(ht.STATUS.startswith('HC_'))
         self.assertEqual(f['DisplayName'], generator.get_handle(ht.STATUS + '_Name') + ';1')
         self.assertIn('Illegal, but cozy.', generator.LOCA_ENTRIES[generator.get_handle(ht.STATUS + '_Description')])

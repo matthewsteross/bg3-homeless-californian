@@ -91,6 +91,8 @@ SPELL_ICON_KEYS = {
     'HC_Target_CaltransLaneClosure': 'Spell_CaltransLaneClosure',
     'HC_Shout_PopUpTentEncampment': 'Spell_PopUpTentEncampment',
     'HC_Target_ScooterGraveyard': 'Spell_ScooterGraveyard',
+    'HC_Target_PortaPottyTipOver': 'Spell_PortaPottyTipOver',
+    'HC_Target_RobotaxiBreakdown': 'Spell_RobotaxiBreakdown',
     # Round 9 (art pending; vanilla fallbacks until the PNGs exist)
     'HC_Target_CostcoSampleCartSideways': 'Spell_CostcoSampleCartSideways',
     'HC_Target_DMVTicketB047FarWindow': 'Spell_DMVTicketB047FarWindow',

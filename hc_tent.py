@@ -229,7 +229,7 @@ def generate_tent(public_dir, add_loca, get_guid):
     fmt = lambda v: " ".join(f"{x:g}" for x in v)
     for btype, (lo, hi), radius in ((1, (BMIN, BMAX), 0.5), (2, (BMIN, BMAX), 0.5), (0, inner, 0.35)):
         b = ET.SubElement(bchildren, "node", id="Bound")
-        for attr, kind, value in (("Height", "float", f"{height:g}"), ("Max", "fvec3", fmt(hi)), ("Min", "fvec3", fmt(lo)),
+        for attr, kind, value in (("Height", "float", f"{hi[1]:g}"), ("Max", "fvec3", fmt(hi)), ("Min", "fvec3", fmt(lo)),
                                   ("Radius", "float", f"{radius:g}"), ("Shape", "uint8", "1"), ("Type", "uint8", str(btype))):
             ET.SubElement(b, "attribute", id=attr, type=kind, value=value)
     ET.indent(save, space="    ")
@@ -252,11 +252,14 @@ data "Vitality" "-1"
     (stats / "HC_Status_PopUpTent.txt").write_text(f'''new entry "{STATUS}"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "{STATUS}"
+data "StackId" "TEMPORARY_HP"
 data "StackType" "Overwrite"
+data "StackPriority" "8"
 data "TickType" "EndTurn"
 data "Icon" "{STATUS_ICON_FALLBACK}"
 data "Boosts" "TemporaryHP(8)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
 data "DisplayName" "{status_title};1"
 data "Description" "{status_desc};1"
 ''', encoding="utf-8")

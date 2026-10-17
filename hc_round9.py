@@ -45,6 +45,10 @@ STATUS_SPECS = [
      'Cube-Denied',
      '-3 m movement speed. The sign says one sample per customer and you are still processing what that means.',
      dict(Boosts='ActionResource(Movement,-3,0)', StatusPropertyFlags='InitiateCombat')),
+    ('HC_UNEXPECTED_ITEM_LOCKOUT', SELF_CHECKOUT, 'Spell_Enchantment_Bane',
+     'Unexpected Item Lockout',
+     'Cannot take bonus actions and has disadvantage on attack rolls. Please remove the item and wait for assistance. Assistance is not coming.',
+     dict(Boosts='ActionResourceBlock(BonusActionPoint);Disadvantage(AttackRoll)', StatusPropertyFlags='InitiateCombat')),
     ('HC_GRANDFATHERED_IN', PROP13, 'Spell_Abjuration_MageArmor',
      'Grandfathered In',
      '+2 Armour Class. Does not stack with other braced-posture bonuses. Your assessed value froze in 1978 and so did your fear of the county.',
@@ -100,6 +104,8 @@ def generate_round9(public_dir, add_loca, get_guid):
     dex_save = 'not SavingThrow(Ability.Dexterity, SourceSpellDC())'
     con_save = 'not SavingThrow(Ability.Constitution, SourceSpellDC())'
     wis_save = 'not SavingThrow(Ability.Wisdom, SourceSpellDC())'
+    wis_fear = 'not SavingThrow(Ability.Wisdom, SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())'
+    con_fear = 'not SavingThrow(Ability.Constitution, SourceSpellDC(), AdvantageOnFrightened(), DisadvantageOnFrightened())'
     hostile = 'Character() and not Ally() and not Dead()'
 
     spell_specs = [
@@ -138,16 +144,16 @@ def generate_round9(public_dir, add_loca, get_guid):
          'Self-Checkout: Unexpected Item in the Bagging Area',
          'Scan an item that does not exist and let the machine announce it to the entire store. '
          'Costs an action and 1 Junk; once per short rest. A target within 9 m makes a Wisdom saving throw: on a failure it takes '
-         '2d8 Psychic damage and is Dazed for 2 turns, or takes half damage on a success. '
+         '2d8 Psychic damage and is locked out of bonus actions with disadvantage on attack rolls for 2 turns, or takes half damage on a success. '
          'The attendant is on break until the heat death of the store.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', TargetRadius='9', DamageType='Psychic',
               TargetConditions=hostile,
               SpellRoll=wis_save,
-              SpellSuccess='DealDamage(2d8,Psychic,Magical);ApplyStatus(DAZED,100,2)',
+              SpellSuccess='DealDamage(2d8,Psychic,Magical);ApplyStatus(HC_UNEXPECTED_ITEM_LOCKOUT,100,2)',
               SpellFail='DealDamage((2d8)/2,Psychic,Magical)',
               TooltipDamageList='DealDamage(2d8,Psychic)',
               TooltipAttackSave='Wisdom',
-              TooltipStatusApply='ApplyStatus(DAZED,100,2)')),
+              TooltipStatusApply='ApplyStatus(HC_UNEXPECTED_ITEM_LOCKOUT,100,2)')),
 
         (PROP13, 'Shout_SecondWind', 'Spell_Abjuration_MageArmor',
          'Prop 13 Grandfathered Assessment Smirk',
@@ -168,7 +174,7 @@ def generate_round9(public_dir, add_loca, get_guid):
          'on a failure they take 3d8 Bludgeoning damage and fall Prone for 1 turn, or take half damage on a success. '
          'The shuttle does not see bikes. The shuttle sees headcount.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Range='9', Base='3', DamageType='Bludgeoning',
-              TargetConditions=hostile,
+              TargetConditions='Enemy()',
               SpellRoll=dex_save,
               SpellSuccess='DealDamage(3d8,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)',
               SpellFail='DealDamage((3d8)/2,Bludgeoning,Magical)',
@@ -184,7 +190,7 @@ def generate_round9(public_dir, add_loca, get_guid):
          'They have a quorum, your leftovers, and minutes from last week.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', TargetRadius='3', DamageType='Piercing',
               TargetConditions=hostile,
-              SpellRoll=con_save,
+              SpellRoll=con_fear,
               SpellSuccess='DealDamage(2d6,Piercing,Magical);DealDamage(1d8,Poison,Magical);ApplyStatus(FRIGHTENED,100,1)',
               SpellFail='DealDamage((2d6)/2,Piercing,Magical);DealDamage((1d8)/2,Poison,Magical)',
               TooltipDamageList='DealDamage(2d6,Piercing);DealDamage(1d8,Poison)',
@@ -230,7 +236,7 @@ def generate_round9(public_dir, add_loca, get_guid):
          'The beige you submitted is not the approved beige.',
          dict(UseCosts='ActionPoint:1', TargetRadius='9', DamageType='Psychic',
               TargetConditions=hostile,
-              SpellRoll=wis_save,
+              SpellRoll=wis_fear,
               SpellSuccess='DealDamage(2d8,Psychic,Magical);ApplyStatus(FRIGHTENED,100,2)',
               SpellFail='DealDamage((2d8)/2,Psychic,Magical)',
               TooltipDamageList='DealDamage(2d8,Psychic)',
@@ -245,7 +251,7 @@ def generate_round9(public_dir, add_loca, get_guid):
          "It is not a coyote. It has been everyone's coyote since March.",
          dict(UseCosts='ActionPoint:1', AreaRadius='6', SpellContainerID='',
               TargetConditions='Enemy()',
-              SpellRoll=wis_save,
+              SpellRoll=wis_fear,
               SpellSuccess='DealDamage(2d8,Psychic,Magical);ApplyStatus(FRIGHTENED,100,1)',
               SpellFail='DealDamage((2d8)/2,Psychic,Magical)',
               TooltipDamageList='DealDamage(2d8,Psychic)',

@@ -1,0 +1,7 @@
+new entry "HC_OBJ_PortaPotty"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "0e7985c4-0202-50a4-8a41-b7e6a7a54d4a"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

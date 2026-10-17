@@ -98,8 +98,8 @@ class RoundNineTests(unittest.TestCase):
     def test_all_round9_entries_are_unique_prefixed_and_do_not_override_vanilla(self):
         self.assertEqual(set(self.new), EXPECTED_SPELLS | EXPECTED_STATUSES)
         self.assertEqual(len(EXPECTED_SPELLS), 10)
-        self.assertEqual(len(EXPECTED_STATUSES), 3)
-        self.assertEqual(len(self.new), 13)
+        self.assertEqual(len(EXPECTED_STATUSES), 4)
+        self.assertEqual(len(self.new), 14)
         for name in self.new:
             self.assertTrue(name.startswith('HC_'))
             self.assertNotIn(name, self.vanilla)
@@ -224,7 +224,7 @@ class RoundNineTests(unittest.TestCase):
         want = {
             round9.COSTCO_CART: ('Strength', '6', 'DealDamage(2d6,Bludgeoning,Magical)', 'ApplyStatus(HC_CUBE_DENIED,100,2)'),
             round9.DMV_TICKET: ('Wisdom', '12', 'DealDamage(2d8,Psychic,Magical)', 'ApplyStatus(DAZED,100,1)'),
-            round9.SELF_CHECKOUT: ('Wisdom', '9', 'DealDamage(2d8,Psychic,Magical)', 'ApplyStatus(DAZED,100,2)'),
+            round9.SELF_CHECKOUT: ('Wisdom', '9', 'DealDamage(2d8,Psychic,Magical)', 'ApplyStatus(HC_UNEXPECTED_ITEM_LOCKOUT,100,2)'),
             round9.TECH_SHUTTLE: ('Dexterity', None, 'DealDamage(3d8,Bludgeoning,Magical)', 'ApplyStatus(PRONE,100,1)'),
             round9.RACCOON_TRIBUNAL: ('Constitution', '3', 'DealDamage(2d6,Piercing,Magical)', 'ApplyStatus(FRIGHTENED,100,1)'),
             round9.PURPLEAIR: ('Constitution', '6', 'DealDamage(2d6,Poison,Magical)', 'ApplyStatus(BLINDED,100,1)'),
