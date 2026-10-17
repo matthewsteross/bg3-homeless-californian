@@ -3,6 +3,8 @@ from pathlib import Path
 
 ASSETS = Path(__file__).resolve().parent / 'assets/icons'
 SPELL_ICON_KEYS = {
+    'HC_Target_FreewayDirections': 'Spell_FreewayDirections',
+    'HC_Target_PermitPending': 'Spell_PermitPending',
     'HC_Projectile_EmotionalSupportBrick': 'Spell_EmotionalSupportBrick',
     'HC_Target_BagOfOtherBags': 'Spell_BagOfOtherBags',
     'HC_Shout_LoadBearingChair': 'Spell_LoadBearingChair',

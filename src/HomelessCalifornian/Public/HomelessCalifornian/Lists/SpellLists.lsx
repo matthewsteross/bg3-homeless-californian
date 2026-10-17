@@ -78,7 +78,7 @@
 
                 <!-- Racial Californian Spells: Touch Grass, Avocado Toast, Hydro Flask -->
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask"/>
+                    <attribute id="Spells" type="LSString" value="Target_TouchGrass;Shout_AvocadoToast;Shout_EmotionalSupportHydroflask;HC_Target_FreewayDirections"/>
                     <attribute id="UUID" type="guid" value="51fb8228-c489-56ca-9757-19a03867dccb"/>
                 </node>
 
@@ -144,7 +144,7 @@
                     <attribute id="UUID" type="guid" value="ddce9474-2ca9-51d0-849b-f113d3c96d78"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending"/>
                     <attribute id="UUID" type="guid" value="e80ad412-fdf2-5d49-a4fb-4c72445fd8ab"/>
                 </node>
                 <node id="SpellList">

@@ -131,7 +131,8 @@ class KitAdditionTests(unittest.TestCase):
     def test_nimby_is_in_californian_level_one_kit_only(self):
         level1 = self.level_progression('Californian', '1')
         granted = level1['PassivesAdded'].split(';')
-        self.assertEqual(granted, ORIGINAL_RACIAL + [RACIAL])
+        self.assertEqual(granted, ORIGINAL_RACIAL + [RACIAL, 'HC_WeatherComplaint',
+                         'HC_WeatherComplaint_WET', 'HC_WeatherComplaint_CHILLED', 'HC_WeatherComplaint_ICE'])
         # Not granted by any other progression, list or selector (no subrace or class double-dip).
         holders = [a for a in self.progressions
                    if RACIAL in re.split(r'[;,]', a.get('PassivesAdded', '')) or RACIAL in a.get('Selectors', '')]

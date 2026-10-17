@@ -2608,6 +2608,10 @@ def generate_local_expansion():
     round2 = generate_round2(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in round2['base'].items():
         grants['base'].setdefault(level, []).extend(spells)
+    from hc_round4 import generate_round4
+    round4 = generate_round4(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round4['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}
@@ -2623,6 +2627,15 @@ def generate_local_expansion():
                 </node>''')
     with open(lists_path, encoding='utf-8') as f:
         text = f.read()
+    # Attach racial spells to the existing base-race list, never a class list.
+    def attach_racial_spell(match):
+        block = match.group(0)
+        attrs = {a.get('id'): a.get('value') for a in ET.fromstring(block).findall('attribute')}
+        if attrs.get('UUID') == SPELLLIST_CALIFORNIAN_L1:
+            old = attrs['Spells']
+            block = block.replace(f'value="{old}"', f'value="{old};{round4["racial_spell"]}"', 1)
+        return block
+    text = re.sub(r'<node id="SpellList">(?:(?!<node).)*?</node>', attach_racial_spell, text, flags=re.S)
     text = text.replace('            </children>', '\n'.join(list_nodes) + '\n            </children>', 1)
     with open(lists_path, 'w', encoding='utf-8') as f:
         f.write(text)
@@ -2637,6 +2650,14 @@ def generate_local_expansion():
                  ET.fromstring(block).findall('attribute')}
         category = attrs.get('Name')
         level = int(attrs.get('Level', '0'))
+        if category == 'Californian' and level == 1:
+            old_passives = attrs.get('PassivesAdded', '')
+            new_passives = ';'.join(filter(None, [old_passives, *round4['racial_passives']]))
+            line = f'<attribute id="PassivesAdded" type="LSString" value="{escape(new_passives)}"/>'
+            if 'PassivesAdded' in attrs:
+                block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)
+            else:
+                block = block.replace('<attribute id="Level"', line + '\n                    <attribute id="Level"', 1)
         uid = list_ids.get((category, level))
         if uid:
             consumed.add((category, level))
