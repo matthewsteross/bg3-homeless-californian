@@ -45,7 +45,7 @@ STATUS_SPECS = [
     ('HC_PUBLIC_COMMENT_TRANCE', NIMBY_COMMENT, 'Spell_Enchantment_Bane',
      'Speaker Forty-One of Forty-Four',
      'Cannot move or take actions, bonus actions, or reactions. Gary is reading his parking-impact study aloud and nobody is allowed to leave.',
-     dict(Boosts='ActionResourceBlock(ActionPoint);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceMultiplier(Movement,0,0)',
+     dict(Boosts='ActionResourceBlock(ActionPoint);ActionResourceBlock(BonusActionPoint);ActionResourceBlock(ReactionActionPoint);ActionResourceMultiplier(Movement,0,0);ActionResourceBlock(Movement)',
           StatusPropertyFlags='InitiateCombat')),
     ('HC_RED_TAGGED', UNFINISHED_BUSINESS, 'Spell_Enchantment_Bane',
      'Red-Tagged: Unpermitted Everything',
@@ -75,7 +75,7 @@ STATUS_SPECS = [
     ('HC_SYNERGY_ALIGNED', SCROLL_MEETING, 'Spell_Abjuration_MageArmor',
      'Aligned On Next Steps',
      '+1d4 to attack rolls and +1d4 to ability checks. Everyone left the room with the same understanding, which has never happened before.',
-     dict(Boosts='RollBonus(Attack,1d4);RollBonus(SkillCheck,1d4)')),
+     dict(Boosts='RollBonus(Attack,1d4);RollBonus(RawAbility,1d4);RollBonus(SkillCheck,1d4)')),
 ]
 
 
@@ -148,7 +148,7 @@ def generate_round8(public_dir, add_loca, get_guid):
          '2d6 Psychic damage and cannot move or take actions, bonus actions, or reactions for 1 turn, or take half damage on a success. '
          'The planning commission would like to table this item until the next meeting, which is in March.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
-              TargetConditions='Character() and not Self() and not Ally() and not Dead()',
+              TargetConditions='Enemy()',
               SpellRoll=wis_save,
               SpellSuccess='DealDamage(2d6,Psychic,Magical);ApplyStatus(HC_PUBLIC_COMMENT_TRANCE,100,1)',
               SpellFail='DealDamage((2d6)/2,Psychic,Magical)',
@@ -224,7 +224,7 @@ def generate_round8(public_dir, add_loca, get_guid):
          '3d6 Bludgeoning damage and fall Prone, or take half damage on a success. '
          'You gain +2 Armour Class and immunity to being knocked Prone for 2 turns, because only you read the engineering report.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', AreaRadius='6', SpellContainerID='',
-              TargetConditions='Character() and not Self() and not Ally() and not Dead()',
+              TargetConditions='Enemy()',
               SpellProperties='ApplyStatus(SELF,HC_RETROFIT_PENDING,100,2)',
               SpellRoll=dex_save,
               SpellSuccess='DealDamage(3d6,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)',

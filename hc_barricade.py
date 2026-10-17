@@ -1,5 +1,5 @@
 """Caltrans "LANE CLOSED AHEAD" barricade: a custom 3D prop (orange-and-white Type III barricade with three striped
-slat boards, two reflective-collar traffic cones, a sandbag on each foot and a flashing amber lamp) and the ground-target
+slat boards, two reflective-collar traffic cones, a sandbag on each foot and an amber lamp) and the ground-target
 spell HC_Target_CaltransLaneClosure that spawns it, with a short +2 AC status on the caster.
 
 AI-generated asset: the mesh (procedural Python geometry) and the textures (procedural PIL/numpy painting) were
@@ -188,7 +188,7 @@ def generate_barricade(public_dir, add_loca, get_guid):
     # 3. Root template (static prop: no physics, cannot be moved or picked up). Own file, as for the cart and tarp.
     template_id = get_guid(TEMPLATE_KEY)
     title = "Caltrans 'Lane Closed Ahead' Barricade"
-    item_desc = ("Orange stripes, white stripes, two cones and a flashing amber lamp that has been blinking since the "
+    item_desc = ("Orange stripes, white stripes, two cones and a painted amber lamp that looks like it has been blinking since the "
                  "previous administration. No one has ever seen the road work, only the barricade. It does not "
                  "block traffic so much as ask politely, and it is the single most respected object in California.")
     title_handle = add_loca(OBJECT_STAT + "_Name", title)
@@ -226,7 +226,7 @@ def generate_barricade(public_dir, add_loca, get_guid):
     fmt = lambda v: " ".join(f"{x:g}" for x in v)
     for btype, (lo, hi), radius in ((1, (BMIN, BMAX), 0.5), (2, (BMIN, BMAX), 0.5), (0, inner, 0.35)):
         b = ET.SubElement(bchildren, "node", id="Bound")
-        for attr, kind, value in (("Height", "float", f"{height:g}"), ("Max", "fvec3", fmt(hi)), ("Min", "fvec3", fmt(lo)),
+        for attr, kind, value in (("Height", "float", f"{hi[1]:g}"), ("Max", "fvec3", fmt(hi)), ("Min", "fvec3", fmt(lo)),
                                   ("Radius", "float", f"{radius:g}"), ("Shape", "uint8", "1"), ("Type", "uint8", str(btype))):
             ET.SubElement(b, "attribute", id=attr, type=kind, value=value)
     ET.indent(save, space="    ")
@@ -262,8 +262,8 @@ data "Description" "{status_desc};1"
     spell_title = add_loca(SPELL + "_Name", title)
     spell_desc = add_loca(SPELL + "_Description",
                           "Drop a full Caltrans lane-closure setup on the ground within 9 m: barricade, two reflective cones, "
-                          "sandbags and a flashing amber lamp. Costs a bonus action and 1 Junk; once per short rest. "
-                          "You also gain +2 Armour Class for 2 turns while you stand behind the orange. "
+                          "sandbags and a painted amber lamp. Costs a bonus action and 1 Junk; once per short rest. "
+                          "You also gain +2 Armour Class for 2 turns. "
                           "Nobody knows which agency owns it, which is why it will outlive the road.")
     (stats / "HC_Spells_Barricade.txt").write_text(f'''new entry "{SPELL}"
 type "SpellData"

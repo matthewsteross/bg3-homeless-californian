@@ -40,7 +40,7 @@
                                     <attribute id="Type" type="uint8" value="2" />
                                 </node>
                                 <node id="Bound">
-                                    <attribute id="Height" type="float" value="1.1" />
+                                    <attribute id="Height" type="float" value="0.95" />
                                     <attribute id="Max" type="fvec3" value="1.15 0.95 0.1" />
                                     <attribute id="Min" type="fvec3" value="-1.15 0 -0.08" />
                                     <attribute id="Radius" type="float" value="0.35" />
