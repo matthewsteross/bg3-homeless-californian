@@ -92,7 +92,7 @@
                     <attribute id="UUID" type="guid" value="77b6c7c1-0ee7-5660-8307-a3d0ca90cf8f"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="Shout_GoldenHour;HC_Target_BotoxFillerParalyze"/>
+                    <attribute id="Spells" type="LSString" value="Shout_GoldenHour;HC_Target_BotoxFillerParalyze;HC_Target_ScooterGraveyard"/>
                     <attribute id="UUID" type="guid" value="e6df496d-9dcd-5474-8d09-2d29b63d6cfe"/>
                 </node>
 

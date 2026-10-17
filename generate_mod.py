@@ -2641,6 +2641,8 @@ def generate_local_expansion():
     tent = generate_tent(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in tent['base'].items():
         grants['base'].setdefault(level, []).extend(spells)
+    from hc_scooters import generate_scooters
+    scooters = generate_scooters(PUBLIC_DIR, add_loca, get_guid)
     from hc_round8 import generate_round8
     round8 = generate_round8(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in round8['base'].items():
@@ -2682,7 +2684,8 @@ def generate_local_expansion():
         SPELLLIST_BEACHBORN_L1: [round9['existing_list_spells']['Beachborn_L1']],
         SPELLLIST_INLANDEMPEROR_L5: [round6['subrace_spells']['InlandEmperor_L5']],
         SPELLLIST_BART_L10: [round7['existing_list_spells']['BART_L10']],
-        SPELLLIST_BEACHBORN_L5: [round7['existing_list_spells']['Beachborn_L5']],
+        SPELLLIST_BEACHBORN_L5: [round7['existing_list_spells']['Beachborn_L5'],
+                                 scooters['existing_list_spells']['Beachborn_L5']],
         SPELLLIST_SILICONITE_L5: [round7['existing_list_spells']['Siliconite_L5']],
         SPELLLIST_INLANDEMPEROR_L1: [round7['existing_list_spells']['InlandEmperor_L1']],
     }

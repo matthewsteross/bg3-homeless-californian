@@ -26,7 +26,7 @@ CELL_Y0 = 896
 
 LIME = (160, 238, 8)
 CYAN = (24, 212, 240)
-WHITE = (240, 244, 240)
+WHITE = (250, 252, 250)
 
 # name: (base RGB, grime 0-1, scratch 0-1, rough 0-1)
 PALETTE = {
@@ -34,7 +34,7 @@ PALETTE = {
     'lime_dark':   ((98, 168, 0), 0.40, 0.25, 0.42),
     'cyan':        (CYAN, 0.30, 0.30, 0.38),
     'cyan_dark':   ((0, 150, 190), 0.40, 0.25, 0.42),
-    'white':       (WHITE, 0.35, 0.30, 0.40),
+    'white':       (WHITE, 0.15, 0.30, 0.40),
     'white_dark':  ((186, 192, 190), 0.45, 0.30, 0.45),
     'rubber':      ((26, 26, 28), 0.35, 0.10, 0.85),
     'rubber_grey': ((70, 70, 74), 0.45, 0.20, 0.85),
@@ -280,28 +280,34 @@ def _fence():
     img = _composite(img, _down(layer))
     arr = np.asarray(img).astype('float32')
     g = _lowfreq(rng, 12, (h, w))
-    rustm = np.clip((_lowfreq(rng, 6, (h, w)) - 0.55) * 5, 0, 1)
+    rustm = np.clip((_lowfreq(rng, 9, (h, w)) - 0.66) * 6, 0, 1) * 0.25
     arr = arr * (1 - 0.65 * rustm[..., None]) + np.array([150, 80, 40], 'float32') * 0.65 * rustm[..., None] * (0.6 + 0.6 * g[..., None])
     arr *= (0.78 + 0.35 * g)[..., None]
     img = Image.fromarray(np.clip(arr, 0, 255).astype('uint8'))
     layer = _ss(w, h); d = ImageDraw.Draw(layer)
-    # torn hole near the lower right where a handlebar punched through (dark gap with curled cut wires)
+    # torn hole near the lower right where a handlebar punched through (ragged dark gap with bent cut wires)
     hx, hy = 330, 150
-    d.ellipse([(hx - 34) * SS, (hy - 22) * SS, (hx + 34) * SS, (hy + 22) * SS], fill=(18, 20, 24, 255))
-    for k in range(14):
-        a = k * 2 * math.pi / 14 + rng.normal(0, 0.1)
-        rr = rng.uniform(26, 42)
-        d.arc([(hx + math.cos(a) * 30 - 7) * SS, (hy + math.sin(a) * 18 - 7) * SS, (hx + math.cos(a) * 30 + 7) * SS, (hy + math.sin(a) * 18 + 7) * SS],
-              0, 280, fill=(214, 218, 226, 255), width=int(2.2 * SS))
-    # plastic bags caught in the mesh: bright pink, yellow and white, with crinkle lines
-    for bx, by, bw, bh, col in ((70, 32, 46, 38, (255, 90, 170, 235)), (205, 120, 36, 44, (250, 220, 40, 235)),
-                                 (400, 40, 36, 44, (240, 244, 250, 235)), (40, 150, 42, 34, (80, 220, 255, 225))):
-        pts = [(bx + rng.uniform(-3, 3), by), (bx + bw * 0.5, by + rng.uniform(-6, 2)), (bx + bw + rng.uniform(-3, 3), by + 4),
-               (bx + bw * 0.9, by + bh * 0.6), (bx + bw * 0.6, by + bh), (bx + bw * 0.2, by + bh * 0.8), (bx, by + bh * 0.4)]
+    pts = []
+    for k in range(18):
+        a = k * 2 * math.pi / 18
+        rr = 1.0 + (0.28 if k % 2 else -0.12) + rng.normal(0, 0.06)
+        pts.append(((hx + math.cos(a) * 26 * rr) * SS, (hy + math.sin(a) * 17 * rr) * SS))
+    d.polygon(pts, fill=(14, 16, 20, 255))
+    for k in range(10):
+        a = k * 2 * math.pi / 10 + 0.2
+        x0, y0 = hx + math.cos(a) * 28, hy + math.sin(a) * 19
+        d.line([(x0 * SS, y0 * SS), ((x0 - math.cos(a) * 9 + rng.normal(0, 2)) * SS, (y0 - math.sin(a) * 7) * SS)],
+               fill=(222, 226, 234, 255), width=int(2.2 * SS))
+    # plastic grocery bags caught in the mesh: bright pink, yellow, white and cyan, with handle loops and crinkle lines
+    for bx, by, bw, bh, col in ((70, 30, 34, 40, (255, 90, 170, 240)), (205, 128, 30, 44, (250, 220, 40, 240)),
+                                 (400, 36, 30, 42, (240, 244, 250, 240)), (40, 150, 34, 40, (80, 220, 255, 235))):
+        for hx2 in (bx + bw * 0.28, bx + bw * 0.72):
+            d.arc([(hx2 - 6) * SS, (by - 15) * SS, (hx2 + 6) * SS, (by + 3) * SS], 180, 360, fill=col, width=int(2.4 * SS))
+        pts = [(bx, by), (bx + bw, by), (bx + bw * 1.08, by + bh * 0.5), (bx + bw * 0.85, by + bh), (bx + bw * 0.2, by + bh * 0.92), (bx - bw * 0.06, by + bh * 0.5)]
         d.polygon([(px * SS, py * SS) for px, py in pts], fill=col)
         for _ in range(5):
-            cx0, cy0 = bx + rng.uniform(0, bw), by + rng.uniform(0, bh)
-            d.line([(cx0 * SS, cy0 * SS), ((cx0 + rng.uniform(-9, 9)) * SS, (cy0 + rng.uniform(5, 14)) * SS)], fill=(255, 255, 255, 120), width=SS)
+            cx0, cy0 = bx + rng.uniform(2, bw - 2), by + rng.uniform(2, bh * 0.5)
+            d.line([(cx0 * SS, cy0 * SS), ((cx0 + rng.uniform(-7, 7)) * SS, (cy0 + rng.uniform(6, 16)) * SS)], fill=(255, 255, 255, 110), width=SS)
     # a purple scarf and a sock, because of course
     d.line([(150 * SS, 0), (162 * SS, 50 * SS), (150 * SS, 98 * SS)], fill=(150, 60, 220, 240), width=9 * SS, joint='curve')
     for k in range(5):
@@ -508,7 +514,7 @@ def _body(name, seed, base):
     t *= (1.07 - 0.20 * vv)[..., None]
     g = _lowfreq(rng, 8, (h, w))
     dirt = np.clip(g * (0.25 + 0.9 * vv), 0, 1)
-    t *= (1 - 0.40 * dirt)[..., None]
+    t *= (1 - (0.22 if name == 'white' else 0.40) * dirt)[..., None]
     t += (dirt * 18)[..., None] * np.array([1.0, 0.6, -0.8], 'float32')
     mud = np.clip((_lowfreq(rng, 14, (h, w)) - 0.62) * 6, 0, 1) * vv
     t = t * (1 - 0.5 * mud[..., None]) + np.array([90, 70, 44], 'float32') * 0.5 * mud[..., None]

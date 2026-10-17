@@ -1,0 +1,7 @@
+new entry "HC_OBJ_ScooterGraveyard"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "334d561f-e25b-545f-bf95-51accbe67b92"
+data "Weight" "40"
+data "GameSize" "Large"
+data "Vitality" "-1"
