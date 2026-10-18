@@ -14,6 +14,7 @@ import generate_mod as generator
 import hc_barricade
 import hc_cart
 import hc_dumpster as hp
+from hc_prop_lifetime import prop_lifetime, STATUS as LIFETIME_STATUS
 import hc_tarp
 import hc_tent
 
@@ -164,7 +165,7 @@ class DumpsterTests(unittest.TestCase):
         self.assertEqual(path.read_text(), before)
         self.assertTrue(before.endswith('new entry "HC_TestNeighbor"\ntype "SpellData"\n'))
         props = stat_fields(before, 'HC_Shout_DumpsterDive')['SpellProperties']
-        self.assertEqual(props, self.original + ';GROUND:Spawn(' + generator.get_guid(hp.TEMPLATE_KEY) + ')')
+        self.assertEqual(props, self.original + ';' + prop_lifetime(generator.get_guid(hp.TEMPLATE_KEY))[1])
         self.assertEqual(self.grants, {'base': {}, 'subclasses': {}, 'existing_list_spells': {}})
 
     def test_vanilla_donor_spawn_and_unique_names(self):
@@ -176,6 +177,25 @@ class DumpsterTests(unittest.TestCase):
         for path in ROOT.glob('hc_*.py'):
             if path.name != 'hc_dumpster.py':
                 self.assertNotIn('HC_OBJ_Dumpster', path.read_text(encoding='utf-8'))
+
+    def test_lifetime_status_and_legacy_upgrade(self):
+        text = (self.data / 'HC_Status_PropLifetime.txt').read_text()
+        self.assertEqual(text, prop_lifetime(generator.get_guid(hp.TEMPLATE_KEY))[0])
+        fields = stat_fields(text, LIFETIME_STATUS)
+        self.assertEqual(fields['OnApplyFunctors'], f'SetStatusDuration({LIFETIME_STATUS},10,ForceSet)')
+        self.assertEqual(fields['OnRemoveFunctors'], 'Kill()')
+        self.assertEqual(fields['RemoveEvents'], 'OnRemove')
+        self.assertEqual(fields['StatusType'], 'BOOST')
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'Old.txt'
+            guid = generator.get_guid(hp.TEMPLATE_KEY)
+            path.write_text(f'new entry "{hp.SPELL}"\ndata "SpellProperties" "Keep();GROUND:Spawn({guid})"\n')
+            hp.patch_dumpster_spell(tmp, guid)
+            expected = 'Keep();' + prop_lifetime(guid)[1]
+            self.assertEqual(stat_fields(path.read_text(), hp.SPELL)['SpellProperties'], expected)
+            before = path.read_bytes()
+            hp.patch_dumpster_spell(tmp, guid)
+            self.assertEqual(path.read_bytes(), before)
 
     def test_missing_spell_has_clear_error(self):
         with tempfile.TemporaryDirectory() as tmp:

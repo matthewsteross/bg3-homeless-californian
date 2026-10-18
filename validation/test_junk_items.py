@@ -192,8 +192,8 @@ class JunkItemTests(unittest.TestCase):
                         if a.get('Name') == 'HomelessCalifornian' and a.get('Level') == GRANT_LEVEL
                         for uid in re.findall(r'AddSpells\(([0-9a-f-]{36})', a.get('Selectors', ''))
                         for s in self.spell_lists[uid] if s.startswith('HC_')]
-        # Public Scene, Curb Alert, 3 AM Sidewalk Lawnmower Disassembly, NIMBY Public Comment Period (round 8), and the Spin Bike (round 10)
-        self.assertEqual(len(new_at_level), 5)
+        # Public Scene, Curb Alert, 3 AM Sidewalk Lawnmower Disassembly, NIMBY Public Comment Period (round 8), the Spin Bike (round 10), and Therapy, Setting Boundaries (round 11)
+        self.assertEqual(len(new_at_level), 6)
 
     def test_icons_exist_in_vanilla_or_hc_assets(self):
         vanilla_icons = (VANILLA_TEMPLATES.read_bytes() + b''.join(

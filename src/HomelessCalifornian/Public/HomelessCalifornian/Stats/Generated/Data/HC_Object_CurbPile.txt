@@ -1,0 +1,7 @@
+new entry "HC_OBJ_CurbPile"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "52701a26-0d78-577a-9c3d-2f2e27fd40c3"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

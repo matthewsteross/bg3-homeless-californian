@@ -1,0 +1,17 @@
+{
+ "id": "01a15036-f7c9-7627-901a-62e39a08607e",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3433679119,
+ "prompt": "A sun-faded folding aluminum lawn chair with frayed green and white webbing, bent frame, a crushed soda can on the ground beside one leg, stylized hand-painted fantasy RPG prop, chunky readable silhouette, sitting flat on the ground, no brand logos, no readable text",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792347143834,
+ "progress": 100,
+ "started_at": 1792347143844,
+ "finished_at": 1792347181334,
+ "task_error": null,
+ "consumed_credits": 20
+}

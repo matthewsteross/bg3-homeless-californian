@@ -1,0 +1,7 @@
+new entry "HC_OBJ_LawnChair"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "3047c5cd-0e9d-5a59-9c5a-0c06618f69d7"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

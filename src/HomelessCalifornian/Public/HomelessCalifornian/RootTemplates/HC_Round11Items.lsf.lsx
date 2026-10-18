@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="0" revision="9" build="0" />
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="7ed967dc-bf3b-53be-b88e-fb7e2fd46a74" />
+                    <attribute id="Name" type="LSString" value="HC_ARM_ExpiredTemporaryPlate" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="51873c0d-f319-45e6-a6a2-79164cd8f3db" />
+                    <attribute id="Stats" type="FixedString" value="HC_ARM_ExpiredTemporaryPlate" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_LOOT_GEN_Amulet_Necklace_A_Bronze_A" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha5ec6473g86fag5087gb3cegc678aca29d5a" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="haf3a1aa9gf382g5d16gb4adgb60e10bfd13d" version="1" />
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="d32f5a39-e39e-5039-8e20-41e24c11dab8" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_WarmHorchataChurro" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="d47006e9-8a51-453d-b200-9e0d42e9bbab" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_WarmHorchataChurro" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Item_CONS_Potion_Healing_A" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3b4e6253g86abg5193g85b0ga80dc52d06ff" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h290d5762g815dg5fabga2c5g0b20f558aa16" version="1" />
+                    <children>
+                        <node id="OnUsePeaceActions">
+                            <children>
+                                <node id="Action">
+                                    <attribute id="ActionType" type="int32" value="7" />
+                                    <children>
+                                        <node id="Attributes">
+                                            <attribute id="Animation" type="FixedString" value="895ce382-397d-4b9a-9e8f-6ee3b1ff3a13" />
+                                            <attribute id="Conditions" type="LSString" value="" />
+                                            <attribute id="Consume" type="bool" value="True" />
+                                            <attribute id="StatsId" type="FixedString" value="HC_HORCHATA_CONSUME" />
+                                            <attribute id="StatusDuration" type="int32" value="0" />
+                                        </node>
+                                    </children>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

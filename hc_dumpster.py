@@ -2,11 +2,14 @@
 Vanilla evidence: Shared/Stats/Generated/Data/Spell_Projectile.txt:5338 uses GROUND:Spawn.
 Object donor _BaseItem: Shared/Stats/Generated/Data/Object.txt:1 (type Object).
 UNVERIFIED in game: spawn on this Shout alongside RestoreResource and SummonInInventory,
-facing, collision, scale, and texture look. No new spell or level grant; patches Dumpster Dive.
+facing, collision, scale, texture look, and ten-turn removal via Kill(). No new spell or level grant; patches Dumpster Dive.
 """
 from pathlib import Path
 import shutil
+from hc_prop_lifetime import prop_lifetime
 import xml.etree.ElementTree as ET
+
+MIRROR_DECAL = False  # Flip the artwork horizontally here, then rebuild; in-game mirroring is unverified.
 
 ASSET_SRC = Path(__file__).resolve().parent / "assets" / "models" / "HC_Dumpster"
 ASSET_FILES = ("HC_Dumpster.GR2", "HC_Dumpster_BM.DDS", "HC_Dumpster_NM.DDS", "HC_Dumpster_PM.DDS")
@@ -224,6 +227,8 @@ data "GameSize" "Large"
 data "Vitality" "-1"
 ''', encoding="utf-8")
 
+    status_text, _ = prop_lifetime(template_id)
+    (stats / 'HC_Status_PropLifetime.txt').write_text(status_text, encoding='utf-8', newline='\n')
     patch_dumpster_spell(stats, template_id)
     return {"base": {}, "subclasses": {}, "existing_list_spells": {}}
 
@@ -244,9 +249,14 @@ def patch_dumpster_spell(stats, template_id):
     prop = re.search(r'(data "SpellProperties" ")([^"]*)(")', block)
     if prop is None:
         raise ValueError('HC_Shout_DumpsterDive has no SpellProperties value')
-    spawn = f'GROUND:Spawn({template_id})'
+    _, spawn = prop_lifetime(template_id)
+    legacy = f'GROUND:Spawn({template_id})'
     value = prop.group(2)
-    if spawn in value.split(';'):
+    terms = value.split(';')
+    if spawn in terms and legacy not in terms:
         return
-    block = block[:prop.start(2)] + value + ';' + spawn + block[prop.end(2):]
+    # Upgrade an old plain spawn rather than creating a second prop.
+    terms = [term for term in terms if term not in (legacy, spawn)]
+    value = ';'.join(terms) + ';' + spawn
+    block = block[:prop.start(2)] + value + block[prop.end(2):]
     path.write_text(text[:match.start()] + block + text[match.end():], encoding='utf-8', newline='\n')

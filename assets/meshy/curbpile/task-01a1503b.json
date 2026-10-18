@@ -1,0 +1,17 @@
+{
+ "id": "01a1503b-0648-7240-a253-b8d4b4ad7925",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3713279773,
+ "prompt": "A curbside free-stuff pile: a stained floral armchair, a cracked lamp with a crooked shade, stacked cardboard boxes, a rolled rug, a broken mirror leaning on the pile, stylized hand-painted fantasy RPG prop, chunky readable silhouette, sitting flat on the ground, no brand logos, no readable text",
+ "texture_prompt": "a rich burgundy floral armchair with yellow flowers, a cream lamp shade, light brown cardboard boxes with orange tape, a teal and orange striped rug, a gold framed mirror, saturated colorful hand-painted stylized fantasy RPG texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792347409690,
+ "progress": 100,
+ "started_at": 1792347409697,
+ "finished_at": 1792347441301,
+ "task_error": null,
+ "consumed_credits": 10
+}

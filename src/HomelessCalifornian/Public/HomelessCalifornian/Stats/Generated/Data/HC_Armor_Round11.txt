@@ -1,0 +1,7 @@
+new entry "HC_ARM_ExpiredTemporaryPlate"
+type "Armor"
+using "ARM_Amulet"
+data "RootTemplate" "7ed967dc-bf3b-53be-b88e-fb7e2fd46a74"
+data "Rarity" "Uncommon"
+data "ValueOverride" "0"
+data "Boosts" "Initiative(2);ActionResource(Movement,3,0);Advantage(Skill,Stealth)"

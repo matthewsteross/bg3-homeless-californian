@@ -2677,6 +2677,7 @@ def generate_local_expansion():
     coolerfire = generate_coolerfire(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in coolerfire['base'].items():
         grants['base'].setdefault(level, []).extend(spells)
+    subclass_passive_sources = []  # content modules that return 'subclass_passives' append their result dict here
     from hc_round10 import generate_round10
     round10 = generate_round10(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in round10['base'].items():
@@ -2684,6 +2685,17 @@ def generate_local_expansion():
     for category, levels in round10['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_round11 import generate_round11
+    round11 = generate_round11(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round11['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
+    for category, levels in round11['subclasses'].items():
+        for level, spells in levels.items():
+            grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    base_passives = {}
+    for source in (round10, round11):
+        for level, names in source['base_passives'].items():
+            base_passives.setdefault(level, []).extend(names)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')
     list_nodes = []
     list_ids = {}
@@ -2712,12 +2724,14 @@ def generate_local_expansion():
         SPELLLIST_INLANDEMPEROR_L3: [round9['existing_list_spells']['InlandEmperor_L3']],
         SPELLLIST_BEACHBORN_L1: [round9['existing_list_spells']['Beachborn_L1']],
         SPELLLIST_INLANDEMPEROR_L5: [round6['subrace_spells']['InlandEmperor_L5'],
-                                     portapotty['existing_list_spells']['InlandEmperor_L5']],
+                                     portapotty['existing_list_spells']['InlandEmperor_L5'],
+                                     round11['existing_list_spells']['InlandEmperor_L5']],
         SPELLLIST_BART_L10: [round7['existing_list_spells']['BART_L10']],
         SPELLLIST_BEACHBORN_L5: [round7['existing_list_spells']['Beachborn_L5'],
                                  scooters['existing_list_spells']['Beachborn_L5']],
         SPELLLIST_SILICONITE_L5: [round7['existing_list_spells']['Siliconite_L5'],
-                                  robotaxi['existing_list_spells']['Siliconite_L5']],
+                                  robotaxi['existing_list_spells']['Siliconite_L5'],
+                                  round11['existing_list_spells']['Siliconite_L5']],
         SPELLLIST_INLANDEMPEROR_L1: [round7['existing_list_spells']['InlandEmperor_L1']],
     }
     def attach_racial_spell(match):
@@ -2733,6 +2747,8 @@ def generate_local_expansion():
     with open(lists_path, 'w', encoding='utf-8') as f:
         f.write(text)
 
+    from hc_subclass_levels import add_empty_subclass_nodes, apply_subclass_passives
+    add_empty_subclass_nodes(PUBLIC_DIR, get_guid)
     prog_path = os.path.join(PUBLIC_DIR, 'Progressions', 'Progressions.lsx')
     with open(prog_path, encoding='utf-8') as f:
         text = f.read()
@@ -2751,9 +2767,9 @@ def generate_local_expansion():
                 block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)
             else:
                 block = block.replace('<attribute id="Level"', line + '\n                    <attribute id="Level"', 1)
-        if category == 'HomelessCalifornian' and level in round10['base_passives']:
+        if category == 'HomelessCalifornian' and level in base_passives:
             old_passives = attrs.get('PassivesAdded', '')
-            new_passives = ';'.join(filter(None, [old_passives, *round10['base_passives'][level]]))
+            new_passives = ';'.join(filter(None, [old_passives, *base_passives[level]]))
             line = f'<attribute id="PassivesAdded" type="LSString" value="{escape(new_passives)}"/>'
             if 'PassivesAdded' in attrs:
                 block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)
@@ -2785,6 +2801,12 @@ def generate_local_expansion():
         raise ValueError(f'Expansion grants lack progression nodes: {sorted(missing)}')
     with open(prog_path, 'w', encoding='utf-8') as f:
         f.write(text)
+    subclass_passives = {}
+    for module_grants in subclass_passive_sources:
+        for category, levels in module_grants.get('subclass_passives', {}).items():
+            for level, names in levels.items():
+                subclass_passives.setdefault(category, {}).setdefault(int(level), []).extend(names)
+    apply_subclass_passives(PUBLIC_DIR, subclass_passives)
     generate_choices(PUBLIC_DIR, add_loca, get_guid)
     generate_doctrines(PUBLIC_DIR, add_loca, get_guid)
 
@@ -2803,6 +2825,12 @@ def main():
     generate_local_expansion()
     from hc_dumpster import generate_dumpster
     generate_dumpster(PUBLIC_DIR, add_loca, get_guid)
+    from hc_lawnchair import generate_lawnchair
+    generate_lawnchair(PUBLIC_DIR, add_loca, get_guid)
+    from hc_curbpile import generate_curbpile
+    generate_curbpile(PUBLIC_DIR, add_loca, get_guid)
+    from hc_trashbags import generate_trashbags
+    generate_trashbags(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()

@@ -161,7 +161,7 @@ data "Boosts" "ActionResource(Movement,3,0)"
         SPELL + "_Description",
         "Put a sign that says FREE on a pile of someone's stuff. Find a Caltrans Detour Sign, "
         "Duct-Taped High-Tops, a Lukewarm Gas Station Kombucha and a Tin-Foil Sun Visor. "
-        "Added to your inventory; equip them yourself.")
+        "Added to your inventory; equip them yourself. A free-stuff pile appears at your feet.")
     (stats / "HC_Spell_Shout_CurbAlert.txt").write_text(f'''new entry "{SPELL}"
 type "SpellData"
 using "Shout_SecondWind"

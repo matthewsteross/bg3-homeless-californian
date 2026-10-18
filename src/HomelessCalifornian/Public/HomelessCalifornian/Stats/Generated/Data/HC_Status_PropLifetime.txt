@@ -1,0 +1,8 @@
+new entry "HC_PROP_LIFETIME_10T"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "TickType" "StartTurn"
+data "OnApplyFunctors" "SetStatusDuration(HC_PROP_LIFETIME_10T,10,ForceSet)"
+data "RemoveEvents" "OnRemove"
+data "OnRemoveFunctors" "Kill()"

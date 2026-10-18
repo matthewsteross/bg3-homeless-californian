@@ -160,7 +160,7 @@ class ExpansionGenerationTests(unittest.TestCase):
             (public / 'Lists/SpellLists.lsx').write_text('<save>\n            </children>\n</save>')
             (public / 'Progressions/Progressions.lsx').write_text('<save/>')
             with patch.object(generator, 'PUBLIC_DIR', str(public)):
-                with self.assertRaisesRegex(ValueError, 'lack progression nodes'):
+                with self.assertRaisesRegex(ValueError, 'lack'):
                     generator.generate_local_expansion()
 
 

@@ -122,7 +122,7 @@ def generate_expansion(public_dir, add_loca, get_guid):
 
     moving = 'HC_Shout_MovingDay'
     spell(moving, 'Shout_FentLean_End', 'Moving Day',
-          'While in Fent Lean, end it for free, gain +6 m movement and difficult-terrain immunity for 1 turn, and scatter a 2.5 m perimeter of discarded rubbish (difficult terrain) for 2 turns where you stood. Once per short rest. Your forwarding address is already incorrect.',
+          'While in Fent Lean, end it for free, gain +6 m movement and difficult-terrain immunity for 1 turn, and scatter a 2.5 m perimeter of discarded rubbish (difficult terrain) for 2 turns where you stood, and a heap of tied trash bags appears there. Once per short rest. Your forwarding address is already incorrect.',
           UseCosts='', Icon='Spell_Transmutation_Longstrider', Cooldown='OncePerShortRest',
           RequirementConditions="HasStatus('FENT_LEAN')",
           SpellProperties='RemoveStatus(FENT_LEAN);ApplyStatus(HC_MOVING_DAY,100,1);GROUND:CreateSurface(2.5,2,Mud)',
@@ -130,7 +130,7 @@ def generate_expansion(public_dir, add_loca, get_guid):
 
     first = 'HC_Shout_IWasHereFirst'
     spell(first, 'Shout_SecondWind', 'I Was Here First',
-          'Stake your claim on this patch of ground for 2 turns. Costs an action and 1 Junk; once per short rest. Gain +2 AC, advantage on Constitution saves, and immunity to Prone, while scattering a 2.5 m perimeter of protective rubbish (difficult terrain) for 2 turns around you. You have lived here for fifteen minutes. That is legal precedence.',
+          'Stake your claim on this patch of ground for 2 turns; a folding lawn chair appears at your feet. Costs an action and 1 Junk; once per short rest. Gain +2 AC, advantage on Constitution saves, and immunity to Prone, while scattering a 2.5 m perimeter of protective rubbish (difficult terrain) for 2 turns around you. You have lived here for fifteen minutes. That is legal precedence.',
           UseCosts='ActionPoint:1;HC_Junk:1', Icon='Skill_Fighter_SecondWind', Cooldown='OncePerShortRest',
           SpellProperties='ApplyStatus(HC_TERRITORY_CLAIMED,100,2);GROUND:CreateSurface(2.5,2,Mud)',
           TooltipStatusApply='ApplyStatus(HC_TERRITORY_CLAIMED,100,2)')

@@ -1,0 +1,17 @@
+{
+ "id": "01a1503b-b4f4-7729-9b63-bffc43fd4dfe",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1556772951,
+ "prompt": "A heap of black and white trash bags split open with spilled junk, a broken folding table leg and an orange traffic cone poking out of the top, stylized hand-painted fantasy RPG prop, chunky readable silhouette, sitting flat on the ground, no brand logos, no readable text",
+ "texture_prompt": "glossy black and bright white trash bags, a vivid orange and white traffic cone, colorful spilled junk, saturated hand-painted stylized fantasy RPG texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792347454434,
+ "progress": 100,
+ "started_at": 1792347454446,
+ "finished_at": 1792347492927,
+ "task_error": null,
+ "consumed_credits": 10
+}

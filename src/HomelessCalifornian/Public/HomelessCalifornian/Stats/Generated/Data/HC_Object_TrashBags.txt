@@ -1,0 +1,7 @@
+new entry "HC_OBJ_TrashBags"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "45594edb-6efc-533b-82eb-f3cd33d995b6"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

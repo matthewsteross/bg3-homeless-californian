@@ -7,6 +7,9 @@ import numpy as np
 from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'HC_PortaPotty'))
 import portapotty_paint as paint_mod
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from hc_dumpster import MIRROR_DECAL
+from dumpster_decal import bake_decal
 TPL, OUT, OD = sys.argv[1:4]
 source = Path(__file__).resolve().parents[2] / 'meshy/dumpster'
 raw = (source / 'model.glb').read_bytes()
@@ -42,7 +45,9 @@ tri = accessor(primitive['indices']).reshape(-1,3).astype(int)
 # Front orientation is verified against Blender front/rear previews.
 pos -= np.array([(pos[:,0].min()+pos[:,0].max())/2, pos[:,1].min(), (pos[:,2].min()+pos[:,2].max())/2])
 Path(OD).mkdir(parents=True, exist_ok=True)
-Image.open(source/'texture0_base_color.png').convert('RGB').resize((1024,1024), Image.Resampling.LANCZOS).save(OD+'/HC_Dumpster_BM.png')
+plain = Image.open(source/'texture0_base_color.png').convert('RGB').resize((1024,1024), Image.Resampling.LANCZOS)
+plain.save(OD+'/HC_Dumpster_BM_Plain.png')
+bake_decal(plain, pos, nor, uv, tri, OD, mirror=MIRROR_DECAL).save(OD+'/HC_Dumpster_BM.png')
 rough = np.asarray(Image.open(source/'texture0_roughness.png').convert('L').resize((1024,1024), Image.Resampling.BILINEAR), dtype=float)/255
 paint_mod.nm_image().save(OD+'/HC_Dumpster_NM.png')
 paint_mod.pm_image(rough).save(OD+'/HC_Dumpster_PM.png')

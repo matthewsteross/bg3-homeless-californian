@@ -200,9 +200,9 @@
     <content contentuid="hc0d57b98g6bdeg569dga39cge761144e8905" version="1">Dumpster Dive</content>
     <content contentuid="he0468a82g4c81g54fdgb9c9g96bbe704ea9b" version="1">Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple); a battered green dumpster thumps down at your feet. Once per short rest. Ownership is a theory you are willing to discuss later.</content>
     <content contentuid="h316a0c68g6549g5d3bg9b83g495596bf9030" version="1">Moving Day</content>
-    <content contentuid="h9ac5d90egdc6eg5e07g9e48g2656bb69770b" version="1">While in Fent Lean, end it for free, gain +6 m movement and difficult-terrain immunity for 1 turn, and scatter a 2.5 m perimeter of discarded rubbish (difficult terrain) for 2 turns where you stood. Once per short rest. Your forwarding address is already incorrect.</content>
+    <content contentuid="h9ac5d90egdc6eg5e07g9e48g2656bb69770b" version="1">While in Fent Lean, end it for free, gain +6 m movement and difficult-terrain immunity for 1 turn, and scatter a 2.5 m perimeter of discarded rubbish (difficult terrain) for 2 turns where you stood, and a heap of tied trash bags appears there. Once per short rest. Your forwarding address is already incorrect.</content>
     <content contentuid="hc5634452g19c0g5d91g8e9dg0c9a6f011f9e" version="1">I Was Here First</content>
-    <content contentuid="h6878deffga24dg5f79g95c2g36524fa0c43d" version="1">Stake your claim on this patch of ground for 2 turns. Costs an action and 1 Junk; once per short rest. Gain +2 AC, advantage on Constitution saves, and immunity to Prone, while scattering a 2.5 m perimeter of protective rubbish (difficult terrain) for 2 turns around you. You have lived here for fifteen minutes. That is legal precedence.</content>
+    <content contentuid="h6878deffga24dg5f79g95c2g36524fa0c43d" version="1">Stake your claim on this patch of ground for 2 turns; a folding lawn chair appears at your feet. Costs an action and 1 Junk; once per short rest. Gain +2 AC, advantage on Constitution saves, and immunity to Prone, while scattering a 2.5 m perimeter of protective rubbish (difficult terrain) for 2 turns around you. You have lived here for fifteen minutes. That is legal precedence.</content>
     <content contentuid="hf3ae9226gd123g5d01gbf75gb0be63049e61" version="1">Pigeon Witness Protection</content>
     <content contentuid="hb8ee91f5g10c5g5ffag9c2cg485842e5b727" version="1">Summon a raven familiar that can scout, use its normal familiar abilities, and command a Pigeon Lunch Rush to distract enemies. Replaces your existing familiar. Once per short rest. It is visibly a raven; the pigeon paperwork is airtight.</content>
     <content contentuid="h33dd652fg3233g5c8aga759g3444b37e7cbf" version="1">Pigeon Lunch Rush</content>
@@ -232,7 +232,7 @@
     <content contentuid="ha96d239dg3049g5c8ag8ae5gc5891647c0d1" version="1">Kombucha Buzz</content>
     <content contentuid="hdeaffb6agccc2g5c73gbe6eg6fc933d11927" version="1">Fermentation is a journey. Your movement speed increases by 3 m.</content>
     <content contentuid="h93d659fdg5209g5ae9gbf6egdf3c2722c594" version="1">Curb Alert</content>
-    <content contentuid="h2a34f2adg40aag57f2gb1a5gfde4b890cc3c" version="1">Put a sign that says FREE on a pile of someone's stuff. Find a Caltrans Detour Sign, Duct-Taped High-Tops, a Lukewarm Gas Station Kombucha and a Tin-Foil Sun Visor. Added to your inventory; equip them yourself.</content>
+    <content contentuid="h2a34f2adg40aag57f2gb1a5gfde4b890cc3c" version="1">Put a sign that says FREE on a pile of someone's stuff. Find a Caltrans Detour Sign, Duct-Taped High-Tops, a Lukewarm Gas Station Kombucha and a Tin-Foil Sun Visor. Added to your inventory; equip them yourself. A free-stuff pile appears at your feet.</content>
     <content contentuid="hd5f1d237g2040g5d72ga315gd858d76da73e" version="1">Abandoned Cart</content>
     <content contentuid="h9307a853g3f6ag57eaga2d2gd8d860730911" version="1">A shopping cart of unknown origin, three owners deep and one wheel short of a plan. It holds the whole supply chain: you, your things, and a squeak that announces you to every shift supervisor in the county. Property of nobody, which is nearly the same as yours.</content>
     <content contentuid="he03228f2gcc60g52fag8b17gdaa4aa45587b" version="1">Abandoned Cart</content>
@@ -621,6 +621,48 @@
     <content contentuid="hf66c7d6bg9789g5287g9f69gd82398c8c43c" version="1">Deny a parking validation over one peach and watch the attendant's whole world tip over. Costs a bonus action; once per short rest. A target within 9 m makes a Dexterity saving throw: on a failure it takes 2d6 Bludgeoning damage and falls Prone for 1 turn, or takes half damage on a success, and whether or not it lands you gain Validation Sprint (+3 m movement) for 1 turn. Validation is for vendors, and you bought one peach.</content>
     <content contentuid="hc3bfda1dga17bg58c9g9eadgc823a51a77bd" version="1">Seven-Dollar Oat-Milk Line</content>
     <content contentuid="h714ee946g5adfg5a70gb6d0g8638ca4f6b8f" version="1">Stretch a seven-dollar oat-milk line across the sidewalk in front of the old taqueria. Costs an action; once per short rest. A target within 6 m makes a Wisdom saving throw: on a failure it takes 2d8 Psychic damage and is Stuck in the Oat-Milk Line (disadvantage on attack rolls) for 2 turns, or takes half damage on a success. The line is for lavender cold brew, and the line is also the sidewalk.</content>
+    <content contentuid="h7eaa5e9cg6392g5a29g8829gea8f075a13cd" version="1">Unlimited PTO Guilt Trip</content>
+    <content contentuid="h4527edebg7638g5589g8d02g597702b06906" version="1">While below 30% of your maximum Hit Points, gain +2 Armour Class. You also have advantage on all saving throws while below that threshold. Take as much time off as you want, provided you die answering Jira tickets.</content>
+    <content contentuid="ha5ec6473g86fag5087gb3cegc678aca29d5a" version="1">90-Day Expired Temporary Paper License Plate</content>
+    <content contentuid="haf3a1aa9gf382g5d16gb4adgb60e10bfd13d" version="1">Uncommon amulet: +2 Initiative and +3 m movement. Grants advantage on Stealth checks while equipped. Taped inside a tinted rear window since 2019, legally invisible to the Highway Patrol.</content>
+    <content contentuid="h3b4e6253g86abg5193g85b0ga80dc52d06ff" version="1">Warm Gas-Station Horchata &amp; Day-Old Churro</content>
+    <content contentuid="h290d5762g815dg5fabga2c5g0b20f558aa16" version="1">Consume with a bonus action to regain 4d4+4 Hit Points and remove Frightened. Gain advantage on Constitution saving throws for 3 turns, then become Poisoned for 1 turn when the benefit ends. Dispensed from a machine last sanitized under the action-movie administration.</content>
+    <content contentuid="hdbf50790gf092g5ca6g8e02g464993776a3f" version="1">Movement Under Review</content>
+    <content contentuid="h9d7f1e4bg5432g5f12ga069gb796c8e04d4d" version="1">Movement speed is halved. The detour has requested another detour. Nobody has approved the feet.</content>
+    <content contentuid="h38afd71cg9d8eg5ac2g9880g3c42cc8e3dbf" version="1">Comment Period Open</content>
+    <content contentuid="h9121fa0bgd6a7g5a6cg9e9bgdbf00531fa61" version="1">Cannot take reactions. Public comments must be submitted in triplicate. Interruptions will be reviewed next quarter.</content>
+    <content contentuid="h7fdbe493g9be5g53cfg996dgc21b829d8829" version="1">Plexiglass Posture</content>
+    <content contentuid="h33e47d0dg99a5g5b8fg82bdg5cdfa678f0af" version="1">Gain +3 Armour Class. Replaces other shared defensive postures. The employee with the key is on break.</content>
+    <content contentuid="hc73cce8dgc40fg5a7cg9197ga43dc3d6468c" version="1">Setting Boundaries</content>
+    <content contentuid="hb0cb8756g2dacg53d7g83e4g4c13f2c38fe5" version="1">Gain +3 Armour Class. Replaces other shared defensive postures. Your sword is violating my calendar.</content>
+    <content contentuid="h103328a6gbd4dg5b13g9551ge75ee13d600e" version="1">Santa Ana Resolve</content>
+    <content contentuid="h6cd6066bge24fg573bg9a48g0837b5627890" version="1">Gain 5 temporary Hit Points. They do not stack with other temporary Hit Points. The forecast has chosen violence.</content>
+    <content contentuid="h25e56d99g17d4g54eeg9a4ag2f46585a63bb" version="1">Horchata Constitution</content>
+    <content contentuid="h5864bc21g4a2eg53fcg9b14g5f4ba9433065" version="1">Advantage on Constitution saving throws for 3 turns. Become Poisoned for 1 turn when this benefit ends, including early removal. The churro has filed a counterclaim.</content>
+    <content contentuid="h68fc3780g1a6dg556bgb3c5ga9d211447641" version="1">Horchata and Churro</content>
+    <content contentuid="h9ef45a2fge4cfg5e57gaa5dg79e32d4d1eb9" version="1">Regain 4d4+4 Hit Points and remove Frightened. Gain Horchata Constitution for 3 turns. There was no date on the dispenser.</content>
+    <content contentuid="hd257b872gae07g5447ga423gaad088285a91" version="1">CEQA Environmental Impact Injunction</content>
+    <content contentuid="h3fa6561fg53c2g5252gab46ga5b476875fc4" version="1">A creature within 9 m makes a Wisdom save, taking 3d8 Psychic damage and becoming Dazed with movement halved for 2 turns on failure, or half damage without statuses on success. Costs an action and 1 Junk; once per short rest. The 4,000 pages concern the Santa Cruz long-toed salamander; the goblin raid is supported in principle.</content>
+    <content contentuid="h876f9e20g2678g599cg8d9cg90b8579d7527" version="1">Saturday 7:02 AM Gas Leaf Blower</content>
+    <content contentuid="he4275c22gffc0g5e6dga49cg76592bdd899e" version="1">Enemies in a 9 m cone make a Dexterity save, taking 3d8 Thunder damage and falling Prone with movement halved for 1 turn on failure, or half damage without statuses on success. Costs an action and 1 Junk; once per short rest. The HOA banned drum circles and then licensed this.</content>
+    <content contentuid="h02b4a481g7977g57f9gb293g03bf88020455" version="1">Coastal Commission Review (Comment Period Open)</content>
+    <content contentuid="hba6b3fb1g1ca8g51e9gab17gbb893f380388" version="1">A creature within 9 m makes a Wisdom save: on failure it is Dazed and cannot take reactions for 2 turns, while success halves its movement for 1 turn. Deals no damage and costs an action and 1 Junk; once per short rest. Your Fireball is conceptually approved for fiscal year 2031.</content>
+    <content contentuid="h23374736gdbecg5053g8404g4137e923c39e" version="1">Reply-All With the Whole Company</content>
+    <content contentuid="h3ae9bd0fg4c5bg5ba7gbc17g95c99241c756" version="1">Enemies within 6 m make a Wisdom save, taking 4d6 Psychic damage and becoming Frightened for 2 turns on failure, or half damage without fear on success. Costs an action and 1 Junk; once per long rest. Fourteen people wrote please remove me and none of them left.</content>
+    <content contentuid="hcb78af58ga306g5186ga58bg20180a65b3a7" version="1">Walgreens Locked-Deodorant Plexiglass Aisle</content>
+    <content contentuid="h79a6f6cag4d45g5970g8869g1f99ecc2d6f0" version="1">Gain +3 Armour Class for 2 turns, replacing other shared defensive postures. Costs a bonus action and 1 Junk; once per short rest. Please press the call button for this $4 stick of Old Spice; nobody is coming.</content>
+    <content contentuid="h828b2d2bgeaccg5998gba14ga2da8eb64706" version="1">In Therapy, Setting Boundaries</content>
+    <content contentuid="h0b130d79gc12dg5005g9704gd535e4c31419" version="1">Gain +3 Armour Class for 2 turns, replacing other shared defensive postures, while enemies within 3 m make a Wisdom save against 2d8 Psychic damage, halved on success. Costs a bonus action and 2 Junk; once per short rest. I do not have the emotional bandwidth to hold space for your greatsword right now.</content>
+    <content contentuid="h8e2d25a7gcb36g597ag854fg1f29cad6d1bd" version="1">Google Maps Walks You Into Traffic</content>
+    <content contentuid="hb54574d4g3de9g5500g84d0gcc80956c17fd" version="1">A creature within 9 m makes a Dexterity save, taking 3d6 Bludgeoning damage and falling Prone for 1 turn on failure, or half damage without falling on success. Costs an action and no Junk; once per short rest. Recalculating. You have arrived at the bumper.</content>
+    <content contentuid="h00ed854fg4b8eg599ag93aaga46c243c4d75" version="1">Santa Ana, Emotionally</content>
+    <content contentuid="hd1e39ab5ge0c4g575fgb50fg82bd957da07b" version="1">Enemies within 4.5 m make a Constitution save, taking 2d8 Fire damage and Burning for 2 turns on failure, or half damage without Burning on success. Gain 5 temporary Hit Points; costs an action and no Junk, once per short rest. The wind is forty miles an hour and somehow knows your name.</content>
+    <content contentuid="h2386324bg3d6fg52a5g84eeg64494cfe4b4c" version="1">405 Sepulveda Pass Thanksgiving Gridlock</content>
+    <content contentuid="h7cdfc0d6g76bbg50daga395g0866676b6a34" version="1">At a point within 9 m, enemies in a 4.5 m radius make a Dexterity save against 2d6 Fire damage, halved on success. The ground becomes Mud difficult terrain for 3 turns; costs an action and 1 Junk, once per short rest. It is 11 miles to the airport and you will arrive in 2029.</content>
+    <content contentuid="hbecc92c7gaaf2g5adcgbe56gd93a2455e457" version="1">Substack Manifest Destiny</content>
+    <content contentuid="h85061fa1gc6ebg5584gae9eg1b80ff140512" version="1">A creature within 18 m makes a Wisdom save, taking 3d8 Psychic damage and becoming Frightened for 2 turns on failure, or half damage without fear on success. Costs an action and 1 Junk; once per short rest. Free subscribers get the panic attack; paid founding members get the unhinged footnotes.</content>
+    <content contentuid="h4de80d6bgb948g58bcga138g9245610a3f41" version="1">Glove Box Cleanout</content>
+    <content contentuid="h58b75c24g2379g5abcgb684g531cf76a057f" version="1">Outside combat, place an Expired Temporary Paper License Plate amulet and Warm Horchata &amp; Day-Old Churro consumable in your inventory. Costs an action and 1 Junk; once per short rest, and equipment must be equipped separately. Three years of registration slips, one ice scraper, and this.</content>
     <content contentuid="h2978a6a4g747cg5c3fg8986g79a0712a4d95" version="1">Scrounger</content>
     <content contentuid="h1564b50bg20ddg52e9g9531g0da91a4844f5" version="1">Advantage on Investigation and Survival ability checks. You know what is useful, what is edible, and which one matters today.</content>
     <content contentuid="h4c710478gc888g55d6g8aa6g30da3e15fb3c" version="1">Fixer</content>
@@ -661,4 +703,10 @@
     <content contentuid="h44544886gad82g5325gaa5dga57c0370747d" version="1">Choose more Junk, better protection or faster movement. Respec to change your doctrine.</content>
     <content contentuid="h9fccf30fg9f02g5e63ga6a7g977612411e35" version="1">Dumpster Dive</content>
     <content contentuid="h3b6e92c4gb971g540bg90e2g39ecc0a612d8" version="1">A green dumpster with open lids, a teddy bear and a pizza box. The tasting menu has no return policy.</content>
+    <content contentuid="h760334ddg5036g5574g9304g8c85402832b1" version="1">Claim-Staking Folding Chair</content>
+    <content contentuid="hecbef0acg0c78g520fgb6aagbb55b4bd99f6" version="1">A folding lawn chair marks your claim. The rent starts when you unfold it.</content>
+    <content contentuid="h712a602ega069g52e4ga5b6g5a54a53cab12" version="1">Curb Alert Free-Stuff Pile</content>
+    <content contentuid="h2ecca2bfge82fg5dd2g85a5g63ed67527135" version="1">A pile of discarded household treasures. Free delivery means carrying it yourself.</content>
+    <content contentuid="h31873fbeg8aa0g5e6bg9a7cg8facc6227e17" version="1">Moving Day Trash Bags</content>
+    <content contentuid="h76de3fd3g17f5g5316g846aga2150495535a" version="1">An entire change of address in rubbish bags. The deposit is already gone.</content>
 </contentList>

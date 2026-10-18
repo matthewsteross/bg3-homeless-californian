@@ -1,0 +1,7 @@
+new entry "HC_OBJ_WarmHorchataChurro"
+type "Object"
+using "OBJ_Potion_Healing"
+data "RootTemplate" "d32f5a39-e39e-5039-8e20-41e24c11dab8"
+data "Rarity" "Uncommon"
+data "ValueOverride" "0"
+data "UseCosts" "BonusActionPoint:1"
