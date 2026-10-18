@@ -1,0 +1,17 @@
+{
+ "id": "01a1507d-fa12-752f-a8a7-581b70136176",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1682271394,
+ "prompt": "stack of weathered wooden warehouse pallets leaning together with bent corrugated galvanized sheet metal roofing screwed on top forming a makeshift lean-to wall, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792351797375,
+ "progress": 100,
+ "started_at": 1792351797381,
+ "finished_at": 1792351902313,
+ "task_error": null,
+ "consumed_credits": 20
+}

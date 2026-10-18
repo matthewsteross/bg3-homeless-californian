@@ -118,6 +118,19 @@ SPELL_ICON_KEYS = {
     'HC_Target_LaminatedPoolHoursSign': 'Spell_PoolHoursSign',
     'HC_Target_FarmersMarketPeachDenial': 'Spell_PeachParkingDenial',
     'HC_Target_OatMilkLineTaqueria': 'Spell_OatMilkLine',
+    # Subclass round 2
+    'HC_Shout_BoardwalkRollerbladeSlalom': 'Spell_BoardwalkRollerbladeSlalom',
+    'HC_Target_BreakdancerCardboardDrop': 'Spell_BreakdancerCardboardDrop',
+    'HC_Shout_MuscleBeachBroSpotter': 'Spell_MuscleBeachBroSpotter',
+    'HC_Zone_HazmatBackblast': 'Spell_HazmatBackblast',
+    'HC_Target_UnpermittedBleachFogger': 'Spell_UnpermittedBleachFogger',
+    'HC_Shout_FederalHazmatDeclaration': 'Spell_FederalHazmatDeclaration',
+    'HC_Target_ManholeCoverPopUpBunker': 'Spell_ManholeCoverPopUpBunker',
+    'HC_Shout_PalletAndTinArmor': 'Spell_PalletAndTinArmor',
+    'HC_Target_OrovilleSpillwayRupture': 'Spell_OrovilleSpillwayRupture',
+    'HC_Zone_EmergencyBrakeHandlePull': 'Spell_EmergencyBrakeHandlePull',
+    'HC_Shout_ThirdRailOvercharge': 'Spell_ThirdRailOvercharge',
+    'HC_Zone_DalyCityTurnbackRunaway': 'Spell_DalyCityTurnbackRunaway',
 }
 
 def icon_for_spell(spell, fallback):

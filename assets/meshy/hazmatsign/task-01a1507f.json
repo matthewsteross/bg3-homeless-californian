@@ -1,0 +1,17 @@
+{
+ "id": "01a1507f-1a7a-752e-8add-551a3393db43",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 2406584511,
+ "prompt": "yellow A-frame hazard sign standing on a tripod with a large black biohazard symbol and a striped caution tape strung to two small posts, stylized game prop, one solid connected object",
+ "texture_prompt": "bright yellow plastic, black biohazard symbol, red and white caution tape, scuffed, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792351871390,
+ "progress": 100,
+ "started_at": 1792351871397,
+ "finished_at": 1792351902384,
+ "task_error": null,
+ "consumed_credits": 10
+}

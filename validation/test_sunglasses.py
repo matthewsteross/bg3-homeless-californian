@@ -274,4 +274,51 @@ class SunglassRackTests(unittest.TestCase):
             offset += size
             if kind == 0x4e4f534a:
                 doc = json.loads(chunk)
-            elif kind == 
+            elif kind == 0x004e4942:
+                binary = chunk
+        primitive = doc['meshes'][0]['primitives'][0]
+        accessor = doc['accessors'][primitive['attributes']['POSITION']]
+        view = doc['bufferViews'][accessor['bufferView']]
+        positions = np.ndarray((accessor['count'], 3), dtype='<f4', buffer=binary,
+                               offset=view.get('byteOffset', 0) + accessor.get('byteOffset', 0),
+                               strides=(view.get('byteStride', 12), 4)).astype(float)
+        positions *= 1.6 / np.ptp(positions[:, 1])
+        positions -= [(positions[:, 0].min() + positions[:, 0].max()) / 2,
+                      positions[:, 1].min(),
+                      (positions[:, 2].min() + positions[:, 2].max()) / 2]
+        preview = json.loads((hp.ASSET_SRC / 'sunglasses_preview.json').read_text())
+        np.testing.assert_allclose(preview['pos'], positions, atol=1e-8)
+        self.assertEqual(hp.TRIANGLES, doc['accessors'][primitive['indices']]['count'] // 3)
+        self.assertEqual(hp.TRIANGLES, 7517)
+        self.assertIn("'meshy/sunglasses3'", (hp.ASSET_SRC / 'build_sunglasses_model.py').read_text())
+
+    def test_r3_textures_and_flat_normal_encoding(self):
+        import numpy as np
+        from PIL import Image
+        source = ROOT / 'assets/meshy/sunglasses3'
+        for name in ('model.glb', 'texture0_base_color.png', 'texture0_normal.png',
+                     'texture0_metallic.png', 'texture0_roughness.png'):
+            self.assertTrue((source / name).is_file(), name)
+        expected = Image.open(source / 'texture0_base_color.png').convert('RGB').resize((1024, 1024), Image.Resampling.LANCZOS)
+        actual = Image.open(hp.ASSET_SRC / 'HC_SunglassRack_BM.png').convert('RGB')
+        np.testing.assert_array_equal(actual, expected)
+        normal = np.asarray(Image.open(hp.ASSET_SRC / 'HC_SunglassRack_NM.png'))
+        np.testing.assert_array_equal(normal, np.broadcast_to([0, 128, 255, 128], normal.shape))
+        rough = np.asarray(Image.open(source / 'texture0_roughness.png').convert('L').resize((1024, 1024), Image.Resampling.BILINEAR), dtype=float) / 255
+        small = np.asarray(Image.fromarray((rough * 255).astype('uint8')).resize((256, 256), Image.Resampling.BILINEAR)).astype('float32')
+        physical = np.asarray(Image.open(hp.ASSET_SRC / 'HC_SunglassRack_PM.png'))
+        np.testing.assert_array_equal(physical[:, :, 1], (70 + small * (235 - 70) / 255).astype('uint8'))
+        self.assertTrue(np.all(physical[:, :, 0] == 0))
+        self.assertTrue(np.all(physical[:, :, 2:] == 255))
+
+    def test_no_foreign_mod_references(self):
+        files = [p for p in self.source.rglob('*') if p.is_file() and p.suffix.lower() not in ('.dds', '.gr2')]
+        files += [ROOT / 'hc_sunglasses.py', Path(__file__)] + [p for p in hp.ASSET_SRC.glob('*.py')]
+        self.assertGreater(len(files), 6)
+        needle = 'patr' + 'iot'
+        for p in files:
+            self.assertNotIn(needle, p.read_text(encoding='utf-8', errors='ignore').lower(), str(p))
+
+
+if __name__ == '__main__':
+    unittest.main()

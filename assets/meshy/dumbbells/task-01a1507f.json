@@ -1,0 +1,17 @@
+{
+ "id": "01a1507f-4377-7771-90ea-a0343dc65557",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 2881094027,
+ "prompt": "outdoor weight lifting rack with a barbell loaded with heavy rusty plates and two big hex dumbbells on the ground, Muscle Beach style, one solid connected object, stylized game prop",
+ "texture_prompt": "rusted dark iron, chipped black rubber, sun bleached paint, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792351881719,
+ "progress": 100,
+ "started_at": 1792351881723,
+ "finished_at": 1792351939507,
+ "task_error": null,
+ "consumed_credits": 10
+}
