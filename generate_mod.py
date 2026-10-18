@@ -2855,6 +2855,10 @@ def main():
     generate_retrofit(PUBLIC_DIR, add_loca, get_guid)
     from hc_innout import generate_innout
     generate_innout(PUBLIC_DIR, add_loca, get_guid)
+    from hc_wardrobeprop import generate_wardrobeprop
+    generate_wardrobeprop(PUBLIC_DIR, add_loca, get_guid)
+    from hc_podium import generate_podium
+    generate_podium(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()
