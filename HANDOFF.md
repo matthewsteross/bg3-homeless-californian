@@ -12,7 +12,7 @@
   - Text batch `hc_round10.py`: 9 spells (In-N-Out Animal-Style Argument L5, Caltrans Cone Labyrinth L9, Caltrain Horn L10, Caltrans Truck-Bed Vest Requisition L11, Sixty-Day Rent Increase Notice L12, Laminated Pool-Hours Sign Venice L6, Street-Sweep Citation BART L10, Farmers' Market Peach Parking Denial Beachborn L3, Seven-Dollar Oat-Milk Line Siliconite L1), the Caltrans Safety Vest (rare light armour, Hi-Vis Authority equip passive), the Rent-Stabilized Grit passive (base L9) and 5 statuses.
   - Four Blender-built props with base-class spells: Hostile Architecture Spike Bench (`hc_bench.py`, L10), Sparking Utility Pole (`hc_utilitypole.py`, L11), Evicted Studio Spin Bike (`hc_spinbike.py`, L6), Sidewalk Cooler Bonfire (`hc_coolerfire.py`, L4).
   - Eleven custom props in total; nine are source-only (the cart and blue tarp are the two in the public download).
-  - Counts after round 10: 322 unit tests PASS; `validate.py --pak` PASS (317 stats, 94 icons, 659 loca handles). File-level only, not play-tested. Icons for Round 5-10 spells are still vanilla placeholders until the Gemini image quota resets.
+  - Counts after round 10: 848 unit tests PASS; `validate.py --pak` PASS (317 stats, 94 icons, 659 loca handles). File-level only, not play-tested. Icons for Round 5-10 spells are still vanilla placeholders until the Gemini image quota resets.
   - Docs (README, TESTING, `validation/README.md`, this file) updated to match.
 - **Added since the section below was written (local commits, not pushed):** Round 8 (`hc_round8.py`: 10 spells + 9 statuses; Pothole Ankle-Breaker, NIMBY Public Comment Period, Department of Unfinished Business, Municipal Budget Hearing, Sidewalk Chiropractic Adjustment, PG&E Public Safety Blackout, Emergency Boardwalk Sunglasses, Hayward Fault Seismic Retrofit, Whole Foods Hot Bar Heist, Meeting Could Have Been a Scroll) and the **Caltrans "Lane Closed Ahead" barricade** (`hc_barricade.py`, `assets/models/HC_Barricade/`, base class level 9; the second Blender-built prop after the cart and tarp). 186 unit tests and `validate.py --pak` pass; the pak is installed in the local `Mods` folder (old one backed up in `work/installed-backups/`).
 - **Also done (later 2026-10-17):** the Pop-Up Encampment Tent prop (`hc_tent.py`, `assets/models/HC_PopUpTent/`, base L7, 8 temp HP for 3 turns) and the Codex balance pass (186 unit tests; README/TESTING/`validation/README.md` updated to match).
@@ -37,7 +37,7 @@
 - **317** stats (validator count)
 - **94** icons (validator count)
 - **659** localization handles (`HomelessCalifornian.loca.xml`)
-- **322 / 322** unit tests PASS (`python -m unittest discover -s validation -q`)
+- **848 / 848** unit tests PASS (`python -m unittest discover -s validation -q`)
 - `python validation/validate.py --pak dist/HomelessCalifornian.pak` PASS
 
 ---

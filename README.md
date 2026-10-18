@@ -220,7 +220,7 @@ Of the round 2 additions, the donors' animations and sound/visual effects are in
 
 **Read this first:** everything in this section is in the repository and in the locally built `dist/HomelessCalifornian.pak`, and it is
 **not** in the public v0.4.0 download or the Nexus file. You cannot get it by downloading the release. **Nobody has played any of it.**
-The only checking so far is file-level: 322 unit tests and the pak validator pass on the current source, which proves the
+The only checking so far is file-level: 848 unit tests and the pak validator pass on the current source, which proves the
 files agree with each other and with vanilla data, not that a single spell does what it says. Numbers are copied from the generated game
 data and the localization text.
 
@@ -369,7 +369,7 @@ Involuntary Sidewalk Nod, Speaker Forty-One of Forty-Four and Red-Tagged: Unperm
 - **Checked at file level:** every stat starts with `HC_`, every donor exists in the vanilla extraction and is not overridden in Honour, the spell
   lists and progressions grant each spell at the level shown above, mechanics tokens and surfaces appear in vanilla data, and the localization
   and icon registrations resolve. See [validation/README.md](validation/README.md) for the per-file breakdown.
-- **Current numbers:** the validator reports 317 stat entries, 94 icons and 659 localization handles; 322 unit tests (counted per file with `def test_`,
+- **Current numbers:** the validator reports 317 stat entries, 94 icons and 659 localization handles; 848 unit tests (counted per file with `def test_`,
   and passing per `HANDOFF.md`), and `validate.py --pak` passing per `HANDOFF.md`.
 - **Not checked:** everything about play. Nothing from rounds 4-10 or the nine source-only props has been played, and none of the props has been spawned in game: damage, saves, Junk costs, durations, the Permit Pending
   stack countdown, the Weather Complaint triggers, surface effects, the Flea Market item grants and the Rhino shot's use action, level-up

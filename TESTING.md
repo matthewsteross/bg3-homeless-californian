@@ -125,7 +125,7 @@ facing and collision, the Kombucha override and balance still need your testing.
 ## Source-only rounds 4-10 and the nine props: what to try first (NOT in the v0.4.0 download)
 
 This part is for testers who build the mod from the repository (or for Matthew's own test runs). **Rounds 4 to 10 and the nine custom props (Caltrans barricade, pop-up tent, scooter graveyard, robotaxi, porta-potty and four round 10 props) are not in the public
-v0.4.0 download or on Nexus, so you cannot try them from the release.** Nobody has played any of it: 322 file-level tests and the pak validator pass,
+v0.4.0 download or on Nexus, so you cannot try them from the release.** Nobody has played any of it: 848 file-level tests and the pak validator pass,
 and that is all. The full list with numbers is in the
 [README section](README.md#source-only-rounds-4-10-not-in-the-v040-download-not-play-tested). Use a separate test save and a new character or a respec.
 The 28 spells from rounds 5-7, the 10 round 8 spells, the 10 round 9 spells, the 13 round 10 spells (nine spells and the four round 10 prop spells) and the five earlier prop spells show placeholder vanilla icons for now, so a wrong-looking icon is expected; a missing spell or a broken tooltip is a bug.
