@@ -1,0 +1,17 @@
+{
+ "id": "01a15065-6216-706f-b5f2-304d9b747328",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 536630217,
+ "prompt": "orange steel scaffolding tower with a flashing amber construction lamp and a stack of concrete jersey barriers and a hand-lettered sign, road retrofit work zone, stylized game prop, single object",
+ "texture_prompt": "safety orange steel, dirty grey concrete, yellow warning stripes, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350186613,
+ "progress": 100,
+ "started_at": 1792350186619,
+ "finished_at": 1792350218546,
+ "task_error": null,
+ "consumed_credits": 10
+}

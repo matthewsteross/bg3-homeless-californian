@@ -1,0 +1,17 @@
+{
+ "id": "01a15065-1368-7240-a608-7a3d13f587fc",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1507065763,
+ "prompt": "therapist office psychoanalyst couch chaise with a tissue box on a small side table and a small potted plant and a notepad, stylized game prop, single object",
+ "texture_prompt": "worn teal velvet couch, beige wood table, white tissues, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350166683,
+ "progress": 100,
+ "started_at": 1792350166688,
+ "finished_at": 1792350199405,
+ "task_error": null,
+ "consumed_credits": 10
+}

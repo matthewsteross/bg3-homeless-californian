@@ -1,0 +1,17 @@
+{
+ "id": "01a15064-41ab-7012-adc0-add70124370b",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 2711893944,
+ "prompt": "red and white paper-lined fast food tray with a double-double burger, animal-style fries and a tall paper cup with a palm tree logo, oversized, stylized game prop, single object",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792350111898,
+ "progress": 100,
+ "started_at": 1792350111903,
+ "finished_at": 1792350167543,
+ "task_error": null,
+ "consumed_credits": 20
+}

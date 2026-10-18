@@ -1,0 +1,17 @@
+{
+ "id": "01a15064-c2b7-76d6-badb-5d9018c359be",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4272610325,
+ "prompt": "wooden telephone pole section with layers of stapled paper flyers including a LOST COYOTE poster with a photo of a coyote, tangled staples and tape, stylized game prop, single object",
+ "texture_prompt": "weathered grey wood, layered white and neon paper flyers, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350145395,
+ "progress": 100,
+ "started_at": 1792350145402,
+ "finished_at": 1792350175121,
+ "task_error": null,
+ "consumed_credits": 10
+}
