@@ -216,5 +216,267 @@
  "HC_Zone_DoubleDeckerTechShuttleBikeLane": {
   "CastSound": "CrSpell_Cast_Hollyphant_TrumpetOfBlasting",
   "TargetSound": "CrSpell_Impact_ElementalEarth_Slam"
+ },
+ "HC_Shout_ClaimUnclaimedWardrobe": {
+  "CastSound": "Spell_Cast_Utility_FeatherFall_L1to3",
+  "TargetSound": "Spell_Impact_Buff_Barkskin_L1to3"
+ },
+ "HC_Shout_SquattersRights_Tenderloin": {
+  "CastSound": "CrSpell_Cast_UnderBark_Pheromones",
+  "TargetSound": "CrSpell_Impact_UnderBark_Pheromones"
+ },
+ "HC_Target_ChairLegShiv_Eviction": {
+  "CastSound": "CoinHalberd_Foley_Pierce_Whoosh",
+  "TargetSound": "CoinHalberd_Foley_Pierce_Impact"
+ },
+ "HC_Shout_SquattersRights_Overpass": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_SeismicStrike",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_SeismicStrike"
+ },
+ "HC_Target_BagOfOtherBags": {
+  "CastSound": "Spell_Cast_Damage_Physical_HailOfThorns_L1to3",
+  "TargetSound": "Spell_Impact_Damage_ThornWhip_L0"
+ },
+ "HC_Shout_LoadBearingChair": {
+  "CastSound": "Action_Cast_Bard_DefensiveFlourishMelee",
+  "TargetSound": "Spell_Impact_Buff_EnhanceAbilityBearsEndurance_L1to3"
+ },
+ "HC_Shout_IWasHereFirst": {
+  "CastSound": "CrSpell_Cast_GoadingRoar",
+  "TargetSound": "Action_Impact_Barbarian_BolsteringMagicBoon"
+ },
+ "HC_Target_WrongPlatform": {
+  "CastSound": "Action_Cast_Bard_MobileFlourishTeleport",
+  "TargetSound": "Action_Impact_Bard_MobileFlourishTeleport"
+ },
+ "HC_Target_CompassionBurnout": {
+  "CastSound": "CrSpell_Cast_ScryingForWeakness",
+  "TargetSound": "CrSpell_Impact_ScryingForWeakness"
+ },
+ "HC_Zone_BucketDrumSolo": {
+  "CastSound": "Spell_Cast_Monk_FistofFourThunders_L1to3",
+  "TargetSound": "Action_Impact_Cleric_DivineStrikeMeleeDamageThunder"
+ },
+ "HC_Target_Sublet": {
+  "CastSound": "Action_Cast_Disengage",
+  "TargetSound": "Action_Impact_Disengage"
+ },
+ "HC_Shout_BlueTarpLeanTo": {
+  "CastSound": "Spell_Cast_Buff_GaseousForm_L1to3",
+  "TargetSound": "Spell_Impact_Buff_GaseousForm_L1to3"
+ },
+ "HC_Target_DrainageDitchDigIn": {
+  "CastSound": "CrSpell_Cast_Myrmidon_Earth_MudSlap",
+  "TargetSound": "CrSpell_Impact_Myrmidon_Earth_MudSlap"
+ },
+ "HC_Shout_PopUpTentEncampment": {
+  "CastSound": "CrSpell_Cast_CommandtheTroops",
+  "TargetSound": "CrSpell_Impact_CommandtheTroops"
+ },
+ "HC_Target_CaltransConeLabyrinth": {
+  "CastSound": "Spell_Cast_Control_CrownOfMadness_L1to3",
+  "TargetSound": "Spell_Impact_Control_CrownOfMadness_L1to3"
+ },
+ "HC_Shout_CaltransVestRequisition": {
+  "CastSound": "Spell_Cast_Buff_LuckyBoot",
+  "TargetSound": "Action_Impact_Barbarian_AspectOfTheWolf"
+ },
+ "HC_Target_LaminatedPoolHoursSign": {
+  "CastSound": "Spell_Cast_Damage_Psychic_ViciousMockery_L1to3",
+  "TargetSound": "CrSpell_Impact_ViciousMockery"
+ },
+ "HC_Target_StreetSweepCitation": {
+  "CastSound": "CrSpell_Cast_BrandOfTheAbsolute",
+  "TargetSound": "CrSpell_Impact_BrandOfTheAbsolute"
+ },
+ "HC_Target_FarmersMarketPeachDenial": {
+  "CastSound": "CrSpell_Cast_ViciousMockery",
+  "TargetSound": "Spell_Impact_Damage_Psychic_ViciousMockery_L1to3"
+ },
+ "HC_Target_OatMilkLineTaqueria": {
+  "CastSound": "Action_Cast_Bard_CounterCharm",
+  "TargetSound": "Action_Impact_Bard_CounterCharm"
+ },
+ "HC_Target_CEQAEnvironmentalInjunction": {
+  "CastSound": "CrSpell_Cast_WillOfTheAbsolute",
+  "TargetSound": "CrSpell_AbsoluteAegis_Netherbrain_Start"
+ },
+ "HC_Zone_SaturdayGasLeafBlower": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Thunderwave_L1to3_01",
+  "TargetSound": "Spell_Impact_Damage_Thunder_Shatter_L1to3"
+ },
+ "HC_Target_CoastalCommissionReview": {
+  "CastSound": "Spell_Cast_Summon_Golem_Bell_L0",
+  "TargetSound": "Spell_Impact_Summon_Golem_Bell_L0"
+ },
+ "HC_Shout_ReplyAllWholeCompany": {
+  "CastSound": "CrSpell_Cast_ShieldOfScreams",
+  "TargetSound": "CrSpell_Impact_ShieldOfScreams"
+ },
+ "HC_Shout_WalgreensPlexiglassAisle": {
+  "CastSound": "Spell_Cast_Buff_Barkskin_L1to3",
+  "TargetSound": "Spell_Impact_Buff_Barkskin_L1to3"
+ },
+ "HC_Shout_TherapySettingBoundaries": {
+  "CastSound": "Spell_Cast_Bard_BardicInspiration_L1to3",
+  "TargetSound": "Spell_Impact_Bard_BardicInspiration_L1to3"
+ },
+ "HC_Target_GoogleMapsIntoTraffic": {
+  "CastSound": "CrSpell_Cast_LuringSong",
+  "TargetSound": "Action_Impact_Trip"
+ },
+ "HC_Shout_SantaAnaEmotionally": {
+  "CastSound": "Spell_Cast_Monk_RushoftheGaleSpirits_L1to3",
+  "TargetSound": "CrSpell_Impact_Djinni_Inhale"
+ },
+ "HC_Projectile_405ThanksgivingGridlock": {
+  "CastSound": "CrSpell_Cast_BombardmentHorde",
+  "TargetSound": "CrSpell_Impact_BombardmentHorde"
+ },
+ "HC_Target_SubstackManifestDestiny": {
+  "CastSound": "Spell_Cast_Damage_Psychic_DissonantWhispers_L1to3",
+  "TargetSound": "Spell_Impact_Damage_Psychic_DissonantWhispers_L1to3"
+ },
+ "HC_Shout_GloveBoxCleanout": {
+  "CastSound": "Action_Cast_Rogue_SupremeSneak",
+  "TargetSound": "Spell_Impact_Healing_HealerKitHeal_L4to5"
+ },
+ "HC_Target_SprinklerViolation": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Cold",
+  "TargetSound": "Action_Impact_Monk_ResonationPunch"
+ },
+ "HC_Target_HOVLane": {
+  "CastSound": "Action_Cast_Bard_MobileFlourishRanged",
+  "TargetSound": "Action_Impact_Bard_MobileFlourishTeleport"
+ },
+ "HC_Target_OneStarCitation": {
+  "CastSound": "CrSpell_Cast_AbsoluteWord_Bane"
+ },
+ "HC_Target_TuleFog": {
+  "CastSound": "Spell_Cast_Buff_GaseousForm_L1to3"
+ },
+ "HC_Target_CopperWireStrip": {
+  "CastSound": "Action_Cast_Item_ChromaticAttunementThunder",
+  "TargetSound": "Action_Impact_Item_ChromaticAttunementThunder"
+ },
+ "HC_Shout_PropaneTankSidewalkBBQ": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Fire",
+  "TargetSound": "CrSpell_Impact_Brewer_MixChangeExplosion_Physical_"
+ },
+ "HC_Target_LocalismSurfboardCheck": {
+  "CastSound": "Action_Cast_TripAttack_Melee",
+  "TargetSound": "Action_Impact_Trip"
+ },
+ "HC_Target_SquatterAdversePossession": {
+  "CastSound": "CrSpell_Cast_HelpArrives_ScryingEye",
+  "TargetSound": "CrSpell_Impact_AbsoluteWord_Bane"
+ },
+ "HC_Shout_CVSReceiptScroll": {
+  "CastSound": "Spell_Cast_Buff_CrusadersMantle_L1to3",
+  "TargetSound": "Spell_Impact_Buff_CrusadersMantle_L1to3"
+ },
+ "HC_Target_SideshowMustangDonut": {
+  "CastSound": "CrSpell_Cast_RecklessRoar",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_Multiattack"
+ },
+ "HC_Target_UsedFoilBlowback": {
+  "CastSound": "Spell_Cast_Damage_Poison_StinkingCloud_L1to3",
+  "TargetSound": "Spell_Impact_Damage_Poison_StinkingCloud_L1to3"
+ },
+ "HC_Target_ExtensionCordTap": {
+  "CastSound": "Spell_Passive_Cast_WrathOfTheStorm_Thunder",
+  "TargetSound": "Spell_Passive_Impact_WrathOfTheStorm_Thunder"
+ },
+ "HC_Target_BotoxFillerParalyze": {
+  "CastSound": "CrSpell_Cast_Dryad_FallenLover",
+  "TargetSound": "CrSpell_Impact_InfectiousBite_Wolf"
+ },
+ "HC_Shout_PolyculeGoogleCalendar": {
+  "CastSound": "Spell_Cast_Control_OttosIrresistibleDance_L6to8",
+  "TargetSound": "Spell_Impact_Control_PartyTime"
+ },
+ "HC_Shout_MunicipalBudgetHearing": {
+  "CastSound": "Spell_Cast_Summon_Golem_Bell_L0",
+  "TargetSound": "Spell_Impact_Summon_Golem_Bell_L0"
+ },
+ "HC_Target_SidewalkChiropracticAdjustment": {
+  "CastSound": "CrSpell_Cast_Wolf_FerociousSlash",
+  "TargetSound": "CrSpell_Impact_Wolf_FerociousSlash"
+ },
+ "HC_Projectile_PGEPublicSafetyBlackout": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Shatter_L1to3",
+  "TargetSound": "Spell_Impact_Damage_Thunder_Shatter_L1to3"
+ },
+ "HC_Shout_EmergencyBoardwalkSunglasses": {
+  "CastSound": "Action_Cast_Bard_DefensiveFlourishMelee",
+  "TargetSound": "Spell_Impact_Buff_Guidance_L1to3"
+ },
+ "HC_Shout_HaywardFaultSeismicRetrofit": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_SeismicStrike",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_SeismicStrike"
+ },
+ "HC_Shout_WholeFoodsHotBarHeist": {
+  "CastSound": "Action_Cast_SneakAttack",
+  "TargetSound": "Action_Impact_SneakAttack"
+ },
+ "HC_Target_MeetingCouldHaveBeenAScroll": {
+  "CastSound": "Instrument_Bard_Silence",
+  "TargetSound": "Action_Impact_Disengage"
+ },
+ "HC_Target_DMVTicketB047FarWindow": {
+  "CastSound": "CrSpell_Cast_CallForHelp_ScryingEye",
+  "TargetSound": "CrSpell_Impact_CommandtheTroops"
+ },
+ "HC_Target_RaccoonTribunalCompostBins": {
+  "CastSound": "CrSpell_Cast_Raven_BadOmen",
+  "TargetSound": "CrSpell_Impact_RavenFlock"
+ },
+ "HC_Target_PurpleAirWildfireRefresh": {
+  "CastSound": "CrSpell_Cast_ScryingForWeakness",
+  "TargetSound": "CrSpell_Impact_ScryingForWeakness"
+ },
+ "HC_Target_SeriesBOffsiteTrustFall": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_Slam",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_Slam"
+ },
+ "HC_Target_HOABeigePaintDenial": {
+  "CastSound": "CrSpell_Cast_AbsoluteWord_Bane",
+  "TargetSound": "CrSpell_Impact_AbsoluteWord_Bane"
+ },
+ "HC_Shout_NextdoorLostCoyoteThread": {
+  "CastSound": "Spell_Cast_Buff_WildShapeWolf_L1to3",
+  "TargetSound": "CrSpell_Impact_InfectiousBite_Wolf"
+ },
+ "HC_Target_TransbayTubeEarPop": {
+  "CastSound": "Spell_Cast_Damage_Thunder_ChromaticOrbThunder_L1to3",
+  "TargetSound": "Spell_Impact_Damage_Thunder_ThunderousSmite_L1to3"
+ },
+ "HC_Zone_WheelFlangeScreech": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Thunderwave_L1to3_01",
+  "TargetSound": "Spell_Impact_Damage_Thunder_Shatter_L1to3"
+ },
+ "HC_Target_StationAgentIntercomLockdown": {
+  "CastSound": "CrSpell_Cast_WillOfTheAbsolute",
+  "TargetSound": "CrSpell_Impact_BrandOfTheAbsolute"
+ },
+ "HC_Target_PierPressure": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_Slam",
+  "TargetSound": "Action_Impact_Monk_ResonationPunch"
+ },
+ "HC_Target_CivicCenterBioSludgeGeyser": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Acid",
+  "TargetSound": "CrSpell_Impact_Brewer_MixChangeExplosion_Physical_"
+ },
+ "HC_Target_CoatHangerSlimJim": {
+  "CastSound": "Action_Cast_Rogue_SupremeSneak",
+  "TargetSound": "CoinHalberd_Foley_Pierce_Impact"
+ },
+ "HC_Target_CurbsideClinic": {
+  "CastSound": "Spell_Cast_Healing_HealerKitHeal_L4to5",
+  "TargetSound": "Spell_Impact_Healing_HealerKitHeal_L4to5"
+ },
+ "HC_Target_SparkingUtilityPole": {
+  "CastSound": "CrSpell_Cast_Bulette_DiamonScaleBurst",
+  "TargetSound": "Spell_Impact_Damage_GlyphofWardingThunder_L5"
  }
 }
