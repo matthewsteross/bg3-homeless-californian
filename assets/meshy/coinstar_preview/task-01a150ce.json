@@ -1,0 +1,17 @@
+{
+ "id": "01a150ce-8383-7210-b1f0-9e54772873e4",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 744236722,
+ "prompt": "bulky green supermarket coin counting kiosk machine with a dented front panel, a screen and an overflowing copper coin tray, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792357075714,
+ "progress": 100,
+ "started_at": 1792357075718,
+ "finished_at": 1792357169754,
+ "task_error": null,
+ "consumed_credits": 20
+}

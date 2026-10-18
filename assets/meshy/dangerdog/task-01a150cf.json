@@ -1,0 +1,17 @@
+{
+ "id": "01a150cf-cdb2-7736-84e2-07dda63d8d3c",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 2982984812,
+ "prompt": "stainless steel street vendor pushcart with a flat-top griddle full of bacon-wrapped hot dogs and a striped rainbow umbrella, one solid connected object, stylized game prop",
+ "texture_prompt": "stainless steel, red and white striped umbrella, bacon strips, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357160519,
+ "progress": 100,
+ "started_at": 1792357160524,
+ "finished_at": 1792357194189,
+ "task_error": null,
+ "consumed_credits": 10
+}

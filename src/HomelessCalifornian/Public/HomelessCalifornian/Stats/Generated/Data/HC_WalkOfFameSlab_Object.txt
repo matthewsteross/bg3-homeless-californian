@@ -1,0 +1,7 @@
+new entry "HC_WalkOfFameSlab_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "5d849d41-fe2c-59be-a1a4-71cbfe3a895f"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

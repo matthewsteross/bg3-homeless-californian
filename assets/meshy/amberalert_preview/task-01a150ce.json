@@ -1,0 +1,17 @@
+{
+ "id": "01a150ce-839c-7799-aa27-a4505de13432",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 316336405,
+ "prompt": "highway maintenance trailer carrying a large amber LED matrix message sign on a steel mast with a solar panel, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792357076005,
+ "progress": 100,
+ "started_at": 1792357076009,
+ "finished_at": 1792357126910,
+ "task_error": null,
+ "consumed_credits": 20
+}

@@ -1,0 +1,17 @@
+{
+ "id": "01a150ce-8394-7470-86e9-83fb4d963b25",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3508832996,
+ "prompt": "boxy white vintage step-van food truck with a raised side service window an awning rooftop vents and painted flames, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792357075435,
+ "progress": 100,
+ "started_at": 1792357075440,
+ "finished_at": 1792357128789,
+ "task_error": null,
+ "consumed_credits": 20
+}

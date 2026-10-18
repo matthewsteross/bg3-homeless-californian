@@ -1,0 +1,17 @@
+{
+ "id": "01a150cf-2b8e-704a-91e5-d23745b91161",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3089810862,
+ "prompt": "blue USPS style steel street mailbox with a pull-down drop door covered in graffiti stickers and peeling tape, one solid connected object, stylized game prop",
+ "texture_prompt": "faded blue steel, white lettering, colorful stickers, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357118399,
+ "progress": 100,
+ "started_at": 1792357118407,
+ "finished_at": 1792357153289,
+ "task_error": null,
+ "consumed_credits": 10
+}

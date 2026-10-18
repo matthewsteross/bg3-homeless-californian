@@ -1,0 +1,7 @@
+new entry "HC_PrivacyPod_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "14398616-8375-5a11-9310-9200044602dc"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

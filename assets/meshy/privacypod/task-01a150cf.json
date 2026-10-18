@@ -1,0 +1,17 @@
+{
+ "id": "01a150cf-7bd0-72ec-a3e2-a40b1ff7e9ea",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1931772785,
+ "prompt": "freestanding open-office soundproof phone booth pod with a glass door gray acoustic felt panels and a small stool inside, one solid connected object, stylized game prop",
+ "texture_prompt": "grey felt, glass, wood trim, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357139741,
+ "progress": 100,
+ "started_at": 1792357139747,
+ "finished_at": 1792357178040,
+ "task_error": null,
+ "consumed_credits": 10
+}

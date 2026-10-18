@@ -1,0 +1,17 @@
+{
+ "id": "01a150d0-1bf5-7784-b39a-42e12e4dfa9a",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 744236722,
+ "prompt": "bulky green supermarket coin counting kiosk machine with a dented front panel, a screen and an overflowing copper coin tray, one solid connected object, stylized game prop",
+ "texture_prompt": "green painted metal, copper coins, glowing screen, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357180123,
+ "progress": 100,
+ "started_at": 1792357180128,
+ "finished_at": 1792357216147,
+ "task_error": null,
+ "consumed_credits": 10
+}

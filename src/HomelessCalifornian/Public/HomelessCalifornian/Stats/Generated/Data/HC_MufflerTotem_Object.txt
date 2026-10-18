@@ -1,0 +1,7 @@
+new entry "HC_MufflerTotem_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "663e9667-e24c-5c62-8fe8-2c0606ee38a1"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

@@ -1,0 +1,7 @@
+new entry "HC_AmberAlertTrailer_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "71ddaa10-a8dd-5753-8a96-72af8fb00f15"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

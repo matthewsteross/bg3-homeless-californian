@@ -2885,6 +2885,26 @@ def main():
     generate_calendarboard(PUBLIC_DIR, add_loca, get_guid)
     from hc_oldcomputer import generate_oldcomputer
     generate_oldcomputer(PUBLIC_DIR, add_loca, get_guid)
+    from hc_mailbox import generate_mailbox
+    generate_mailbox(PUBLIC_DIR, add_loca, get_guid)
+    from hc_coinstar import generate_coinstar
+    generate_coinstar(PUBLIC_DIR, add_loca, get_guid)
+    from hc_hydrant import generate_hydrant
+    generate_hydrant(PUBLIC_DIR, add_loca, get_guid)
+    from hc_privacypod import generate_privacypod
+    generate_privacypod(PUBLIC_DIR, add_loca, get_guid)
+    from hc_mufflertotem import generate_mufflertotem
+    generate_mufflertotem(PUBLIC_DIR, add_loca, get_guid)
+    from hc_dangerdog import generate_dangerdog
+    generate_dangerdog(PUBLIC_DIR, add_loca, get_guid)
+    from hc_cybertruck import generate_cybertruck
+    generate_cybertruck(PUBLIC_DIR, add_loca, get_guid)
+    from hc_amberalert import generate_amberalert
+    generate_amberalert(PUBLIC_DIR, add_loca, get_guid)
+    from hc_tacotruck import generate_tacotruck
+    generate_tacotruck(PUBLIC_DIR, add_loca, get_guid)
+    from hc_walkoffame import generate_walkoffame
+    generate_walkoffame(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()

@@ -1,0 +1,17 @@
+{
+ "id": "01a150d0-6afb-7282-a503-32351bdbc406",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 752060446,
+ "prompt": "stripped angular brushed stainless steel electric pickup truck husk resting on four concrete cinder blocks with no wheels and a cracked windshield, one solid connected object, stylized game prop",
+ "texture_prompt": "dull brushed steel, grey cinder blocks, graffiti, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357200454,
+ "progress": 100,
+ "started_at": 1792357200460,
+ "finished_at": 1792357232759,
+ "task_error": null,
+ "consumed_credits": 10
+}

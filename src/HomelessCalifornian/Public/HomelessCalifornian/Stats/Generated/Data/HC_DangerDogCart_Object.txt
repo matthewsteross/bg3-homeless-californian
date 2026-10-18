@@ -1,0 +1,7 @@
+new entry "HC_DangerDogCart_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "7693f209-e3c6-59e5-9bf9-00bafda40eae"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

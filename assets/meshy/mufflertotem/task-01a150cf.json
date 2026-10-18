@@ -1,0 +1,17 @@
+{
+ "id": "01a150cf-2c3f-741e-b675-ebaa86ad42e7",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4079433871,
+ "prompt": "tall vertical junk sculpture welded from six rusty automobile mufflers and catalytic converters on a steel base, one solid connected object, stylized game prop",
+ "texture_prompt": "rusted brown steel, scorched black, weld seams, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357118818,
+ "progress": 100,
+ "started_at": 1792357118825,
+ "finished_at": 1792357146604,
+ "task_error": null,
+ "consumed_credits": 10
+}

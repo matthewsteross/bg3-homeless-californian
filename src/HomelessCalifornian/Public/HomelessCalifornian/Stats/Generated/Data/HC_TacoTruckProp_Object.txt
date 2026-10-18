@@ -1,0 +1,7 @@
+new entry "HC_TacoTruckProp_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "ac44c698-8943-53ac-a02f-76b9b3ff5bf5"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

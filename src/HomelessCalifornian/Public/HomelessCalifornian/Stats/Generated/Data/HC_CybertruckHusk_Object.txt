@@ -1,0 +1,7 @@
+new entry "HC_CybertruckHusk_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "7270e2e9-519a-5781-8d37-bb77df4448c7"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

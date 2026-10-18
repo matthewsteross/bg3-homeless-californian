@@ -1,0 +1,17 @@
+{
+ "id": "01a150cf-2cc1-7202-8117-146483706438",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 217813500,
+ "prompt": "thick hexagonal slab of pink and charcoal terrazzo Hollywood Walk of Fame sidewalk with a brass star and a pneumatic jackhammer stuck in it, one solid connected object, stylized game prop",
+ "texture_prompt": "pink terrazzo, brass star, orange jackhammer, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357118842,
+ "progress": 100,
+ "started_at": 1792357118847,
+ "finished_at": 1792357150828,
+ "task_error": null,
+ "consumed_credits": 10
+}

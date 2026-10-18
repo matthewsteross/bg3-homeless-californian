@@ -1,0 +1,17 @@
+{
+ "id": "01a150cf-53ef-7546-9bb8-b7fecb442059",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1396218549,
+ "prompt": "red and yellow cast iron fire hydrant with its top sheared off gushing a tall column of water, one solid connected object, stylized game prop",
+ "texture_prompt": "red enamel paint chipped, blue white water spray, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792357128754,
+ "progress": 100,
+ "started_at": 1792357128760,
+ "finished_at": 1792357160535,
+ "task_error": null,
+ "consumed_credits": 10
+}

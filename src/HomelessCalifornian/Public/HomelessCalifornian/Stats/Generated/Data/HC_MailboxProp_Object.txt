@@ -1,0 +1,7 @@
+new entry "HC_MailboxProp_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "55233e3d-f4b5-521e-b8ee-8a274c65e304"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

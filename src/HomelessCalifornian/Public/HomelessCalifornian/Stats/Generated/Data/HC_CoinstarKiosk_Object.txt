@@ -1,0 +1,7 @@
+new entry "HC_CoinstarKiosk_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "c98b9915-0f1c-5651-a346-9df0bb774c57"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"
