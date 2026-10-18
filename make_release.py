@@ -32,7 +32,7 @@ def counts():
             elif m.group(2) == 'PassiveData':
                 passives += 1
     icons = len(list((ROOT / 'assets/icons').glob('Spell_*.png')))
-    props = len(list((ROOT / 'assets/meshy').glob('*/model.glb')))
+    props = len(list((ROOT / 'assets/models').glob('HC_*/*_bounds.json')))
     return spells, statuses, passives, icons, props
 
 

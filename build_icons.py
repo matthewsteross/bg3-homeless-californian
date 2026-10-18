@@ -276,22 +276,22 @@ def main():
     for map_key, img in loaded_imgs.items():
         tt_img = img.resize((380, 380), Image.Resampling.LANCZOS)
         ctrl_img = img.resize((144, 144), Image.Resampling.LANCZOS)
-        tt_img.save(os.path.join(GAME_TOOLTIPS_DIR, f"{map_key}.DDS"))
-        ctrl_img.save(os.path.join(GAME_CONTROLLER_DIR, f"{map_key}.DDS"))
+        tt_img.save(os.path.join(GAME_TOOLTIPS_DIR, f"{map_key}.DDS"), pixel_format="DXT5")
+        ctrl_img.save(os.path.join(GAME_CONTROLLER_DIR, f"{map_key}.DDS"), pixel_format="DXT5")
 
     if crest_img is not None:
         crest_380 = crest_img.resize((380, 380), Image.Resampling.LANCZOS)
         crest_144 = crest_img.resize((144, 144), Image.Resampling.LANCZOS)
         for c_id in CLASS_IDENTIFIERS:
             for k in [c_id, f"Class_{c_id}"]:
-                crest_380.save(os.path.join(GAME_TOOLTIPS_DIR, f"{k}.DDS"))
-                crest_144.save(os.path.join(GAME_CONTROLLER_DIR, f"{k}.DDS"))
+                crest_380.save(os.path.join(GAME_TOOLTIPS_DIR, f"{k}.DDS"), pixel_format="DXT5")
+                crest_144.save(os.path.join(GAME_CONTROLLER_DIR, f"{k}.DDS"), pixel_format="DXT5")
 
     # Save texture atlas in DDS and PNG
     atlas_dds_path = os.path.join(TEXTURE_DIR, "HomelessCalifornianAtlas.dds")
     atlas_png_path = os.path.join(TEXTURE_DIR, "HomelessCalifornianAtlas.png")
     atlas_img.save(atlas_png_path)
-    atlas_img.save(atlas_dds_path)
+    atlas_img.save(atlas_dds_path, pixel_format="DXT5")
     print(f"Saved texture atlas: {atlas_dds_path}")
 
     # Generate GUI/HomelessCalifornianAtlas.lsx and GUI/Icons_Items.lsx

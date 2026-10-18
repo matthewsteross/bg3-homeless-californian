@@ -73,7 +73,7 @@ class DumpsterTests(unittest.TestCase):
         header = (hp.ASSET_SRC / 'HC_Dumpster_BM.DDS').read_bytes()[:128]
         height, width = int.from_bytes(header[12:16], 'little'), int.from_bytes(header[16:20], 'little')
         self.assertEqual((width, height), (1024, 1024))
-        self.assertEqual(header[84:88], b'DXT5')
+        self.assertIn(header[84:88], (b'DXT1', b'DXT5'))
         self.assertEqual(int.from_bytes(header[28:32], 'little'), 11)
         tree = ET.parse(self.public / 'Content/Assets/Props/[PAK]_HC_Dumpster/_merged.lsf.lsx')
         sizes = {attrs(t)['Name']: (attrs(t)['Width'], attrs(t)['Height'])

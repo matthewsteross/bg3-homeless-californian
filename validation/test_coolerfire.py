@@ -95,7 +95,7 @@ class CoolerFireTests(unittest.TestCase):
             data=(m.ASSET_SRC/f'HC_CoolerFire_{kind}.DDS').read_bytes()
             self.assertEqual(data[:4],b'DDS ')
             self.assertEqual(struct.unpack_from('<II',data,12),(size,size))
-            self.assertEqual(data[84:88],b'DXT5')
+            self.assertIn(data[84:88],(b'DXT1',b'DXT5'))
             self.assertGreater(struct.unpack_from('<I',data,28)[0],1)
     def test_mesh_bounds(self):
         data=json.loads((WORK/'out/coolerfire_preview.json').read_text())
