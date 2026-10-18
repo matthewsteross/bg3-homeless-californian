@@ -179,6 +179,9 @@
     <content contentuid="h87f7aa59g7884g54c1gb826g0d211b779f92" version="1">Junk</content>
     <content contentuid="h1fc7fab1gfbd3g5b7cga689gf4553aa45c69" version="1">A small collection of things you will definitely need. Fuels your junk toolkit; replenished on short rest.</content>
     <content contentuid="h3f21cff6gd67dg54fag98edg2a1143638a4b" version="1">Not enough Junk. The good rubbish has already been spoken for.</content>
+    <content contentuid="h1cb24260g823dg5c98g96cbgbd13b75c4ee6" version="1">Dumpster Dive Charge</content>
+    <content contentuid="h42c86154gf79cg5772ga1a9g631ce4f6b473" version="1">Dumpster Dive can be used twice per short rest.</content>
+    <content contentuid="h2a0dd4b9g72e2g5579gb196gd0be21f04f39" version="1">The dumpster has already been picked clean this rest.</content>
     <content contentuid="h04dc47c6gd161g5ca2ga3ceg6db9bc3019df" version="1">Chair-Braced</content>
     <content contentuid="h596c9dabg9e74g5cb9g93aag46078a1e0748" version="1">+2 AC, advantage on Strength saves, and immunity to Prone. The chair has passed its own inspection.</content>
     <content contentuid="haa586445g87c3g5bf7gae34g96beea1144e5" version="1">Moving Day Hustle</content>
@@ -198,7 +201,7 @@
     <content contentuid="h7df9d8acg4fc7g5346gb1a0gee6ccb9a43c9" version="1">Load-Bearing Lawn Chair</content>
     <content contentuid="h7d67572eg167dg5187gae25gaed1148be439" version="1">Gain +2 AC, advantage on Strength saves, and immunity to Prone for 2 turns. This folding chair is the only stable institution left.</content>
     <content contentuid="hc0d57b98g6bdeg569dga39cge761144e8905" version="1">Dumpster Dive</content>
-    <content contentuid="he0468a82g4c81g54fdgb9c9g96bbe704ea9b" version="1">Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple); a battered green dumpster thumps down at your feet. Once per short rest. The dumpster is a lane closure for trash: one orange vest, no schedule, and a completion date of whenever the grant renews.</content>
+    <content contentuid="he0468a82g4c81g54fdgb9c9g96bbe704ea9b" version="1">Outside combat, restore 4 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple); a battered green dumpster thumps down at your feet. Twice per short rest. The dumpster is a lane closure for trash: one orange vest, no schedule, and a completion date of whenever the grant renews.</content>
     <content contentuid="h316a0c68g6549g5d3bg9b83g495596bf9030" version="1">Moving Day</content>
     <content contentuid="h9ac5d90egdc6eg5e07g9e48g2656bb69770b" version="1">While in Fent Lean, end it for free, gain +6 m movement and difficult-terrain immunity for 1 turn, and scatter a 2.5 m perimeter of discarded rubbish (difficult terrain) for 2 turns where you stood, and a heap of tied trash bags appears there. Once per short rest. Your forwarding address is already incorrect.</content>
     <content contentuid="hc5634452g19c0g5d91g8e9dg0c9a6f011f9e" version="1">I Was Here First</content>

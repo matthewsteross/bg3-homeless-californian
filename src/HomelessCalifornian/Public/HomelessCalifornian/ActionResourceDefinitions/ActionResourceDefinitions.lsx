@@ -14,6 +14,16 @@
                     <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
                     <attribute id="UUID" type="guid" value="0fab7158-54e7-59ad-8ea2-59b0964105bb" />
                 </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h1cb24260g823dg5c98g96cbgbd13b75c4ee6" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h42c86154gf79cg5772ga1a9g631ce4f6b473" version="1" />
+                    <attribute id="Error" type="TranslatedString" handle="h2a0dd4b9g72e2g5579gb196gd0be21f04f39" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="HC_DiveCharge" />
+                    <attribute id="ReplenishType" type="FixedString" value="ShortRest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="false" />
+                    <attribute id="UUID" type="guid" value="c1908f17-1a40-51b7-be23-795143921c38" />
+                </node>
             </children>
         </node>
     </region>

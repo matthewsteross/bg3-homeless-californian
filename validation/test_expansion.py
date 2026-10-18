@@ -94,7 +94,7 @@ class ExpansionGenerationTests(unittest.TestCase):
             self.assertFalse(capstones)
             resources = ET.parse(public / 'ActionResourceDefinitions/ActionResourceDefinitions.lsx')
             resource_names = [a.get('value') for a in resources.findall('.//attribute[@id="Name"]')]
-            self.assertEqual(resource_names, ['HC_Junk'])
+            self.assertEqual(resource_names, ['HC_Junk', 'HC_DiveCharge'])
             roots = ET.parse(public / 'RootTemplates/HC_Wardrobe.lsf.lsx')
             self.assertEqual(len(roots.findall('.//node[@id="GameObjects"]')), 2)
 

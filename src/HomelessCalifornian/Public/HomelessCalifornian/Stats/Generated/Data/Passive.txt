@@ -11,7 +11,7 @@ data "DisplayName" "h8489520cg7d38g5e1fgacf8g0dca306b7ca6;1"
 data "Description" "h5d89a9fegf40cg58fegb9edg13f3b2ea807e;1"
 data "Icon" "PassiveFeature_PurityOfBody"
 data "Properties" "Highlighted"
-data "Boosts" "StatusImmunity(SG_Poisoned);StatusImmunity(SG_Disease);Resistance(Poison,Resistant)"
+data "Boosts" "StatusImmunity(SG_Poisoned);StatusImmunity(SG_Disease);Resistance(Poison,Resistant);ActionResource(HC_DiveCharge,2,0)"
 
 new entry "Proposition47"
 type "PassiveData"

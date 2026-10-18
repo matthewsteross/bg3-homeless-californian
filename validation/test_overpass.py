@@ -309,7 +309,7 @@ class OverpassSubclassTests(unittest.TestCase):
 
     def test_no_new_action_resource_is_introduced(self):
         resources = ET.parse(self.public / 'ActionResourceDefinitions/ActionResourceDefinitions.lsx')
-        self.assertEqual([a.get('value') for a in resources.findall('.//attribute[@id="Name"]')], ['HC_Junk'])
+        self.assertEqual([a.get('value') for a in resources.findall('.//attribute[@id="Name"]')], ['HC_Junk', 'HC_DiveCharge'])
 
     def test_text_rules_no_em_dashes_or_emojis(self):
         for name in NEW_SPELLS + NEW_STATUSES + NEW_PASSIVES:

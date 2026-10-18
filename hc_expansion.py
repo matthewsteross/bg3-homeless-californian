@@ -31,6 +31,19 @@ def generate_expansion(public_dir, add_loca, get_guid):
                               ('ShowOnActionResourcePanel', 'bool', 'true'),
                               ('UUID', 'guid', get_guid('HC_Junk_Resource'))]:
         ET.SubElement(node, 'attribute', id=name, type=kind, value=value)
+    node2 = ET.SubElement(children, 'node', id='ActionResourceDefinition')
+    for name, text in [
+        ('DisplayName', 'Dumpster Dive Charge'),
+        ('Description', 'Dumpster Dive can be used twice per short rest.'),
+        ('Error', 'The dumpster has already been picked clean this rest.'),
+    ]:
+        ET.SubElement(node2, 'attribute', id=name, type='TranslatedString',
+                      handle=add_loca('HC_DiveCharge_' + name, text), version='1')
+    for name, kind, value in [('MaxLevel', 'uint32', '0'), ('Name', 'FixedString', 'HC_DiveCharge'),
+                              ('ReplenishType', 'FixedString', 'ShortRest'),
+                              ('ShowOnActionResourcePanel', 'bool', 'false'),
+                              ('UUID', 'guid', get_guid('HC_DiveCharge_Resource'))]:
+        ET.SubElement(node2, 'attribute', id=name, type=kind, value=value)
     ET.indent(save, space='    ')
     ET.ElementTree(save).write(resources / 'ActionResourceDefinitions.lsx', encoding='utf-8', xml_declaration=True)
 
@@ -115,10 +128,10 @@ def generate_expansion(public_dir, add_loca, get_guid):
 
     dive = 'HC_Shout_DumpsterDive'
     spell(dive, 'Shout_SecondWind', 'Dumpster Dive',
-          'Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple); a battered green dumpster thumps down at your feet. Once per short rest. The dumpster is a lane closure for trash: one orange vest, no schedule, and a completion date of whenever the grant renews.',
-          UseCosts='ActionPoint:1', Icon='Spell_Transmutation_Goodberry', Cooldown='OncePerShortRest',
+          'Outside combat, restore 4 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple); a battered green dumpster thumps down at your feet. Twice per short rest. The dumpster is a lane closure for trash: one orange vest, no schedule, and a completion date of whenever the grant renews.',
+          UseCosts='ActionPoint:1;HC_DiveCharge:1', Icon='Spell_Transmutation_Goodberry',
           RequirementConditions='not Combat()',
-          SpellProperties='RestoreResource(HC_Junk,2,0);SummonInInventory(06474f97-0dd0-45e6-8db8-5f75009bf336,-1,1,false,false,false);SummonInInventory(2ca3cb11-2271-461a-9096-c425c0bd3b12,-1,1,false,false,false)')
+          SpellProperties='RestoreResource(HC_Junk,4,0);SummonInInventory(06474f97-0dd0-45e6-8db8-5f75009bf336,-1,1,false,false,false);SummonInInventory(2ca3cb11-2271-461a-9096-c425c0bd3b12,-1,1,false,false,false)')
 
     moving = 'HC_Shout_MovingDay'
     spell(moving, 'Shout_FentLean_End', 'Moving Day',

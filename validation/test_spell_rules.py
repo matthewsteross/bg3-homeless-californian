@@ -14,7 +14,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import generate_mod as generator
 
-ALLOWED_RESOURCES = {'ActionPoint', 'BonusActionPoint', 'ReactionActionPoint', 'HC_Junk'}
+ALLOWED_RESOURCES = {'ActionPoint', 'BonusActionPoint', 'ReactionActionPoint', 'HC_Junk', 'HC_DiveCharge'}
 
 
 def parse_entries(text):
