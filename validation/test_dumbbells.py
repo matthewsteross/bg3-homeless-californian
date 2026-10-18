@@ -1,6 +1,7 @@
 """DumbbellRack assets, resource links, bounds, GR2 round trip and existing-spell patch checks.
 File-level validation only; does not establish in-game behavior."""
 from pathlib import Path
+from validation.prop_patch_helper import unpatched
 import re
 import subprocess
 import sys
@@ -241,7 +242,7 @@ class DumbbellRackTests(unittest.TestCase):
         source = ROOT/'src/HomelessCalifornian/Public/HomelessCalifornian/Stats/Generated/Data'
         candidates = [p for p in source.glob('*.txt') if f'new entry "{hp.SPELL}"' in p.read_text(encoding='utf-8')]
         self.assertEqual(len(candidates),1)
-        before = candidates[0].read_bytes()
+        before = unpatched(candidates[0].read_bytes())
         old = stat_fields(before.decode('utf-8'),hp.SPELL)['SpellProperties']
         guid = generator.get_guid(hp.TEMPLATE_KEY)
         with tempfile.TemporaryDirectory() as tmp:

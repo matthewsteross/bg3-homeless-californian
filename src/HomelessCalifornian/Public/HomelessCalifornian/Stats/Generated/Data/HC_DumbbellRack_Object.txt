@@ -1,0 +1,7 @@
+new entry "HC_DumbbellRack_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "8ff7eae7-3cb3-5db3-8e13-0d35344aa64e"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

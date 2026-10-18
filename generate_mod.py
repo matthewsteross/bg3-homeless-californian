@@ -2865,6 +2865,8 @@ def main():
     generate_hazmatsign(PUBLIC_DIR, add_loca, get_guid)
     from hc_palletwall import generate_palletwall
     generate_palletwall(PUBLIC_DIR, add_loca, get_guid)
+    from hc_dumbbells import generate_dumbbells
+    generate_dumbbells(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()
