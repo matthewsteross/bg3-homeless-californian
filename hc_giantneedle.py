@@ -4,6 +4,9 @@ GustavDev/Stats/Generated/Data/Spell_ProjectileStrike.txt:71 (Spawn with status)
 Lifetime recipe and exact citations: hc_prop_lifetime.py.
 UNVERIFIED in game: spawn on HC_Shout_OversizedSharpsDisposal alongside its existing effects,
 facing, collision, scale, texture look, and ten-turn removal via Kill().
+Uniform scale gives 4 m along the source principal axis; original diagonal pose retained.
+8141 source triangles reduced to 7978 with endpoint-preserving 0.004 m source voxel clustering.
+Measured body-only inner bounds replace the ordinary centered box.
 BM preserves Meshy base colour, resized to 1024. No new spell, icon or grant.
 """
 from pathlib import Path
@@ -211,7 +214,7 @@ def generate_giantneedle(public_dir, add_loca, get_guid):
     fmt = lambda v: " ".join(f"{x:.9g}" for x in v)
     for btype, (lo, hi), radius in ((1, (BMIN, BMAX), 0.5), (2, (BMIN, BMAX), 0.5), (0, (INNER_MIN, INNER_MAX), 0.35)):
         b = ET.SubElement(bchildren, "node", id="Bound")
-        for attr, kind, value in (("Height", "float", f"{hi[1]:.9g}"), ("Max", "fvec3", fmt(hi)), ("Min", "fvec3", fmt(lo)),
+        for attr, kind, value in (("Height", "float", f"{hi[1] - lo[1]:.9g}"), ("Max", "fvec3", fmt(hi)), ("Min", "fvec3", fmt(lo)),
                                   ("Radius", "float", f"{radius:g}"), ("Shape", "uint8", "1"), ("Type", "uint8", str(btype))):
             ET.SubElement(b, "attribute", id=attr, type=kind, value=value)
     ET.indent(save, space="    ")

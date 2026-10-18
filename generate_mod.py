@@ -2867,6 +2867,8 @@ def main():
     generate_palletwall(PUBLIC_DIR, add_loca, get_guid)
     from hc_dumbbells import generate_dumbbells
     generate_dumbbells(PUBLIC_DIR, add_loca, get_guid)
+    from hc_giantneedle import generate_giantneedle
+    generate_giantneedle(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()

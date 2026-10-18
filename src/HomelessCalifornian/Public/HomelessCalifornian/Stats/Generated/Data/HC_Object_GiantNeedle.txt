@@ -1,0 +1,7 @@
+new entry "HC_GiantNeedle_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "190840ef-5c5b-5b81-af70-c576312164c7"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

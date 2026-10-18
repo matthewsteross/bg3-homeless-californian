@@ -158,7 +158,7 @@ class GiantNeedleTests(unittest.TestCase):
             lo = [float(x) for x in ba['Min'].split()]
             self.assertTrue(all(l >= m - 1e-6 for l, m in zip(lo, hp.BMIN)))
             self.assertTrue(all(h <= m + 1e-6 for h, m in zip(hi, hp.BMAX)))
-            self.assertAlmostEqual(float(ba['Height']), hi[1], places=6)           # Height equals the bound's own max Y
+            self.assertAlmostEqual(float(ba['Height']), hi[1] - lo[1], places=6)           # Height is the bound's extent, including elevated inner bounds
         inner = [attrs(b) for b in bounds if attrs(b)['Type'] == '0'][0]
         for actual, expected in zip(map(float, inner['Max'].split()), hp.INNER_MAX):
             self.assertAlmostEqual(actual, expected, places=7)
