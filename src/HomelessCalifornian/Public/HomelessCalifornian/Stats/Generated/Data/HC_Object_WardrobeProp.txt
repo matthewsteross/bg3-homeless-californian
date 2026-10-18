@@ -1,0 +1,7 @@
+new entry "HC_WardrobeProp_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "fe4dddea-e173-5daf-aebe-06db605856d0"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

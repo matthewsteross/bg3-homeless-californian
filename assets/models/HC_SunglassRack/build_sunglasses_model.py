@@ -1,4 +1,4 @@
-"""Meshy AI text-to-3D GLB -> fire-basket DAE; Y up, metres, +Z front.
+"""Meshy sunglasses3 market-stall GLB -> fire-basket DAE; Y up, metres, +Z front.
 Usage: build_sunglasses_model.py template.dae output.dae output_directory
 """
 import sys, struct, json, re
@@ -9,7 +9,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'HC_PortaPotty'))
 import portapotty_paint as paint_mod
 TPL, OUT, OD = sys.argv[1:4]
-source = Path(__file__).resolve().parents[2] / 'meshy/sunglasses'
+source = Path(__file__).resolve().parents[2] / 'meshy/sunglasses3'
 for required in ('model.glb', 'texture0_base_color.png', 'texture0_normal.png', 'texture0_metallic.png', 'texture0_roughness.png'):
     if not (source / required).is_file():
         raise FileNotFoundError(f'Missing Meshy source: {source / required}')

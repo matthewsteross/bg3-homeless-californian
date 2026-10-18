@@ -1,0 +1,7 @@
+new entry "HC_CouncilPodium_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "0ebf30c6-a3c8-58d4-8099-6b45e9f7d34c"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"
