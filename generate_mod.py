@@ -2905,6 +2905,8 @@ def main():
     generate_tacotruck(PUBLIC_DIR, add_loca, get_guid)
     from hc_walkoffame import generate_walkoffame
     generate_walkoffame(PUBLIC_DIR, add_loca, get_guid)
+    from hc_proplua import generate_proplua
+    generate_proplua(MODS_DIR)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()
