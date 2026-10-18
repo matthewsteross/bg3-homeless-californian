@@ -1,0 +1,7 @@
+new entry "HC_OverpassShack_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "47016e45-38e4-58ee-9f0b-9ee973c699b0"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

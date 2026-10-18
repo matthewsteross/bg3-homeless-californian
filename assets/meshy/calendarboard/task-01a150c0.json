@@ -1,0 +1,17 @@
+{
+ "id": "01a150c0-5e74-77bc-8ff7-1124b54816a6",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1428320891,
+ "prompt": "giant whiteboard on wheels covered in a chaotic overlapping color-coded calendar with colored sticky notes and nine names, one solid connected object, stylized game prop",
+ "texture_prompt": "white board, rainbow sticky notes, black marker scrawl, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792356148589,
+ "progress": 100,
+ "started_at": 1792356148596,
+ "finished_at": 1792356185433,
+ "task_error": null,
+ "consumed_credits": 10
+}

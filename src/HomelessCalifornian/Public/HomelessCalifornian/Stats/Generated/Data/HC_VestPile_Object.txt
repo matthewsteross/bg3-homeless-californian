@@ -1,0 +1,7 @@
+new entry "HC_VestPile_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "1cf17363-1b01-5f24-be83-5f9206c6b870"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

@@ -1,0 +1,17 @@
+{
+ "id": "01a150c0-865e-777f-ab86-f440735468ec",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3368733516,
+ "prompt": "oversized beige retro desktop computer with a CRT monitor showing an email inbox with thousands of unread messages and a keyboard, one solid connected object, stylized game prop",
+ "texture_prompt": "beige plastic, glowing blue screen, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792356158590,
+ "progress": 100,
+ "started_at": 1792356158599,
+ "finished_at": 1792356206203,
+ "task_error": null,
+ "consumed_credits": 10
+}

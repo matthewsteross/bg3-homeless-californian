@@ -1,0 +1,17 @@
+{
+ "id": "01a150c2-b36d-72e1-acfd-e21b6830df9a",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1624348489,
+ "prompt": "pile of neon orange hi-vis road crew safety vests heaped on a small wooden pallet next to two striped traffic cones, one solid connected object, stylized game prop",
+ "texture_prompt": "fluorescent orange with silver reflective stripes, white and orange cones, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792356301477,
+ "progress": 100,
+ "started_at": 1792356301483,
+ "finished_at": 1792356333766,
+ "task_error": null,
+ "consumed_credits": 10
+}

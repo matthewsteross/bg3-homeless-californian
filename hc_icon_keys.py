@@ -132,6 +132,17 @@ SPELL_ICON_KEYS = {
     'HC_Shout_ThirdRailOvercharge': 'Spell_ThirdRailOvercharge',
     'HC_Zone_DalyCityTurnbackRunaway': 'Spell_DalyCityTurnbackRunaway',
     'HC_Shout_OversizedSharpsDisposal': 'Spell_OversizedSharpsDisposal',
+    # Round 12
+    'HC_Shout_FederalMailboxSanctuary': 'Spell_FederalMailboxSanctuary',
+    'HC_Shout_StolenCoinstarJackpot': 'Spell_StolenCoinstarJackpot',
+    'HC_Shout_RedCurbHydrantBlowout': 'Spell_RedCurbHydrantBlowout',
+    'HC_Shout_AcousticPrivacyPod': 'Spell_AcousticPrivacyPod',
+    'HC_Shout_MufflerShopTotem': 'Spell_MufflerShopTotem',
+    'HC_Shout_BaconWrappedDangerDogCart': 'Spell_BaconWrappedDangerDogCart',
+    'HC_Shout_CybertruckHuskOnBlocks': 'Spell_CybertruckHuskOnBlocks',
+    'HC_Shout_AmberAlertMatrixTrailer': 'Spell_AmberAlertMatrixTrailer',
+    'HC_Shout_LoncheraTacoTruck': 'Spell_LoncheraTacoTruck',
+    'HC_Shout_WalkOfFameStarSlam': 'Spell_WalkOfFameStarSlam',
 }
 
 def icon_for_spell(spell, fallback):

@@ -1,0 +1,17 @@
+{
+ "id": "01a150c2-dacc-7786-a3e6-3722f1f1963a",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 696925479,
+ "prompt": "heap of dry palm fronds and tumbleweed smouldering with glowing orange embers and a little flame, wind-blown, one solid connected object, stylized game prop",
+ "texture_prompt": "dry brown fronds, glowing orange embers, charred black, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792356311467,
+ "progress": 100,
+ "started_at": 1792356311473,
+ "finished_at": 1792356352454,
+ "task_error": null,
+ "consumed_credits": 10
+}

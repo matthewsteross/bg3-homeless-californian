@@ -1,0 +1,17 @@
+{
+ "id": "01a150bf-b494-74e9-a883-aa80f5d37943",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1428320891,
+ "prompt": "giant whiteboard on wheels covered in a chaotic overlapping color-coded calendar with colored sticky notes and nine names, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792356105168,
+ "progress": 100,
+ "started_at": 1792356105173,
+ "finished_at": 1792356140510,
+ "task_error": null,
+ "consumed_credits": 20
+}

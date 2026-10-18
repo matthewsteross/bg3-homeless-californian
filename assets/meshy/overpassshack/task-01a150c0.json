@@ -1,0 +1,17 @@
+{
+ "id": "01a150c0-fcb4-7617-97d0-082d3901cef3",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1789292408,
+ "prompt": "makeshift shanty hut built under a freeway overpass from blue tarp, plywood sheets and a shopping cart, a hand-painted sovereign territory sign, one solid connected object, stylized game prop",
+ "texture_prompt": "blue tarp, weathered plywood, rusty cart, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792356189830,
+ "progress": 100,
+ "started_at": 1792356189838,
+ "finished_at": 1792356226809,
+ "task_error": null,
+ "consumed_credits": 10
+}

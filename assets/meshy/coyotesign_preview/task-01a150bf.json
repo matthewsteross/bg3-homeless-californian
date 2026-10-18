@@ -1,0 +1,17 @@
+{
+ "id": "01a150bf-b48b-74e9-943f-cb870ee7ae64",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 549410553,
+ "prompt": "A-frame sandwich board sign standing on the sidewalk covered in layered paper flyers and a large LOST COYOTE poster with a coyote photo, stapled and taped, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792356104873,
+ "progress": 100,
+ "started_at": 1792356104883,
+ "finished_at": 1792356154998,
+ "task_error": null,
+ "consumed_credits": 20
+}

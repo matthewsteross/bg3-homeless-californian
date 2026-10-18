@@ -1,0 +1,17 @@
+{
+ "id": "01a150bf-b48a-717d-b5c5-e68d492cf779",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 708877378,
+ "prompt": "pulled-out car glove compartment drawer overflowing with fast food napkins, ketchup packets, an old paper map, a tire pressure gauge and parking tickets, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792356105115,
+ "progress": 100,
+ "started_at": 1792356105121,
+ "finished_at": 1792356181811,
+ "task_error": null,
+ "consumed_credits": 20
+}

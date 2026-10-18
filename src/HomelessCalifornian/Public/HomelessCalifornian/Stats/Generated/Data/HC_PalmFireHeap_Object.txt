@@ -1,0 +1,7 @@
+new entry "HC_PalmFireHeap_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "a7feff99-ba2c-551a-bdd2-810db85460db"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

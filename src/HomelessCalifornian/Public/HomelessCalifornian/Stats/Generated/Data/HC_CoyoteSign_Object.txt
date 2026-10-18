@@ -1,0 +1,7 @@
+new entry "HC_CoyoteSign_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "cb798b55-0aae-5c8b-9503-d992881e80c0"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

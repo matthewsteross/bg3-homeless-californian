@@ -1,0 +1,7 @@
+new entry "HC_CalendarBoard_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "b3acb3d1-cf39-5bd2-bbcb-406000a7dce8"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

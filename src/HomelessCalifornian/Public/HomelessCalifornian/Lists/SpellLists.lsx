@@ -128,43 +128,43 @@
                     <attribute id="UUID" type="guid" value="938537ab-8cb8-558c-bacc-239e7818459c"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive;HC_Target_SprinklerViolation;HC_Shout_FakeServiceVest"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_DumpsterDive;HC_Target_SprinklerViolation;HC_Shout_FakeServiceVest;HC_Shout_FederalMailboxSanctuary"/>
                     <attribute id="UUID" type="guid" value="e1bb0b0c-868a-56ea-aca5-fc1c6e165c69"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip;HC_Projectile_PissJugCatapult;HC_Shout_PopUpTentEncampment;HC_Target_CEQAEnvironmentalInjunction"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MovingDay;HC_Shout_IWasHereFirst;HC_Target_CopperWireStrip;HC_Projectile_PissJugCatapult;HC_Shout_PopUpTentEncampment;HC_Target_CEQAEnvironmentalInjunction;HC_Shout_MufflerShopTotem"/>
                     <attribute id="UUID" type="guid" value="c0af12a5-1dfe-52e0-828e-dbf9e5dbd3b0"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_CurbAlert;HC_Target_PublicScene;HC_Shout_3AMLawnmowerDisassembly;HC_Shout_NIMBYPublicCommentPeriod;HC_Target_EvictedSpinBike;HC_Shout_TherapySettingBoundaries"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_CurbAlert;HC_Target_PublicScene;HC_Shout_3AMLawnmowerDisassembly;HC_Shout_NIMBYPublicCommentPeriod;HC_Target_EvictedSpinBike;HC_Shout_TherapySettingBoundaries;HC_Shout_AcousticPrivacyPod"/>
                     <attribute id="UUID" type="guid" value="43874101-0a25-537d-a720-49a411e9f321"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CoatHangerSlimJim;HC_Target_CatalyticConverterSawzall;HC_Target_PotholeAnkleBreaker;HC_Target_SidewalkCoolerBonfire;HC_Shout_WalgreensPlexiglassAisle;HC_Shout_GloveBoxCleanout"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CoatHangerSlimJim;HC_Target_CatalyticConverterSawzall;HC_Target_PotholeAnkleBreaker;HC_Target_SidewalkCoolerBonfire;HC_Shout_WalgreensPlexiglassAisle;HC_Shout_GloveBoxCleanout;HC_Shout_StolenCoinstarJackpot"/>
                     <attribute id="UUID" type="guid" value="ddce9474-2ca9-51d0-849b-f113d3c96d78"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending;HC_Target_SquatterAdversePossession;HC_Shout_InNOutAnimalStyleArgument;HC_Zone_SaturdayGasLeafBlower"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending;HC_Target_SquatterAdversePossession;HC_Shout_InNOutAnimalStyleArgument;HC_Zone_SaturdayGasLeafBlower;HC_Shout_RedCurbHydrantBlowout"/>
                     <attribute id="UUID" type="guid" value="e80ad412-fdf2-5d49-a4fb-4c72445fd8ab"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation;HC_Shout_OaklandFleaMarket;HC_Target_CostcoSampleCartSideways;HC_Target_DMVTicketB047FarWindow;HC_Target_SelfCheckoutUnexpectedItem;HC_Shout_ReplyAllWholeCompany"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_TrappedInTheInvisibleBox;HC_Target_OneStarCitation;HC_Shout_OaklandFleaMarket;HC_Target_CostcoSampleCartSideways;HC_Target_DMVTicketB047FarWindow;HC_Target_SelfCheckoutUnexpectedItem;HC_Shout_ReplyAllWholeCompany;HC_Shout_BaconWrappedDangerDogCart"/>
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator;HC_Target_CaltransLaneClosure;HC_Target_CaltransConeLabyrinth;HC_Target_CoastalCommissionReview"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator;HC_Target_CaltransLaneClosure;HC_Target_CaltransConeLabyrinth;HC_Target_CoastalCommissionReview;HC_Shout_CybertruckHuskOnBlocks"/>
                     <attribute id="UUID" type="guid" value="fb6e0d6b-a655-58a2-9609-32e2f64bc0dd"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CompassionBurnout;HC_Zone_LimeScooterHitAndRun;HC_Target_DepartmentUnfinishedBusiness;HC_Target_HostileArchitectureBench;HC_Target_CaltrainHornGradeCrossing"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CompassionBurnout;HC_Zone_LimeScooterHitAndRun;HC_Target_DepartmentUnfinishedBusiness;HC_Target_HostileArchitectureBench;HC_Target_CaltrainHornGradeCrossing;HC_Shout_AmberAlertMatrixTrailer"/>
                     <attribute id="UUID" type="guid" value="9c43433e-1fde-563a-9dea-57398062a490"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll;HC_Shout_MunicipalBudgetHearing;HC_Target_SparkingUtilityPole;HC_Shout_CaltransVestRequisition"/>
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll;HC_Shout_MunicipalBudgetHearing;HC_Target_SparkingUtilityPole;HC_Shout_CaltransVestRequisition;HC_Shout_LoncheraTacoTruck"/>
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_GovernorGavinPhotoOp;HC_Shout_Prop13GrandfatheredSmirk;HC_Target_SixtyDayRentIncrease"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_GovernorGavinPhotoOp;HC_Shout_Prop13GrandfatheredSmirk;HC_Target_SixtyDayRentIncrease;HC_Shout_WalkOfFameStarSlam"/>
                     <attribute id="UUID" type="guid" value="4ba423d9-2b2d-5102-a737-782b98445a15"/>
                 </node>
                 <node id="SpellList">

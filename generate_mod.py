@@ -2692,6 +2692,10 @@ def generate_local_expansion():
     for category, levels in round11['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_round12 import generate_round12
+    round12 = generate_round12(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round12['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
     from hc_sub_bart import generate_sub_bart
     from hc_sub_others import generate_sub_others
     from hc_sub_round2 import generate_sub_round2
@@ -2869,6 +2873,18 @@ def main():
     generate_dumbbells(PUBLIC_DIR, add_loca, get_guid)
     from hc_giantneedle import generate_giantneedle
     generate_giantneedle(PUBLIC_DIR, add_loca, get_guid)
+    from hc_palmfire import generate_palmfire
+    generate_palmfire(PUBLIC_DIR, add_loca, get_guid)
+    from hc_vestpile import generate_vestpile
+    generate_vestpile(PUBLIC_DIR, add_loca, get_guid)
+    from hc_coyotesign import generate_coyotesign
+    generate_coyotesign(PUBLIC_DIR, add_loca, get_guid)
+    from hc_overpassshack import generate_overpassshack
+    generate_overpassshack(PUBLIC_DIR, add_loca, get_guid)
+    from hc_calendarboard import generate_calendarboard
+    generate_calendarboard(PUBLIC_DIR, add_loca, get_guid)
+    from hc_oldcomputer import generate_oldcomputer
+    generate_oldcomputer(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()

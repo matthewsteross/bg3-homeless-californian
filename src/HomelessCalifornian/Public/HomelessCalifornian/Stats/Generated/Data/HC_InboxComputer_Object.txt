@@ -1,0 +1,7 @@
+new entry "HC_InboxComputer_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "02c2230b-316e-59f9-8bc5-a6eb9f2bbfbc"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"
