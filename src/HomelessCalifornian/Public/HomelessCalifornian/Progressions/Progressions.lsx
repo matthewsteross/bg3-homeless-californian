@@ -654,6 +654,7 @@
                     <attribute id="UUID" type="guid" value="14eccdef-99be-5abd-a825-186c0933d810"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(9cab00b5-545f-555c-bad7-b3c5ecb5fec5)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_HerdImmunityTotalExposure"/>
                     <attribute id="Level" type="uint8" value="7"/>
                     <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
@@ -808,6 +809,7 @@
                     <attribute id="UUID" type="guid" value="7eec55f1-405d-5409-a09f-6d03f53e91ff"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e5c4a169-581b-56e3-9c14-829c15901b93)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_LoadBearingCartRetainingWall"/>
                     <attribute id="Level" type="uint8" value="7"/>
                     <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>

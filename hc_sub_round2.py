@@ -1,4 +1,4 @@
-"""Subclass round 2: three extra signature spells per subclass at class levels 5, 8 and 11.
+"""Subclass round 2: twelve signature spells at class levels 5, 8 and 11 plus a level 7 needle spell, SHARED by all four subclasses.
 
 Brainstormed by Gemini Flash (Venice, Tenderloin) and Gemini Argon (Overpass, BART), shaped into stats by the lead.
 Every shape copies a stat already used by hc_sub_others.py / hc_sub_bart.py, which cite their vanilla evidence:
@@ -39,6 +39,8 @@ STATUS_SPECS = [
 ]
 
 SPELL_SPECS = []
+# Matthew: the subclasses should share a common core and differ mildly, so every round-2 spell goes to all four subclasses.
+ALL_SUBCLASSES = (VENICE, TENDERLOIN, OVERPASS, BART)
 
 
 def _spell(subclass, level, name, title, donor, icon, mechanics, joke, fields):
@@ -77,6 +79,11 @@ _spell(TENDERLOIN, 5, 'HC_Zone_HazmatBackblast', 'Hazardous Materials Backblast'
        'The mugger\'s dagger punctures your fourth surplus windbreaker, releasing six months of pressurised sidewalk fermentation.',
        dict(UseCosts='BonusActionPoint:1;HC_Junk:1', Shape='Cone', Range='4', Base='5',
             **_save('Dexterity', '2d8', 'Acid', f'ApplyStatus({SLUDGED},100,1)')))
+_spell(TENDERLOIN, 7, 'HC_Shout_OversizedSharpsDisposal', 'Oversized Sharps Disposal', 'Shout_FeyPresence', 'Spell_Necromancy_Contagion_FilthFever',
+       'Costs an action and 2 Junk; once per short rest. Enemies within 6 m make a Wisdom save, taking 3d6 Psychic damage and becoming Frightened for 2 turns on failure, or half damage on success. A questionable puddle spreads where it lands.',
+       'The county sharps container is full, so you went with the bigger one. It is the size of a streetlight, it also lives at Powell Street Station, and nobody will make eye contact with it.',
+       dict(UseCosts='ActionPoint:1;HC_Junk:2', TargetRadius='0', AreaRadius='6', TargetConditions='Enemy() and not Dead()', SpellProperties='GROUND:CreateSurface(4,3,Poison)',
+            SpellFlags='IsSpell;HasVerbalComponent;HasSomaticComponent', **_save('Wisdom', '3d6', 'Psychic', 'ApplyStatus(FRIGHTENED,100,2)')))
 _spell(TENDERLOIN, 8, 'HC_Target_UnpermittedBleachFogger', 'Unpermitted Bleach Fogger', 'Target_StinkingCloud', 'Spell_Conjuration_StinkingCloud',
        'Costs an action and 2 Junk; once per short rest. Enemies in a 6 m radius within 18 m make a Constitution save, taking 3d8 Acid damage and becoming Blinded for 2 turns on failure, or half damage on success. A vanilla Stinking Cloud lingers for 3 turns.',
        'Public Works promised a downtown sanitising sweep; what arrived was a chlorine cloud that etches glass and blinds archdevils.',
@@ -155,5 +162,9 @@ def generate_sub_round2(public_dir, add_loca, get_guid):
         fields['Icon'] = icon_for_spell(name, icon)
         spells.append(block(name, 'SpellData', title, description, fields, donor))
         grants['subclasses'].setdefault(sub, {}).setdefault(level, []).append(name)
+        for other in ALL_SUBCLASSES:
+            if other == sub:
+                continue
+            grants['subclasses'].setdefault(other, {}).setdefault(level, []).append(name)
     (stats / 'HC_Spells_SubRound2.txt').write_text('\n\n'.join(spells) + '\n', encoding='utf-8')
     return grants

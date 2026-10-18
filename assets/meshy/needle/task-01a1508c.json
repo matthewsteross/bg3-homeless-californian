@@ -1,0 +1,17 @@
+{
+ "id": "01a1508c-7134-7123-a3b2-d5459235275f",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4140076851,
+ "prompt": "giant used hypodermic syringe standing upright and stabbed into the ground by its sharp needle tip, clear plastic barrel with a little residual fluid and a drip, red plunger, a loose orange cap lying beside it, one solid object, stylized game prop",
+ "texture_prompt": "translucent clear plastic, orange cap, red plunger, hint of murky amber liquid, grimy, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792352745490,
+ "progress": 100,
+ "started_at": 1792352745494,
+ "finished_at": 1792352771050,
+ "task_error": null,
+ "consumed_credits": 10
+}

@@ -184,11 +184,11 @@
                     <attribute id="UUID" type="guid" value="88921194-9a20-513e-a24c-f9dbcb5c4889"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_CivicCenterBioSludgeGeyser;HC_Zone_HazmatBackblast"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_CivicCenterBioSludgeGeyser;HC_Shout_BoardwalkRollerbladeSlalom;HC_Zone_HazmatBackblast;HC_Target_ManholeCoverPopUpBunker;HC_Zone_EmergencyBrakeHandlePull"/>
                     <attribute id="UUID" type="guid" value="44c0e5c9-79ed-5523-ad47-6d56affa39b6"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_RedBagQuarantine;HC_Target_UnpermittedBleachFogger"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_RedBagQuarantine;HC_Target_BreakdancerCardboardDrop;HC_Target_UnpermittedBleachFogger;HC_Shout_PalletAndTinArmor;HC_Shout_ThirdRailOvercharge"/>
                     <attribute id="UUID" type="guid" value="2e3ff140-b099-599c-8afb-cc67a573dab8"/>
                 </node>
                 <node id="SpellList">
@@ -196,8 +196,12 @@
                     <attribute id="UUID" type="guid" value="9c27bd94-a202-5725-b727-f6d9c5e87a3a"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_FederalHazmatDeclaration"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MuscleBeachBroSpotter;HC_Shout_FederalHazmatDeclaration;HC_Target_OrovilleSpillwayRupture;HC_Zone_DalyCityTurnbackRunaway"/>
                     <attribute id="UUID" type="guid" value="f3f01a63-e4d5-5bc9-a0ed-45caa3837e35"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Shout_OversizedSharpsDisposal"/>
+                    <attribute id="UUID" type="guid" value="9cab00b5-545f-555c-bad7-b3c5ecb5fec5"/>
                 </node>
                 <node id="SpellList">
                     <attribute id="Spells" type="LSString" value="HC_Target_HeirloomFurniture;HC_Target_AbandonedCart"/>
@@ -220,7 +224,7 @@
                     <attribute id="UUID" type="guid" value="4775ebb4-04a4-57d9-89e4-56a2535189df"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_PalmReadingAggressively"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_PalmReadingAggressively;HC_Shout_OversizedSharpsDisposal"/>
                     <attribute id="UUID" type="guid" value="4707fda5-8695-5ee5-b55c-17dd94a804a6"/>
                 </node>
                 <node id="SpellList">
@@ -228,15 +232,15 @@
                     <attribute id="UUID" type="guid" value="aa3d8e51-e1b2-50ec-ab18-d08478b3c636"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_BoardwalkRollerbladeSlalom"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_BoardwalkRollerbladeSlalom;HC_Zone_HazmatBackblast;HC_Target_ManholeCoverPopUpBunker;HC_Zone_EmergencyBrakeHandlePull"/>
                     <attribute id="UUID" type="guid" value="6622bca8-b3d0-59c6-802f-7add631cf932"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_BreakdancerCardboardDrop"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_BreakdancerCardboardDrop;HC_Target_UnpermittedBleachFogger;HC_Shout_PalletAndTinArmor;HC_Shout_ThirdRailOvercharge"/>
                     <attribute id="UUID" type="guid" value="d9482ddd-bc95-5105-b4f3-6cc11a5c00c3"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Shout_MuscleBeachBroSpotter"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MuscleBeachBroSpotter;HC_Shout_FederalHazmatDeclaration;HC_Target_OrovilleSpillwayRupture;HC_Zone_DalyCityTurnbackRunaway"/>
                     <attribute id="UUID" type="guid" value="120082e9-b77e-5406-8c85-e1689d78540e"/>
                 </node>
                 <node id="SpellList">
@@ -260,15 +264,15 @@
                     <attribute id="UUID" type="guid" value="212f54fe-2a3d-5745-aef7-eec7fcd27899"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_BetweenTheCars;HC_Zone_EmergencyBrakeHandlePull"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_BetweenTheCars;HC_Shout_BoardwalkRollerbladeSlalom;HC_Zone_HazmatBackblast;HC_Target_ManholeCoverPopUpBunker;HC_Zone_EmergencyBrakeHandlePull"/>
                     <attribute id="UUID" type="guid" value="b7f686db-216c-570e-aba5-815840c3be73"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_WheelFlangeScreech"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_WheelFlangeScreech;HC_Shout_OversizedSharpsDisposal"/>
                     <attribute id="UUID" type="guid" value="f061967c-9cfa-5c03-946c-29aad791fe17"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_BackpackInTheDoors;HC_Shout_ThirdRailOvercharge"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_BackpackInTheDoors;HC_Target_BreakdancerCardboardDrop;HC_Target_UnpermittedBleachFogger;HC_Shout_PalletAndTinArmor;HC_Shout_ThirdRailOvercharge"/>
                     <attribute id="UUID" type="guid" value="4c98b227-74bb-5ae0-8ce3-d4774a939f8d"/>
                 </node>
                 <node id="SpellList">
@@ -276,7 +280,7 @@
                     <attribute id="UUID" type="guid" value="d9eeb2d6-c5a8-5aec-82d8-2601082ff73e"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_StationAgentIntercomLockdown;HC_Zone_DalyCityTurnbackRunaway"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_StationAgentIntercomLockdown;HC_Shout_MuscleBeachBroSpotter;HC_Shout_FederalHazmatDeclaration;HC_Target_OrovilleSpillwayRupture;HC_Zone_DalyCityTurnbackRunaway"/>
                     <attribute id="UUID" type="guid" value="760e3f38-2078-5902-b67e-f1cecb3ab19f"/>
                 </node>
                 <node id="SpellList">
@@ -296,11 +300,11 @@
                     <attribute id="UUID" type="guid" value="5718324e-31bd-58cd-b437-f36f7420cc25"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_TailpipeDowndraft;HC_Target_ManholeCoverPopUpBunker"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_TailpipeDowndraft;HC_Shout_BoardwalkRollerbladeSlalom;HC_Zone_HazmatBackblast;HC_Target_ManholeCoverPopUpBunker;HC_Zone_EmergencyBrakeHandlePull"/>
                     <attribute id="UUID" type="guid" value="31e05268-df35-5c76-95e2-732509fe9b6b"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_SandbagBreach;HC_Shout_PalletAndTinArmor"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_SandbagBreach;HC_Target_BreakdancerCardboardDrop;HC_Target_UnpermittedBleachFogger;HC_Shout_PalletAndTinArmor;HC_Shout_ThirdRailOvercharge"/>
                     <attribute id="UUID" type="guid" value="f4bba43d-80b3-5471-a72e-44b0e9295330"/>
                 </node>
                 <node id="SpellList">
@@ -308,8 +312,12 @@
                     <attribute id="UUID" type="guid" value="1ce0049f-a6c2-5c29-a434-13e8da4a661d"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_OrovilleSpillwayRupture"/>
+                    <attribute id="Spells" type="LSString" value="HC_Shout_MuscleBeachBroSpotter;HC_Shout_FederalHazmatDeclaration;HC_Target_OrovilleSpillwayRupture;HC_Zone_DalyCityTurnbackRunaway"/>
                     <attribute id="UUID" type="guid" value="82d747db-5f7e-5d0f-a067-90f763e671c8"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Spells" type="LSString" value="HC_Shout_OversizedSharpsDisposal"/>
+                    <attribute id="UUID" type="guid" value="e5c4a169-581b-56e3-9c14-829c15901b93"/>
                 </node>
             </children>
         </node>

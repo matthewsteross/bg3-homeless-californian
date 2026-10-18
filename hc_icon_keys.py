@@ -131,6 +131,7 @@ SPELL_ICON_KEYS = {
     'HC_Zone_EmergencyBrakeHandlePull': 'Spell_EmergencyBrakeHandlePull',
     'HC_Shout_ThirdRailOvercharge': 'Spell_ThirdRailOvercharge',
     'HC_Zone_DalyCityTurnbackRunaway': 'Spell_DalyCityTurnbackRunaway',
+    'HC_Shout_OversizedSharpsDisposal': 'Spell_OversizedSharpsDisposal',
 }
 
 def icon_for_spell(spell, fallback):

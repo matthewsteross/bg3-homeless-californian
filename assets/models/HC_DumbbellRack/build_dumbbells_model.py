@@ -9,7 +9,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'HC_PortaPotty'))
 import portapotty_paint as paint_mod
 TPL, OUT, OD = sys.argv[1:4]
-source = Path(__file__).resolve().parents[2] / 'meshy/dumbbells'
+source = Path(__file__).resolve().parents[2] / 'meshy/dumbbells2'
 raw = (source / 'model.glb').read_bytes()
 magic, version, length = struct.unpack_from('<III', raw)
 assert magic == 0x46546c67 and version == 2 and length == len(raw)

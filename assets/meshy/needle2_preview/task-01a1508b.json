@@ -1,0 +1,17 @@
+{
+ "id": "01a1508b-ef30-7734-879e-ec429bc001ec",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 1563786656,
+ "prompt": "huge used syringe lying diagonally propped at an angle with its needle tip pointing into the ground, orange cap on the plunger end, plastic barrel with measurement markings, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792352712081,
+ "progress": 100,
+ "started_at": 1792352712085,
+ "finished_at": 1792352739310,
+ "task_error": null,
+ "consumed_credits": 20
+}
