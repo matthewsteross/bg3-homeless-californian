@@ -8,3 +8,4 @@ work/
 # Meshy API key (never commit it)
 .env
 .env.*
+dist/
