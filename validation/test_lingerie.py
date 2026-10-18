@@ -26,11 +26,12 @@ class LingerieTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             public = Path(tmp) / 'Public/HomelessCalifornian'
             (public / 'Stats/Generated/Data').mkdir(parents=True)
+            original_flag = hl.DELIVER_VIA_WARDROBE
             hl.DELIVER_VIA_WARDROBE = False
             try:
                 hl.generate_lingerie(public, generator.add_loca, generator.get_guid)
             finally:
-                hl.DELIVER_VIA_WARDROBE = True
+                hl.DELIVER_VIA_WARDROBE = original_flag
             tree = ET.parse(public / 'RootTemplates/HC_Lingerie.lsf.lsx')
             nodes = tree.findall('.//node[@id="GameObjects"]')
             self.assertEqual(len(nodes), 10)

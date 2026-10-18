@@ -17,7 +17,7 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-DELIVER_VIA_WARDROBE = True
+DELIVER_VIA_WARDROBE = False  # switched off 2026-10-18 after the proof of concept passed; see docs/LINGERIE-NOTES.md
 WARDROBE_SPELL = 'HC_Shout_ClaimUnclaimedWardrobe'
 DATA = Path(__file__).resolve().parent / 'assets' / 'lingerie' / 'vanilla_underwear_templates.json'
 
