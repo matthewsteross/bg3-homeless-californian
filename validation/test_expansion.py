@@ -36,7 +36,7 @@ class ExpansionGenerationTests(unittest.TestCase):
                     new_lists[attrs['UUID']] = attrs['Spells'].split(';')
             # 25 expansion lists (including Base L12), Overpass L10, BART L10, base racial list, and 6 subrace lists.
             # Round 8 and Round 9 (with the props) add four more spell lists that contain HC_ spells; Round 10 adds one more; the new subclass levels (4, 5, 7, 8, 9, 11) add 15 more.
-            self.assertEqual(len(new_lists), 54)
+            self.assertEqual(len(new_lists), 59)
             progressions = ET.parse(public / 'Progressions/Progressions.lsx')
             selectors = ';'.join(a.get('value', '') for a in progressions.findall('.//attribute[@id="Selectors"]'))
             for uid in new_lists:

@@ -1,4 +1,4 @@
-"""Meshy AI text-to-3D GLB -> fire-basket DAE; Y up, metres, +Z front.
+﻿"""Meshy AI text-to-3D GLB -> fire-basket DAE; Y up, metres, +Z front.
 Usage: build_wardrobeprop_model.py template.dae output.dae output_directory
 """
 import sys, struct, json, re
@@ -8,7 +8,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'HC_PortaPotty'))
 import portapotty_paint as paint_mod
 TPL, OUT, OD = sys.argv[1:4]
-source = Path(__file__).resolve().parents[2] / 'meshy/wardrobe'
+source = Path(__file__).resolve().parents[2] / 'meshy/wardrobe3'
 raw = (source / 'model.glb').read_bytes()
 magic, version, length = struct.unpack_from('<III', raw)
 assert magic == 0x46546c67 and version == 2 and length == len(raw)
@@ -103,4 +103,5 @@ for name in ['LTS_GEN_Fire_Basket_A_Mesh', 'LTS_GEN_Fire_Basket_A_Mesh_LOD1', 'L
     s = s[:a] + g + s[b:]
 open(OUT, 'w', encoding='utf-8').write(s)
 print('wrote', OUT)
+
 

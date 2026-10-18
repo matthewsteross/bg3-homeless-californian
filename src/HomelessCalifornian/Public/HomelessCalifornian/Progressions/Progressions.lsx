@@ -678,6 +678,7 @@
                     <attribute id="UUID" type="guid" value="7d068d86-c6f1-54af-a1d9-2df546ca51ab"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(f3f01a63-e4d5-5bc9-a0ed-45caa3837e35)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_WalkingSuperfundSite"/>
                     <attribute id="Level" type="uint8" value="11"/>
                     <attribute id="Name" type="LSString" value="TenderloinBiohazard"/>
@@ -694,6 +695,7 @@
                     <attribute id="UUID" type="guid" value="cb3b7a25-0c66-5714-bf00-d0815d33cc0a"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(6622bca8-b3d0-59c6-802f-7add631cf932)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_HennaStillWet"/>
                     <attribute id="Level" type="uint8" value="5"/>
                     <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
@@ -710,6 +712,7 @@
                     <attribute id="UUID" type="guid" value="e93062cc-c0b1-54aa-8e7f-941f0b9796ca"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(d9482ddd-bc95-5105-b4f3-6cc11a5c00c3)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_ThisSpotIsTakenSince1998"/>
                     <attribute id="Level" type="uint8" value="8"/>
                     <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
@@ -726,6 +729,7 @@
                     <attribute id="UUID" type="guid" value="f0ff638f-c451-53ed-834f-9c5b3d68c521"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(120082e9-b77e-5406-8c85-e1689d78540e)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_BoardwalkMainCharacter"/>
                     <attribute id="Level" type="uint8" value="11"/>
                     <attribute id="Name" type="LSString" value="VeniceBoardwalkBrawler"/>
@@ -828,6 +832,7 @@
                     <attribute id="UUID" type="guid" value="dade1fa2-93a5-5014-8bb1-5feae049a43d"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Selectors" type="LSString" value="AddSpells(82d747db-5f7e-5d0f-a067-90f763e671c8)"/>
                     <attribute id="PassivesAdded" type="LSString" value="HC_SovereignConcreteSpillway"/>
                     <attribute id="Level" type="uint8" value="11"/>
                     <attribute id="Name" type="LSString" value="OverpassRiverbedDweller"/>

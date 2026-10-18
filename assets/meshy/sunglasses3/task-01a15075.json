@@ -1,0 +1,17 @@
+{
+ "id": "01a15075-fa1c-729f-937b-af1a258a33b4",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4121146890,
+ "prompt": "wooden boardwalk market stall cart with an awning and a hanging rail full of cheap colorful sunglasses and a handwritten 10 DOLLARS sign, one solid connected object, stylized game prop",
+ "texture_prompt": "weathered wood, striped red and white awning, neon sunglasses, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792351273244,
+ "progress": 100,
+ "started_at": 1792351273249,
+ "finished_at": 1792351311171,
+ "task_error": null,
+ "consumed_credits": 10
+}

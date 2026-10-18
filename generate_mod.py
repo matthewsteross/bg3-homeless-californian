@@ -2694,7 +2694,8 @@ def generate_local_expansion():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
     from hc_sub_bart import generate_sub_bart
     from hc_sub_others import generate_sub_others
-    for source in (generate_sub_bart(PUBLIC_DIR, add_loca, get_guid), generate_sub_others(PUBLIC_DIR, add_loca, get_guid)):
+    from hc_sub_round2 import generate_sub_round2
+    for source in (generate_sub_bart(PUBLIC_DIR, add_loca, get_guid), generate_sub_others(PUBLIC_DIR, add_loca, get_guid), generate_sub_round2(PUBLIC_DIR, add_loca, get_guid)):
         for category, levels in source['subclasses'].items():
             for level, spells in levels.items():
                 grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
