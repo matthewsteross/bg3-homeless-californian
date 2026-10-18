@@ -1,0 +1,17 @@
+{
+ "id": "01a15061-2873-71b2-aa65-fea648e6c75c",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 235483045,
+ "prompt": "filthy stained double mattress leaning against a wall with a posted orange CONDEMNED notice stapled on it and a rolled sleeping bag, stylized game prop, single object",
+ "texture_prompt": "yellowed stained striped mattress ticking, orange paper notice, grubby, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349908632,
+ "progress": 100,
+ "started_at": 1792349908638,
+ "finished_at": 1792349940793,
+ "task_error": null,
+ "consumed_credits": 10
+}

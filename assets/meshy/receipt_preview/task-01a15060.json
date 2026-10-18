@@ -1,0 +1,17 @@
+{
+ "id": "01a15060-7fe4-7704-9092-f478e99325db",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3890957852,
+ "prompt": "giant comically long CVS-style pharmacy receipt unspooling from a tall paper roll on a stand, curling into a long pile on the ground, printed rows of text and coupons, stylized game prop, single object",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792349865935,
+ "progress": 100,
+ "started_at": 1792349865939,
+ "finished_at": 1792349913167,
+ "task_error": null,
+ "consumed_credits": 20
+}

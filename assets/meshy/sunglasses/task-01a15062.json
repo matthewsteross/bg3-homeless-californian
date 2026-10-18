@@ -1,0 +1,17 @@
+{
+ "id": "01a15062-67cd-72ee-b625-e8077819c660",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 95618995,
+ "prompt": "rotating wire spinner rack of cheap boardwalk sunglasses, dozens of colorful plastic sunglasses hanging, a handwritten sign reading 10 DOLLARS, stylized game prop, single object",
+ "texture_prompt": "metal wire rack, neon plastic frames in pink green yellow, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349990407,
+ "progress": 100,
+ "started_at": 1792349990414,
+ "finished_at": 1792350034710,
+ "task_error": null,
+ "consumed_credits": 10
+}

@@ -1,0 +1,17 @@
+{
+ "id": "01a15061-28a6-71e6-acb6-7028e00343d9",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 2913675936,
+ "prompt": "wooden city council podium with a gooseneck microphone, a stack of agenda papers, a speaker timer light and a small flag, municipal hearing, stylized game prop, single object",
+ "texture_prompt": "varnished wood, chipped, white papers, red timer light, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349908963,
+ "progress": 100,
+ "started_at": 1792349908968,
+ "finished_at": 1792349942241,
+ "task_error": null,
+ "consumed_credits": 10
+}

@@ -1,0 +1,17 @@
+{
+ "id": "01a15061-5110-76db-94bb-6f7dbb308022",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3059874200,
+ "prompt": "stolen 20 pound propane tank connected to a small rusty hibachi charcoal grill with a few sausages and a lit cooking grate, sidewalk barbecue, stylized game prop, single object",
+ "texture_prompt": "rusty white propane cylinder, scorched black grill, shiny orange glow of embers, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349919176,
+ "progress": 100,
+ "started_at": 1792349919180,
+ "finished_at": 1792349953267,
+ "task_error": null,
+ "consumed_credits": 10
+}

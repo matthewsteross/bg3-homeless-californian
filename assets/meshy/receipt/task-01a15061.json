@@ -1,0 +1,17 @@
+{
+ "id": "01a15061-5227-71d7-94dd-b55d28d493a0",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3890957852,
+ "prompt": "giant comically long CVS-style pharmacy receipt unspooling from a tall paper roll on a stand, curling into a long pile on the ground, printed rows of text and coupons, stylized game prop, single object",
+ "texture_prompt": "white thermal paper with faded grey print, red coupon stripes, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349919520,
+ "progress": 100,
+ "started_at": 1792349919525,
+ "finished_at": 1792349945674,
+ "task_error": null,
+ "consumed_credits": 10
+}

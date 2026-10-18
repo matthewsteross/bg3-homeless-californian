@@ -1,0 +1,17 @@
+{
+ "id": "01a15060-7fc6-7148-8fcc-4bc53a6295c4",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3059874200,
+ "prompt": "stolen 20 pound propane tank connected to a small rusty hibachi charcoal grill with a few sausages and a lit cooking grate, sidewalk barbecue, stylized game prop, single object",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792349865805,
+ "progress": 100,
+ "started_at": 1792349865808,
+ "finished_at": 1792349908346,
+ "task_error": null,
+ "consumed_credits": 20
+}

@@ -1,0 +1,17 @@
+{
+ "id": "01a15062-de07-755b-a640-adab262b3734",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4061249796,
+ "prompt": "freestanding wooden wardrobe armoire abandoned on a sidewalk, doors hanging open, a mismatched pile of thrift clothes spilling out, a hand-written cardboard FREE sign taped to the front, stylized game prop, single object",
+ "texture_prompt": "weathered dark oak wood, sun-faded, cardboard sign with marker lettering FREE, colorful thrift-store clothes, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350020779,
+ "progress": 100,
+ "started_at": 1792350020785,
+ "finished_at": 1792350058449,
+ "task_error": null,
+ "consumed_credits": 10
+}

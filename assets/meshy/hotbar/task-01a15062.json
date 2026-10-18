@@ -1,0 +1,17 @@
+{
+ "id": "01a15062-3e9d-7659-bb95-0422a52cff76",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3212725457,
+ "prompt": "supermarket pay-by-weight hot food bar buffet station with sneeze guard glass, steam trays of mac and cheese and fried chicken, one tray sloppily overfilled, stylized game prop, single object",
+ "texture_prompt": "stainless steel, glossy glass, warm food colors, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349980283,
+ "progress": 100,
+ "started_at": 1792349980288,
+ "finished_at": 1792350016700,
+ "task_error": null,
+ "consumed_credits": 10
+}

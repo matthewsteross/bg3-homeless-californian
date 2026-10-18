@@ -1,0 +1,17 @@
+{
+ "id": "01a15060-7f68-7088-80fe-12bd2ceb617e",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4061249796,
+ "prompt": "freestanding wooden wardrobe armoire abandoned on a sidewalk, doors hanging open, a mismatched pile of thrift clothes spilling out, a hand-written cardboard FREE sign taped to the front, stylized game prop, single object",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792349865468,
+ "progress": 100,
+ "started_at": 1792349865472,
+ "finished_at": 1792350017986,
+ "task_error": null,
+ "consumed_credits": 20
+}

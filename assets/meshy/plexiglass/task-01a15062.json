@@ -1,0 +1,17 @@
+{
+ "id": "01a15062-4002-71ce-88cd-68a2d35d1370",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 142872582,
+ "prompt": "locked clear plexiglass drugstore shelf display case full of deodorant and toiletries with a tiny key lock and a ring-for-assistance button, stylized game prop, single object",
+ "texture_prompt": "clear acrylic with scratched edges, white shelving, colorful product boxes, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792349980441,
+ "progress": 100,
+ "started_at": 1792349980446,
+ "finished_at": 1792350016335,
+ "task_error": null,
+ "consumed_credits": 10
+}
