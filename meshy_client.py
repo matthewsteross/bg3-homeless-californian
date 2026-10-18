@@ -11,6 +11,7 @@ Every command that creates a task SPENDS CREDITS, so without `--yes` it only pri
 Examples (run from the project folder):
   python meshy_client.py check
   python meshy_client.py text3d "sun-faded surfboard leaning on a cart" --name surfboard --polycount 8000 --yes
+  python meshy_client.py refine <preview_task_id> --name thing --texture-prompt "..." --yes
   python meshy_client.py remesh <task_id> --name surfboard --polycount 15000 --formats glb fbx --yes
   python meshy_client.py rig <task_id> --name adventurer --height 1.75 --yes
   python meshy_client.py status text-to-3d <task_id>
@@ -207,6 +208,8 @@ def main(argv=None):
     t.add_argument("--polycount", type=int, default=15000); t.add_argument("--smart", action="store_true")
     t.add_argument("--refine", action="store_true", help="also texture it (second paid step)")
     t.add_argument("--texture-prompt"); t.add_argument("--no-pose", action="store_true"); t.add_argument("--yes", action="store_true")
+    f = sub.add_parser("refine", help="texture an existing text3d preview task"); f.add_argument("preview_id")
+    f.add_argument("--name", required=True); f.add_argument("--texture-prompt"); f.add_argument("--yes", action="store_true")
     i = sub.add_parser("image3d"); i.add_argument("image"); i.add_argument("--name", required=True)
     i.add_argument("--smart", action="store_true"); i.add_argument("--yes", action="store_true")
     r = sub.add_parser("remesh"); r.add_argument("task_id"); r.add_argument("--name", required=True)
@@ -230,6 +233,8 @@ def main(argv=None):
             prev = run_create("text-to-3d", text_preview_body(a.prompt, a.polycount, mt, not a.no_pose), a.name + "_preview", a, key)
             if prev and a.refine:
                 run_create("text-to-3d", text_refine_body(prev["id"], True, a.texture_prompt), a.name, a, key)
+        elif a.cmd == "refine":
+            run_create("text-to-3d", text_refine_body(a.preview_id, True, a.texture_prompt), a.name, a, key)
         elif a.cmd == "image3d":
             run_create("image-to-3d", image_body(a.image, a.smart), a.name, a, key)
         elif a.cmd == "remesh":

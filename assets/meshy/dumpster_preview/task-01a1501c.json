@@ -1,0 +1,17 @@
+{
+ "id": "01a1501c-c38f-7025-880b-39bde32d8bdf",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3209972266,
+ "prompt": "A battered green municipal front-load dumpster on four small wheels, dented steel body, hinged plastic lids propped half open, rust streaks and faded sticker scraps, a stuffed teddy bear and flattened pizza boxes poking out of the top, stylized hand-painted fantasy RPG prop, chunky readable silhouette, sitting flat on the ground, no brand logos, no readable text",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792345426503,
+ "progress": 100,
+ "started_at": 1792345426510,
+ "finished_at": 1792345488538,
+ "task_error": null,
+ "consumed_credits": 20
+}

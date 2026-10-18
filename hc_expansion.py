@@ -115,7 +115,7 @@ def generate_expansion(public_dir, add_loca, get_guid):
 
     dive = 'HC_Shout_DumpsterDive'
     spell(dive, 'Shout_SecondWind', 'Dumpster Dive',
-          'Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple). Once per short rest. Ownership is a theory you are willing to discuss later.',
+          'Outside combat, restore 2 Junk up to your maximum and scavenge discarded edible rations (a piece of cheese and a half-eaten apple); a battered green dumpster thumps down at your feet. Once per short rest. Ownership is a theory you are willing to discuss later.',
           UseCosts='ActionPoint:1', Icon='Spell_Transmutation_Goodberry', Cooldown='OncePerShortRest',
           RequirementConditions='not Combat()',
           SpellProperties='RestoreResource(HC_Junk,2,0);SummonInInventory(06474f97-0dd0-45e6-8db8-5f75009bf336,-1,1,false,false,false);SummonInInventory(2ca3cb11-2271-461a-9096-c425c0bd3b12,-1,1,false,false,false)')

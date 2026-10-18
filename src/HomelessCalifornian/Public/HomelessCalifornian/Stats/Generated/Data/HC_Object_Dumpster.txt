@@ -1,0 +1,7 @@
+new entry "HC_OBJ_Dumpster"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "580b0e4a-128c-5726-af1c-8f4e0ab47404"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

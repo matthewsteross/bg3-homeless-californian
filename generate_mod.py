@@ -2801,6 +2801,8 @@ def main():
     generate_cc_presets_lsx()
     generate_stats_txt()
     generate_local_expansion()
+    from hc_dumpster import generate_dumpster
+    generate_dumpster(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()
