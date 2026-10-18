@@ -28,6 +28,8 @@ Project: BG3 mod "Homeless Californian" (HC). Folder `C:\Users\matth\Documents\B
 
 **Icon run result (15:36 on 2026-10-18):** Gemini image quota is STILL exhausted (429 RESOURCE_EXHAUSTED, resets about 14:30 on 2026-10-19). Zero icons were made; `assets/icons` still has 49 PNGs. Process 77 is idle. Retry after the reset with the same prompt (the one-shot cron is spent). The list is 81 icons now (includes the 12 round-2 spells).
 
+**Codex can make icons (Matthew approved):** Codex #20 was switched to GPT-6-Luna low (/model) and its built-in image tool works (images land in C:/Users/matth/.codex/generated_images/<id>/exec-*.png; the tool prints 'Saved to: file:///...' which IS the image). Brief: `work/solo-brief-codex-icons-2026-10-18.md` (12 per run). Each icon is saved with `python work/save_icon.py <png> <IconName> "Codex image"`. Status lines go to work/codex-icon-status.md. Luna low sometimes misreports; check the file. Row 1 (Spell_CurbsideClinic) was saved by the lead.
+
 ## Solo agents (project 2; use mcp__solo__send_input; every message to Codex needs a following [13] Enter ONLY if it did not submit; never send text while an agent sits at an approval prompt, it cancels the command)
 - 20 Codex (BG3 Modding), 80 Codex (Subclass Builder), 81 Codex (Subclass Builder 2). Codex 5h limit is about 30% left: go easy on Codex.
 - 21 Gemini Argon, 78 Gemini Flash Writers Room, 77 Flash Icon Art, 79 Grok. Gemini agents ask "Allow creation of this file?" for files my briefs told them to write: approve with [13]. Grok uses a numbered menu (type 3, Enter).
