@@ -495,6 +495,55 @@
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_PolyculeGoogleCalendar"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_CatalyticStraightPipeRev"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_GasStationSqueegee"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_FakeServiceVest"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_PissJugCatapult"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_GovernorGavinPhotoOp"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_PotholeAnkleBreaker"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
+                </node>
+                <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
                     <attribute id="U1" type="float" value="0.06274414"/>
                     <attribute id="U2" type="float" value="0.12475586"/>

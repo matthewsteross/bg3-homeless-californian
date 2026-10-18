@@ -478,5 +478,112 @@
  "HC_Target_SparkingUtilityPole": {
   "CastSound": "CrSpell_Cast_Bulette_DiamonScaleBurst",
   "TargetSound": "Spell_Impact_Damage_GlyphofWardingThunder_L5"
+ },
+ "HC_Shout_InNOutAnimalStyleArgument": {
+  "CastSound": "CrSpell_Cast_OwlbearEnrage",
+  "TargetSound": "Action_Impact_Rage_Bear"
+ },
+ "HC_Target_ScooterGraveyard": {
+  "CastSound": "CrSpell_Cast_Bulette_DiamonScaleBurst",
+  "TargetSound": "Action_Impact_Monk_ResonationPunch"
+ },
+ "HC_Target_EvictedSpinBike": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_Slam",
+  "TargetSound": "Action_Impact_Trip"
+ },
+ "HC_Target_BetweenTheCars": {
+  "CastSound": "Action_Cast_Bard_MobileFlourishTeleport",
+  "TargetSound": "Action_Impact_Bard_MobileFlourishTeleport"
+ },
+ "HC_Target_BackpackInTheDoors": {
+  "CastSound": "Spell_Cast_Damage_ThornWhip_L0",
+  "TargetSound": "Spell_Impact_Damage_ThornWhip_L0"
+ },
+ "HC_Teleportation_RedLineEmergencyTrackJump": {
+  "CastSound": "Spell_Cast_Damage_Thunder_ChromaticOrbThunder_L1to3",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_ElementalWarp"
+ },
+ "HC_Projectile_BARTGangwayImpact": {
+  "CastSound": "CrSpell_Cast_Myrmidon_Earth_ThunderousPunch",
+  "TargetSound": "CrSpell_Impact_Myrmidon_Earth_ThunderousPunch"
+ },
+ "HC_Target_BARTQualifiedEscape": {
+  "CastSound": "Action_Cast_Rogue_SupremeSneak",
+  "TargetSound": "Action_Impact_Disengage"
+ },
+ "HC_Zone_RentedCruiserNoBrakes": {
+  "CastSound": "Spell_Cast_Monk_RushoftheGaleSpirits_L1to3"
+ },
+ "HC_Target_PalmReadingAggressively": {
+  "CastSound": "CrSpell_Cast_ViciousMockery",
+  "TargetSound": "Spell_Impact_Damage_Psychic_ViciousMockery_L1to3"
+ },
+ "HC_Target_RedBagQuarantine": {
+  "CastSound": "CrSpell_Cast_UnderBark_Pheromones",
+  "TargetSound": "CrSpell_Impact_UnderBark_Pheromones"
+ },
+ "HC_Target_SteamGrateMiasma": {
+  "CastSound": "Spell_Cast_Damage_Poison_StinkingCloud_L1to3"
+ },
+ "HC_Zone_TailpipeDowndraft": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Fire",
+  "TargetSound": "CrSpell_Impact_Brewer_MixChangeExplosion_Physical_"
+ },
+ "HC_Zone_SandbagBreach": {
+  "CastSound": "CrSpell_Cast_Djinni_Inhale",
+  "TargetSound": "CrSpell_Impact_Myrmidon_Earth_MudSlap"
+ },
+ "HC_Target_FreewayOverpassCollapse": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_SeismicStrike",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_SeismicStrike"
+ },
+ "HC_Shout_BoardwalkRollerbladeSlalom": {
+  "CastSound": "Action_Cast_Bard_MobileFlourishRanged",
+  "TargetSound": "Action_Impact_Bard_MobileFlourishTeleport"
+ },
+ "HC_Target_BreakdancerCardboardDrop": {
+  "CastSound": "Spell_Cast_Monk_FistofFourThunders_L1to3",
+  "TargetSound": "Action_Impact_Cleric_DivineStrikeMeleeDamageThunder"
+ },
+ "HC_Shout_MuscleBeachBroSpotter": {
+  "CastSound": "CrSpell_Cast_GoadingRoar",
+  "TargetSound": "Action_Impact_Barbarian_BolsteringMagicBoon"
+ },
+ "HC_Zone_HazmatBackblast": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Acid",
+  "TargetSound": "CrSpell_Impact_Brewer_MixChangeExplosion_Necrotic"
+ },
+ "HC_Shout_OversizedSharpsDisposal": {
+  "CastSound": "CoinHalberd_Foley_Pierce_Whoosh",
+  "TargetSound": "CoinHalberd_Foley_Pierce_Impact"
+ },
+ "HC_Target_UnpermittedBleachFogger": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Cold"
+ },
+ "HC_Shout_FederalHazmatDeclaration": {
+  "CastSound": "CrSpell_Cast_ShieldOfScreams",
+  "TargetSound": "CrSpell_Impact_ShieldOfScreams"
+ },
+ "HC_Target_ManholeCoverPopUpBunker": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_Slam",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_Slam"
+ },
+ "HC_Shout_PalletAndTinArmor": {
+  "CastSound": "Spell_Cast_Buff_Barkskin_L1to3",
+  "TargetSound": "Spell_Impact_Buff_Barkskin_L1to3"
+ },
+ "HC_Target_OrovilleSpillwayRupture": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Thunderwave_L1to3_01"
+ },
+ "HC_Zone_EmergencyBrakeHandlePull": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Shatter_L1to3"
+ },
+ "HC_Shout_ThirdRailOvercharge": {
+  "CastSound": "Spell_Passive_Cast_WrathOfTheStorm_Thunder",
+  "TargetSound": "Spell_Passive_Impact_WrathOfTheStorm_Thunder"
+ },
+ "HC_Zone_DalyCityTurnbackRunaway": {
+  "CastSound": "CrSpell_Cast_BombardmentHorde",
+  "TargetSound": "CrSpell_Impact_BombardmentHorde"
  }
 }

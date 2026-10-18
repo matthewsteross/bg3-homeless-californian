@@ -24,6 +24,8 @@ data "TargetConditions" "Self()"
 data "Icon" "Spell_Transmutation_Goodberry"
 data "DisplayName" "h3d49239cgf4ceg5d28gbf7fgd3a08bdcd7a1;1"
 data "Description" "h619d8fc4ge54bg5326gadb2g21fbbebee61c;1"
+data "CastSound" "CrSpell_Cast_OwlbearEnrage"
+data "TargetSound" "Action_Impact_Rage_Bear"
 
 new entry "HC_Target_CaltransConeLabyrinth"
 type "SpellData"

@@ -78,9 +78,11 @@ class SoundMapTests(unittest.TestCase):
                     self.assertEqual(block.count(f'data "{field}" '), 1, (spell, field))
                     self.assertIn(f'data "{field}" "{event}"', block)
             # unmapped spells keep their exact bytes: compare the entry text of one unmapped HC spell
-            unmapped = next(s for s in re.findall(r'new entry "(HC_[A-Za-z0-9_]+)"\s*\r?\ntype "SpellData"',
+            unmapped = next((s for s in re.findall(r'new entry "(HC_[A-Za-z0-9_]+)"\s*\r?\ntype "SpellData"',
                                                  ''.join(b.decode('utf-8') for b in before.values()))
-                            if s not in self.map)
+                            if s not in self.map), None)
+            if unmapped is None:  # every HC spell is mapped now
+                return
             old = ''.join(b.decode('utf-8') for b in before.values()).split(f'new entry "{unmapped}"')[1].split('new entry "')[0]
             new = joined.split(f'new entry "{unmapped}"')[1].split('new entry "')[0]
             self.assertEqual(old, new)
