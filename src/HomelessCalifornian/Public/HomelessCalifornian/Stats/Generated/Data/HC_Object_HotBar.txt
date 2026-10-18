@@ -1,0 +1,7 @@
+new entry "HC_HotBar_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "1fdcec47-7592-50f7-b3ac-972745ee495f"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

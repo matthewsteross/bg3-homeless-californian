@@ -1,0 +1,17 @@
+{
+ "id": "01a15070-23ab-72c6-8284-4f61d4cc704e",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 32384236,
+ "prompt": "old wooden wardrobe cabinet with a solid closed roof top, both doors open, clothes on hangers and a scattered pile of shoes in front, a FREE cardboard sign leaning on it, solid watertight furniture, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792350890475,
+ "progress": 100,
+ "started_at": 1792350890484,
+ "finished_at": 1792350956562,
+ "task_error": null,
+ "consumed_credits": 20
+}

@@ -1,0 +1,7 @@
+new entry "HC_CondemnedMattress_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "070685bc-d7d5-5316-a9de-1d873ea1f518"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

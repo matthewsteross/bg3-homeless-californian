@@ -1,0 +1,7 @@
+new entry "HC_PlexiAisle_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "c7778e84-dd0f-5765-9957-0da372ee93fd"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

@@ -1,0 +1,17 @@
+{
+ "id": "01a15070-4c2e-7539-8c7b-9356933696aa",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3074932120,
+ "prompt": "small folding card table covered in rows of cheap colorful sunglasses laid out neatly with a handwritten cardboard sign 10 DOLLARS, one solid connected object, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792350901011,
+ "progress": 100,
+ "started_at": 1792350901017,
+ "finished_at": 1792350936638,
+ "task_error": null,
+ "consumed_credits": 20
+}

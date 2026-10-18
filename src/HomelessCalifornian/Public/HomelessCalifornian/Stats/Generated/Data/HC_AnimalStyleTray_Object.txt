@@ -1,0 +1,7 @@
+new entry "HC_AnimalStyleTray_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "00d7032c-a785-559c-b0ad-1a2ae95fde76"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

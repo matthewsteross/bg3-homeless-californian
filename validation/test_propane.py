@@ -1,6 +1,7 @@
 """PropaneBBQ assets, resource links, bounds, GR2 round trip and existing-spell patch checks.
 File-level validation only; does not establish in-game behavior."""
 from pathlib import Path
+from validation.prop_patch_helper import unpatched
 import re
 import subprocess
 import sys
@@ -229,6 +230,36 @@ class PropaneBBQTests(unittest.TestCase):
         self.assertEqual(written - set(own.values()), {hp.PARENT_TEMPLATE})
         for module in (hc_cart, hc_tarp, hc_barricade, hc_tent):
             self.assertEqual(hp.PARENT_TEMPLATE, module.PARENT_TEMPLATE)
+
+    def test_real_generated_spell_and_crlf_preserve_all_other_bytes(self):
+        paths = list((ROOT / 'src/HomelessCalifornian/Public/HomelessCalifornian/Stats/Generated/Data').glob('*.txt'))
+        original = unpatched(next(p.read_bytes() for p in paths if f'new entry "{hp.SPELL}"'.encode() in p.read_bytes()))
+        for content in (original, original.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')):
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / 'Existing.txt'
+                path.write_bytes(content)
+                hp.patch_propane_spell(tmp, generator.get_guid(hp.TEMPLATE_KEY))
+                spawn = prop_lifetime(generator.get_guid(hp.TEMPLATE_KEY))[1].encode()
+                self.assertEqual(path.read_bytes().replace(b';' + spawn, b''), content)
+                before = path.read_bytes()
+                hp.patch_propane_spell(tmp, generator.get_guid(hp.TEMPLATE_KEY))
+                self.assertEqual(path.read_bytes(), before)
+
+    def test_duplicate_spell_and_missing_properties_fail_without_modification(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'Bad.txt'
+            for content in (f'new entry "{hp.SPELL}"\ndata "SpellProperties" "Keep()"\n' * 2,
+                            f'new entry "{hp.SPELL}"\ntype "SpellData"\n'):
+                path.write_text(content)
+                before = path.read_bytes()
+                with self.assertRaises(ValueError):
+                    hp.patch_propane_spell(tmp, generator.get_guid(hp.TEMPLATE_KEY))
+                self.assertEqual(path.read_bytes(), before)
+
+    def test_target_size_and_centering(self):
+        self.assertAlmostEqual(hp.BMAX[1], 1.1, places=6)
+        self.assertAlmostEqual(hp.BMIN[0] + hp.BMAX[0], 0, places=6)
+        self.assertAlmostEqual(hp.BMIN[2] + hp.BMAX[2], 0, places=6)
 
     def test_no_foreign_mod_references(self):
         files = [p for p in self.source.rglob('*') if p.is_file() and p.suffix.lower() not in ('.dds', '.gr2')]

@@ -1,0 +1,17 @@
+{
+ "id": "01a15071-6b88-734a-8fb9-f3ba42070347",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 4086549967,
+ "prompt": "solid freestanding wooden wardrobe armoire with a closed solid flat top and crown molding, one door wide open showing hanging thrift clothes, a cardboard sign reading FREE taped to the other door, watertight solid furniture, stylized game prop",
+ "texture_prompt": "weathered oak wood, sun-faded, cardboard sign FREE in marker, colorful thrift clothes, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350974615,
+ "progress": 100,
+ "started_at": 1792350974627,
+ "finished_at": 1792351017768,
+ "task_error": null,
+ "consumed_credits": 10
+}

@@ -1,0 +1,7 @@
+new entry "HC_RetrofitScaffold_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "95072b32-1023-54c3-9276-efac9303f637"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

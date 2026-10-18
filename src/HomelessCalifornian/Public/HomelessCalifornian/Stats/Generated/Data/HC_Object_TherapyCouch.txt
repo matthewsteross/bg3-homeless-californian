@@ -1,0 +1,7 @@
+new entry "HC_TherapyCouch_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "96783f7b-2206-5cd7-82fd-7197225b2380"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

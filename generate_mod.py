@@ -2838,6 +2838,22 @@ def main():
     generate_curbpile(PUBLIC_DIR, add_loca, get_guid)
     from hc_trashbags import generate_trashbags
     generate_trashbags(PUBLIC_DIR, add_loca, get_guid)
+    from hc_condemnedmattress import generate_condemnedmattress
+    generate_condemnedmattress(PUBLIC_DIR, add_loca, get_guid)
+    from hc_therapycouch import generate_therapycouch
+    generate_therapycouch(PUBLIC_DIR, add_loca, get_guid)
+    from hc_propane import generate_propane
+    generate_propane(PUBLIC_DIR, add_loca, get_guid)
+    from hc_hotbar import generate_hotbar
+    generate_hotbar(PUBLIC_DIR, add_loca, get_guid)
+    from hc_plexiglass import generate_plexiglass
+    generate_plexiglass(PUBLIC_DIR, add_loca, get_guid)
+    from hc_receipt import generate_receipt
+    generate_receipt(PUBLIC_DIR, add_loca, get_guid)
+    from hc_retrofit import generate_retrofit
+    generate_retrofit(PUBLIC_DIR, add_loca, get_guid)
+    from hc_innout import generate_innout
+    generate_innout(PUBLIC_DIR, add_loca, get_guid)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()

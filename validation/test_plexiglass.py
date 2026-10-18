@@ -1,6 +1,7 @@
 """PlexiAisle assets, resource links, bounds, GR2 round trip and existing-spell patch checks.
 File-level validation only; does not establish in-game behavior."""
 from pathlib import Path
+from validation.prop_patch_helper import unpatched
 import re
 import subprocess
 import sys
@@ -206,7 +207,7 @@ class PlexiAisleTests(unittest.TestCase):
         own = {k: generator.get_guid(f'HC_PlexiAisle_{k}') for k in ('bm', 'nm', 'pm', 'mat', 'visual')}
         own['template'] = generator.get_guid(hp.TEMPLATE_KEY)
         others = set()
-        for prefix in ('HC_ShoppingCart', 'HC_BlueTarp', 'HC_Barricade', 'HC_PopUpTent'):
+        for prefix in ('HC_ShoppingCart', 'HC_BlueTarp', 'HC_Barricade', 'HC_PopUpTent', 'HC_ReceiptScroll', 'HC_AnimalStyleTray', 'HC_CouncilPodium'):
             others |= {generator.get_guid(f'{prefix}_{k}') for k in ('bm', 'nm', 'pm', 'mat', 'visual', 'RootTemplate')}
         self.assertEqual(len(set(own.values())), 6)
         self.assertFalse(set(own.values()) & others)
@@ -226,6 +227,42 @@ class PlexiAisleTests(unittest.TestCase):
         for p in files:
             self.assertNotIn(needle, p.read_text(encoding='utf-8', errors='ignore').lower(), str(p))
 
+
+
+    def test_actual_generated_spell_patch_is_non_destructive(self):
+        source = ROOT/'src/HomelessCalifornian/Public/HomelessCalifornian/Stats/Generated/Data'
+        candidates = [p for p in source.glob('*.txt') if f'new entry "{hp.SPELL}"' in p.read_text(encoding='utf-8')]
+        self.assertEqual(len(candidates),1)
+        before = unpatched(candidates[0].read_bytes())
+        old = stat_fields(before.decode('utf-8'),hp.SPELL)['SpellProperties']
+        guid = generator.get_guid(hp.TEMPLATE_KEY)
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'Source.txt'
+            path.write_bytes(before)
+            hp.patch_plexiglass_spell(tmp,guid)
+            after=path.read_bytes()
+            new=stat_fields(after.decode('utf-8'),hp.SPELL)['SpellProperties']
+            self.assertEqual(new,old+';'+prop_lifetime(guid)[1])
+            self.assertEqual(after.replace(new.encode(),old.encode(),1),before)
+            hp.patch_plexiglass_spell(tmp,guid)
+            self.assertEqual(path.read_bytes(),after)
+
+    def test_duplicate_spell_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            for name in ('A.txt','B.txt'):
+                (Path(tmp)/name).write_text(f'new entry "{hp.SPELL}"\ndata "SpellProperties" "Keep()"\n')
+            with self.assertRaisesRegex(ValueError,'found 2'):
+                hp.patch_plexiglass_spell(tmp,generator.get_guid(hp.TEMPLATE_KEY))
+
+    def test_patch_preserves_crlf_bytes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'Windows.txt'
+            before=f'new entry "{hp.SPELL}"\r\ndata "SpellProperties" "Keep()"\r\n# neighbor\r\n'.encode()
+            path.write_bytes(before)
+            guid=generator.get_guid(hp.TEMPLATE_KEY)
+            hp.patch_plexiglass_spell(tmp,guid)
+            spawn=prop_lifetime(guid)[1].encode()
+            self.assertEqual(path.read_bytes(),before.replace(b'Keep()',b'Keep();'+spawn))
 
 if __name__ == '__main__':
     unittest.main()

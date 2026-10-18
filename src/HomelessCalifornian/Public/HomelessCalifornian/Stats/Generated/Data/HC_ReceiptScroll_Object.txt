@@ -1,0 +1,7 @@
+new entry "HC_ReceiptScroll_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "fc105c87-4154-5a36-9e77-41751910b0e5"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

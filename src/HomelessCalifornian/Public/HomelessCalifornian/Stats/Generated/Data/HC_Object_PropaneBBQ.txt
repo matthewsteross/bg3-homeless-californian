@@ -1,0 +1,7 @@
+new entry "HC_PropaneBBQ_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "8af12a9c-d7de-5e2f-9f3e-6d3b3645cafe"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

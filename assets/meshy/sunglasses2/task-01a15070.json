@@ -1,0 +1,17 @@
+{
+ "id": "01a15070-f573-72f5-bf44-a0949b8dd8b7",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3074932120,
+ "prompt": "small folding card table covered in rows of cheap colorful sunglasses laid out neatly with a handwritten cardboard sign 10 DOLLARS, one solid connected object, stylized game prop",
+ "texture_prompt": "grey metal folding table, neon pink yellow green sunglasses, cardboard sign, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350944323,
+ "progress": 100,
+ "started_at": 1792350944330,
+ "finished_at": 1792350978346,
+ "task_error": null,
+ "consumed_credits": 10
+}

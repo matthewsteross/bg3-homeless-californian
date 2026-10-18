@@ -3,6 +3,8 @@ File space (x right, y up, z propane front) -> Blender (x, -z, y): a pure rotati
 import bpy, sys, json, math
 from mathutils import Vector
 OD, TAG = sys.argv[sys.argv.index('--') + 1:][:2]
+from pathlib import Path
+OD = str(Path(OD).resolve())
 d = json.load(open(OD + '/propane_preview.json'))
 bpy.ops.wm.read_factory_settings(use_empty=True)
 verts = [(p[0], -p[2], p[1]) for p in d['pos']]

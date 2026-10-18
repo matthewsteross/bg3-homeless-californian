@@ -3,12 +3,16 @@ Usage: build_propane_model.py template.dae output.dae output_directory
 """
 import sys, struct, json, re
 from pathlib import Path
+sys.dont_write_bytecode = True  # imported shared paint helper stays read-only
 import numpy as np
 from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'HC_PortaPotty'))
 import portapotty_paint as paint_mod
 TPL, OUT, OD = sys.argv[1:4]
 source = Path(__file__).resolve().parents[2] / 'meshy/propane'
+for required in ('model.glb', 'texture0_base_color.png', 'texture0_normal.png', 'texture0_metallic.png', 'texture0_roughness.png'):
+    if not (source / required).is_file():
+        raise FileNotFoundError(f'Missing Meshy source: {source / required}')
 raw = (source / 'model.glb').read_bytes()
 magic, version, length = struct.unpack_from('<III', raw)
 assert magic == 0x46546c67 and version == 2 and length == len(raw)

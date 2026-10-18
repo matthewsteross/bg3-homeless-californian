@@ -152,7 +152,7 @@ def _visual_resource(ids, resources_path):
 
 
 def generate_propane(public_dir, add_loca, get_guid):
-    """Write propane assets and object resources, then patch the existing PropaneBBQ Dive spell."""
+    """Write propane assets and object resources, then patch the existing target Shout."""
     public = Path(public_dir)
     mod = public.name
     src_root = public.parents[1]

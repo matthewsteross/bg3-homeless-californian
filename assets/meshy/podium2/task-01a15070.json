@@ -1,0 +1,17 @@
+{
+ "id": "01a15070-f6a8-7303-990f-c1c97959a0e1",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 996923238,
+ "prompt": "single solid wooden lectern podium with a short gooseneck microphone attached to the top and a neat stack of papers, one solid connected object, no loose parts, stylized game prop",
+ "texture_prompt": "varnished brown wood, brass microphone, white papers, hand-painted stylized game texture",
+ "status": "SUCCEEDED",
+ "created_at": 1792350944630,
+ "progress": 100,
+ "started_at": 1792350944637,
+ "finished_at": 1792350975175,
+ "task_error": null,
+ "consumed_credits": 10
+}
