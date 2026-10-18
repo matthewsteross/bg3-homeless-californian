@@ -26,6 +26,8 @@ Project: BG3 mod "Homeless Californian" (HC). Folder `C:\Users\matth\Documents\B
 - Converting a Meshy model to a prop: give a Codex builder `work/brief-meshy-batch2-common-2026-10-18.md` and add an assignment line to `work/brief-meshy-batch2-assign-2026-10-18.md` (prop name, spell to patch, target height, source folder). Each builder writes `hc_<prop>.py` (generate_<prop>), `validation/test_<prop>.py`, `assets/models/HC_<Prop>/`, `work/<prop>-report.md`. The lead then wires the generator into generate_mod.py, rebuilds, runs tests.
 - Props only attach to existing spells with a self-cast Shout (confirmed in game for the tarp). Target-type spells with ground spawn are untested.
 
+**Icon run result (15:36 on 2026-10-18):** Gemini image quota is STILL exhausted (429 RESOURCE_EXHAUSTED, resets about 14:30 on 2026-10-19). Zero icons were made; `assets/icons` still has 49 PNGs. Process 77 is idle. Retry after the reset with the same prompt (the one-shot cron is spent). The list is 81 icons now (includes the 12 round-2 spells).
+
 ## Solo agents (project 2; use mcp__solo__send_input; every message to Codex needs a following [13] Enter ONLY if it did not submit; never send text while an agent sits at an approval prompt, it cancels the command)
 - 20 Codex (BG3 Modding), 80 Codex (Subclass Builder), 81 Codex (Subclass Builder 2). Codex 5h limit is about 30% left: go easy on Codex.
 - 21 Gemini Argon, 78 Gemini Flash Writers Room, 77 Flash Icon Art, 79 Grok. Gemini agents ask "Allow creation of this file?" for files my briefs told them to write: approve with [13]. Grok uses a numbered menu (type 3, Enter).
