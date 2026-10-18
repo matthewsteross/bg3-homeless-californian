@@ -30,6 +30,8 @@ Project: BG3 mod "Homeless Californian" (HC). Folder `C:\Users\matth\Documents\B
 
 **Codex can make icons (Matthew approved):** Codex #20 was switched to GPT-6-Luna low (/model) and its built-in image tool works (images land in C:/Users/matth/.codex/generated_images/<id>/exec-*.png; the tool prints 'Saved to: file:///...' which IS the image). Brief: `work/solo-brief-codex-icons-2026-10-18.md` (12 per run). Each icon is saved with `python work/save_icon.py <png> <IconName> "Codex image"`. Status lines go to work/codex-icon-status.md. Luna low sometimes misreports; check the file. Row 1 (Spell_CurbsideClinic) was saved by the lead.
 
+**Matthew's newest directives:** (1) subclasses must share a common core of spells with only mild differences: `hc_sub_round2.py` now grants all 12 round-2 spells plus the new L7 `HC_Shout_OversizedSharpsDisposal` to ALL four subclasses (he plays BART); keep this principle for future subclass content (shared base, small flavour differences). (2) A "stupid large" used-needle Meshy prop (assets/meshy/needle2, about 4 m, `hc_giantneedle.py` by Codex #80, assignment K) spawned by that spell. (3) Codex may be used for icons (see above).
+
 ## Solo agents (project 2; use mcp__solo__send_input; every message to Codex needs a following [13] Enter ONLY if it did not submit; never send text while an agent sits at an approval prompt, it cancels the command)
 - 20 Codex (BG3 Modding), 80 Codex (Subclass Builder), 81 Codex (Subclass Builder 2). Codex 5h limit is about 30% left: go easy on Codex.
 - 21 Gemini Argon, 78 Gemini Flash Writers Room, 77 Flash Icon Art, 79 Grok. Gemini agents ask "Allow creation of this file?" for files my briefs told them to write: approve with [13]. Grok uses a numbered menu (type 3, Enter).
