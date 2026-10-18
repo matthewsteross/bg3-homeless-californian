@@ -1,0 +1,7 @@
+new entry "HC_PalletWall_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "c7de6b68-3c21-56bf-ac31-479b8e689c3e"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

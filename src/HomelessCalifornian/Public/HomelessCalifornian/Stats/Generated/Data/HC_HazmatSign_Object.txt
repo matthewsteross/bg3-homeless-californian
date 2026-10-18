@@ -1,0 +1,7 @@
+new entry "HC_HazmatSign_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "9b8da4c3-97ff-5453-ae23-f5b7ff50fc28"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

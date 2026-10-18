@@ -1,0 +1,17 @@
+{
+ "id": "01a15088-8bc0-73ec-8e23-92714235bd53",
+ "type": "text-to-3d-preview",
+ "mode": "preview",
+ "name": "",
+ "model_type": "standard",
+ "seed": 2063922957,
+ "prompt": "single solid iron squat rack with a loaded barbell resting in the cradles, heavy rusty weight plates, all parts connected to the rack frame, nothing detached on the ground, stylized game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792352490187,
+ "progress": 100,
+ "started_at": 1792352490192,
+ "finished_at": 1792352535967,
+ "task_error": null,
+ "consumed_credits": 20
+}

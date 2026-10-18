@@ -1,0 +1,7 @@
+new entry "HC_SunglassRack_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "d97e393b-9ac4-531b-ba87-6f02da219fcd"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"
