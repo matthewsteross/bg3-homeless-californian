@@ -4,3 +4,7 @@ tools/ExportTool.zip
 tools/
 temp_*/
 work/
+
+# Meshy API key (never commit it)
+.env
+.env.*
