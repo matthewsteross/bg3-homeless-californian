@@ -175,7 +175,7 @@ _spell(TENDERLOIN, 9, 'HC_Target_SteamGrateMiasma', 'Golden Gate Alley Steam-Gra
             SpellProperties='GROUND:CreateSurface(6,3,StinkingCloud,true)',
             **_save('Constitution', '4d8', 'Poison')))
 _passive(TENDERLOIN, 11, 'HC_WalkingSuperfundSite', 'Walking Superfund Site',
-         'Spell_Necromancy_Contagion',
+         'Spell_Necromancy_Contagion_FilthFever',
          'Gain immunity to the Poisoned condition. Deal 2 additional damage with damaging attacks and spells.',
          "The EPA tried to designate your jacket as a federal cleanup zone, but the inspector's Geiger counter melted in the parking lot.",
          'StatusImmunity(SG_Poisoned);DamageBonus(2)')

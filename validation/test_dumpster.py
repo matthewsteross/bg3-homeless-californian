@@ -2,6 +2,9 @@
 File-level validation only; does not establish in-game behavior."""
 from pathlib import Path
 import re
+import json
+import numpy as np
+from PIL import Image
 import subprocess
 import sys
 import tempfile
@@ -71,10 +74,37 @@ class DumpsterTests(unittest.TestCase):
         height, width = int.from_bytes(header[12:16], 'little'), int.from_bytes(header[16:20], 'little')
         self.assertEqual((width, height), (1024, 1024))
         self.assertEqual(header[84:88], b'DXT5')
+        self.assertEqual(int.from_bytes(header[28:32], 'little'), 11)
         tree = ET.parse(self.public / 'Content/Assets/Props/[PAK]_HC_Dumpster/_merged.lsf.lsx')
         sizes = {attrs(t)['Name']: (attrs(t)['Width'], attrs(t)['Height'])
                  for t in tree.findall('.//region[@id="TextureBank"]//node[@id="Resource"]')}
         self.assertEqual(sizes['HC_Dumpster_BM'], ('1024', '1024'))
+
+    def test_decal_changes_only_the_front_projection_and_keeps_plain_source(self):
+        plain = np.asarray(Image.open(hp.ASSET_SRC / 'HC_Dumpster_BM_Plain.png').convert('RGB'))
+        final = np.asarray(Image.open(hp.ASSET_SRC / 'HC_Dumpster_BM.png').convert('RGB'))
+        original = Image.open(ROOT / 'assets/meshy/dumpster/texture0_base_color.png').convert('RGB').resize((1024,1024), Image.Resampling.LANCZOS)
+        self.assertTrue(np.array_equal(plain, np.asarray(original)))
+        mask = np.asarray(Image.open(ROOT / 'work/dumpster/out/dumpster_decal_mask.png')) > 0
+        changed = np.any(plain != final, axis=2)
+        self.assertGreater(int(changed.sum()),1000)
+        self.assertTrue(np.all(~changed | mask))
+        self.assertTrue(np.array_equal(plain[~mask],final[~mask]))
+        metadata = json.loads((ROOT / 'work/dumpster/out/dumpster_decal.json').read_text())
+        self.assertEqual(metadata['changed_texels'],int(changed.sum()))
+        self.assertEqual(metadata['mirror'],hp.MIRROR_DECAL)
+        self.assertGreater(metadata['triangles_projected'],0)
+
+    def test_decal_rebake_is_repeatable_and_mirror_switch_changes_only_the_artwork(self):
+        from assets.models.HC_Dumpster.dumpster_decal import bake_decal
+        data = json.loads((ROOT / 'work/dumpster/out/dumpster_preview.json').read_text())
+        plain = Image.open(hp.ASSET_SRC / 'HC_Dumpster_BM_Plain.png')
+        args = [np.asarray(data[key]) for key in ('pos','nor','uv','tri')]
+        with tempfile.TemporaryDirectory() as tmp:
+            normal = np.asarray(bake_decal(plain,*args,tmp,mirror=hp.MIRROR_DECAL))
+            mirrored = np.asarray(bake_decal(plain,*args,tmp,mirror=not hp.MIRROR_DECAL))
+        self.assertTrue(np.array_equal(normal,np.asarray(Image.open(hp.ASSET_SRC / 'HC_Dumpster_BM.png'))))
+        self.assertFalse(np.array_equal(normal,mirrored))
 
     @unittest.skipUnless(DIVINE.is_file(), 'Divine.exe not available')
     def test_gr2_round_trips_through_divine_with_three_lods_and_budget(self):

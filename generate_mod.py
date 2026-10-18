@@ -2692,6 +2692,13 @@ def generate_local_expansion():
     for category, levels in round11['subclasses'].items():
         for level, spells in levels.items():
             grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+    from hc_sub_bart import generate_sub_bart
+    from hc_sub_others import generate_sub_others
+    for source in (generate_sub_bart(PUBLIC_DIR, add_loca, get_guid), generate_sub_others(PUBLIC_DIR, add_loca, get_guid)):
+        for category, levels in source['subclasses'].items():
+            for level, spells in levels.items():
+                grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
+        subclass_passive_sources.append(source)
     base_passives = {}
     for source in (round10, round11):
         for level, names in source['base_passives'].items():
