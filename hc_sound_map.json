@@ -585,5 +585,41 @@
  "HC_Zone_DalyCityTurnbackRunaway": {
   "CastSound": "CrSpell_Cast_BombardmentHorde",
   "TargetSound": "CrSpell_Impact_BombardmentHorde"
+ },
+ "HC_Shout_FederalMailboxSanctuary": {
+  "CastSound": "Spell_Cast_Summon_Golem_Bell_L0",
+  "TargetSound": "Spell_Impact_Buff_Barkskin_L1to3"
+ },
+ "HC_Shout_StolenCoinstarJackpot": {
+  "CastSound": "CrSpell_Cast_CoinWhip",
+  "TargetSound": "Action_Impact_Item_FleshtoGold"
+ },
+ "HC_Shout_RedCurbHydrantBlowout": {
+  "CastSound": "CrSpell_Cast_Djinni_Inhale"
+ },
+ "HC_Shout_AcousticPrivacyPod": {
+  "CastSound": "Instrument_Bard_Silence",
+  "TargetSound": "Action_Impact_Warlock_FiendishResilienceThunder"
+ },
+ "HC_Shout_MufflerShopTotem": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Shatter_L1to3"
+ },
+ "HC_Shout_BaconWrappedDangerDogCart": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Fire",
+  "TargetSound": "Spell_Impact_Healing_HealerKitHeal_L4to5"
+ },
+ "HC_Shout_CybertruckHuskOnBlocks": {
+  "TargetSound": "Action_Impact_Monk_ResonationPunch"
+ },
+ "HC_Shout_AmberAlertMatrixTrailer": {
+  "CastSound": "CrSpell_Cast_ShieldOfScreams"
+ },
+ "HC_Shout_LoncheraTacoTruck": {
+  "CastSound": "Spell_Cast_Bard_SongOfRest_L1to3",
+  "TargetSound": "Spell_Impact_Control_PartyTime"
+ },
+ "HC_Shout_WalkOfFameStarSlam": {
+  "CastSound": "CrSpell_Cast_ElementalEarth_SeismicStrike",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_SeismicStrike"
  }
 }
