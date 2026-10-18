@@ -63,7 +63,7 @@ VEST_DESCRIPTION = (
     'Rare light armour: Armour Class 12 plus your Dexterity modifier, and +1 to Deception checks. '
     'Equipping it grants Hi-Vis Authority: advantage on Intimidation checks and disadvantage on Stealth checks. '
     'It is plain studded leather that has been called a safety vest in front of every clipboard in range. '
-    'Nobody questions the person in the vest, and nobody can miss them either.')
+    'Hi-vis does not make you in charge; it makes traffic afraid to ask who is.')
 
 STATUS_SPECS = [
     ('HC_DETOUR_DASH', CONE_LABYRINTH, 'Spell_Evocation_Thunderwave',
@@ -221,7 +221,7 @@ def generate_round10(public_dir, add_loca, get_guid):
          'Costs an action and 1 Junk; once per short rest. A target within 9 m makes a Dexterity saving throw: on a failure it takes '
          '2d8 Bludgeoning damage and falls Prone for 1 turn, or takes half damage on a success, and whether or not it lands you gain '
          'Detour Dash (+3 m movement) for 1 turn. '
-         'The detour ends at the detour, which is more cones.',
+         'You have completed the maze, and the maze has opened a second phase, which is also cones.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', TargetRadius='9', DamageType='Bludgeoning',
               TargetConditions=hostile,
               SpellProperties='ApplyStatus(SELF,HC_DETOUR_DASH,100,1)',
@@ -237,7 +237,7 @@ def generate_round10(public_dir, add_loca, get_guid):
          'Lean on a locomotive horn at a crossing where the gate has been down since breakfast. '
          'Costs an action and 1 Junk; once per long rest. A target within 12 m makes a Constitution saving throw: on a failure it takes '
          '3d8 Thunder damage and is Dazed for 1 turn, or takes half damage on a success. '
-         'The gate is down. The gate has a schedule and a mood.',
+         'The gate is down. The horn is Caltrain, the delay is Caltrans, and the argument between them runs inside your skull at 112 decibels.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', Cooldown='OncePerRest', TargetRadius='12', DamageType='Thunder',
               TargetConditions=hostile,
               SpellRoll=con_save,
@@ -266,7 +266,7 @@ def generate_round10(public_dir, add_loca, get_guid):
          'Caltrans Truck-Bed Vest Requisition',
          'Lift a Caltrans Safety Vest from the back of a parked utility truck. '
          'Costs an action; once per long rest. Places a Caltrans Safety Vest (rare light armour) in your inventory; equip it yourself. '
-         'Nobody questions a person in orange, and you are about to find out how far that goes.',
+         'The vest was requisitioned, the truck was not, and you are now dressed as a department and paid as a rumor.',
          dict(UseCosts='ActionPoint:1', Cooldown='OncePerRest', TargetConditions='Self()',
               SpellFlags='IgnoreSilence;UnavailableInDialogs', TargetRadius='0',
               SpellProperties=summon)),
@@ -292,7 +292,7 @@ def generate_round10(public_dir, add_loca, get_guid):
          'Slip a citation under the target\'s wiper one minute after the sweeper left. '
          'Costs an action and 1 Junk; once per short rest. Melee spell attack within 1.5 m: deals 1d6 Slashing plus 2d8 Psychic damage '
          'and files a citation against the target (disadvantage on Dexterity saving throws) for 2 turns. '
-         'The sweeper came at 2:00. The city is proud.',
+         'The sweeper came at 2:00. Street sweeping is Caltrans with a smaller god complex and a broom that still wins.',
          dict(UseCosts='ActionPoint:1;HC_Junk:1', TargetRadius='1.5', DamageType='Slashing',
               TargetConditions=hostile,
               SpellRoll='Attack(AttackType.MeleeSpellAttack)',

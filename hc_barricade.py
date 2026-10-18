@@ -264,7 +264,7 @@ data "Description" "{status_desc};1"
                           "Drop a full Caltrans lane-closure setup on the ground within 9 m: barricade, two reflective cones, "
                           "sandbags and a painted amber lamp. Costs a bonus action and 1 Junk; once per short rest. "
                           "You also gain +2 Armour Class for 2 turns. "
-                          "Nobody knows which agency owns it, which is why it will outlive the road.")
+                          "The lane has been closed ahead since ahead was a place you could still reach.")
     (stats / "HC_Spells_Barricade.txt").write_text(f'''new entry "{SPELL}"
 type "SpellData"
 using "{DONOR}"
