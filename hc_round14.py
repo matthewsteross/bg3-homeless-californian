@@ -23,7 +23,7 @@ SPELLS = [
           SpellSuccess='DealDamage(3d8,Bludgeoning,Magical);ApplyStatus(SLOW,100,1)',
           SpellFail='DealDamage((3d8)/2,Bludgeoning,Magical)', DamageType='Bludgeoning',
           TooltipDamageList='DealDamage(3d8,Bludgeoning)', TooltipAttackSave='Dexterity',
-          TooltipStatusApply='ApplyStatus(SLOW,100,1)', SpellFlags='IsSpell;HasVerbalComponent;HasSomaticComponent')),
+          TooltipStatusApply='ApplyStatus(SLOW,100,1)', SpellFlags='IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful', SpellSchool='Evocation')),
     (9, IN_TRANSITION, 'In Transition (Lane Configuration)', 'Target_MistyStep', 'Spell_Conjuration_MistyStep',
      'Costs a bonus action and 2 Junk; once per short rest. Teleport up to 12 m and gain Disengage for 1 turn. '
      'Lane two is now lane three, lane three is now a suggestion, and nobody has told the cones.',
@@ -32,13 +32,13 @@ SPELLS = [
           SpellProperties='GROUND:TeleportSource();ApplyStatus(SELF,DISENGAGE,100,1)',
           TooltipStatusApply='ApplyStatus(SELF,DISENGAGE,100,1)')),
     (11, JUST_A_PHASE, "It's Just a Phase (the Phase Is Asphalt)", 'Zone_Thunderwave', 'Spell_Evocation_Thunderwave',
-     'Costs an action and 3 Junk; once per long rest. Enemies in a 5 m cone make a Constitution save, taking 4d8 Thunder damage and becoming Dazed for 1 turn on failure, or half damage on success. '
+     'Costs an action and 3 Junk; once per long rest. Enemies in a 5 m cone make a Constitution save, taking 6d8 Thunder damage and becoming Dazed for 1 turn on failure, or half damage on success. '
      'It is a phase. The phase is asphalt, and it lasts until at least 2041.',
-     dict(UseCosts='ActionPoint:1;HC_Junk:3', Cooldown='OncePerRest', Shape='Cone', Range='5', Base='5',
+     dict(UseCosts='ActionPoint:1;HC_Junk:3', Cooldown='OncePerRest', Shape='Cone', Range='5', Base='5', Angle='60',
           TargetConditions=HOSTILE, SpellRoll='not SavingThrow(Ability.Constitution, SourceSpellDC())',
-          SpellSuccess='DealDamage(4d8,Thunder,Magical);ApplyStatus(DAZED,100,1)',
-          SpellFail='DealDamage((4d8)/2,Thunder,Magical)', DamageType='Thunder',
-          TooltipDamageList='DealDamage(4d8,Thunder)', TooltipAttackSave='Constitution',
+          SpellSuccess='DealDamage(6d8,Thunder,Magical);ApplyStatus(DAZED,100,1)',
+          SpellFail='DealDamage((6d8)/2,Thunder,Magical)', DamageType='Thunder',
+          TooltipDamageList='DealDamage(6d8,Thunder)', TooltipAttackSave='Constitution',
           TooltipStatusApply='ApplyStatus(DAZED,100,1)')),
 ]
 
@@ -48,7 +48,7 @@ def generate_round14(public_dir, add_loca, get_guid):
     stats.mkdir(parents=True, exist_ok=True)
     base = dict(Level='0', Cooldown='OncePerShortRest', MemoryCost='0', RechargeValues='', RootSpellID='', SpellContainerID='',
                 DescriptionParams='', ExtraDescription='', TooltipUpcastDescription='', TooltipUpcastDescriptionParams='',
-                TooltipDamageList='', TooltipStatusApply='', TooltipAttackSave='', TooltipPermanentWarnings='', TooltipOnSave='',
+                TooltipDamageList='', TooltipStatusApply='', TooltipAttackSave='', TooltipPermanentWarnings='', TooltipOnSave='f762efbb-f8f1-493e-b248-2de1567b4bd2',
                 SpellProperties='', SpellRoll='', SpellSuccess='', SpellFail='', CastTextEvent='Cast')
     blocks, grants = [], {'base': {}, 'subclasses': {}, 'existing_list_spells': {}}
     for level, name, title, donor, icon, description, overrides in SPELLS:

@@ -11,7 +11,7 @@ type "PassiveData"
 data "DisplayName" "h006a3553g0ba8g5da6g8cdfg5002ac6b4496;1"
 data "Description" "ha72d77f9g1ddfg588eg8070gf5db48304751;1"
 data "Properties" "Highlighted"
-data "Boosts" "AC(1);StatusImmunity(DIFFICULT_TERRAIN)"
+data "Boosts" "AC(1);StatusImmunity(DIFFICULT_TERRAIN);StatusImmunity(DIFFICULT_TERRAIN_MUD);StatusImmunity(DIFFICULT_TERRAIN_WEB);StatusImmunity(DIFFICULT_TERRAIN_VINES)"
 data "Icon" "Spell_Passive_UnincorporatedCountyImmunity"
 
 new entry "HC_ExpressLaneTransponderCheat"

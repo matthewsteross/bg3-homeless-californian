@@ -21,7 +21,7 @@ PASSIVES = [
     (COUNTY, 'Unincorporated County Immunity', 6, 'PassiveFeature_Resilient',
      'Gain +1 Armour Class and immunity to difficult terrain. Neither city code enforcement nor municipal jurisdiction can '
      'legally cross this particular drainage swale.',
-     'AC(1);StatusImmunity(DIFFICULT_TERRAIN)'),
+     'AC(1);StatusImmunity(DIFFICULT_TERRAIN);StatusImmunity(DIFFICULT_TERRAIN_MUD);StatusImmunity(DIFFICULT_TERRAIN_WEB);StatusImmunity(DIFFICULT_TERRAIN_VINES)'),
     (TRANSPONDER, 'Express Lane Transponder Cheat', 8, 'PassiveFeature_FastMovement',
      'Your movement speed increases by 3 m. Three layers of duct tape over the licence plate scanner let you cruise at full '
      'speed without paying the toll.',
