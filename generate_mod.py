@@ -2911,6 +2911,8 @@ def main():
     generate_proplua(MODS_DIR, PUBLIC_DIR)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
+    from hc_icons_apply import apply_icons
+    print(f'Custom icons applied to {apply_icons(PUBLIC_DIR)} entries')
     generate_localization()
     print("Mod source files generated successfully!")
 

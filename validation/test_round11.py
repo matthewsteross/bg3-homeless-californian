@@ -131,7 +131,7 @@ class RoundElevenTests(unittest.TestCase):
             self.assertNotIn('"',desc)
             self.assertNotIn('patr'+'iot',self.entries[name].body.lower())
         for item in r.ITEMS:self.assertIn(item[4],icon_text)
-        for name in r.ALL_SPELLS:self.assertEqual(self.f(name)['Icon'],'Spell_Evocation_Thunderwave')
+        for name in r.ALL_SPELLS:self.assertIn(self.f(name)['Icon'],('Spell_Evocation_Thunderwave',)+tuple(__import__('hc_icons_apply').load_map().values()))
 
     def test_repo_validator_on_round11_with_explicit_resource_and_localization_fixture(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -146,6 +146,7 @@ class RoundElevenTests(unittest.TestCase):
             ET.SubElement(node,'attribute',id='UUID',value=generator.get_guid('HC_Junk_Resource'))
             passive=ET.SubElement(fixture,'node',id='Progression')
             ET.SubElement(passive,'attribute',id='PassivesAdded',value=r.PTO)
+            for icon_key in set(__import__('hc_icon_keys').SPELL_ICON_KEYS.values()):ET.SubElement(ET.SubElement(fixture,'node',id='IconFixture'),'attribute',id='MapKey',value=icon_key)
             ET.ElementTree(fixture).write(public/'TestResourceAndPassive.lsx',encoding='utf-8')
             errors,counts=validate.validate(source,ROOT/'temp_race')
             self.assertEqual(errors,[]);self.assertEqual(counts['stats'],len(self.entries))

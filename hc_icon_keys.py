@@ -149,3 +149,15 @@ def icon_for_spell(spell, fallback):
     """Use custom art only when its source exists; never grant a missing icon."""
     key = SPELL_ICON_KEYS.get(spell)
     return key if key and (ASSETS / (key + '.png')).is_file() else fallback
+
+
+# Extra icons by stat name (any spell/passive/status), see hc_icons_apply.py. Keys are added so build_icons.py puts their PNGs in the atlas.
+def _load_extra_icon_map():
+    import json
+    path = ASSETS / 'icon_map.json'
+    if path.is_file():
+        for name, key in json.loads(path.read_text(encoding='utf-8')).items():
+            SPELL_ICON_KEYS.setdefault(name, key)
+
+
+_load_extra_icon_map()

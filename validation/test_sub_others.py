@@ -87,7 +87,7 @@ class SubOthersTests(unittest.TestCase):
 
     def test_donors_and_inherited_fields(self):
         for name, (kind, donor, fields) in self.new.items():
-            self.assertIn(fields['Icon'], self.corpus, name)
+            self.assertTrue(fields['Icon'] in self.corpus or fields['Icon'] in __import__('hc_icons_apply').load_map().values(), name)
             if donor:
                 self.assertEqual(self.vanilla[donor][0], kind)
                 self.assertNotIn(donor, self.honour)

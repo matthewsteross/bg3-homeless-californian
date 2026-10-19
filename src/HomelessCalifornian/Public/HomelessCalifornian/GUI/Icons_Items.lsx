@@ -54,914 +54,1306 @@
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_BottleShank"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_SidewalkScramble"/>
                     <attribute id="U1" type="float" value="0.25024414"/>
                     <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_FeralScreech"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_EvictionNotice"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_TentEncampment"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Call311"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BiohazardBomb"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BottleShank"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
+                    <attribute id="V1" type="float" value="0.00024414"/>
+                    <attribute id="V2" type="float" value="0.06225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_TurnstileHop"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.00024414"/>
                     <attribute id="V2" type="float" value="0.06225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Status_HomelessFatigue"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.00024414"/>
                     <attribute id="V2" type="float" value="0.06225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_FreewayDirections"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.00024414"/>
                     <attribute id="V2" type="float" value="0.06225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PermitPending"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.00024414"/>
                     <attribute id="V2" type="float" value="0.06225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_EmotionalSupportBrick"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.00024414"/>
                     <attribute id="V2" type="float" value="0.06225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_BagOfOtherBags"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_LoadBearingChair"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_DumpsterDive"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_MovingDay"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PigeonWitnessProtection"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_HeirloomFurniture"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_ChairLegShiv"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.00024414"/>
-                    <attribute id="V2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.06274414"/>
+                    <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_WrongPlatform"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.06274414"/>
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_UnclaimedWardrobe"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.06274414"/>
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CoatHangerSlimJim"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.06274414"/>
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_GuiltTrip"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.06274414"/>
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_Beg"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.06274414"/>
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PublicScene"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.06274414"/>
                     <attribute id="V2" type="float" value="0.12475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_TrappedInTheInvisibleBox"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_BucketDrumSolo"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CompassionBurnout"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_Sublet"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_EverybodyKnowsThisGuy"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PuncturedLithiumCell"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CardboardInsulation"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.06274414"/>
-                    <attribute id="V2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.12524414"/>
+                    <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CurbsideClinic"/>
-                    <attribute id="U1" type="float" value="0.00024414"/>
-                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_FareInspection"/>
-                    <attribute id="U1" type="float" value="0.06274414"/>
-                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_ChairCheck"/>
-                    <attribute id="U1" type="float" value="0.12524414"/>
-                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_IWasHereFirst"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PigeonLunchRush"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_StormDrainFlashFlood"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_BlueTarpLeanTo"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CulvertSiphon"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SquattersRightsOverpass"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.12524414"/>
                     <attribute id="V2" type="float" value="0.18725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CatalyticConverterSawzall"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SprinklerViolation"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_HOVLane"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_OneStarCitation"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_BakersfieldTuleFog"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_DrainageDitchDigIn"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CurbAlert"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.12524414"/>
-                    <attribute id="V2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.18774414"/>
+                    <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_3AMLawnmowerDisassembly"/>
-                    <attribute id="U1" type="float" value="0.00024414"/>
-                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CopperWireStrip"/>
-                    <attribute id="U1" type="float" value="0.06274414"/>
-                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_Prop47Calculator"/>
-                    <attribute id="U1" type="float" value="0.12524414"/>
-                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_LimeScooterHitAndRun"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_FoilFentHotbox"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_VeniceDrumCircle"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_BARTFabricSeatBiohazard"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PropaneTankSidewalkBBQ"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_UnhousedLecture"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.18774414"/>
                     <attribute id="V2" type="float" value="0.24975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_ErewhonSmoothie"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_OaklandFleaMarket"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_LocalismSurfboardCheck"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_ZoomMassLayoff"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_GarageShakeAndBake"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SquatterAdversePossession"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CVSReceiptScroll"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.18774414"/>
-                    <attribute id="V2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.25024414"/>
+                    <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SideshowMustangDonut"/>
-                    <attribute id="U1" type="float" value="0.00024414"/>
-                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_UsedFoilBlowback"/>
-                    <attribute id="U1" type="float" value="0.06274414"/>
-                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_MuscleBeachRoidRage"/>
-                    <attribute id="U1" type="float" value="0.12524414"/>
-                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_TurnstileEmergencyGate"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_ExtensionCordTap"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_BotoxFillerParalyze"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PolyculeGoogleCalendar"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CatalyticStraightPipeRev"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_GasStationSqueegee"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.25024414"/>
                     <attribute id="V2" type="float" value="0.31225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_FakeServiceVest"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PissJugCatapult"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_GovernorGavinPhotoOp"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PotholeAnkleBreaker"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_NIMBYPublicCommentPeriod"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_DepartmentUnfinishedBusiness"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_MunicipalBudgetHearing"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.25024414"/>
-                    <attribute id="V2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.31274414"/>
+                    <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SidewalkChiropracticAdjustment"/>
-                    <attribute id="U1" type="float" value="0.00024414"/>
-                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PGEPublicSafetyBlackout"/>
-                    <attribute id="U1" type="float" value="0.06274414"/>
-                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_EmergencyBoardwalkSunglasses"/>
-                    <attribute id="U1" type="float" value="0.12524414"/>
-                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_HaywardFaultSeismicRetrofit"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_WholeFoodsHotBarHeist"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_MeetingCouldHaveBeenAScroll"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CaltransLaneClosure"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PopUpTentEncampment"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_ScooterGraveyard"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.31274414"/>
                     <attribute id="V2" type="float" value="0.37475586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PortaPottyTipOver"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_RobotaxiBreakdown"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CostcoSampleCartSideways"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_DMVTicketB047FarWindow"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SelfCheckoutUnexpectedItem"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_Prop13GrandfatheredSmirk"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_TechShuttleBikeLane"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.31274414"/>
-                    <attribute id="V2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.37524414"/>
+                    <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_RaccoonTribunalCompostBins"/>
-                    <attribute id="U1" type="float" value="0.00024414"/>
-                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PurpleAirWildfireRefresh"/>
-                    <attribute id="U1" type="float" value="0.06274414"/>
-                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SeriesBOffsiteTrustFall"/>
-                    <attribute id="U1" type="float" value="0.12524414"/>
-                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_HOABeigePaintDenial"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_NextdoorLostCoyoteThread"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_HostileArchitectureBench"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SparkingUtilityPole"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_EvictedSpinBike"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SidewalkCoolerBonfire"/>
-                    <attribute id="U1" type="float" value="0.50024414"/>
-                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.37524414"/>
                     <attribute id="V2" type="float" value="0.43725586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CaltransConeLabyrinth"/>
-                    <attribute id="U1" type="float" value="0.56274414"/>
-                    <attribute id="U2" type="float" value="0.62475586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_InNOutAnimalStyle"/>
-                    <attribute id="U1" type="float" value="0.62524414"/>
-                    <attribute id="U2" type="float" value="0.68725586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CaltrainHorn"/>
-                    <attribute id="U1" type="float" value="0.68774414"/>
-                    <attribute id="U2" type="float" value="0.74975586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_SixtyDayRentIncrease"/>
-                    <attribute id="U1" type="float" value="0.75024414"/>
-                    <attribute id="U2" type="float" value="0.81225586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_CaltransVest"/>
-                    <attribute id="U1" type="float" value="0.81274414"/>
-                    <attribute id="U2" type="float" value="0.87475586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_StreetSweepCitation"/>
-                    <attribute id="U1" type="float" value="0.87524414"/>
-                    <attribute id="U2" type="float" value="0.93725586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PoolHoursSign"/>
-                    <attribute id="U1" type="float" value="0.93774414"/>
-                    <attribute id="U2" type="float" value="0.99975586"/>
-                    <attribute id="V1" type="float" value="0.37524414"/>
-                    <attribute id="V2" type="float" value="0.43725586"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.43774414"/>
+                    <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_PeachParkingDenial"/>
-                    <attribute id="U1" type="float" value="0.00024414"/>
-                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="Spell_OatMilkLine"/>
-                    <attribute id="U1" type="float" value="0.06274414"/>
-                    <attribute id="U2" type="float" value="0.12475586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_BoardwalkRollerbladeSlalom"/>
-                    <attribute id="U1" type="float" value="0.12524414"/>
-                    <attribute id="U2" type="float" value="0.18725586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_BreakdancerCardboardDrop"/>
-                    <attribute id="U1" type="float" value="0.18774414"/>
-                    <attribute id="U2" type="float" value="0.24975586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_MuscleBeachBroSpotter"/>
-                    <attribute id="U1" type="float" value="0.25024414"/>
-                    <attribute id="U2" type="float" value="0.31225586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_HazmatBackblast"/>
-                    <attribute id="U1" type="float" value="0.31274414"/>
-                    <attribute id="U2" type="float" value="0.37475586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_UnpermittedBleachFogger"/>
-                    <attribute id="U1" type="float" value="0.37524414"/>
-                    <attribute id="U2" type="float" value="0.43725586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_FederalHazmatDeclaration"/>
-                    <attribute id="U1" type="float" value="0.43774414"/>
-                    <attribute id="U2" type="float" value="0.49975586"/>
-                    <attribute id="V1" type="float" value="0.43774414"/>
-                    <attribute id="V2" type="float" value="0.49975586"/>
-                </node>
-                <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_ManholeCoverPopUpBunker"/>
                     <attribute id="U1" type="float" value="0.50024414"/>
                     <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_PalletAndTinArmor"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_BoardwalkRollerbladeSlalom"/>
                     <attribute id="U1" type="float" value="0.56274414"/>
                     <attribute id="U2" type="float" value="0.62475586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_OrovilleSpillwayRupture"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_BreakdancerCardboardDrop"/>
                     <attribute id="U1" type="float" value="0.62524414"/>
                     <attribute id="U2" type="float" value="0.68725586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_EmergencyBrakeHandlePull"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_MuscleBeachBroSpotter"/>
                     <attribute id="U1" type="float" value="0.68774414"/>
                     <attribute id="U2" type="float" value="0.74975586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_ThirdRailOvercharge"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_HazmatBackblast"/>
                     <attribute id="U1" type="float" value="0.75024414"/>
                     <attribute id="U2" type="float" value="0.81225586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_DalyCityTurnbackRunaway"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_UnpermittedBleachFogger"/>
                     <attribute id="U1" type="float" value="0.81274414"/>
                     <attribute id="U2" type="float" value="0.87475586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_OversizedSharpsDisposal"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_FederalHazmatDeclaration"/>
                     <attribute id="U1" type="float" value="0.87524414"/>
                     <attribute id="U2" type="float" value="0.93725586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_FederalMailboxSanctuary"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_ManholeCoverPopUpBunker"/>
                     <attribute id="U1" type="float" value="0.93774414"/>
                     <attribute id="U2" type="float" value="0.99975586"/>
                     <attribute id="V1" type="float" value="0.43774414"/>
                     <attribute id="V2" type="float" value="0.49975586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_StolenCoinstarJackpot"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_PalletAndTinArmor"/>
                     <attribute id="U1" type="float" value="0.00024414"/>
                     <attribute id="U2" type="float" value="0.06225586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_RedCurbHydrantBlowout"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_OrovilleSpillwayRupture"/>
                     <attribute id="U1" type="float" value="0.06274414"/>
                     <attribute id="U2" type="float" value="0.12475586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_AcousticPrivacyPod"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_EmergencyBrakeHandlePull"/>
                     <attribute id="U1" type="float" value="0.12524414"/>
                     <attribute id="U2" type="float" value="0.18725586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_MufflerShopTotem"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_ThirdRailOvercharge"/>
                     <attribute id="U1" type="float" value="0.18774414"/>
                     <attribute id="U2" type="float" value="0.24975586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_BaconWrappedDangerDogCart"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_DalyCityTurnbackRunaway"/>
                     <attribute id="U1" type="float" value="0.25024414"/>
                     <attribute id="U2" type="float" value="0.31225586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_CybertruckHuskOnBlocks"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_OversizedSharpsDisposal"/>
                     <attribute id="U1" type="float" value="0.31274414"/>
                     <attribute id="U2" type="float" value="0.37475586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_AmberAlertMatrixTrailer"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_FederalMailboxSanctuary"/>
                     <attribute id="U1" type="float" value="0.37524414"/>
                     <attribute id="U2" type="float" value="0.43725586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_LoncheraTacoTruck"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_StolenCoinstarJackpot"/>
                     <attribute id="U1" type="float" value="0.43774414"/>
                     <attribute id="U2" type="float" value="0.49975586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
                 </node>
                 <node id="IconUV">
-                    <attribute id="MapKey" type="FixedString" value="Spell_WalkOfFameStarSlam"/>
+                    <attribute id="MapKey" type="FixedString" value="Spell_RedCurbHydrantBlowout"/>
                     <attribute id="U1" type="float" value="0.50024414"/>
                     <attribute id="U2" type="float" value="0.56225586"/>
                     <attribute id="V1" type="float" value="0.50024414"/>
                     <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_AcousticPrivacyPod"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_MufflerShopTotem"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BaconWrappedDangerDogCart"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_CybertruckHuskOnBlocks"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_AmberAlertMatrixTrailer"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_LoncheraTacoTruck"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_WalkOfFameStarSlam"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
+                    <attribute id="V1" type="float" value="0.50024414"/>
+                    <attribute id="V2" type="float" value="0.56225586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SquattersRights_Tenderloin"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BiohazardCondemn"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SquattersRights_Venice"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SquattersRights_BART"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_PlatformRescue"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_WrongPlatform_Express"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_AbandonedCart"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_CEQAEnvironmentalInjunction"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SaturdayGasLeafBlower"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_CoastalCommissionReview"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_ReplyAllWholeCompany"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_WalgreensPlexiglassAisle"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_TherapySettingBoundaries"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_GoogleMapsIntoTraffic"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SantaAnaEmotionally"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_405ThanksgivingGridlock"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
+                    <attribute id="V1" type="float" value="0.56274414"/>
+                    <attribute id="V2" type="float" value="0.62475586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SubstackManifestDestiny"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_GloveBoxCleanout"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_TransbayTubeEarPop"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BetweenTheCars"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_WheelFlangeScreech"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BackpackInTheDoors"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_RedLineEmergencyTrackJump"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_StationAgentIntercomLockdown"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BARTGangwayImpact"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_BARTQualifiedEscape"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_RentedCruiserNoBrakes"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_PalmReadingAggressively"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_PierPressure"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_CivicCenterBioSludgeGeyser"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_RedBagQuarantine"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SteamGrateMiasma"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
+                    <attribute id="V1" type="float" value="0.62524414"/>
+                    <attribute id="V2" type="float" value="0.68725586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_TailpipeDowndraft"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SandbagBreach"/>
+                    <attribute id="U1" type="float" value="0.06274414"/>
+                    <attribute id="U2" type="float" value="0.12475586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_FreewayOverpassCollapse"/>
+                    <attribute id="U1" type="float" value="0.12524414"/>
+                    <attribute id="U2" type="float" value="0.18725586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_SlingPoop_Chunky"/>
+                    <attribute id="U1" type="float" value="0.18774414"/>
+                    <attribute id="U2" type="float" value="0.24975586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_ShoppingCartCharge"/>
+                    <attribute id="U1" type="float" value="0.25024414"/>
+                    <attribute id="U2" type="float" value="0.31225586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_HangTen"/>
+                    <attribute id="U1" type="float" value="0.31274414"/>
+                    <attribute id="U2" type="float" value="0.37475586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_EmotionalSupportHydroflask"/>
+                    <attribute id="U1" type="float" value="0.37524414"/>
+                    <attribute id="U2" type="float" value="0.43725586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_GoldenHour"/>
+                    <attribute id="U1" type="float" value="0.43774414"/>
+                    <attribute id="U2" type="float" value="0.49975586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_DustDevil"/>
+                    <attribute id="U1" type="float" value="0.50024414"/>
+                    <attribute id="U2" type="float" value="0.56225586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_ExpressHop"/>
+                    <attribute id="U1" type="float" value="0.56274414"/>
+                    <attribute id="U2" type="float" value="0.62475586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_TouchGrass"/>
+                    <attribute id="U1" type="float" value="0.62524414"/>
+                    <attribute id="U2" type="float" value="0.68725586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_VibeCheck"/>
+                    <attribute id="U1" type="float" value="0.68774414"/>
+                    <attribute id="U2" type="float" value="0.74975586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_RipCurrent"/>
+                    <attribute id="U1" type="float" value="0.75024414"/>
+                    <attribute id="U2" type="float" value="0.81225586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_DisruptivePivot"/>
+                    <attribute id="U1" type="float" value="0.81274414"/>
+                    <attribute id="U2" type="float" value="0.87475586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_NonDisclosureAgreement"/>
+                    <attribute id="U1" type="float" value="0.87524414"/>
+                    <attribute id="U2" type="float" value="0.93725586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Heatstroke"/>
+                    <attribute id="U1" type="float" value="0.93774414"/>
+                    <attribute id="U2" type="float" value="0.99975586"/>
+                    <attribute id="V1" type="float" value="0.68774414"/>
+                    <attribute id="V2" type="float" value="0.74975586"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_OverpassExhaust"/>
+                    <attribute id="U1" type="float" value="0.00024414"/>
+                    <attribute id="U2" type="float" value="0.06225586"/>
+                    <attribute id="V1" type="float" value="0.75024414"/>
+                    <attribute id="V2" type="float" value="0.81225586"/>
                 </node>
                 <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
