@@ -105,7 +105,7 @@ _spell(OVERPASS, 8, 'HC_Shout_PalletAndTinArmor', 'Corrugated Sheet-Metal & Pall
        'Meets zero California Title 24 building codes, yet survives wildfires, earthquakes and three consecutive Caltrans abatement crews.',
        dict(UseCosts='BonusActionPoint:1;HC_Junk:2', **_self(PALLET, 3)))
 _spell(OVERPASS, 11, 'HC_Target_OrovilleSpillwayRupture', 'Oroville Dam Emergency Spillway Rupture', 'Target_Shatter', 'Spell_Transmutation_CreateWater',
-       'Costs an action and 3 Junk; once per long rest. Enemies in a 6 m radius within 18 m make a Strength save, taking 5d8 Bludgeoning damage, falling Prone and being Slowed for 2 turns on failure, or half damage on success. Water covers the ground for 3 turns.',
+       'Costs an action and 3 Junk; once per long rest. Enemies in a 6 m radius within 18 m make a Strength save, taking 5d8 Bludgeoning damage, falling Prone for 1 turn and being Slowed for 2 turns on failure, or half damage on success. Water covers the ground for 3 turns.',
        'State engineers called it minor seasonal flaking right before half of Butte County floated past Sacramento.',
        dict(UseCosts='ActionPoint:1;HC_Junk:3', Cooldown='OncePerRest', TargetRadius='18', AreaRadius='6',
             SpellProperties='GROUND:CreateSurface(6,3,Water)',
