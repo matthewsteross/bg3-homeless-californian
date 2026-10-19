@@ -194,5 +194,8 @@
  "HC_OBJ_ArtisanalBoneBroth": "Spell_Item_BoneBroth",
  "HC_R13_BONE_BROTH_USE": "Spell_Item_BoneBroth",
  "HC_OBJ_LimeScooterBatteryPack": "Spell_Item_LimeScooterBatteryPack",
- "HC_Projectile_LimeScooterBatteryPack": "Spell_Item_LimeScooterBatteryPack"
+ "HC_Projectile_LimeScooterBatteryPack": "Spell_Item_LimeScooterBatteryPack",
+ "HC_Shout_CaltransPhaseTwo": "Spell_CaltransPhaseTwo",
+ "HC_Target_InTransitionLaneConfiguration": "Spell_InTransitionLaneConfiguration",
+ "HC_Zone_ItsJustAPhase": "Spell_ItsJustAPhase"
 }

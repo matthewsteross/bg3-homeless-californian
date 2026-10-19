@@ -144,7 +144,7 @@
                     <attribute id="UUID" type="guid" value="ddce9474-2ca9-51d0-849b-f113d3c96d78"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending;HC_Target_SquatterAdversePossession;HC_Shout_InNOutAnimalStyleArgument;HC_Zone_SaturdayGasLeafBlower;HC_Shout_RedCurbHydrantBlowout"/>
+                    <attribute id="Spells" type="LSString" value="HC_Target_GuiltTrip;HC_Target_Beg;HC_Target_PermitPending;HC_Target_SquatterAdversePossession;HC_Shout_InNOutAnimalStyleArgument;HC_Zone_SaturdayGasLeafBlower;HC_Shout_RedCurbHydrantBlowout;HC_Shout_CaltransPhaseTwo"/>
                     <attribute id="UUID" type="guid" value="e80ad412-fdf2-5d49-a4fb-4c72445fd8ab"/>
                 </node>
                 <node id="SpellList">
@@ -152,7 +152,7 @@
                     <attribute id="UUID" type="guid" value="78371005-c050-5733-b286-0edbfa9b8468"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator;HC_Target_CaltransLaneClosure;HC_Target_CaltransConeLabyrinth;HC_Target_CoastalCommissionReview;HC_Shout_CybertruckHuskOnBlocks"/>
+                    <attribute id="Spells" type="LSString" value="HC_Zone_BucketDrumSolo;HC_Target_Prop47Calculator;HC_Target_CaltransLaneClosure;HC_Target_CaltransConeLabyrinth;HC_Target_CoastalCommissionReview;HC_Shout_CybertruckHuskOnBlocks;HC_Target_InTransitionLaneConfiguration"/>
                     <attribute id="UUID" type="guid" value="fb6e0d6b-a655-58a2-9609-32e2f64bc0dd"/>
                 </node>
                 <node id="SpellList">
@@ -160,7 +160,7 @@
                     <attribute id="UUID" type="guid" value="9c43433e-1fde-563a-9dea-57398062a490"/>
                 </node>
                 <node id="SpellList">
-                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll;HC_Shout_MunicipalBudgetHearing;HC_Target_SparkingUtilityPole;HC_Shout_CaltransVestRequisition;HC_Shout_LoncheraTacoTruck"/>
+                    <attribute id="Spells" type="LSString" value="HC_Projectile_PuncturedLithiumCell;HC_Target_HOVLane;HC_Shout_CVSReceiptScroll;HC_Shout_MunicipalBudgetHearing;HC_Target_SparkingUtilityPole;HC_Shout_CaltransVestRequisition;HC_Shout_LoncheraTacoTruck;HC_Zone_ItsJustAPhase"/>
                     <attribute id="UUID" type="guid" value="127abd7e-aafd-5dd2-af24-d0182e03c790"/>
                 </node>
                 <node id="SpellList">

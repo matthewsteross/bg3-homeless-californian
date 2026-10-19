@@ -2696,6 +2696,10 @@ def generate_local_expansion():
     round12 = generate_round12(PUBLIC_DIR, add_loca, get_guid)
     for level, spells in round12['base'].items():
         grants['base'].setdefault(level, []).extend(spells)
+    from hc_round14 import generate_round14
+    round14 = generate_round14(PUBLIC_DIR, add_loca, get_guid)
+    for level, spells in round14['base'].items():
+        grants['base'].setdefault(level, []).extend(spells)
     from hc_sub_bart import generate_sub_bart
     from hc_sub_others import generate_sub_others
     from hc_sub_round2 import generate_sub_round2

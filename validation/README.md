@@ -7,7 +7,7 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite has **865 tests** in 72 files (counted by `def test_` per file). The first files are the suite shipped in v0.4.0; everything after it is source-only until a release includes it: rounds 4-12, the four subclass expansions (levels 4-11, shared round-2 spells), the sound map, and every Meshy-generated prop (each prop has its own file with a Divine GR2 round trip, visual resource links, bounds, spell-patch and no-Patriot checks). All of it is file-level checking only and does not show that anything works in game.
+The suite has **867 tests** in 73 files (counted by `def test_` per file). The first files are the suite shipped in v0.4.0; everything after it is source-only until a release includes it: rounds 4-12, the four subclass expansions (levels 4-11, shared round-2 spells), the sound map, and every Meshy-generated prop (each prop has its own file with a Divine GR2 round trip, visual resource links, bounds, spell-patch and no-Patriot checks). All of it is file-level checking only and does not show that anything works in game.
 
 | File | Tests | Covers |
 |---|---:|---|
@@ -58,6 +58,7 @@ The suite has **865 tests** in 72 files (counted by `def test_` per file). The f
 | `test_round11.py` | 12 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_round13.py` | 3 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_round13_items.py` | 5 | Source-only. See the module docstring of the matching hc_*.py file. |
+| `test_round14.py` | 2 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_round2.py` | 21 | Sprinkler Violation, Catalytic Converter Sawzall, One-Star Citation, HOV Lane, Bakersfield Tule Fog, the Decatted Exhaust status, the Notary Street Trade and the Tinfoil Deflector Junk Doctrine |
 | `test_round4.py` | 23 | Source-only. Freeway Directions (no Prone, copied Hold Person save fields and laughter audio/animation), Weather Complaint (cosmetic lines, triggers, lock ordering, reset), Permit Pending (three stages, Bane roll penalties replaced, one-turn Slow approval, 100-HP threshold), donors and vanilla evidence across the five stat layers, icon fallbacks |
 | `test_round5.py` | 5 | Source-only. The 10 round 5 spells and 7 statuses: unique `HC_` names, donors, base/subclass/racial grants, mechanics and surfaces, localization and icon registration |
@@ -83,7 +84,7 @@ The suite has **865 tests** in 72 files (counted by `def test_` per file). The f
 | `test_vestpile.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_walkoffame.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_wardrobeprop.py` | 12 | Source-only. See the module docstring of the matching hc_*.py file. |
-| **Total** | **865** | |
+| **Total** | **867** | |
 
 Like everything else here, these are file-level checks: they do not show that any of it works in game. In particular, none of the round 4-10 or nine-prop
 tests play a spell; `test_round4.py` says in its own test name that its status chain check is "smoke only, not engine execution".
