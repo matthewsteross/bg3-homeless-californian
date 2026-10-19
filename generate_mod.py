@@ -2710,6 +2710,8 @@ def generate_local_expansion():
         subclass_passive_sources.append(source)
     from hc_round13 import generate_round13
     round13 = generate_round13(PUBLIC_DIR, add_loca, get_guid)
+    from hc_round15 import generate_round15
+    subrace_passives = generate_round15(PUBLIC_DIR, add_loca, get_guid)
     base_passives = {}
     for source in (round10, round11, round13):
         for level, names in source['base_passives'].items():
@@ -2780,6 +2782,14 @@ def generate_local_expansion():
         if category == 'Californian' and level == 1:
             old_passives = attrs.get('PassivesAdded', '')
             new_passives = ';'.join(filter(None, [old_passives, *round4['racial_passives']]))
+            line = f'<attribute id="PassivesAdded" type="LSString" value="{escape(new_passives)}"/>'
+            if 'PassivesAdded' in attrs:
+                block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)
+            else:
+                block = block.replace('<attribute id="Level"', line + '\n                    <attribute id="Level"', 1)
+        if category in subrace_passives and level == 1:
+            old_passives = attrs.get('PassivesAdded', '')
+            new_passives = ';'.join(filter(None, [old_passives, *subrace_passives[category]]))
             line = f'<attribute id="PassivesAdded" type="LSString" value="{escape(new_passives)}"/>'
             if 'PassivesAdded' in attrs:
                 block = re.sub(r'<attribute id="PassivesAdded"[^>]*/>', lambda _: line, block, count=1)

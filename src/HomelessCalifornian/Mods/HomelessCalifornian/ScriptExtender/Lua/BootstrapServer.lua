@@ -111,6 +111,8 @@ local HC_STATS = {
     {"HC_UnincorporatedCountyImmunity", "PassiveData"},
     {"HC_ExpressLaneTransponderCheat", "PassiveData"},
     {"HC_InNOutSecretMenuSavant", "PassiveData"},
+    {"HC_SoCalSigAlertSixthSense", "PassiveData"},
+    {"HC_NorCalPreSeedPitchDeck", "PassiveData"},
     {"HC_WeatherComplaint_WET", "PassiveData"},
     {"HC_WeatherComplaint_CHILLED", "PassiveData"},
     {"HC_WeatherComplaint_ICE", "PassiveData"},

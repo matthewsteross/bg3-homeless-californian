@@ -197,5 +197,7 @@
  "HC_Projectile_LimeScooterBatteryPack": "Spell_Item_LimeScooterBatteryPack",
  "HC_Shout_CaltransPhaseTwo": "Spell_CaltransPhaseTwo",
  "HC_Target_InTransitionLaneConfiguration": "Spell_InTransitionLaneConfiguration",
- "HC_Zone_ItsJustAPhase": "Spell_ItsJustAPhase"
+ "HC_Zone_ItsJustAPhase": "Spell_ItsJustAPhase",
+ "HC_SoCalSigAlertSixthSense": "Spell_Passive_SoCalSigAlert",
+ "HC_NorCalPreSeedPitchDeck": "Spell_Passive_NorCalPreSeed"
 }

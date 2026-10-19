@@ -376,6 +376,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="Resistance(Radiant,Resistant)"/>
+                    <attribute id="PassivesAdded" type="LSString" value="HC_SoCalSigAlertSixthSense"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Beachborn"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
@@ -465,7 +466,7 @@
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="Siliconite"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Passive_SiliconiteSynergy"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Passive_SiliconiteSynergy;HC_NorCalPreSeedPitchDeck"/>
                     <attribute id="ProgressionType" type="uint8" value="2"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(0259a9da-2913-5f47-9d65-8ee23e4de2da,,Charisma,,AlwaysPrepared)"/>
                     <attribute id="TableUUID" type="guid" value="8a2123c4-95cf-54db-be01-eb1adeec4da0"/>
