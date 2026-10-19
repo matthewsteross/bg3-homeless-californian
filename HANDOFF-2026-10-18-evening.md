@@ -128,3 +128,8 @@ Nothing from this session has been run in BG3. Unverified: prop spawn on these S
 - Commits: 3f93695 (r13/14 fixes), cd5edb1 (r15), b220c84 (r16). 870 tests pass. Installed pak sha256 starts 45298b91 (91 MB). NOT pushed to GitHub, Nexus ZIP v0.4.7 is now stale (rebuild with make_release.py when Matthew wants to upload).
 - Audio: neither Muse nor Gemini can generate audio; custom sound needs Wwise .bnk/.wem (research in work/team/gemini-bg3-audio.md, unverified). Matthew has not decided.
 - Not built: Round 13 items beyond what exists, Transfer at the Cone reaction, custom audio.
+
+## UPDATE 9 (2026-10-19 night)
+- Three new Meshy props for the Caltrans spells, converted by make_prop.py (cones -> HC_Shout_CaltransPhaseTwo, arrowboard -> HC_Target_InTransitionLaneConfiguration, asphaltpile -> HC_Zone_ItsJustAPhase); triangle cap raised to 9000 for arrowboard and asphaltpile (build scripts and tests). 912 tests pass, commit 6a66380. Pak installed (96 MB, BG3 was closed; Matthew asked me NOT to launch BG3 again without asking, he was watching YouTube).
+- Unverified in game: whether GROUND:Spawn fires from an area-save Shout and from a Zone cone / Target teleport (spawns at the cast point); scale and look of the three props.
+- Muse quota exhausted (resets 2026-10-20 03:26 UTC). Gemini Round 17 brainstorm was almost all duplicates of existing spells, so no Round 17.
