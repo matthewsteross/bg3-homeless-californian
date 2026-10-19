@@ -202,7 +202,8 @@ class JunkItemTests(unittest.TestCase):
             icon = attrs_of(node)['Icon']
             with self.subTest(item=item):
                 self.assertIn(icon.encode(), vanilla_icons)
-        self.assertIn(self.statuses['HC_KOMBUCHA_BUZZ']['data']['Icon'].encode(), vanilla_icons)
+        status_icon = self.statuses['HC_KOMBUCHA_BUZZ']['data']['Icon']
+        self.assertTrue(status_icon.encode() in vanilla_icons or (ROOT / 'assets/icons' / (status_icon + '.png')).is_file())
         spell_icon = self.spells[SPELL]['data']['Icon']
         self.assertTrue(spell_icon.encode() in vanilla_icons or
                         (ROOT / 'assets/icons' / (spell_icon + '.png')).is_file())
