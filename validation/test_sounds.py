@@ -32,8 +32,9 @@ class SoundMapTests(unittest.TestCase):
 
     def test_map_is_not_empty_and_only_names_hc_spells(self):
         self.assertGreaterEqual(len(self.map), 30)
+        own_stats = ''.join(p.read_text(encoding='utf-8') for p in (ROOT / 'src/HomelessCalifornian/Public/HomelessCalifornian/Stats/Generated/Data').glob('*.txt'))
         for spell, sounds in self.map.items():
-            self.assertTrue(spell.startswith('HC_'), spell)
+            self.assertTrue(spell.startswith('HC_') or ('new entry "%s"' % spell) in own_stats, spell)  # class actions keep vanilla-style names but are defined in our own stats
             self.assertTrue(sounds, spell)
             self.assertTrue(set(sounds) <= set(hc_sounds.FIELDS), (spell, sounds))
 

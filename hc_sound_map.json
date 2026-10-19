@@ -621,5 +621,121 @@
  "HC_Shout_WalkOfFameStarSlam": {
   "CastSound": "CrSpell_Cast_ElementalEarth_SeismicStrike",
   "TargetSound": "CrSpell_Impact_ElementalEarth_SeismicStrike"
+ },
+ "HC_Projectile_LimeScooterBatteryPack": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Lightning",
+  "TargetSound": "Action_Impact_Item_ChromaticAttunementThunder"
+ },
+ "HC_Shout_CaltransPhaseTwo": {
+  "CastSound": "CrSpell_Cast_CommandtheTroops",
+  "TargetSound": "CrSpell_Impact_CommandtheTroops"
+ },
+ "HC_Target_InTransitionLaneConfiguration": {
+  "CastSound": "CrSpell_Cast_HagCounterSwap",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_ElementalWarp"
+ },
+ "HC_Zone_ItsJustAPhase": {
+  "CastSound": "Spell_Cast_Damage_Thunder_Thunderwave_L1to3_01",
+  "TargetSound": "CrSpell_Impact_ElementalEarth_SeismicStrike"
+ },
+ "Projectile_SlingPoop": {
+  "CastSound": "CrSpell_Cast_BugbearThrowJavelin"
+ },
+ "Projectile_SlingFentanyl": {
+  "CastSound": "Spell_Cast_Damage_Poison_StinkingCloud_L1to3"
+ },
+ "Projectile_SlingFentanyl_Mass": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Poison"
+ },
+ "Projectile_BiohazardBomb": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Acid",
+  "TargetSound": "CrSpell_Impact_Brewer_MixChangeExplosion_Necrotic"
+ },
+ "Rush_ShoppingCartCharge": {
+  "CastSound": "Action_Cast_TripAttack_Melee"
+ },
+ "Shout_FentLean": {
+  "CastSound": "CrSpell_Cast_UnderBark_Pheromones",
+  "TargetSound": "Spell_Impact_Control_HideousLaughter_L1to3"
+ },
+ "Shout_FentLean_End": {
+  "CastSound": "Spell_Cast_Healing_HealerKitHeal_L4to5"
+ },
+ "Shout_SidewalkScramble": {
+  "CastSound": "Action_Cast_Disengage",
+  "TargetSound": "Action_Impact_Disengage"
+ },
+ "Shout_AggressivePanhandling": {
+  "CastSound": "CrSpell_Cast_ViciousMockery",
+  "TargetSound": "CrSpell_Impact_CoinWhip"
+ },
+ "Shout_FeralScreech": {
+  "CastSound": "CrSpell_Cast_Slayer_SacrificiallyScream",
+  "TargetSound": "CrSpell_Impact_Slayer_SacrificiallyScream"
+ },
+ "Shout_TentEncampment": {
+  "TargetSound": "Spell_Impact_Buff_Barkskin_L1to3"
+ },
+ "Shout_Call311": {
+  "CastSound": "CrSpell_Cast_CallForHelp_ScryingEye"
+ },
+ "Shout_AvocadoToast": {
+  "CastSound": "Spell_Cast_Bard_SongOfRest_L1to3",
+  "TargetSound": "Spell_Impact_Bard_SongOfRest_L1to3"
+ },
+ "Shout_HangTen": {
+  "CastSound": "Spell_Cast_Utility_FeatherFall_L1to3",
+  "TargetSound": "Spell_Impact_Utility_FeatherFall_L1to3"
+ },
+ "Shout_EmotionalSupportHydroflask": {
+  "CastSound": "Spell_Cast_Bard_BardicInspiration_L1to3",
+  "TargetSound": "Spell_Impact_Bard_BardicInspiration_L1to3"
+ },
+ "Shout_GoldenHour": {
+  "CastSound": "CrSpell_Cast_Nightsong_LunarBlessing",
+  "TargetSound": "CrSpell_Impact_Nightsong_LunarBlessing"
+ },
+ "Shout_DustDevil": {
+  "CastSound": "Spell_Cast_Monk_RushoftheGaleSpirits_L1to3",
+  "TargetSound": "Action_Impact_Item_ChromaticAttunementThunder"
+ },
+ "Target_BrokenBottleShank": {
+  "CastSound": "CoinHalberd_Foley_Pierce_Whoosh",
+  "TargetSound": "CoinHalberd_Foley_Pierce_Impact"
+ },
+ "Target_EvictionNotice": {
+  "CastSound": "CrSpell_Cast_BrandOfTheAbsolute",
+  "TargetSound": "CrSpell_Impact_BrandOfTheAbsolute"
+ },
+ "Target_TurnstileHop": {
+  "CastSound": "Action_Cast_Bard_MobileFlourishTeleport"
+ },
+ "Target_ExpressHop": {
+  "CastSound": "Action_Cast_Bard_MobileFlourishTeleport"
+ },
+ "Target_TouchGrass": {
+  "CastSound": "Spell_Cast_Druid_WallOfThorns_L6to8",
+  "TargetSound": "Spell_Impact_Buff_Guidance_L1to3"
+ },
+ "Target_VibeCheck": {
+  "CastSound": "Spell_Cast_Damage_Psychic_ViciousMockery_L1to3",
+  "TargetSound": "Spell_Impact_Damage_Psychic_ViciousMockery_L1to3"
+ },
+ "Target_RipCurrent": {
+  "CastSound": "CrSpell_Cast_Djinni_Inhale",
+  "TargetSound": "CrSpell_Impact_Djinni_Inhale"
+ },
+ "Target_DisruptivePivot": {
+  "CastSound": "Action_Cast_Rogue_SupremeSneak"
+ },
+ "Target_NonDisclosureAgreement": {
+  "CastSound": "Instrument_Bard_Silence"
+ },
+ "Target_Heatstroke": {
+  "CastSound": "CrSpell_Cast_Brewer_MixChangeExplosion_Fire",
+  "TargetSound": "CrSpell_Impact_BrandOfTheAbsolute"
+ },
+ "Zone_OverpassExhaust": {
+  "TargetSound": "CrSpell_Impact_Brewer_MixChangeExplosion_Physical_"
  }
 }
