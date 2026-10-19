@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<save>
+    <version major="4" minor="0" revision="9" build="0" />
+    <region id="Templates">
+        <node id="Templates">
+            <children>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="bc8ed6d0-8987-5112-8108-330826156832" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_GreyMarketDelta8Gummy" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="d47006e9-8a51-453d-b200-9e0d42e9bbab" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_GreyMarketDelta8Gummy" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Spell_Item_Delta8Gummy" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3533b290g3827g5767g8046ge11e5371a23a" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h85e273f8g2ca3g564ega2feg864a3200bf0f" version="1" />
+                    <children>
+                        <node id="OnUsePeaceActions">
+                            <children>
+                                <node id="Action">
+                                    <attribute id="ActionType" type="int32" value="7" />
+                                    <children>
+                                        <node id="Attributes">
+                                            <attribute id="Animation" type="FixedString" value="895ce382-397d-4b9a-9e8f-6ee3b1ff3a13" />
+                                            <attribute id="Conditions" type="LSString" value="" />
+                                            <attribute id="Consume" type="bool" value="True" />
+                                            <attribute id="StatsId" type="FixedString" value="HC_R13_DELTA8_USE" />
+                                            <attribute id="StatusDuration" type="int32" value="0" />
+                                        </node>
+                                    </children>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="290ba757-0be1-5459-ad62-00bcd901096b" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_ArtisanalBoneBroth" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="d47006e9-8a51-453d-b200-9e0d42e9bbab" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_ArtisanalBoneBroth" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Spell_Item_BoneBroth" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd16958d8g617eg5cf1g9725g90f04a86f1a7" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="he66b7880g49bbg52e5gbbbeg34da9473f9b1" version="1" />
+                    <children>
+                        <node id="OnUsePeaceActions">
+                            <children>
+                                <node id="Action">
+                                    <attribute id="ActionType" type="int32" value="7" />
+                                    <children>
+                                        <node id="Attributes">
+                                            <attribute id="Animation" type="FixedString" value="895ce382-397d-4b9a-9e8f-6ee3b1ff3a13" />
+                                            <attribute id="Conditions" type="LSString" value="" />
+                                            <attribute id="Consume" type="bool" value="True" />
+                                            <attribute id="StatsId" type="FixedString" value="HC_R13_BONE_BROTH_USE" />
+                                            <attribute id="StatusDuration" type="int32" value="0" />
+                                        </node>
+                                    </children>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+                <node id="GameObjects">
+                    <attribute id="MapKey" type="FixedString" value="a2026909-7e62-58ec-a298-cc66acc86ac2" />
+                    <attribute id="Name" type="LSString" value="HC_OBJ_LimeScooterBatteryPack" />
+                    <attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+                    <attribute id="Stats" type="FixedString" value="HC_OBJ_LimeScooterBatteryPack" />
+                    <attribute id="Type" type="FixedString" value="item" />
+                    <attribute id="Icon" type="FixedString" value="Spell_Item_LimeScooterBatteryPack" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd7874dceg0e40g5c9eg8a4bg86b6bc41f95d" version="1" />
+                    <attribute id="Description" type="TranslatedString" handle="h0c263933g7b93g5b60g8ab8g51d6b14fe763" version="1" />
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

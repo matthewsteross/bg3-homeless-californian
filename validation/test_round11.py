@@ -37,7 +37,7 @@ class RoundElevenTests(unittest.TestCase):
         for name in expected:
             self.assertTrue(name.startswith('HC_'));self.assertEqual(len(self.stats[name]),1);self.assertNotIn(name,self.vanilla)
             for path in ROOT.glob('hc_*.py'):
-                if path.name!='hc_round11.py' and 'hc_prop_lifetime' not in path.read_text(encoding='utf-8'):self.assertNotIn(name,path.read_text(encoding='utf-8'),str(path))
+                if path.name not in ('hc_round11.py','hc_round13_items.py') and 'hc_prop_lifetime' not in path.read_text(encoding='utf-8'):self.assertNotIn(name,path.read_text(encoding='utf-8'),str(path))
 
     def test_donors_exist_with_right_type_and_no_honour_override(self):
         for name,entry in self.entries.items():

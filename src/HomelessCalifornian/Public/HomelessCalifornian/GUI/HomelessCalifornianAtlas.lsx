@@ -2287,6 +2287,27 @@
                     <attribute id="V2" type="float" value="0.34362793"/>
                 </node>
                 <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Item_Delta8Gummy"/>
+                    <attribute id="U1" type="float" value="0.18762207"/>
+                    <attribute id="U2" type="float" value="0.21862793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Item_BoneBroth"/>
+                    <attribute id="U1" type="float" value="0.21887207"/>
+                    <attribute id="U2" type="float" value="0.24987793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Item_LimeScooterBatteryPack"/>
+                    <attribute id="U1" type="float" value="0.25012207"/>
+                    <attribute id="U2" type="float" value="0.28112793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
                     <attribute id="U1" type="float" value="0.03137207"/>
                     <attribute id="U2" type="float" value="0.06237793"/>

@@ -187,5 +187,12 @@
  "HC_FastTrackCEQAExemption": "Spell_Passive_FastTrackCEQAExemption",
  "HC_UnincorporatedCountyImmunity": "Spell_Passive_UnincorporatedCountyImmunity",
  "HC_ExpressLaneTransponderCheat": "Spell_Passive_ExpressLaneTransponderCheat",
- "HC_InNOutSecretMenuSavant": "Spell_Passive_InNOutSecretMenuSavant"
+ "HC_InNOutSecretMenuSavant": "Spell_Passive_InNOutSecretMenuSavant",
+ "HC_OBJ_GreyMarketDelta8Gummy": "Spell_Item_Delta8Gummy",
+ "HC_R13_DELTA8_EFFECT": "Spell_Item_Delta8Gummy",
+ "HC_R13_DELTA8_USE": "Spell_Item_Delta8Gummy",
+ "HC_OBJ_ArtisanalBoneBroth": "Spell_Item_BoneBroth",
+ "HC_R13_BONE_BROTH_USE": "Spell_Item_BoneBroth",
+ "HC_OBJ_LimeScooterBatteryPack": "Spell_Item_LimeScooterBatteryPack",
+ "HC_Projectile_LimeScooterBatteryPack": "Spell_Item_LimeScooterBatteryPack"
 }

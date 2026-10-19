@@ -2909,6 +2909,8 @@ def main():
     generate_walkoffame(PUBLIC_DIR, add_loca, get_guid)
     from hc_lingerie import generate_lingerie
     generate_lingerie(PUBLIC_DIR, add_loca, get_guid)
+    from hc_round13_items import generate_round13_items
+    generate_round13_items(PUBLIC_DIR, add_loca, get_guid)
     from hc_proplua import generate_proplua
     generate_proplua(MODS_DIR, PUBLIC_DIR)
     from hc_sounds import apply_sounds
