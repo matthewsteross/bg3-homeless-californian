@@ -131,7 +131,7 @@
     <content contentuid="h19b47ee0g1ac4g50f3g8ddagf13fad930a0b" version="1">Hang Ten</content>
     <content contentuid="he018788fg3006g52a5g9ac6g1c9ef6efa3e2" version="1">Catch the cosmic Pacific swell. Increases movement speed by 3m and grants immunity to difficult terrain and slipping on ice or grease for 2 turns.</content>
     <content contentuid="h65ba2040gfdf7g5c83g8b12gc4c4876b049f" version="1">Vibe Check</content>
-    <content contentuid="hf5941ea7gc52eg5496ga6edg04bf9923705c" version="1">Subject a target's consciousness to a brutal seed-stage vibe check. Target must succeed a DC Wisdom saving throw or break concentration and become Vibe Checked.</content>
+    <content contentuid="hf5941ea7gc52eg5496ga6edg04bf9923705c" version="1">Subject a target's consciousness to a brutal seed-stage vibe check. Target must succeed on a Wisdom saving throw or break concentration and become Vibe Checked.</content>
     <content contentuid="h24075f7egb4a9g55fag84fdg449d5356535b" version="1">Earthquake Sense</content>
     <content contentuid="hc5101bd0gdb24g5aeega41dga2dfb614c23c" version="1">Born on the San Andreas Fault, you possess impeccable footing. You cannot be knocked Prone.</content>
     <content contentuid="h4f0ddbcagdca7g569eg9eedgc52efbff631e" version="1">405 Commute Veteran</content>
@@ -354,8 +354,8 @@
     <content contentuid="hf39b7a05g4797g5a6dg8b1cg1b59d8c4422f" version="1">3 stacks. No Bonus Action; movement reduced by 3 m. Each successful end-of-turn Wisdom save removes 1 stack.</content>
     <content contentuid="hc2e2d6b6gaed0g5f8fga086gc2d2b4cff234" version="1">Permit Pending (2 stacks)</content>
     <content contentuid="hbbf655bdg732cg545dgb87egf4cad78d7f77" version="1">2 stacks. No Bonus Action; movement reduced by 3 m. Each successful end-of-turn Wisdom save removes 1 stack.</content>
-    <content contentuid="he300ef8eg4a9cg5cbdga5feg261ab0a84c36" version="1">Permit Pending (1 stacks)</content>
-    <content contentuid="h91e82189g6f04g58b4g9ca1gd27e8aebac12" version="1">1 stacks. No Bonus Action; movement reduced by 3 m. Each successful end-of-turn Wisdom save removes 1 stack.</content>
+    <content contentuid="he300ef8eg4a9cg5cbdga5feg261ab0a84c36" version="1">Permit Pending (1 stack)</content>
+    <content contentuid="h91e82189g6f04g58b4g9ca1gd27e8aebac12" version="1">1 stack. No Bonus Action; movement reduced by 3 m. Each successful end-of-turn Wisdom save removes 1 stack.</content>
     <content contentuid="hc4c04195gdea2g5fd6gb5adg37ab36effe1d" version="1">Approved, pending review.</content>
     <content contentuid="h1671d128g90f7g56a2ga4f0g15bea0df6014" version="1">Slowed for 1 turn.</content>
     <content contentuid="h14133ff6ge97bg570cgb5a1g6618be79871f" version="1">Freeway Directions</content>
@@ -819,7 +819,7 @@
     <content contentuid="h445a96d8g6f98g5485g89c5g60ef4dfb77ec" version="1">Lookout</content>
     <content contentuid="h1d59e65dg9183g5f5eg90ccg15e507d645a9" version="1">Advantage on Perception and Stealth ability checks. Notice the trouble before it notices your address.</content>
     <content contentuid="h0a95d8cbg4c4fg5bcbg8466g48d688f9eba9" version="1">Can Collector</content>
-    <content contentuid="hfbb9dfc8ge5f7g5c3dg9c00gc5111f024a5a" version="1">Advantage on Athletics and SleightOfHand ability checks. Every piece of crushed aluminum is cash if you carry enough bags of it.</content>
+    <content contentuid="hfbb9dfc8ge5f7g5c3dg9c00gc5111f024a5a" version="1">Advantage on Athletics and Sleight of Hand ability checks. Every piece of crushed aluminum is cash if you carry enough bags of it.</content>
     <content contentuid="h6292e568gb227g558cg8c2cg9e0fc2e8b143" version="1">Busker</content>
     <content contentuid="h42ffe058g3cb9g5c0cgbfb6ga51f0f45f4a5" version="1">Advantage on Performance and Insight ability checks. You know how to hold a crowd, catch a dropped copper, and sense when transit security is coming down the stairs.</content>
     <content contentuid="h70e24206g2369g53dbga4fag12aebaee3600" version="1">Squeegee Technician</content>

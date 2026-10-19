@@ -110,8 +110,8 @@ def generate_round4(public_dir, add_loca, get_guid):
         name = f'HC_PERMIT_PENDING_{stage}'
         following = f'HC_PERMIT_PENDING_{stage - 1}' if stage > 1 else 'HC_PERMIT_APPROVED'
         duration = '-1' if stage > 1 else '1'
-        emit('Status', name, 'StatusData', 'BANE', f'Permit Pending ({stage} stacks)',
-             f'{stage} stacks. No Bonus Action; movement reduced by 3 m. Each successful end-of-turn Wisdom save removes 1 stack.',
+        emit('Status', name, 'StatusData', 'BANE', f'Permit Pending ({stage} stack{"" if stage == 1 else "s"})',
+             f'{stage} stack{"" if stage == 1 else "s"}. No Bonus Action; movement reduced by 3 m. Each successful end-of-turn Wisdom save removes 1 stack.',
              StatusType='BOOST', StackId='HC_PERMIT_PENDING', StackType='Overwrite',
              TickType='EndTurn', Boosts='ActionResourceBlock(BonusActionPoint);ActionResource(Movement,-3,0)',
              RemoveConditions=PERMIT_SAVE, RemoveEvents='OnTurn', TooltipSave='Wisdom',

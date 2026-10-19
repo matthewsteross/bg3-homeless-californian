@@ -21,7 +21,7 @@ def generate_choices(public_dir, add_loca, get_guid):
     blocks = []
     for key, name, first, second, flavor in options:
         title = add_loca(key + '_Name', name)
-        description = add_loca(key + '_Description', f'Advantage on {first} and {second} ability checks. {flavor}')
+        description = add_loca(key + '_Description', f'Advantage on {first.replace("SleightOfHand", "Sleight of Hand")} and {second.replace("SleightOfHand", "Sleight of Hand")} ability checks. {flavor}')
         blocks.append(f'''new entry "{key}"
 type "PassiveData"
 data "DisplayName" "{title};1"
