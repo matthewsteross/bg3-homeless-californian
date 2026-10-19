@@ -2343,6 +2343,34 @@
                     <attribute id="V2" type="float" value="0.34362793"/>
                 </node>
                 <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Passive_SoundBath"/>
+                    <attribute id="U1" type="float" value="0.43762207"/>
+                    <attribute id="U2" type="float" value="0.46862793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Passive_CurbsideMattress"/>
+                    <attribute id="U1" type="float" value="0.46887207"/>
+                    <attribute id="U2" type="float" value="0.49987793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Status_SoundBath"/>
+                    <attribute id="U1" type="float" value="0.50012207"/>
+                    <attribute id="U2" type="float" value="0.53112793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Status_CurbsideMattress"/>
+                    <attribute id="U1" type="float" value="0.53137207"/>
+                    <attribute id="U2" type="float" value="0.56237793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
                     <attribute id="U1" type="float" value="0.03137207"/>
                     <attribute id="U2" type="float" value="0.06237793"/>

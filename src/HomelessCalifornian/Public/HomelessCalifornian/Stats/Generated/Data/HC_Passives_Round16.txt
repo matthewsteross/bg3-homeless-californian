@@ -1,0 +1,13 @@
+new entry "HC_SunsetStripSoundBath"
+type "PassiveData"
+data "DisplayName" "h6798bb8eg92a4g514cgb629g6b33ff78fa5f;1"
+data "Description" "h096d6e46ge328g5856g932dgceb47725907c;1"
+data "Properties" "Highlighted"
+data "Icon" "Spell_Passive_SoundBath"
+
+new entry "HC_CurbsideMattressAppraisal"
+type "PassiveData"
+data "DisplayName" "hfba6a0e9gc0f9g5994gaa2bgefd1a3b5b561;1"
+data "Description" "h6885a978g3e34g5173gb762gb86c126e6da5;1"
+data "Properties" "Highlighted"
+data "Icon" "Spell_Passive_CurbsideMattress"

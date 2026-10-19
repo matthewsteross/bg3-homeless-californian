@@ -75,7 +75,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(HC_Junk,2,0)"/>
                     <attribute id="Level" type="uint8" value="5"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack;HC_CurbsideMattressAppraisal"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(e14b527d-518d-5108-bf2b-65f14371a0b5);AddSpells(e80ad412-fdf2-5d49-a4fb-4c72445fd8ab)"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>

@@ -2712,8 +2712,10 @@ def generate_local_expansion():
     round13 = generate_round13(PUBLIC_DIR, add_loca, get_guid)
     from hc_round15 import generate_round15
     subrace_passives = generate_round15(PUBLIC_DIR, add_loca, get_guid)
+    from hc_round16 import generate_round16
+    round16 = generate_round16(PUBLIC_DIR, add_loca, get_guid)
     base_passives = {}
-    for source in (round10, round11, round13):
+    for source in (round10, round11, round13, round16):
         for level, names in source['base_passives'].items():
             base_passives.setdefault(level, []).extend(names)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')

@@ -14,7 +14,41 @@ Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", function(object, status
     end
 end)
 
-Ext.Utils.Print("[HomelessCalifornian] prop cleanup script loaded")
+-- Camp features (Round 16): apply the rest statuses; the statuses themselves carry the numbers.
+local function hc_party()
+    local members = {}
+    local ok, rows = pcall(function() return Osi.DB_PartyMembers:Get(nil) end)
+    if ok and rows then
+        for _, row in ipairs(rows) do
+            members[#members + 1] = row[1]
+        end
+    end
+    return members
+end
+
+local function hc_has(character, passive)
+    local ok, result = pcall(Osi.HasPassive, character, passive)
+    return ok and (result == 1 or result == true)
+end
+
+Ext.Osiris.RegisterListener("ShortRested", 1, "after", function(character)
+    if not hc_has(character, "HC_SunsetStripSoundBath") then
+        return
+    end
+    for _, member in ipairs(hc_party()) do
+        pcall(Osi.ApplyStatus, member, "HC_SOUND_BATH", 0, 1, character)
+    end
+end)
+
+Ext.Osiris.RegisterListener("LongRestFinished", 0, "after", function()
+    for _, member in ipairs(hc_party()) do
+        if hc_has(member, "HC_CurbsideMattressAppraisal") then
+            pcall(Osi.ApplyStatus, member, "HC_CURBSIDE_APPRAISAL", -1, 1, member)
+        end
+    end
+end)
+
+Ext.Utils.Print("[HomelessCalifornian] prop cleanup and camp script loaded")
 
 -- ===== Self-test (dormant unless the flag file exists) =====
 -- Create HC_SELFTEST.txt (any content) in the Script Extender folder, start the game and load a save.
@@ -113,6 +147,8 @@ local HC_STATS = {
     {"HC_InNOutSecretMenuSavant", "PassiveData"},
     {"HC_SoCalSigAlertSixthSense", "PassiveData"},
     {"HC_NorCalPreSeedPitchDeck", "PassiveData"},
+    {"HC_SunsetStripSoundBath", "PassiveData"},
+    {"HC_CurbsideMattressAppraisal", "PassiveData"},
     {"HC_WeatherComplaint_WET", "PassiveData"},
     {"HC_WeatherComplaint_CHILLED", "PassiveData"},
     {"HC_WeatherComplaint_ICE", "PassiveData"},
@@ -347,6 +383,8 @@ local HC_STATS = {
     {"HC_R13_DELTA8_EFFECT", "StatusData"},
     {"HC_R13_DELTA8_USE", "StatusData"},
     {"HC_R13_BONE_BROTH_USE", "StatusData"},
+    {"HC_SOUND_BATH", "StatusData"},
+    {"HC_CURBSIDE_APPRAISAL", "StatusData"},
     {"HC_DECAT_EXHAUST", "StatusData"},
     {"HC_FREEWAY_DIRECTIONS", "StatusData"},
     {"HC_WEATHER_WET", "StatusData"},

@@ -199,5 +199,9 @@
  "HC_Target_InTransitionLaneConfiguration": "Spell_InTransitionLaneConfiguration",
  "HC_Zone_ItsJustAPhase": "Spell_ItsJustAPhase",
  "HC_SoCalSigAlertSixthSense": "Spell_Passive_SoCalSigAlert",
- "HC_NorCalPreSeedPitchDeck": "Spell_Passive_NorCalPreSeed"
+ "HC_NorCalPreSeedPitchDeck": "Spell_Passive_NorCalPreSeed",
+ "HC_SunsetStripSoundBath": "Spell_Passive_SoundBath",
+ "HC_CurbsideMattressAppraisal": "Spell_Passive_CurbsideMattress",
+ "HC_SOUND_BATH": "Spell_Status_SoundBath",
+ "HC_CURBSIDE_APPRAISAL": "Spell_Status_CurbsideMattress"
 }
