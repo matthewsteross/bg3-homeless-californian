@@ -2259,6 +2259,34 @@
                     <attribute id="V2" type="float" value="0.34362793"/>
                 </node>
                 <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Passive_FastTrackCEQAExemption"/>
+                    <attribute id="U1" type="float" value="0.06262207"/>
+                    <attribute id="U2" type="float" value="0.09362793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Passive_UnincorporatedCountyImmunity"/>
+                    <attribute id="U1" type="float" value="0.09387207"/>
+                    <attribute id="U2" type="float" value="0.12487793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Passive_ExpressLaneTransponderCheat"/>
+                    <attribute id="U1" type="float" value="0.12512207"/>
+                    <attribute id="U2" type="float" value="0.15612793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Passive_InNOutSecretMenuSavant"/>
+                    <attribute id="U1" type="float" value="0.15637207"/>
+                    <attribute id="U2" type="float" value="0.18737793"/>
+                    <attribute id="V1" type="float" value="0.31262207"/>
+                    <attribute id="V2" type="float" value="0.34362793"/>
+                </node>
+                <node id="IconUV">
                     <attribute id="MapKey" type="FixedString" value="HomelessCalifornian"/>
                     <attribute id="U1" type="float" value="0.03137207"/>
                     <attribute id="U2" type="float" value="0.06237793"/>

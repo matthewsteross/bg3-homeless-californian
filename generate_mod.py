@@ -2704,8 +2704,10 @@ def generate_local_expansion():
             for level, spells in levels.items():
                 grants['subclasses'].setdefault(category, {}).setdefault(level, []).extend(spells)
         subclass_passive_sources.append(source)
+    from hc_round13 import generate_round13
+    round13 = generate_round13(PUBLIC_DIR, add_loca, get_guid)
     base_passives = {}
-    for source in (round10, round11):
+    for source in (round10, round11, round13):
         for level, names in source['base_passives'].items():
             base_passives.setdefault(level, []).extend(names)
     lists_path = os.path.join(PUBLIC_DIR, 'Lists', 'SpellLists.lsx')

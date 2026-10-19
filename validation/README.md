@@ -7,7 +7,7 @@ python -m unittest discover -s validation -q
 py -3 validation/validate.py --pak dist/HomelessCalifornian.pak
 ```
 
-The suite has **854 tests** in 69 files (counted by `def test_` per file). The first files are the suite shipped in v0.4.0; everything after it is source-only until a release includes it: rounds 4-12, the four subclass expansions (levels 4-11, shared round-2 spells), the sound map, and every Meshy-generated prop (each prop has its own file with a Divine GR2 round trip, visual resource links, bounds, spell-patch and no-Patriot checks). All of it is file-level checking only and does not show that anything works in game.
+The suite has **860 tests** in 71 files (counted by `def test_` per file). The first files are the suite shipped in v0.4.0; everything after it is source-only until a release includes it: rounds 4-12, the four subclass expansions (levels 4-11, shared round-2 spells), the sound map, and every Meshy-generated prop (each prop has its own file with a Divine GR2 round trip, visual resource links, bounds, spell-patch and no-Patriot checks). All of it is file-level checking only and does not show that anything works in game.
 
 | File | Tests | Covers |
 |---|---:|---|
@@ -30,6 +30,7 @@ The suite has **854 tests** in 69 files (counted by `def test_` per file). The f
 | `test_hazmatsign.py` | 15 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_hotbar.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_hydrant.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
+| `test_icons_apply.py` | 3 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_innout.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_junk_items.py` | 10 | The Curb Alert spell and the four junk items it grants (Caltrans Detour Sign, Duct-Taped High-Tops, Lukewarm Gas Station Kombucha, Tin-Foil Sun Visor) |
 | `test_kit_additions.py` | 11 | Squeegee Technician, Cardboard Insulator and NIMBY Zoning Defense |
@@ -55,6 +56,7 @@ The suite has **854 tests** in 69 files (counted by `def test_` per file). The f
 | `test_robotaxi.py` | 12 | Source-only. The Broken-Down Robotaxi prop and spell (same model, template and spawn-spell checks, the movement and Dexterity-save-advantage status, Siliconite level-5 grant, GUID uniqueness) |
 | `test_round10.py` | 24 | Source-only. The 9 round 10 spells, the Caltrans Safety Vest (rare light armour, inherited AC and Dexterity, Hi-Vis Authority equip passive), the Rent-Stabilized Grit passive (HP-gated boost passive at base level 9) and 5 statuses: unique `HC_` names, donors (none overridden in Honour), grant levels, costs and cooldowns, enemy-only targeting, failed-save-only enemy effects, vanilla precedent for every boost and functor, localization and a check for foreign-mod references in generated text |
 | `test_round11.py` | 12 | Source-only. See the module docstring of the matching hc_*.py file. |
+| `test_round13.py` | 3 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_round2.py` | 21 | Sprinkler Violation, Catalytic Converter Sawzall, One-Star Citation, HOV Lane, Bakersfield Tule Fog, the Decatted Exhaust status, the Notary Street Trade and the Tinfoil Deflector Junk Doctrine |
 | `test_round4.py` | 23 | Source-only. Freeway Directions (no Prone, copied Hold Person save fields and laughter audio/animation), Weather Complaint (cosmetic lines, triggers, lock ordering, reset), Permit Pending (three stages, Bane roll penalties replaced, one-turn Slow approval, 100-HP threshold), donors and vanilla evidence across the five stat layers, icon fallbacks |
 | `test_round5.py` | 5 | Source-only. The 10 round 5 spells and 7 statuses: unique `HC_` names, donors, base/subclass/racial grants, mechanics and surfaces, localization and icon registration |
@@ -80,7 +82,7 @@ The suite has **854 tests** in 69 files (counted by `def test_` per file). The f
 | `test_vestpile.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_walkoffame.py` | 14 | Source-only. See the module docstring of the matching hc_*.py file. |
 | `test_wardrobeprop.py` | 12 | Source-only. See the module docstring of the matching hc_*.py file. |
-| **Total** | **854** | |
+| **Total** | **860** | |
 
 Like everything else here, these are file-level checks: they do not show that any of it works in game. In particular, none of the round 4-10 or nine-prop
 tests play a spell; `test_round4.py` says in its own test name that its status chain check is "smoke only, not engine execution".

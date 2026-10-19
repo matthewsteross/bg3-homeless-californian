@@ -183,5 +183,9 @@
  "VIBE_CHECKED": "Spell_Status_VIBE_CHECKED",
  "GOLDEN_HOUR_GLOW": "Spell_Status_GOLDEN_HOUR_GLOW",
  "DISRUPTIVE_PIVOT_ADV": "Spell_Status_DISRUPTIVE_PIVOT_ADV",
- "HEATSTROKE": "Spell_Status_HEATSTROKE"
+ "HEATSTROKE": "Spell_Status_HEATSTROKE",
+ "HC_FastTrackCEQAExemption": "Spell_Passive_FastTrackCEQAExemption",
+ "HC_UnincorporatedCountyImmunity": "Spell_Passive_UnincorporatedCountyImmunity",
+ "HC_ExpressLaneTransponderCheat": "Spell_Passive_ExpressLaneTransponderCheat",
+ "HC_InNOutSecretMenuSavant": "Spell_Passive_InNOutSecretMenuSavant"
 }

@@ -63,6 +63,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="PassivesAdded" type="LSString" value="HC_FastTrackCEQAExemption"/>
                     <attribute id="Level" type="uint8" value="4"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -84,7 +85,7 @@
                     <attribute id="Selectors" type="LSString" value="AddSpells(43874101-0a25-537d-a720-49a411e9f321)"/>
                     <attribute id="Level" type="uint8" value="6"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="RestorativeLean;UnkillableVagrant"/>
+                    <attribute id="PassivesAdded" type="LSString" value="RestorativeLean;UnkillableVagrant;HC_UnincorporatedCountyImmunity"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="f8a9baee-54e4-54d5-9fff-9b6116ff02df"/>
@@ -99,6 +100,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="PassivesAdded" type="LSString" value="HC_ExpressLaneTransponderCheat"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(78371005-c050-5733-b286-0edbfa9b8468)"/>
                     <attribute id="Level" type="uint8" value="8"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
@@ -120,7 +122,7 @@
                     <attribute id="Selectors" type="LSString" value="AddSpells(9c43433e-1fde-563a-9dea-57398062a490)"/>
                     <attribute id="Level" type="uint8" value="10"/>
                     <attribute id="Name" type="LSString" value="HomelessCalifornian"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EncampmentSweepInstinct;HC_UnlimitedPTOGuiltTrip"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EncampmentSweepInstinct;HC_UnlimitedPTOGuiltTrip;HC_InNOutSecretMenuSavant"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="ebe78a11-b5b6-5966-9d54-01438e25d35c"/>
                     <attribute id="UUID" type="guid" value="092ae5d1-23be-5322-8946-7445ab9487ea"/>
