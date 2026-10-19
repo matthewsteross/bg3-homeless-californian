@@ -1,0 +1,17 @@
+{
+ "id": "01a1566d-2521-77ab-bb29-98ecade0fa76",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 3429709815,
+ "prompt": "a roadwork arrow board trailer: a rolling black panel of amber light bulbs forming a lane-closure arrow on a yellow and black trailer with wheels, weathered, game prop",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792451355950,
+ "progress": 100,
+ "started_at": 1792451355955,
+ "finished_at": 1792451383877,
+ "task_error": null,
+ "consumed_credits": 10
+}

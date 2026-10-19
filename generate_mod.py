@@ -2895,6 +2895,12 @@ def main():
     generate_palmfire(PUBLIC_DIR, add_loca, get_guid)
     from hc_vestpile import generate_vestpile
     generate_vestpile(PUBLIC_DIR, add_loca, get_guid)
+    from hc_cones import generate_cones
+    generate_cones(PUBLIC_DIR, add_loca, get_guid)
+    from hc_arrowboard import generate_arrowboard
+    generate_arrowboard(PUBLIC_DIR, add_loca, get_guid)
+    from hc_asphaltpile import generate_asphaltpile
+    generate_asphaltpile(PUBLIC_DIR, add_loca, get_guid)
     from hc_coyotesign import generate_coyotesign
     generate_coyotesign(PUBLIC_DIR, add_loca, get_guid)
     from hc_overpassshack import generate_overpassshack

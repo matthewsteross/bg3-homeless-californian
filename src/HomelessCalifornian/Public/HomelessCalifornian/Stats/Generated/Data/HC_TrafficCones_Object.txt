@@ -1,0 +1,7 @@
+new entry "HC_TrafficCones_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "60479d93-211d-5954-befa-e6b128d12970"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

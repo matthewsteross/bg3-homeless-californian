@@ -1,0 +1,17 @@
+{
+ "id": "01a1566d-72ed-7037-aea4-7af84090d593",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 567636506,
+ "prompt": "a fresh steaming pile of black asphalt with a worn steel shovel stuck in it and a small orange cone on top, game prop, realistic",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792451375866,
+ "progress": 100,
+ "started_at": 1792451375871,
+ "finished_at": 1792451407177,
+ "task_error": null,
+ "consumed_credits": 10
+}

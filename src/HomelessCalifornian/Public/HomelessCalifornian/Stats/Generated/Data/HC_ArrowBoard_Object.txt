@@ -1,0 +1,7 @@
+new entry "HC_ArrowBoard_Object"
+type "Object"
+using "_BaseItem"
+data "RootTemplate" "393e3e8a-c92f-576b-883f-94a347e3610a"
+data "Weight" "120"
+data "GameSize" "Large"
+data "Vitality" "-1"

@@ -1,0 +1,17 @@
+{
+ "id": "01a1566d-248b-7620-a0b1-aadcc2cde22e",
+ "type": "text-to-3d-refine",
+ "mode": "refine",
+ "name": "",
+ "model_type": "standard",
+ "seed": 520966208,
+ "prompt": "a tight cluster of five faded orange and white striped traffic cones with a reflective collar, scuffed and stacked unevenly, game prop, realistic painted",
+ "texture_prompt": "",
+ "status": "SUCCEEDED",
+ "created_at": 1792451355801,
+ "progress": 100,
+ "started_at": 1792451355807,
+ "finished_at": 1792451394534,
+ "task_error": null,
+ "consumed_credits": 10
+}
