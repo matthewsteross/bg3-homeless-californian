@@ -2908,7 +2908,7 @@ def main():
     from hc_lingerie import generate_lingerie
     generate_lingerie(PUBLIC_DIR, add_loca, get_guid)
     from hc_proplua import generate_proplua
-    generate_proplua(MODS_DIR)
+    generate_proplua(MODS_DIR, PUBLIC_DIR)
     from hc_sounds import apply_sounds
     print(f'Meme sounds applied to {apply_sounds(PUBLIC_DIR)} spells')
     generate_localization()

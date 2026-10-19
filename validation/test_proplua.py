@@ -24,7 +24,11 @@ class PropLuaTests(unittest.TestCase):
         built = ROOT / 'src/HomelessCalifornian/Mods/HomelessCalifornian/ScriptExtender/Lua/BootstrapServer.lua'
         if not built.is_file():
             self.skipTest('built tree missing')
-        self.assertEqual(built.read_text(encoding='utf-8'), hc_proplua.LUA)
+        text = built.read_text(encoding='utf-8')
+        self.assertTrue(text.startswith(hc_proplua.LUA))
+        self.assertIn('HC_SELFTEST.txt', text)
+        self.assertIn('"HC_Shout_DumpsterDive"', text)
+        self.assertNotIn('@@', text)
 
 
 if __name__ == '__main__':
