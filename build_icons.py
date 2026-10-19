@@ -21,6 +21,13 @@ GAME_CLASS_ICONS_DIR = os.path.join(PUBLIC_GAME_DIR, "Assets", "ClassIcons")
 GAME_HOTBAR_DIR = os.path.join(GAME_CLASS_ICONS_DIR, "hotbar")
 GAME_LOWRES_CLASS_DIR = os.path.join(PUBLIC_GAME_DIR, "AssetsLowRes", "ClassIcons")
 GAME_LOWRES_HOTBAR_DIR = os.path.join(GAME_LOWRES_CLASS_DIR, "hotbar")
+def save_dds_best(img, path):
+    """DXT1 (half the size) when the image is fully opaque, DXT5 otherwise."""
+    rgba = img.convert('RGBA')
+    fmt = 'DXT1' if rgba.getchannel('A').getextrema()[0] == 255 else 'DXT5'
+    rgba.save(path, pixel_format=fmt)
+
+
 GAME_TOOLTIPS_DIR = os.path.join(PUBLIC_GAME_DIR, "Assets", "Tooltips", "Icons")
 GAME_CONTROLLER_DIR = os.path.join(PUBLIC_GAME_DIR, "Assets", "ControllerUIIcons", "skills_png")
 
@@ -276,8 +283,8 @@ def main():
     for map_key, img in loaded_imgs.items():
         tt_img = img.resize((380, 380), Image.Resampling.LANCZOS)
         ctrl_img = img.resize((144, 144), Image.Resampling.LANCZOS)
-        tt_img.save(os.path.join(GAME_TOOLTIPS_DIR, f"{map_key}.DDS"), pixel_format="DXT5")
-        ctrl_img.save(os.path.join(GAME_CONTROLLER_DIR, f"{map_key}.DDS"), pixel_format="DXT5")
+        save_dds_best(tt_img, os.path.join(GAME_TOOLTIPS_DIR, f"{map_key}.DDS"))
+        save_dds_best(ctrl_img, os.path.join(GAME_CONTROLLER_DIR, f"{map_key}.DDS"))
 
     if crest_img is not None:
         crest_380 = crest_img.resize((380, 380), Image.Resampling.LANCZOS)
@@ -289,7 +296,7 @@ def main():
 
     # Save texture atlas in DDS and PNG
     atlas_dds_path = os.path.join(TEXTURE_DIR, "HomelessCalifornianAtlas.dds")
-    atlas_png_path = os.path.join(TEXTURE_DIR, "HomelessCalifornianAtlas.png")
+    atlas_png_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "work", "HomelessCalifornianAtlas-preview.png")  # kept out of the mod source: the game only loads the DDS
     atlas_img.save(atlas_png_path)
     atlas_img.save(atlas_dds_path, pixel_format="DXT5")
     print(f"Saved texture atlas: {atlas_dds_path}")
